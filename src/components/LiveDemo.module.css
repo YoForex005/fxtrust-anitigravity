@@ -1,0 +1,242 @@
+.section {
+    padding: 8rem 0;
+    background: linear-gradient(180deg, #F9FAFB 0%, #FFFFFF 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.2rem;
+    background: linear-gradient(135deg, #4353F2 0%, #7B8BF6 100%);
+    color: white;
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    font-family: var(--font-inter-tight);
+    box-shadow: 0 4px 12px rgba(67, 83, 242, 0.2);
+}
+
+.headline {
+    font-family: var(--font-inter-tight);
+    font-size: 3.5rem;
+    line-height: 1.1;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.03em;
+}
+
+.subheadline {
+    font-family: var(--font-inter-tight);
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #6B7280;
+    max-width: 700px;
+    margin: 0 auto;
+    font-weight: 400;
+}
+
+/* 3D Browser Mockup */
+.browserWrapper {
+    perspective: 2000px;
+    max-width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.browserWrapper:hover {
+    transform: scale(1.02);
+}
+
+.browserMockup {
+    transform: rotateX(8deg) rotateY(-5deg);
+    transform-style: preserve-3d;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow:
+        0 60px 120px rgba(0, 0, 0, 0.15),
+        0 20px 60px rgba(0, 0, 0, 0.1),
+        0 0 0 1px rgba(0, 0, 0, 0.05);
+    background: white;
+}
+
+.browserWrapper:hover .browserMockup {
+    transform: rotateX(6deg) rotateY(-3deg);
+    box-shadow:
+        0 80px 140px rgba(0, 0, 0, 0.2),
+        0 30px 80px rgba(0, 0, 0, 0.15),
+        0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+.browserHeader {
+    height: 40px;
+    background: linear-gradient(180deg, #E5E7EB 0%, #D1D5DB 100%);
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+    gap: 0.5rem;
+    border-bottom: 1px solid #9CA3AF;
+}
+
+.trafficLights {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.trafficLight {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.trafficLight.red {
+    background: #FF5F57;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.trafficLight.yellow {
+    background: #FFBD2E;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.trafficLight.green {
+    background: #28CA42;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.browserContent {
+    position: relative;
+    overflow: hidden;
+    background: white;
+}
+
+.dashboardImage {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Play Button Overlay */
+.playButtonOverlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.browserWrapper:hover .playButtonOverlay {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.playButton {
+    width: 80px;
+    height: 80px;
+    background: rgba(67, 83, 242, 0.95);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: 4px solid white;
+    box-shadow: 0 12px 40px rgba(67, 83, 242, 0.4);
+    animation: pulse 2s ease-in-out infinite;
+    position: relative;
+}
+
+.playButton::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 100px;
+    background: rgba(67, 83, 242, 0.3);
+    border-radius: 50%;
+    animation: ripple 2s ease-in-out infinite;
+}
+
+.playIcon {
+    width: 0;
+    height: 0;
+    border-left: 24px solid white;
+    border-top: 14px solid transparent;
+    border-bottom: 14px solid transparent;
+    margin-left: 6px;
+    position: relative;
+    z-index: 1;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes ripple {
+    0% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0;
+    }
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .headline {
+        font-size: 2.5rem;
+    }
+
+    .browserMockup {
+        transform: rotateX(4deg) rotateY(-2deg);
+    }
+
+    .browserWrapper:hover .browserMockup {
+        transform: rotateX(3deg) rotateY(-1deg);
+    }
+}
+
+@media (max-width: 640px) {
+    .playButton {
+        width: 60px;
+        height: 60px;
+    }
+
+    .playIcon {
+        border-left-width: 18px;
+        border-top-width: 10px;
+        border-bottom-width: 10px;
+    }
+}

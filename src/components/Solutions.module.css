@@ -1,0 +1,210 @@
+.section {
+    padding: 8rem 0;
+    background: #F9FAFB;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.header {
+    margin-bottom: 4rem;
+    text-align: center;
+}
+
+.headline {
+    font-family: var(--font-inter-tight);
+    font-size: 3.5rem;
+    line-height: 1.1;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.03em;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    grid-auto-flow: dense;
+}
+
+.card {
+    background: white;
+    border-radius: 24px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    border: 1px solid transparent;
+    position: relative;
+    overflow: hidden;
+    min-height: 320px;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Card Sizes */
+.cardTall {
+    grid-row: span 2;
+    min-height: 664px;
+    /* 320 * 2 + 24 gap */
+}
+
+.cardWide {
+    grid-column: span 2;
+}
+
+/* Card Variants */
+.cardOrange {
+    background: #FD4D03;
+    color: white;
+}
+
+.cardBlue {
+    background: #C7D2FE;
+    color: #1E1B4B;
+}
+
+.cardBeige {
+    background: #F3F4F6;
+    /* Light Beige/Grey as requested */
+    color: #111827;
+}
+
+.cardWhite {
+    background: white;
+    border: 1px solid #E5E7EB;
+    color: #111827;
+}
+
+.cardWhite:hover {
+    border-color: #FD4D03;
+}
+
+/* Card Content */
+.cardHeader {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    font-size: 1.5rem;
+}
+
+.cardOrange .icon {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.cardBlue .icon {
+    background: white;
+    color: #4353F2;
+}
+
+.cardBeige .icon {
+    background: white;
+    color: #111827;
+}
+
+.cardWhite .icon {
+    background: #FFF7ED;
+    color: #FD4D03;
+}
+
+.cardTitle {
+    font-family: var(--font-inter-tight);
+    font-size: 1.5rem;
+    font-weight: 700;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+}
+
+.cardText {
+    font-family: var(--font-inter-tight);
+    font-size: 1rem;
+    line-height: 1.6;
+    opacity: 0.9;
+    margin-top: auto;
+    padding-top: 2rem;
+}
+
+.cardOrange .cardText {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.cardBlue .cardText {
+    color: #4338CA;
+}
+
+.cardBeige .cardText {
+    color: #4B5563;
+}
+
+.cardWhite .cardText {
+    color: #6B7280;
+}
+
+/* Action Button */
+.actionButton {
+    position: absolute;
+    bottom: 2rem;
+    right: 2rem;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cardOrange .actionButton {
+    background: white;
+    color: #FD4D03;
+}
+
+.cardBeige .actionButton {
+    background: #111827;
+    color: white;
+}
+
+.actionButton:hover {
+    transform: scale(1.1);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .cardTall {
+        grid-row: span 1;
+        min-height: 320px;
+    }
+}
+
+@media (max-width: 640px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cardWide {
+        grid-column: span 1;
+    }
+}

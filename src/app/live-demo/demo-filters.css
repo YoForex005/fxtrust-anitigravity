@@ -1,0 +1,58 @@
+/* View Placeholder */
+.viewPlaceholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+    padding: 3rem;
+    text-align: center;
+}
+
+.viewPlaceholder h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--slate-900);
+    margin: 0 0 0.5rem 0;
+}
+
+.viewPlaceholder p {
+    font-size: 0.95rem;
+    color: var(--slate-600);
+    margin: 0;
+}
+
+/* Filter Components */
+.filterGroup {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.filterLabel {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--slate-700);
+}
+
+.filterSelect {
+    padding: 0.5rem 0.75rem;
+    background: white;
+    border: 1px solid var(--slate-300);
+    border-radius: 8px;
+    font-size: 0.85rem;
+    color: var(--slate-700);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    outline: none;
+}
+
+.filterSelect:hover {
+    border-color: var(--slate-400);
+}
+
+.filterSelect:focus {
+    border-color: var(--primary-500);
+    box-shadow: 0 0 0 3px var(--primary-50);
+}

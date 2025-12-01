@@ -1,0 +1,95 @@
+.section {
+    padding: 5rem 0 3rem;
+    background: white;
+    overflow: hidden;
+}
+
+.title {
+    text-align: center;
+    font-size: 1.15rem;
+    color: #6B7280;
+    font-weight: 500;
+    margin-bottom: 3.5rem;
+    font-family: var(--font-inter-tight);
+}
+
+.scrollWrapper {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+    -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
+}
+
+.scrollTrack {
+    display: flex;
+    gap: 5rem;
+    animation: scroll 40s linear infinite;
+    width: fit-content;
+}
+
+.scrollTrack:hover {
+    animation-play-state: paused;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    opacity: 0.5;
+    filter: grayscale(100%);
+    flex-shrink: 0;
+}
+
+.logo:hover {
+    opacity: 1;
+    filter: grayscale(0%);
+    transform: translateY(-2px);
+}
+
+.logoWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.svgContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #374151;
+    transition: all 0.3s ease;
+}
+
+.svgContainer svg {
+    width: 100%;
+    height: auto;
+    fill: currentColor;
+}
+
+.logo:hover .svgContainer {
+    color: #111827;
+}
+
+.logoSubtitle {
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: #9CA3AF;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-family: var(--font-inter-tight);
+    margin-top: 0.2rem;
+    white-space: nowrap;
+}
