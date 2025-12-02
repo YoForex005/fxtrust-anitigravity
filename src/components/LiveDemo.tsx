@@ -6,8 +6,12 @@ import styles from './LiveDemo.module.css';
 export default function LiveDemo() {
     const router = useRouter();
 
-    const handleClick = () => {
-        router.push('/live-demo');
+    const handleAdminClick = () => {
+        router.push('/live-demo/admin');
+    };
+
+    const handleClientClick = () => {
+        router.push('/live-demo/client');
     };
 
     return (
@@ -27,7 +31,7 @@ export default function LiveDemo() {
                         </p>
                     </div>
 
-                    <div className={styles.browserWrapper} onClick={handleClick}>
+                    <div className={styles.browserWrapper} onClick={handleAdminClick}>
                         <div className={styles.browserMockup}>
                             <div className={styles.browserHeader}>
                                 <div className={styles.trafficLights}>
@@ -66,7 +70,7 @@ export default function LiveDemo() {
                         </p>
                     </div>
 
-                    <div className={styles.browserWrapper} onClick={handleClick}>
+                    <div className={styles.browserWrapper} onClick={handleClientClick}>
                         <div className={styles.browserMockup}>
                             <div className={styles.browserHeader}>
                                 <div className={styles.trafficLights}>
