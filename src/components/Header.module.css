@@ -1,0 +1,231 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    /* Ultra-Glass Background */
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(24px) saturate(180%);
+    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    /* Glass Edge Effect */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+    box-shadow:
+        0 4px 30px rgba(0, 0, 0, 0.03),
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.8);
+    /* Top highlight */
+    transition: all 0.3s ease;
+}
+
+.scrolled {
+    background: rgba(255, 255, 255, 0.85);
+    box-shadow:
+        0 10px 40px rgba(0, 0, 0, 0.05),
+        inset 0 1px 0 0 rgba(255, 255, 255, 0.8);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    height: 72px;
+    /* Slightly sleeker height */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-family: var(--font-inter);
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #111827;
+    text-decoration: none;
+    letter-spacing: -0.02em;
+    text-shadow: 0 2px 10px rgba(255, 255, 255, 0.5);
+}
+
+.logoIcon {
+    width: 28px;
+    height: 28px;
+    color: #4353F2;
+    filter: drop-shadow(0 2px 4px rgba(67, 83, 242, 0.2));
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.navItem {
+    position: relative;
+    padding: 1rem 0;
+}
+
+.navLink {
+    font-family: var(--font-inter);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #374151;
+    /* Slightly darker for contrast on glass */
+    text-decoration: none;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    cursor: pointer;
+    padding: 0.5rem 0.75rem;
+    border-radius: 8px;
+}
+
+.navLink:hover {
+    color: #111827;
+    background: rgba(255, 255, 255, 0.4);
+    /* Subtle hover pill */
+}
+
+.chevron {
+    width: 14px;
+    height: 14px;
+    transition: transform 0.2s ease;
+    opacity: 0.5;
+}
+
+.navItem:hover .chevron {
+    transform: rotate(180deg);
+    opacity: 1;
+}
+
+/* Dropdown Menu - Super Glass */
+.dropdown {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+
+    /* Glass Effect - More Opaque for Readability */
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(30px) saturate(200%);
+    -webkit-backdrop-filter: blur(30px) saturate(200%);
+
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+    /* More rounded */
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.1),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+
+    padding: 0.75rem;
+    min-width: 280px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    pointer-events: none;
+}
+
+.navItem:hover .dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+    pointer-events: auto;
+}
+
+.dropdownItem {
+    display: block;
+    padding: 0.85rem 1rem;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    border: 1px solid transparent;
+}
+
+.dropdownItem:hover {
+    background: rgba(255, 255, 255, 0.6);
+    border-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+}
+
+.itemContent {
+    flex: 1;
+}
+
+.itemTitle {
+    display: block;
+    font-family: var(--font-inter);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 0.2rem;
+}
+
+.dropdownItem:hover .itemTitle {
+    color: #4353F2;
+}
+
+.itemDesc {
+    display: block;
+    font-family: var(--font-inter);
+    font-size: 0.8rem;
+    color: #6B7280;
+    line-height: 1.4;
+}
+
+/* Mega Menu for Platform (Wider) */
+.megaMenu {
+    min-width: 640px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+    padding: 1rem;
+}
+
+.ctaButton {
+    padding: 0.75rem 1.75rem;
+    background: #0F172A;
+    color: white;
+    border: none;
+    border-radius: 100px;
+    font-family: var(--font-inter);
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.ctaButton:hover {
+    background: #4353F2;
+    transform: translateY(-1px) scale(1.02);
+    box-shadow: 0 8px 20px rgba(67, 83, 242, 0.3);
+}
+
+/* Mobile Menu Button */
+.mobileMenuBtn {
+    display: none;
+    background: none;
+    border: none;
+    color: #111827;
+    cursor: pointer;
+    padding: 0.5rem;
+    border-radius: 8px;
+}
+
+.mobileMenuBtn:hover {
+    background: rgba(0, 0, 0, 0.05);
+}
+
+@media (max-width: 1024px) {
+    .nav {
+        display: none;
+    }
+
+    .mobileMenuBtn {
+        display: block;
+    }
+}

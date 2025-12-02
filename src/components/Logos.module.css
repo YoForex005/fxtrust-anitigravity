@@ -10,7 +10,7 @@
     color: #6B7280;
     font-weight: 500;
     margin-bottom: 3.5rem;
-    font-family: var(--font-inter-tight);
+    font-family: var(--font-inter);
 }
 
 .scrollWrapper {
@@ -89,7 +89,7 @@
     color: #9CA3AF;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    font-family: var(--font-inter-tight);
+    font-family: var(--font-inter);
     margin-top: 0.2rem;
     white-space: nowrap;
 }

@@ -36,12 +36,12 @@
     font-weight: 700;
     letter-spacing: 0.1em;
     text-transform: uppercase;
-    font-family: var(--font-inter-tight);
+    font-family: var(--font-inter);
     box-shadow: 0 4px 12px rgba(67, 83, 242, 0.2);
 }
 
 .headline {
-    font-family: var(--font-inter-tight);
+    font-family: var(--font-inter);
     font-size: 3.5rem;
     line-height: 1.1;
     font-weight: 600;
@@ -50,7 +50,7 @@
 }
 
 .subheadline {
-    font-family: var(--font-inter-tight);
+    font-family: var(--font-inter);
     font-size: 1.2rem;
     line-height: 1.6;
     color: #6B7280;
@@ -68,7 +68,7 @@
     display: flex;
     align-items: center;
     gap: 1rem;
-    font-family: var(--font-inter-tight);
+    font-family: var(--font-inter);
     font-size: 1rem;
     color: #374151;
     font-weight: 500;
@@ -126,7 +126,7 @@
 }
 
 .stepTitle {
-    font-family: var(--font-inter-tight);
+    font-family: var(--font-inter);
     font-size: 1.2rem;
     font-weight: 700;
     color: #111827;
@@ -166,7 +166,7 @@
 }
 
 .integrationsLabel {
-    font-family: var(--font-inter-tight);
+    font-family: var(--font-inter);
     font-size: 0.85rem;
     font-weight: 600;
     color: #6B7280;

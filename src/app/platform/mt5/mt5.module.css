@@ -1,0 +1,159 @@
+.section {
+    padding: 80px 0;
+    position: relative;
+}
+
+.altSection {
+    background: #F8FAFC;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Pain Points Grid */
+.painGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.painCard {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 24px;
+    border: 1px solid #E5E7EB;
+    transition: all 0.3s ease;
+}
+
+.painCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.05);
+}
+
+.painIcon {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.painTitle {
+    font-family: var(--font-inter);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 1rem;
+}
+
+.painText {
+    font-family: var(--font-inter);
+    font-size: 1rem;
+    color: #6B7280;
+    line-height: 1.6;
+}
+
+/* Feature Split */
+.splitFeature {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6rem;
+    align-items: center;
+    margin: 6rem 0;
+}
+
+.featureContent h2 {
+    font-family: var(--font-inter);
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #111827;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+}
+
+.featureContent p {
+    font-size: 1.1rem;
+    color: #4B5563;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.featureList {
+    list-style: none;
+    padding: 0;
+}
+
+.featureList li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    font-family: var(--font-inter);
+    font-weight: 500;
+    color: #1F2937;
+}
+
+.check {
+    color: #10B981;
+    font-weight: 800;
+}
+
+.featureImage {
+    position: relative;
+}
+
+.featureImage img {
+    width: 100%;
+    border-radius: 24px;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Tech Specs */
+.specsGrid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+.specCard {
+    background: rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 2rem;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.specValue {
+    display: block;
+    font-family: var(--font-inter);
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: #4353F2;
+    margin-bottom: 0.5rem;
+}
+
+.specLabel {
+    font-family: var(--font-inter);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #4B5563;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+@media (max-width: 1024px) {
+
+    .painGrid,
+    .splitFeature,
+    .specsGrid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .featureImage {
+        order: -1;
+    }
+}

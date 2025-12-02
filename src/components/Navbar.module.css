@@ -81,7 +81,7 @@
     color: white;
     opacity: 0.9;
     transition: color 0.3s ease;
-    font-family: var(--font-inter-tight);
+    font-family: var(--font-inter);
     cursor: pointer;
     position: relative;
 }
@@ -116,7 +116,7 @@
     cursor: pointer;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2);
-    font-family: var(--font-inter-tight);
+    font-family: var(--font-inter);
 }
 
 .ctaButton:hover {

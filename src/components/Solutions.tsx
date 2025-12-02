@@ -6,7 +6,7 @@ export default function Solutions() {
             <div className={styles.container}>
                 <div className={styles.header}>
                     <h2 className={styles.headline}>
-                        Built to handle every planning<br />scenario (yes, that one too)
+                        Built to Handle Every Scenario<br />(Yes, Even That One You're Thinking About)
                     </h2>
                 </div>
 
@@ -22,7 +22,7 @@ export default function Solutions() {
                             <h3 className={styles.cardTitle}>The Anti-Grey Shield</h3>
                         </div>
                         <p className={styles.cardText}>
-                            We automatically detect and block US traffic at the DNS level. Protect your Main Label license from MetaQuotes crackdowns and Grey Label audits. Sleep safe knowing your compliance is automated.
+                            The "MetaQuotes Won't Ruin Your Week" Insurance. Automatically blocks US traffic at DNS level so you can sleep at night knowing your Main Label license is safe from grey-label audits. Because apparently that's something you have to worry about.
                         </p>
                         <div className={styles.actionButton}>
                             <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -42,7 +42,7 @@ export default function Solutions() {
                             <h3 className={styles.cardTitle}>Instant Liquidity Bridge</h3>
                         </div>
                         <p className={styles.cardText}>
-                            Plug directly into Tier-1 banks (Saxo, LMAX) and crypto exchanges. Get raw institutional spreads with zero markup. B-Book or A-Book—you decide instantly.
+                            Plug into Tier-1 banks (Saxo, LMAX) and crypto exchanges without reading 300 pages of documentation. Raw institutional spreads. Zero markup. B-Book or A-Book? You decide. We won't judge.
                         </p>
                     </div>
 
@@ -57,7 +57,7 @@ export default function Solutions() {
                             <h3 className={styles.cardTitle}>CRM That Actually Converts</h3>
                         </div>
                         <p className={styles.cardText}>
-                            Automated email drip campaigns for every new signup. Turn dormant leads into active depositors with built-in behavioral triggers. Includes IB/Affiliate multi-tier tracking.
+                            Turns dormant email addresses into actual paying traders. Automated drip campaigns with behavioral triggers that actually work. Includes IB/Affiliate tracking because apparently everyone's cousin wants in on this.
                         </p>
                     </div>
 
@@ -72,7 +72,7 @@ export default function Solutions() {
                             <h3 className={styles.cardTitle}>Risk Management 2.0</h3>
                         </div>
                         <p className={styles.cardText}>
-                            Real-time exposure monitoring. See exactly who is winning (and losing) instantly. Auto-hedge risky positions before they hurt your book.
+                            For When Your Traders Think They're Warren Buffett. Real-time exposure monitoring catches risky positions before someone YOLOs their account into oblivion. Auto-hedge the positions that make you nervous.
                         </p>
                     </div>
 
@@ -87,7 +87,7 @@ export default function Solutions() {
                             <h3 className={styles.cardTitle}>Prop Firm Mode</h3>
                         </div>
                         <p className={styles.cardText}>
-                            Launch a challenge in minutes. Built-in dashboard tracks Daily Drawdown, Max Loss, and Profit Targets automatically. No spreadsheets needed.
+                            Launch challenges faster than your competitors can spell "drawdown." Automated tracking for Daily Drawdown, Max Loss, and Profit Targets. No spreadsheets, no manual calculations, no crying.
                         </p>
                     </div>
 
@@ -102,7 +102,7 @@ export default function Solutions() {
                             <h3 className={styles.cardTitle}>Mobile Native</h3>
                         </div>
                         <p className={styles.cardText}>
-                            Your brand on the iOS App Store and Google Play. We build Your Logo, Your App. No generic MetaTrader logins.
+                            Your brand on iOS and Google Play. Not a generic MetaTrader login that screams "we're not really a real broker." Your logo. Your colors. Your app. Finally.
                         </p>
                     </div>
 
@@ -117,7 +117,7 @@ export default function Solutions() {
                             <h3 className={styles.cardTitle}>Crypto Deposits</h3>
                         </div>
                         <p className={styles.cardText}>
-                            Accept USDT (TRC20/ERC20), BTC, and ETH instantly. Auto-conversion to USD equity for trading. Zero chargebacks.
+                            Accept USDT (TRC20/ERC20), BTC, ETH instantly. Auto-converts to USD so traders can start losing money— err, trading immediately. Zero chargebacks because blockchain doesn't do refunds.
                         </p>
                     </div>
 

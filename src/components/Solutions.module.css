@@ -15,7 +15,7 @@
 }
 
 .headline {
-    font-family: var(--font-inter-tight);
+    font-family: var(--font-inter);
     font-size: 3.5rem;
     line-height: 1.1;
     font-weight: 600;
@@ -126,7 +126,7 @@
 }
 
 .cardTitle {
-    font-family: var(--font-inter-tight);
+    font-family: var(--font-inter);
     font-size: 1.5rem;
     font-weight: 700;
     line-height: 1.2;
@@ -134,7 +134,7 @@
 }
 
 .cardText {
-    font-family: var(--font-inter-tight);
+    font-family: var(--font-inter);
     font-size: 1rem;
     line-height: 1.6;
     opacity: 0.9;

@@ -1,0 +1,356 @@
+.section {
+    padding: 6rem 0;
+    background: radial-gradient(circle at 50% 50%, #FFFFFF 0%, #F3F4F6 100%);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.2rem;
+    background: linear-gradient(135deg, #4353F2 0%, #7B8BF6 100%);
+    color: white;
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 4px 12px rgba(67, 83, 242, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.headline {
+    font-family: var(--font-inter);
+    font-size: 4rem;
+    line-height: 1.1;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.03em;
+    background: linear-gradient(180deg, #111827 0%, #374151 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.subtext {
+    font-family: var(--font-inter);
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #6B7280;
+    max-width: 650px;
+    margin: 0 auto;
+    font-weight: 400;
+}
+
+.calculator {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.inputSection {
+    background: white;
+    border: 2px solid #E5E7EB;
+    border-radius: 20px;
+    padding: 3rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.inputLabel {
+    display: block;
+    font-family: var(--font-inter);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 1.5rem;
+}
+
+.sliderContainer {
+    position: relative;
+}
+
+.slider {
+    width: 100%;
+    height: 8px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #4353F2 0%, #7B8BF6 100%);
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+    margin-bottom: 1rem;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: white;
+    border: 3px solid #4353F2;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(67, 83, 242, 0.3);
+    transition: all 0.2s ease;
+}
+
+.slider::-webkit-slider-thumb:hover {
+    transform: scale(1.2);
+    box-shadow: 0 6px 16px rgba(67, 83, 242, 0.4);
+}
+
+.slider::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: white;
+    border: 3px solid #4353F2;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(67, 83, 242, 0.3);
+}
+
+.sliderValue {
+    text-align: center;
+    font-family: var(--font-inter);
+    font-size: 2rem;
+    font-weight: 800;
+    color: #4353F2;
+    letter-spacing: -0.02em;
+}
+
+.comparison {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 2rem;
+    align-items: start;
+    margin-bottom: 3rem;
+}
+
+.providerCard {
+    background: white;
+    border: 2px solid #E5E7EB;
+    border-radius: 20px;
+    padding: 2.5rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.providerCard.fxtrust {
+    border-color: #4353F2;
+    box-shadow: 0 8px 24px rgba(67, 83, 242, 0.15);
+}
+
+.providerBadge {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background: #F3F4F6;
+    color: #6B7280;
+    border-radius: 100px;
+    font-family: var(--font-inter);
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.fxtrustBadge {
+    background: linear-gradient(135deg, #4353F2 0%, #7B8BF6 100%);
+    color: white;
+}
+
+.savingsPill {
+    position: absolute;
+    top: -12px;
+    right: 20px;
+    background: linear-gradient(135deg, #4353F2 0%, #2563EB 100%);
+    color: white;
+    padding: 0.4rem 1rem;
+    border-radius: 100px;
+    font-family: var(--font-inter);
+    font-size: 0.8rem;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(67, 83, 242, 0.3);
+}
+
+.breakdown {
+    margin-bottom: 2rem;
+}
+
+.breakdownItem {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+    border-bottom: 1px solid #F3F4F6;
+    font-family: var(--font-inter);
+}
+
+.breakdownItem span:first-child {
+    color: #6B7280;
+    font-size: 0.95rem;
+}
+
+.breakdownItem span:last-child {
+    color: #111827;
+    font-weight: 600;
+}
+
+.free {
+    color: #4353F2 !important;
+    font-weight: 700 !important;
+}
+
+.total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    background: #F9FAFB;
+    border-radius: 12px;
+    font-family: var(--font-inter);
+}
+
+.total span:first-child {
+    font-size: 0.9rem;
+    color: #6B7280;
+    font-weight: 500;
+}
+
+.totalValue {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #111827;
+    letter-spacing: -0.02em;
+}
+
+.totalValue.green {
+    color: #4353F2;
+}
+
+.vs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #4353F2 0%, #7B8BF6 100%);
+    color: white;
+    border-radius: 50%;
+    font-family: var(--font-inter);
+    font-size: 1.2rem;
+    font-weight: 800;
+    box-shadow: 0 8px 20px rgba(67, 83, 242, 0.3);
+    align-self: center;
+}
+
+.savingsCard {
+    background: linear-gradient(135deg, #4353F2 0%, #7B8BF6 100%);
+    border-radius: 20px;
+    padding: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    box-shadow: 0 20px 40px rgba(67, 83, 242, 0.2);
+}
+
+.savingsIcon {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-shrink: 0;
+}
+
+.savingsContent {
+    flex: 1;
+}
+
+.savingsLabel {
+    font-family: var(--font-inter);
+    font-size: 1rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0.5rem;
+}
+
+.savingsAmount {
+    font-family: var(--font-inter);
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: white;
+    letter-spacing: -0.03em;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.savingsSubtext {
+    font-family: var(--font-inter);
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.ctaButton {
+    padding: 1.2rem 2.5rem;
+    background: white;
+    color: #4353F2;
+    border: none;
+    border-radius: 12px;
+    font-family: var(--font-inter);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
+}
+
+.ctaButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive */
+@media (max-width: 968px) {
+    .comparison {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .vs {
+        width: 50px;
+        height: 50px;
+        margin: 0 auto;
+        transform: rotate(90deg);
+    }
+
+    .savingsCard {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .savingsAmount {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .headline {
+        font-size: 2.5rem;
+    }
+
+    .inputSection {
+        padding: 2rem;
+    }
+
+    .providerCard {
+        padding: 2rem;
+    }
+}

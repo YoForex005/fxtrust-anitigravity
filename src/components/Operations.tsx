@@ -8,13 +8,13 @@ export default function Operations() {
                     {/* Left Content */}
                     <div className={styles.leftContent}>
                         <div className={styles.badge}>
-                            <span>⚙️ OPERATIONS ENGINE</span>
+                            <span>⚙️ HOW IT ACTUALLY WORKS</span>
                         </div>
                         <h2 className={styles.headline}>
-                            See how FXTrusts powers your brokerage.
+                            From Deposit to Trade (No PhD Required)
                         </h2>
                         <p className={styles.subheadline}>
-                            Automate deposits, spot risk instantly, and execute trades seamlessly—all in one place.
+                            Watch money flow from your client's wallet to live trades faster than your last provider replied to a support ticket. Everything automated. Everything tracked. Everything actually working.
                         </p>
 
                         <div className={styles.bulletPoints}>
@@ -22,19 +22,19 @@ export default function Operations() {
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
                                 </svg>
-                                <span>Consolidate all your data sources</span>
+                                <span>Consolidate all your systems (finally)</span>
                             </div>
                             <div className={styles.bullet}>
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
                                 </svg>
-                                <span>Get proactive reports on sales</span>
+                                <span>Get reports before you even ask</span>
                             </div>
                             <div className={styles.bullet}>
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
                                     <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z" />
                                 </svg>
-                                <span>Integrate any system (MT5, CRM, PSPs)</span>
+                                <span>Integrate literally anything</span>
                             </div>
                         </div>
                     </div>

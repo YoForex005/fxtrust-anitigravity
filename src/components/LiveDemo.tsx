@@ -21,13 +21,13 @@ export default function LiveDemo() {
                 <div className={styles.demoBlock}>
                     <div className={styles.header}>
                         <div className={styles.badge}>
-                            <span>🎮 INTERACTIVE DEMO</span>
+                            <span>🎮 TRY BEFORE YOU CRY</span>
                         </div>
                         <h2 className={styles.headline}>
-                            Test Drive the Admin Panel
+                            Test Drive the Platform (Because You Don't Trust Marketing Copy)
                         </h2>
                         <p className={styles.subheadline}>
-                            Experience the speed and control of our backend before you buy. No login required.
+                            Click around. Break stuff. See if we're lying about the speed. No login required. We promise not to immediately sell your email to our sales team.
                         </p>
                     </div>
 
@@ -63,10 +63,10 @@ export default function LiveDemo() {
                             <span>👨‍💻 TRADER EXPERIENCE</span>
                         </div>
                         <h2 className={styles.headline}>
-                            Test Drive the Client Dashboard
+                            Now Try the Trader's Side
                         </h2>
                         <p className={styles.subheadline}>
-                            Experience the premium trader's room. Seamless deposits, trading, and account management.
+                            This is what your traders will actually see. Deposits, trades, account history... all the stuff they'll spam you about if it doesn't work perfectly.
                         </p>
                     </div>
 

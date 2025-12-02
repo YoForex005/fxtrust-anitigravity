@@ -33,12 +33,12 @@
     text-transform: uppercase;
     margin-bottom: 2rem;
     box-shadow: 0 4px 12px rgba(67, 83, 242, 0.3);
-    font-family: var(--font-inter-tight);
+    font-family: var(--font-inter);
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .headline {
-    font-family: var(--font-inter-tight);
+    font-family: var(--font-inter);
     font-size: 4rem;
     line-height: 1.1;
     font-weight: 600;
@@ -55,7 +55,7 @@
 }
 
 .subheadline {
-    font-family: var(--font-inter-tight);
+    font-family: var(--font-inter);
     font-size: 1.2rem;
     line-height: 1.6;
     color: #6B7280;
@@ -146,7 +146,7 @@
 }
 
 .inputLabel {
-    font-family: var(--font-inter-tight);
+    font-family: var(--font-inter);
     font-size: 0.9rem;
     font-weight: 600;
     color: #111827;
@@ -185,7 +185,7 @@
     background: rgba(255, 255, 255, 0.9);
     border: 1px solid rgba(67, 83, 242, 0.3);
     border-radius: 100px;
-    font-family: var(--font-inter-tight);
+    font-family: var(--font-inter);
     font-size: 0.7rem;
     font-weight: 700;
     color: #4353F2;
@@ -329,7 +329,7 @@
 }
 
 .codeTitle {
-    font-family: var(--font-inter-tight);
+    font-family: var(--font-inter);
     font-size: 0.75rem;
     font-weight: 600;
     color: #6B7280;
@@ -484,14 +484,14 @@
 }
 
 .metricText {
-    font-family: var(--font-inter-tight);
+    font-family: var(--font-inter);
     font-size: 0.85rem;
     font-weight: 700;
     color: #059669;
 }
 
 .engineLabel {
-    font-family: var(--font-inter-tight);
+    font-family: var(--font-inter);
     font-size: 0.9rem;
     font-weight: 700;
     color: #6B7280;
@@ -593,7 +593,7 @@
 }
 
 .dashboardTitle {
-    font-family: var(--font-inter-tight);
+    font-family: var(--font-inter);
     font-size: 0.8rem;
     font-weight: 700;
 }
@@ -623,7 +623,7 @@
 }
 
 .dashboardLabel {
-    font-family: var(--font-inter-tight);
+    font-family: var(--font-inter);
     font-size: 0.7rem;
     font-weight: 600;
     color: #6B7280;
@@ -631,7 +631,7 @@
 }
 
 .dashboardValue {
-    font-family: var(--font-inter-tight);
+    font-family: var(--font-inter);
     font-size: 1.5rem;
     font-weight: 700;
     color: #111827;
@@ -734,7 +734,7 @@
     background: linear-gradient(135deg, #10B981 0%, #059669 100%);
     color: white;
     border-radius: 100px;
-    font-family: var(--font-inter-tight);
+    font-family: var(--font-inter);
     font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: 0.1em;
@@ -748,7 +748,7 @@
 }
 
 .outputLabel {
-    font-family: var(--font-inter-tight);
+    font-family: var(--font-inter);
     font-size: 1.2rem;
     font-weight: 700;
     color: #111827;

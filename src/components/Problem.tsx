@@ -11,13 +11,17 @@ export default function Problem() {
                             <path d="M13.5 0L14.3981 3.10194L17.5 4L14.3981 4.89806L13.5 8L12.6019 4.89806L9.5 4L12.6019 3.10194L13.5 0Z" fill="currentColor" opacity="0.6" transform="translate(-2 2) scale(0.6)" />
                         </svg>
                     </span>
-                    <span>The Problem</span>
+                    <span>Reality Check</span>
                 </div>
                 <h2 className={styles.headline}>
-                    It shouldn't cost a fortune to rent a server and a license.
+                    The Traditional Brokerage Setup Experience
                 </h2>
                 <p className={styles.subtext}>
-                    Legacy providers charge you for 'potential'. We charge you for 'performance'. If you don't have active traders, why should you pay for them?
+                    <strong>Month 1:</strong> "This will be easy!" 😊<br />
+                    <strong>Month 3:</strong> "Why won't anyone return my calls?" 😐<br />
+                    <strong>Month 6:</strong> "Maybe I should've become a yoga instructor..." 😤<br />
+                    <strong>Month 9:</strong> Still waiting for launch. Still questioning life choices. 💀<br /><br />
+                    <em>Sound familiar? We've heard this story 142 times. Let's not make it 143.</em>
                 </p>
             </div>
         </section>

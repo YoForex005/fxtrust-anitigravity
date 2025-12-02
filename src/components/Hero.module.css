@@ -155,7 +155,7 @@
 }
 
 .headline {
-    font-family: var(--font-inter-tight);
+    font-family: var(--font-inter);
     font-size: 6.8rem;
     line-height: 1.05;
     font-weight: 600;
@@ -180,7 +180,7 @@
 }
 
 .subtext {
-    font-family: var(--font-inter-tight);
+    font-family: var(--font-inter);
     font-size: 1.15rem;
     color: rgba(255, 255, 255, 0.85);
     line-height: 1.7;
@@ -314,7 +314,7 @@
     font-weight: 600;
     color: #6B7280;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    font-family: var(--font-inter-tight);
+    font-family: var(--font-inter);
     cursor: pointer;
     position: relative;
 }
@@ -440,7 +440,7 @@
     color: #6B7280;
     margin-bottom: 0.7rem;
     font-weight: 600;
-    font-family: var(--font-inter-tight);
+    font-family: var(--font-inter);
     letter-spacing: 0.01em;
 }
 
@@ -448,7 +448,7 @@
     font-size: 2.1rem;
     font-weight: 700;
     color: #111827;
-    font-family: var(--font-inter-tight);
+    font-family: var(--font-inter);
     letter-spacing: -0.03em;
     margin-bottom: 0.3rem;
 }

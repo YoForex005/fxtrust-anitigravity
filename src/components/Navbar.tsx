@@ -31,7 +31,7 @@ export default function Navbar() {
                 <a href="#about" className={styles.link}>About</a>
                 <a href="#contact" className={styles.link}>Contact</a>
             </div>
-            <button className={styles.ctaButton}>Book a Demo</button>
+            <button className={styles.ctaButton}>Fine, Show Me</button>
         </nav>
     );
 }

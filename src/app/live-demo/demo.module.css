@@ -60,7 +60,7 @@
     height: 100vh;
     overflow: hidden;
     background: var(--slate-50);
-    font-family: var(--font-inter-tight);
+    font-family: var(--font-inter);
     color: var(--slate-900);
 }
 

@@ -1,0 +1,1005 @@
+/* Main Container */
+.main {
+    min-height: 100vh;
+    background: white;
+}
+
+/* Hero Section - Matching Homepage */
+.hero {
+    min-height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 120px 0 100px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(180deg, #4353F2 0%, #5767F4 40%, #7B8BF6 80%, #A0AFF8 100%);
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        radial-gradient(ellipse 550px 240px at 8% 65%, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.85) 20%, rgba(255, 255, 255, 0.4) 45%, transparent 70%),
+        radial-gradient(ellipse 520px 230px at 88% 22%, rgba(255, 255, 255, 0.98) 0%, rgba(255, 255, 255, 0.85) 20%, rgba(255, 255, 255, 0.4) 45%, transparent 70%);
+    filter: blur(40px);
+    pointer-events: none;
+    z-index: 1;
+    animation: cloudDrift 90s ease-in-out infinite;
+}
+
+@keyframes cloudDrift {
+
+    0%,
+    100% {
+        transform: translateX(0) translateY(0);
+    }
+
+    50% {
+        transform: translateX(-50px) translateY(-25px);
+    }
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: white;
+    clip-path: ellipse(100% 100% at 50% 100%);
+    z-index: 10;
+}
+
+.heroContent {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.1rem;
+    background: rgba(255, 255, 255, 0.12);
+    color: white;
+    border-radius: 100px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 2.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(12px);
+    animation: badgeFloat 4s ease-in-out infinite;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes badgeFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+.badgeIcon {
+    width: 18px;
+    height: 18px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    color: #4353F2;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.headline {
+    font-family: var(--font-inter);
+    font-size: 5.5rem;
+    line-height: 1.05;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 1.8rem;
+    letter-spacing: -0.035em;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    text-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.subtext {
+    font-family: var(--font-inter);
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+    max-width: 780px;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: 400;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Sections */
+.calculatorSection,
+.transparencySection,
+.setupSection,
+.hiddenCostsSection,
+.faqSection {
+    padding: 5rem 0;
+}
+
+.calculatorSection {
+    background: linear-gradient(180deg, #FFFFFF 0%, #FAFBFC 100%);
+}
+
+.transparencySection {
+    background: white;
+}
+
+.setupSection {
+    background: linear-gradient(180deg, #F7F9FC 0%, #FFFFFF 100%);
+}
+
+.hiddenCostsSection {
+    background: white;
+}
+
+.faqSection {
+    background: linear-gradient(180deg, #FAFBFC 0%, #F7F9FC 100%);
+}
+
+.sectionHeader {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.sectionHeader h2 {
+    font-family: var(--font-inter);
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+.sectionHeader p {
+    font-family: var(--font-inter);
+    font-size: 1.25rem;
+    color: #6B7280;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Calculator */
+.calculatorCard {
+    background: white;
+    border-radius: 24px;
+    padding: 4rem;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+    border: 2px solid #E5E7EB;
+}
+
+.sliderSection {
+    margin-bottom: 3rem;
+}
+
+.sliderLabel {
+    display: block;
+    font-family: var(--font-inter);
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #111827;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.sliderContainer {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.slider {
+    width: 100%;
+    height: 8px;
+    border-radius: 100px;
+    background: linear-gradient(90deg, #4353F2 0%, #7B8BF6 100%);
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+    cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 4px 12px rgba(67, 83, 242, 0.4);
+    border: 4px solid #4353F2;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.slider::-webkit-slider-thumb:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 16px rgba(67, 83, 242, 0.6);
+}
+
+.slider::-moz-range-thumb {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: white;
+    box-shadow: 0 4px 12px rgba(67, 83, 242, 0.4);
+    border: 4px solid #4353F2;
+    cursor: pointer;
+}
+
+.sliderValue {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.accountNumber {
+    font-family: var(--font-inter);
+    font-size: 4.5rem;
+    font-weight: 800;
+    color: #4353F2;
+    display: block;
+    line-height: 1;
+    letter-spacing: -0.03em;
+}
+
+.accountLabel {
+    font-family: var(--font-inter);
+    font-size: 1.1rem;
+    color: #6B7280;
+    font-weight: 500;
+}
+
+/* Cost Comparison */
+.costComparison {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    gap: 2.5rem;
+    align-items: start;
+}
+
+.costCard {
+    background: white;
+    border: 2px solid #E5E7EB;
+    border-radius: 20px;
+    padding: 3rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.costCard:hover {
+    border-color: #4353F2;
+    box-shadow: 0 12px 40px rgba(67, 83, 242, 0.15);
+    transform: translateY(-4px);
+}
+
+.costCard.highlighted {
+    border-color: #4353F2;
+    box-shadow: 0 16px 48px rgba(67, 83, 242, 0.2);
+}
+
+.planBadge {
+    font-family: var(--font-inter);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #E5E7EB;
+}
+
+.planBadge.recommended {
+    color: #4353F2;
+    border-bottom-color: #4353F2;
+}
+
+.savingsBadge {
+    position: absolute;
+    top: -12px;
+    right: 30px;
+    background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+    color: white;
+    padding: 0.5rem 1.2rem;
+    border-radius: 100px;
+    font-family: var(--font-inter);
+    font-size: 0.9rem;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+}
+
+.warningMessage {
+    background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+    color: #92400E;
+    padding: 1rem 1.25rem;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    border-left: 4px solid #F59E0B;
+}
+
+.breakdownTitle {
+    font-family: var(--font-inter);
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #6B7280;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.costBreakdown {
+    margin-bottom: 2rem;
+}
+
+.costLine {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.875rem 0;
+    font-family: var(--font-inter);
+    font-size: 1rem;
+    color: #374151;
+}
+
+.costLineDivider {
+    height: 2px;
+    background: #E5E7EB;
+    margin: 1rem 0;
+}
+
+.costLineLabel {
+    font-weight: 700;
+    color: #111827;
+}
+
+.costLineValue {
+    font-weight: 700;
+    color: #4353F2;
+    font-size: 1.5rem;
+}
+
+.costLineSmall {
+    font-size: 0.875rem;
+    color: #6B7280;
+}
+
+.annualCost {
+    background: #F3F4F6;
+    padding: 1.25rem;
+    border-radius: 12px;
+    font-family: var(--font-inter);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.annualCost span:first-child {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: #111827;
+}
+
+.annualSavings {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #059669;
+}
+
+.vsIndicator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-inter);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #9CA3AF;
+    padding-top: 4rem;
+}
+
+.savingsHighlight {
+    background: linear-gradient(135deg, #D1FAE5 0%, #A7F3D0 100%);
+    border-radius: 16px;
+    padding: 2rem;
+    margin-top: 2.5rem;
+    text-align: center;
+    border-left: 4px solid #059669;
+    font-family: var(--font-inter);
+    font-size: 1.15rem;
+    color: #065F46;
+    line-height: 1.7;
+}
+
+/* Plan Cards */
+.pricingGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.planDetailCard {
+    background: white;
+    border: 2px solid #E5E7EB;
+    border-radius: 24px;
+    padding: 3rem 2.75rem;
+    position: relative;
+    transition: all 0.4s ease;
+}
+
+.planDetailCard:hover {
+    border-color: #4353F2;
+    box-shadow: 0 20px 50px rgba(67, 83, 242, 0.15);
+    transform: translateY(-8px);
+}
+
+.popularPlan {
+    border-color: #4353F2;
+    box-shadow: 0 16px 40px rgba(67, 83, 242, 0.2);
+}
+
+.popularBadge {
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: linear-gradient(135deg, #4353F2 0%, #7B8BF6 100%);
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border-radius: 100px;
+    font-family: var(--font-inter);
+    font-size: 0.85rem;
+    font-weight: 700;
+    box-shadow: 0 4px 12px rgba(67, 83, 242, 0.3);
+}
+
+.planHeader h3 {
+    font-family: var(--font-inter);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.5rem;
+}
+
+.planDescription {
+    font-family: var(--font-inter);
+    font-size: 1.1rem;
+    color: #6B7280;
+    margin-bottom: 2rem;
+}
+
+.planPricing {
+    margin-bottom: 2.5rem;
+    padding-bottom: 2rem;
+    border-bottom: 2px solid #E5E7EB;
+}
+
+.priceRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 1.25rem;
+}
+
+.priceLabel {
+    font-family: var(--font-inter);
+    font-size: 1rem;
+    color: #6B7280;
+    font-weight: 500;
+}
+
+.price {
+    font-family: var(--font-inter);
+    font-size: 2.25rem;
+    font-weight: 800;
+    color: #111827;
+    letter-spacing: -0.02em;
+}
+
+.pricePeriod {
+    font-size: 1.1rem;
+    color: #6B7280;
+    font-weight: 500;
+}
+
+.priceExample {
+    background: #F3F4F6;
+    padding: 1.25rem;
+    border-radius: 12px;
+    font-family: var(--font-inter);
+    font-size: 0.95rem;
+    color: #374151;
+    line-height: 1.6;
+    margin-top: 1.5rem;
+}
+
+.savingsNote {
+    color: #059669;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.minimumNotice {
+    background: #EFF6FF;
+    padding: 0.875rem 1.125rem;
+    border-radius: 8px;
+    font-family: var(--font-inter);
+    font-size: 0.9rem;
+    color: #1E40AF;
+    margin-bottom: 1rem;
+}
+
+.customPricing {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.customPriceLabel {
+    font-family: var(--font-inter);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #4353F2;
+    margin-bottom: 0.75rem;
+}
+
+.customPricing p {
+    font-family: var(--font-inter);
+    font-size: 1rem;
+    color: #6B7280;
+}
+
+.whatsIncluded,
+.whatsNotIncluded,
+.breakEvenCalculation,
+.enterpriseNote {
+    margin-bottom: 2rem;
+}
+
+.whatsIncluded h4,
+.whatsNotIncluded h4,
+.breakEvenCalculation h4 {
+    font-family: var(--font-inter);
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 1rem;
+}
+
+.whatsIncluded ul,
+.whatsNotIncluded ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.whatsIncluded li,
+.whatsNotIncluded li {
+    padding: 0.625rem 0 0.625rem 2rem;
+    font-family: var(--font-inter);
+    font-size: 0.95rem;
+    color: #374151;
+    line-height: 1.6;
+    position: relative;
+}
+
+.whatsIncluded li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: #4353F2;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.whatsNotIncluded li::before {
+    content: '+';
+    position: absolute;
+    left: 0;
+    color: #F59E0B;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.breakEvenCalculation p,
+.enterpriseNote p {
+    font-family: var(--font-inter);
+    font-size: 0.95rem;
+    color: #475569;
+    line-height: 1.7;
+}
+
+.planButton {
+    display: block;
+    width: 100%;
+    padding: 1.25rem 2rem;
+    background: linear-gradient(135deg, #4353F2 0%, #7B8BF6 100%);
+    color: white;
+    border-radius: 14px;
+    font-family: var(--font-inter);
+    font-size: 1.05rem;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(67, 83, 242, 0.3);
+}
+
+.planButton:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(67, 83, 242, 0.4);
+}
+
+.primaryButton {
+    background: linear-gradient(135deg, #111827 0%, #374151 100%);
+}
+
+.primaryButton:hover {
+    box-shadow: 0 8px 20px rgba(17, 24, 39, 0.4);
+}
+
+/* Setup Timeline */
+.setupBreakdown {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.setupIntro {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.setupIntro p {
+    font-family: var(--font-inter);
+    font-size: 1.15rem;
+    color: #475569;
+    line-height: 1.7;
+}
+
+.setupTimeline {
+    display: grid;
+    gap: 2.5rem;
+}
+
+.timelineDay {
+    background: white;
+    border: 2px solid #E5E7EB;
+    border-radius: 20px;
+    padding: 2.5rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.timelineDay:hover {
+    border-color: #4353F2;
+    box-shadow: 0 12px 32px rgba(67, 83, 242, 0.12);
+    transform: translateX(8px);
+}
+
+.dayNumber {
+    display: inline-block;
+    background: linear-gradient(135deg, #4353F2 0%, #7B8BF6 100%);
+    color: white;
+    padding: 0.5rem 1.25rem;
+    border-radius: 100px;
+    font-family: var(--font-inter);
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.dayTitle {
+    font-family: var(--font-inter);
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 1.5rem;
+}
+
+.taskList {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+
+.taskList li {
+    padding: 0.625rem 0 0.625rem 2rem;
+    font-family: var(--font-inter);
+    font-size: 0.95rem;
+    color: #374151;
+    line-height: 1.6;
+    position: relative;
+}
+
+.taskList li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: #4353F2;
+    font-weight: 700;
+}
+
+.hourEstimate {
+    display: inline-block;
+    background: #F3F4F6;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    font-family: var(--font-inter);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #6B7280;
+}
+
+.setupFootnote {
+    background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
+    padding: 2rem 2.5rem;
+    border-radius: 16px;
+    font-family: var(--font-inter);
+    font-size: 1.05rem;
+    color: #1E3A8A;
+    line-height: 1.7;
+    margin-top: 3rem;
+    border-left: 4px solid #4353F2;
+}
+
+/* Hidden Costs Grid */
+.neverChargeGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.neverChargeCard {
+    background: white;
+    border: 2px solid #E5E7EB;
+    border-radius: 20px;
+    padding: 2.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.neverChargeCard:hover {
+    border-color: #059669;
+    box-shadow: 0 12px 32px rgba(5, 150, 105, 0.12);
+    transform: translateY(-6px);
+}
+
+.neverIcon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.neverChargeCard h4 {
+    font-family: var(--font-inter);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.75rem;
+}
+
+.neverChargeCard p {
+    font-family: var(--font-inter);
+    font-size: 0.95rem;
+    color: #475569;
+    line-height: 1.7;
+}
+
+/* FAQ Grid */
+.faqGrid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.faqItem {
+    background: white;
+    border: 2px solid #E5E7EB;
+    border-radius: 20px;
+    padding: 2.5rem;
+    transition: all 0.3s ease;
+}
+
+.faqItem:hover {
+    border-color: #4353F2;
+    box-shadow: 0 12px 32px rgba(67, 83, 242, 0.12);
+}
+
+.faqItem h4 {
+    font-family: var(--font-inter);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 1rem;
+}
+
+.faqItem p {
+    font-family: var(--font-inter);
+    font-size: 1rem;
+    color: #475569;
+    line-height: 1.7;
+    margin-bottom: 0.75rem;
+}
+
+.faqExample {
+    background: #F3F4F6;
+    padding: 1.25rem;
+    border-radius: 12px;
+    font-family: var(--font-inter);
+    font-size: 0.95rem;
+    color: #374151;
+    line-height: 1.6;
+    margin-top: 1rem;
+    border-left: 3px solid #4353F2;
+}
+
+/* Final CTA - Dark Navy */
+.finalCTA {
+    padding: 6rem 0;
+    background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.finalCTA::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(67, 83, 242, 0.08) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.ctaContent {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.ctaContent h2 {
+    font-family: var(--font-inter);
+    font-size: 4rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+}
+
+.ctaContent p {
+    font-family: var(--font-inter);
+    font-size: 1.25rem;
+    margin-bottom: 3rem;
+    opacity: 0.85;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ctaButtons {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.primaryCTAButton {
+    padding: 1.5rem 3.5rem;
+    background: linear-gradient(135deg, #4353F2 0%, #7B8BF6 100%);
+    color: white;
+    border-radius: 14px;
+    font-family: var(--font-inter);
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 24px rgba(67, 83, 242, 0.4);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.primaryCTAButton::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.primaryCTAButton:hover::before {
+    left: 100%;
+}
+
+.primaryCTAButton:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 32px rgba(67, 83, 242, 0.6);
+}
+
+.secondaryCTAButton {
+    padding: 1.5rem 3.5rem;
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+    border-radius: 14px;
+    font-family: var(--font-inter);
+    font-size: 1.15rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.secondaryCTAButton:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-4px);
+}
+
+.ctaFootnote {
+    font-family: var(--font-inter);
+    font-size: 1.05rem;
+    opacity: 0.7;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+    .pricingGrid {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .neverChargeGrid,
+    .faqGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .headline {
+        font-size: 3rem;
+    }
+
+    .costComparison {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .vsIndicator {
+        padding: 0;
+        transform: rotate(90deg);
+    }
+
+    .ctaButtons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
