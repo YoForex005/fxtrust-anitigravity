@@ -2,39 +2,47 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import styles from '../dynamics.module.css';
-import accountsData from './data.json';
-import DynamicsSidebar from '../components/DynamicsSidebar';
+import styles from '../../dynamics.module.css';
+import DynamicsSidebar from '../../components/DynamicsSidebar';
 
-export default function DynamicsAdminPage() {
+export default function CasesPage() {
     const router = useRouter();
-    const [activeItem, setActiveItem] = useState('Accounts');
+    const [activeItem, setActiveItem] = useState('Active Cases');
 
-    // Define explicit columns to match the reference image and exclude system columns
-    const columnDefs = [
-        { key: 'Created On', label: 'Created On' },
-        { key: 'First Name', label: 'First Name' },
-        { key: 'Last Name', label: 'Last Name' },
-        { key: 'E-mail', label: 'E-mail' },
-        { key: 'Business Unit Name', label: 'Business Unit' },
-        { key: 'Phone 1: Phone', label: 'Phone 1' },
-        { key: 'Last Deposit Date', label: 'Last Deposit' },
-        { key: 'Sum of Deposits (USD)', label: 'Sum of Deposits (USD)' },
-        { key: 'Owner', label: 'Owner' },
-        { key: 'Account Status', label: 'Account Status' },
-        { key: 'Lead Status', label: 'Lead Status' },
-        { key: 'Main TP Account', label: 'Main TP Account' },
-        { key: 'Conversion Owner', label: 'Conversion Owner' },
-        { key: 'Retention owner', label: 'Retention owner' },
-        { key: 'Modified On', label: 'Modified On' }
+    // Mock data based on screenshot
+    const cases = [
+        { createdOn: '12/3/2025 1:53 PM', title: 'Contact us - Email request - Deposit/withdrawal related questi', customer: 'Dob Dob', tpAccount: '---', type: 'General', status: 'Active' },
+        { createdOn: '11/29/2025 1:23 PM', title: 'Registration blocked - Duplication detected', customer: 'Jabir NV', tpAccount: '---', type: 'General', status: 'Active' },
+        { createdOn: '11/26/2025 3:07 PM', title: 'Pending Withdrawal Transaction', customer: 'LeverateAsia FX', tpAccount: '6693826', type: 'Withdrawal Confirmation', status: 'Active' },
+        { createdOn: '11/26/2025 9:04 AM', title: 'Registration blocked - Duplication detected', customer: 'Shivani Leverate', tpAccount: '---', type: 'General', status: 'Active' },
+        { createdOn: '11/21/2025 2:39 PM', title: 'Deposit Approval', customer: 'Alex Ryder', tpAccount: '24631821', type: 'Deposit Request', status: 'Active' },
+        { createdOn: '11/20/2025 5:43 PM', title: 'Deposit Approval', customer: 'Trading Success Demo Sirix', tpAccount: '13606044', type: 'Deposit Request', status: 'Active' },
+        { createdOn: '11/20/2025 10:39 AM', title: 'Automatic TransferBetweenTradingPlatformAccounts Approval', customer: 'Hitesh Patel Sirix Demo', tpAccount: '24758128', type: 'Transfer Between Trading Platform Acco...', status: 'Active' },
+        { createdOn: '11/20/2025 10:38 AM', title: 'Deposit Approval', customer: 'Hitesh Patel Sirix Demo', tpAccount: '24758128', type: 'Deposit Request', status: 'Active' },
+        { createdOn: '11/19/2025 5:14 PM', title: 'Pending Withdrawal Transaction', customer: 'Tamir Gur', tpAccount: '11735086', type: 'Withdrawal Confirmation', status: 'Active' },
+        { createdOn: '11/19/2025 5:13 PM', title: 'Pending Withdrawal Transaction', customer: 'Tamir Gur', tpAccount: '11735086', type: 'Withdrawal Confirmation', status: 'Active' },
+        { createdOn: '11/19/2025 5:11 PM', title: 'Pending Withdrawal Transaction', customer: 'Tamir Gur', tpAccount: '11735086', type: 'Withdrawal Confirmation', status: 'Active' },
+        { createdOn: '11/19/2025 2:09 PM', title: 'Deposit Approval', customer: 'Cesare Pasquale', tpAccount: '24751880', type: 'Deposit Request', status: 'Active' },
+        { createdOn: '11/19/2025 10:15 AM', title: 'Deposit Approval', customer: 'nurettin test', tpAccount: '24736656', type: 'Deposit Request', status: 'Active' },
+        { createdOn: '11/18/2025 6:19 PM', title: 'Registration blocked - Duplication detected', customer: 'Mary test', tpAccount: '---', type: 'General', status: 'Active' },
+        { createdOn: '11/18/2025 6:19 PM', title: 'Registration blocked - Duplication detected', customer: 'Mary test', tpAccount: '---', type: 'General', status: 'Active' },
+        { createdOn: '11/18/2025 6:19 PM', title: 'Registration blocked - Duplication detected', customer: 'Mary test', tpAccount: '---', type: 'General', status: 'Active' },
+        { createdOn: '11/17/2025 5:23 PM', title: 'Automatic TransferBetweenTradingPlatformAccounts Approval', customer: 'Majid Zoubi Sirix Demo', tpAccount: '24734648', type: 'Transfer Between Trading Platform Acco...', status: 'Active' },
+        { createdOn: '11/17/2025 5:20 PM', title: 'Pending Deposit Transaction', customer: 'Majid Zoubi Sirix Demo', tpAccount: '24734668', type: 'Deposit Request', status: 'Active' },
     ];
 
-    // Cast data to any[] to avoid type errors with imported JSON
-    const data = accountsData as any[];
+    const columnDefs = [
+        { key: 'createdOn', label: 'Created On' },
+        { key: 'title', label: 'Case Title' },
+        { key: 'customer', label: 'Customer' },
+        { key: 'tpAccount', label: 'TP Account' },
+        { key: 'type', label: 'Type' },
+        { key: 'status', label: 'Status' }
+    ];
 
     return (
         <div className={styles.container}>
-            {/* 1. Global Header */}
+            {/* Header */}
             <header className={styles.header}>
                 <div className={styles.headerLeft}>
                     <div className={styles.waffleMenu}>
@@ -48,21 +56,6 @@ export default function DynamicsAdminPage() {
                     <div className={styles.headerIcon} title="Search">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" /></svg>
                     </div>
-                    <div className={styles.headerIcon} title="Task Flow">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 2v20M2 12h20" /></svg>
-                    </div>
-                    <div className={styles.headerIcon} title="Assistant">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a2 2 0 0 1-2 2H10a2 2 0 0 1-2-2v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7z" /><path d="M9 21h6" /></svg>
-                    </div>
-                    <div className={styles.headerIcon} title="Add">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 5v14M5 12h14" /></svg>
-                    </div>
-                    <div className={styles.headerIcon} title="Filter">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" /></svg>
-                    </div>
-                    <div className={styles.headerIcon} title="Settings">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.09a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" /><circle cx="12" cy="12" r="3" /></svg>
-                    </div>
                     <div className={styles.headerIcon} title="Help">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><circle cx="12" cy="12" r="10" /><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" /><path d="M12 17h.01" /></svg>
                     </div>
@@ -72,7 +65,6 @@ export default function DynamicsAdminPage() {
                 </div>
             </header>
 
-            {/* 2. Main Layout */}
             <div className={styles.mainLayout}>
                 {/* Sidebar */}
                 <DynamicsSidebar activeItem={activeItem} onNavigate={setActiveItem} />
@@ -87,28 +79,11 @@ export default function DynamicsAdminPage() {
                         </button>
                         <button className={styles.commandButton}>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><line x1="12" y1="5" x2="12" y2="19" /><line x1="5" y1="12" x2="19" y2="12" /></svg>
-                            New
+                            New Case
                         </button>
                         <button className={styles.commandButton}>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><polyline points="3 6 5 6 21 6" /><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" /></svg>
-                            Delete
-                        </button>
-                        <div className={styles.commandSeparator} />
-                        <button className={styles.commandButton}>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 20h9" /><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" /></svg>
-                            Set extension
-                        </button>
-                        <button className={styles.commandButton}>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
-                            Mass Assignment
-                        </button>
-                        <button className={styles.commandButton}>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><line x1="12" y1="1" x2="12" y2="23" /><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
-                            Realize Bonus
-                        </button>
-                        <button className={styles.commandButton}>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" /><path d="M13.73 21a2 2 0 0 1-3.46 0" /></svg>
-                            Send Notification
+                            Delete ⌄
                         </button>
                         <div className={styles.commandSeparator} />
                         <button className={styles.commandButton}>
@@ -116,25 +91,35 @@ export default function DynamicsAdminPage() {
                             Refresh
                         </button>
                         <button className={styles.commandButton}>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" style={{ color: '#107c10' }}><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="8" y1="13" x2="16" y2="13" /><line x1="8" y1="17" x2="16" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>
-                            Export to Excel
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><line x1="18" y1="20" x2="18" y2="10" /><line x1="12" y1="20" x2="12" y2="4" /><line x1="6" y1="20" x2="6" y2="14" /></svg>
+                            Run Report ⌄
+                        </button>
+                        <button className={styles.commandButton}>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg>
+                            Email a Link ⌄
+                        </button>
+                        <button className={styles.commandButton}>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2" /><line x1="3" y1="9" x2="21" y2="9" /><line x1="9" y1="21" x2="9" y2="9" /></svg>
+                            Excel Templates ⌄
                         </button>
                         <button className={styles.commandButton}>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" style={{ color: '#107c10' }}><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="12" y1="18" x2="12" y2="12" /><line x1="9" y1="15" x2="15" y2="15" /></svg>
                             Import from Excel ⌄
                         </button>
-                        <div className={styles.commandSeparator} />
                         <button className={styles.commandButton}>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2" /><line x1="3" y1="9" x2="21" y2="9" /><line x1="9" y1="21" x2="9" y2="9" /></svg>
                             Open Dashboards
                         </button>
-                        <button className={styles.commandButton}>⋮</button>
+                        <button className={styles.commandButton}>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2" /><line x1="3" y1="9" x2="21" y2="9" /><line x1="9" y1="21" x2="9" y2="9" /></svg>
+                            Create view
+                        </button>
                     </div>
 
                     {/* View Header */}
                     <div className={styles.viewHeader}>
                         <div className={styles.viewTitle}>
-                            Active Accounts ⌄
+                            Active Cases ⌄
                         </div>
                         <div style={{ flex: 1 }} />
                         <div className={styles.commandButton} style={{ border: '1px solid #e1dfdd', padding: '4px 8px', borderRadius: '2px', background: 'white' }}>
@@ -151,26 +136,22 @@ export default function DynamicsAdminPage() {
                                 <tr>
                                     <th className={styles.gridHeader} style={{ width: '40px' }}>✓</th>
                                     {columnDefs.map((col, idx) => (
-                                        <th key={idx} className={styles.gridHeader} style={{ whiteSpace: 'nowrap' }}>{col.label} ⌄</th>
+                                        <th key={idx} className={styles.gridHeader} style={{ whiteSpace: 'nowrap' }}>
+                                            {col.label} ⌄
+                                        </th>
                                     ))}
                                 </tr>
                             </thead>
                             <tbody>
-                                {data.map((account: any, idx) => (
-                                    <tr 
-                                        key={idx} 
-                                        className={styles.gridRow}
-                                        onClick={() => router.push(`/live-demo/admin/${idx}`)}
-                                        style={{ cursor: 'pointer' }}
-                                    >
+                                {cases.map((item: any, idx) => (
+                                    <tr key={idx} className={styles.gridRow}>
                                         <td className={styles.gridCell}><input type="checkbox" /></td>
                                         {columnDefs.map((col, colIdx) => (
-                                            <td key={colIdx} className={styles.gridCell} style={{ whiteSpace: 'nowrap', maxWidth: '200px', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-                                                {col.key === 'First Name' || col.key === 'Owner' ? (
-                                                    <a href="#" className={styles.gridLink}>{account[col.key]}</a>
-                                                ) : (
-                                                    account[col.key]
-                                                )}
+                                            <td key={colIdx} className={styles.gridCell} style={{ 
+                                                whiteSpace: 'nowrap', 
+                                                color: col.key === 'title' || col.key === 'customer' || col.key === 'tpAccount' ? '#0078d4' : 'inherit'
+                                            }}>
+                                                {item[col.key]}
                                             </td>
                                         ))}
                                     </tr>
@@ -189,7 +170,7 @@ export default function DynamicsAdminPage() {
                             ))}
                         </div>
                         <div className={styles.pagination}>
-                            <span>1 - {Math.min(100, data.length)} of {data.length}</span>
+                            <span>1 - {Math.min(100, cases.length)} of {cases.length}</span>
                             <span>⏮️</span>
                             <span>Page 1 ⌄</span>
                             <span>⏭️</span>

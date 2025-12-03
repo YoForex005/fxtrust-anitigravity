@@ -2,39 +2,47 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import styles from '../dynamics.module.css';
-import accountsData from './data.json';
-import DynamicsSidebar from '../components/DynamicsSidebar';
+import styles from '../../dynamics.module.css';
+import DynamicsSidebar from '../../components/DynamicsSidebar';
 
-export default function DynamicsAdminPage() {
+export default function TransactionsPage() {
     const router = useRouter();
-    const [activeItem, setActiveItem] = useState('Accounts');
+    const [activeItem, setActiveItem] = useState('Monetary Transactions');
 
-    // Define explicit columns to match the reference image and exclude system columns
-    const columnDefs = [
-        { key: 'Created On', label: 'Created On' },
-        { key: 'First Name', label: 'First Name' },
-        { key: 'Last Name', label: 'Last Name' },
-        { key: 'E-mail', label: 'E-mail' },
-        { key: 'Business Unit Name', label: 'Business Unit' },
-        { key: 'Phone 1: Phone', label: 'Phone 1' },
-        { key: 'Last Deposit Date', label: 'Last Deposit' },
-        { key: 'Sum of Deposits (USD)', label: 'Sum of Deposits (USD)' },
-        { key: 'Owner', label: 'Owner' },
-        { key: 'Account Status', label: 'Account Status' },
-        { key: 'Lead Status', label: 'Lead Status' },
-        { key: 'Main TP Account', label: 'Main TP Account' },
-        { key: 'Conversion Owner', label: 'Conversion Owner' },
-        { key: 'Retention owner', label: 'Retention owner' },
-        { key: 'Modified On', label: 'Modified On' }
+    // Mock data based on screenshot
+    const transactions = [
+        { createdOn: '11/26/2025 3:07 PM', type: 'Withdrawal', amount: '1,000.00', currency: 'US Dollar', tpAccount: '6693826', account: 'LeverateAsia FX', method: 'Wire Transfer', usdValue: '1,000.00', approved: 'No' },
+        { createdOn: '11/21/2025 2:39 PM', type: 'Deposit', amount: '30,000.00', currency: 'US Dollar', tpAccount: '24631821', account: 'Alex Ryder', method: 'Credit Card', usdValue: '30,000.00', approved: 'Yes' },
+        { createdOn: '11/20/2025 5:43 PM', type: 'Deposit', amount: '500,000.00', currency: 'US Dollar', tpAccount: '13606044', account: 'Trading Success Demo Sirix', method: 'Credit Card', usdValue: '500,000.00', approved: 'Yes' },
+        { createdOn: '11/20/2025 10:39 AM', type: 'Transfer Between Tradin...', amount: '500.00', currency: 'US Dollar', tpAccount: '24758128', account: 'Hitesh Patel Sirix Demo', method: 'Internal', usdValue: '500.00', approved: 'Yes' },
+        { createdOn: '11/20/2025 10:38 AM', type: 'Deposit', amount: '5,000.00', currency: 'US Dollar', tpAccount: '24758128', account: 'Hitesh Patel Sirix Demo', method: 'Credit Card', usdValue: '5,000.00', approved: 'Yes' },
+        { createdOn: '11/19/2025 5:14 PM', type: 'Withdrawal', amount: '150.00', currency: 'US Dollar', tpAccount: '11735086', account: 'Tamir Gur', method: 'Crypto', usdValue: '150.00', approved: 'No' },
+        { createdOn: '11/19/2025 5:13 PM', type: 'Withdrawal', amount: '1,000.00', currency: 'US Dollar', tpAccount: '11735086', account: 'Tamir Gur', method: 'Credit Card', usdValue: '1,000.00', approved: 'No' },
+        { createdOn: '11/19/2025 5:11 PM', type: 'Withdrawal', amount: '5,000.00', currency: 'US Dollar', tpAccount: '11735086', account: 'Tamir Gur', method: 'Crypto', usdValue: '5,000.00', approved: 'No' },
+        { createdOn: '11/19/2025 2:09 PM', type: 'Deposit', amount: '30,000.00', currency: 'US Dollar', tpAccount: '24751880', account: 'Cesare Pasquale', method: 'Credit Card', usdValue: '30,000.00', approved: 'Yes' },
+        { createdOn: '11/19/2025 10:15 AM', type: 'Deposit', amount: '100.00', currency: 'US Dollar', tpAccount: '24736656', account: 'nurettin test', method: 'Internal', usdValue: '100.00', approved: 'Yes' },
+        { createdOn: '11/17/2025 5:23 PM', type: 'Transfer Between Tradin...', amount: '500.00', currency: 'US Dollar', tpAccount: '24734648', account: 'Majid Zoubi Sirix Demo', method: 'Internal', usdValue: '500.00', approved: 'Yes' },
+        { createdOn: '11/17/2025 5:20 PM', type: 'Deposit', amount: '1,000.00', currency: 'Euro', tpAccount: '24734668', account: 'Majid Zoubi Sirix Demo', method: 'Internal', usdValue: '1,159.30', approved: 'Yes' },
+        { createdOn: '11/17/2025 5:18 PM', type: 'Deposit', amount: '1,000.00', currency: 'US Dollar', tpAccount: '24734648', account: 'Majid Zoubi Sirix Demo', method: 'Credit Card', usdValue: '1,000.00', approved: 'Yes' },
+        { createdOn: '11/17/2025 4:56 PM', type: 'Deposit', amount: '5,000.00', currency: 'US Dollar', tpAccount: '24734648', account: 'Majid Zoubi Sirix Demo', method: 'Credit Card', usdValue: '5,000.00', approved: 'Yes' },
+        { createdOn: '11/17/2025 11:00 AM', type: 'Deposit', amount: '5,000.00', currency: 'US Dollar', tpAccount: '24733606', account: 'Saar Alul Sirixdemo', method: 'Credit Card', usdValue: '5,000.00', approved: 'Yes' },
     ];
 
-    // Cast data to any[] to avoid type errors with imported JSON
-    const data = accountsData as any[];
+    const columnDefs = [
+        { key: 'createdOn', label: 'Created On' },
+        { key: 'type', label: 'Type' },
+        { key: 'amount', label: 'Amount' },
+        { key: 'currency', label: 'Currency' },
+        { key: 'tpAccount', label: 'TP Account' },
+        { key: 'account', label: 'Account' },
+        { key: 'method', label: 'Method of Payment' },
+        { key: 'usdValue', label: 'USD Value' },
+        { key: 'approved', label: 'Approved' }
+    ];
 
     return (
         <div className={styles.container}>
-            {/* 1. Global Header */}
+            {/* Header */}
             <header className={styles.header}>
                 <div className={styles.headerLeft}>
                     <div className={styles.waffleMenu}>
@@ -48,21 +56,6 @@ export default function DynamicsAdminPage() {
                     <div className={styles.headerIcon} title="Search">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" /></svg>
                     </div>
-                    <div className={styles.headerIcon} title="Task Flow">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 2v20M2 12h20" /></svg>
-                    </div>
-                    <div className={styles.headerIcon} title="Assistant">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 2a7 7 0 0 1 7 7c0 2.38-1.19 4.47-3 5.74V17a2 2 0 0 1-2 2H10a2 2 0 0 1-2-2v-2.26C6.19 13.47 5 11.38 5 9a7 7 0 0 1 7-7z" /><path d="M9 21h6" /></svg>
-                    </div>
-                    <div className={styles.headerIcon} title="Add">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 5v14M5 12h14" /></svg>
-                    </div>
-                    <div className={styles.headerIcon} title="Filter">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" /></svg>
-                    </div>
-                    <div className={styles.headerIcon} title="Settings">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.09a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z" /><circle cx="12" cy="12" r="3" /></svg>
-                    </div>
                     <div className={styles.headerIcon} title="Help">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><circle cx="12" cy="12" r="10" /><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" /><path d="M12 17h.01" /></svg>
                     </div>
@@ -72,7 +65,6 @@ export default function DynamicsAdminPage() {
                 </div>
             </header>
 
-            {/* 2. Main Layout */}
             <div className={styles.mainLayout}>
                 {/* Sidebar */}
                 <DynamicsSidebar activeItem={activeItem} onNavigate={setActiveItem} />
@@ -86,6 +78,10 @@ export default function DynamicsAdminPage() {
                             Show Chart
                         </button>
                         <button className={styles.commandButton}>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><polyline points="23 4 23 10 17 10" /><polyline points="1 20 1 14 7 14" /><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15" /></svg>
+                            Refresh
+                        </button>
+                        <button className={styles.commandButton}>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><line x1="12" y1="5" x2="12" y2="19" /><line x1="5" y1="12" x2="19" y2="12" /></svg>
                             New
                         </button>
@@ -94,27 +90,6 @@ export default function DynamicsAdminPage() {
                             Delete
                         </button>
                         <div className={styles.commandSeparator} />
-                        <button className={styles.commandButton}>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 20h9" /><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" /></svg>
-                            Set extension
-                        </button>
-                        <button className={styles.commandButton}>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
-                            Mass Assignment
-                        </button>
-                        <button className={styles.commandButton}>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><line x1="12" y1="1" x2="12" y2="23" /><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
-                            Realize Bonus
-                        </button>
-                        <button className={styles.commandButton}>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" /><path d="M13.73 21a2 2 0 0 1-3.46 0" /></svg>
-                            Send Notification
-                        </button>
-                        <div className={styles.commandSeparator} />
-                        <button className={styles.commandButton}>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><polyline points="23 4 23 10 17 10" /><polyline points="1 20 1 14 7 14" /><path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15" /></svg>
-                            Refresh
-                        </button>
                         <button className={styles.commandButton}>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" style={{ color: '#107c10' }}><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="8" y1="13" x2="16" y2="13" /><line x1="8" y1="17" x2="16" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>
                             Export to Excel
@@ -126,15 +101,14 @@ export default function DynamicsAdminPage() {
                         <div className={styles.commandSeparator} />
                         <button className={styles.commandButton}>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2" /><line x1="3" y1="9" x2="21" y2="9" /><line x1="9" y1="21" x2="9" y2="9" /></svg>
-                            Open Dashboards
+                            Create view
                         </button>
-                        <button className={styles.commandButton}>⋮</button>
                     </div>
 
                     {/* View Header */}
                     <div className={styles.viewHeader}>
                         <div className={styles.viewTitle}>
-                            Active Accounts ⌄
+                            All Transactions ⌄
                         </div>
                         <div style={{ flex: 1 }} />
                         <div className={styles.commandButton} style={{ border: '1px solid #e1dfdd', padding: '4px 8px', borderRadius: '2px', background: 'white' }}>
@@ -151,26 +125,23 @@ export default function DynamicsAdminPage() {
                                 <tr>
                                     <th className={styles.gridHeader} style={{ width: '40px' }}>✓</th>
                                     {columnDefs.map((col, idx) => (
-                                        <th key={idx} className={styles.gridHeader} style={{ whiteSpace: 'nowrap' }}>{col.label} ⌄</th>
+                                        <th key={idx} className={styles.gridHeader} style={{ whiteSpace: 'nowrap' }}>
+                                            {col.label} ⌄
+                                        </th>
                                     ))}
                                 </tr>
                             </thead>
                             <tbody>
-                                {data.map((account: any, idx) => (
-                                    <tr 
-                                        key={idx} 
-                                        className={styles.gridRow}
-                                        onClick={() => router.push(`/live-demo/admin/${idx}`)}
-                                        style={{ cursor: 'pointer' }}
-                                    >
+                                {transactions.map((item: any, idx) => (
+                                    <tr key={idx} className={styles.gridRow}>
                                         <td className={styles.gridCell}><input type="checkbox" /></td>
                                         {columnDefs.map((col, colIdx) => (
-                                            <td key={colIdx} className={styles.gridCell} style={{ whiteSpace: 'nowrap', maxWidth: '200px', overflow: 'hidden', textOverflow: 'ellipsis' }}>
-                                                {col.key === 'First Name' || col.key === 'Owner' ? (
-                                                    <a href="#" className={styles.gridLink}>{account[col.key]}</a>
-                                                ) : (
-                                                    account[col.key]
-                                                )}
+                                            <td key={colIdx} className={styles.gridCell} style={{ 
+                                                whiteSpace: 'nowrap', 
+                                                textAlign: ['amount', 'usdValue'].includes(col.key) ? 'right' : 'left',
+                                                color: col.key === 'account' ? '#0078d4' : 'inherit'
+                                            }}>
+                                                {item[col.key]}
                                             </td>
                                         ))}
                                     </tr>
@@ -189,7 +160,7 @@ export default function DynamicsAdminPage() {
                             ))}
                         </div>
                         <div className={styles.pagination}>
-                            <span>1 - {Math.min(100, data.length)} of {data.length}</span>
+                            <span>1 - {Math.min(100, transactions.length)} of {transactions.length}</span>
                             <span>⏮️</span>
                             <span>Page 1 ⌄</span>
                             <span>⏭️</span>
