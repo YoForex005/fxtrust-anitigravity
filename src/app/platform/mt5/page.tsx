@@ -3,6 +3,14 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import styles from './mt5.module.css';
 
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: "MT5 White Label & CRM | MetaTrader 5 Manager & Administrator | FxTrusts",
+    description: "Complete MetaTrader 5 (MT5) White Label solution. Includes full Manager and Administrator access, integrated CRM, and mobile apps. Launch in days.",
+    keywords: ["mt5 crm", "metatrader 5 manager", "metatrader 5 administrator", "mt5 white label", "forex white label"],
+};
+
 export default function MT5Page() {
     return (
         <main>

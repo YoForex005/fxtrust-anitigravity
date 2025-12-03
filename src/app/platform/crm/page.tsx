@@ -4,6 +4,14 @@ import Footer from '@/components/Footer';
 import styles from './crm.module.css';
 import { MacWindow } from '@/components/DeviceFrames';
 
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: "Forex CRM Software & Developer | Better than Leverate | FxTrusts",
+    description: "The ultimate Forex CRM software for brokers. Automate IBs, KYC, and Sales. A superior alternative to Leverate CRM with custom development options.",
+    keywords: ["forex crm software", "forex crm developer", "leverate crm", "forex broker crm", "best forex crm"],
+};
+
 export default function CRMPage() {
     return (
         <main>

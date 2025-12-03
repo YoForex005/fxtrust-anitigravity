@@ -75,6 +75,7 @@ export default function Footer() {
                             <li><Link href="/resources/help-center">Help Center</Link></li>
                             <li><Link href="/resources/help-center">Blog</Link></li>
                             <li><Link href="/resources/help-center">System Status</Link></li>
+                            <li><Link href="/resources/guides/how-to-start-forex-broker">How to Start a Broker</Link></li>
                         </ul>
                     </div>
                 </div>

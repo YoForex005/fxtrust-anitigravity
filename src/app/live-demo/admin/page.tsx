@@ -8,6 +8,8 @@ import accountsData from './data.json';
 export default function DynamicsAdminPage() {
     const router = useRouter();
     const [activeItem, setActiveItem] = useState('Accounts');
+    const [recentOpen, setRecentOpen] = useState(true);
+    const [pinnedOpen, setPinnedOpen] = useState(true);
 
     // Define explicit columns to match the reference image and exclude system columns
     const columnDefs = [
@@ -80,14 +82,34 @@ export default function DynamicsAdminPage() {
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /></svg>
                             Home
                         </div>
-                        <div className={styles.sidebarItem}>
+
+                        {/* Recent Expanded */}
+                        <div className={styles.sidebarItem} onClick={() => setRecentOpen(!recentOpen)}>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
-                            Recent ⌄
+                            Recent
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ marginLeft: 'auto', transform: recentOpen ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s' }}><path d="M18 15l-6-6-6 6" /></svg>
                         </div>
-                        <div className={styles.sidebarItem}>
+                        {recentOpen && (
+                            <div className={styles.recentList}>
+                                {['Active Accounts', 'All Transactions', 'Available Roles', 'Enabled Users', 'All Phone Calls', 'Real-Time Trading ...', 'asma bazani', 'Accounts', 'Mahmoud Makahl...', 'Active Brands'].map((item, i) => (
+                                    <div key={i} className={styles.recentItem}>{item}</div>
+                                ))}
+                            </div>
+                        )}
+
+                        {/* Pinned Expanded */}
+                        <div className={styles.sidebarItem} onClick={() => setPinnedOpen(!pinnedOpen)}>
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M21.41 11.58l-9-9C12.05 2.22 11.55 2 11 2H4a2 2 0 0 0-2 2v7c0 .55.22 1.05.59 1.42l9 9c.36.36.86.58 1.41.58.55 0 1.05-.22 1.41-.59l7-7c.37-.36.59-.86.59-1.41 0-.55-.23-1.06-.59-1.42z" /><circle cx="6.5" cy="6.5" r="1.5" /></svg>
-                            Pinned ⌄
+                            Pinned
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ marginLeft: 'auto', transform: pinnedOpen ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.2s' }}><path d="M18 15l-6-6-6 6" /></svg>
                         </div>
+                        {pinnedOpen && (
+                            <div className={styles.recentList}>
+                                {['Real-Time Trading ...', 'Active IPs', 'Active Cases', 'Sergiu Presentation', 'Yasser Attia Presen...', 'Demo Test'].map((item, i) => (
+                                    <div key={i} className={styles.recentItem}>{item}</div>
+                                ))}
+                            </div>
+                        )}
                     </div>
 
                     <div className={styles.sidebarGroup}>

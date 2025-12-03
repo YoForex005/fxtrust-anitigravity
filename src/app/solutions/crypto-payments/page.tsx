@@ -3,6 +3,14 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import styles from './crypto.module.css';
 
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: "Crypto Payment Gateway for Forex Brokers | Accept USDT & Bitcoin | FxTrusts",
+    description: "The best crypto payment gateway for Forex brokers. Accept USDT (TRC20), Bitcoin, and Ethereum deposits instantly. Auto-convert to Fiat for MT5.",
+    keywords: ["crypto payment gateway", "forex broker crypto payments", "accept usdt", "bitcoin payment processor", "forex payment solution"],
+};
+
 export default function CryptoPaymentsPage() {
     return (
         <main>

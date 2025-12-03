@@ -3,6 +3,14 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import styles from './risk.module.css';
 
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: "Forex Risk Management Tools | A-Book vs B-Book | FxTrusts",
+    description: "Advanced risk management tools for brokers. Monitor exposure, automate hedging, and manage A-Book/B-Book flow in real-time. Protect your brokerage from toxic flow.",
+    keywords: ["forex risk management", "a-book vs b-book", "forex hedging tools", "broker risk management", "toxic flow detection"],
+};
+
 export default function RiskManagementPage() {
     return (
         <main>

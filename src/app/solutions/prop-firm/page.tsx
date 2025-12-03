@@ -4,6 +4,14 @@ import Footer from '@/components/Footer';
 import styles from './prop.module.css';
 import { MacWindow, CodeTerminal } from '@/components/DeviceFrames';
 
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: "Prop Firm Tech & CRM | Start Your Own Prop Firm | FxTrusts",
+    description: "Complete technology stack for Prop Firms. Automated challenge management, breach detection, and risk dashboards. Launch your funded trader program today.",
+    keywords: ["prop firm tech", "start a prop firm", "prop firm crm", "funded trader technology", "prop trading platform"],
+};
+
 export default function PropFirmPage() {
     return (
         <main>

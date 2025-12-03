@@ -2,14 +2,12 @@
 :root {
     /* Core Colors */
     --dynamics-header-bg: #000000;
-    /* Deep black/blue */
     --dynamics-header-text: #ffffff;
     --dynamics-sidebar-bg: #f3f2f1;
     --dynamics-sidebar-hover: #edebe9;
     --dynamics-sidebar-active: #ffffff;
     --dynamics-border: #d2d0ce;
     --dynamics-primary: #106ebe;
-    /* Microsoft Blue */
     --dynamics-text-primary: #201f1e;
     --dynamics-text-secondary: #605e5c;
 
@@ -153,6 +151,27 @@
     background: var(--dynamics-sidebar-active);
     border-left-color: var(--dynamics-primary);
     font-weight: 600;
+}
+
+/* Recent / Pinned Items */
+.recentList {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 8px;
+}
+
+.recentItem {
+    padding: 6px 16px 6px 48px;
+    font-size: 14px;
+    color: var(--dynamics-text-primary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    border-left: 3px solid transparent;
+}
+
+.recentItem:hover {
+    background: var(--dynamics-sidebar-hover);
 }
 
 /* Main Content Area */

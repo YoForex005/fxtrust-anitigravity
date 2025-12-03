@@ -1,5 +1,13 @@
 import PageHeader from '../../../components/PageHeader';
 
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: "Best Business Forex CRM Solution & Systems | FxTrusts",
+    description: "Scalable business Forex CRM solutions for high-volume brokers. Rated one of the best Forex CRM systems for automation, sales, and compliance.",
+    keywords: ["business forex crm solution", "best forex crm systems", "forex crm provider", "institutional forex crm", "forex crm solution"],
+};
+
 export default function CRMPage() {
     return (
         <main>

@@ -3,6 +3,14 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import styles from './liquidity.module.css';
 
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    title: "Forex Liquidity Provider & Bridge | Tier 1 Liquidity | FxTrusts",
+    description: "Connect to 50+ Liquidity Providers with our ultra-low latency bridge. Smart Order Routing, A-Book/B-Book management, and deep liquidity for Forex, Metals, and Crypto.",
+    keywords: ["forex liquidity provider", "mt5 bridge", "forex liquidity bridge", "tier 1 liquidity", "forex market making"],
+};
+
 export default function LiquidityPage() {
     return (
         <main>
