@@ -3348,3 +3348,113 @@
     color: #fbbf24;
     font-size: 1.1rem;
 }
+/* --- CRITICAL LAYOUT FIXES & PREMIUM OVERRIDES --- */
+
+/* 1. Fix Scroll & Layout Structure */
+.dashboardLayout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    height: 100vh;
+    position: relative;
+    z-index: 1;
+    overflow: hidden !important; /* Prevent body scroll */
+}
+
+.mainContent {
+    overflow-y: auto !important;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    height: 100vh !important; /* Ensure scroll container */
+    position: relative;
+}
+
+.dashboardGrid {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1800px;
+    margin: 0 auto;
+    width: 100%;
+    align-items: start !important; /* Prevent stretching */
+}
+
+.mainColumn {
+    min-width: 0; /* Allow grid children to shrink */
+}
+
+/* 2. Fix Grid Alignment */
+.statsRow {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 1.5rem;
+}
+
+.visualsRow {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 1.5rem;
+}
+
+.visualsRow > div:first-child {
+    grid-column: span 3;
+}
+
+.visualsRow > div:last-child {
+    grid-column: span 1;
+}
+
+/* 3. Premium Design Polish */
+
+/* Stat Cards */
+.statCard {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 16px !important;
+    border: 1px solid var(--slate-100) !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.02) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.statCard:hover {
+    transform: translateY(-3px) !important;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025) !important;
+    border-color: var(--primary-100) !important;
+}
+
+/* Stat Values */
+.statValue {
+    font-size: 2rem !important;
+    font-weight: 700;
+    color: var(--slate-900);
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.03em;
+    line-height: 1;
+}
+
+/* Navigation Active State */
+.navItemActive {
+    background: var(--primary-50) !important;
+    color: var(--primary-700) !important;
+    font-weight: 600;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+}
+
+/* Map Card */
+.mapCard {
+    background: white;
+    border-radius: 16px !important;
+    padding: 1.5rem;
+    border: 1px solid var(--slate-100) !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.02) !important;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+.mapCard:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05), 0 4px 6px -2px rgba(0, 0, 0, 0.025) !important;
+}
+
