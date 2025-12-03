@@ -172,7 +172,7 @@ export default function Header() {
                             <path d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
                     </button>
-                    <Link href="/get-started" className={styles.ctaButton}>
+                    <Link href="https://calendar.app.google/eTbgdbEtdoRGXCzD8" target='blank'  className={styles.ctaButton}>
                         Get Started
                     </Link>
                 </div>
