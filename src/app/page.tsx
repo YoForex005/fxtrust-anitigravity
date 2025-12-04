@@ -10,6 +10,7 @@ import LiveStats from '@/components/LiveStats';
 import PricingPreview from '@/components/PricingPreview';
 import Testimonials from '@/components/Testimonials';
 import Solutions from '@/components/Solutions';
+import TurnkeySolutions from '@/components/TurnkeySolutions';
 import Operations from '@/components/Operations';
 import LiveDemo from '@/components/LiveDemo';
 import Footer from '@/components/Footer';
@@ -73,6 +74,7 @@ export default function Home() {
       <PricingPreview />
       <Testimonials />
       <Solutions />
+      <TurnkeySolutions />
       <Operations />
       <LiveDemo />
       <Footer />

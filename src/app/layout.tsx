@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const inter = Inter({
@@ -51,35 +52,48 @@ export const metadata: Metadata = {
       'max-snippet': -1,
     },
   },
+  verification: {
+    google: '3rk9m1phwv5ugJkBalpVy_6ls36_8_HgiAuGJ-g2B3o',
+    other: {
+      'msvalidate.01': '2BEDBB84C23CB5B198E00F849CC7804B',
+    },
+  },
+
 };
+
+import OrganizationSchema from "@/components/seo/OrganizationSchema";
+import DynamicBreadcrumbs from "@/components/seo/DynamicBreadcrumbs";
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const breadcrumbJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://www.fxtrusts.com"
-      }
-    ]
-  };
-
   return (
     <html lang="en">
       <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+        {/* Google Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-JTKXHLHJY8"
+          strategy="afterInteractive"
         />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-JTKXHLHJY8');
+          `}
+        </Script>
+
+        {/* Structured Data */}
+        <DynamicBreadcrumbs />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <OrganizationSchema />
+        {children}
+      </body>
     </html>
   );
 }
+

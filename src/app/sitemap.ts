@@ -34,6 +34,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '/resources/blog',
         '/resources/blog/best-forex-crm-providers-2025',
         '/resources/blog/mt4-vs-mt5-crm',
+        '/resources/blog/forex-broker-crm-pricing-exposed',
     ].map((route) => ({
         url: `${baseUrl}${route}`,
         lastModified: new Date(),

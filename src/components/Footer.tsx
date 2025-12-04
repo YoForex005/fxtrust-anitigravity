@@ -39,7 +39,7 @@ export default function Footer() {
                             <li><Link href="/markets/crypto">Crypto</Link></li>
                             <li><Link href="/markets/indices">Indices</Link></li>
                             <li><Link href="/markets/commodities">Commodities</Link></li>
-                            <li><Link href="/markets/indices">Stocks</Link></li>
+                            <li><Link href="/markets/stocks">Stocks</Link></li>
                         </ul>
                     </div>
 
@@ -50,8 +50,8 @@ export default function Footer() {
                             <li><Link href="/solutions/crm">Institutional CRM</Link></li>
                             <li><Link href="/solutions/liquidity">Liquidity Pools</Link></li>
                             <li><Link href="/solutions/mt5">MetaTrader 5</Link></li>
-                            <li><Link href="/solutions/mt5">White Label</Link></li>
-                            <li><Link href="/solutions/crm">Copy Trading</Link></li>
+                            <li><Link href="/platform/mt5">White Label</Link></li>
+                            <li><Link href="/platform/copy-trading">Copy Trading</Link></li>
                         </ul>
                     </div>
 
@@ -62,8 +62,8 @@ export default function Footer() {
                             <li><Link href="/company/about">About Us</Link></li>
                             <li><Link href="/company/contact">Contact</Link></li>
                             <li><Link href="/pricing">Pricing</Link></li>
-                            <li><Link href="/company/about">Careers</Link></li>
-                            <li><Link href="/company/about">Partners</Link></li>
+                            <li><Link href="/company/manifesto">Our Manifesto</Link></li>
+                            <li><Link href="/get-started">Get Started</Link></li>
                         </ul>
                     </div>
 
@@ -73,8 +73,8 @@ export default function Footer() {
                         <ul>
                             <li><Link href="/resources/api-docs">API Documentation</Link></li>
                             <li><Link href="/resources/help-center">Help Center</Link></li>
-                            <li><Link href="/resources/help-center">Blog</Link></li>
-                            <li><Link href="/resources/help-center">System Status</Link></li>
+                            <li><Link href="/resources/blog">Blog</Link></li>
+                            <li><Link href="/resources/status">System Status</Link></li>
                             <li><Link href="/resources/guides/how-to-start-forex-broker">How to Start a Broker</Link></li>
                         </ul>
                     </div>
@@ -85,8 +85,7 @@ export default function Footer() {
                         <Link href="/legal/privacy-policy">Privacy Policy</Link>
                         <Link href="/legal/terms-conditions">Terms of Service</Link>
                         <Link href="/legal/refund-policy">Refund Policy</Link>
-                        <Link href="/legal/refund-policy">Risk Disclosure</Link>
-                        <Link href="/legal/terms-conditions">Cookies Settings</Link>
+                        <Link href="/legal/risk-disclosure">Risk Disclosure</Link>
                     </div>
                     <div className={styles.disclaimer}>
                         <p style={{ marginBottom: '1rem', fontWeight: 'bold', color: '#E2E8F0' }}>

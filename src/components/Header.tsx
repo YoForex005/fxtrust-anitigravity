@@ -4,16 +4,105 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import styles from './Header.module.css';
 
+// ========== DYNAMIC NAV LABEL VARIATIONS (10 each) ==========
+const navLabels = {
+    platform: [
+        'Platform',
+        'Products',
+        'Technology',
+        'Infrastructure',
+        'Tools',
+        'Systems',
+        'Tech Stack',
+        'Core Platform',
+        'Our Technology',
+        'Platform Suite',
+    ],
+    solutions: [
+        'Solutions',
+        'Services',
+        'Offerings',
+        'Capabilities',
+        'Use Cases',
+        'Applications',
+        'Business Solutions',
+        'Industry Solutions',
+        'What We Offer',
+        'Our Services',
+    ],
+    resources: [
+        'Resources',
+        'Learn',
+        'Knowledge',
+        'Insights',
+        'Library',
+        'Documentation',
+        'Support Hub',
+        'Help Center',
+        'Learning Hub',
+        'Resource Center',
+    ],
+    pricing: [
+        'Pricing',
+        'Plans',
+        'Packages',
+        'Investment',
+        'Cost',
+        'Rates',
+        'Subscription',
+        'Pricing Plans',
+        'Our Pricing',
+        'View Plans',
+    ],
+    company: [
+        'Company',
+        'About',
+        'About Us',
+        'Who We Are',
+        'Our Story',
+        'The Team',
+        'Contact',
+        'Get in Touch',
+        'Connect',
+        'Learn More',
+    ],
+};
+
+// Get random label for each nav item
+function getRandomLabels() {
+    return {
+        platform: navLabels.platform[Math.floor(Math.random() * navLabels.platform.length)],
+        solutions: navLabels.solutions[Math.floor(Math.random() * navLabels.solutions.length)],
+        resources: navLabels.resources[Math.floor(Math.random() * navLabels.resources.length)],
+        pricing: navLabels.pricing[Math.floor(Math.random() * navLabels.pricing.length)],
+        company: navLabels.company[Math.floor(Math.random() * navLabels.company.length)],
+    };
+}
+
 export default function Header() {
     const [scrolled, setScrolled] = useState(false);
+    const [labels, setLabels] = useState<ReturnType<typeof getRandomLabels> | null>(null);
 
     useEffect(() => {
         const handleScroll = () => {
             setScrolled(window.scrollY > 20);
         };
         window.addEventListener('scroll', handleScroll);
+
+        // Set random labels on mount (client-side)
+        setLabels(getRandomLabels());
+
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
+
+    // Fallback labels before hydration
+    const nav = labels || {
+        platform: 'Platform',
+        solutions: 'Solutions',
+        resources: 'Resources',
+        pricing: 'Pricing',
+        company: 'Company',
+    };
 
     return (
         <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
@@ -29,7 +118,7 @@ export default function Header() {
                     {/* Platform Dropdown */}
                     <div className={styles.navItem}>
                         <div className={styles.navLink}>
-                            Platform
+                            {nav.platform}
                             <svg className={styles.chevron} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                                 <path d="M6 9l6 6 6-6" />
                             </svg>
@@ -77,7 +166,7 @@ export default function Header() {
                     {/* Solutions Dropdown */}
                     <div className={styles.navItem}>
                         <div className={styles.navLink}>
-                            Solutions
+                            {nav.solutions}
                             <svg className={styles.chevron} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                                 <path d="M6 9l6 6 6-6" />
                             </svg>
@@ -113,7 +202,7 @@ export default function Header() {
                     {/* Resources Dropdown (New) */}
                     <div className={styles.navItem}>
                         <div className={styles.navLink}>
-                            Resources
+                            {nav.resources}
                             <svg className={styles.chevron} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                                 <path d="M6 9l6 6 6-6" />
                             </svg>
@@ -140,11 +229,11 @@ export default function Header() {
                         </div>
                     </div>
 
-                    <Link href="/pricing" className={styles.navLink}>Pricing</Link>
+                    <Link href="/pricing" className={styles.navLink}>{nav.pricing}</Link>
 
                     <div className={styles.navItem}>
                         <div className={styles.navLink}>
-                            Company
+                            {nav.company}
                             <svg className={styles.chevron} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                                 <path d="M6 9l6 6 6-6" />
                             </svg>
@@ -172,7 +261,7 @@ export default function Header() {
                             <path d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
                     </button>
-                    <Link href="https://calendar.app.google/ZqiL1RdizHSc1ydy6" target='blank'  className={styles.ctaButton}>
+                    <Link href="https://calendar.app.google/ZqiL1RdizHSc1ydy6" target='blank' className={styles.ctaButton}>
                         Get Started
                     </Link>
                 </div>

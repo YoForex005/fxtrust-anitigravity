@@ -1,0 +1,204 @@
+.section {
+    padding: 6rem 0;
+    background: #F8FAFC;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.headerRow {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.sectionTitle {
+    font-family: var(--font-inter);
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #1F2937;
+    letter-spacing: -0.01em;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    align-items: stretch;
+}
+
+/* Left Side - Liquidity Card */
+.liquidityCard {
+    background: linear-gradient(155deg, #0D4F4C 0%, #134E4A 40%, #1E3A5F 100%);
+    border-radius: 20px;
+    padding: 2.5rem;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 380px;
+}
+
+.liquidityCard::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -30%;
+    width: 80%;
+    height: 150%;
+    background: radial-gradient(ellipse, rgba(255, 255, 255, 0.06) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+.liquidityContent {
+    position: relative;
+    z-index: 1;
+}
+
+.liquidityBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: rgba(16, 185, 129, 0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 1.75rem;
+    color: #6EE7B7;
+}
+
+.liquidityBadge svg {
+    color: #10B981;
+}
+
+.liquidityHeadline {
+    font-family: var(--font-inter);
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+    margin-bottom: 1.25rem;
+    color: white;
+}
+
+.liquidityText {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    color: rgba(255, 255, 255, 0.75);
+    max-width: 440px;
+}
+
+/* Right Side - Turnkey Grid */
+.turnkeyGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
+
+.turnkeyCard {
+    background: white;
+    border-radius: 14px;
+    padding: 1.5rem;
+    border: 1px solid #E5E7EB;
+    transition: all 0.25s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.turnkeyCard:hover {
+    border-color: #CBD5E1;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.turnkeyIconWrapper {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+.turnkeyIconWrapper.forex {
+    background: #F1F5F9;
+    color: #475569;
+}
+
+.turnkeyIconWrapper.crypto {
+    background: #FFF7ED;
+    color: #EA580C;
+}
+
+.turnkeyIconWrapper.exchange {
+    background: #ECFDF5;
+    color: #059669;
+}
+
+.turnkeyIconWrapper.provider {
+    background: #F5F3FF;
+    color: #7C3AED;
+}
+
+.turnkeyTitle {
+    font-family: var(--font-inter);
+    font-size: 1rem;
+    font-weight: 600;
+    color: #111827;
+    letter-spacing: -0.01em;
+    margin-top: 0.25rem;
+}
+
+.turnkeyText {
+    font-size: 0.85rem;
+    line-height: 1.55;
+    color: #6B7280;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .headerRow {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .headerRow .sectionTitle:last-child {
+        margin-top: 2rem;
+    }
+
+    .liquidityCard {
+        min-height: 320px;
+    }
+
+    .liquidityHeadline {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .turnkeyGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .liquidityHeadline {
+        font-size: 1.75rem;
+    }
+
+    .section {
+        padding: 4rem 0;
+    }
+}

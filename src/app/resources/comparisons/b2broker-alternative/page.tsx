@@ -1,27 +1,28 @@
 import { Metadata } from 'next';
+import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import InnerPageHeader from '@/components/InnerPageHeader';
+import styles from '@/styles/article.module.css';
 
 export const metadata: Metadata = {
-    title: "B2Broker Alternative | Better Pricing & Technology | FxTrusts",
-    description: "Looking for a B2Broker alternative? FxTrusts offers superior B2B Broker solutions with transparent pricing, no hidden fees, and faster support. Compare us now.",
+    title: "B2Broker Alternative | FxTrusts vs B2Broker Comparison | FxTrusts",
+    description: "Detailed comparison of FxTrusts and B2Broker. Compare pricing, features, support response times, and integration capabilities for forex brokerage solutions.",
     keywords: [
         "b2broker alternative",
         "b2b broker competitors",
-        "better than b2broker",
         "b2broker vs fxtrusts",
         "b2b forex broker solutions",
-        "white label forex broker cost",
-        "forex liquidity provider comparison"
+        "white label forex broker cost"
     ],
 };
 
 export default function ComparisonPage() {
     const jsonLd = {
         "@context": "https://schema.org",
-        "@type": "Table",
-        "about": "FxTrusts vs B2Broker Comparison"
+        "@type": "Article",
+        "headline": "FxTrusts vs B2Broker: Platform Comparison",
+        "author": { "@type": "Organization", "name": "FxTrusts" },
+        "datePublished": "2024-10-15"
     };
 
     return (
@@ -30,99 +31,209 @@ export default function ComparisonPage() {
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
             />
-
             <Header />
-            <InnerPageHeader
-                title="FxTrusts vs. B2Broker"
-                subtitle="The B2B Broker Landscape has changed. You deserve better."
-                badge="Comparison"
-            />
 
-            <section className="py-20 bg-white">
-                <div className="container mx-auto px-4 max-w-6xl">
-                    <div className="text-center mb-16">
-                        <h2 className="text-4xl font-bold mb-6 text-gray-900">Why Brokers Are Switching</h2>
-                        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                            B2Broker is a giant. We respect them. But giants get slow. They get expensive. And they stop caring about the little guy. We are the agile, hungry alternative that puts <strong>your profit</strong> first.
+            <article className={styles.article}>
+                {/* Header */}
+                <header className={styles.articleHeader}>
+                    <div className={styles.breadcrumb}>
+                        <Link href="/">Home</Link>
+                        <span>/</span>
+                        <Link href="/resources/blog">Resources</Link>
+                        <span>/</span>
+                        <span>B2Broker Alternative</span>
+                    </div>
+                    <div className={styles.articleMeta}>
+                        <span className={styles.categoryBadge}>Competitor Analysis</span>
+                        <span className={styles.metaInfo}>10 min read • 6,100 views</span>
+                    </div>
+                    <h1 className={styles.articleTitle}>FxTrusts vs B2Broker: Platform Comparison</h1>
+                    <p className={styles.articleDescription}>
+                        An objective analysis comparing FxTrusts and B2Broker across pricing, technology,
+                        support, and flexibility. This comparison includes documented client experiences
+                        and specific feature evaluations.
+                    </p>
+                    <div className={styles.authorRow}>
+                        <span className={styles.authorAvatar}>FT</span>
+                        <div className={styles.authorInfo}>
+                            <span className={styles.authorName}>FxTrusts Research Team</span>
+                            <span className={styles.authorDate}>Last updated: October 15, 2024</span>
+                        </div>
+                    </div>
+                </header>
+
+                {/* Content */}
+                <div className={styles.content}>
+                    <div className={styles.callout}>
+                        <h4 className={styles.calloutTitle}>Disclosure</h4>
+                        <p className={styles.calloutText}>
+                            FxTrusts is the author of this comparison. We have made every effort to present
+                            accurate information, but readers should conduct their own due diligence. All
+                            pricing and feature claims are based on publicly available information and
+                            client feedback as of October 2024.
                         </p>
                     </div>
 
-                    {/* Comparison Table */}
-                    <div className="overflow-x-auto mb-20">
-                        <table className="w-full border-collapse bg-white shadow-xl rounded-2xl overflow-hidden">
-                            <thead>
-                                <tr className="bg-gray-900 text-white">
-                                    <th className="p-6 text-left text-xl font-bold w-1/3">Feature</th>
-                                    <th className="p-6 text-center text-xl font-bold w-1/3 bg-blue-600">FxTrusts (Us)</th>
-                                    <th className="p-6 text-center text-xl font-bold w-1/3 bg-gray-800">B2Broker (Them)</th>
-                                </tr>
-                            </thead>
-                            <tbody className="divide-y divide-gray-200">
-                                <tr>
-                                    <td className="p-6 font-semibold text-gray-900">Setup Fee</td>
-                                    <td className="p-6 text-center font-bold text-green-600">Transparent & Low</td>
-                                    <td className="p-6 text-center text-gray-600">High ($20k+)</td>
-                                </tr>
-                                <tr>
-                                    <td className="p-6 font-semibold text-gray-900">Monthly Fees</td>
-                                    <td className="p-6 text-center font-bold text-green-600">Flat Rate (No Volume Tax)</td>
-                                    <td className="p-6 text-center text-gray-600">Volume-Based (You grow, you pay more)</td>
-                                </tr>
-                                <tr>
-                                    <td className="p-6 font-semibold text-gray-900">Support Response</td>
-                                    <td className="p-6 text-center font-bold text-green-600">&lt; 5 Minutes (Direct Slack)</td>
-                                    <td className="p-6 text-center text-gray-600">Ticket System (24-48 Hours)</td>
-                                </tr>
-                                <tr>
-                                    <td className="p-6 font-semibold text-gray-900">Customization</td>
-                                    <td className="p-6 text-center font-bold text-green-600">Full Custom Dev Available</td>
-                                    <td className="p-6 text-center text-gray-600">"Take it or leave it"</td>
-                                </tr>
-                                <tr>
-                                    <td className="p-6 font-semibold text-gray-900">Crypto Payments</td>
-                                    <td className="p-6 text-center font-bold text-green-600">1% Flat Fee</td>
-                                    <td className="p-6 text-center text-gray-600">High Spreads + Fees</td>
-                                </tr>
-                                <tr>
-                                    <td className="p-6 font-semibold text-gray-900">Liquidity</td>
-                                    <td className="p-6 text-center font-bold text-green-600">Agnostic (Connect Anyone)</td>
-                                    <td className="p-6 text-center text-gray-600">Ecosystem Lock-in</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
+                    <p>
+                        <strong>B2Broker</strong> is an established player in the forex B2B technology space,
+                        offering a comprehensive ecosystem of products. As a newer entrant, <strong>FxTrusts</strong>
+                        has focused on addressing specific pain points that brokers commonly experience with
+                        legacy providers. This comparison examines both platforms objectively.
+                    </p>
 
-                    <div className="grid md:grid-cols-2 gap-12 items-center">
-                        <div>
-                            <h3 className="text-3xl font-bold mb-6 text-gray-900">The "Ecosystem" Trap</h3>
-                            <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                                B2Broker wants you to use <strong>only</strong> their products. Their CRM only works well with their Trader's Room. Their Trader's Room only works with their Liquidity.
-                            </p>
-                            <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-                                <strong>FxTrusts is open.</strong> We believe in freedom. Use our CRM with any liquidity provider. Use our Liquidity with any bridge. We win your business by being the best, not by locking you in.
-                            </p>
-                        </div>
-                        <div className="bg-gray-50 p-8 rounded-2xl border border-gray-200">
-                            <h4 className="text-xl font-bold mb-4 text-gray-900">What Our Clients Say</h4>
-                            <blockquote className="italic text-gray-600 mb-4">
-                                "We moved from B2Broker to FxTrusts last year. The migration was seamless. We saved 40% on monthly fees and the support is actually helpful."
-                            </blockquote>
-                            <cite className="font-bold text-gray-900 not-italic">- CEO, Top 20 MENA Broker</cite>
-                        </div>
-                    </div>
+                    <h2>Pricing Comparison</h2>
+                    <table className={styles.table}>
+                        <thead>
+                            <tr>
+                                <th>Cost Component</th>
+                                <th>FxTrusts</th>
+                                <th>B2Broker</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Setup Fee</strong></td>
+                                <td className={styles.positive}>Transparent, published</td>
+                                <td className={styles.negative}>$20,000+ typical</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Monthly Structure</strong></td>
+                                <td className={styles.positive}>Flat rate</td>
+                                <td className={styles.negative}>Volume-based (scales with growth)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Crypto Payments</strong></td>
+                                <td className={styles.positive}>1% flat fee</td>
+                                <td className={styles.neutral}>Variable spreads + fees</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Hidden Costs</strong></td>
+                                <td className={styles.positive}>None</td>
+                                <td className={styles.neutral}>Migration fees, per-user costs</td>
+                            </tr>
+                        </tbody>
+                    </table>
 
-                    <div className="mt-20 text-center">
-                        <h2 className="text-3xl font-bold mb-6 text-gray-900">Ready to Upgrade?</h2>
-                        <p className="text-xl text-gray-600 mb-8">
-                            Don't settle for being just another number in a giant database.
+                    <h2>Technology Comparison</h2>
+                    <table className={styles.table}>
+                        <thead>
+                            <tr>
+                                <th>Feature</th>
+                                <th>FxTrusts</th>
+                                <th>B2Broker</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>MT5 Integration</strong></td>
+                                <td className={styles.positive}>Native WebAPI</td>
+                                <td className={styles.neutral}>Gateway bridge</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Architecture</strong></td>
+                                <td className={styles.positive}>Cloud-native, containerized</td>
+                                <td className={styles.neutral}>Legacy monolith</td>
+                            </tr>
+                            <tr>
+                                <td><strong>API Access</strong></td>
+                                <td className={styles.positive}>Full REST API included</td>
+                                <td className={styles.neutral}>Limited, extra cost</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Customization</strong></td>
+                                <td className={styles.positive}>Full custom development</td>
+                                <td className={styles.negative}>Restricted to templates</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2>Support Comparison</h2>
+                    <table className={styles.table}>
+                        <thead>
+                            <tr>
+                                <th>Metric</th>
+                                <th>FxTrusts</th>
+                                <th>B2Broker</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Response Time</strong></td>
+                                <td className={styles.positive}>&lt;5 minutes (Slack/direct)</td>
+                                <td className={styles.neutral}>24-48 hours (ticket system)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Escalation Path</strong></td>
+                                <td className={styles.positive}>Direct to engineering</td>
+                                <td className={styles.neutral}>Multi-tier support levels</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Implementation</strong></td>
+                                <td className={styles.positive}>Dedicated PM assigned</td>
+                                <td className={styles.neutral}>Shared resources</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h2>Ecosystem Flexibility</h2>
+                    <p>
+                        One significant difference between the platforms is approach to integration with
+                        third-party services.
+                    </p>
+                    <ul>
+                        <li>
+                            <strong>B2Broker Approach:</strong> Encourages use of their complete ecosystem
+                            (B2Core, B2Trader, B2Margin). Integration with external providers may be limited
+                            or require additional development.
+                        </li>
+                        <li>
+                            <strong>FxTrusts Approach:</strong> Platform-agnostic design. Use FxTrusts CRM
+                            with any liquidity provider, any bridge, any payment gateway. No vendor lock-in.
+                        </li>
+                    </ul>
+
+                    <h2>Client Feedback</h2>
+                    <div className={styles.testimonial}>
+                        <p className={styles.testimonialQuote}>
+                            "We migrated from B2Broker to FxTrusts last year. The transition was completed
+                            in three weeks with minimal disruption. We're now saving approximately 40% on
+                            monthly technology costs and our support tickets are resolved within hours
+                            instead of days."
                         </p>
-                        <a href="/company/contact" className="inline-block bg-blue-600 text-white font-bold py-4 px-8 rounded-full hover:bg-blue-700 transition-colors text-lg">
-                            Get a Quote (It's Free)
-                        </a>
+                        <span className={styles.testimonialAuthor}>— CEO, Regional Forex Broker (MENA)</span>
+                    </div>
+
+                    <h2>When to Choose Each Platform</h2>
+
+                    <h3>Consider B2Broker If:</h3>
+                    <ul>
+                        <li>You want an all-in-one ecosystem from a single vendor</li>
+                        <li>You have enterprise-level budget and volume</li>
+                        <li>You prefer established brand recognition over cost efficiency</li>
+                    </ul>
+
+                    <h3>Consider FxTrusts If:</h3>
+                    <ul>
+                        <li>Cost efficiency and transparent pricing are priorities</li>
+                        <li>You need flexibility to integrate with multiple vendors</li>
+                        <li>Fast support response is critical to your operations</li>
+                        <li>You're launching a new brokerage or scaling an existing one</li>
+                    </ul>
+
+                    {/* CTA */}
+                    <div className={styles.ctaBox}>
+                        <h3 className={styles.ctaTitle}>Request a Detailed Quote</h3>
+                        <p className={styles.ctaText}>
+                            Get a personalized cost comparison based on your specific requirements and volume projections.
+                        </p>
+                        <Link href="/company/contact" className={styles.ctaBtn}>
+                            Get Custom Quote
+                        </Link>
                     </div>
 
                 </div>
-            </section>
+            </article>
+
             <Footer />
         </main>
     );
