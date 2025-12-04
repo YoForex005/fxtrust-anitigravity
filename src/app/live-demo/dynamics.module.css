@@ -61,6 +61,13 @@
     padding: 8px;
 }
 
+.headerRight {
+    display: flex;
+    align-items: flex-end;
+    gap: 1rem;
+
+}
+
 .waffleDot {
     width: 3px;
     height: 3px;
@@ -71,18 +78,6 @@
 .appName {
     font-weight: 600;
     font-size: 16px;
-    letter-spacing: 0.01em;
-}
-
-.appBeta {
-    font-size: 10px;
-    opacity: 0.7;
-    margin-left: 4px;
-    margin-top: 4px;
-}
-
-.headerRight {
-    display: flex;
     align-items: center;
     gap: 1rem;
 }
@@ -96,6 +91,203 @@
     cursor: pointer;
     opacity: 0.8;
     transition: opacity 0.2s;
+    position: relative;
+}
+
+.headerIcon:hover {
+    opacity: 1;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* 2. Main Layout (Sidebar + Content) */
+.mainLayout {
+    display: flex;
+    flex: 1;
+    overflow: hidden;
+}
+
+/* Sidebar */
+.sidebar {
+    width: 260px;
+    background: var(--dynamics-sidebar-bg);
+    border-right: 1px solid var(--dynamics-border);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+}
+
+.sidebarGroup {
+    padding: 12px 0;
+}
+
+.sidebarGroupTitle {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 16px;
+    color: var(--dynamics-text-primary);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sidebarItem {
+    padding: 8px 16px 8px 24px;
+    font-size: 14px;
+    color: var(--dynamics-text-primary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-left: 3px solid transparent;
+}
+
+.sidebarItem:hover {
+    background: var(--dynamics-sidebar-hover);
+}
+
+.sidebarItemActive {
+    background: var(--dynamics-sidebar-active);
+    border-left-color: var(--dynamics-primary);
+    font-weight: 600;
+}
+
+/* Main Content Area */
+.contentArea {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: white;
+    overflow: hidden;
+}
+
+/* Command Bar */
+.commandBar {
+    height: var(--command-bar-height);
+    border-bottom: 1px solid var(--dynamics-border);
+    display: flex;
+    align-items: center;
+    padding: 0 8px;
+    background: white;
+}
+
+.commandButton {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 6px 12px;
+    font-size: 14px;
+    color: var(--dynamics-text-primary);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.commandButton:hover {
+    background: var(--dynamics-sidebar-hover);
+}
+
+.commandSeparator {
+    width: 1px;
+    height: 20px;
+    background: var(--dynamics-border);
+    margin: 0 8px;
+}
+
+/* View Header (Breadcrumb/Title) */
+.viewHeader {
+    padding: 12px 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.viewTitle {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--dynamics-text-primary);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+/* Data Grid */
+.gridContainer {
+    flex: 1;
+    overflow: auto;
+    padding: 0 24px;
+}
+
+.gridTable {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.gridHeader {
+    text-align: left;
+    padding: 8px;
+    border-bottom: 1px solid var(--dynamics-border);
+    color: var(--grid-header-text);
+    font-weight: 400;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.gridHeader:hover {
+    background: var(--dynamics-sidebar-hover);
+}
+
+.gridRow {
+    border-bottom: 1px solid #edebe9;
+    cursor: pointer;
+}
+
+.gridRow:hover {
+    background: var(--grid-row-hover);
+}
+
+.gridCell {
+    padding: 10px 8px;
+    color: var(--dynamics-text-primary);
+}
+
+.gridLink {
+    color: var(--dynamics-primary);
+    text-decoration: none;
+}
+
+.gridLink:hover {
+    text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+    border-top: 1px solid var(--dynamics-border);
+    padding: 8px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #f3f2f1;
+    font-size: 12px;
+}
+
+.alphabetFilter {
+    display: flex;
+    gap: 12px;
+}
+
+.headerIcon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    opacity: 0.8;
+    transition: opacity 0.2s;
+    position: relative;
 }
 
 .headerIcon:hover {
@@ -289,4 +481,127 @@
     display: flex;
     align-items: center;
     gap: 16px;
+}
+
+/* Header Dropdowns */
+.dropdownMenu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    border: 1px solid #edebe9;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    min-width: 240px;
+    padding: 4px 0;
+    color: #333;
+    text-align: left;
+}
+
+.dropdownItem {
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dropdownItem:hover {
+    background: #f3f2f1;
+}
+
+.itemIcon {
+    width: 16px;
+    display: inline-block;
+    text-align: center;
+}
+
+/* Search Dropdown */
+.searchDropdown {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: white;
+    padding: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.searchInput {
+    border: 1px solid #0078d4;
+    padding: 4px 8px;
+    font-size: 14px;
+    outline: none;
+    width: 200px;
+}
+
+/* Drilldown Menu */
+.drilldownMenu {
+    width: 320px;
+    padding: 16px;
+}
+
+.dropdownHeader {
+    font-weight: 600;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.taskFlowCard {
+    background: #333;
+    color: white;
+    padding: 12px;
+    margin-bottom: 8px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.taskFlowCard:hover {
+    opacity: 0.9;
+}
+
+.taskFlowTitle {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.taskFlowDesc {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+/* Assistant Panel */
+.assistantPanel {
+    position: fixed;
+    top: var(--header-height);
+    right: 0;
+    bottom: 0;
+    width: 350px;
+    background: white;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid #edebe9;
+}
+
+.assistantHeader {
+    padding: 12px 16px;
+    border-bottom: 1px solid #edebe9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    background: #f3f2f1;
+    color: #333;
+}
+
+.assistantContent {
+    flex: 1;
+    background: white;
 }

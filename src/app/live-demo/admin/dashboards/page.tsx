@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import styles from '../../dynamics.module.css';
 import DynamicsSidebar from '../../components/DynamicsSidebar';
+import DynamicsHeader from '../../components/DynamicsHeader';
 
 export default function DashboardsPage() {
     const router = useRouter();
@@ -12,27 +13,7 @@ export default function DashboardsPage() {
     return (
         <div className={styles.container}>
             {/* Header */}
-            <header className={styles.header}>
-                <div className={styles.headerLeft}>
-                    <div className={styles.waffleMenu}>
-                        {[...Array(9)].map((_, i) => <div key={i} className={styles.waffleDot} />)}
-                    </div>
-                    <div className={styles.appName}>
-                        fx Trusts <span className={styles.appBeta}>Beta</span>
-                    </div>
-                </div>
-                <div className={styles.headerRight}>
-                    <div className={styles.headerIcon} title="Search">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><circle cx="11" cy="11" r="8" /><path d="m21 21-4.3-4.3" /></svg>
-                    </div>
-                    <div className={styles.headerIcon} title="Help">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><circle cx="12" cy="12" r="10" /><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" /><path d="M12 17h.01" /></svg>
-                    </div>
-                    <div className={styles.headerIcon} title="User Profile">
-                        <div style={{ width: 24, height: 24, borderRadius: '50%', background: '#8b5cf6', color: 'white', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '10px', fontWeight: 'bold' }}>AD</div>
-                    </div>
-                </div>
-            </header>
+            <DynamicsHeader />
 
             <div className={styles.mainLayout}>
                 {/* Sidebar */}
