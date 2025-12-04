@@ -96,7 +96,7 @@ export default function Footer() {
                             <br /><br />
                             <strong>Middle East Office:</strong> B2007-127, 33rd floor, Latifa Tower, Trade Center first, Seikh Zayad Road, Dubai-UAE
                             <br />
-                            <strong>Contact:</strong> <a href="mailto:support@fxtrust.com" style={{ color: '#3B82F6' }}>support@fxtrust.com</a> (We actually reply!)
+                            <strong>Contact:</strong> <a href="mailto:business@fxtrusts.com" style={{ color: '#3B82F6' }}>business@fxtrusts.com</a> | <a href="tel:+971551461476" style={{ color: '#3B82F6' }}>+971 55 146 1476</a> (We actually reply!)
                         </p>
                     </div>
                     <div className={styles.copyright}>

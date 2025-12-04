@@ -218,7 +218,7 @@ export default function PrivacyPolicyPage() {
 
                 <h3>Exercising Your Rights</h3>
                 <p>
-                    To exercise any of these rights, contact our Data Protection Officer at privacy@fxtrusts.com. We will respond to your request within 30 days as required by law.
+                    To exercise any of these rights, contact our Data Protection Officer at business@fxtrusts.com. We will respond to your request within 30 days as required by law.
                 </p>
 
                 <h2 id="contact">Contact Us</h2>
@@ -226,8 +226,8 @@ export default function PrivacyPolicyPage() {
                     If you have questions about this Privacy Policy or our data practices, please contact us:
                 </p>
                 <ul>
-                    <li><strong>Email:</strong> privacy@fxtrusts.com</li>
-                    <li><strong>Data Protection Officer:</strong> dpo@fxtrusts.com</li>
+                    <li><strong>Email:</strong> business@fxtrusts.com</li>
+                    <li><strong>Data Protection Officer:</strong> business@fxtrusts.com</li>
                     <li><strong>Postal Address:</strong> FxTrusts Ltd, Data Protection Team, [Address]</li>
                 </ul>
                 <p>

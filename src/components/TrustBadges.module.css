@@ -1,28 +1,40 @@
+/* ========================================
+   TRUST BADGES - EXECUTIVE THEME
+   Matching Pricing Page Navy/Gold Palette
+======================================== */
+
+.section {
+    padding: 6rem 0;
+    background: linear-gradient(180deg, #FAFBFC 0%, #F5F7FA 100%);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
 .badge {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1.2rem;
-    background: linear-gradient(135deg, #10B981 0%, #059669 100%);
-    color: white;
+    gap: 0.75rem;
+    padding: 0.625rem 1.5rem;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.08) 100%);
+    color: #D4AF37;
     border-radius: 100px;
     font-size: 0.75rem;
     font-weight: 700;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.08em;
     margin-bottom: 1.5rem;
-    box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
-}
-
-.badgeIcon {
-    font-size: 1rem;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    backdrop-filter: blur(12px);
 }
 
 .headline {
     font-family: var(--font-inter);
-    font-size: 3.5rem;
-    line-height: 1.1;
+    font-size: 3rem;
+    line-height: 1.15;
     font-weight: 700;
-    color: #111827;
+    color: #0A1628;
     margin-bottom: 1.5rem;
     letter-spacing: -0.03em;
     max-width: 800px;
@@ -32,20 +44,20 @@
 
 .subtext {
     font-family: var(--font-inter);
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     line-height: 1.7;
-    color: #6B7280;
-    max-width: 650px;
+    color: #5A6B7D;
+    max-width: 700px;
     margin: 0 auto;
     font-weight: 400;
 }
 
 .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 2rem;
-    margin-bottom: 4rem;
-    max-width: 1100px;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+    margin-bottom: 0;
+    max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -55,116 +67,64 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding: 2.5rem 1.5rem;
-    background: white;
-    border: 1.5px solid #E5E7EB;
-    border-radius: 16px;
-    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 2rem 1.25rem;
+    background: #FFFFFF;
+    border: 1px solid rgba(10, 22, 40, 0.08);
+    border-radius: 12px;
+    transition: all 0.3s ease;
     position: relative;
-    overflow: hidden;
-}
-
-.card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 4px;
-    background: linear-gradient(90deg, #10B981, #3B82F6, #10B981);
-    background-size: 200% 100%;
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.card:hover::before {
-    transform: scaleX(1);
 }
 
 .card:hover {
-    transform: translateY(-8px);
-    border-color: #3B82F6;
-    box-shadow: 0 20px 40px rgba(59, 130, 246, 0.15);
+    transform: translateY(-4px);
+    border-color: rgba(10, 22, 40, 0.15);
+    box-shadow: 0 16px 40px rgba(10, 22, 40, 0.1);
 }
 
 .cardIcon {
-    width: 64px;
-    height: 64px;
+    width: 56px;
+    height: 56px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, #EFF6FF 0%, #DBEAFE 100%);
-    border-radius: 16px;
-    color: #3B82F6;
-    margin-bottom: 1.5rem;
+    background: linear-gradient(135deg, #0A1628 0%, #1A2742 100%);
+    border-radius: 12px;
+    color: #D4AF37;
+    margin-bottom: 1.25rem;
     transition: all 0.3s ease;
 }
 
 .card:hover .cardIcon {
-    background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
-    color: white;
-    transform: scale(1.1) rotate(5deg);
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(10, 22, 40, 0.25);
 }
 
 .cardTitle {
     font-family: var(--font-inter);
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: 700;
-    color: #111827;
-    margin-bottom: 0.4rem;
+    color: #0A1628;
+    margin-bottom: 0.25rem;
     letter-spacing: -0.01em;
 }
 
 .cardSubtitle {
     font-family: var(--font-inter);
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     font-weight: 500;
-    color: #6B7280;
-}
-
-.partners {
-    text-align: center;
-    padding-top: 3rem;
-    border-top: 1px solid #E5E7EB;
-}
-
-.partnersLabel {
-    font-family: var(--font-inter);
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.15em;
-    color: #9CA3AF;
-    margin-bottom: 2rem;
-}
-
-.partnerLogos {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 4rem;
-    flex-wrap: wrap;
-}
-
-.partnerLogo {
-    font-family: var(--font-inter);
-    font-size: 1.5rem;
-    font-weight: 800;
-    color: #D1D5DB;
-    letter-spacing: -0.02em;
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-.partnerLogo:hover {
-    color: #3B82F6;
-    transform: scale(1.1);
+    color: #5A6B7D;
 }
 
 /* Responsive */
+@media (max-width: 1100px) {
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
     .headline {
-        font-size: 2.5rem;
+        font-size: 2.25rem;
     }
 
     .subtext {
@@ -173,14 +133,21 @@
 
     .grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
+        gap: 1rem;
     }
 
-    .partnerLogos {
-        gap: 2rem;
+    .card {
+        padding: 1.5rem 1rem;
     }
 
-    .partnerLogo {
-        font-size: 1.2rem;
+    .cardIcon {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }

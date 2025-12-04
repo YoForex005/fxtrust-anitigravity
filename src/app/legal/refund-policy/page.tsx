@@ -123,7 +123,7 @@ export default function RefundPolicyPage() {
                     Contact our billing team through one of the following channels:
                 </p>
                 <ul>
-                    <li><strong>Email:</strong> billing@fxtrusts.com</li>
+                    <li><strong>Email:</strong> business@fxtrusts.com</li>
                     <li><strong>Dashboard:</strong> Settings → Billing → Request Refund</li>
                     <li><strong>Support Chat:</strong> Available 24/7 in your dashboard</li>
                 </ul>
@@ -213,7 +213,7 @@ export default function RefundPolicyPage() {
 
                 <h3>Disputes</h3>
                 <p>
-                    If you believe your refund request was incorrectly denied, you may escalate to our management team at management@fxtrusts.com. We aim to resolve all disputes within 5 business days.
+                    If you believe your refund request was incorrectly denied, you may escalate to our management team at business@fxtrusts.com. We aim to resolve all disputes within 5 business days.
                 </p>
 
                 <h2 id="contact">Contact Billing</h2>
@@ -221,7 +221,7 @@ export default function RefundPolicyPage() {
                     For refund requests, billing questions, or payment disputes, contact our billing team:
                 </p>
                 <ul>
-                    <li><strong>Email:</strong> billing@fxtrusts.com</li>
+                    <li><strong>Email:</strong> business@fxtrusts.com</li>
                     <li><strong>Response Time:</strong> Within 4 business hours</li>
                     <li><strong>Hours:</strong> 24/7 support available</li>
                 </ul>

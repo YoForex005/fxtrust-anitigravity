@@ -9,11 +9,42 @@ import styles from './pricing.module.css';
 export default function PricingPage() {
     const [accountCount, setAccountCount] = useState(150);
 
+    // Exponential decay pricing for Entry Level
+    // Range: 1-140 accounts, Price: $50 -> $35
+    const getEntryLevelPrice = (accounts: number): number => {
+        const A = 50.129;  // Scaling factor
+        const k = -0.00257; // Decay constant
+
+        let price = A * Math.exp(k * accounts);
+
+        // Hard limits
+        if (price > 50) return 50.00;
+        if (price < 35) return 35.00;
+
+        return parseFloat(price.toFixed(2));
+    };
+
+    // Exponential decay pricing for Standard Plan
+    // Range: 150-500 accounts, Price: $25 -> $9.50
+    // At 500 accounts: $1,300 + (500 × $9.50) = $6,050
+    const getStandardPlanPrice = (accounts: number): number => {
+        const A = 37.85;  // Scaling factor
+        const k = -0.002765; // Decay constant
+
+        let price = A * Math.exp(k * accounts);
+
+        // Hard limits
+        if (price > 25) return 25.00;
+        if (price < 9.50) return 9.50;
+
+        return parseFloat(price.toFixed(2));
+    };
+
     // Calculate costs dynamically
     const calculateCost = (plan: 'entry' | 'standard' | 'enterprise', accounts: number) => {
         if (plan === 'entry') {
             const baseMonthly = 700;
-            const perAccount = 50;
+            const perAccount = getEntryLevelPrice(accounts); // Dynamic pricing
             const accountsTotal = accounts * perAccount;
             const monthlyTotal = baseMonthly + accountsTotal;
             return {
@@ -27,7 +58,7 @@ export default function PricingPage() {
         } else if (plan === 'standard') {
             const validAccounts = Math.max(accounts, 150);
             const baseMonthly = 1300;
-            const perAccount = 22;
+            const perAccount = getStandardPlanPrice(validAccounts); // Dynamic pricing
             const accountsTotal = validAccounts * perAccount;
             const monthlyTotal = baseMonthly + accountsTotal;
             return {
@@ -56,15 +87,19 @@ export default function PricingPage() {
                     <div className="container">
                         <div className={styles.heroContent}>
                             <div className={styles.badge}>
-                                <span className={styles.badgeIcon}>💰</span>
-                                <span>The pricing page where we finally list actual numbers</span>
+                                <span className={styles.badgeIcon}>
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                                        <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                                    </svg>
+                                </span>
+                                <span>The pricing page where we actually list prices. Revolutionary.</span>
                             </div>
                             <h1 className={styles.headline}>
-                                Transparent Pricing.<br />
-                                Pay for Active Traders, Not Empty Capacity.
+                                We Apologize in Advance<br />
+                                For Showing You Actual Numbers.
                             </h1>
                             <p className={styles.subtext}>
-                                $700/mo base + $50 per active account (Entry) or $1,300/mo + $22 per account (Standard). One-time $1,500 setup. That's it. No hidden "integration fees," no surprise invoices 3 months in, no vendor lock-in that costs more than your marketing budget to escape.
+                                We know this is unusual. Most vendors prefer the "contact sales to find out what car payment you'll be making" approach. But we're feeling reckless today, so here's exactly what you'll pay: $700/mo base + $50→$35 per account (Entry) or $1,300/mo + $25→$9.50 per account (Standard). One-time $1,500 setup. That's the whole list. We're sorry if this ruins your "mysterious enterprise software" fantasy.
                             </p>
                         </div>
                     </div>
@@ -74,8 +109,8 @@ export default function PricingPage() {
                 <section className={styles.calculatorSection}>
                     <div className="container">
                         <div className={styles.sectionHeader}>
-                            <h2>Live Cost Calculator</h2>
-                            <p>Move the slider. Watch the numbers update. No sales call required to see what you'll actually pay.</p>
+                            <h2>The Calculator That Doesn't Require a Sales Call</h2>
+                            <p>Move the slider. Watch the numbers update in real-time. Yes, we know—a pricing page that actually tells you prices. What a concept.</p>
                         </div>
 
                         <div className={styles.calculatorCard}>
@@ -112,7 +147,7 @@ export default function PricingPage() {
                                             <span>${entryCost.base.toLocaleString()}</span>
                                         </div>
                                         <div className={styles.costLine}>
-                                            <span>Active Accounts ({accountCount} × $50):</span>
+                                            <span>Active Accounts ({accountCount} × ${entryCost.perAccount.toFixed(2)}):</span>
                                             <span>${entryCost.accountsTotal.toLocaleString()}</span>
                                         </div>
                                         <div className={styles.costLineDivider}></div>
@@ -157,7 +192,7 @@ export default function PricingPage() {
                                             <span>${standardCost.base.toLocaleString()}</span>
                                         </div>
                                         <div className={styles.costLine}>
-                                            <span>Active Accounts ({Math.max(accountCount, 150)} × $22):</span>
+                                            <span>Active Accounts ({Math.max(accountCount, 150)} × ${standardCost.perAccount.toFixed(2)}):</span>
                                             <span>${standardCost.accountsTotal.toLocaleString()}</span>
                                         </div>
                                         <div className={styles.costLineDivider}></div>
@@ -193,8 +228,8 @@ export default function PricingPage() {
                 <section className={styles.transparencySection}>
                     <div className="container">
                         <div className={styles.sectionHeader}>
-                            <h2>Complete Cost Breakdown</h2>
-                            <p>Every fee explained. No asterisks leading to "contact sales"</p>
+                            <h2>The Part Where We Show Our Entire Hand</h2>
+                            <p>Every fee explained. No asterisks leading to "contact sales." We're terrible at the mystery game.</p>
                         </div>
 
                         <div className={styles.pricingGrid}>
@@ -202,7 +237,7 @@ export default function PricingPage() {
                             <div className={styles.planDetailCard}>
                                 <div className={styles.planHeader}>
                                     <h3>Entry</h3>
-                                    <p className={styles.planDescription}>For newer brokerages testing the waters</p>
+                                    <p className={styles.planDescription}>For brokerages who want to test if we're actually as good as we claim (we are)</p>
                                 </div>
 
                                 <div className={styles.planPricing}>
@@ -212,10 +247,11 @@ export default function PricingPage() {
                                     </div>
                                     <div className={styles.priceRow}>
                                         <span className={styles.priceLabel}>Per Active Account:</span>
-                                        <span className={styles.price}>$50<span className={styles.pricePeriod}>/month</span></span>
+                                        <span className={styles.price}>upto $35<span className={styles.pricePeriod}>/month</span></span>
                                     </div>
                                     <div className={styles.priceExample}>
-                                        Example: 100 accounts = $700 + $5,000 = <strong>$5,700/month</strong>
+                                        Volume discount: Price drops from $50 to $35 as you scale (1-140 accounts)<br />
+                                        Example: 100 accounts @ $38.53 = $700 + $3,853 = <strong>$4,553/month</strong>
                                     </div>
                                 </div>
 
@@ -258,7 +294,7 @@ export default function PricingPage() {
                                 <div className={styles.popularBadge}>Most Brokers Choose This</div>
                                 <div className={styles.planHeader}>
                                     <h3>Standard</h3>
-                                    <p className={styles.planDescription}>56% lower per-account cost for scale</p>
+                                    <p className={styles.planDescription}>For brokerages who did the math and realized we're not joking about the savings</p>
                                 </div>
 
                                 <div className={styles.planPricing}>
@@ -268,14 +304,14 @@ export default function PricingPage() {
                                     </div>
                                     <div className={styles.priceRow}>
                                         <span className={styles.priceLabel}>Per Active Account:</span>
-                                        <span className={styles.price}>$22<span className={styles.pricePeriod}>/month</span></span>
+                                        <span className={styles.price}>upto $9.50<span className={styles.pricePeriod}>/month</span></span>
                                     </div>
                                     <div className={styles.minimumNotice}>
                                         <strong>Minimum 150 active accounts required</strong>
                                     </div>
                                     <div className={styles.priceExample}>
-                                        Example: 200 accounts = $1,300 + $4,400 = <strong>$5,700/month</strong><br />
-                                        <span className={styles.savingsNote}>(vs $10,700 on Entry - save $5,000/month)</span>
+                                        Volume discount: Price drops from $25 to $9.50 as you scale (150-500 accounts)<br />
+                                        Example: 500 accounts @ $9.50 = $1,300 + $4,750 = <strong>$6,050/month</strong>
                                     </div>
                                 </div>
 
@@ -326,7 +362,7 @@ export default function PricingPage() {
                             <div className={styles.planDetailCard}>
                                 <div className={styles.planHeader}>
                                     <h3>Enterprise</h3>
-                                    <p className={styles.planDescription}>Custom everything for large operations</p>
+                                    <p className={styles.planDescription}>For when you outgrow our pricing page and we have to—gasp—actually talk</p>
                                 </div>
 
                                 <div className={styles.planPricing}>
@@ -383,13 +419,13 @@ export default function PricingPage() {
                 <section className={styles.setupSection}>
                     <div className="container">
                         <div className={styles.sectionHeader}>
-                            <h2>One-Time Setup: $1,500</h2>
-                            <p>Here's exactly where that money goes (spoiler: paying actual engineers)</p>
+                            <h2>The $1,500 Setup Fee (Yes, We're Telling You Where It Goes)</h2>
+                            <p>Spoiler alert: it pays actual human engineers to do actual work. We know—scandalous.</p>
                         </div>
 
                         <div className={styles.setupBreakdown}>
                             <div className={styles.setupIntro}>
-                                <p>This isn't padded margins. It's ~7 days of senior engineer time at $215/day to get you live. Here's the actual work breakdown:</p>
+                                <p>Other vendors charge $5,000-$15,000 for "setup" and hope you never ask where it goes. We charge $1,500 because that's what 7 days of senior engineer time at $215/day actually costs. Here's the embarrassingly transparent breakdown:</p>
                             </div>
 
                             <div className={styles.setupTimeline}>
@@ -463,43 +499,67 @@ export default function PricingPage() {
                 <section className={styles.hiddenCostsSection}>
                     <div className="container">
                         <div className={styles.sectionHeader}>
-                            <h2>Things We'll Never Surprise You With</h2>
-                            <p>Because we've been victims of these ourselves</p>
+                            <h2>Fees We Will Never Surprise You With</h2>
+                            <p>Because we've been on the receiving end of these "creative billing practices" and we're still in therapy.</p>
                         </div>
 
                         <div className={styles.neverChargeGrid}>
                             <div className={styles.neverChargeCard}>
-                                <div className={styles.neverIcon}>❌</div>
+                                <div className={styles.neverIcon}>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" strokeWidth="2">
+                                        <path d="M18 6L6 18M6 6l12 12" />
+                                    </svg>
+                                </div>
                                 <h4>Migration Fees</h4>
                                 <p>When you want to leave, we'll export all your data in standard formats. Free. Always. No "data extraction fee" bullshit.</p>
                             </div>
 
                             <div className={styles.neverChargeCard}>
-                                <div className={styles.neverIcon}>❌</div>
+                                <div className={styles.neverIcon}>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" strokeWidth="2">
+                                        <path d="M18 6L6 18M6 6l12 12" />
+                                    </svg>
+                                </div>
                                 <h4>Support Tickets</h4>
                                 <p>24/7 support is included. You don't pay per ticket, per hour, or per "emergency" fix. It's just included.</p>
                             </div>
 
                             <div className={styles.neverChargeCard}>
-                                <div className={styles.neverIcon}>❌</div>
+                                <div className={styles.neverIcon}>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" strokeWidth="2">
+                                        <path d="M18 6L6 18M6 6l12 12" />
+                                    </svg>
+                                </div>
                                 <h4>API Access</h4>
                                 <p>Standard plan gets full API access. No "integration tier" upsell. Connect your tools, build what you want.</p>
                             </div>
 
                             <div className={styles.neverChargeCard}>
-                                <div className={styles.neverIcon}>❌</div>
+                                <div className={styles.neverIcon}>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" strokeWidth="2">
+                                        <path d="M18 6L6 18M6 6l12 12" />
+                                    </svg>
+                                </div>
                                 <h4>Platform Updates</h4>
                                 <p>Security patches, feature updates, bug fixes—all free. You're not on "v2" while paying for "v1."</p>
                             </div>
 
                             <div className={styles.neverChargeCard}>
-                                <div className={styles.neverIcon}>❌</div>
+                                <div className={styles.neverIcon}>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" strokeWidth="2">
+                                        <path d="M18 6L6 18M6 6l12 12" />
+                                    </svg>
+                                </div>
                                 <h4>Overage Penalties</h4>
                                 <p>Hit 151 accounts on Entry plan? We'll suggest Standard. We won't charge you "overage fees" or lock your platform.</p>
                             </div>
 
                             <div className={styles.neverChargeCard}>
-                                <div className={styles.neverIcon}>❌</div>
+                                <div className={styles.neverIcon}>
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" strokeWidth="2">
+                                        <path d="M18 6L6 18M6 6l12 12" />
+                                    </svg>
+                                </div>
                                 <h4>Gateway Connection Fees</h4>
                                 <p>Connect to any LP you want. LMAX, Saxo, JPM—doesn't matter. Each connection is free. Other providers charge $200-500/month per connection.</p>
                             </div>
@@ -511,8 +571,8 @@ export default function PricingPage() {
                 <section className={styles.faqSection}>
                     <div className="container">
                         <div className={styles.sectionHeader}>
-                            <h2>Frequently Asked (Legitimate) Questions</h2>
-                            <p>The questions you actually have, with actual answers</p>
+                            <h2>Questions We Assume You Have (Because We Had Them Too)</h2>
+                            <p>Real questions with real answers. No "let me circle back with the team" nonsense.</p>
                         </div>
 
                         <div className={styles.faqGrid}>
@@ -566,19 +626,19 @@ export default function PricingPage() {
                 <section className={styles.finalCTA}>
                     <div className="container">
                         <div className={styles.ctaContent}>
-                            <h2>Ready to Actually See Numbers That Make Sense?</h2>
-                            <p>Book a demo. We'll show you the platform, walk through your specific math, answer your questions. No pressure, no sales games, no "limited time offers."</p>
+                            <h2>Still Reading? You Must Actually Be Interested.</h2>
+                            <p>Book a demo. We'll show you the platform, walk through your specific math, and answer your questions without a single "let me check with my manager" or "this offer expires at midnight." We promise.</p>
                             <div className={styles.ctaButtons}>
                                 <Link href="/get-started" className={styles.primaryCTAButton}>
-                                    Book a Live Demo
+                                    Fine, Show Me The Demo
                                     <span>→</span>
                                 </Link>
                                 <Link href="#calculator" className={styles.secondaryCTAButton}>
-                                    Play with Calculator Again
+                                    I Need To Play With The Calculator More
                                 </Link>
                             </div>
                             <p className={styles.ctaFootnote}>
-                                Average setup time: 7 days | Typical ROI: 6-9 months | Cancel anytime (we'll still help you migrate)
+                                Setup: 7 days | ROI: 6-9 months | Cancel anytime (we'll even help you migrate to the competitor, because we're that confident you won't)
                             </p>
                         </div>
                     </div>

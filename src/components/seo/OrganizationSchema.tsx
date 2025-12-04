@@ -14,7 +14,7 @@ export default function OrganizationSchema() {
         ],
         contactPoint: {
             '@type': 'ContactPoint',
-            telephone: '+1-555-123-4567', // Replace with actual phone
+            telephone: '+971551461476',
             contactType: 'sales',
             areaServed: 'Global',
             availableLanguage: ['English'],

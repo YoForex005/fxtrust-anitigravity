@@ -1,259 +1,506 @@
-import { Metadata } from 'next';
-import ContentPageLayout from '@/components/ContentPageLayout';
-import PageHeader from '@/components/PageHeader';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import InnerPageHeader from '@/components/InnerPageHeader';
+import styles from './docs.module.css';
+import Link from 'next/link';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'API Documentation | Developer Resources | FxTrusts',
-    description: 'Complete API documentation for integrating with FxTrusts platform. REST APIs, webhooks, authentication, and code samples.',
-    keywords: ['forex API', 'trading API', 'broker API', 'developer documentation', 'API integration'],
+    title: 'API Documentation | Developer Resources | REST API Guide | FXTrusts',
+    description: 'Complete REST API documentation for forex broker integration. OAuth 2.0 authentication, 100+ endpoints, webhooks, SDKs for Python, JavaScript, PHP.',
+    keywords: [
+        'forex API documentation',
+        'trading API integration',
+        'broker API endpoints',
+        'forex REST API',
+        'MT5 API',
+        'trading platform API',
+        'CRM API integration',
+        'developer documentation forex',
+        'broker webhook API',
+        'OAuth forex API',
+        'trading SDK',
+        'forex developer tools',
+        'API authentication forex',
+        'trading API examples',
+        'broker API sandbox'
+    ],
+    openGraph: {
+        title: 'API Documentation | 100+ Endpoints | FXTrusts Developer Portal',
+        description: 'REST API for forex brokers. OAuth 2.0, webhooks, SDKs. <50ms response time. 99.9% uptime.',
+        type: 'website',
+        url: 'https://fxtrusts.com/resources/api-docs',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'FXTrusts API Documentation | Developer Resources',
+        description: 'Build custom integrations with our REST API. 100+ endpoints, real-time webhooks, official SDKs.',
+    },
+    alternates: {
+        canonical: 'https://fxtrusts.com/resources/api-docs',
+    },
 };
 
 export default function APIDocsPage() {
-    const tableOfContents = [
-        { id: 'overview', title: 'API Overview' },
-        { id: 'authentication', title: 'Authentication' },
-        { id: 'endpoints', title: 'Core Endpoints' },
-        { id: 'webhooks', title: 'Webhooks' },
-        { id: 'rate-limits', title: 'Rate Limits' },
-        { id: 'sdks', title: 'SDKs & Libraries' },
-    ];
-
-    const relatedLinks = [
-        { title: 'Help Center', href: '/resources/help-center', readTime: '4 min' },
-        { title: 'System Status', href: '/resources/status', readTime: '1 min' },
-        { title: 'Contact Support', href: '/company/contact', readTime: '2 min' },
-    ];
-
-    const quickFacts = [
-        { label: 'API Version', value: 'v2.0' },
-        { label: 'Protocol', value: 'REST' },
-        { label: 'Format', value: 'JSON' },
-        { label: 'Uptime', value: '99.9%' },
-    ];
-
     return (
         <main>
-            <PageHeader
-                title="API Documentation"
-                subtitle="Integrate FxTrusts into your applications with our comprehensive APIs."
-                badge="Resources"
+            <Header />
+            <InnerPageHeader
+                badge="Developer Portal"
+                badgeIcon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" /></svg>}
+                title="API Documentation.<br/>For Those Who Build."
+                subtitle="You're not here to click buttons in a dashboard. You're here to integrate, automate, and build. Our REST API gives you programmatic access to everything—from account creation to trade execution. Let's get technical."
             />
-            <ContentPageLayout
-                tableOfContents={tableOfContents}
-                relatedLinks={relatedLinks}
-                quickFacts={quickFacts}
-                ctaTitle="Need Help Integrating?"
-                ctaText="Our developer support team is available 24/7."
-                ctaButtonText="Contact Support"
-                ctaButtonHref="/company/contact"
-            >
-                <h1>FxTrusts API Documentation</h1>
-                <p>
-                    The FxTrusts API provides programmatic access to our platform's core functionality, enabling you to build custom integrations, automate workflows, and extend the platform to meet your specific business requirements.
-                </p>
-                <p>
-                    Our RESTful API follows industry best practices, using JSON for request and response payloads, standard HTTP methods, and OAuth 2.0 for authentication. Whether you're building a mobile app, connecting to a third-party CRM, or automating reporting, the API has you covered.
-                </p>
 
-                <h2 id="overview">API Overview</h2>
-                <p>
-                    The FxTrusts API is organized around REST. Our API has predictable resource-oriented URLs, accepts JSON-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes, authentication, and verbs.
-                </p>
-
-                <div className="statsGrid">
-                    <div className="statBox">
-                        <strong>100+</strong>
-                        <span>Endpoints</span>
-                    </div>
-                    <div className="statBox">
-                        <strong>&lt;50ms</strong>
-                        <span>Avg Response</span>
-                    </div>
-                    <div className="statBox">
-                        <strong>99.9%</strong>
-                        <span>Uptime</span>
-                    </div>
-                    <div className="statBox">
-                        <strong>24/7</strong>
-                        <span>Support</span>
+            {/* Quick Stats */}
+            <section className={styles.section}>
+                <div className={styles.container}>
+                    <div className={styles.statsGrid}>
+                        <div className={styles.statCard}>
+                            <div className={styles.statNum}>100+</div>
+                            <h3>Endpoints</h3>
+                            <p>Every feature you need, exposed via API</p>
+                        </div>
+                        <div className={styles.statCard}>
+                            <div className={styles.statNum}>&lt;50ms</div>
+                            <h3>Avg Response</h3>
+                            <p>Optimized for high-frequency operations</p>
+                        </div>
+                        <div className={styles.statCard}>
+                            <div className={styles.statNum}>99.9%</div>
+                            <h3>Uptime SLA</h3>
+                            <p>Guaranteed availability for production use</p>
+                        </div>
+                        <div className={styles.statCard}>
+                            <div className={styles.statNum}>24/7</div>
+                            <h3>Dev Support</h3>
+                            <p>Dedicated technical assistance</p>
+                        </div>
                     </div>
                 </div>
+            </section>
 
-                <h3>Base URL</h3>
-                <p>
-                    All API requests should be made to the base URL:
-                </p>
-                <ul>
-                    <li><strong>Production:</strong> https://api.fxtrusts.com/v2</li>
-                    <li><strong>Sandbox:</strong> https://sandbox-api.fxtrusts.com/v2</li>
-                </ul>
-
-                <h3>API Versioning</h3>
-                <p>
-                    The API is versioned via URL path (e.g., /v2/). We maintain backward compatibility within major versions. When breaking changes are necessary, we release a new major version and maintain the previous version for at least 12 months.
-                </p>
-
-                <h2 id="authentication">Authentication</h2>
-                <p>
-                    The FxTrusts API uses OAuth 2.0 for authentication. All API requests must include a valid access token in the Authorization header.
-                </p>
-
-                <h3>Obtaining Access Tokens</h3>
-                <p>
-                    Access tokens are obtained through the OAuth 2.0 client credentials flow:
-                </p>
-                <ol>
-                    <li>Create an API application in your FxTrusts dashboard</li>
-                    <li>Note your Client ID and Client Secret</li>
-                    <li>Exchange credentials for an access token</li>
-                    <li>Include the token in subsequent API requests</li>
-                </ol>
-
-                <div className="infoBox">
-                    <p>
-                        <strong>Security:</strong> Never expose your Client Secret in client-side code. Access tokens should be treated as sensitive credentials and stored securely.
-                    </p>
-                </div>
-
-                <h3>Token Refresh</h3>
-                <p>
-                    Access tokens expire after 1 hour. Use the refresh token to obtain a new access token without re-authenticating. Refresh tokens expire after 30 days of inactivity.
-                </p>
-
-                <h2 id="endpoints">Core Endpoints</h2>
-                <p>
-                    The API is organized into logical resource groups corresponding to platform functionality.
-                </p>
-
-                <h3>Accounts</h3>
-                <ul>
-                    <li><strong>GET /accounts</strong> – List all trading accounts</li>
-                    <li><strong>POST /accounts</strong> – Create a new trading account</li>
-                    <li><strong>GET /accounts/:id</strong> – Retrieve account details</li>
-                    <li><strong>PATCH /accounts/:id</strong> – Update account settings</li>
-                    <li><strong>DELETE /accounts/:id</strong> – Disable trading account</li>
-                </ul>
-
-                <h3>Clients</h3>
-                <ul>
-                    <li><strong>GET /clients</strong> – List all clients with pagination</li>
-                    <li><strong>POST /clients</strong> – Create a new client</li>
-                    <li><strong>GET /clients/:id</strong> – Retrieve client profile</li>
-                    <li><strong>PATCH /clients/:id</strong> – Update client information</li>
-                    <li><strong>GET /clients/:id/accounts</strong> – List client's trading accounts</li>
-                    <li><strong>GET /clients/:id/transactions</strong> – List client transactions</li>
-                </ul>
-
-                <h3>Transactions</h3>
-                <ul>
-                    <li><strong>GET /transactions</strong> – List all transactions</li>
-                    <li><strong>POST /transactions/deposit</strong> – Create deposit request</li>
-                    <li><strong>POST /transactions/withdrawal</strong> – Create withdrawal request</li>
-                    <li><strong>GET /transactions/:id</strong> – Retrieve transaction details</li>
-                    <li><strong>PATCH /transactions/:id</strong> – Update transaction status</li>
-                </ul>
-
-                <h3>Trading</h3>
-                <ul>
-                    <li><strong>GET /trades</strong> – List trades with filtering</li>
-                    <li><strong>GET /trades/:id</strong> – Retrieve trade details</li>
-                    <li><strong>GET /positions</strong> – List open positions</li>
-                    <li><strong>GET /orders</strong> – List pending orders</li>
-                    <li><strong>GET /symbols</strong> – List available trading symbols</li>
-                    <li><strong>GET /quotes/:symbol</strong> – Get real-time quote</li>
-                </ul>
-
-                <div className="featureGrid">
-                    <div className="featureCard">
-                        <h4>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" /></svg>
-                            Request Format
-                        </h4>
-                        <p>All requests accept JSON body with Content-Type: application/json header.</p>
-                    </div>
-                    <div className="featureCard">
-                        <h4>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" /></svg>
-                            Response Format
-                        </h4>
-                        <p>Responses are JSON with consistent structure: data, pagination, and errors.</p>
+            {/* API Overview */}
+            <section className={`${styles.section} ${styles.altSection}`}>
+                <div className={styles.container}>
+                    <div className={styles.splitFeature}>
+                        <div className={styles.featureContent}>
+                            <div className={styles.badge}>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <line x1="12" y1="16" x2="12" y2="12" />
+                                    <line x1="12" y1="8" x2="12.01" y2="8" />
+                                </svg>
+                                <span>API OVERVIEW</span>
+                            </div>
+                            <h2>RESTful, Predictable, Boring</h2>
+                            <p>
+                                No weird proprietary protocols. No SOAP (thank god). Just standard REST with
+                                JSON payloads, sensible HTTP verbs, and OAuth 2.0 authentication. If you've
+                                integrated with any modern API, you already know 90% of ours.
+                            </p>
+                            <ul className={styles.featureList}>
+                                <li>
+                                    <span className={styles.checkIcon}>
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg>
+                                    </span>
+                                    JSON Request &amp; Response Bodies
+                                </li>
+                                <li>
+                                    <span className={styles.checkIcon}>
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg>
+                                    </span>
+                                    Standard HTTP Status Codes
+                                </li>
+                                <li>
+                                    <span className={styles.checkIcon}>
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg>
+                                    </span>
+                                    OAuth 2.0 Client Credentials Flow
+                                </li>
+                                <li>
+                                    <span className={styles.checkIcon}>
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg>
+                                    </span>
+                                    HATEOAS Pagination
+                                </li>
+                            </ul>
+                        </div>
+                        <div className={styles.codeBlock}>
+                            <div className={styles.codeHeader}>
+                                <span>Base URLs</span>
+                            </div>
+                            <div className={styles.codeContent}>
+                                <div className={styles.codeLine}>
+                                    <span className={styles.codeLabel}>Production:</span>
+                                    <code>https://api.fxtrusts.com/v2</code>
+                                </div>
+                                <div className={styles.codeLine}>
+                                    <span className={styles.codeLabel}>Sandbox:</span>
+                                    <code>https://sandbox-api.fxtrusts.com/v2</code>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+            </section>
 
-                <h2 id="webhooks">Webhooks</h2>
-                <p>
-                    Webhooks allow your application to receive real-time notifications when events occur in the platform. Instead of polling the API for changes, webhooks push data to your endpoint.
-                </p>
+            {/* Authentication */}
+            <section className={styles.section}>
+                <div className={styles.container}>
+                    <div className={styles.sectionHeader}>
+                        <div className={styles.badge}>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                                <rect x="3" y="11" width="18" height="11" rx="2" ry="2" />
+                                <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                            </svg>
+                            <span>AUTHENTICATION</span>
+                        </div>
+                        <h2>OAuth 2.0—Because API Keys Are So 2010</h2>
+                        <p>
+                            We use OAuth 2.0 client credentials flow. Obtain an access token using your Client ID
+                            and Secret, then include it as a Bearer token in all subsequent requests. Tokens
+                            expire after 1 hour. Refresh tokens last 30 days.
+                        </p>
+                    </div>
 
-                <h3>Available Events</h3>
-                <ul>
-                    <li><strong>client.created</strong> – New client registration</li>
-                    <li><strong>client.verified</strong> – Client passed KYC verification</li>
-                    <li><strong>account.created</strong> – New trading account created</li>
-                    <li><strong>transaction.created</strong> – Deposit or withdrawal initiated</li>
-                    <li><strong>transaction.completed</strong> – Transaction processed</li>
-                    <li><strong>trade.opened</strong> – New trade executed</li>
-                    <li><strong>trade.closed</strong> – Trade closed</li>
-                    <li><strong>margin.call</strong> – Account margin warning</li>
-                    <li><strong>stop.out</strong> – Account stopped out</li>
-                </ul>
+                    <div className={styles.authSteps}>
+                        <div className={styles.authStep}>
+                            <span className={styles.stepNum}>1</span>
+                            <div>
+                                <strong>Create API Application</strong>
+                                <p>In your dashboard, go to Settings → API → Create Application. Note your Client ID and Client Secret.</p>
+                            </div>
+                        </div>
+                        <div className={styles.authStep}>
+                            <span className={styles.stepNum}>2</span>
+                            <div>
+                                <strong>Exchange Credentials</strong>
+                                <p>POST to /oauth/token with your credentials to receive an access token and refresh token.</p>
+                            </div>
+                        </div>
+                        <div className={styles.authStep}>
+                            <span className={styles.stepNum}>3</span>
+                            <div>
+                                <strong>Include Bearer Token</strong>
+                                <p>Add Authorization: Bearer YOUR_TOKEN header to all API requests.</p>
+                            </div>
+                        </div>
+                    </div>
 
-                <h3>Webhook Security</h3>
-                <p>
-                    All webhooks include an HMAC signature header (X-FxTrusts-Signature) allowing you to verify that the payload originated from FxTrusts. Compare the signature with the hash of the request body using your webhook secret.
-                </p>
+                    <div className={styles.warningBox}>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                            <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+                            <line x1="12" y1="9" x2="12" y2="13" />
+                            <line x1="12" y1="17" x2="12.01" y2="17" />
+                        </svg>
+                        <div>
+                            <strong>Security Warning</strong>
+                            <p>Never expose your Client Secret in client-side code. Access tokens should be treated as sensitive credentials and stored securely.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-                <h3>Retry Policy</h3>
-                <p>
-                    If your endpoint returns a non-2xx status code, we retry the webhook with exponential backoff: 1 minute, 5 minutes, 30 minutes, 2 hours, 24 hours. After 5 failed attempts, the webhook is marked as failed and logged in your dashboard.
-                </p>
+            {/* Core Endpoints */}
+            <section className={`${styles.section} ${styles.altSection}`}>
+                <div className={styles.container}>
+                    <div className={styles.sectionHeader}>
+                        <div className={styles.badge}>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+                            </svg>
+                            <span>CORE ENDPOINTS</span>
+                        </div>
+                        <h2>The Endpoints You'll Actually Use</h2>
+                        <p>
+                            We have 100+ endpoints, but let's be honest—you're here for accounts, clients,
+                            transactions, and trades. Here's the essential reference.
+                        </p>
+                    </div>
 
-                <h2 id="rate-limits">Rate Limits</h2>
-                <p>
-                    To ensure fair usage and platform stability, the API implements rate limiting on all endpoints.
-                </p>
+                    <div className={styles.endpointGrid}>
+                        <div className={styles.endpointCategory}>
+                            <h3>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" strokeWidth="2">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" />
+                                    <circle cx="12" cy="7" r="4" />
+                                </svg>
+                                Clients
+                            </h3>
+                            <ul className={styles.endpointList}>
+                                <li><span className={styles.methodGet}>GET</span> /clients — List all clients</li>
+                                <li><span className={styles.methodPost}>POST</span> /clients — Create client</li>
+                                <li><span className={styles.methodGet}>GET</span> /clients/:id — Get client</li>
+                                <li><span className={styles.methodPatch}>PATCH</span> /clients/:id — Update client</li>
+                                <li><span className={styles.methodGet}>GET</span> /clients/:id/accounts — Client accounts</li>
+                            </ul>
+                        </div>
+                        <div className={styles.endpointCategory}>
+                            <h3>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" strokeWidth="2">
+                                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2" />
+                                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                                </svg>
+                                Accounts
+                            </h3>
+                            <ul className={styles.endpointList}>
+                                <li><span className={styles.methodGet}>GET</span> /accounts — List accounts</li>
+                                <li><span className={styles.methodPost}>POST</span> /accounts — Create account</li>
+                                <li><span className={styles.methodGet}>GET</span> /accounts/:id — Get account</li>
+                                <li><span className={styles.methodPatch}>PATCH</span> /accounts/:id — Update account</li>
+                                <li><span className={styles.methodDelete}>DEL</span> /accounts/:id — Disable account</li>
+                            </ul>
+                        </div>
+                        <div className={styles.endpointCategory}>
+                            <h3>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" strokeWidth="2">
+                                    <rect x="1" y="4" width="22" height="16" rx="2" ry="2" />
+                                    <line x1="1" y1="10" x2="23" y2="10" />
+                                </svg>
+                                Transactions
+                            </h3>
+                            <ul className={styles.endpointList}>
+                                <li><span className={styles.methodGet}>GET</span> /transactions — List transactions</li>
+                                <li><span className={styles.methodPost}>POST</span> /transactions/deposit — Create deposit</li>
+                                <li><span className={styles.methodPost}>POST</span> /transactions/withdrawal — Create withdrawal</li>
+                                <li><span className={styles.methodGet}>GET</span> /transactions/:id — Get transaction</li>
+                                <li><span className={styles.methodPatch}>PATCH</span> /transactions/:id — Update status</li>
+                            </ul>
+                        </div>
+                        <div className={styles.endpointCategory}>
+                            <h3>
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" strokeWidth="2">
+                                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                                </svg>
+                                Trading
+                            </h3>
+                            <ul className={styles.endpointList}>
+                                <li><span className={styles.methodGet}>GET</span> /trades — List trades</li>
+                                <li><span className={styles.methodGet}>GET</span> /positions — Open positions</li>
+                                <li><span className={styles.methodGet}>GET</span> /orders — Pending orders</li>
+                                <li><span className={styles.methodGet}>GET</span> /symbols — Trading symbols</li>
+                                <li><span className={styles.methodGet}>GET</span> /quotes/:symbol — Real-time quote</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-                <h3>Default Limits</h3>
-                <ul>
-                    <li><strong>Standard:</strong> 1,000 requests per minute</li>
-                    <li><strong>Burst:</strong> Up to 50 requests per second</li>
-                    <li><strong>Quotes:</strong> 100 requests per second (separate limit)</li>
-                </ul>
+            {/* Webhooks */}
+            <section className={styles.section}>
+                <div className={styles.container}>
+                    <div className={styles.splitFeature}>
+                        <div className={styles.featureContent}>
+                            <div className={styles.badge}>
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                                    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" />
+                                    <path d="M13.73 21a2 2 0 0 1-3.46 0" />
+                                </svg>
+                                <span>WEBHOOKS</span>
+                            </div>
+                            <h2>Real-Time Events.<br />Stop Polling Like It's 2005.</h2>
+                            <p>
+                                Instead of hammering our API every 5 seconds to check if something changed,
+                                let us push events to you. Configure webhook endpoints, subscribe to events,
+                                and react in real-time.
+                            </p>
+                            <h3 className={styles.eventTitle}>Available Events:</h3>
+                            <div className={styles.eventGrid}>
+                                <div className={styles.eventTag}>client.created</div>
+                                <div className={styles.eventTag}>client.verified</div>
+                                <div className={styles.eventTag}>account.created</div>
+                                <div className={styles.eventTag}>transaction.created</div>
+                                <div className={styles.eventTag}>transaction.completed</div>
+                                <div className={styles.eventTag}>trade.opened</div>
+                                <div className={styles.eventTag}>trade.closed</div>
+                                <div className={styles.eventTag}>margin.call</div>
+                                <div className={styles.eventTag}>stop.out</div>
+                            </div>
+                        </div>
+                        <div className={styles.webhookInfo}>
+                            <div className={styles.infoCard}>
+                                <h3>Security</h3>
+                                <p>All webhooks include an HMAC signature (X-FxTrusts-Signature) so you can verify the payload originated from us.</p>
+                            </div>
+                            <div className={styles.infoCard}>
+                                <h3>Retry Policy</h3>
+                                <p>If your endpoint fails, we retry with exponential backoff: 1min → 5min → 30min → 2hrs → 24hrs. Max 5 attempts.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-                <h3>Rate Limit Headers</h3>
-                <p>
-                    All responses include headers indicating your current rate limit status:
-                </p>
-                <ul>
-                    <li><strong>X-RateLimit-Limit:</strong> Your request limit per minute</li>
-                    <li><strong>X-RateLimit-Remaining:</strong> Requests remaining in current window</li>
-                    <li><strong>X-RateLimit-Reset:</strong> Time when the limit resets (Unix timestamp)</li>
-                </ul>
+            {/* Rate Limits */}
+            <section className={`${styles.section} ${styles.altSection}`}>
+                <div className={styles.container}>
+                    <div className={styles.sectionHeader}>
+                        <div className={styles.badge}>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                                <circle cx="12" cy="12" r="10" />
+                                <polyline points="12 6 12 12 16 14" />
+                            </svg>
+                            <span>RATE LIMITS</span>
+                        </div>
+                        <h2>Don't DDoS Us, Please</h2>
+                        <p>
+                            We're generous with our limits, but not infinite. Here's what you get—exceed it and
+                            you'll see HTTP 429. Check the headers to know your remaining quota.
+                        </p>
+                    </div>
 
-                <h2 id="sdks">SDKs & Libraries</h2>
-                <p>
-                    We provide official SDKs for popular programming languages, simplifying API integration with type-safe methods and error handling.
-                </p>
+                    <div className={styles.limitsGrid}>
+                        <div className={styles.limitCard}>
+                            <div className={styles.limitNum}>1,000</div>
+                            <h3>Requests / Minute</h3>
+                            <p>Standard rate limit for most endpoints</p>
+                        </div>
+                        <div className={styles.limitCard}>
+                            <div className={styles.limitNum}>50</div>
+                            <h3>Burst / Second</h3>
+                            <p>Maximum concurrent requests per second</p>
+                        </div>
+                        <div className={styles.limitCard}>
+                            <div className={styles.limitNum}>100</div>
+                            <h3>Quotes / Second</h3>
+                            <p>Separate limit for real-time price quotes</p>
+                        </div>
+                    </div>
 
-                <h3>Official SDKs</h3>
-                <ul>
-                    <li><strong>JavaScript/TypeScript</strong> – npm install @fxtrusts/sdk</li>
-                    <li><strong>Python</strong> – pip install fxtrusts</li>
-                    <li><strong>PHP</strong> – composer require fxtrusts/sdk</li>
-                    <li><strong>Java</strong> – Maven repository available</li>
-                    <li><strong>C#/.NET</strong> – NuGet package available</li>
-                </ul>
+                    <div className={styles.headersTable}>
+                        <h3>Rate Limit Headers</h3>
+                        <div className={styles.headerRow}>
+                            <code>X-RateLimit-Limit</code>
+                            <span>Your request limit per minute</span>
+                        </div>
+                        <div className={styles.headerRow}>
+                            <code>X-RateLimit-Remaining</code>
+                            <span>Requests remaining in current window</span>
+                        </div>
+                        <div className={styles.headerRow}>
+                            <code>X-RateLimit-Reset</code>
+                            <span>Unix timestamp when the limit resets</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-                <h3>Sample Code</h3>
-                <p>
-                    Comprehensive code samples are available in our GitHub repository, covering common use cases including client management, deposit processing, and report generation.
-                </p>
+            {/* SDKs */}
+            <section className={styles.section}>
+                <div className={styles.container}>
+                    <div className={styles.sectionHeader}>
+                        <div className={styles.badge}>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                                <path d="M4 17l6-6-6-6" />
+                                <path d="M12 19h8" />
+                            </svg>
+                            <span>SDKs &amp; LIBRARIES</span>
+                        </div>
+                        <h2>We Wrote the Code So You Don't Have To</h2>
+                        <p>
+                            Official SDKs for popular languages. Type-safe, well-documented, and maintained
+                            by our team. Or just use curl if that's your thing.
+                        </p>
+                    </div>
 
-                <h3>Postman Collection</h3>
-                <p>
-                    Import our Postman collection to quickly explore the API endpoints with pre-configured authentication and sample requests. Available for download from your dashboard.
-                </p>
-            </ContentPageLayout>
+                    <div className={styles.sdkGrid}>
+                        <div className={styles.sdkCard}>
+                            <div className={styles.sdkIcon}>
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" strokeWidth="1.5">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                                    <path d="M2 17l10 5 10-5M2 12l10 5 10-5" />
+                                </svg>
+                            </div>
+                            <h3>JavaScript / TypeScript</h3>
+                            <code>npm install @fxtrusts/sdk</code>
+                        </div>
+                        <div className={styles.sdkCard}>
+                            <div className={styles.sdkIcon}>
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" strokeWidth="1.5">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                                    <path d="M2 17l10 5 10-5M2 12l10 5 10-5" />
+                                </svg>
+                            </div>
+                            <h3>Python</h3>
+                            <code>pip install fxtrusts</code>
+                        </div>
+                        <div className={styles.sdkCard}>
+                            <div className={styles.sdkIcon}>
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" strokeWidth="1.5">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                                    <path d="M2 17l10 5 10-5M2 12l10 5 10-5" />
+                                </svg>
+                            </div>
+                            <h3>PHP</h3>
+                            <code>composer require fxtrusts/sdk</code>
+                        </div>
+                        <div className={styles.sdkCard}>
+                            <div className={styles.sdkIcon}>
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" strokeWidth="1.5">
+                                    <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                                    <path d="M2 17l10 5 10-5M2 12l10 5 10-5" />
+                                </svg>
+                            </div>
+                            <h3>C# / .NET</h3>
+                            <code>Install-Package FxTrusts.SDK</code>
+                        </div>
+                    </div>
+
+                    <div className={styles.resources}>
+                        <h3>Additional Resources</h3>
+                        <div className={styles.resourceGrid}>
+                            <div className={styles.resourceCard}>
+                                <h4>Postman Collection</h4>
+                                <p>Import our collection to explore endpoints with pre-configured auth and sample requests.</p>
+                            </div>
+                            <div className={styles.resourceCard}>
+                                <h4>GitHub Examples</h4>
+                                <p>Full code samples covering client management, deposits, withdrawals, and reporting.</p>
+                            </div>
+                            <div className={styles.resourceCard}>
+                                <h4>OpenAPI Spec</h4>
+                                <p>Download our OpenAPI 3.0 specification for code generation and documentation tools.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* CTA Section */}
+            <section className={styles.ctaSection}>
+                <div className={styles.container}>
+                    <div className={styles.ctaContent}>
+                        <h2>Ready to Build?</h2>
+                        <p>
+                            Get your API credentials from the dashboard and start integrating. Our dev
+                            support team is available 24/7 if you get stuck.
+                        </p>
+                        <div className={styles.ctaButtons}>
+                            <Link href="/get-started" className={styles.primaryCta}>
+                                Get API Keys
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </Link>
+                            <Link href="/company/contact" className={styles.secondaryCta}>
+                                Contact Dev Support
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <Footer />
         </main>
     );
 }

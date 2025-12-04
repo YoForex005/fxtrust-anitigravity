@@ -1,6 +1,11 @@
+/* ========================================
+   ROI CALCULATOR - EXECUTIVE THEME
+   Matching Pricing Page Navy/Gold Palette
+======================================== */
+
 .section {
     padding: 6rem 0;
-    background: radial-gradient(circle at 50% 50%, #FFFFFF 0%, #F3F4F6 100%);
+    background: linear-gradient(180deg, #FAFBFC 0%, #F5F7FA 100%);
 }
 
 .header {
@@ -11,40 +16,36 @@
 .badge {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1.2rem;
-    background: linear-gradient(135deg, #4353F2 0%, #7B8BF6 100%);
-    color: white;
+    gap: 0.75rem;
+    padding: 0.625rem 1.5rem;
+    background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.08) 100%);
+    color: #D4AF37;
     border-radius: 100px;
     font-size: 0.75rem;
     font-weight: 700;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
     margin-bottom: 1.5rem;
-    box-shadow: 0 4px 12px rgba(67, 83, 242, 0.3);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    backdrop-filter: blur(12px);
 }
 
 .headline {
     font-family: var(--font-inter);
-    font-size: 4rem;
+    font-size: 3.5rem;
     line-height: 1.1;
-    font-weight: 600;
-    color: #111827;
+    font-weight: 700;
+    color: #0A1628;
     margin-bottom: 1.5rem;
     letter-spacing: -0.03em;
-    background: linear-gradient(180deg, #111827 0%, #374151 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
 }
 
 .subtext {
     font-family: var(--font-inter);
-    font-size: 1.2rem;
-    line-height: 1.6;
-    color: #6B7280;
-    max-width: 650px;
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: #5A6B7D;
+    max-width: 700px;
     margin: 0 auto;
     font-weight: 400;
 }
@@ -55,12 +56,14 @@
 }
 
 .inputSection {
-    background: white;
-    border: 2px solid #E5E7EB;
-    border-radius: 20px;
+    background: #FFFFFF;
+    border: 1px solid rgba(10, 22, 40, 0.08);
+    border-radius: 16px;
     padding: 3rem;
     margin-bottom: 3rem;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    box-shadow:
+        0 4px 6px rgba(10, 22, 40, 0.04),
+        0 20px 50px rgba(10, 22, 40, 0.08);
 }
 
 .inputLabel {
@@ -68,60 +71,64 @@
     font-family: var(--font-inter);
     font-size: 1.1rem;
     font-weight: 600;
-    color: #111827;
+    color: #0A1628;
     margin-bottom: 1.5rem;
+    text-align: center;
 }
 
 .sliderContainer {
     position: relative;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 .slider {
     width: 100%;
-    height: 8px;
-    border-radius: 10px;
-    background: linear-gradient(90deg, #4353F2 0%, #7B8BF6 100%);
+    height: 6px;
+    border-radius: 100px;
+    background: linear-gradient(90deg, #0A1628 0%, #243B5A 50%, #3D5A80 100%);
     outline: none;
     -webkit-appearance: none;
     appearance: none;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    cursor: pointer;
 }
 
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none;
     appearance: none;
-    width: 24px;
-    height: 24px;
+    width: 28px;
+    height: 28px;
     border-radius: 50%;
-    background: white;
-    border: 3px solid #4353F2;
+    background: linear-gradient(135deg, #D4AF37 0%, #B8942F 100%);
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);
     cursor: pointer;
-    box-shadow: 0 4px 12px rgba(67, 83, 242, 0.3);
     transition: all 0.2s ease;
+    border: 3px solid #FFFFFF;
 }
 
 .slider::-webkit-slider-thumb:hover {
-    transform: scale(1.2);
-    box-shadow: 0 6px 16px rgba(67, 83, 242, 0.4);
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
 }
 
 .slider::-moz-range-thumb {
-    width: 24px;
-    height: 24px;
+    width: 28px;
+    height: 28px;
     border-radius: 50%;
-    background: white;
-    border: 3px solid #4353F2;
+    background: linear-gradient(135deg, #D4AF37 0%, #B8942F 100%);
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);
     cursor: pointer;
-    box-shadow: 0 4px 12px rgba(67, 83, 242, 0.3);
+    border: 3px solid #FFFFFF;
 }
 
 .sliderValue {
     text-align: center;
     font-family: var(--font-inter);
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: 800;
-    color: #4353F2;
-    letter-spacing: -0.02em;
+    color: #0A1628;
+    letter-spacing: -0.03em;
 }
 
 .comparison {
@@ -133,48 +140,56 @@
 }
 
 .providerCard {
-    background: white;
-    border: 2px solid #E5E7EB;
-    border-radius: 20px;
+    background: #FFFFFF;
+    border: 1px solid rgba(10, 22, 40, 0.1);
+    border-radius: 16px;
     padding: 2.5rem;
     position: relative;
     transition: all 0.3s ease;
 }
 
+.providerCard:hover {
+    border-color: rgba(10, 22, 40, 0.2);
+    box-shadow: 0 12px 40px rgba(10, 22, 40, 0.1);
+    transform: translateY(-2px);
+}
+
 .providerCard.fxtrust {
-    border-color: #4353F2;
-    box-shadow: 0 8px 24px rgba(67, 83, 242, 0.15);
+    border-color: #0A1628;
+    box-shadow: 0 16px 48px rgba(10, 22, 40, 0.12);
+    background: linear-gradient(180deg, #FFFFFF 0%, #FAFBFC 100%);
 }
 
 .providerBadge {
     display: inline-block;
     padding: 0.5rem 1rem;
-    background: #F3F4F6;
-    color: #6B7280;
-    border-radius: 100px;
+    background: #F5F7FA;
+    color: #5A6B7D;
+    border-radius: 6px;
     font-family: var(--font-inter);
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
 }
 
 .fxtrustBadge {
-    background: linear-gradient(135deg, #4353F2 0%, #7B8BF6 100%);
-    color: white;
+    background: linear-gradient(135deg, #0A1628 0%, #1A2742 100%);
+    color: #D4AF37;
 }
 
 .savingsPill {
     position: absolute;
     top: -12px;
     right: 20px;
-    background: linear-gradient(135deg, #4353F2 0%, #2563EB 100%);
-    color: white;
-    padding: 0.4rem 1rem;
-    border-radius: 100px;
+    background: linear-gradient(135deg, #0A1628 0%, #1A2742 100%);
+    color: #D4AF37;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
     font-family: var(--font-inter);
     font-size: 0.8rem;
     font-weight: 700;
-    box-shadow: 0 4px 12px rgba(67, 83, 242, 0.3);
+    box-shadow: 0 4px 12px rgba(10, 22, 40, 0.3);
+    letter-spacing: 0.02em;
 }
 
 .breakdown {
@@ -184,23 +199,23 @@
 .breakdownItem {
     display: flex;
     justify-content: space-between;
-    padding: 1rem 0;
-    border-bottom: 1px solid #F3F4F6;
+    padding: 0.875rem 0;
+    border-bottom: 1px solid #EEF1F6;
     font-family: var(--font-inter);
 }
 
 .breakdownItem span:first-child {
-    color: #6B7280;
+    color: #5A6B7D;
     font-size: 0.95rem;
 }
 
 .breakdownItem span:last-child {
-    color: #111827;
+    color: #0A1628;
     font-weight: 600;
 }
 
 .free {
-    color: #4353F2 !important;
+    color: #D4AF37 !important;
     font-weight: 700 !important;
 }
 
@@ -209,112 +224,134 @@
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem;
-    background: #F9FAFB;
-    border-radius: 12px;
+    background: #F5F7FA;
+    border-radius: 10px;
     font-family: var(--font-inter);
+    border-left: 3px solid #EEF1F6;
 }
 
 .total span:first-child {
     font-size: 0.9rem;
-    color: #6B7280;
+    color: #5A6B7D;
     font-weight: 500;
 }
 
 .totalValue {
-    font-size: 1.8rem;
+    font-size: 1.875rem;
     font-weight: 800;
-    color: #111827;
+    color: #0A1628;
     letter-spacing: -0.02em;
 }
 
 .totalValue.green {
-    color: #4353F2;
+    color: #0A1628;
 }
 
 .vs {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 60px;
-    height: 60px;
-    background: linear-gradient(135deg, #4353F2 0%, #7B8BF6 100%);
-    color: white;
+    width: 56px;
+    height: 56px;
+    background: linear-gradient(135deg, #0A1628 0%, #1A2742 100%);
+    color: #D4AF37;
     border-radius: 50%;
     font-family: var(--font-inter);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 800;
-    box-shadow: 0 8px 20px rgba(67, 83, 242, 0.3);
+    box-shadow: 0 8px 20px rgba(10, 22, 40, 0.3);
     align-self: center;
 }
 
 .savingsCard {
-    background: linear-gradient(135deg, #4353F2 0%, #7B8BF6 100%);
-    border-radius: 20px;
-    padding: 3rem;
+    background: linear-gradient(135deg, #0A1628 0%, #1A2742 40%, #243B5A 100%);
+    border-radius: 16px;
+    padding: 2.5rem 3rem;
     display: flex;
     align-items: center;
     gap: 2rem;
-    box-shadow: 0 20px 40px rgba(67, 83, 242, 0.2);
+    box-shadow: 0 20px 50px rgba(10, 22, 40, 0.25);
+    position: relative;
+    overflow: hidden;
+}
+
+.savingsCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background:
+        radial-gradient(ellipse 400px 300px at 20% 80%, rgba(212, 175, 55, 0.1) 0%, transparent 60%);
+    pointer-events: none;
 }
 
 .savingsIcon {
-    width: 80px;
-    height: 80px;
-    background: rgba(255, 255, 255, 0.2);
+    width: 70px;
+    height: 70px;
+    background: rgba(212, 175, 55, 0.15);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    color: #D4AF37;
     flex-shrink: 0;
+    position: relative;
+    z-index: 1;
 }
 
 .savingsContent {
     flex: 1;
+    position: relative;
+    z-index: 1;
 }
 
 .savingsLabel {
     font-family: var(--font-inter);
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 600;
-    color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 0.5rem;
+    color: rgba(255, 255, 255, 0.85);
+    margin-bottom: 0.375rem;
 }
 
 .savingsAmount {
     font-family: var(--font-inter);
-    font-size: 3.5rem;
+    font-size: 3rem;
     font-weight: 800;
-    color: white;
+    color: #FFFFFF;
     letter-spacing: -0.03em;
     line-height: 1;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.375rem;
 }
 
 .savingsSubtext {
     font-family: var(--font-inter);
-    font-size: 0.95rem;
-    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.65);
 }
 
 .ctaButton {
-    padding: 1.2rem 2.5rem;
-    background: white;
-    color: #4353F2;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #D4AF37 0%, #B8942F 100%);
+    color: #0A1628;
     border: none;
-    border-radius: 12px;
+    border-radius: 8px;
     font-family: var(--font-inter);
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 700;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
     flex-shrink: 0;
+    position: relative;
+    z-index: 1;
 }
 
 .ctaButton:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 24px rgba(212, 175, 55, 0.4);
+    background: linear-gradient(135deg, #C5A028 0%, #A88725 100%);
 }
 
 /* Responsive */
@@ -328,12 +365,12 @@
         width: 50px;
         height: 50px;
         margin: 0 auto;
-        transform: rotate(90deg);
     }
 
     .savingsCard {
         flex-direction: column;
         text-align: center;
+        padding: 2rem;
     }
 
     .savingsAmount {
@@ -343,14 +380,18 @@
 
 @media (max-width: 768px) {
     .headline {
-        font-size: 2.5rem;
+        font-size: 2.25rem;
     }
 
     .inputSection {
-        padding: 2rem;
+        padding: 2rem 1.5rem;
     }
 
     .providerCard {
         padding: 2rem;
+    }
+
+    .sliderValue {
+        font-size: 2rem;
     }
 }

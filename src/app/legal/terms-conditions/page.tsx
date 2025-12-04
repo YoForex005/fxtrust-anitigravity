@@ -243,7 +243,7 @@ export default function TermsPage() {
                     For questions about these terms, please contact:
                 </p>
                 <ul>
-                    <li><strong>Email:</strong> legal@fxtrusts.com</li>
+                    <li><strong>Email:</strong> business@fxtrusts.com</li>
                     <li><strong>Address:</strong> FxTrusts Ltd, Legal Department, [Address]</li>
                 </ul>
             </ContentPageLayout>

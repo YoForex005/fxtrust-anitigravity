@@ -28,14 +28,16 @@ export default function ROICalculator() {
             <div className="container">
                 <div className={styles.header}>
                     <div className={styles.badge}>
-                        <span>💸</span>
-                        <span>THE REALITY HURTS CALCULATOR</span>
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                            <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
+                        </svg>
+                        <span>THE "PAINFUL TRUTH" CALCULATOR</span>
                     </div>
                     <h2 className={styles.headline}>
-                        The "What You're Overpaying Right Now" Calculator
+                        How Much Are You Overpaying Right Now?
                     </h2>
                     <p className={styles.subtext}>
-                        Move the slider. Watch yourself realize how much you've been getting robbed. We'll wait. <em>(Spoiler: It's probably enough to fund that boat you keep dreaming about.)</em>
+                        Move the slider. Watch your current vendor's "competitive pricing" suddenly look less competitive. We'll wait while you process this. <em>(Spoiler: It's probably enough to fund that boat you keep dreaming about.)</em>
                     </p>
                 </div>
 

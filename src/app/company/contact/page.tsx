@@ -31,7 +31,7 @@ export default function ContactPage() {
                                 <div>
                                     <h3 style={{ fontSize: '1.1rem', fontWeight: '700', color: '#111827', marginBottom: '0.25rem' }}>Email Us</h3>
                                     <p style={{ color: '#6B7280', marginBottom: '0.25rem' }}>For general inquiries and sales.</p>
-                                    <a href="mailto:hello@fxtrusts.com" style={{ color: '#4353F2', fontWeight: '600' }}>hello@fxtrusts.com</a>
+                                    <a href="mailto:business@fxtrusts.com" style={{ color: '#4353F2', fontWeight: '600' }}>business@fxtrusts.com</a>
                                 </div>
                             </div>
 
@@ -53,7 +53,7 @@ export default function ContactPage() {
                                 <div>
                                     <h3 style={{ fontSize: '1.1rem', fontWeight: '700', color: '#111827', marginBottom: '0.25rem' }}>Emergency Line</h3>
                                     <p style={{ color: '#6B7280', marginBottom: '0.25rem' }}>Server down? Call us 24/7.</p>
-                                    <span style={{ color: '#DC2626', fontWeight: '600' }}>+44 20 1234 5678</span>
+                                    <span style={{ color: '#DC2626', fontWeight: '600' }}>+971 55 146 1476</span>
                                 </div>
                             </div>
                         </div>

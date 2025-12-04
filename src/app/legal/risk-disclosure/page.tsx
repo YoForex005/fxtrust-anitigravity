@@ -72,7 +72,7 @@ export default function RiskDisclosurePage() {
 
                     <p style={{ marginTop: '2rem', padding: '1rem', background: '#F1F5F9', borderRadius: '8px', fontSize: '0.9rem' }}>
                         <strong>Last Updated:</strong> December 2024<br />
-                        For questions about this disclosure, contact: <a href="mailto:legal@fxtrusts.com">legal@fxtrusts.com</a>
+                        For questions about this disclosure, contact: <a href="mailto:business@fxtrusts.com">business@fxtrusts.com</a>
                     </p>
                 </div>
             </div>

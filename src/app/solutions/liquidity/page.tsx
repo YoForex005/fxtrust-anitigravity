@@ -1,253 +1,440 @@
-import { Metadata } from 'next';
-import ContentPageLayout from '@/components/ContentPageLayout';
-import PageHeader from '@/components/PageHeader';
+import InnerPageHeader from '@/components/InnerPageHeader';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import styles from './liquidity.module.css';
+import { MacWindow } from '@/components/DeviceFrames';
+import Link from 'next/link';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Liquidity Solutions | Tier-1 Forex Liquidity | FxTrusts',
-    description: 'Access deep institutional liquidity from LMAX, Saxo, JP Morgan, and more. Aggregated pricing, smart order routing, and transparent execution.',
-    keywords: ['forex liquidity', 'liquidity provider', 'tier-1 liquidity', 'liquidity bridge', 'forex prime broker'],
+    title: 'Tier-1 Forex Liquidity | Aggregated Pricing | LP Bridge | FXTrusts',
+    description: 'Access deep institutional liquidity from LMAX, Saxo, CFH, and Tier-1 banks. Aggregated pricing, smart order routing, and sub-10ms execution.',
+    keywords: [
+        'forex liquidity provider',
+        'tier-1 liquidity',
+        'liquidity bridge MT5',
+        'aggregated forex pricing',
+        'smart order routing',
+        'forex prime broker',
+        'LP connection',
+        'FIX protocol liquidity',
+        'institutional forex pricing',
+        'ECN liquidity',
+        'STP broker liquidity',
+        'forex price aggregation',
+        'best bid offer forex',
+        'liquidity pool forex',
+        'multi-LP aggregator'
+    ],
+    openGraph: {
+        title: 'Tier-1 Forex Liquidity | 15+ LPs | Sub-10ms Execution',
+        description: 'Aggregated pricing from LMAX, Saxo, CFH, and major banks. Smart order routing with 99.7% fill rate.',
+        type: 'website',
+        url: 'https://fxtrusts.com/solutions/liquidity',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Institutional Forex Liquidity | FXTrusts',
+        description: 'Deep liquidity from 15+ providers. 0.0 pips on EURUSD. Sub-10ms execution.',
+    },
+    alternates: {
+        canonical: 'https://fxtrusts.com/solutions/liquidity',
+    },
 };
 
 export default function LiquidityPage() {
-    const tableOfContents = [
-        { id: 'overview', title: 'Liquidity Overview' },
-        { id: 'providers', title: 'Liquidity Providers' },
-        { id: 'aggregation', title: 'Aggregation Technology' },
-        { id: 'execution', title: 'Execution Quality' },
-        { id: 'integration', title: 'Bridge Integration' },
-        { id: 'reporting', title: 'Reporting & Analytics' },
-    ];
-
-    const relatedLinks = [
-        { title: 'MT5 White Label', href: '/solutions/mt5', readTime: '5 min' },
-        { title: 'Forex Trading', href: '/markets/forex', readTime: '6 min' },
-        { title: 'Risk Management', href: '/solutions/risk-management', readTime: '4 min' },
-    ];
-
-    const quickFacts = [
-        { label: 'LPs Connected', value: '15+' },
-        { label: 'Avg Latency', value: '<8ms' },
-        { label: 'Fill Rate', value: '99.7%' },
-        { label: 'Uptime', value: '99.99%' },
-    ];
-
     return (
         <main>
-            <PageHeader
-                title="Liquidity Solutions"
-                subtitle="Access deep institutional liquidity from the world's leading providers."
-                badge="Solutions"
+            <Header />
+            <InnerPageHeader
+                badge="Deep Pools"
+                badgeIcon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>}
+                title="Tier-1 Liquidity.<br/>Where the Big Money Swims."
+                subtitle="Your clients don't care about your backend. They care about spreads and execution. We connect you directly to LMAX, Saxo, CFH, and the major banks—so you can offer institutional pricing without being an institution."
             />
-            <ContentPageLayout
-                tableOfContents={tableOfContents}
-                relatedLinks={relatedLinks}
-                quickFacts={quickFacts}
-                ctaTitle="Connect to Tier-1 Liquidity"
-                ctaText="Get institutional pricing for your brokerage today."
-                ctaButtonText="Get Started"
-                ctaButtonHref="/company/contact"
-            >
-                <h1>Institutional Liquidity for Forex Brokerages</h1>
-                <p>
-                    Liquidity is the lifeblood of any brokerage. Without reliable pricing and execution, client trust erodes quickly. At FxTrusts, we provide aggregated access to Tier-1 banks and non-bank market makers, ensuring your clients receive competitive pricing and reliable fills even during volatile market conditions.
-                </p>
-                <p>
-                    Our liquidity bridge technology connects your MT5 platform directly to multiple providers, aggregating the best bid and ask prices in real-time. Smart order routing ensures each trade is executed at the optimal venue based on price, latency, and fill probability.
-                </p>
 
-                <h2 id="overview">Liquidity Overview</h2>
-                <p>
-                    Traditional retail brokerages often rely on a single B-book model, internalizing client trades. While this can be profitable, it creates conflicts of interest and limits scalability. Our liquidity solution enables true STP/ECN execution, passing trades directly to the market.
-                </p>
+            {/* The Single LP Problem */}
+            <section className={styles.section}>
+                <div className={styles.container}>
+                    <div className={styles.sectionHeader}>
+                        <div className={styles.badge}>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                                <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" />
+                                <line x1="12" y1="9" x2="12" y2="13" />
+                                <line x1="12" y1="17" x2="12.01" y2="17" />
+                            </svg>
+                            <span>THE SINGLE LP TRAP</span>
+                        </div>
+                        <h2>Relying on One Liquidity Provider Is a Suicide Mission</h2>
+                        <p>
+                            Your single LP goes offline during NFP. Your spreads widen to 50 pips. Your traders can't
+                            close positions. The Trustpilot reviews write themselves. You need redundancy, aggregation,
+                            and smart routing—not a single point of failure.
+                        </p>
+                    </div>
 
-                <div className="statsGrid">
-                    <div className="statBox">
-                        <strong>15+</strong>
-                        <span>LPs Connected</span>
-                    </div>
-                    <div className="statBox">
-                        <strong>8ms</strong>
-                        <span>Avg Latency</span>
-                    </div>
-                    <div className="statBox">
-                        <strong>99.7%</strong>
-                        <span>Fill Rate</span>
-                    </div>
-                    <div className="statBox">
-                        <strong>0.0</strong>
-                        <span>Spread From</span>
-                    </div>
-                </div>
-
-                <h3>Execution Models</h3>
-                <ul>
-                    <li><strong>A-Book (STP)</strong> – All trades passed directly to liquidity providers</li>
-                    <li><strong>B-Book</strong> – Internalize trades with hedging options</li>
-                    <li><strong>Hybrid A/B</strong> – Route profitable clients to A-book, small trades to B-book</li>
-                    <li><strong>C-Book</strong> – Proprietary trading against client flow (advanced)</li>
-                </ul>
-
-                <h2 id="providers">Liquidity Providers</h2>
-                <p>
-                    We maintain direct relationships with multiple Tier-1 banks and leading non-bank market makers. This diversification ensures reliable pricing even when individual providers experience issues.
-                </p>
-
-                <h3>Tier-1 Banks</h3>
-                <ul>
-                    <li><strong>JP Morgan</strong> – World's largest FX dealer by volume</li>
-                    <li><strong>UBS</strong> – Leading European FX market maker</li>
-                    <li><strong>Barclays</strong> – Major UK and global FX provider</li>
-                    <li><strong>Citi</strong> – Extensive emerging markets coverage</li>
-                    <li><strong>Deutsche Bank</strong> – European benchmark pricing</li>
-                    <li><strong>Goldman Sachs</strong> – Institutional trading access</li>
-                </ul>
-
-                <h3>Non-Bank Market Makers</h3>
-                <ul>
-                    <li><strong>LMAX Exchange</strong> – MTF with exchange-quality execution</li>
-                    <li><strong>Saxo Bank</strong> – Multi-asset prime broker</li>
-                    <li><strong>Integral</strong> – ECN technology provider</li>
-                    <li><strong>Currenex</strong> – Institutional FX marketplace</li>
-                    <li><strong>Mass Markets</strong> – Aggressive pricing specialist</li>
-                </ul>
-
-                <div className="featureGrid">
-                    <div className="featureCard">
-                        <h4>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
-                            Competitive Spreads
-                        </h4>
-                        <p>0.0 pips on EUR/USD, 0.1 on majors during liquid hours. True institutional pricing.</p>
-                    </div>
-                    <div className="featureCard">
-                        <h4>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2" /></svg>
-                            Deep Liquidity
-                        </h4>
-                        <p>Fill large orders without significant slippage. Block trade support for institutions.</p>
-                    </div>
-                    <div className="featureCard">
-                        <h4>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
-                            Low Latency
-                        </h4>
-                        <p>Sub-10ms execution from order to fill. Optimized routing minimizes market impact.</p>
-                    </div>
-                    <div className="featureCard">
-                        <h4>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
-                            Redundancy
-                        </h4>
-                        <p>Multiple LP connections ensure pricing availability even during provider outages.</p>
+                    <div className={styles.painGrid}>
+                        <div className={styles.painCard}>
+                            <div className={styles.painIcon}>
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                                    <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
+                                </svg>
+                            </div>
+                            <h3 className={styles.painTitle}>The Spread Blowout</h3>
+                            <p className={styles.painText}>
+                                When your LP experiences issues, spreads explode. Clients see 10-pip spreads on EURUSD
+                                and assume you're a scam. With 15+ LPs, if one fails, the others pick up the slack
+                                instantly.
+                            </p>
+                        </div>
+                        <div className={styles.painCard}>
+                            <div className={styles.painIcon}>
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                                    <circle cx="12" cy="12" r="10" />
+                                    <polyline points="12 6 12 12 16 14" />
+                                </svg>
+                            </div>
+                            <h3 className={styles.painTitle}>The Latency Tax</h3>
+                            <p className={styles.painText}>
+                                Every millisecond of execution delay is slippage your clients eat. Generic bridges add
+                                50-100ms. Our smart routing fills orders in &lt;10ms by selecting the fastest LP for
+                                each symbol.
+                            </p>
+                        </div>
+                        <div className={styles.painCard}>
+                            <div className={styles.painIcon}>
+                                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                </svg>
+                            </div>
+                            <h3 className={styles.painTitle}>The Rejection Roulette</h3>
+                            <p className={styles.painText}>
+                                Some LPs have "last look" policies—they reject trades that have moved against them. If
+                                your only LP rejects 5% of orders, you lose 5% of potential revenue. Aggregation routes
+                                around rejections.
+                            </p>
+                        </div>
                     </div>
                 </div>
+            </section>
 
-                <h2 id="aggregation">Aggregation Technology</h2>
-                <p>
-                    Our liquidity bridge aggregates prices from all connected providers, constructing a synthetic book that represents the best available market.
-                </p>
-
-                <h3>Best Bid/Offer (BBO)</h3>
-                <p>
-                    The aggregator continuously monitors all provider quotes, presenting clients with the single best bid and best offer across all sources. This ensures clients always see competitive pricing.
-                </p>
-
-                <h3>Depth of Market</h3>
-                <p>
-                    Full level 2 depth aggregation available, showing available liquidity at each price level. Useful for large traders and algorithmic strategies that need to understand market depth.
-                </p>
-
-                <h3>Smart Order Routing (SOR)</h3>
-                <p>
-                    When orders are executed, the SOR engine selects the optimal venue based on:
-                </p>
-                <ul>
-                    <li>Price – Best available price at time of execution</li>
-                    <li>Latency – Historical fill speed for each provider</li>
-                    <li>Fill Rate – Provider's historical success rate</li>
-                    <li>Slippage – Expected vs. actual fill price history</li>
-                    <li>Rejection Rate – Frequency of quote rejections</li>
-                </ul>
-
-                <div className="infoBox">
-                    <p>
-                        <strong>Last Look Protection:</strong> We negotiate last-look terms with all providers. Configurable rejection timeout ensures trades don't hang during volatile conditions.
-                    </p>
+            {/* The Solution */}
+            <section className={`${styles.section} ${styles.altSection}`}>
+                <div className={styles.container}>
+                    <div className={styles.splitFeature}>
+                        <div className={styles.featureContent}>
+                            <div className={styles.featureBadge}>THE SOLUTION</div>
+                            <h2>15+ LPs. One Best Price.<br />Always.</h2>
+                            <p>
+                                Our bridge aggregates quotes from 15+ liquidity providers in real-time, constructing a
+                                synthetic order book that always shows the best available bid and offer. Smart order
+                                routing ensures each trade hits the optimal venue.
+                            </p>
+                            <ul className={styles.featureList}>
+                                <li>
+                                    <span className={styles.checkIcon}>
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg>
+                                    </span>
+                                    0.0 Pip Spreads on Major Pairs
+                                </li>
+                                <li>
+                                    <span className={styles.checkIcon}>
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg>
+                                    </span>
+                                    &lt;10ms Average Execution Latency
+                                </li>
+                                <li>
+                                    <span className={styles.checkIcon}>
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg>
+                                    </span>
+                                    99.7% Fill Rate at Requested Price
+                                </li>
+                                <li>
+                                    <span className={styles.checkIcon}>
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg>
+                                    </span>
+                                    Automatic Failover Between LPs
+                                </li>
+                                <li>
+                                    <span className={styles.checkIcon}>
+                                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                                            <polyline points="20 6 9 17 4 12"></polyline>
+                                        </svg>
+                                    </span>
+                                    Full Depth of Market Available
+                                </li>
+                            </ul>
+                        </div>
+                        <div className={styles.featureImage}>
+                            <MacWindow title="Liquidity Bridge - Price Aggregator">
+                                <div className={styles.aggregatorMockup}>
+                                    <div className={styles.aggHeader}>
+                                        <span>EUR/USD Best Price</span>
+                                        <span className={styles.live}>● LIVE</span>
+                                    </div>
+                                    <div className={styles.priceDisplay}>
+                                        <div className={styles.bidSide}>
+                                            <span className={styles.priceLabel}>BID</span>
+                                            <span className={styles.priceValue}>1.08421</span>
+                                            <span className={styles.lpSource}>LMAX</span>
+                                        </div>
+                                        <div className={styles.spreadBox}>0.1</div>
+                                        <div className={styles.askSide}>
+                                            <span className={styles.priceLabel}>ASK</span>
+                                            <span className={styles.priceValue}>1.08422</span>
+                                            <span className={styles.lpSource}>CFH</span>
+                                        </div>
+                                    </div>
+                                    <div className={styles.lpList}>
+                                        <div className={styles.lpItem}><span>LMAX</span><span className={styles.online}>● Online</span></div>
+                                        <div className={styles.lpItem}><span>CFH</span><span className={styles.online}>● Online</span></div>
+                                        <div className={styles.lpItem}><span>Saxo</span><span className={styles.online}>● Online</span></div>
+                                    </div>
+                                </div>
+                            </MacWindow>
+                        </div>
+                    </div>
                 </div>
+            </section>
 
-                <h2 id="execution">Execution Quality</h2>
-                <p>
-                    Execution quality directly impacts client satisfaction and your bottom line. We measure and optimize every aspect of the execution chain.
-                </p>
+            {/* Liquidity Providers */}
+            <section className={styles.section}>
+                <div className={styles.container}>
+                    <div className={styles.sectionHeader}>
+                        <div className={styles.badge}>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                                <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
+                                <line x1="3" y1="9" x2="21" y2="9" />
+                                <line x1="9" y1="21" x2="9" y2="9" />
+                            </svg>
+                            <span>OUR LIQUIDITY NETWORK</span>
+                        </div>
+                        <h2>The Providers Behind Your Spreads</h2>
+                        <p>
+                            We maintain direct relationships with the world's leading liquidity providers—both Tier-1
+                            banks and specialized non-bank market makers.
+                        </p>
+                    </div>
 
-                <h3>Key Metrics</h3>
-                <ul>
-                    <li><strong>Fill Rate:</strong> 99.7% of orders filled at requested price or better</li>
-                    <li><strong>Positive Slippage:</strong> 52% of slipped orders are positive (client benefit)</li>
-                    <li><strong>Average Latency:</strong> 8.4ms from order receipt to fill confirmation</li>
-                    <li><strong>Rejection Rate:</strong> 0.3% of orders rejected by LPs</li>
-                </ul>
+                    <div className={styles.lpGrid}>
+                        <div className={styles.lpCategory}>
+                            <h3>Tier-1 Banks</h3>
+                            <ul className={styles.lpNames}>
+                                <li><strong>JP Morgan</strong> — World's largest FX dealer</li>
+                                <li><strong>UBS</strong> — Leading European market maker</li>
+                                <li><strong>Barclays</strong> — Major UK and global provider</li>
+                                <li><strong>Citi</strong> — Extensive EM coverage</li>
+                                <li><strong>Deutsche Bank</strong> — European benchmark</li>
+                                <li><strong>Goldman Sachs</strong> — Institutional access</li>
+                            </ul>
+                        </div>
+                        <div className={styles.lpCategory}>
+                            <h3>Non-Bank Market Makers</h3>
+                            <ul className={styles.lpNames}>
+                                <li><strong>LMAX Exchange</strong> — MTF with exchange execution</li>
+                                <li><strong>Saxo Bank</strong> — Multi-asset prime broker</li>
+                                <li><strong>CFH Clearing</strong> — Retail-focused aggregator</li>
+                                <li><strong>Integral</strong> — ECN technology provider</li>
+                                <li><strong>Currenex</strong> — Institutional marketplace</li>
+                                <li><strong>IS Prime</strong> — Prime of prime services</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-                <h3>Execution Reports</h3>
-                <p>
-                    Monthly execution quality reports provide transparency on:
-                </p>
-                <ul>
-                    <li>Order-by-order fill analysis</li>
-                    <li>Slippage distribution by symbol and time</li>
-                    <li>LP performance comparison</li>
-                    <li>Market impact analysis for large orders</li>
-                </ul>
+            {/* Execution Models */}
+            <section className={`${styles.section} ${styles.altSection}`}>
+                <div className={styles.container}>
+                    <div className={styles.sectionHeader}>
+                        <div className={styles.badge}>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                            </svg>
+                            <span>EXECUTION MODELS</span>
+                        </div>
+                        <h2>A-Book, B-Book, or Hybrid—Your Choice</h2>
+                        <p>
+                            We don't force you into one model. Configure routing rules per client, per symbol, per
+                            trade size—whatever makes sense for your business.
+                        </p>
+                    </div>
 
-                <h2 id="integration">Bridge Integration</h2>
-                <p>
-                    Our liquidity bridge integrates directly with your MT5 server, providing seamless order flow from client terminal to execution venue.
-                </p>
+                    <div className={styles.modelGrid}>
+                        <div className={styles.modelCard}>
+                            <h3>A-Book (STP)</h3>
+                            <p className={styles.modelDesc}>All trades passed directly to liquidity providers. No conflict of interest. Revenue from spread markup or commission.</p>
+                            <div className={styles.modelPros}>
+                                <span>✓ Transparent</span>
+                                <span>✓ Scalable</span>
+                                <span>✓ No market risk</span>
+                            </div>
+                        </div>
+                        <div className={styles.modelCard}>
+                            <h3>B-Book</h3>
+                            <p className={styles.modelDesc}>Internalize trades and act as counterparty. Higher profit potential but requires risk management.</p>
+                            <div className={styles.modelPros}>
+                                <span>✓ Higher margins</span>
+                                <span>✓ Full spread</span>
+                                <span>✓ Flexible pricing</span>
+                            </div>
+                        </div>
+                        <div className={styles.modelCard}>
+                            <h3>Hybrid A/B</h3>
+                            <p className={styles.modelDesc}>Route profitable clients to A-book, internalize losing traders. Best of both worlds.</p>
+                            <div className={styles.modelPros}>
+                                <span>✓ Optimized revenue</span>
+                                <span>✓ Risk-managed</span>
+                                <span>✓ Rule-based</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-                <h3>Technical Architecture</h3>
-                <ul>
-                    <li><strong>MT5 Gateway</strong> – Plugin installed on your MT5 server</li>
-                    <li><strong>Bridge Engine</strong> – Price aggregation and order routing</li>
-                    <li><strong>LP Connectors</strong> – FIX 4.4 connections to each provider</li>
-                    <li><strong>Risk Manager</strong> – Real-time exposure monitoring</li>
-                    <li><strong>Reporting Database</strong> – Historical data retention</li>
-                </ul>
+            {/* Stats Grid */}
+            <section className={styles.section}>
+                <div className={styles.container}>
+                    <div className={styles.sectionHeader}>
+                        <div className={styles.badge}>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                                <path d="M3 3v18h18" />
+                                <path d="M18 17V9" />
+                                <path d="M13 17V5" />
+                                <path d="M8 17v-3" />
+                            </svg>
+                            <span>EXECUTION QUALITY</span>
+                        </div>
+                        <h2>Numbers That Actually Matter</h2>
+                        <p>
+                            We measure and optimize every aspect of execution. Here's what you can expect.
+                        </p>
+                    </div>
 
-                <h3>Configuration Options</h3>
-                <ul>
-                    <li><strong>Markup</strong> – Add your spread on top of raw pricing</li>
-                    <li><strong>Commission</strong> – Per-lot commission instead of spread markup</li>
-                    <li><strong>A/B Routing</strong> – Rules for routing trades to book or market</li>
-                    <li><strong>Symbol Mapping</strong> – Map MT5 symbols to LP instruments</li>
-                    <li><strong>Volume Limits</strong> – Maximum order sizes per symbol</li>
-                </ul>
+                    <div className={styles.statsGrid}>
+                        <div className={styles.statCard}>
+                            <div className={styles.statNum}>15+</div>
+                            <h3>LPs Connected</h3>
+                            <p>Tier-1 banks and non-bank market makers</p>
+                        </div>
+                        <div className={styles.statCard}>
+                            <div className={styles.statNum}>&lt;8ms</div>
+                            <h3>Avg Latency</h3>
+                            <p>From order receipt to fill confirmation</p>
+                        </div>
+                        <div className={styles.statCard}>
+                            <div className={styles.statNum}>99.7%</div>
+                            <h3>Fill Rate</h3>
+                            <p>Orders filled at requested price or better</p>
+                        </div>
+                        <div className={styles.statCard}>
+                            <div className={styles.statNum}>52%</div>
+                            <h3>Positive Slippage</h3>
+                            <p>Of slipped orders benefit the client</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-                <h2 id="reporting">Reporting & Analytics</h2>
-                <p>
-                    Comprehensive reporting gives you complete visibility into liquidity performance and execution quality.
-                </p>
+            {/* FAQ Section */}
+            <section className={`${styles.section} ${styles.altSection}`}>
+                <div className={styles.container}>
+                    <div className={styles.sectionHeader}>
+                        <div className={styles.badge}>
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                                <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                            </svg>
+                            <span>FREQUENTLY ASKED QUESTIONS</span>
+                        </div>
+                        <h2>Liquidity Questions, Answered</h2>
+                        <p>
+                            What you actually need to know before connecting to our bridge.
+                        </p>
+                    </div>
 
-                <h3>Real-Time Dashboard</h3>
-                <ul>
-                    <li>Live order flow and execution status</li>
-                    <li>Current exposure by symbol and LP</li>
-                    <li>P&L attribution (A-book vs B-book)</li>
-                    <li>Alert notifications for key events</li>
-                </ul>
+                    <div className={styles.faqGrid}>
+                        <div className={styles.faqCard}>
+                            <h3>Do I need my own prime broker account?</h3>
+                            <p>
+                                No. We act as your prime broker connection. You get access to Tier-1 pricing without
+                                the $1M+ deposit requirements of a direct PB relationship.
+                            </p>
+                        </div>
+                        <div className={styles.faqCard}>
+                            <h3>Can I add my own LP connections?</h3>
+                            <p>
+                                Yes. If you have existing LP relationships, we can integrate them into the aggregator
+                                alongside our pool. Your pricing, our technology.
+                            </p>
+                        </div>
+                        <div className={styles.faqCard}>
+                            <h3>How do you handle "last look"?</h3>
+                            <p>
+                                We negotiate last-look terms with all providers and configure rejection timeouts. If
+                                an LP is too aggressive with rejections, we can reduce their priority or exclude them.
+                            </p>
+                        </div>
+                        <div className={styles.faqCard}>
+                            <h3>What's the minimum deposit?</h3>
+                            <p>
+                                The margin requirement depends on your expected volume. Typically $50-100K for
+                                starters. We can discuss based on your specific situation.
+                            </p>
+                        </div>
+                        <div className={styles.faqCard}>
+                            <h3>Can I mark up the spreads?</h3>
+                            <p>
+                                Absolutely. Add your own markup on top of raw pricing—fixed or variable. Or charge
+                                per-lot commissions instead. Your call.
+                            </p>
+                        </div>
+                        <div className={styles.faqCard}>
+                            <h3>What about exotic pairs?</h3>
+                            <p>
+                                We cover 70+ currency pairs including exotics. Plus CFDs on indices, commodities, and
+                                crypto. Same aggregation technology, same execution quality.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-                <h3>Historical Reports</h3>
-                <ul>
-                    <li><strong>Execution Analysis</strong> – Fill rates, slippage, latency trends</li>
-                    <li><strong>LP Scorecards</strong> – Compare provider performance</li>
-                    <li><strong>Volume Reports</strong> – Trading activity by time, symbol, client</li>
-                    <li><strong>Revenue Analysis</strong> – Markup and commission earnings</li>
-                </ul>
+            {/* CTA Section */}
+            <section className={styles.ctaSection}>
+                <div className={styles.container}>
+                    <div className={styles.ctaContent}>
+                        <h2>Get Institutional Pricing Today</h2>
+                        <p>
+                            Stop overpaying for liquidity. Connect to Tier-1 providers and offer your clients the
+                            spreads they deserve.
+                        </p>
+                        <div className={styles.ctaButtons}>
+                            <Link href="/get-started" className={styles.primaryCta}>
+                                Request Liquidity Access
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                                    <polyline points="12 5 19 12 12 19"></polyline>
+                                </svg>
+                            </Link>
+                            <Link href="/pricing" className={styles.secondaryCta}>
+                                View Pricing
+                            </Link>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
-                <h3>API Access</h3>
-                <p>
-                    REST API for integrating liquidity data with your own systems. Real-time webhooks for execution events, exposure alerts, and system notifications.
-                </p>
-            </ContentPageLayout>
+            <Footer />
         </main>
     );
 }

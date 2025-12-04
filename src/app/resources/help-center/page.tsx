@@ -240,9 +240,9 @@ export default function HelpCenterPage() {
                 <h3>Support Channels</h3>
                 <ul>
                     <li><strong>Live Chat</strong> – Instant support via in-dashboard chat widget</li>
-                    <li><strong>Email</strong> – support@fxtrusts.com (response within 1 hour)</li>
+                    <li><strong>Email</strong> – business@fxtrusts.com (response within 1 hour)</li>
                     <li><strong>Telegram</strong> – @fxtrusts_support for quick questions</li>
-                    <li><strong>WhatsApp</strong> – +1 (555) 123-4567 for urgent matters</li>
+                    <li><strong>WhatsApp</strong> – +971 55 146 1476 for urgent matters</li>
                     <li><strong>Phone</strong> – Scheduled calls available upon request</li>
                 </ul>
 

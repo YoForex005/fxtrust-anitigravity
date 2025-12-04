@@ -191,8 +191,8 @@ export default function ContentPageLayout({
                     </div>
                     <h4 className={styles.contactTitle}>Need Help?</h4>
                     <p className={styles.contactText}>Our team is available 24/7</p>
-                    <a href="mailto:support@fxtrusts.com" className={styles.contactEmail}>
-                        support@fxtrusts.com
+                    <a href="mailto:business@fxtrusts.com" className={styles.contactEmail}>
+                        business@fxtrusts.com
                     </a>
                 </div>
             </aside>
