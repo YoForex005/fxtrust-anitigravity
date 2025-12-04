@@ -14,7 +14,7 @@ export default function Footer() {
                 <div className={styles.grid}>
                     {/* Column 1: Brand */}
                     <div className={styles.brand}>
-                        <h3>FXTrusts</h3>
+                        <img src="/logo.png" alt="Logo" width={160} />
                         <p>
                             Building the platform we wish existed when we started. Less BS, more actual features.
                         </p>

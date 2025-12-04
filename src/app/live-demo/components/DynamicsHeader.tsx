@@ -55,13 +55,14 @@ export default function DynamicsHeader() {
     }, []);
 
     return (
-        <header className={styles.header}>
+        <header className={styles.header} >
             <div className={styles.headerLeft}>
                 <div className={styles.waffleMenu}>
                     <Grip className={styles.waffleIcon} size={20} color="white" />
                 </div>
                 <div className={styles.appName}>
-                    FX TRUST <span style={{ margin: '0 4px', color: '#a19f9d', fontWeight: 400 }}>|</span> <span className={styles.appBeta}>Beta</span>
+                    <img src="/logo.png" alt="FX Trust Logo" style={{ height: '40px', width: 'auto', objectFit: 'contain' }} />
+                    <span className={styles.appBeta}>Beta</span>
                     <ChevronDown size={14} color="white" style={{ marginLeft: '4px', cursor: 'pointer' }} />
                 </div>
             </div>

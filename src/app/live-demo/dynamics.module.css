@@ -2,14 +2,12 @@
 :root {
     /* Core Colors */
     --dynamics-header-bg: #000000;
-    /* Deep black/blue */
     --dynamics-header-text: #ffffff;
     --dynamics-sidebar-bg: #f3f2f1;
     --dynamics-sidebar-hover: #edebe9;
     --dynamics-sidebar-active: #ffffff;
     --dynamics-border: #d2d0ce;
     --dynamics-primary: #106ebe;
-    /* Microsoft Blue */
     --dynamics-text-primary: #201f1e;
     --dynamics-text-secondary: #605e5c;
 
@@ -54,18 +52,25 @@
 }
 
 .waffleMenu {
-    display: grid;
-    grid-template-columns: repeat(3, 3px);
-    gap: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     padding: 8px;
 }
 
+.waffleIcon {
+    opacity: 0.8;
+}
+
+.waffleIcon:hover {
+    opacity: 1;
+}
+
 .headerRight {
     display: flex;
-    align-items: flex-end;
-    gap: 1rem;
-
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .waffleDot {
@@ -76,206 +81,19 @@
 }
 
 .appName {
+    display: flex;
     font-weight: 600;
     font-size: 16px;
     align-items: center;
-    gap: 1rem;
+    gap: 0.5rem;
 }
 
-.headerIcon {
-    width: 32px;
-    height: 32px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    opacity: 0.8;
-    transition: opacity 0.2s;
-    position: relative;
-}
-
-.headerIcon:hover {
-    opacity: 1;
-    background: rgba(255, 255, 255, 0.1);
-}
-
-/* 2. Main Layout (Sidebar + Content) */
-.mainLayout {
-    display: flex;
-    flex: 1;
-    overflow: hidden;
-}
-
-/* Sidebar */
-.sidebar {
-    width: 260px;
-    background: var(--dynamics-sidebar-bg);
-    border-right: 1px solid var(--dynamics-border);
-    display: flex;
-    flex-direction: column;
-    overflow-y: auto;
-}
-
-.sidebarGroup {
-    padding: 12px 0;
-}
-
-.sidebarGroupTitle {
-    font-size: 14px;
-    font-weight: 600;
-    padding: 8px 16px;
-    color: var(--dynamics-text-primary);
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-}
-
-.sidebarItem {
-    padding: 8px 16px 8px 24px;
-    font-size: 14px;
-    color: var(--dynamics-text-primary);
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    border-left: 3px solid transparent;
-}
-
-.sidebarItem:hover {
-    background: var(--dynamics-sidebar-hover);
-}
-
-.sidebarItemActive {
-    background: var(--dynamics-sidebar-active);
-    border-left-color: var(--dynamics-primary);
-    font-weight: 600;
-}
-
-/* Main Content Area */
-.contentArea {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    background: white;
-    overflow: hidden;
-}
-
-/* Command Bar */
-.commandBar {
-    height: var(--command-bar-height);
-    border-bottom: 1px solid var(--dynamics-border);
-    display: flex;
-    align-items: center;
-    padding: 0 8px;
-    background: white;
-}
-
-.commandButton {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    padding: 6px 12px;
-    font-size: 14px;
-    color: var(--dynamics-text-primary);
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    border-radius: 2px;
-}
-
-.commandButton:hover {
-    background: var(--dynamics-sidebar-hover);
-}
-
-.commandSeparator {
-    width: 1px;
-    height: 20px;
-    background: var(--dynamics-border);
-    margin: 0 8px;
-}
-
-/* View Header (Breadcrumb/Title) */
-.viewHeader {
-    padding: 12px 24px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.viewTitle {
-    font-size: 20px;
-    font-weight: 600;
-    color: var(--dynamics-text-primary);
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    cursor: pointer;
-}
-
-/* Data Grid */
-.gridContainer {
-    flex: 1;
-    overflow: auto;
-    padding: 0 24px;
-}
-
-.gridTable {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 14px;
-}
-
-.gridHeader {
-    text-align: left;
-    padding: 8px;
-    border-bottom: 1px solid var(--dynamics-border);
-    color: var(--grid-header-text);
+.appBeta {
+    font-size: 11px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 2px 6px;
+    border-radius: 3px;
     font-weight: 400;
-    font-size: 12px;
-    cursor: pointer;
-}
-
-.gridHeader:hover {
-    background: var(--dynamics-sidebar-hover);
-}
-
-.gridRow {
-    border-bottom: 1px solid #edebe9;
-    cursor: pointer;
-}
-
-.gridRow:hover {
-    background: var(--grid-row-hover);
-}
-
-.gridCell {
-    padding: 10px 8px;
-    color: var(--dynamics-text-primary);
-}
-
-.gridLink {
-    color: var(--dynamics-primary);
-    text-decoration: none;
-}
-
-.gridLink:hover {
-    text-decoration: underline;
-}
-
-/* Footer */
-.footer {
-    border-top: 1px solid var(--dynamics-border);
-    padding: 8px 24px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: #f3f2f1;
-    font-size: 12px;
-}
-
-.alphabetFilter {
-    display: flex;
-    gap: 12px;
 }
 
 .headerIcon {
@@ -288,6 +106,7 @@
     opacity: 0.8;
     transition: opacity 0.2s;
     position: relative;
+    flex-shrink: 0;
 }
 
 .headerIcon:hover {

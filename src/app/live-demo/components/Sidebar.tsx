@@ -252,7 +252,7 @@ export default function Sidebar({ activeTab, onTabChange, onViewChange, onSwitch
         <div className={styles.sidebar}>
             <div className={styles.logo}>
                 <div className={styles.logoIconWrapper}>
-                    <Icons.Logo />
+                    <img src="/logo.png" alt="FxTrusts Logo" style={{ width: '24px', height: '24px', objectFit: 'contain' }} />
                 </div>
                 <span className={styles.logoText}>FXTRUSTS ADMIN</span>
             </div>

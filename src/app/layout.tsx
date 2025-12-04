@@ -12,6 +12,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "FXTrusts | Institutional Trading Infrastructure",
   description: "High-end B2B fintech trading platform for institutional clients. Experience the future of global liquidity.",
+  icons: {
+    icon: '/favicon.png',
+    shortcut: '/favicon.png',
+    apple: '/favicon.png',
+  },
 };
 
 export default function RootLayout({
