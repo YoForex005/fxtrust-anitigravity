@@ -52,8 +52,8 @@ export default function ClientSidebar({ activeTab, onTabChange, onViewChange, on
     return (
         <aside className={styles.sidebar} style={{ background: '#FFFFFF', borderRight: '1px solid #E5E7EB' }}>
             <div className={styles.logo} style={{ borderBottom: 'none', padding: '1.5rem 1.5rem 0.5rem' }}>
-                <div className={styles.logoIconWrapper} style={{ background: 'transparent', color: '#111827' }}>
-                    <Icons.Logo />
+                <div className={styles.logoIconWrapper} style={{ background: 'transparent' }}>
+                    <img src="/logo.png" alt="FxTrusts Logo" style={{ width: '24px', height: '24px', objectFit: 'contain' }} />
                 </div>
                 <span className={styles.logoText} style={{ color: '#111827', fontSize: '1.1rem' }}>FXTRUSTS</span>
             </div>

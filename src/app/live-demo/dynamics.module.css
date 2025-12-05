@@ -52,11 +52,25 @@
 }
 
 .waffleMenu {
-    display: grid;
-    grid-template-columns: repeat(3, 3px);
-    gap: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     cursor: pointer;
     padding: 8px;
+}
+
+.waffleIcon {
+    opacity: 0.8;
+}
+
+.waffleIcon:hover {
+    opacity: 1;
+}
+
+.headerRight {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .waffleDot {
@@ -67,22 +81,19 @@
 }
 
 .appName {
+    display: flex;
     font-weight: 600;
     font-size: 16px;
-    letter-spacing: 0.01em;
+    align-items: center;
+    gap: 0.5rem;
 }
 
 .appBeta {
-    font-size: 10px;
-    opacity: 0.7;
-    margin-left: 4px;
-    margin-top: 4px;
-}
-
-.headerRight {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
+    font-size: 11px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-weight: 400;
 }
 
 .headerIcon {
@@ -94,6 +105,8 @@
     cursor: pointer;
     opacity: 0.8;
     transition: opacity 0.2s;
+    position: relative;
+    flex-shrink: 0;
 }
 
 .headerIcon:hover {
@@ -308,4 +321,127 @@
     display: flex;
     align-items: center;
     gap: 16px;
+}
+
+/* Header Dropdowns */
+.dropdownMenu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: white;
+    border: 1px solid #edebe9;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    min-width: 240px;
+    padding: 4px 0;
+    color: #333;
+    text-align: left;
+}
+
+.dropdownItem {
+    padding: 8px 16px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dropdownItem:hover {
+    background: #f3f2f1;
+}
+
+.itemIcon {
+    width: 16px;
+    display: inline-block;
+    text-align: center;
+}
+
+/* Search Dropdown */
+.searchDropdown {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: white;
+    padding: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.searchInput {
+    border: 1px solid #0078d4;
+    padding: 4px 8px;
+    font-size: 14px;
+    outline: none;
+    width: 200px;
+}
+
+/* Drilldown Menu */
+.drilldownMenu {
+    width: 320px;
+    padding: 16px;
+}
+
+.dropdownHeader {
+    font-weight: 600;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.taskFlowCard {
+    background: #333;
+    color: white;
+    padding: 12px;
+    margin-bottom: 8px;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+.taskFlowCard:hover {
+    opacity: 0.9;
+}
+
+.taskFlowTitle {
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+.taskFlowDesc {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+/* Assistant Panel */
+.assistantPanel {
+    position: fixed;
+    top: var(--header-height);
+    right: 0;
+    bottom: 0;
+    width: 350px;
+    background: white;
+    box-shadow: -2px 0 8px rgba(0, 0, 0, 0.1);
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid #edebe9;
+}
+
+.assistantHeader {
+    padding: 12px 16px;
+    border-bottom: 1px solid #edebe9;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+    background: #f3f2f1;
+    color: #333;
+}
+
+.assistantContent {
+    flex: 1;
+    background: white;
 }

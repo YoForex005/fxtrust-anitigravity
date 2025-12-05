@@ -108,10 +108,8 @@ export default function Header() {
         <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
             <div className={styles.container}>
                 <Link href="/" className={styles.logo}>
-                    <svg className={styles.logoIcon} viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 2L2 7l10 5 10-5-10-5zm0 9l2.5-1.25L12 8.5l-2.5 1.25L12 11zm0 2.5l-5-2.5-5 2.5L12 22l10-8.5-5-2.5-5 2.5z" />
-                    </svg>
-                    <span>FxTRUSTS</span>
+                    <img src="/logo.png" alt="FxTrusts Logo" className={styles.logoIcon} style={{ width: '160px', height: 'auto', objectFit: 'contain', padding: '15px' }} />
+
                 </Link>
 
                 <nav className={styles.nav}>
