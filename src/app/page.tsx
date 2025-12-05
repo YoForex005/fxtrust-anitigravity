@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   title: "B2B Broker Solutions | Liquidity, CRM & White Label | FxTrusts",
   description: "FxTrusts is the premier B2B Broker technology provider. We offer a complete ecosystem: Liquidity, CRM, and MT5 White Label. Better technology than B2Broker, better pricing.",
   alternates: {
-    canonical: 'https://www.fxtrusts.com',
+    canonical: 'https://fxtrusts.com',
   },
 };
 
@@ -30,8 +30,8 @@ export default function Home() {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: 'FxTrusts',
-    url: 'https://www.fxtrusts.com',
-    logo: 'https://www.fxtrusts.com/fxtrusts_logo_v2.png',
+    url: 'https://fxtrusts.com',
+    logo: 'https://fxtrusts.com/fxtrusts_logo_v2.png',
     sameAs: [
       'https://twitter.com/fxtrusts',
       'https://www.linkedin.com/company/fxtrusts',

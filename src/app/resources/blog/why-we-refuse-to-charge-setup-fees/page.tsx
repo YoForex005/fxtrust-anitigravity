@@ -77,7 +77,7 @@ export default function ApologyPage() {
         <main className={styles.main}>
             <ArticleSchema
                 headline="OFFICIAL STATEMENT: Why FxTrusts Refuses to Charge You a $5,000 Setup Fee"
-                image="https://www.fxtrusts.com/fxtrusts_logo_v2.png"
+                image="https://fxtrusts.com/fxtrusts_logo_v2.png"
                 datePublished="2024-12-04"
                 description="A formal corporate apology for our suspiciously affordable CRM pricing."
                 authorName="FxTrusts"

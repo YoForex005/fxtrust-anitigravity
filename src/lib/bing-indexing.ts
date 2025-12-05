@@ -20,7 +20,7 @@ export async function submitUrlsToBing(urls: string[], apiKey: string | undefine
                 'Charset': 'utf-8',
             },
             body: JSON.stringify({
-                siteUrl: 'https://www.fxtrusts.com', // Ensure this matches your site URL in Bing Webmaster Tools
+                siteUrl: 'https://fxtrusts.com', // Ensure this matches your site URL in Bing Webmaster Tools
                 urlList: urls,
             }),
         });

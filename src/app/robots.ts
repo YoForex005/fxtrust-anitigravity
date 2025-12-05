@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
             allow: '/',
             disallow: ['/live-demo/admin', '/api/'],
         },
-        sitemap: 'https://www.fxtrusts.com/sitemap.xml',
+        sitemap: 'https://fxtrusts.com/sitemap.xml',
     };
 }

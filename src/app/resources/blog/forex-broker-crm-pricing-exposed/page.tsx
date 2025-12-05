@@ -34,7 +34,7 @@ export default function ForexBrokerCrmExposed() {
         <main className={styles.main}>
             <ArticleSchema
                 headline="Investigative Report: Why Your Forex Broker CRM Costs More Than a Small Island"
-                image="https://www.fxtrusts.com/blog/crm-pricing-exposed.jpg"
+                image="https://fxtrusts.com/blog/crm-pricing-exposed.jpg"
                 datePublished="2025-12-04"
                 description="An 'official' investigation into why competitors charge $5,000 setup fees while FxTrusts charges $0."
                 authorName="Chief Financial Investigator (Intern)"

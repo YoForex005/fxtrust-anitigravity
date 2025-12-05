@@ -33,7 +33,7 @@ export default function ArticleSchema({
             name: 'FxTrusts',
             logo: {
                 '@type': 'ImageObject',
-                url: 'https://www.fxtrusts.com/fxtrusts_logo_v2.png',
+                url: 'https://fxtrusts.com/fxtrusts_logo_v2.png',
             },
         },
         description: description,

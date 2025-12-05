@@ -16,10 +16,10 @@ export default function DynamicBreadcrumbs() {
             '@type': 'ListItem',
             position: 1,
             name: 'Home',
-            item: 'https://www.fxtrusts.com',
+            item: 'https://fxtrusts.com',
         },
         ...segments.map((segment, index) => {
-            const url = `https://www.fxtrusts.com/${segments.slice(0, index + 1).join('/')}`;
+            const url = `https://fxtrusts.com/${segments.slice(0, index + 1).join('/')}`;
             // Capitalize and format segment name (e.g., "forex-broker" -> "Forex Broker")
             const name = segment
                 .split('-')

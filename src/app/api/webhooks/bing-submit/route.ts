@@ -16,13 +16,13 @@ export async function GET(request: Request) {
     // TODO: Dynamically fetch URLs from your sitemap or database
     // For now, we'll submit the main pages
     const urlsToSubmit = [
-        'https://www.fxtrusts.com/',
-        'https://www.fxtrusts.com/solutions/mt5',
-        'https://www.fxtrusts.com/solutions/crypto-payments',
-        'https://www.fxtrusts.com/solutions/crm',
-        'https://www.fxtrusts.com/solutions/liquidity',
-        'https://www.fxtrusts.com/company/contact',
-        'https://www.fxtrusts.com/resources/blog',
+        'https://fxtrusts.com/',
+        'https://fxtrusts.com/solutions/mt5',
+        'https://fxtrusts.com/solutions/crypto-payments',
+        'https://fxtrusts.com/solutions/crm',
+        'https://fxtrusts.com/solutions/liquidity',
+        'https://fxtrusts.com/company/contact',
+        'https://fxtrusts.com/resources/blog',
     ];
 
     const result = await submitUrlsToBing(urlsToSubmit);

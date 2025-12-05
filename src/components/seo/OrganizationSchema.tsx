@@ -5,8 +5,8 @@ export default function OrganizationSchema() {
         '@context': 'https://schema.org',
         '@type': 'Organization',
         name: 'FxTrusts',
-        url: 'https://www.fxtrusts.com',
-        logo: 'https://www.fxtrusts.com/fxtrusts_logo_v2.png',
+        url: 'https://fxtrusts.com',
+        logo: 'https://fxtrusts.com/fxtrusts_logo_v2.png',
         sameAs: [
             'https://twitter.com/fxtrusts',
             'https://www.linkedin.com/company/fxtrusts',

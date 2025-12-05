@@ -291,17 +291,35 @@ export default function Header() {
                                 { code: 'zh-CN', label: '中文', flag: 'cn' },
                                 { code: 'ja', label: '日本語', flag: 'jp' },
                                 { code: 'ko', label: '한국어', flag: 'kr' },
-                                { code: 'ar', label: 'العربية', flag: 'ae' },
+                                { code: 'ar', label: 'العربية', flag: 'sa' },
                                 { code: 'hi', label: 'हिन्दी', flag: 'in' },
                                 { code: 'bn', label: 'বাংলা', flag: 'bd' },
+                                { code: 'mr', label: 'मराठी', flag: 'in' },
+                                { code: 'ta', label: 'தமிழ்', flag: 'in' },
+                                { code: 'te', label: 'తెలుగు', flag: 'in' },
+                                { code: 'gu', label: 'ગુજરાતી', flag: 'in' },
+                                { code: 'kn', label: 'ಕನ್ನಡ', flag: 'in' },
+                                { code: 'ml', label: 'മലയാളം', flag: 'in' },
+                                { code: 'pa', label: 'ਪੰਜਾਬੀ', flag: 'in' },
+                                { code: 'ur', label: 'اردو', flag: 'pk' },
                             ].map((lang) => (
                                 <button
                                     key={lang.code}
                                     className={styles.langOption}
                                     onClick={() => {
-                                        document.cookie = `googtrans=/en/${lang.code}; path=/; domain=${window.location.hostname}`;
-                                        document.cookie = `googtrans=/en/${lang.code}; path=/;`;
-                                        window.location.reload();
+                                        const langCode = lang.code;
+                                        // Set cookie for persistence
+                                        document.cookie = `googtrans=/en/${langCode}; path=/; domain=${window.location.hostname}`;
+                                        document.cookie = `googtrans=/en/${langCode}; path=/;`;
+                                        
+                                        // Trigger Google Translate dropdown
+                                        const select = document.querySelector('.goog-te-combo') as HTMLSelectElement;
+                                        if (select) {
+                                            select.value = langCode;
+                                            select.dispatchEvent(new Event('change'));
+                                        } else {
+                                            window.location.reload();
+                                        }
                                     }}
                                 >
                                     <img 

@@ -23,6 +23,15 @@ const LANGUAGES = {
     'ko': 'Korean',
     'ar': 'Arabic',
     'hi': 'Hindi',
+    'bn': 'Bengali',
+    'mr': 'Marathi',
+    'ta': 'Tamil',
+    'te': 'Telugu',
+    'gu': 'Gujarati',
+    'kn': 'Kannada',
+    'ml': 'Malayalam',
+    'pa': 'Punjabi',
+    'ur': 'Urdu',
     'tr': 'Turkish',
     'vi': 'Vietnamese',
     'th': 'Thai',
@@ -30,8 +39,7 @@ const LANGUAGES = {
     'ms': 'Malay',
     'pl': 'Polish',
     'nl': 'Dutch',
-    'sv': 'Swedish',
-    'bn': 'Bengali'
+    'sv': 'Swedish'
 };
 
 export default function GoogleTranslate() {
@@ -59,9 +67,13 @@ export default function GoogleTranslate() {
         };
 
         const hasLanguageCookie = getCookie('googtrans');
+        const hasAutoDetected = sessionStorage.getItem('fx_auto_translate_done');
 
-        // If no cookie, detect location and set language
-        if (!hasLanguageCookie) {
+        // If no cookie AND we haven't tried auto-detecting yet
+        if (!hasLanguageCookie && !hasAutoDetected) {
+            // Mark as done immediately to prevent loops
+            sessionStorage.setItem('fx_auto_translate_done', 'true');
+
             fetch('https://ipapi.co/json/')
                 .then(res => res.json())
                 .then(data => {
@@ -80,7 +92,8 @@ export default function GoogleTranslate() {
                         'JP': 'ja', // Japanese
                         'KR': 'ko', // Korean
                         'AE': 'ar', 'SA': 'ar', 'EG': 'ar', // Arabic
-                        'IN': 'hi', // Hindi
+                        'PK': 'ur', // Urdu
+                        // 'IN': 'en', // India defaults to English (explicitly or by omission)
                         'TR': 'tr', // Turkish
                         'VN': 'vi', // Vietnamese
                         'TH': 'th', // Thai
@@ -89,6 +102,7 @@ export default function GoogleTranslate() {
                         'PL': 'pl', // Polish
                         'NL': 'nl', // Dutch
                         'SE': 'sv', // Swedish
+                        'BD': 'bn', // Bengali
                     };
 
                     if (countryToLang[countryCode]) {
