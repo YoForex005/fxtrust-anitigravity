@@ -294,13 +294,6 @@ export default function Header() {
                                 { code: 'ar', label: 'العربية', flag: 'sa' },
                                 { code: 'hi', label: 'हिन्दी', flag: 'in' },
                                 { code: 'bn', label: 'বাংলা', flag: 'bd' },
-                                { code: 'mr', label: 'मराठी', flag: 'in' },
-                                { code: 'ta', label: 'தமிழ்', flag: 'in' },
-                                { code: 'te', label: 'తెలుగు', flag: 'in' },
-                                { code: 'gu', label: 'ગુજરાતી', flag: 'in' },
-                                { code: 'kn', label: 'ಕನ್ನಡ', flag: 'in' },
-                                { code: 'ml', label: 'മലയാളം', flag: 'in' },
-                                { code: 'pa', label: 'ਪੰਜਾਬੀ', flag: 'in' },
                                 { code: 'ur', label: 'اردو', flag: 'pk' },
                             ].map((lang) => (
                                 <button
