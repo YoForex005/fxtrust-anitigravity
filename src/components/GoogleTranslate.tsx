@@ -62,14 +62,14 @@ export default function GoogleTranslate() {
         const hasLanguageCookie = getCookie('googtrans');
         const hasAutoDetected = sessionStorage.getItem('fx_auto_translate_done');
 
-        // If no cookie AND we haven't tried auto-detecting yet
-        if (!hasLanguageCookie && !hasAutoDetected) {
-            // Mark as done immediately to prevent loops
-            sessionStorage.setItem('fx_auto_translate_done', 'true');
-
+        // If no cookie, detect location and set language
+        if (!hasLanguageCookie) {
+            console.log('FxTrust: No language cookie found. Starting auto-translation check...');
+            
             fetch('https://ipapi.co/json/')
                 .then(res => res.json())
                 .then(data => {
+                    console.log('FxTrust: IP Data received:', data);
                     const countryCode = data.country_code;
                     let langCode = 'en';
 
@@ -101,18 +101,24 @@ export default function GoogleTranslate() {
                     if (countryToLang[countryCode]) {
                         langCode = countryToLang[countryCode];
                     }
+                    
+                    console.log(`FxTrust: Detected Country: ${countryCode}, Mapped Language: ${langCode}`);
+
+                    // Set cookie to prevent re-detection on next load (valid for session)
+                    document.cookie = `googtrans=/en/${langCode}; path=/; domain=${window.location.hostname}`;
+                    document.cookie = `googtrans=/en/${langCode}; path=/;`;
 
                     if (langCode !== 'en') {
-                        // Set cookie for Google Translate
-                        // Format: /source_lang/target_lang
-                        document.cookie = `googtrans=/en/${langCode}; path=/; domain=${window.location.hostname}`;
-                        document.cookie = `googtrans=/en/${langCode}; path=/;`;
-                        
+                        console.log(`FxTrust: Switching language to ${langCode}...`);
                         // Reload to apply translation
                         window.location.reload();
+                    } else {
+                        console.log('FxTrust: Language is English. Cookie set, no reload needed.');
                     }
                 })
-                .catch(err => console.error('Error detecting location:', err));
+                .catch(err => console.error('FxTrust: Error detecting location:', err));
+        } else {
+            console.log('FxTrust: Language cookie exists. Skipping auto-translation.');
         }
     }, []);
 
