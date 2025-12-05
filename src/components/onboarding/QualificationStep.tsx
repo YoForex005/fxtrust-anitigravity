@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
+import styles from './Onboarding.module.css';
 
 interface QualificationData {
     businessModel: string;
@@ -13,10 +14,10 @@ interface QualificationStepProps {
     data: QualificationData;
     updateData: (key: keyof QualificationData, value: string) => void;
     onNext: () => void;
+    step: number; // Add step prop
 }
 
-export default function QualificationStep({ data, updateData, onNext }: QualificationStepProps) {
-    const [currentQIndex, setCurrentQIndex] = useState(0);
+export default function QualificationStep({ data, updateData, onNext, step }: QualificationStepProps) {
     const [animatingOut, setAnimatingOut] = useState(false);
 
     const questions = [
@@ -62,6 +63,8 @@ export default function QualificationStep({ data, updateData, onNext }: Qualific
         }
     ];
 
+    // Determine current question based on step (1-indexed)
+    const currentQIndex = step - 1;
     const currentQuestion = questions[currentQIndex];
 
     const handleSelect = (value: string) => {
@@ -71,12 +74,8 @@ export default function QualificationStep({ data, updateData, onNext }: Qualific
         setTimeout(() => {
             setAnimatingOut(true);
             setTimeout(() => {
-                if (currentQIndex < questions.length - 1) {
-                    setCurrentQIndex(prev => prev + 1);
-                    setAnimatingOut(false);
-                } else {
-                    onNext();
-                }
+                onNext();
+                setAnimatingOut(false);
             }, 300);
         }, 300);
     };
@@ -93,93 +92,47 @@ export default function QualificationStep({ data, updateData, onNext }: Qualific
 
         window.addEventListener('keydown', handleKeyPress);
         return () => window.removeEventListener('keydown', handleKeyPress);
-    }, [currentQIndex, currentQuestion]);
+    }, [currentQuestion]);
+
+    if (!currentQuestion) return null;
 
     return (
-        <div style={{
-            opacity: animatingOut ? 0 : 1,
-            transform: animatingOut ? 'translateY(-10px)' : 'translateY(0)',
-            transition: 'all 0.3s ease-out',
-            padding: '1rem 0' // Added vertical padding
-        }}>
-            <div style={{ marginBottom: '2.5rem', display: 'flex', alignItems: 'center', gap: '0.5rem', color: '#6B7280', fontSize: '0.9rem', fontWeight: '500' }}>
-                <span>{currentQIndex + 1}</span>
+        <div 
+            className={styles.stepWrapper}
+            style={{
+                opacity: animatingOut ? 0 : 1,
+                transform: animatingOut ? 'translateY(-10px)' : 'translateY(0)',
+                transition: 'all 0.3s ease-out',
+            }}
+        >
+            <div className={styles.stepIndicator}>
+                <span>{step}</span>
                 <span>/</span>
-                <span>{questions.length}</span>
+                <span>{questions.length + 2}</span> {/* Total steps including Contact & Booking */}
             </div>
 
-            <h2 style={{
-                fontSize: '2rem', // Increased font size
-                fontWeight: '600',
-                marginBottom: '3rem', // Increased margin
-                color: '#111827',
-                lineHeight: '1.3',
-                animation: 'fadeInUp 0.5s ease-out'
-            }}>
+            <h2 className={styles.stepTitle}>
                 {currentQuestion.label}
             </h2>
 
-            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}> {/* Increased gap */}
+            <div className={styles.optionsGrid}>
                 {currentQuestion.options.map((opt, index) => {
                     const isSelected = data[currentQuestion.key as keyof QualificationData] === opt.value;
                     return (
                         <button
                             key={opt.value}
                             onClick={() => handleSelect(opt.value)}
+                            className={`${styles.optionButton} ${isSelected ? styles.selected : ''}`}
                             style={{
-                                display: 'flex',
-                                alignItems: 'center',
-                                gap: '1.25rem', // Increased gap
-                                padding: '1rem 1.25rem', // Increased padding
-                                background: isSelected ? '#EFF6FF' : '#F9FAFB',
-                                border: isSelected ? '1px solid #2563EB' : '1px solid transparent',
-                                borderRadius: '6px', // Slightly larger radius
-                                cursor: 'pointer',
-                                textAlign: 'left',
-                                transition: 'all 0.2s cubic-bezier(0.4, 0, 0.2, 1)',
-                                width: '100%',
-                                maxWidth: '600px', // Increased max-width
                                 animation: `fadeInUp 0.5s ease-out forwards`,
                                 animationDelay: `${index * 100}ms`,
-                                opacity: 0,
-                                transform: isSelected ? 'scale(1.02)' : 'scale(1)'
-                            }}
-                            onMouseEnter={(e) => {
-                                e.currentTarget.style.background = '#EFF6FF';
-                                e.currentTarget.style.borderColor = '#BFDBFE';
-                                e.currentTarget.style.transform = 'scale(1.02) translateX(5px)';
-                                e.currentTarget.style.boxShadow = '0 4px 12px rgba(0,0,0,0.05)';
-                            }}
-                            onMouseLeave={(e) => {
-                                if (!isSelected) {
-                                    e.currentTarget.style.background = '#F9FAFB';
-                                    e.currentTarget.style.borderColor = 'transparent';
-                                    e.currentTarget.style.transform = 'scale(1) translateX(0)';
-                                    e.currentTarget.style.boxShadow = 'none';
-                                }
+                                opacity: 0
                             }}
                         >
-                            <span style={{
-                                display: 'flex',
-                                alignItems: 'center',
-                                justifyContent: 'center',
-                                width: '28px', // Larger key box
-                                height: '28px',
-                                background: isSelected ? '#2563EB' : '#FFFFFF',
-                                color: isSelected ? '#FFFFFF' : '#374151',
-                                border: isSelected ? 'none' : '1px solid #D1D5DB',
-                                borderRadius: '4px',
-                                fontSize: '0.9rem',
-                                fontWeight: '600',
-                                transition: 'all 0.2s'
-                            }}>
+                            <span className={styles.keyBox}>
                                 {opt.key}
                             </span>
-                            <span style={{
-                                fontSize: '1.1rem', // Larger text
-                                color: isSelected ? '#1E3A8A' : '#374151',
-                                fontWeight: isSelected ? '500' : '400'
-                            }}>
+                            <span className={styles.optionLabel}>
                                 {opt.label}
                             </span>
                             {isSelected && (
@@ -191,28 +144,8 @@ export default function QualificationStep({ data, updateData, onNext }: Qualific
                     );
                 })}
             </div>
-
-            <div style={{ marginTop: '3.5rem', display: 'flex', gap: '1rem' }}> {/* Increased margin */}
-                {currentQIndex > 0 && (
-                    <button
-                        onClick={() => setCurrentQIndex(prev => prev - 1)}
-                        style={{
-                            background: '#F3F4F6',
-                            color: '#374151',
-                            border: 'none',
-                            padding: '0.75rem 1.5rem',
-                            borderRadius: '4px',
-                            fontWeight: '600',
-                            cursor: 'pointer',
-                            transition: 'background 0.2s'
-                        }}
-                        onMouseEnter={(e) => e.currentTarget.style.background = '#E5E7EB'}
-                        onMouseLeave={(e) => e.currentTarget.style.background = '#F3F4F6'}
-                    >
-                        Previous
-                    </button>
-                )}
-            </div>
+            
+            {/* Removed Previous button here as it's handled by parent or not needed for single question flow */}
         </div>
     );
 }

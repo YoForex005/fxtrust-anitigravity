@@ -2,6 +2,10 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
+import DynamicBreadcrumbs from "../components/seo/DynamicBreadcrumbs";
+import OrganizationSchema from "../components/seo/OrganizationSchema";
+
+import GoogleTranslate from "../components/GoogleTranslate";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -42,6 +46,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <OrganizationSchema />
+        <GoogleTranslate />
         {children}
       </body>
     </html>

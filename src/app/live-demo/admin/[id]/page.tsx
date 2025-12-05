@@ -10,8 +10,19 @@ import DynamicsHeader from '../../components/DynamicsHeader';
 export default function AccountDetailPage() {
     const router = useRouter();
     const params = useParams();
-    const accountId = Array.isArray(params.id) ? params.id[0] : params.id;
+    const accountId = Array.isArray(params?.id) ? params.id[0] : params?.id;
     
+    if (!accountId) {
+        return (
+            <div className={styles.container}>
+                <div style={{ padding: '20px' }}>
+                    <h2>Invalid Account ID</h2>
+                    <button onClick={() => router.back()}>Go Back</button>
+                </div>
+            </div>
+        );
+    }
+
     const account = (accountsData as any[])[parseInt(accountId)];
 
     if (!account) {

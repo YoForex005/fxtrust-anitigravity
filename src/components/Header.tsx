@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 import styles from './Header.module.css';
 
 // ========== DYNAMIC NAV LABEL VARIATIONS (10 each) ==========
@@ -82,6 +83,7 @@ function getRandomLabels() {
 export default function Header() {
     const [scrolled, setScrolled] = useState(false);
     const [labels, setLabels] = useState<ReturnType<typeof getRandomLabels> | null>(null);
+    const pathname = usePathname();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -104,11 +106,18 @@ export default function Header() {
         company: 'Company',
     };
 
+    const isTransparentHome = pathname === '/' && !scrolled;
+
     return (
-        <header className={`${styles.header} ${scrolled ? styles.scrolled : ''}`}>
+        <header className={`${styles.header} ${scrolled ? styles.scrolled : ''} ${isTransparentHome ? styles.transparentHome : ''}`}>
             <div className={styles.container}>
                 <Link href="/" className={styles.logo}>
-                    <img src="/logo.png" alt="FxTrusts Logo" className={styles.logoIcon} style={{ width: '160px', height: 'auto', objectFit: 'contain', padding: '15px' }} />
+                    <img 
+                        src={isTransparentHome ? "/fxtrustwhite.png" : "/logo.png"} 
+                        alt="FxTrusts Logo" 
+                        className={styles.logoIcon} 
+                        style={{ width: '100px', height: 'auto', objectFit: 'contain', padding: '15px' }} 
+                    />
 
                 </Link>
 
@@ -254,12 +263,64 @@ export default function Header() {
                 </nav>
 
                 <div className={styles.actions}>
+                    <div className={styles.langWrapper}>
+                        <button 
+                            className={styles.langBtn}
+                            onClick={() => {
+                                const dropdown = document.getElementById('langDropdown');
+                                if (dropdown) {
+                                    dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+                                }
+                            }}
+                        >
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <line x1="2" y1="12" x2="22" y2="12"></line>
+                                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                            </svg>
+                        </button>
+                        <div id="langDropdown" className={`${styles.langDropdown} notranslate`}>
+                            {[
+                                { code: 'en', label: 'English', flag: 'us' },
+                                { code: 'es', label: 'Español', flag: 'es' },
+                                { code: 'fr', label: 'Français', flag: 'fr' },
+                                { code: 'de', label: 'Deutsch', flag: 'de' },
+                                { code: 'it', label: 'Italiano', flag: 'it' },
+                                { code: 'pt', label: 'Português', flag: 'pt' },
+                                { code: 'ru', label: 'Русский', flag: 'ru' },
+                                { code: 'zh-CN', label: '中文', flag: 'cn' },
+                                { code: 'ja', label: '日本語', flag: 'jp' },
+                                { code: 'ko', label: '한국어', flag: 'kr' },
+                                { code: 'ar', label: 'العربية', flag: 'ae' },
+                                { code: 'hi', label: 'हिन्दी', flag: 'in' },
+                                { code: 'bn', label: 'বাংলা', flag: 'bd' },
+                            ].map((lang) => (
+                                <button
+                                    key={lang.code}
+                                    className={styles.langOption}
+                                    onClick={() => {
+                                        document.cookie = `googtrans=/en/${lang.code}; path=/; domain=${window.location.hostname}`;
+                                        document.cookie = `googtrans=/en/${lang.code}; path=/;`;
+                                        window.location.reload();
+                                    }}
+                                >
+                                    <img 
+                                        src={`https://flagcdn.com/24x18/${lang.flag}.png`} 
+                                        alt={lang.label} 
+                                        style={{ marginRight: '10px', width: '20px', height: '15px', objectFit: 'cover', borderRadius: '2px' }} 
+                                    />
+                                    {lang.label}
+                                </button>
+                            ))}
+                        </div>
+                    </div>
+
                     <button className={styles.mobileMenuBtn}>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                             <path d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
                     </button>
-                    <Link href="https://calendar.app.google/ZqiL1RdizHSc1ydy6" target='blank' className={styles.ctaButton}>
+                    <Link href="/get-started" className={styles.ctaButton}>
                         Get Started
                     </Link>
                 </div>

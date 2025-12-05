@@ -4,9 +4,13 @@ import React, { useState } from 'react';
 import QualificationStep from './QualificationStep';
 import ContactStep from './ContactStep';
 import BookingStep from './BookingStep';
+import styles from './Onboarding.module.css';
+
+import SuccessStep from './SuccessStep';
 
 export default function OnboardingWizard() {
     const [step, setStep] = useState(1);
+    const [isCompleted, setIsCompleted] = useState(false);
     const [qualificationData, setQualificationData] = useState({
         businessModel: '',
         status: '',
@@ -32,46 +36,38 @@ export default function OnboardingWizard() {
 
     const nextStep = () => setStep(prev => prev + 1);
     const prevStep = () => setStep(prev => prev - 1);
+    
+    const handleComplete = () => {
+        setIsCompleted(true);
+    };
+
+    if (isCompleted) {
+        return (
+            <div className={styles.wizardContainer}>
+                <div className={styles.stepContent}>
+                    <SuccessStep />
+                </div>
+            </div>
+        );
+    }
 
     return (
-        <div style={{
-            width: '100%',
-            maxWidth: '800px', // Increased from 600px
-            background: '#FFFFFF',
-            borderRadius: '16px',
-            padding: '3rem', // Increased from 2rem
-            boxShadow: '0 20px 40px -10px rgba(0, 0, 0, 0.05)', // Softer shadow
-            position: 'relative',
-            minHeight: '500px',
-            display: 'flex',
-            flexDirection: 'column'
-        }}>
+        <div className={styles.wizardContainer}>
             {/* Progress Bar */}
-            <div style={{
-                position: 'absolute',
-                top: 0,
-                left: 0,
-                width: '100%',
-                height: '4px',
-                background: '#F3F4F6',
-                borderTopLeftRadius: '16px',
-                borderTopRightRadius: '16px',
-                overflow: 'hidden'
-            }}>
-                <div style={{
-                    height: '100%',
-                    background: '#2563EB',
-                    width: `${(step / 6) * 100}%`,
-                    transition: 'width 0.5s ease-in-out'
-                }} />
+            <div className={styles.progressBarContainer}>
+                <div 
+                    className={styles.progressBarFill}
+                    style={{ width: `${(step / 6) * 100}%` }} 
+                />
             </div>
 
-            <div style={{ flex: 1, display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+            <div className={styles.stepContent}>
                 {step <= 4 && (
                     <QualificationStep
                         data={qualificationData}
                         updateData={updateQualification}
                         onNext={nextStep}
+                        step={step}
                     />
                 )}
                 {step === 5 && (
@@ -85,7 +81,8 @@ export default function OnboardingWizard() {
                 {step === 6 && (
                     <BookingStep
                         onBack={prevStep}
-                        onComplete={() => alert("Booking Confirmed! (Mock)")}
+                        onComplete={handleComplete}
+                        contactData={contactData}
                     />
                 )}
             </div>

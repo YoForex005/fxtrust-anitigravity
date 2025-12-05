@@ -26,7 +26,10 @@ export default function GetStartedPage() {
                 flexDirection: 'column',
                 alignItems: 'center',
                 justifyContent: 'center',
-                padding: '2rem'
+                paddingTop: '120px',
+                paddingBottom: '80px',
+                paddingLeft: '2rem',
+                paddingRight: '2rem'
             }}>
                 <OnboardingWizard />
             </div>

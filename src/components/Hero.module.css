@@ -84,13 +84,13 @@
 
 .headline {
     font-family: var(--font-inter);
-    font-size: 6.8rem;
+    font-size: 4.5rem;
     line-height: 1.05;
     font-weight: 600;
     color: white;
     margin-bottom: 1.5rem;
     letter-spacing: -0.025em;
-    max-width: 900px;
+    max-width: 1100px;
     animation: fadeInUp 0.8s ease-out;
     text-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
