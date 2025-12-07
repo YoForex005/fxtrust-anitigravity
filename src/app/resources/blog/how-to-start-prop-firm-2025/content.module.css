@@ -1,0 +1,425 @@
+/* Blog Article Content Styles - How to Start Forex Brokerage */
+
+.main {
+    background: linear-gradient(180deg, #F8FAFC 0%, #F1F5F9 100%);
+    min-height: 100vh;
+}
+
+/* Article Container */
+.article {
+    background: white;
+    border-radius: 24px;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    box-shadow:
+        0 1px 3px rgba(0, 0, 0, 0.02),
+        0 12px 32px -4px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+}
+
+/* Article Header */
+.articleHeader {
+    padding: 2.5rem 2.5rem 2rem;
+    border-bottom: 1px solid #F1F5F9;
+    background: linear-gradient(180deg, #FAFBFC 0%, white 100%);
+}
+
+.breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    color: #94A3B8;
+    margin-bottom: 1.25rem;
+}
+
+.breadcrumb a {
+    color: #64748B;
+    text-decoration: none;
+    transition: color 0.15s ease;
+}
+
+.breadcrumb a:hover {
+    color: #4353F2;
+}
+
+.articleMeta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.25rem;
+    flex-wrap: wrap;
+}
+
+.categoryBadge {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #4353F2;
+    background: linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 100%);
+    padding: 0.4rem 0.85rem;
+    border-radius: 8px;
+}
+
+.metaDivider {
+    color: #CBD5E1;
+    font-size: 0.6rem;
+}
+
+.metaInfo {
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    color: #94A3B8;
+}
+
+.articleTitle {
+    font-family: var(--font-sans);
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #0F172A;
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+    margin-bottom: 1rem;
+}
+
+.articleLead {
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    color: #64748B;
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Article Body */
+.articleBody {
+    padding: 2.5rem;
+    font-family: var(--font-sans);
+    font-size: 1.05rem;
+    color: #334155;
+    line-height: 1.85;
+}
+
+.articleBody p {
+    margin-bottom: 1.5rem;
+}
+
+.articleBody strong {
+    color: #0F172A;
+    font-weight: 600;
+}
+
+.articleBody h2 {
+    font-family: var(--font-sans);
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #0F172A;
+    margin: 3rem 0 1.25rem;
+    padding-top: 2rem;
+    border-top: 1px solid #E2E8F0;
+    scroll-margin-top: 100px;
+    letter-spacing: -0.01em;
+}
+
+.articleBody h2:first-of-type {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: none;
+}
+
+.articleBody h3 {
+    font-family: var(--font-sans);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #1E293B;
+    margin: 2rem 0 1rem;
+}
+
+.articleBody h4 {
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #334155;
+    margin: 1.5rem 0 0.75rem;
+}
+
+.articleBody ul,
+.articleBody ol {
+    margin: 0 0 1.5rem 0;
+    padding: 0 0 0 1.5rem;
+}
+
+.articleBody ul li,
+.articleBody ol li {
+    margin-bottom: 0.75rem;
+    padding-left: 0.25rem;
+}
+
+/* Warning Box */
+.warningBox {
+    background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%);
+    border-left: 4px solid #F59E0B;
+    border-radius: 0 16px 16px 0;
+    padding: 1.5rem 2rem;
+    margin: 2rem 0;
+}
+
+.warningTitle {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 700;
+    color: #92400E;
+    margin: 0 0 0.75rem;
+}
+
+.warningBox p {
+    margin: 0 !important;
+    color: #78350F;
+    font-size: 0.95rem;
+}
+
+/* Callout Box */
+.callout {
+    background: linear-gradient(135deg, #ECFDF5 0%, #D1FAE5 100%);
+    border-left: 4px solid #10B981;
+    border-radius: 0 16px 16px 0;
+    padding: 1.5rem 2rem;
+    margin: 2rem 0;
+}
+
+.calloutTitle {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 700;
+    color: #065F46;
+    margin: 0 0 0.5rem;
+}
+
+.calloutText {
+    margin: 0 !important;
+    color: #047857;
+    font-size: 0.95rem;
+}
+
+/* Stats Grid */
+.statsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1.25rem;
+    margin: 2rem 0;
+}
+
+.statBox {
+    background: linear-gradient(135deg, #F8FAFC 0%, #F1F5F9 100%);
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+    padding: 1.5rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.statBox strong {
+    font-family: var(--font-sans);
+    font-size: 2rem;
+    font-weight: 800;
+    color: #4353F2;
+    letter-spacing: -0.02em;
+}
+
+.statBox span {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    color: #64748B;
+}
+
+/* Comparison Table */
+.tableWrapper {
+    overflow-x: auto;
+    margin: 2.5rem 0;
+    border-radius: 16px;
+    border: 1px solid #E2E8F0;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.comparisonTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.comparisonTable thead {
+    background: linear-gradient(135deg, #0F172A 0%, #1E293B 100%);
+}
+
+.comparisonTable th {
+    font-family: var(--font-sans);
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: white;
+    text-align: left;
+    padding: 1.25rem 1.5rem;
+}
+
+.comparisonTable tbody tr {
+    border-bottom: 1px solid #F1F5F9;
+    background: white;
+    transition: background 0.15s ease;
+}
+
+.comparisonTable tbody tr:hover {
+    background: #FAFBFC;
+}
+
+.comparisonTable tbody tr:last-child {
+    border-bottom: none;
+}
+
+.comparisonTable td {
+    font-family: var(--font-sans);
+    font-size: 0.95rem;
+    color: #334155;
+    padding: 1.25rem 1.5rem;
+}
+
+.highlightRow {
+    background: linear-gradient(135deg, #EEF2FF 0%, #E0E7FF 100%) !important;
+}
+
+.highlightRow td {
+    color: #4353F2 !important;
+    font-weight: 600;
+}
+
+/* FAQ Grid */
+.faqGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.faqItem {
+    background: linear-gradient(135deg, #F8FAFC 0%, #F1F5F9 100%);
+    border: 1px solid #E2E8F0;
+    border-radius: 16px;
+    padding: 1.5rem;
+}
+
+.faqItem h4 {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 600;
+    color: #0F172A;
+    margin: 0 0 0.75rem;
+    line-height: 1.4;
+}
+
+.faqItem p {
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    color: #64748B;
+    margin: 0 !important;
+    line-height: 1.6;
+}
+
+/* Inline CTA */
+.inlineCta {
+    background: linear-gradient(135deg, #1E1B4B 0%, #312E81 100%);
+    border-radius: 20px;
+    padding: 2rem 2.5rem;
+    margin: 3rem 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.inlineCta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+}
+
+.inlineCtaContent h3 {
+    font-family: var(--font-sans);
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: white;
+    margin: 0 0 0.35rem;
+}
+
+.inlineCtaContent p {
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    color: #A5B4FC;
+    margin: 0 !important;
+}
+
+.inlineCtaBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: white;
+    color: #4353F2;
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 1rem 1.75rem;
+    border-radius: 12px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.inlineCtaBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(67, 83, 242, 0.25);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .articleHeader {
+        padding: 1.5rem;
+    }
+
+    .articleTitle {
+        font-size: 1.5rem;
+    }
+
+    .articleBody {
+        padding: 1.5rem;
+    }
+
+    .articleBody h2 {
+        font-size: 1.35rem;
+    }
+
+    .articleBody h3 {
+        font-size: 1.15rem;
+    }
+
+    .statsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .faqGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .inlineCta {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    .inlineCtaContent h3 {
+        font-size: 1.25rem;
+    }
+}

@@ -1,4 +1,20 @@
+import { Metadata } from 'next';
 import PageHeader from '../../../components/PageHeader';
+
+export const metadata: Metadata = {
+    title: 'About FxTrusts | Our Story & Mission',
+    description: 'FxTrusts is a team of fintech veterans, quantitative developers, and infrastructure engineers. We democratize access to institutional-grade trading infrastructure.',
+    keywords: ['about fxtrusts', 'forex technology company', 'fintech team', 'trading infrastructure', 'B2B broker technology'],
+    openGraph: {
+        title: 'About FxTrusts | B2B Broker Technology',
+        description: 'Meet the team democratizing institutional-grade trading infrastructure for brokerages worldwide.',
+        type: 'website',
+        url: 'https://fxtrusts.com/company/about',
+    },
+    alternates: {
+        canonical: 'https://fxtrusts.com/company/about',
+    },
+};
 
 export default function AboutPage() {
     return (

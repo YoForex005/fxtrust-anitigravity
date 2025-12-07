@@ -1,6 +1,22 @@
+import { Metadata } from 'next';
 import InnerPageHeader from '@/components/InnerPageHeader';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+
+export const metadata: Metadata = {
+    title: 'Contact Us | Sales & Support | FxTrusts',
+    description: 'Get in touch with FxTrusts for sales inquiries, technical support, or partnership opportunities. We actually reply - email, Telegram, or phone.',
+    keywords: ['contact fxtrusts', 'forex broker support', 'B2B support', 'sales inquiry', 'technical support'],
+    openGraph: {
+        title: 'Contact FxTrusts | We Actually Reply',
+        description: 'Sales, support, and partnership inquiries. Real engineers, not chatbots.',
+        type: 'website',
+        url: 'https://fxtrusts.com/company/contact',
+    },
+    alternates: {
+        canonical: 'https://fxtrusts.com/company/contact',
+    },
+};
 
 export default function ContactPage() {
     return (

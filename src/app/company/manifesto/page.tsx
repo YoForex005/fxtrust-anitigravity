@@ -1,6 +1,22 @@
+import { Metadata } from 'next';
 import InnerPageHeader from '@/components/InnerPageHeader';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+
+export const metadata: Metadata = {
+    title: 'Our Manifesto | Why We Built FxTrusts',
+    description: 'We were brokers. We hated our tech providers. So we built the tech provider we wished we had. The FxTrusts origin story and philosophy.',
+    keywords: ['fxtrusts manifesto', 'forex technology philosophy', 'broker technology story', 'fintech startup'],
+    openGraph: {
+        title: 'Our Manifesto | The FxTrusts Origin Story',
+        description: 'We were brokers. We hated our tech providers. So we built better technology.',
+        type: 'website',
+        url: 'https://fxtrusts.com/company/manifesto',
+    },
+    alternates: {
+        canonical: 'https://fxtrusts.com/company/manifesto',
+    },
+};
 
 export default function ManifestoPage() {
     return (

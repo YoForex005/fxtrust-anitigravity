@@ -5,7 +5,16 @@ import PageHeader from '@/components/PageHeader';
 export const metadata: Metadata = {
     title: 'Stock Trading | 3000+ Global Equities | FxTrusts',
     description: 'Trade shares from NYSE, NASDAQ, LSE, and major global exchanges. Access Apple, Tesla, Amazon, and 3000+ stocks with competitive pricing.',
-    keywords: ['stock trading', 'equity trading', 'US stocks', 'share trading', 'stock CFDs'],
+    keywords: ['stock trading', 'equity trading', 'US stocks', 'share trading', 'stock CFDs', 'AAPL', 'TSLA', 'AMZN'],
+    openGraph: {
+        title: 'Stock Trading | 3000+ Global Equities',
+        description: 'Trade Apple, Tesla, Amazon and 3000+ stocks from NYSE, NASDAQ, LSE and more.',
+        type: 'website',
+        url: 'https://fxtrusts.com/markets/stocks',
+    },
+    alternates: {
+        canonical: 'https://fxtrusts.com/markets/stocks',
+    },
 };
 
 export default function StocksPage() {

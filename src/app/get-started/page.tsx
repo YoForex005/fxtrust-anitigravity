@@ -1,10 +1,21 @@
+import { Metadata } from 'next';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import OnboardingWizard from '@/components/onboarding/OnboardingWizard';
 
-export const metadata = {
-    title: 'Get Started | FxTrusts',
-    description: 'Start your brokerage journey with FxTrusts.',
+export const metadata: Metadata = {
+    title: 'Get Started | Launch Your Brokerage | FxTrusts',
+    description: 'Start your forex brokerage journey with FxTrusts. Complete our onboarding wizard to get your MT5 white label, CRM, and liquidity setup.',
+    keywords: ['get started', 'start forex broker', 'brokerage onboarding', 'forex broker setup', 'launch brokerage'],
+    openGraph: {
+        title: 'Get Started | Launch Your Brokerage',
+        description: 'Begin your brokerage journey with FxTrusts. Complete setup in weeks.',
+        type: 'website',
+        url: 'https://fxtrusts.com/get-started',
+    },
+    alternates: {
+        canonical: 'https://fxtrusts.com/get-started',
+    },
 };
 
 export default function GetStartedPage() {

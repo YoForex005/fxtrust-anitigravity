@@ -12,17 +12,83 @@ export const metadata: Metadata = {
 
 export default function BlogIndex() {
     const featuredArticle = {
-        title: "Investigative Report: Why Your Forex Broker CRM Costs More Than a Small Island",
-        description: "An 'official' investigation into why competitors charge $5,000 setup fees while FxTrusts charges $0. Warning: Contains satire and shocking financial common sense.",
-        href: "/resources/blog/forex-broker-crm-pricing-exposed",
-        category: "Market Analysis (Satire)",
-        readTime: "5 min read",
+        title: "How to Start a Forex Brokerage in 2025: The Brutally Honest Guide",
+        description: "The complete guide to launching a forex brokerage. Covers licensing, technology, liquidity, capital requirements, and all the things other guides conveniently forget to mention.",
+        href: "/resources/blog/how-to-start-forex-brokerage-2025",
+        category: "Business Guide (Brutally Honest)",
+        readTime: "25 min read",
         date: "December 2024",
-        lastUpdated: "December 4, 2024",
-        author: "Chief Financial Investigator (Intern)"
+        lastUpdated: "December 7, 2024",
+        author: "Chief Reality Officer"
     };
 
     const articles = [
+        {
+            title: "How to Start a Forex Brokerage in 2025: The Brutally Honest Guide",
+            description: "The complete guide to launching a forex brokerage. Covers licensing, technology, liquidity, capital requirements, and all the things other guides conveniently forget to mention.",
+            href: "/resources/blog/how-to-start-forex-brokerage-2025",
+            category: "Business Guide",
+            readTime: "25 min read",
+            date: "December 2024",
+            lastUpdated: "December 7, 2024",
+            topics: ["Brokerage Startup", "Licensing", "Capital Requirements"],
+            stats: { views: "2,450", citations: "18" }
+        },
+        {
+            title: "The Complete MT5 White Label Guide 2025: Everything They Don't Tell You",
+            description: "The real MT5 white label guide. Covers costs, setup, MetaQuotes fees, hidden charges, and why the $5,000 quotes are always $15,000 by launch day.",
+            href: "/resources/blog/mt5-white-label-complete-guide",
+            category: "Technical Guide",
+            readTime: "22 min read",
+            date: "December 2024",
+            lastUpdated: "December 7, 2024",
+            topics: ["MT5 White Label", "MetaQuotes", "Hidden Costs"],
+            stats: { views: "3,180", citations: "24" }
+        },
+        {
+            title: "Forex CRM Pricing Decoded: An Unofficial Industry Report",
+            description: "We analyzed 15 providers, documented their hidden fees, and created the pricing guide nobody else will publish. Real costs exposed.",
+            href: "/resources/blog/forex-crm-pricing-decoded",
+            category: "Industry Report",
+            readTime: "23 min read",
+            date: "December 2024",
+            lastUpdated: "December 7, 2024",
+            topics: ["Forex CRM", "Pricing", "Provider Comparison"],
+            stats: { views: "4,520", citations: "31" }
+        },
+        {
+            title: "How to Start a Prop Trading Firm in 2025: The Complete Tech Stack Guide",
+            description: "Everything you need to launch a prop firm. Covers technology, challenge rules, breach detection, payout systems, and why 90% of traders will pay you to watch them lose money.",
+            href: "/resources/blog/how-to-start-prop-firm-2025",
+            category: "Business Guide",
+            readTime: "24 min read",
+            date: "December 2024",
+            lastUpdated: "December 7, 2024",
+            topics: ["Prop Firm", "Challenge Design", "Breach Detection"],
+            stats: { views: "5,280", citations: "42" }
+        },
+        {
+            title: "A-Book vs B-Book: The Broker Execution Models Nobody Talks About Honestly",
+            description: "The real guide to forex broker execution models. A-Book, B-Book, hybrid—what they mean, why nobody admits to B-booking, and which model actually makes money.",
+            href: "/resources/blog/a-book-vs-b-book-explained",
+            category: "Industry Guide",
+            readTime: "21 min read",
+            date: "December 2024",
+            lastUpdated: "December 7, 2024",
+            topics: ["A-Book", "B-Book", "Execution Models"],
+            stats: { views: "6,120", citations: "38" }
+        },
+        {
+            title: "Forex Liquidity Providers Explained: The Complete 2025 Guide",
+            description: "How forex liquidity actually works. Prime brokers, PoP, aggregators, last look—the complete guide to forex execution infrastructure for brokers.",
+            href: "/resources/blog/forex-liquidity-providers-guide",
+            category: "Technical Guide",
+            readTime: "22 min read",
+            date: "December 2024",
+            lastUpdated: "December 7, 2024",
+            topics: ["Liquidity", "Prime of Prime", "FIX Protocol"],
+            stats: { views: "3,890", citations: "29" }
+        },
         {
             title: "Investigative Report: Why Your Forex Broker CRM Costs More Than a Small Island",
             description: "An 'official' investigation into why competitors charge $5,000 setup fees while FxTrusts charges $0. Warning: Contains satire and shocking financial common sense.",
@@ -103,11 +169,11 @@ export default function BlogIndex() {
     ];
 
     const categories = [
-        { name: "All Resources", count: 7, active: true },
-        { name: "Technical Guides", count: 2, active: false },
-        { name: "Industry Reports", count: 2, active: false },
+        { name: "All Resources", count: 13, active: true },
+        { name: "Technical Guides", count: 4, active: false },
+        { name: "Industry Reports", count: 4, active: false },
         { name: "Competitor Analysis", count: 2, active: false },
-        { name: "Business Guides", count: 1, active: false }
+        { name: "Business Guides", count: 3, active: false }
     ];
 
     const platformStats = [

@@ -5,7 +5,16 @@ import PageHeader from '@/components/PageHeader';
 export const metadata: Metadata = {
     title: 'Indices Trading | Global Stock Indices | FxTrusts',
     description: 'Trade major global indices including S&P 500, NASDAQ, FTSE 100, DAX 40, and Nikkei 225 with competitive spreads and leverage.',
-    keywords: ['indices trading', 'stock indices', 'S&P 500', 'NASDAQ trading', 'DAX trading'],
+    keywords: ['indices trading', 'stock indices', 'S&P 500', 'NASDAQ trading', 'DAX trading', 'index CFDs', 'US30', 'UK100'],
+    openGraph: {
+        title: 'Indices Trading | S&P 500, NASDAQ, DAX & More',
+        description: 'Trade 25+ global indices with competitive spreads. Access S&P 500, NASDAQ, FTSE 100, DAX and more.',
+        type: 'website',
+        url: 'https://fxtrusts.com/markets/indices',
+    },
+    alternates: {
+        canonical: 'https://fxtrusts.com/markets/indices',
+    },
 };
 
 export default function IndicesPage() {

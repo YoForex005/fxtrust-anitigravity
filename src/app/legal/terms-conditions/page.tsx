@@ -5,7 +5,16 @@ import PageHeader from '@/components/PageHeader';
 export const metadata: Metadata = {
     title: 'Terms & Conditions | Service Agreement | FxTrusts',
     description: 'Terms and conditions governing the use of FxTrusts platform and services. Legal agreement for all users and brokerage operators.',
-    keywords: ['terms of service', 'terms and conditions', 'user agreement', 'service agreement', 'legal terms'],
+    keywords: ['terms of service', 'terms and conditions', 'user agreement', 'service agreement', 'legal terms', 'FxTrusts terms'],
+    openGraph: {
+        title: 'Terms & Conditions | FxTrusts',
+        description: 'Legal agreement governing your use of FxTrusts B2B broker technology services.',
+        type: 'website',
+        url: 'https://fxtrusts.com/legal/terms-conditions',
+    },
+    alternates: {
+        canonical: 'https://fxtrusts.com/legal/terms-conditions',
+    },
 };
 
 export default function TermsPage() {

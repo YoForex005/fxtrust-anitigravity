@@ -5,7 +5,16 @@ import PageHeader from '@/components/PageHeader';
 export const metadata: Metadata = {
     title: 'Crypto Trading | Digital Asset Infrastructure | FxTrusts',
     description: 'Trade Bitcoin, Ethereum, and 50+ cryptocurrencies with institutional liquidity. 24/7 markets, deep order books, and enterprise-grade security.',
-    keywords: ['crypto trading', 'bitcoin broker', 'cryptocurrency exchange', 'digital assets', 'crypto liquidity'],
+    keywords: ['crypto trading', 'bitcoin broker', 'cryptocurrency exchange', 'digital assets', 'crypto liquidity', 'BTC trading', 'ETH trading'],
+    openGraph: {
+        title: 'Crypto Trading | 50+ Cryptocurrencies',
+        description: 'Trade Bitcoin, Ethereum, and 50+ cryptocurrencies 24/7 with institutional liquidity.',
+        type: 'website',
+        url: 'https://fxtrusts.com/markets/crypto',
+    },
+    alternates: {
+        canonical: 'https://fxtrusts.com/markets/crypto',
+    },
 };
 
 export default function CryptoPage() {

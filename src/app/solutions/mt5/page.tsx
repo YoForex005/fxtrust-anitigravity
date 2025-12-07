@@ -1,11 +1,34 @@
 import { Metadata } from 'next';
 import ContentPageLayout from '@/components/ContentPageLayout';
 import PageHeader from '@/components/PageHeader';
+import FAQSchema from '@/components/seo/FAQSchema';
 
 export const metadata: Metadata = {
-    title: 'MetaTrader 5 White Label | MT5 Broker Solution | FxTrusts',
-    description: 'Launch your forex brokerage on MetaTrader 5 with our fully managed white label solution. Complete branding, hosting, and support included.',
-    keywords: ['MT5 white label', 'MetaTrader 5 broker', 'forex white label', 'MT5 solution', 'MetaQuotes'],
+    title: 'MT5 White Label | MetaTrader 5 Manager | MT5 CRM Integration | FxTrusts',
+    description: 'Launch your forex brokerage on MetaTrader 5 with our fully managed white label solution. Complete MT5 CRM integration, MetaTrader 5 manager access, branding, hosting included.',
+    keywords: [
+        'MT5 white label',
+        'MetaTrader 5 broker',
+        'mt5 CRM',
+        'metatrader 5 manager',
+        'metatrader 5 administrator',
+        'MT5 white label cost',
+        'MT5 solution',
+        'MetaQuotes',
+        'forex white label',
+        'mt5 integration',
+        'metatrader broker',
+        'white label trading platform',
+    ],
+    openGraph: {
+        title: 'MT5 White Label | Launch Your Broker in 48 Hours',
+        description: 'Fully managed MetaTrader 5 white label. Branding, hosting, support included.',
+        type: 'website',
+        url: 'https://fxtrusts.com/solutions/mt5',
+    },
+    alternates: {
+        canonical: 'https://fxtrusts.com/solutions/mt5',
+    },
 };
 
 export default function MT5Page() {
@@ -16,6 +39,7 @@ export default function MT5Page() {
         { id: 'features', title: 'Platform Features' },
         { id: 'api', title: 'API & Integration' },
         { id: 'pricing', title: 'Pricing & Setup' },
+        { id: 'faq', title: 'FAQ' },
     ];
 
     const relatedLinks = [
@@ -31,8 +55,36 @@ export default function MT5Page() {
         { label: 'Support', value: '24/7' },
     ];
 
+    const faqs = [
+        {
+            question: 'How long does MT5 white label setup really take?',
+            answer: '48 hours for standard configurations. We know, we know—other providers quote "4-6 weeks" and charge a $10,000 "implementation fee." We forgot to add the delays and the fee. It\'s a character flaw.',
+        },
+        {
+            question: 'Do I need to negotiate with MetaQuotes directly?',
+            answer: 'No. We hold the licensing relationship. You get the platform, the updates, and the support without sending legal documents to Cyprus and waiting 3 months for approval. You\'re welcome.',
+        },
+        {
+            question: 'Can I get my own branded mobile apps?',
+            answer: 'Yes. iOS and Android apps under your company name in the App Store and Google Play. It\'s an optional add-on, and yes, we actually tell you how much it costs upfront. Revolutionary, we know.',
+        },
+        {
+            question: 'What if I already have an MT4 brokerage?',
+            answer: 'We can migrate your accounts, history, and configurations. Your traders won\'t even notice (except they\'ll suddenly have a much better platform). MT4 support is still available if you need it.',
+        },
+        {
+            question: 'Is there a minimum number of accounts?',
+            answer: 'No. Start with 10 accounts or 10,000—the platform scales seamlessly. We don\'t believe in the "enterprise minimum" model where you pay for 5,000 accounts you don\'t have yet.',
+        },
+        {
+            question: 'What happens if MetaQuotes releases an update?',
+            answer: 'We test it, stage it, and deploy it—usually same-day for security patches. You don\'t have to worry about update logistics or compatibility. That\'s the "fully managed" part.',
+        },
+    ];
+
     return (
         <main>
+            <FAQSchema faqs={faqs} />
             <PageHeader
                 title="MetaTrader 5 White Label"
                 subtitle="Launch your broker on the world's most trusted trading platform."
@@ -252,6 +304,16 @@ export default function MT5Page() {
                 <p>
                     Express setup (48 hours) available for standard configurations using pre-built liquidity feeds and default symbol sets.
                 </p>
+
+                <h2 id="faq">Frequently Asked Questions</h2>
+                <div className="faqGrid">
+                    {faqs.map((faq, index) => (
+                        <div key={index} className="faqItem">
+                            <h4>{faq.question}</h4>
+                            <p>{faq.answer}</p>
+                        </div>
+                    ))}
+                </div>
             </ContentPageLayout>
         </main>
     );

@@ -5,7 +5,16 @@ import PageHeader from '@/components/PageHeader';
 export const metadata: Metadata = {
     title: 'Commodities Trading | Gold, Oil & More | FxTrusts',
     description: 'Trade precious metals, energy products, and agricultural commodities with institutional spreads. Gold, Silver, Crude Oil, Natural Gas, and more.',
-    keywords: ['commodities trading', 'gold trading', 'oil trading', 'precious metals', 'commodity broker'],
+    keywords: ['commodities trading', 'gold trading', 'oil trading', 'precious metals', 'commodity broker', 'XAU', 'WTI crude'],
+    openGraph: {
+        title: 'Commodities Trading | Gold, Oil & Metals',
+        description: 'Trade gold, silver, oil and 30+ commodities with institutional spreads and deep liquidity.',
+        type: 'website',
+        url: 'https://fxtrusts.com/markets/commodities',
+    },
+    alternates: {
+        canonical: 'https://fxtrusts.com/markets/commodities',
+    },
 };
 
 export default function CommoditiesPage() {

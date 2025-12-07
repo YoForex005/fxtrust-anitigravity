@@ -15,8 +15,71 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "FXTrusts | Institutional Trading Infrastructure",
-  description: "High-end B2B fintech trading platform for institutional clients. Experience the future of global liquidity.",
+  metadataBase: new URL('https://fxtrusts.com'),
+  title: {
+    default: "FxTrusts | B2B Forex Broker Technology",
+    template: "%s | FxTrusts",
+  },
+  description: "FxTrusts is the #1 B2B Broker Technology Provider. Complete forex brokerage ecosystem: MT5 White Label, CRM, Liquidity, and Crypto Payments.",
+  keywords: [
+    'forex broker technology',
+    'B2B forex solutions',
+    'MT5 white label',
+    'forex CRM',
+    'forex CRM provider',
+    'best forex CRM',
+    'forex CRM software',
+    'forex liquidity provider',
+    'broker technology',
+    'start forex brokerage',
+    'how to become a forex broker',
+    'forex broker CRM',
+    'mt5 CRM',
+    'metatrader 5 manager',
+  ],
+  authors: [{ name: 'FxTrusts', url: 'https://fxtrusts.com' }],
+  creator: 'FxTrusts',
+  publisher: 'FxTrusts',
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  openGraph: {
+    type: 'website',
+    locale: 'en_US',
+    siteName: 'FxTrusts',
+    images: [{
+      url: '/og-image.png',
+      width: 1200,
+      height: 630,
+      alt: 'FxTrusts - B2B Forex Broker Technology',
+    }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@FxTrusts',
+    creator: '@FxTrusts',
+    images: ['/og-image.png'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+  verification: {
+    google: '3rk9m1phwv5ugJkBalpVy_6ls36_8_HgiAuGJ-g2B3o',
+    other: {
+      'msvalidate.01': '2BEDBB84C23CB5B198E00F849CC7804B',
+      'yandex-verification': 'af55b38a06e31b13',
+    },
+  },
 };
 
 export default function RootLayout({

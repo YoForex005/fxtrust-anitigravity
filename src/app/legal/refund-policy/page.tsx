@@ -5,7 +5,16 @@ import PageHeader from '@/components/PageHeader';
 export const metadata: Metadata = {
     title: 'Refund Policy | Money Back Guarantee | FxTrusts',
     description: 'FxTrusts refund policy detailing our 30-day money-back guarantee, refund eligibility, and cancellation procedures.',
-    keywords: ['refund policy', 'money back guarantee', 'cancellation', 'subscription refund', 'refund terms'],
+    keywords: ['refund policy', 'money back guarantee', 'cancellation', 'subscription refund', 'refund terms', '30-day guarantee'],
+    openGraph: {
+        title: 'Refund Policy | 30-Day Money Back Guarantee',
+        description: 'Our straightforward 30-day money-back guarantee and refund procedures.',
+        type: 'website',
+        url: 'https://fxtrusts.com/legal/refund-policy',
+    },
+    alternates: {
+        canonical: 'https://fxtrusts.com/legal/refund-policy',
+    },
 };
 
 export default function RefundPolicyPage() {

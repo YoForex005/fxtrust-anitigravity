@@ -42,6 +42,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '/resources/blog/mt4-vs-mt5-crm',
         '/resources/blog/forex-broker-crm-pricing-exposed',
         '/resources/blog/why-we-refuse-to-charge-setup-fees',
+        '/resources/blog/how-to-start-forex-brokerage-2025',
+        '/resources/blog/mt5-white-label-complete-guide',
+        '/resources/blog/forex-crm-pricing-decoded',
+        '/resources/blog/how-to-start-prop-firm-2025',
+        '/resources/blog/a-book-vs-b-book-explained',
+        '/resources/blog/forex-liquidity-providers-guide',
     ].map((route) => ({
         url: `${baseUrl}${route}`,
         lastModified: new Date(),

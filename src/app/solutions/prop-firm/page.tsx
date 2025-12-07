@@ -5,6 +5,7 @@ import styles from './prop.module.css';
 import { MacWindow, CodeTerminal } from '@/components/DeviceFrames';
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import FAQSchema from '@/components/seo/FAQSchema';
 
 export const metadata: Metadata = {
     title: 'Prop Firm Technology & CRM | Start Your Own Prop Firm | FXTrusts',
@@ -42,9 +43,37 @@ export const metadata: Metadata = {
     },
 };
 
+const propFirmFaqs = [
+    {
+        question: 'Can I customize the challenge rules?',
+        answer: 'Yes. You can create 1-step, 2-step, or 3-step challenges. Customize drawdown limits, profit targets, time limits, minimum trading days, and lot size restrictions. All changeable from the admin panel in real-time.',
+    },
+    {
+        question: 'Do you provide the liquidity for funded accounts?',
+        answer: 'For the demo phase, we provide the price feed. For funded accounts, we can connect you to our liquidity partners (A-book) or you can run your own B-book execution. Most prop firms B-book everything since 90% of traders lose anyway.',
+    },
+    {
+        question: 'What about the "copy trading" cheaters?',
+        answer: 'We detect them. If two accounts open the same trades at the same time from different IPs, we flag it. You can auto-fail both accounts or manually review.',
+    },
+    {
+        question: 'Is running a prop firm legal?',
+        answer: 'We provide the technology. You\'re responsible for the legal structure. Most prop firms operate as "education companies" offering "simulated trading." Consult a lawyer in your jurisdiction.',
+    },
+    {
+        question: 'How fast is breach detection?',
+        answer: 'Sub-100 milliseconds. Our system monitors equity on every tick. The moment a trader crosses the threshold, positions are closed and trading is disabled—before they can dig themselves deeper.',
+    },
+    {
+        question: 'Can I white-label the platform?',
+        answer: 'Absolutely. Your logo, your domain, your brand colors. Traders never see our name. It looks like you built the entire system yourself.',
+    },
+];
+
 export default function PropFirmPage() {
     return (
         <main>
+            <FAQSchema faqs={propFirmFaqs} />
             <Header />
             <InnerPageHeader
                 badge="The Challenge Engine"

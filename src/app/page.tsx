@@ -20,6 +20,31 @@ import { Metadata } from 'next';
 export const metadata: Metadata = {
   title: "B2B Broker Solutions | Liquidity, CRM & White Label | FxTrusts",
   description: "FxTrusts is the premier B2B Broker technology provider. We offer a complete ecosystem: Liquidity, CRM, and MT5 White Label. Better technology than B2Broker, better pricing.",
+  keywords: [
+    'B2B forex broker',
+    'forex broker technology',
+    'forex liquidity provider',
+    'MT5 white label',
+    'forex CRM',
+    'broker technology provider',
+    'white label forex',
+    'forex brokerage solutions',
+    'institutional trading',
+    'forex broker startup',
+    'B2Broker alternative',
+  ],
+  openGraph: {
+    title: 'B2B Broker Solutions | Liquidity, CRM & White Label',
+    description: 'Complete forex brokerage ecosystem: MT5 White Label, CRM, Liquidity, and Crypto Payments. Launch your brokerage in weeks.',
+    type: 'website',
+    url: 'https://fxtrusts.com',
+    images: [{
+      url: '/og-image.png',
+      width: 1200,
+      height: 630,
+      alt: 'FxTrusts - B2B Forex Broker Technology',
+    }],
+  },
   alternates: {
     canonical: 'https://fxtrusts.com',
   },

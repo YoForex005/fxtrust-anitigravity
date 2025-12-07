@@ -38,6 +38,7 @@ export default function ForexBrokerCrmExposed() {
                 datePublished="2025-12-04"
                 description="An 'official' investigation into why competitors charge $5,000 setup fees while FxTrusts charges $0."
                 authorName="Chief Financial Investigator (Intern)"
+                url="https://fxtrusts.com/resources/blog/forex-broker-crm-pricing-exposed"
             />
             <Header />
 

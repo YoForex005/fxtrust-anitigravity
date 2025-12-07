@@ -81,6 +81,7 @@ export default function ApologyPage() {
                 datePublished="2024-12-04"
                 description="A formal corporate apology for our suspiciously affordable CRM pricing."
                 authorName="FxTrusts"
+                url="https://fxtrusts.com/resources/blog/why-we-refuse-to-charge-setup-fees"
             />
             <Header />
 

@@ -1,11 +1,38 @@
 import { Metadata } from 'next';
 import ContentPageLayout from '@/components/ContentPageLayout';
 import PageHeader from '@/components/PageHeader';
+import FAQSchema from '@/components/seo/FAQSchema';
 
 export const metadata: Metadata = {
-    title: 'Institutional Forex CRM | Best Business CRM Solution | FxTrusts',
-    description: 'Scalable Forex CRM for high-volume brokers. Automated KYC, multi-tier IB system, marketing automation, and complete client lifecycle management.',
-    keywords: ['forex CRM', 'broker CRM', 'institutional CRM', 'forex back office', 'brokerage CRM'],
+    title: 'Forex CRM Software | Best Forex Broker CRM System | FxTrusts',
+    description: 'Best Forex CRM provider for brokers. Complete forex broker CRM solution with MT5 CRM integration, automated KYC, multi-tier IB system, and marketing automation.',
+    keywords: [
+        'forex CRM',
+        'forex CRM provider',
+        'forex broker CRM',
+        'best forex CRM',
+        'forex CRM software',
+        'mt5 CRM',
+        'forex CRM system',
+        'forex CRM solution',
+        'best forex CRM systems',
+        'b2b CRM',
+        'forex CRM developer',
+        'mt4 CRM',
+        'business forex CRM solution',
+        'forex back office',
+        'brokerage CRM',
+        'leverate CRM alternative',
+    ],
+    openGraph: {
+        title: 'Forex CRM Software | Built for Brokers',
+        description: 'Scalable CRM with automated KYC, multi-tier IB system, and complete client lifecycle management.',
+        type: 'website',
+        url: 'https://fxtrusts.com/solutions/crm',
+    },
+    alternates: {
+        canonical: 'https://fxtrusts.com/solutions/crm',
+    },
 };
 
 export default function CRMPage() {
@@ -17,6 +44,7 @@ export default function CRMPage() {
         { id: 'marketing', title: 'Marketing Automation' },
         { id: 'reporting', title: 'Reporting & Analytics' },
         { id: 'integration', title: 'Platform Integration' },
+        { id: 'faq', title: 'FAQ' },
     ];
 
     const relatedLinks = [
@@ -32,8 +60,36 @@ export default function CRMPage() {
         { label: 'Uptime', value: '99.9%' },
     ];
 
+    const faqs = [
+        {
+            question: 'What is included in the Forex CRM?',
+            answer: 'Everything you\'d expect: client management, lead tracking, automated KYC, multi-tier IB commissions, payment integrations, marketing automation, and reporting dashboards. We apologize for not making you pay extra for each feature—an oversight our competitors would never commit.',
+        },
+        {
+            question: 'Does the CRM integrate with MetaTrader 5?',
+            answer: 'Yes. Native MT5 integration via the Manager API. Accounts create themselves, balances sync automatically, and trading data appears like magic. We regret to inform you there\'s no 6-week "integration project" to bill you for.',
+        },
+        {
+            question: 'How long does CRM setup take?',
+            answer: '48 hours. Yes, really. Configuration, branding, payment gateways, and staff training—all done before your competitor\'s sales team has even sent you a quote. We understand this timeline may cause confusion.',
+        },
+        {
+            question: 'Can I customize the client portal?',
+            answer: 'Fully white-labeled. Colors, logos, layouts, content—all yours. 15+ languages included. We\'ve been told we should charge separately for "premium customization," but we forgot to read that memo.',
+        },
+        {
+            question: 'What KYC providers do you integrate with?',
+            answer: 'SumSub, ShuftiPro, and Onfido for the robots. Manual review for the edge cases. Documents get verified, clients get approved, and your compliance team stops staying late. Industry standard? Arguably better.',
+        },
+        {
+            question: 'Is the CRM available in multiple languages?',
+            answer: '15+ languages: English, Arabic, Chinese, Spanish, Portuguese, Russian, and more. Your global ambitions are covered. We apologize for not charging per language—another revenue stream we inexplicably ignored.',
+        },
+    ];
+
     return (
         <main>
+            <FAQSchema faqs={faqs} />
             <PageHeader
                 title="Institutional CRM"
                 subtitle="The backbone of your brokerage operations—built for scale."
@@ -274,6 +330,16 @@ export default function CRMPage() {
                     <li>Analytics (Google Analytics, Mixpanel)</li>
                     <li>CRM sync (Salesforce, HubSpot via API)</li>
                 </ul>
+
+                <h2 id="faq">Frequently Asked Questions</h2>
+                <div className="faqGrid">
+                    {faqs.map((faq, index) => (
+                        <div key={index} className="faqItem">
+                            <h4>{faq.question}</h4>
+                            <p>{faq.answer}</p>
+                        </div>
+                    ))}
+                </div>
             </ContentPageLayout>
         </main>
     );

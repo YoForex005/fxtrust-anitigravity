@@ -5,7 +5,16 @@ import PageHeader from '@/components/PageHeader';
 export const metadata: Metadata = {
     title: 'Privacy Policy | Data Protection | FxTrusts',
     description: 'FxTrusts privacy policy detailing how we collect, use, store, and protect your personal data in compliance with GDPR and global privacy regulations.',
-    keywords: ['privacy policy', 'data protection', 'GDPR', 'personal data', 'privacy'],
+    keywords: ['privacy policy', 'data protection', 'GDPR', 'personal data', 'privacy', 'data security'],
+    openGraph: {
+        title: 'Privacy Policy | FxTrusts',
+        description: 'How we collect, protect, and use your personal information. GDPR compliant.',
+        type: 'website',
+        url: 'https://fxtrusts.com/legal/privacy-policy',
+    },
+    alternates: {
+        canonical: 'https://fxtrusts.com/legal/privacy-policy',
+    },
 };
 
 export default function PrivacyPolicyPage() {

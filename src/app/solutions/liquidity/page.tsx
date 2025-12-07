@@ -5,6 +5,7 @@ import styles from './liquidity.module.css';
 import { MacWindow } from '@/components/DeviceFrames';
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import FAQSchema from '@/components/seo/FAQSchema';
 
 export const metadata: Metadata = {
     title: 'Tier-1 Forex Liquidity | Aggregated Pricing | LP Bridge | FXTrusts',
@@ -42,9 +43,37 @@ export const metadata: Metadata = {
     },
 };
 
+const liquidityFaqs = [
+    {
+        question: 'Do I need my own prime broker account?',
+        answer: 'No. We act as your prime broker connection. You get access to Tier-1 pricing without the $1M+ deposit requirements of a direct PB relationship.',
+    },
+    {
+        question: 'Can I add my own LP connections?',
+        answer: 'Yes. If you have existing LP relationships, we can integrate them into the aggregator alongside our pool. Your pricing, our technology.',
+    },
+    {
+        question: 'How do you handle "last look"?',
+        answer: 'We negotiate last-look terms with all providers and configure rejection timeouts. If an LP is too aggressive with rejections, we can reduce their priority or exclude them.',
+    },
+    {
+        question: "What's the minimum deposit?",
+        answer: 'The margin requirement depends on your expected volume. Typically $50-100K for starters. We can discuss based on your specific situation.',
+    },
+    {
+        question: 'Can I mark up the spreads?',
+        answer: "Absolutely. Add your own markup on top of raw pricing—fixed or variable. Or charge per-lot commissions instead. Your call.",
+    },
+    {
+        question: 'What about exotic pairs?',
+        answer: 'We cover 70+ currency pairs including exotics. Plus CFDs on indices, commodities, and crypto. Same aggregation technology, same execution quality.',
+    },
+];
+
 export default function LiquidityPage() {
     return (
         <main>
+            <FAQSchema faqs={liquidityFaqs} />
             <Header />
             <InnerPageHeader
                 badge="Deep Pools"

@@ -3,8 +3,18 @@ import PageHeader from '../../../components/PageHeader';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Risk Disclosure | FxTrusts',
-    description: 'Important risk disclosure information for Forex and CFD trading.',
+    title: 'Risk Disclosure | CFD Trading Risks | FxTrusts',
+    description: 'Important risk disclosure information for Forex and CFD trading. Understand leverage risks, market risks, and key considerations before trading.',
+    keywords: ['risk disclosure', 'CFD trading risks', 'forex risk', 'leverage risk', 'trading warnings'],
+    openGraph: {
+        title: 'Risk Disclosure | Trading Risk Warning',
+        description: 'Important information about the risks of trading leveraged Forex and CFD products.',
+        type: 'website',
+        url: 'https://fxtrusts.com/legal/risk-disclosure',
+    },
+    alternates: {
+        canonical: 'https://fxtrusts.com/legal/risk-disclosure',
+    },
 };
 
 export default function RiskDisclosurePage() {

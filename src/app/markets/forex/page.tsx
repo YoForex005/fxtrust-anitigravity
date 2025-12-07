@@ -5,7 +5,16 @@ import PageHeader from '@/components/PageHeader';
 export const metadata: Metadata = {
     title: 'Forex Trading | Trade 80+ Currency Pairs | FxTrusts',
     description: 'Access the global forex market with institutional-grade spreads, deep liquidity, and ultra-low latency execution. Trade major, minor, and exotic currency pairs.',
-    keywords: ['forex trading', 'currency pairs', 'forex broker', 'forex spreads', 'forex liquidity'],
+    keywords: ['forex trading', 'currency pairs', 'forex broker', 'forex spreads', 'forex liquidity', 'currency trading', 'FX trading', 'forex platform'],
+    openGraph: {
+        title: 'Forex Trading | 80+ Currency Pairs',
+        description: 'Institutional-grade forex trading with deep liquidity and ultra-low latency. Trade major, minor and exotic pairs.',
+        type: 'website',
+        url: 'https://fxtrusts.com/markets/forex',
+    },
+    alternates: {
+        canonical: 'https://fxtrusts.com/markets/forex',
+    },
 };
 
 export default function ForexPage() {
