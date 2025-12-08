@@ -37,6 +37,23 @@ export default function OnboardingWizard() {
     const nextStep = () => setStep(prev => prev + 1);
     const prevStep = () => setStep(prev => prev - 1);
     
+    const handleContactNext = async () => {
+        try {
+            await fetch('/api/signups/submit', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    qualificationData,
+                    contactData,
+                }),
+            });
+        } catch (error) {
+            console.error('Failed to save signup data', error);
+        } finally {
+            nextStep();
+        }
+    };
+
     const handleComplete = () => {
         setIsCompleted(true);
     };
@@ -74,7 +91,7 @@ export default function OnboardingWizard() {
                     <ContactStep
                         data={contactData}
                         updateData={updateContact}
-                        onNext={nextStep}
+                        onNext={handleContactNext}
                         onBack={prevStep}
                     />
                 )}

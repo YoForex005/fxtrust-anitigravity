@@ -1,0 +1,38 @@
+[
+  {
+    "qualification": {
+      "businessModel": "retail_broker",
+      "status": "new_startup",
+      "techNeeds": "crm_only",
+      "timeline": "asap"
+    },
+    "contact": {
+      "firstName": "Abhishek",
+      "lastName": "Kumar",
+      "email": "firkydost@gmail.com",
+      "companyName": "Udemy",
+      "phone": "+917061157939",
+      "telegram": ""
+    },
+    "id": "1765205897387-ecb36fdcc905f8",
+    "createdAt": "2025-12-08T14:58:17.387Z"
+  },
+  {
+    "qualification": {
+      "businessModel": "prop_firm",
+      "status": "new_startup",
+      "techNeeds": "liquidity_only",
+      "timeline": "asap"
+    },
+    "contact": {
+      "firstName": "Abhishek",
+      "lastName": "Kumar",
+      "email": "abhishek326kr@gmail.com",
+      "companyName": "Udemy",
+      "phone": "+917070465761",
+      "telegram": ""
+    },
+    "id": "1765206288419-84f0aeed1ea318",
+    "createdAt": "2025-12-08T15:04:48.419Z"
+  }
+]
