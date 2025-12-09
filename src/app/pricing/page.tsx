@@ -9,42 +9,22 @@ import styles from './pricing.module.css';
 export default function PricingPage() {
     const [accountCount, setAccountCount] = useState(150);
 
-    // Exponential decay pricing for Entry Level
-    // Range: 1-140 accounts, Price: $50 -> $35
+    // Simple flat-rate pricing to match home page
+    // Entry: $700 base + $60/account
     const getEntryLevelPrice = (accounts: number): number => {
-        const A = 50.129;  // Scaling factor
-        const k = -0.00257; // Decay constant
-
-        let price = A * Math.exp(k * accounts);
-
-        // Hard limits
-        if (price > 50) return 50.00;
-        if (price < 35) return 35.00;
-
-        return parseFloat(price.toFixed(2));
+        return 60.00; // Fixed $60 per account
     };
 
-    // Exponential decay pricing for Standard Plan
-    // Range: 150-500 accounts, Price: $25 -> $9.50
-    // At 500 accounts: $1,300 + (500 × $9.50) = $6,050
+    // Standard Plan: $1,300 base + $50/account (150 minimum)
     const getStandardPlanPrice = (accounts: number): number => {
-        const A = 37.85;  // Scaling factor
-        const k = -0.002765; // Decay constant
-
-        let price = A * Math.exp(k * accounts);
-
-        // Hard limits
-        if (price > 25) return 25.00;
-        if (price < 9.50) return 9.50;
-
-        return parseFloat(price.toFixed(2));
+        return 50.00; // Fixed $50 per account
     };
 
     // Calculate costs dynamically
     const calculateCost = (plan: 'entry' | 'standard' | 'enterprise', accounts: number) => {
         if (plan === 'entry') {
             const baseMonthly = 700;
-            const perAccount = getEntryLevelPrice(accounts); // Dynamic pricing
+            const perAccount = getEntryLevelPrice(accounts);
             const accountsTotal = accounts * perAccount;
             const monthlyTotal = baseMonthly + accountsTotal;
             return {
@@ -58,7 +38,7 @@ export default function PricingPage() {
         } else if (plan === 'standard') {
             const validAccounts = Math.max(accounts, 150);
             const baseMonthly = 1300;
-            const perAccount = getStandardPlanPrice(validAccounts); // Dynamic pricing
+            const perAccount = getStandardPlanPrice(validAccounts);
             const accountsTotal = validAccounts * perAccount;
             const monthlyTotal = baseMonthly + accountsTotal;
             return {

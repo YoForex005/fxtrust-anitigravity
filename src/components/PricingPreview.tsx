@@ -8,7 +8,7 @@ export default function PricingPreview() {
         {
             name: 'Entry',
             price: '700',
-            payPerUser: '50',
+            payPerUser: '60',
             description: 'Perfect for brokers just getting started',
             features: [
                 'Full CRM Suite',
@@ -23,7 +23,7 @@ export default function PricingPreview() {
         {
             name: 'Standard',
             price: '1,300',
-            payPerUser: '22',
+            payPerUser: '50',
             minAccounts: '150',
             description: 'Best value for growing brokerages',
             features: [
