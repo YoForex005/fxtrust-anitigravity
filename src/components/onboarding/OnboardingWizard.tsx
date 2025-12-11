@@ -46,6 +46,10 @@ export default function OnboardingWizard() {
                     contactData,
                 }),
             });
+
+            if (typeof window !== 'undefined') {
+                sessionStorage.setItem('fxtrusts_onboarding_submitted', '1');
+            }
         } catch (error) {
             console.error('Failed to save signup data', error);
         } finally {

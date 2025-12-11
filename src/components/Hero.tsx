@@ -1,9 +1,18 @@
 import styles from './Hero.module.css';
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Hero() {
     return (
         <section className={styles.hero}>
+            <Image
+                src="/hero.png"
+                alt="FxTrusts MetaTrader 5 white-label platform background"
+                fill
+                priority
+                sizes="100vw"
+                className={styles.heroBg}
+            />
             <div className={styles.content}>
                 <div className={styles.badge}>
                     <span className={styles.badgeIcon}>⚡</span>
