@@ -107,16 +107,17 @@ export default function Header() {
     };
 
     const isTransparentHome = pathname === '/' && !scrolled;
+    const isPricingPage = pathname === '/pricing' && !scrolled;
 
     return (
-        <header className={`${styles.header} ${scrolled ? styles.scrolled : ''} ${isTransparentHome ? styles.transparentHome : ''}`}>
+        <header className={`${styles.header} ${scrolled ? styles.scrolled : ''} ${isTransparentHome ? styles.transparentHome : ''} ${isPricingPage ? styles.transparentHome : ''}`}>
             <div className={styles.container}>
                 <Link href="/" className={styles.logo}>
-                    <img 
-                        src={isTransparentHome ? "/fxtrustwhite.png" : "/logo.png"} 
-                        alt="FxTrusts Logo" 
-                        className={styles.logoIcon} 
-                        style={{ width: '100px', height: 'auto', objectFit: 'contain', padding: '15px' }} 
+                    <img
+                        src={(isTransparentHome || isPricingPage) ? "/fxtrustwhite.png" : "/logo.png"}
+                        alt="FxTrusts Logo"
+                        className={styles.logoIcon}
+                        style={{ width: '100px', height: 'auto', objectFit: 'contain', padding: '15px' }}
                     />
 
                 </Link>
@@ -264,7 +265,7 @@ export default function Header() {
 
                 <div className={styles.actions}>
                     <div className={styles.langWrapper}>
-                        <button 
+                        <button
                             className={styles.langBtn}
                             onClick={() => {
                                 const dropdown = document.getElementById('langDropdown');
@@ -304,7 +305,7 @@ export default function Header() {
                                         // Set cookie for persistence
                                         document.cookie = `googtrans=/en/${langCode}; path=/; domain=${window.location.hostname}`;
                                         document.cookie = `googtrans=/en/${langCode}; path=/;`;
-                                        
+
                                         // Trigger Google Translate dropdown
                                         const select = document.querySelector('.goog-te-combo') as HTMLSelectElement;
                                         if (select) {
@@ -315,10 +316,10 @@ export default function Header() {
                                         }
                                     }}
                                 >
-                                    <img 
-                                        src={`https://flagcdn.com/24x18/${lang.flag}.png`} 
-                                        alt={lang.label} 
-                                        style={{ marginRight: '10px', width: '20px', height: '15px', objectFit: 'cover', borderRadius: '2px' }} 
+                                    <img
+                                        src={`https://flagcdn.com/24x18/${lang.flag}.png`}
+                                        alt={lang.label}
+                                        style={{ marginRight: '10px', width: '20px', height: '15px', objectFit: 'cover', borderRadius: '2px' }}
                                     />
                                     {lang.label}
                                 </button>

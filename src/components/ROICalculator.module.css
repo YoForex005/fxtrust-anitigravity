@@ -18,15 +18,15 @@
     align-items: center;
     gap: 0.75rem;
     padding: 0.625rem 1.5rem;
-    background: linear-gradient(135deg, rgba(212, 175, 55, 0.15) 0%, rgba(212, 175, 55, 0.08) 100%);
-    color: #D4AF37;
+    background: linear-gradient(135deg, rgba(123, 139, 246, 0.15) 0%, rgba(123, 139, 246, 0.08) 100%);
+    color: #7B8BF6;
     border-radius: 100px;
     font-size: 0.75rem;
     font-weight: 700;
     letter-spacing: 0.08em;
     text-transform: uppercase;
     margin-bottom: 1.5rem;
-    border: 1px solid rgba(212, 175, 55, 0.3);
+    border: 1px solid rgba(123, 139, 246, 0.3);
     backdrop-filter: blur(12px);
 }
 
@@ -100,8 +100,8 @@
     width: 28px;
     height: 28px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #D4AF37 0%, #B8942F 100%);
-    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);
+    background: linear-gradient(135deg, #7B8BF6 0%, #6B7BE6 100%);
+    box-shadow: 0 4px 12px rgba(123, 139, 246, 0.4);
     cursor: pointer;
     transition: all 0.2s ease;
     border: 3px solid #FFFFFF;
@@ -109,15 +109,15 @@
 
 .slider::-webkit-slider-thumb:hover {
     transform: scale(1.1);
-    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+    box-shadow: 0 6px 20px rgba(123, 139, 246, 0.5);
 }
 
 .slider::-moz-range-thumb {
     width: 28px;
     height: 28px;
     border-radius: 50%;
-    background: linear-gradient(135deg, #D4AF37 0%, #B8942F 100%);
-    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);
+    background: linear-gradient(135deg, #7B8BF6 0%, #6B7BE6 100%);
+    box-shadow: 0 4px 12px rgba(123, 139, 246, 0.4);
     cursor: pointer;
     border: 3px solid #FFFFFF;
 }
@@ -174,7 +174,7 @@
 
 .fxtrustBadge {
     background: linear-gradient(135deg, #0A1628 0%, #1A2742 100%);
-    color: #D4AF37;
+    color: #7B8BF6;
 }
 
 .savingsPill {
@@ -182,7 +182,7 @@
     top: -12px;
     right: 20px;
     background: linear-gradient(135deg, #0A1628 0%, #1A2742 100%);
-    color: #D4AF37;
+    color: #7B8BF6;
     padding: 0.5rem 1rem;
     border-radius: 6px;
     font-family: var(--font-inter);
@@ -215,7 +215,7 @@
 }
 
 .free {
-    color: #D4AF37 !important;
+    color: #7B8BF6 !important;
     font-weight: 700 !important;
 }
 
@@ -254,7 +254,7 @@
     width: 56px;
     height: 56px;
     background: linear-gradient(135deg, #0A1628 0%, #1A2742 100%);
-    color: #D4AF37;
+    color: #7B8BF6;
     border-radius: 50%;
     font-family: var(--font-inter);
     font-size: 1.1rem;
@@ -283,19 +283,19 @@
     width: 100%;
     height: 100%;
     background:
-        radial-gradient(ellipse 400px 300px at 20% 80%, rgba(212, 175, 55, 0.1) 0%, transparent 60%);
+        radial-gradient(ellipse 400px 300px at 20% 80%, rgba(123, 139, 246, 0.1) 0%, transparent 60%);
     pointer-events: none;
 }
 
 .savingsIcon {
     width: 70px;
     height: 70px;
-    background: rgba(212, 175, 55, 0.15);
+    background: rgba(123, 139, 246, 0.15);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: #D4AF37;
+    color: #7B8BF6;
     flex-shrink: 0;
     position: relative;
     z-index: 1;
@@ -333,7 +333,7 @@
 
 .ctaButton {
     padding: 1rem 2rem;
-    background: linear-gradient(135deg, #D4AF37 0%, #B8942F 100%);
+    background: linear-gradient(135deg, #7B8BF6 0%, #6B7BE6 100%);
     color: #0A1628;
     border: none;
     border-radius: 8px;
@@ -342,7 +342,7 @@
     font-weight: 700;
     cursor: pointer;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.3);
+    box-shadow: 0 4px 12px rgba(123, 139, 246, 0.3);
     flex-shrink: 0;
     position: relative;
     z-index: 1;
@@ -350,8 +350,8 @@
 
 .ctaButton:hover {
     transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(212, 175, 55, 0.4);
-    background: linear-gradient(135deg, #C5A028 0%, #A88725 100%);
+    box-shadow: 0 8px 24px rgba(123, 139, 246, 0.4);
+    background: linear-gradient(135deg, #6B7BE6 0%, #5B6BD6 100%);
 }
 
 /* Responsive */
