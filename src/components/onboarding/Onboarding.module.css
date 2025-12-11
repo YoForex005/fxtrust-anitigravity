@@ -7,10 +7,10 @@
     padding: 3rem;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.1);
     position: relative;
-    min-height: 550px;
+    min-height: 900px;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    overflow: visible;
     transition: all 0.3s ease;
 }
 

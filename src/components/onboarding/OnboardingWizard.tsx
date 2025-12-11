@@ -1,16 +1,15 @@
 'use client';
 
 import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import QualificationStep from './QualificationStep';
 import ContactStep from './ContactStep';
 import BookingStep from './BookingStep';
 import styles from './Onboarding.module.css';
 
-import SuccessStep from './SuccessStep';
-
 export default function OnboardingWizard() {
+    const router = useRouter();
     const [step, setStep] = useState(1);
-    const [isCompleted, setIsCompleted] = useState(false);
     const [qualificationData, setQualificationData] = useState({
         businessModel: '',
         status: '',
@@ -55,18 +54,8 @@ export default function OnboardingWizard() {
     };
 
     const handleComplete = () => {
-        setIsCompleted(true);
+        router.push('/thank-you');
     };
-
-    if (isCompleted) {
-        return (
-            <div className={styles.wizardContainer}>
-                <div className={styles.stepContent}>
-                    <SuccessStep />
-                </div>
-            </div>
-        );
-    }
 
     return (
         <div className={styles.wizardContainer}>

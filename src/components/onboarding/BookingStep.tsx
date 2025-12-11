@@ -2,6 +2,7 @@
 
 import React from 'react';
 import styles from './Onboarding.module.css';
+import CalendlyScheduler from './CalendlyScheduler';
 
 interface BookingStepProps {
     onBack: () => void;
@@ -17,7 +18,7 @@ interface BookingStepProps {
 export default function BookingStep({ onBack, onComplete, contactData }: BookingStepProps) {
     // CALENDLY CONFIGURATION
     // Replace this with your actual Calendly link
-    const calendlyBaseUrl = "https://calendly.com/fxtrustspremium/30min";
+    const calendlyBaseUrl = "https://calendly.com/fxtrusts-info/30min";
     
     const params = new URLSearchParams({
         name: `${contactData.firstName} ${contactData.lastName}`,
@@ -44,13 +45,11 @@ export default function BookingStep({ onBack, onComplete, contactData }: Booking
             </p>
 
             <div style={{ width: '100%', minHeight: '1000px', marginBottom: '2rem' }}>
-                <iframe 
-                    src={calendarUrl}
-                    width="100%" 
-                    height="1000" 
-                    frameBorder="0"
-                    title="Schedule Appointment"
-                ></iframe>
+                <CalendlyScheduler
+                    url={calendarUrl}
+                    onEventScheduled={onComplete}
+                    style={{ width: '100%', minHeight: '1000px' }}
+                />
             </div>
 
             <div className={styles.navButtons}>
@@ -59,12 +58,6 @@ export default function BookingStep({ onBack, onComplete, contactData }: Booking
                     className={styles.backBtn}
                 >
                     Back
-                </button>
-                <button
-                    onClick={onComplete}
-                    className={styles.nextBtn}
-                >
-                    I've Booked a Time
                 </button>
             </div>
         </div>
