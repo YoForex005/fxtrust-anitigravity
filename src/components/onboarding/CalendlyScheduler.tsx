@@ -86,5 +86,11 @@ export default function CalendlyScheduler({ url, onEventScheduled, style }: Cale
         ...style,
     };
 
-    return <div ref={containerRef} style={combinedStyle} />;
+    return (
+        <div
+            ref={containerRef}
+            className="calendly-inline-widget"
+            style={combinedStyle}
+        />
+    );
 }
