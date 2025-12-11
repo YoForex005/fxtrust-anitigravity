@@ -54,7 +54,15 @@ export default function OnboardingWizard() {
     };
 
     const handleComplete = () => {
-        router.push('/thank-you');
+        console.log('Onboarding complete, redirecting to /thank-you');
+        try {
+            router.push('/thank-you');
+        } catch (e) {
+            console.error('router.push failed, falling back to window.location', e);
+            if (typeof window !== 'undefined') {
+                window.location.href = '/thank-you';
+            }
+        }
     };
 
     return (

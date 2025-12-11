@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useEffect } from 'react';
+import Script from 'next/script';
 
 interface CalendlySchedulerProps {
     url: string;
@@ -14,17 +15,36 @@ export default function CalendlyScheduler({ url, onEventScheduled, style }: Cale
 
         const handleMessage = (event: MessageEvent) => {
             const data: any = event.data;
+            if (!data) return;
 
-            if (!data || typeof data !== 'object' || !data.event) {
+            let eventName: string | undefined;
+
+            if (typeof data === 'string') {
+                eventName = data;
+            } else if (typeof data === 'object') {
+                if (typeof data.event === 'string') {
+                    eventName = data.event;
+                } else if (typeof (data.eventName ?? data.name) === 'string') {
+                    eventName = (data.eventName ?? data.name) as string;
+                }
+            }
+
+            if (!eventName || !eventName.startsWith('calendly.')) {
                 return;
             }
 
-            if (typeof data.event !== 'string' || !data.event.startsWith('calendly.')) {
-                return;
-            }
+            console.log('Calendly message event:', eventName, data);
 
-            if (data.event === 'calendly.event_scheduled') {
-                onEventScheduled();
+            if (eventName === 'calendly.event_scheduled' || eventName.includes('event_scheduled')) {
+                console.log('CalendlyScheduler: event scheduled detected, redirecting to /thank-you');
+
+                if (typeof window !== 'undefined') {
+                    window.location.href = '/thank-you';
+                }
+
+                if (onEventScheduled) {
+                    onEventScheduled();
+                }
             }
         };
 
@@ -36,19 +56,22 @@ export default function CalendlyScheduler({ url, onEventScheduled, style }: Cale
     }, [onEventScheduled]);
 
     const combinedStyle: React.CSSProperties = {
-        width: '100%',
         minWidth: '320px',
-        minHeight: '1000px',
-        border: '0',
+        height: '1000px',
         ...style,
     };
 
     return (
-        <iframe
-            src={url}
-            style={combinedStyle}
-            frameBorder={0}
-            title="Schedule a meeting"
-        />
+        <>
+            <div
+                className="calendly-inline-widget"
+                data-url={url}
+                style={combinedStyle}
+            />
+            <Script
+                src="https://assets.calendly.com/assets/external/widget.js"
+                strategy="lazyOnload"
+            />
+        </>
     );
 }
