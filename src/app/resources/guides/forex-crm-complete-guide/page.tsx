@@ -15,6 +15,20 @@ export const metadata: Metadata = {
         "mt5 crm",
         "forex crm system"
     ],
+    openGraph: {
+        title: "Complete Guide to Forex CRM Systems | FxTrusts",
+        description: "Comprehensive guide to Forex CRM systems. Covers MT5 integration, lead management, IB modules, payment gateway integration, and provider selection criteria.",
+        type: "article",
+        url: "https://fxtrusts.com/resources/guides/forex-crm-complete-guide",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Complete Guide to Forex CRM Systems | FxTrusts",
+        description: "Comprehensive guide to Forex CRM systems. Covers MT5 integration, lead management, IB modules, payment gateway integration, and provider selection criteria.",
+    },
+    alternates: {
+        canonical: "https://fxtrusts.com/resources/guides/forex-crm-complete-guide",
+    },
 };
 
 export default function ForexCRMGuidePage() {

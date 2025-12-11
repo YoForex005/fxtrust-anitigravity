@@ -18,6 +18,20 @@ export const metadata: Metadata = {
         "leverate alternative",
         "b2broker alternative"
     ],
+    openGraph: {
+        title: "OFFICIAL STATEMENT: Why FxTrusts Refuses to Charge You a $5,000 Setup Fee (We Are Sorry) | FxTrusts",
+        description: "A formal apology to Forex Broker CEOs. We regret to inform you that our Forex CRM Provider pricing does not include hidden fees, setup costs, or the authentic overpriced experience you deserve.",
+        type: "article",
+        url: "https://fxtrusts.com/resources/blog/why-we-refuse-to-charge-setup-fees",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "OFFICIAL STATEMENT: Why FxTrusts Refuses to Charge You a $5,000 Setup Fee (We Are Sorry) | FxTrusts",
+        description: "A formal apology to Forex Broker CEOs. We regret to inform you that our Forex CRM Provider pricing does not include hidden fees, setup costs, or the authentic overpriced experience you deserve.",
+    },
+    alternates: {
+        canonical: "https://fxtrusts.com/resources/blog/why-we-refuse-to-charge-setup-fees",
+    },
 };
 
 // SVG Icons
@@ -77,7 +91,7 @@ export default function ApologyPage() {
         <main className={styles.main}>
             <ArticleSchema
                 headline="OFFICIAL STATEMENT: Why FxTrusts Refuses to Charge You a $5,000 Setup Fee"
-                image="https://fxtrusts.com/fxtrusts_logo_v2.png"
+                image="https://fxtrusts.com/logo.png"
                 datePublished="2024-12-04"
                 description="A formal corporate apology for our suspiciously affordable CRM pricing."
                 authorName="FxTrusts"

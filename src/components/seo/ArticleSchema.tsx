@@ -42,7 +42,7 @@ export default function ArticleSchema({
             name: 'FxTrusts',
             logo: {
                 '@type': 'ImageObject',
-                url: 'https://fxtrusts.com/fxtrusts_logo_v2.png',
+                url: 'https://fxtrusts.com/logo.png',
                 width: 200,
                 height: 60,
             },

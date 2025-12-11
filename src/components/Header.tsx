@@ -84,7 +84,21 @@ function getRandomLabels() {
 export default function Header() {
     const [scrolled, setScrolled] = useState(false);
     const [labels, setLabels] = useState<ReturnType<typeof getRandomLabels> | null>(null);
+    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [expandedMobileMenu, setExpandedMobileMenu] = useState<string | null>(null);
     const pathname = usePathname();
+
+    // Lock body scroll when mobile menu is open
+    useEffect(() => {
+        if (isMenuOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = '';
+        }
+        return () => {
+            document.body.style.overflow = '';
+        };
+    }, [isMenuOpen]);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -333,14 +347,126 @@ export default function Header() {
                         </div>
                     </div>
 
-                    <button className={styles.mobileMenuBtn}>
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                            <path d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
+                    <button
+                        className={styles.mobileMenuBtn}
+                        onClick={() => setIsMenuOpen(!isMenuOpen)}
+                        aria-label="Toggle menu"
+                    >
+                        {isMenuOpen ? (
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                <path d="M18 6L6 18M6 6l12 12" />
+                            </svg>
+                        ) : (
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                <path d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        )}
                     </button>
                     <Link href="/get-started" className={styles.ctaButton}>
                         Get Started
                     </Link>
+                </div>
+            </div>
+
+            {/* Mobile Menu Overlay */}
+            <div className={`${styles.mobileMenu} ${isMenuOpen ? styles.mobileMenuOpen : ''}`}>
+                <div className={styles.mobileMenuContent}>
+                    {/* Platform */}
+                    <div className={styles.mobileMenuItem}>
+                        <div
+                            className={styles.mobileMenuHeader}
+                            onClick={() => setExpandedMobileMenu(expandedMobileMenu === 'platform' ? null : 'platform')}
+                        >
+                            {nav.platform}
+                            <svg
+                                className={`${styles.chevron} ${expandedMobileMenu === 'platform' ? styles.chevronRotate : ''}`}
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"
+                            >
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </div>
+                        <div className={`${styles.mobileSubmenu} ${expandedMobileMenu === 'platform' ? styles.mobileSubmenuOpen : ''}`}>
+                            <Link href="/platform/mt5" className={styles.mobileSublink} onClick={() => setIsMenuOpen(false)}>MetaTrader 5 White Label</Link>
+                            <Link href="/platform/mobile-app" className={styles.mobileSublink} onClick={() => setIsMenuOpen(false)}>Native Mobile App</Link>
+                            <Link href="/platform/crm" className={styles.mobileSublink} onClick={() => setIsMenuOpen(false)}>CRM & Back Office</Link>
+                            <Link href="/platform/copy-trading" className={styles.mobileSublink} onClick={() => setIsMenuOpen(false)}>Copy Trading Engine</Link>
+                            <Link href="/platform/web-trader" className={styles.mobileSublink} onClick={() => setIsMenuOpen(false)}>Web Trader</Link>
+                            <Link href="/platform/hosting" className={styles.mobileSublink} onClick={() => setIsMenuOpen(false)}>Low-Latency Hosting</Link>
+                        </div>
+                    </div>
+
+                    {/* Solutions */}
+                    <div className={styles.mobileMenuItem}>
+                        <div
+                            className={styles.mobileMenuHeader}
+                            onClick={() => setExpandedMobileMenu(expandedMobileMenu === 'solutions' ? null : 'solutions')}
+                        >
+                            {nav.solutions}
+                            <svg
+                                className={`${styles.chevron} ${expandedMobileMenu === 'solutions' ? styles.chevronRotate : ''}`}
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"
+                            >
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </div>
+                        <div className={`${styles.mobileSubmenu} ${expandedMobileMenu === 'solutions' ? styles.mobileSubmenuOpen : ''}`}>
+                            <Link href="/solutions/prop-firm" className={styles.mobileSublink} onClick={() => setIsMenuOpen(false)}>Prop Firm Tech</Link>
+                            <Link href="/solutions/liquidity" className={styles.mobileSublink} onClick={() => setIsMenuOpen(false)}>Liquidity Bridge</Link>
+                            <Link href="/solutions/risk-management" className={styles.mobileSublink} onClick={() => setIsMenuOpen(false)}>Risk Management</Link>
+                            <Link href="/solutions/crypto-payments" className={styles.mobileSublink} onClick={() => setIsMenuOpen(false)}>Crypto Payments</Link>
+                        </div>
+                    </div>
+
+                    {/* Resources */}
+                    <div className={styles.mobileMenuItem}>
+                        <div
+                            className={styles.mobileMenuHeader}
+                            onClick={() => setExpandedMobileMenu(expandedMobileMenu === 'resources' ? null : 'resources')}
+                        >
+                            {nav.resources}
+                            <svg
+                                className={`${styles.chevron} ${expandedMobileMenu === 'resources' ? styles.chevronRotate : ''}`}
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"
+                            >
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </div>
+                        <div className={`${styles.mobileSubmenu} ${expandedMobileMenu === 'resources' ? styles.mobileSubmenuOpen : ''}`}>
+                            <Link href="/docs" className={styles.mobileSublink} onClick={() => setIsMenuOpen(false)}>API Documentation</Link>
+                            <Link href="/status" className={styles.mobileSublink} onClick={() => setIsMenuOpen(false)}>Server Status</Link>
+                            <Link href="/blog" className={styles.mobileSublink} onClick={() => setIsMenuOpen(false)}>The Blog</Link>
+                        </div>
+                    </div>
+
+                    <Link href="/pricing" className={styles.mobileMenuDirectLink} onClick={() => setIsMenuOpen(false)}>
+                        {nav.pricing}
+                    </Link>
+
+                    {/* Company */}
+                    <div className={styles.mobileMenuItem}>
+                        <div
+                            className={styles.mobileMenuHeader}
+                            onClick={() => setExpandedMobileMenu(expandedMobileMenu === 'company' ? null : 'company')}
+                        >
+                            {nav.company}
+                            <svg
+                                className={`${styles.chevron} ${expandedMobileMenu === 'company' ? styles.chevronRotate : ''}`}
+                                viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"
+                            >
+                                <path d="M6 9l6 6 6-6" />
+                            </svg>
+                        </div>
+                        <div className={`${styles.mobileSubmenu} ${expandedMobileMenu === 'company' ? styles.mobileSubmenuOpen : ''}`}>
+                            <Link href="/company/manifesto" className={styles.mobileSublink} onClick={() => setIsMenuOpen(false)}>Manifesto</Link>
+                            <Link href="/company/contact" className={styles.mobileSublink} onClick={() => setIsMenuOpen(false)}>Contact</Link>
+                        </div>
+                    </div>
+
+                    <div style={{ marginTop: '2rem' }}>
+                        <Link href="/get-started" className={styles.mobileCtaButton} onClick={() => setIsMenuOpen(false)}>
+                            Get Started
+                        </Link>
+                    </div>
                 </div>
             </div>
         </header>

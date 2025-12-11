@@ -62,7 +62,7 @@ export default function Home() {
     '@type': 'Organization',
     name: 'FxTrusts',
     url: 'https://fxtrusts.com',
-    logo: 'https://fxtrusts.com/fxtrusts_logo_v2.png',
+    logo: 'https://fxtrusts.com/logo.png',
     sameAs: [
       'https://twitter.com/fxtrusts',
       'https://www.linkedin.com/company/fxtrusts',

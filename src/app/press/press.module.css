@@ -1,0 +1,170 @@
+.main {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #0A0A0F 0%, #1a1a2e 50%, #0A0A0F 100%);
+}
+
+.hero {
+    padding: 8rem 0 4rem;
+    text-align: center;
+    background: linear-gradient(180deg, rgba(212, 175, 55, 0.05) 0%, transparent 100%);
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.title {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 800;
+    color: #FFFFFF;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+}
+
+.subtitle {
+    font-size: 1.25rem;
+    color: rgba(255, 255, 255, 0.7);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+.section {
+    padding: 4rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.section:last-child {
+    border-bottom: none;
+}
+
+.sectionTitle {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #D4AF37;
+    margin-bottom: 1.5rem;
+}
+
+.intro {
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.factsTable {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.factsTable th,
+.factsTable td {
+    padding: 1rem 1.25rem;
+    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.factsTable th {
+    width: 30%;
+    font-weight: 600;
+    color: #D4AF37;
+    background: rgba(212, 175, 55, 0.05);
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.factsTable td {
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+}
+
+.factsTable tr:last-child th,
+.factsTable tr:last-child td {
+    border-bottom: none;
+}
+
+.factsTable tr:hover {
+    background: rgba(212, 175, 55, 0.03);
+}
+
+.factsList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.factsList li {
+    padding: 1rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.factsList li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: #D4AF37;
+}
+
+.factsList li:last-child {
+    border-bottom: none;
+}
+
+.statement {
+    font-size: 1.125rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.8;
+    padding: 1.5rem;
+    background: rgba(212, 175, 55, 0.05);
+    border-left: 3px solid #D4AF37;
+    border-radius: 0 8px 8px 0;
+}
+
+.contactCard {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 2rem;
+}
+
+.contactCard p {
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0.75rem 0;
+    font-size: 1.05rem;
+}
+
+.contactCard strong {
+    color: #D4AF37;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        padding: 6rem 0 3rem;
+    }
+
+    .factsTable th,
+    .factsTable td {
+        display: block;
+        width: 100%;
+    }
+
+    .factsTable th {
+        padding-bottom: 0.5rem;
+    }
+
+    .factsTable td {
+        padding-top: 0;
+        padding-bottom: 1.5rem;
+    }
+}

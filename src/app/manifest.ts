@@ -16,7 +16,7 @@ export default function manifest(): MetadataRoute.Manifest {
                 type: 'image/png',
             },
             {
-                src: '/fxtrusts_logo_v2.png',
+                src: '/logo.png',
                 sizes: '512x512',
                 type: 'image/png',
             },

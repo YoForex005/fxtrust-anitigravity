@@ -14,6 +14,20 @@ export const metadata: Metadata = {
         "b2b forex broker solutions",
         "white label forex broker cost"
     ],
+    openGraph: {
+        title: "B2Broker Alternative | FxTrusts vs B2Broker Comparison | FxTrusts",
+        description: "Detailed comparison of FxTrusts and B2Broker. Compare pricing, features, support response times, and integration capabilities for forex brokerage solutions.",
+        type: "article",
+        url: "https://fxtrusts.com/resources/comparisons/b2broker-alternative",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "B2Broker Alternative | FxTrusts vs B2Broker Comparison | FxTrusts",
+        description: "Detailed comparison of FxTrusts and B2Broker. Compare pricing, features, support response times, and integration capabilities for forex brokerage solutions.",
+    },
+    alternates: {
+        canonical: "https://fxtrusts.com/resources/comparisons/b2broker-alternative",
+    },
 };
 
 export default function ComparisonPage() {

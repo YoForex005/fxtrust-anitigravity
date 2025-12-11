@@ -14,7 +14,7 @@ function TradingViewWidget({ symbol = "OANDA:XAUUSD", interval = "D" }: TradingV
     if (container.current) {
       // Clear previous widget
       container.current.innerHTML = '';
-      
+
       // Create widget container
       const widgetDiv = document.createElement('div');
       widgetDiv.className = 'tradingview-widget-container__widget';
@@ -26,7 +26,7 @@ function TradingViewWidget({ symbol = "OANDA:XAUUSD", interval = "D" }: TradingV
       const copyrightDiv = document.createElement('div');
       copyrightDiv.className = 'tradingview-widget-copyright';
       copyrightDiv.style.cssText = 'font-size: 11px; color: #6b7280; text-align: center; padding: 4px;';
-      copyrightDiv.innerHTML = '<a href="https://www.tradingview.com/" rel="noopener nofollow" target="_blank" style="color: #3b82f6; text-decoration: none;"><span>Track all markets on TradingView</span></a>';
+      copyrightDiv.innerHTML = '<a href="https://www.tradingview.com/" rel="noopener noreferrer nofollow" target="_blank" style="color: #3b82f6; text-decoration: none;"><span>Track all markets on TradingView</span></a>';
       container.current.appendChild(copyrightDiv);
 
       // Create script
@@ -64,9 +64,9 @@ function TradingViewWidget({ symbol = "OANDA:XAUUSD", interval = "D" }: TradingV
   }, [symbol, interval]);
 
   return (
-    <div 
-      className="tradingview-widget-container" 
-      ref={container} 
+    <div
+      className="tradingview-widget-container"
+      ref={container}
       style={{ height: "100%", width: "100%" }}
     />
   );

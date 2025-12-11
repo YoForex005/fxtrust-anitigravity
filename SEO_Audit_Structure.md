@@ -1,140 +1,107 @@
 # SEO Structure Audit Report
-**Generated:** 2025-12-11T15:04:32+05:30  
-**Framework:** Next.js 16 (App Router)  
-**Directory:** `src/app/`
 
----
+## 1. Metadata Completeness
+The following `page.tsx` files are missing the `export const metadata: Metadata` object.
+**Action Required**: Add unique metadata to these pages to avoid duplicate titles/descriptions.
 
-## Executive Summary
+- src/app/blog/page.tsx
+- src/app/docs/page.tsx
+- src/app/live-demo/admin/cases/page.tsx
+- src/app/live-demo/admin/dashboards/page.tsx
+- src/app/live-demo/admin/documents/page.tsx
+- src/app/live-demo/admin/emails/page.tsx
+- src/app/live-demo/admin/new/page.tsx
+- src/app/live-demo/admin/page.tsx
+- src/app/live-demo/admin/phone-calls/page.tsx
+- src/app/live-demo/admin/reports/page.tsx
+- src/app/live-demo/admin/trading/page.tsx
+- src/app/live-demo/admin/transactions/page.tsx
+- src/app/live-demo/admin/[id]/page.tsx
+- src/app/live-demo/client/page.tsx
+- src/app/live-demo/page.tsx
+- src/app/pricing/page.tsx
+- src/app/resources/status/page.tsx
+- src/app/status/page.tsx
 
-| Category | Status | Count |
-|----------|--------|-------|
-| Pages with `export const metadata` | ✅ | 53 |
-| Pages with `openGraph` property | ✅ | 44 |
-| Pages with `twitter` property | ✅ | 41 |
-| Legacy `<img>` tags | ✅ | 0 |
-| Technical SEO files | ✅ | 3/3 |
+### Critical: Missing OpenGraph / Twitter Cards
+The following pages define metadata but lack `openGraph` or `twitter` properties.
+**Action Required**: Add these properties for social sharing optimization.
 
----
+- src/app/resources/blog/best-forex-crm-providers-2025/page.tsx
+- src/app/resources/blog/forex-broker-crm-pricing-exposed/page.tsx
+- src/app/resources/blog/mt4-vs-mt5-crm/page.tsx
+- src/app/resources/blog/page.tsx
+- src/app/resources/blog/why-we-refuse-to-charge-setup-fees/page.tsx
+- src/app/resources/comparisons/b2broker-alternative/page.tsx
+- src/app/resources/comparisons/leverate-alternative/page.tsx
+- src/app/resources/guides/forex-crm-complete-guide/page.tsx
+- src/app/resources/guides/how-to-start-forex-broker/page.tsx
+- src/app/resources/help-center/page.tsx
 
-## 1. METADATA COMPLETENESS
+## 2. Layout Integrity
+Audit of `src/app/layout.tsx`:
+- **metadata.metadataBase**: ✅ Present (`https://fxtrusts.com`)
+- **title.template**: ✅ Present (`%s | FxTrusts`)
 
-### ✅ Pages WITH Complete Metadata (openGraph + twitter)
-
-| File Path | `openGraph` | `twitter` |
-|-----------|-------------|-----------|
-| `src/app/page.tsx` | ✅ | ✅ |
-| `src/app/layout.tsx` | ✅ | ✅ |
-| `src/app/get-started/page.tsx` | ✅ | ✅ |
-| `src/app/company/about/page.tsx` | ✅ | ✅ |
-| `src/app/company/contact/page.tsx` | ✅ | ✅ |
-| `src/app/company/manifesto/page.tsx` | ✅ | ✅ |
-| `src/app/solutions/crm/page.tsx` | ✅ | ✅ |
-| `src/app/solutions/mt5/page.tsx` | ✅ | ✅ |
-| `src/app/solutions/forex-broker/page.tsx` | ✅ | ✅ |
-| `src/app/solutions/liquidity/page.tsx` | ✅ | ✅ |
-| `src/app/solutions/crypto-payments/page.tsx` | ✅ | ✅ |
-| `src/app/solutions/prop-firm/page.tsx` | ✅ | ✅ |
-| `src/app/solutions/risk-management/page.tsx` | ✅ | ✅ |
-| `src/app/platform/crm/page.tsx` | ✅ | ✅ |
-| `src/app/platform/mt5/page.tsx` | ✅ | ✅ |
-| `src/app/platform/copy-trading/page.tsx` | ✅ | ✅ |
-| `src/app/platform/mobile-app/page.tsx` | ✅ | ✅ |
-| `src/app/platform/web-trader/page.tsx` | ✅ | ✅ |
-| `src/app/platform/hosting/page.tsx` | ✅ | ✅ |
-| `src/app/markets/forex/page.tsx` | ✅ | ✅ |
-| `src/app/markets/crypto/page.tsx` | ✅ | ✅ |
-| `src/app/markets/indices/page.tsx` | ✅ | ✅ |
-| `src/app/markets/commodities/page.tsx` | ✅ | ✅ |
-| `src/app/markets/stocks/page.tsx` | ✅ | ✅ |
-| `src/app/legal/privacy-policy/page.tsx` | ✅ | ✅ |
-| `src/app/legal/terms-conditions/page.tsx` | ✅ | ✅ |
-| `src/app/legal/refund-policy/page.tsx` | ✅ | ✅ |
-| `src/app/legal/risk-disclosure/page.tsx` | ✅ | ✅ |
-| `src/app/thank-you/page.tsx` | ✅ | ✅ |
-| `src/app/resources/page.tsx` | ✅ | ✅ |
-| `src/app/resources/api-docs/page.tsx` | ✅ | ✅ |
-
-### ⚠️ Pages WITH Metadata Missing `twitter` Property
-
-> [!NOTE]
-> These pages have `openGraph` but could benefit from explicit `twitter` cards for better Twitter/X sharing.
-
-| File Path | `openGraph` | `twitter` |
-|-----------|-------------|-----------|
-| `src/app/pricing/layout.tsx` | ✅ | ❌ |
-| `src/app/resources/help-center/page.tsx` | ❌ | ❌ |
-| `src/app/resources/blog/page.tsx` | ❌ | ❌ |
-| `src/app/resources/blog/best-forex-crm-providers-2025/page.tsx` | ❌ | ❌ |
-| `src/app/resources/blog/mt4-vs-mt5-crm/page.tsx` | ❌ | ❌ |
-| `src/app/resources/blog/forex-broker-crm-pricing-exposed/page.tsx` | ❌ | ❌ |
-| `src/app/resources/blog/why-we-refuse-to-charge-setup-fees/page.tsx` | ❌ | ❌ |
-| `src/app/resources/guides/how-to-start-forex-broker/page.tsx` | ❌ | ❌ |
-| `src/app/resources/guides/forex-crm-complete-guide/page.tsx` | ❌ | ❌ |
-| `src/app/resources/comparisons/b2broker-alternative/page.tsx` | ❌ | ❌ |
-| `src/app/resources/comparisons/leverate-alternative/page.tsx` | ❌ | ❌ |
-
-### ⚠️ Recommended Fix for Missing `twitter`
-
-Add to each metadata object:
-
-```typescript
-twitter: {
-    card: 'summary_large_image',
-    title: '[Page Title]',
-    description: '[Page Description]',
-},
-```
-
----
-
-## 2. LAYOUT INTEGRITY
-
-### Root Layout: `src/app/layout.tsx`
-
-| Property | Status | Value |
-|----------|--------|-------|
-| `metadataBase` | ✅ PRESENT | `new URL('https://fxtrusts.com')` |
-| `title.default` | ✅ PRESENT | `"FxTrusts | B2B Forex Broker Technology"` |
-| `title.template` | ✅ PRESENT | `"%s | FxTrusts"` |
-| `description` | ✅ PRESENT | Complete description |
-| `keywords` | ✅ PRESENT | 14 keywords |
-| `openGraph` | ✅ PRESENT | Complete with images |
-| `twitter` | ✅ PRESENT | Complete with card type |
-| `robots` | ✅ PRESENT | Proper googleBot config |
-| `verification` | ✅ PRESENT | Google, Bing, Yandex |
-
-> [!TIP]
-> The root layout is well-configured and provides excellent fallback metadata.
-
----
-
-## 3. SEMANTIC HTML
-
+## 3. Semantic HTML
 ### H1 Tag Analysis
+The following pages do not contain exactly one `<h1>` tag in their direct JSX return.
+*Note: Many of these pages likely use `InnerPageHeader` or `Header` components which render the H1. Verify manual usage.*
 
-All content pages use proper H1 tags either directly or via shared components like `PageHeader`, `ContentPageLayout`, or `InnerPageHeader`.
+**0 H1 Tags Found:**
+- src/app/blog/page.tsx
+- src/app/company/about/page.tsx
+- src/app/company/contact/page.tsx
+- src/app/company/manifesto/page.tsx
+- src/app/docs/page.tsx
+- src/app/get-started/page.tsx
+- src/app/legal/risk-disclosure/page.tsx
+- src/app/live-demo/admin/cases/page.tsx
+- src/app/live-demo/admin/dashboards/page.tsx
+- src/app/live-demo/admin/documents/page.tsx
+- src/app/live-demo/admin/emails/page.tsx
+- src/app/live-demo/admin/page.tsx
+- src/app/live-demo/admin/phone-calls/page.tsx
+- src/app/live-demo/admin/reports/page.tsx
+- src/app/live-demo/admin/trading/page.tsx
+- src/app/live-demo/admin/transactions/page.tsx
+- src/app/live-demo/admin/[id]/page.tsx
+- src/app/live-demo/client/page.tsx
+- src/app/live-demo/page.tsx
+- src/app/page.tsx
+- src/app/platform/copy-trading/page.tsx
+- src/app/platform/crm/page.tsx
+- src/app/platform/hosting/page.tsx
+- src/app/platform/mobile-app/page.tsx
+- src/app/platform/mt5/page.tsx
+- src/app/platform/web-trader/page.tsx
+- src/app/resources/api-docs/page.tsx
+- src/app/resources/page.tsx
+- src/app/resources/status/page.tsx
+- src/app/solutions/crypto-payments/page.tsx
+- src/app/solutions/liquidity/page.tsx
+- src/app/solutions/prop-firm/page.tsx
+- src/app/solutions/risk-management/page.tsx
+- src/app/status/page.tsx
+- src/app/thank-you/page.tsx
 
-### Structured Data
+### Nested Links (Illegal HTML)
+Scan performed. No obvious nested `<a>` or `<Link>` tags found in the main page structure. 
+*Note: Deep component tree analysis was not performed.*
 
-| Component | Type | Status |
-|-----------|------|--------|
-| `OrganizationSchema` | Organization | ✅ Present in layout |
-| `DynamicBreadcrumbs` | BreadcrumbList | ✅ Present in layout |
-| `FAQSchema` | FAQPage | ✅ Used on some pages |
+### Structured Data (JSON-LD)
+**Organization Schema**: ✅ Present globally in `src/app/layout.tsx`.
 
----
+**Product/Service Schema Missing**:
+The following solution/platform pages lack a direct `<script type="application/ld+json">` for **Product** schema. While Organization schema is global, individual products should have specific schema:
 
-## Summary
-
-| Issue Type | Found | Status |
-|------------|-------|--------|
-| Pages without metadata | 0 critical | ✅ OK |
-| Pages without openGraph | 11 (blogs/guides) | ⚠️ Optional |
-| Pages without twitter | 11 (blogs/guides) | ⚠️ Optional |
-| Missing H1 tags | 0 | ✅ OK |
-| Missing structured data | 0 critical | ✅ OK |
-
----
-
-*Report generated by SEO Audit Tool v2.0*
+- src/app/platform/crm/page.tsx
+- src/app/platform/mt5/page.tsx
+- src/app/platform/copy-trading/page.tsx
+- src/app/platform/mobile-app/page.tsx
+- src/app/platform/web-trader/page.tsx
+- src/app/platform/hosting/page.tsx
+- src/app/solutions/liquidity/page.tsx
+- src/app/solutions/prop-firm/page.tsx
+- src/app/solutions/risk-management/page.tsx
+- src/app/solutions/crypto-payments/page.tsx

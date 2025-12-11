@@ -1,0 +1,236 @@
+{
+  "MISSING_METADATA": [
+    "src\\app\\blog\\page.tsx",
+    "src\\app\\docs\\page.tsx",
+    "src\\app\\live-demo\\admin\\cases\\page.tsx",
+    "src\\app\\live-demo\\admin\\dashboards\\page.tsx",
+    "src\\app\\live-demo\\admin\\documents\\page.tsx",
+    "src\\app\\live-demo\\admin\\emails\\page.tsx",
+    "src\\app\\live-demo\\admin\\new\\page.tsx",
+    "src\\app\\live-demo\\admin\\page.tsx",
+    "src\\app\\live-demo\\admin\\phone-calls\\page.tsx",
+    "src\\app\\live-demo\\admin\\reports\\page.tsx",
+    "src\\app\\live-demo\\admin\\trading\\page.tsx",
+    "src\\app\\live-demo\\admin\\transactions\\page.tsx",
+    "src\\app\\live-demo\\admin\\[id]\\page.tsx",
+    "src\\app\\live-demo\\client\\page.tsx",
+    "src\\app\\live-demo\\page.tsx",
+    "src\\app\\pricing\\page.tsx",
+    "src\\app\\resources\\status\\page.tsx",
+    "src\\app\\status\\page.tsx"
+  ],
+  "MISSING_OG_TWITTER": [
+    "src\\app\\resources\\blog\\best-forex-crm-providers-2025\\page.tsx",
+    "src\\app\\resources\\blog\\forex-broker-crm-pricing-exposed\\page.tsx",
+    "src\\app\\resources\\blog\\mt4-vs-mt5-crm\\page.tsx",
+    "src\\app\\resources\\blog\\page.tsx",
+    "src\\app\\resources\\blog\\why-we-refuse-to-charge-setup-fees\\page.tsx",
+    "src\\app\\resources\\comparisons\\b2broker-alternative\\page.tsx",
+    "src\\app\\resources\\comparisons\\leverate-alternative\\page.tsx",
+    "src\\app\\resources\\guides\\forex-crm-complete-guide\\page.tsx",
+    "src\\app\\resources\\guides\\how-to-start-forex-broker\\page.tsx",
+    "src\\app\\resources\\help-center\\page.tsx"
+  ],
+  "BAD_H1": [
+    {
+      "file": "src\\app\\blog\\page.tsx",
+      "count": 0
+    },
+    {
+      "file": "src\\app\\company\\about\\page.tsx",
+      "count": 0
+    },
+    {
+      "file": "src\\app\\company\\contact\\page.tsx",
+      "count": 0
+    },
+    {
+      "file": "src\\app\\company\\manifesto\\page.tsx",
+      "count": 0
+    },
+    {
+      "file": "src\\app\\docs\\page.tsx",
+      "count": 0
+    },
+    {
+      "file": "src\\app\\get-started\\page.tsx",
+      "count": 0
+    },
+    {
+      "file": "src\\app\\legal\\risk-disclosure\\page.tsx",
+      "count": 0
+    },
+    {
+      "file": "src\\app\\live-demo\\admin\\cases\\page.tsx",
+      "count": 0
+    },
+    {
+      "file": "src\\app\\live-demo\\admin\\dashboards\\page.tsx",
+      "count": 0
+    },
+    {
+      "file": "src\\app\\live-demo\\admin\\documents\\page.tsx",
+      "count": 0
+    },
+    {
+      "file": "src\\app\\live-demo\\admin\\emails\\page.tsx",
+      "count": 0
+    },
+    {
+      "file": "src\\app\\live-demo\\admin\\page.tsx",
+      "count": 0
+    },
+    {
+      "file": "src\\app\\live-demo\\admin\\phone-calls\\page.tsx",
+      "count": 0
+    },
+    {
+      "file": "src\\app\\live-demo\\admin\\reports\\page.tsx",
+      "count": 0
+    },
+    {
+      "file": "src\\app\\live-demo\\admin\\trading\\page.tsx",
+      "count": 0
+    },
+    {
+      "file": "src\\app\\live-demo\\admin\\transactions\\page.tsx",
+      "count": 0
+    },
+    {
+      "file": "src\\app\\live-demo\\admin\\[id]\\page.tsx",
+      "count": 0
+    },
+    {
+      "file": "src\\app\\live-demo\\client\\page.tsx",
+      "count": 0
+    },
+    {
+      "file": "src\\app\\live-demo\\page.tsx",
+      "count": 0
+    },
+    {
+      "file": "src\\app\\page.tsx",
+      "count": 0
+    },
+    {
+      "file": "src\\app\\platform\\copy-trading\\page.tsx",
+      "count": 0
+    },
+    {
+      "file": "src\\app\\platform\\crm\\page.tsx",
+      "count": 0
+    },
+    {
+      "file": "src\\app\\platform\\hosting\\page.tsx",
+      "count": 0
+    },
+    {
+      "file": "src\\app\\platform\\mobile-app\\page.tsx",
+      "count": 0
+    },
+    {
+      "file": "src\\app\\platform\\mt5\\page.tsx",
+      "count": 0
+    },
+    {
+      "file": "src\\app\\platform\\web-trader\\page.tsx",
+      "count": 0
+    },
+    {
+      "file": "src\\app\\resources\\api-docs\\page.tsx",
+      "count": 0
+    },
+    {
+      "file": "src\\app\\resources\\page.tsx",
+      "count": 0
+    },
+    {
+      "file": "src\\app\\resources\\status\\page.tsx",
+      "count": 0
+    },
+    {
+      "file": "src\\app\\solutions\\crypto-payments\\page.tsx",
+      "count": 0
+    },
+    {
+      "file": "src\\app\\solutions\\liquidity\\page.tsx",
+      "count": 0
+    },
+    {
+      "file": "src\\app\\solutions\\prop-firm\\page.tsx",
+      "count": 0
+    },
+    {
+      "file": "src\\app\\solutions\\risk-management\\page.tsx",
+      "count": 0
+    },
+    {
+      "file": "src\\app\\status\\page.tsx",
+      "count": 0
+    },
+    {
+      "file": "src\\app\\thank-you\\page.tsx",
+      "count": 0
+    }
+  ],
+  "MISSING_JSONLD": [
+    "src\\app\\blog\\page.tsx",
+    "src\\app\\company\\about\\page.tsx",
+    "src\\app\\company\\contact\\page.tsx",
+    "src\\app\\company\\manifesto\\page.tsx",
+    "src\\app\\docs\\page.tsx",
+    "src\\app\\get-started\\page.tsx",
+    "src\\app\\legal\\privacy-policy\\page.tsx",
+    "src\\app\\legal\\refund-policy\\page.tsx",
+    "src\\app\\legal\\risk-disclosure\\page.tsx",
+    "src\\app\\legal\\terms-conditions\\page.tsx",
+    "src\\app\\live-demo\\admin\\cases\\page.tsx",
+    "src\\app\\live-demo\\admin\\dashboards\\page.tsx",
+    "src\\app\\live-demo\\admin\\documents\\page.tsx",
+    "src\\app\\live-demo\\admin\\emails\\page.tsx",
+    "src\\app\\live-demo\\admin\\new\\page.tsx",
+    "src\\app\\live-demo\\admin\\page.tsx",
+    "src\\app\\live-demo\\admin\\phone-calls\\page.tsx",
+    "src\\app\\live-demo\\admin\\reports\\page.tsx",
+    "src\\app\\live-demo\\admin\\trading\\page.tsx",
+    "src\\app\\live-demo\\admin\\transactions\\page.tsx",
+    "src\\app\\live-demo\\admin\\[id]\\page.tsx",
+    "src\\app\\live-demo\\client\\page.tsx",
+    "src\\app\\live-demo\\page.tsx",
+    "src\\app\\markets\\commodities\\page.tsx",
+    "src\\app\\markets\\crypto\\page.tsx",
+    "src\\app\\markets\\forex\\page.tsx",
+    "src\\app\\markets\\indices\\page.tsx",
+    "src\\app\\markets\\stocks\\page.tsx",
+    "src\\app\\platform\\copy-trading\\page.tsx",
+    "src\\app\\platform\\crm\\page.tsx",
+    "src\\app\\platform\\hosting\\page.tsx",
+    "src\\app\\platform\\mobile-app\\page.tsx",
+    "src\\app\\platform\\mt5\\page.tsx",
+    "src\\app\\platform\\web-trader\\page.tsx",
+    "src\\app\\press\\page.tsx",
+    "src\\app\\pricing\\page.tsx",
+    "src\\app\\resources\\api-docs\\page.tsx",
+    "src\\app\\resources\\blog\\a-book-vs-b-book-explained\\page.tsx",
+    "src\\app\\resources\\blog\\forex-broker-crm-pricing-exposed\\page.tsx",
+    "src\\app\\resources\\blog\\forex-crm-pricing-decoded\\page.tsx",
+    "src\\app\\resources\\blog\\forex-liquidity-providers-guide\\page.tsx",
+    "src\\app\\resources\\blog\\how-to-start-forex-brokerage-2025\\page.tsx",
+    "src\\app\\resources\\blog\\how-to-start-prop-firm-2025\\page.tsx",
+    "src\\app\\resources\\blog\\mt5-white-label-complete-guide\\page.tsx",
+    "src\\app\\resources\\blog\\page.tsx",
+    "src\\app\\resources\\blog\\why-we-refuse-to-charge-setup-fees\\page.tsx",
+    "src\\app\\resources\\help-center\\page.tsx",
+    "src\\app\\resources\\page.tsx",
+    "src\\app\\resources\\status\\page.tsx",
+    "src\\app\\solutions\\crm\\page.tsx",
+    "src\\app\\solutions\\crypto-payments\\page.tsx",
+    "src\\app\\solutions\\forex-broker\\page.tsx",
+    "src\\app\\solutions\\liquidity\\page.tsx",
+    "src\\app\\solutions\\mt5\\page.tsx",
+    "src\\app\\solutions\\prop-firm\\page.tsx",
+    "src\\app\\solutions\\risk-management\\page.tsx",
+    "src\\app\\status\\page.tsx",
+    "src\\app\\thank-you\\page.tsx"
+  ]
+}

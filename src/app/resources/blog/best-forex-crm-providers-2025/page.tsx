@@ -17,6 +17,20 @@ export const metadata: Metadata = {
         "forex crm provider",
         "forex broker crm"
     ],
+    openGraph: {
+        title: "10 Best Forex CRM Providers 2025 | Reviews & Comparison",
+        description: "Independent review of top Forex CRM systems including FxTrusts, Leverate, B2Broker, and Evergreen. Feature comparison, pricing analysis, and recommendations.",
+        type: "article",
+        url: "https://fxtrusts.com/resources/blog/best-forex-crm-providers-2025",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "10 Best Forex CRM Providers 2025 | Reviews & Comparison",
+        description: "Independent review of top Forex CRM systems including FxTrusts, Leverate, B2Broker, and Evergreen. Feature comparison, pricing analysis, and recommendations.",
+    },
+    alternates: {
+        canonical: "https://fxtrusts.com/resources/blog/best-forex-crm-providers-2025",
+    },
 };
 
 export default function BestCRMPage() {

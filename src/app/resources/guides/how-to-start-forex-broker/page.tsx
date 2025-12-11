@@ -24,6 +24,20 @@ export const metadata: Metadata = {
         "white label forex broker",
         "forex broker startup",
     ],
+    openGraph: {
+        title: "How to Start a Forex Brokerage | How to Become a Forex Broker | FxTrusts",
+        description: "Step-by-step guide to starting a forex brokerage. How to become a forex broker, start a forex trading company, set up forex broker business with complete planning.",
+        type: "article",
+        url: "https://fxtrusts.com/resources/guides/how-to-start-forex-broker",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "How to Start a Forex Brokerage | How to Become a Forex Broker | FxTrusts",
+        description: "Step-by-step guide to starting a forex brokerage. How to become a forex broker, start a forex trading company, set up forex broker business with complete planning.",
+    },
+    alternates: {
+        canonical: "https://fxtrusts.com/resources/guides/how-to-start-forex-broker",
+    },
 };
 
 export default function GuidePage() {

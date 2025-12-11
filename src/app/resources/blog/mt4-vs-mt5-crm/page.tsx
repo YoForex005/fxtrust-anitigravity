@@ -15,6 +15,20 @@ export const metadata: Metadata = {
         "mt5 webapi",
         "forex crm integration"
     ],
+    openGraph: {
+        title: "MT4 vs MT5 CRM Integration | Technical Architecture Guide | FxTrusts",
+        description: "Technical guide on integrating CRM with MetaTrader. Covers MT4 Manager API, MT5 WebAPI, authentication protocols, and integration best practices.",
+        type: "article",
+        url: "https://fxtrusts.com/resources/blog/mt4-vs-mt5-crm",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "MT4 vs MT5 CRM Integration | Technical Architecture Guide | FxTrusts",
+        description: "Technical guide on integrating CRM with MetaTrader. Covers MT4 Manager API, MT5 WebAPI, authentication protocols, and integration best practices.",
+    },
+    alternates: {
+        canonical: "https://fxtrusts.com/resources/blog/mt4-vs-mt5-crm",
+    },
 };
 
 export default function MT4vsMT5Page() {

@@ -8,6 +8,20 @@ export const metadata: Metadata = {
     title: "Forex Broker Resources & Industry Insights | FxTrusts",
     description: "In-depth guides, technology reviews, and market analysis for Forex brokerage professionals. Expert resources on CRM systems, MT5 integration, and regulatory compliance.",
     keywords: ["forex broker resources", "forex crm reviews", "broker technology guides", "mt5 white label"],
+    openGraph: {
+        title: "Forex Broker Resources & Industry Insights | FxTrusts",
+        description: "In-depth guides, technology reviews, and market analysis for Forex brokerage professionals. Expert resources on CRM systems, MT5 integration, and regulatory compliance.",
+        type: "website",
+        url: "https://fxtrusts.com/resources/blog",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Forex Broker Resources & Industry Insights | FxTrusts",
+        description: "In-depth guides, technology reviews, and market analysis for Forex brokerage professionals. Expert resources on CRM systems, MT5 integration, and regulatory compliance.",
+    },
+    alternates: {
+        canonical: "https://fxtrusts.com/resources/blog",
+    },
 };
 
 export default function BlogIndex() {

@@ -28,6 +28,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '/company/about',
         '/company/contact',
         '/company/manifesto',
+        '/press',
         '/pricing',
         '/resources/help-center',
         '/resources/api-docs',

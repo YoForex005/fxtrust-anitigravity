@@ -6,6 +6,20 @@ export const metadata: Metadata = {
     title: 'Help Center | Support Resources | FxTrusts',
     description: 'Comprehensive support resources for FxTrusts platform. Getting started guides, troubleshooting, settings, and frequently asked questions.',
     keywords: ['forex help', 'broker support', 'FxTrusts help', 'trading support', 'help center'],
+    openGraph: {
+        title: 'Help Center | Support Resources | FxTrusts',
+        description: 'Comprehensive support resources for FxTrusts platform. Getting started guides, troubleshooting, settings, and frequently asked questions.',
+        type: 'website',
+        url: 'https://fxtrusts.com/resources/help-center',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Help Center | Support Resources | FxTrusts',
+        description: 'Comprehensive support resources for FxTrusts platform. Getting started guides, troubleshooting, settings, and frequently asked questions.',
+    },
+    alternates: {
+        canonical: 'https://fxtrusts.com/resources/help-center',
+    },
 };
 
 export default function HelpCenterPage() {

@@ -11,6 +11,20 @@ export const metadata: Metadata = {
     title: 'Investigative Report: Why Your Forex Broker CRM Costs More Than a Small Island | FxTrusts',
     description: 'An "official" investigation into why competitors charge $5,000 setup fees while FxTrusts charges $0. Warning: Contains satire and shocking financial common sense.',
     keywords: ['forex broker crm', 'forex crm pricing', 'start a forex broker', 'forex broker setup fee', 'b2broker alternative'],
+    openGraph: {
+        title: 'Investigative Report: Why Your Forex Broker CRM Costs More Than a Small Island | FxTrusts',
+        description: 'An "official" investigation into why competitors charge $5,000 setup fees while FxTrusts charges $0. Warning: Contains satire and shocking financial common sense.',
+        type: 'article',
+        url: 'https://fxtrusts.com/resources/blog/forex-broker-crm-pricing-exposed',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Investigative Report: Why Your Forex Broker CRM Costs More Than a Small Island | FxTrusts',
+        description: 'An "official" investigation into why competitors charge $5,000 setup fees while FxTrusts charges $0. Warning: Contains satire and shocking financial common sense.',
+    },
+    alternates: {
+        canonical: 'https://fxtrusts.com/resources/blog/forex-broker-crm-pricing-exposed',
+    },
 };
 
 export default function ForexBrokerCrmExposed() {

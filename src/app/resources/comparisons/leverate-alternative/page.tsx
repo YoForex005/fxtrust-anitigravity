@@ -14,6 +14,20 @@ export const metadata: Metadata = {
         "best forex broker crm",
         "custom forex crm"
     ],
+    openGraph: {
+        title: "Leverate CRM Alternative | LXCRM vs FxTrusts | FxTrusts",
+        description: "Comparing Leverate LXCRM with modern alternatives. Detailed analysis of technology architecture, pricing, support, and migration considerations.",
+        type: "article",
+        url: "https://fxtrusts.com/resources/comparisons/leverate-alternative",
+    },
+    twitter: {
+        card: "summary_large_image",
+        title: "Leverate CRM Alternative | LXCRM vs FxTrusts | FxTrusts",
+        description: "Comparing Leverate LXCRM with modern alternatives. Detailed analysis of technology architecture, pricing, support, and migration considerations.",
+    },
+    alternates: {
+        canonical: "https://fxtrusts.com/resources/comparisons/leverate-alternative",
+    },
 };
 
 export default function LeverateComparisonPage() {

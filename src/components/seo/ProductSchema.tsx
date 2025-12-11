@@ -15,7 +15,7 @@ interface ProductSchemaProps {
 export default function ProductSchema({
     name,
     description,
-    image = 'https://fxtrusts.com/fxtrusts_logo_v2.png',
+    image = 'https://fxtrusts.com/logo.png',
     applicationCategory = 'FinanceApplication',
     operatingSystem = 'Web',
     price = '700', // Default to your base price
