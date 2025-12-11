@@ -88,5 +88,41 @@
     },
     "id": "1765437804135-f3e561c79240f",
     "createdAt": "2025-12-11T07:23:24.135Z"
+  },
+  {
+    "qualification": {
+      "businessModel": "retail_broker",
+      "status": "existing",
+      "techNeeds": "full_turnkey",
+      "timeline": "30_days"
+    },
+    "contact": {
+      "firstName": "Abhishek",
+      "lastName": "Kumar",
+      "email": "firkydost@gmail.com",
+      "companyName": "Udemy",
+      "phone": "+917061157939",
+      "telegram": ""
+    },
+    "id": "1765438674756-4b37b8806c3d2",
+    "createdAt": "2025-12-11T07:37:54.756Z"
+  },
+  {
+    "qualification": {
+      "businessModel": "retail_broker",
+      "status": "existing",
+      "techNeeds": "crm_only",
+      "timeline": "quarter"
+    },
+    "contact": {
+      "firstName": "Abhishek",
+      "lastName": "Kumar",
+      "email": "abhishek326kr@gmail.com",
+      "companyName": "Udemy",
+      "phone": "+917070465761",
+      "telegram": ""
+    },
+    "id": "1765438709402-543bc3d9d28dc8",
+    "createdAt": "2025-12-11T07:38:29.402Z"
   }
 ]

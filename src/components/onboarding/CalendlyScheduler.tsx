@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
 
 interface CalendlySchedulerProps {
     url: string;
@@ -9,49 +9,8 @@ interface CalendlySchedulerProps {
 }
 
 export default function CalendlyScheduler({ url, onEventScheduled, style }: CalendlySchedulerProps) {
-    const containerRef = useRef<HTMLDivElement | null>(null);
-
     useEffect(() => {
-        if (typeof window === 'undefined') return;
-
-        const cssHref = 'https://assets.calendly.com/assets/external/widget.css';
-        const scriptSrc = 'https://assets.calendly.com/assets/external/widget.js';
-
-        const existingLink = document.querySelector<HTMLLinkElement>(`link[href="${cssHref}"]`);
-        if (!existingLink) {
-            const link = document.createElement('link');
-            link.href = cssHref;
-            link.rel = 'stylesheet';
-            document.head.appendChild(link);
-        }
-
-        const initCalendly = () => {
-            const calendly = (window as any).Calendly;
-            if (!calendly || !containerRef.current) return;
-
-            containerRef.current.innerHTML = '';
-
-            calendly.initInlineWidget({
-                url,
-                parentElement: containerRef.current,
-            });
-        };
-
-        const existingScript = document.querySelector<HTMLScriptElement>(`script[src="${scriptSrc}"]`);
-
-        if (existingScript) {
-            if ((window as any).Calendly) {
-                initCalendly();
-            } else {
-                existingScript.addEventListener('load', initCalendly);
-            }
-        } else {
-            const script = document.createElement('script');
-            script.src = scriptSrc;
-            script.async = true;
-            script.onload = initCalendly;
-            document.body.appendChild(script);
-        }
+        if (typeof window === 'undefined' || !onEventScheduled) return;
 
         const handleMessage = (event: MessageEvent) => {
             const data: any = event.data;
@@ -64,7 +23,7 @@ export default function CalendlyScheduler({ url, onEventScheduled, style }: Cale
                 return;
             }
 
-            if (data.event === 'calendly.event_scheduled' && onEventScheduled) {
+            if (data.event === 'calendly.event_scheduled') {
                 onEventScheduled();
             }
         };
@@ -73,24 +32,23 @@ export default function CalendlyScheduler({ url, onEventScheduled, style }: Cale
 
         return () => {
             window.removeEventListener('message', handleMessage);
-
-            if (containerRef.current) {
-                containerRef.current.innerHTML = '';
-            }
         };
-    }, [url, onEventScheduled]);
+    }, [onEventScheduled]);
 
     const combinedStyle: React.CSSProperties = {
+        width: '100%',
         minWidth: '320px',
-        height: '1000px',
+        minHeight: '1000px',
+        border: '0',
         ...style,
     };
 
     return (
-        <div
-            ref={containerRef}
-            className="calendly-inline-widget"
+        <iframe
+            src={url}
             style={combinedStyle}
+            frameBorder={0}
+            title="Schedule a meeting"
         />
     );
 }
