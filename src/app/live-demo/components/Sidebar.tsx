@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import styles from '../demo.module.css';
 import { ViewType } from '../types';
 
@@ -252,7 +253,7 @@ export default function Sidebar({ activeTab, onTabChange, onViewChange, onSwitch
         <div className={styles.sidebar}>
             <div className={styles.logo}>
                 <div className={styles.logoIconWrapper}>
-                    <img src="/logo.png" alt="FxTrusts Logo" style={{ width: '24px', height: '24px', objectFit: 'contain' }} />
+                    <Image src="/logo.png" alt="FxTrusts Logo" width={24} height={24} style={{ objectFit: 'contain' }} />
                 </div>
                 <span className={styles.logoText}>FXTRUSTS ADMIN</span>
             </div>

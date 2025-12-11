@@ -12,6 +12,11 @@ export const metadata: Metadata = {
         type: 'website',
         url: 'https://fxtrusts.com/legal/terms-conditions',
     },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Terms & Conditions | FxTrusts',
+        description: 'Legal agreement governing your use of FxTrusts B2B broker technology services.',
+    },
     alternates: {
         canonical: 'https://fxtrusts.com/legal/terms-conditions',
     },

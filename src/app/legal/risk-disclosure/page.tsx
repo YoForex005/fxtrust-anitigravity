@@ -12,6 +12,11 @@ export const metadata: Metadata = {
         type: 'website',
         url: 'https://fxtrusts.com/legal/risk-disclosure',
     },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Risk Disclosure | Trading Risk Warning',
+        description: 'Important information about the risks of trading leveraged Forex and CFD products.',
+    },
     alternates: {
         canonical: 'https://fxtrusts.com/legal/risk-disclosure',
     },

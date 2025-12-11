@@ -30,6 +30,11 @@ export const metadata: Metadata = {
         type: 'website',
         url: 'https://fxtrusts.com/solutions/crm',
     },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Forex CRM Software | Built for Brokers',
+        description: 'Scalable CRM with automated KYC, multi-tier IB system, and complete client lifecycle management.',
+    },
     alternates: {
         canonical: 'https://fxtrusts.com/solutions/crm',
     },

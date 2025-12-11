@@ -6,6 +6,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     // Core pages
     const routes = [
         '',
+        '/get-started',
         '/platform/crm',
         '/platform/mt5',
         '/platform/copy-trading',
@@ -18,6 +19,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '/solutions/crypto-payments',
         '/solutions/prop-firm',
         '/solutions/risk-management',
+        '/solutions/forex-broker',
+        '/markets/forex',
+        '/markets/crypto',
+        '/markets/indices',
+        '/markets/commodities',
+        '/markets/stocks',
         '/company/about',
         '/company/contact',
         '/company/manifesto',
@@ -27,6 +34,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '/legal/privacy-policy',
         '/legal/terms-conditions',
         '/legal/refund-policy',
+        '/legal/risk-disclosure',
         '/resources/guides/how-to-start-forex-broker',
         '/resources/guides/forex-crm-complete-guide',
         '/resources',

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import styles from './client.module.css';
 import Sidebar from './components/Sidebar';
 import ClientHeader from './components/ClientHeader';
@@ -97,13 +98,13 @@ export default function ClientDashboard() {
   const [activeSidebarItem, setActiveSidebarItem] = useState('Home');
   const [selectedSymbol, setSelectedSymbol] = useState('XAUUSD');
   const [selectedTimeframe, setSelectedTimeframe] = useState('D');
-  
+
   // Trading State
   const [marketData, setMarketData] = useState(initialMarketData);
   const [volume, setVolume] = useState(0.01);
   const [takeProfit, setTakeProfit] = useState<string>('');
   const [stopLoss, setStopLoss] = useState<string>('');
-  
+
   // Paper Trading State
   const [balance, setBalance] = useState(10000);
   const [positions, setPositions] = useState<Position[]>([]);
@@ -125,7 +126,7 @@ export default function ClientDashboard() {
         const newSell = +(item.sell + randomChange).toFixed(item.sell < 100 ? 4 : 2);
         const spread = item.buy - item.sell;
         const newBuy = +(newSell + spread).toFixed(item.buy < 100 ? 4 : 2);
-        
+
         return {
           ...item,
           sell: newSell,
@@ -145,10 +146,10 @@ export default function ClientDashboard() {
       if (!symbolData) return pos;
 
       const currentPrice = pos.type === 'buy' ? symbolData.sell : symbolData.buy;
-      const priceDiff = pos.type === 'buy' 
-        ? currentPrice - pos.openPrice 
+      const priceDiff = pos.type === 'buy'
+        ? currentPrice - pos.openPrice
         : pos.openPrice - currentPrice;
-      
+
       const contractSize = contractSizes[pos.symbol] || 100000;
       const profit = priceDiff * pos.volume * contractSize;
 
@@ -218,10 +219,10 @@ export default function ClientDashboard() {
     if (!symbolData) return;
 
     const closePrice = position.type === 'buy' ? symbolData.sell : symbolData.buy;
-    const priceDiff = position.type === 'buy' 
-      ? closePrice - position.openPrice 
+    const priceDiff = position.type === 'buy'
+      ? closePrice - position.openPrice
       : position.openPrice - closePrice;
-    
+
     const contractSize = contractSizes[position.symbol] || 100000;
     const profit = priceDiff * position.volume * contractSize;
 
@@ -252,7 +253,7 @@ export default function ClientDashboard() {
     <div className={styles.dashboard}>
       {/* Header - Full Width at Top */}
       {/* Header - Full Width at Top */}
-      <ClientHeader 
+      <ClientHeader
         sidebarCollapsed={sidebarCollapsed}
         setSidebarCollapsed={setSidebarCollapsed}
         balance={balance}
@@ -263,7 +264,7 @@ export default function ClientDashboard() {
       {/* Body - Sidebar + Main Content */}
       <div className={styles.body}>
         {/* Left Sidebar */}
-        <Sidebar 
+        <Sidebar
           collapsed={sidebarCollapsed}
           activeItem={activeSidebarItem}
           onItemClick={setActiveSidebarItem}
@@ -315,8 +316,8 @@ export default function ClientDashboard() {
 
               <div className={styles.marketList}>
                 {filteredMarketData.map((item, index) => (
-                  <div 
-                    key={index} 
+                  <div
+                    key={index}
                     className={`${styles.marketItem} ${selectedSymbol === item.symbol ? styles.marketItemActive : ''}`}
                     onClick={() => handleSymbolClick(item.symbol)}
                   >
@@ -383,20 +384,20 @@ export default function ClientDashboard() {
 
                 <div className={styles.tradingBarRight}>
                   <div className={styles.volumeInput}>
-                    <input 
-                      type="number" 
-                      value={volume} 
+                    <input
+                      type="number"
+                      value={volume}
                       onChange={(e) => setVolume(parseFloat(e.target.value) || 0.01)}
-                      step="0.01" 
-                      min="0.01" 
+                      step="0.01"
+                      min="0.01"
                     />
                   </div>
-                  
+
                   <div className={styles.tpslCompact}>
                     <div className={styles.tpslField}>
                       <span>TP:</span>
-                      <input 
-                        type="number" 
+                      <input
+                        type="number"
                         placeholder="—"
                         value={takeProfit}
                         onChange={(e) => setTakeProfit(e.target.value)}
@@ -404,8 +405,8 @@ export default function ClientDashboard() {
                     </div>
                     <div className={styles.tpslField}>
                       <span>SL:</span>
-                      <input 
-                        type="number" 
+                      <input
+                        type="number"
                         placeholder="—"
                         value={stopLoss}
                         onChange={(e) => setStopLoss(e.target.value)}
@@ -414,19 +415,19 @@ export default function ClientDashboard() {
                   </div>
 
                   <div className={styles.chartTimeframes}>
-                    <button 
+                    <button
                       className={`${styles.tfBtn} ${selectedTimeframe === '1' ? styles.tfBtnActive : ''}`}
                       onClick={() => handleTimeframeClick('1')}
                     >1m</button>
-                    <button 
+                    <button
                       className={`${styles.tfBtn} ${selectedTimeframe === '5' ? styles.tfBtnActive : ''}`}
                       onClick={() => handleTimeframeClick('5')}
                     >5m</button>
-                    <button 
+                    <button
                       className={`${styles.tfBtn} ${selectedTimeframe === '60' ? styles.tfBtnActive : ''}`}
                       onClick={() => handleTimeframeClick('60')}
                     >1H</button>
-                    <button 
+                    <button
                       className={`${styles.tfBtn} ${selectedTimeframe === 'D' ? styles.tfBtnActive : ''}`}
                       onClick={() => handleTimeframeClick('D')}
                     >1D</button>
@@ -441,7 +442,7 @@ export default function ClientDashboard() {
 
               {/* TradingView Widget Container */}
               <div className={styles.chartContainer}>
-                <TradingViewWidget 
+                <TradingViewWidget
                   symbol={symbolMapping[selectedSymbol] || `OANDA:${selectedSymbol}`}
                   interval={selectedTimeframe}
                 />
@@ -450,13 +451,13 @@ export default function ClientDashboard() {
               {/* Positions Panel */}
               <div className={styles.positionsPanel}>
                 <div className={styles.positionsTabs}>
-                  <button 
+                  <button
                     className={`${styles.positionsTab} ${bottomTab === 'positions' ? styles.activeTab : ''}`}
                     onClick={() => setBottomTab('positions')}
                   >
                     Positions ({positions.length})
                   </button>
-                  <button 
+                  <button
                     className={`${styles.positionsTab} ${bottomTab === 'history' ? styles.activeTab : ''}`}
                     onClick={() => setBottomTab('history')}
                   >
@@ -507,7 +508,7 @@ export default function ClientDashboard() {
                                 {pos.profit >= 0 ? '+' : ''}${pos.profit.toFixed(2)}
                               </td>
                               <td>
-                                <button 
+                                <button
                                   className={styles.closeBtn}
                                   onClick={() => closePosition(pos.id)}
                                 >
@@ -583,9 +584,11 @@ export default function ClientDashboard() {
                   <div className={styles.tradersList}>
                     {socialData.map((trader, index) => (
                       <div key={index} className={styles.traderCard}>
-                        <img
+                        <Image
                           src={`https://api.dicebear.com/7.x/avataaars/svg?seed=${trader.avatar}`}
                           alt={trader.name}
+                          width={48}
+                          height={48}
                           className={styles.traderAvatar}
                         />
                         <div className={styles.traderInfo}>

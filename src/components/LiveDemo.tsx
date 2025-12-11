@@ -1,6 +1,7 @@
 'use client';
 
 import { useRouter } from 'next/navigation';
+import Image from 'next/image';
 import styles from './LiveDemo.module.css';
 
 export default function LiveDemo() {
@@ -41,9 +42,11 @@ export default function LiveDemo() {
                                 </div>
                             </div>
                             <div className={styles.browserContent}>
-                                <img
+                                <Image
                                     src="/crm-dashboard.png"
                                     alt="FXTrusts Admin CRM Dashboard"
+                                    width={800}
+                                    height={500}
                                     className={styles.dashboardImage}
                                 />
                                 <div className={styles.playButtonOverlay}>
@@ -80,9 +83,11 @@ export default function LiveDemo() {
                                 </div>
                             </div>
                             <div className={styles.browserContent}>
-                                <img
+                                <Image
                                     src="/crm-dashboard.png"
                                     alt="FXTrusts Client Dashboard"
+                                    width={800}
+                                    height={500}
                                     className={styles.dashboardImage}
                                 />
                                 <div className={styles.playButtonOverlay}>

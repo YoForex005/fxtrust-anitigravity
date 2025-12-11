@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import styles from './Footer.module.css';
 
 const SocialIcon = ({ path }: { path: string }) => (
@@ -14,7 +15,7 @@ export default function Footer() {
                 <div className={styles.grid}>
                     {/* Column 1: Brand */}
                     <div className={styles.brand}>
-                        <img src="/logo.png" alt="Logo" width={160} />
+                        <Image src="/logo.png" alt="FxTrusts Logo" width={160} height={40} />
                         <p>
                             Building the platform we wish existed when we started. Less BS, more actual features.
                         </p>

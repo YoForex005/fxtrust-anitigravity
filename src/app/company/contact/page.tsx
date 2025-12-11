@@ -13,6 +13,11 @@ export const metadata: Metadata = {
         type: 'website',
         url: 'https://fxtrusts.com/company/contact',
     },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Contact FxTrusts | We Actually Reply',
+        description: 'Sales, support, and partnership inquiries. Real engineers, not chatbots.',
+    },
     alternates: {
         canonical: 'https://fxtrusts.com/company/contact',
     },

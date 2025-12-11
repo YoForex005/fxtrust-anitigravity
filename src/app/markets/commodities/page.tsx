@@ -12,6 +12,11 @@ export const metadata: Metadata = {
         type: 'website',
         url: 'https://fxtrusts.com/markets/commodities',
     },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Commodities Trading | Gold, Oil & Metals',
+        description: 'Trade gold, silver, oil and 30+ commodities with institutional spreads.',
+    },
     alternates: {
         canonical: 'https://fxtrusts.com/markets/commodities',
     },

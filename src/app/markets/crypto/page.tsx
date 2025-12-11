@@ -12,6 +12,11 @@ export const metadata: Metadata = {
         type: 'website',
         url: 'https://fxtrusts.com/markets/crypto',
     },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Crypto Trading | 50+ Cryptocurrencies',
+        description: 'Trade Bitcoin, Ethereum, and 50+ cryptocurrencies 24/7 with institutional liquidity.',
+    },
     alternates: {
         canonical: 'https://fxtrusts.com/markets/crypto',
     },

@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import styles from '../dynamics.module.css';
 import {
     Settings,
@@ -61,7 +62,7 @@ export default function DynamicsHeader() {
                     <Grip className={styles.waffleIcon} size={20} color="white" />
                 </div>
                 <div className={styles.appName}>
-                    <img src="/logo.png" alt="FX Trust Logo" style={{ height: '40px', width: 'auto', objectFit: 'contain' }} />
+                    <Image src="/logo.png" alt="FxTrusts Logo" width={80} height={40} style={{ objectFit: 'contain' }} />
                     <span className={styles.appBeta}>Beta</span>
                     <ChevronDown size={14} color="white" style={{ marginLeft: '4px', cursor: 'pointer' }} />
                 </div>

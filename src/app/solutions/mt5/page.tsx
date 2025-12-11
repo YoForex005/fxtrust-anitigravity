@@ -26,6 +26,11 @@ export const metadata: Metadata = {
         type: 'website',
         url: 'https://fxtrusts.com/solutions/mt5',
     },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'MT5 White Label | Launch Your Broker in 48 Hours',
+        description: 'Fully managed MetaTrader 5 white label. Branding, hosting, support included.',
+    },
     alternates: {
         canonical: 'https://fxtrusts.com/solutions/mt5',
     },

@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import styles from './Header.module.css';
 
@@ -113,11 +114,14 @@ export default function Header() {
         <header className={`${styles.header} ${scrolled ? styles.scrolled : ''} ${isTransparentHome ? styles.transparentHome : ''} ${isPricingPage ? styles.transparentHome : ''}`}>
             <div className={styles.container}>
                 <Link href="/" className={styles.logo}>
-                    <img
+                    <Image
                         src={(isTransparentHome || isPricingPage) ? "/fxtrustwhite.png" : "/logo.png"}
                         alt="FxTrusts Logo"
+                        width={160}
+                        height={50}
+                        priority
                         className={styles.logoIcon}
-                        style={{ width: '100px', height: 'auto', objectFit: 'contain', padding: '15px' }}
+                        style={{ objectFit: 'contain' }}
                     />
 
                 </Link>
@@ -316,10 +320,12 @@ export default function Header() {
                                         }
                                     }}
                                 >
-                                    <img
+                                    <Image
                                         src={`https://flagcdn.com/24x18/${lang.flag}.png`}
                                         alt={lang.label}
-                                        style={{ marginRight: '10px', width: '20px', height: '15px', objectFit: 'cover', borderRadius: '2px' }}
+                                        width={20}
+                                        height={15}
+                                        style={{ marginRight: '10px', objectFit: 'cover', borderRadius: '2px' }}
                                     />
                                     {lang.label}
                                 </button>

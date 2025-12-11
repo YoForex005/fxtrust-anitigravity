@@ -45,6 +45,12 @@ export const metadata: Metadata = {
       alt: 'FxTrusts - B2B Forex Broker Technology',
     }],
   },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'B2B Broker Solutions | Liquidity, CRM & White Label',
+    description: 'Complete forex brokerage ecosystem: MT5 White Label, CRM, Liquidity, and Crypto Payments. Launch your brokerage in weeks.',
+    images: ['/og-image.png'],
+  },
   alternates: {
     canonical: 'https://fxtrusts.com',
   },

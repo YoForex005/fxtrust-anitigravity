@@ -12,6 +12,11 @@ export const metadata: Metadata = {
         type: 'website',
         url: 'https://fxtrusts.com/markets/indices',
     },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Indices Trading | S&P 500, NASDAQ, DAX & More',
+        description: 'Trade 25+ global indices with competitive spreads.',
+    },
     alternates: {
         canonical: 'https://fxtrusts.com/markets/indices',
     },

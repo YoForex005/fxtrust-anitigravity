@@ -12,6 +12,11 @@ export const metadata: Metadata = {
         type: 'website',
         url: 'https://fxtrusts.com/legal/privacy-policy',
     },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Privacy Policy | FxTrusts',
+        description: 'How we collect, protect, and use your personal information. GDPR compliant.',
+    },
     alternates: {
         canonical: 'https://fxtrusts.com/legal/privacy-policy',
     },

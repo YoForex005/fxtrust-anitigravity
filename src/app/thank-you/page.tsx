@@ -10,6 +10,11 @@ export const metadata: Metadata = {
         type: 'website',
         url: 'https://fxtrusts.com/thank-you',
     },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Thank You | FxTrusts',
+        description: 'Your strategy session has been confirmed.',
+    },
     alternates: {
         canonical: 'https://fxtrusts.com/thank-you',
     },

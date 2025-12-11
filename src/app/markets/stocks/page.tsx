@@ -12,6 +12,11 @@ export const metadata: Metadata = {
         type: 'website',
         url: 'https://fxtrusts.com/markets/stocks',
     },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Stock Trading | 3000+ Global Equities',
+        description: 'Trade Apple, Tesla, Amazon and 3000+ stocks from NYSE, NASDAQ, LSE and more.',
+    },
     alternates: {
         canonical: 'https://fxtrusts.com/markets/stocks',
     },

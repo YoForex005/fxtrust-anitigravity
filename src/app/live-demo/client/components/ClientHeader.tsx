@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import styles from './ClientHeader.module.css';
 
 interface ClientHeaderProps {
@@ -9,12 +10,12 @@ interface ClientHeaderProps {
   totalProfit: number;
 }
 
-export default function ClientHeader({ 
-  sidebarCollapsed, 
-  setSidebarCollapsed, 
-  balance, 
-  equity, 
-  totalProfit 
+export default function ClientHeader({
+  sidebarCollapsed,
+  setSidebarCollapsed,
+  balance,
+  equity,
+  totalProfit
 }: ClientHeaderProps) {
   return (
     <header className={styles.header}>
@@ -27,7 +28,7 @@ export default function ClientHeader({
           </svg>
         </button>
         <div className={styles.headerLogo}>
-          <img src="/logo.png" alt="FxTrust" className={styles.headerLogoImg} />
+          <Image src="/logo.png" alt="FxTrusts Logo" width={100} height={30} className={styles.headerLogoImg} />
         </div>
       </div>
 

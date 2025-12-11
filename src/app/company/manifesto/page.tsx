@@ -13,6 +13,11 @@ export const metadata: Metadata = {
         type: 'website',
         url: 'https://fxtrusts.com/company/manifesto',
     },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Our Manifesto | The FxTrusts Origin Story',
+        description: 'We were brokers. We hated our tech providers. So we built better technology.',
+    },
     alternates: {
         canonical: 'https://fxtrusts.com/company/manifesto',
     },

@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import styles from './Navbar.module.css';
 
 export default function Navbar() {
@@ -24,7 +25,7 @@ export default function Navbar() {
     return (
         <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
             <div className={styles.logo}>
-                <img src="/logo.png" alt="FxTrusts" />
+                <Image src="/logo.png" alt="FxTrusts Logo" width={120} height={40} />
             </div>
             <div className={styles.navLinks}>
                 <a href="#solutions" className={styles.link}>Solutions</a>

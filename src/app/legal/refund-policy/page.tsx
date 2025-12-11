@@ -12,6 +12,11 @@ export const metadata: Metadata = {
         type: 'website',
         url: 'https://fxtrusts.com/legal/refund-policy',
     },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Refund Policy | 30-Day Money Back Guarantee',
+        description: 'Our straightforward 30-day money-back guarantee and refund procedures.',
+    },
     alternates: {
         canonical: 'https://fxtrusts.com/legal/refund-policy',
     },

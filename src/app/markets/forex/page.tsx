@@ -12,6 +12,11 @@ export const metadata: Metadata = {
         type: 'website',
         url: 'https://fxtrusts.com/markets/forex',
     },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Forex Trading | 80+ Currency Pairs',
+        description: 'Institutional-grade forex trading with deep liquidity and ultra-low latency.',
+    },
     alternates: {
         canonical: 'https://fxtrusts.com/markets/forex',
     },

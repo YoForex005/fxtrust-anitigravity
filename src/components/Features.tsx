@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import styles from './Features.module.css';
 
 export default function Features() {
@@ -187,9 +188,11 @@ export default function Features() {
                             <div className={styles.phoneFrame}>
                                 <div className={styles.phoneNotch}></div>
                                 <div className={styles.phoneScreen}>
-                                    <img
+                                    <Image
                                         src="/trading-quotes.jpg"
                                         alt="Trading Quotes Interface"
+                                        width={280}
+                                        height={560}
                                         className={styles.phoneImage}
                                     />
                                 </div>

@@ -11,6 +11,11 @@ export const metadata: Metadata = {
         type: 'website',
         url: 'https://fxtrusts.com/company/about',
     },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'About FxTrusts | B2B Broker Technology',
+        description: 'Meet the team democratizing institutional-grade trading infrastructure for brokerages worldwide.',
+    },
     alternates: {
         canonical: 'https://fxtrusts.com/company/about',
     },

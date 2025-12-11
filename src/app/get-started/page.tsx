@@ -13,6 +13,11 @@ export const metadata: Metadata = {
         type: 'website',
         url: 'https://fxtrusts.com/get-started',
     },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Get Started | Launch Your Brokerage',
+        description: 'Begin your brokerage journey with FxTrusts. Complete setup in weeks.',
+    },
     alternates: {
         canonical: 'https://fxtrusts.com/get-started',
     },

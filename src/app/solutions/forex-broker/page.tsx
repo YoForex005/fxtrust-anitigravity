@@ -36,6 +36,11 @@ export const metadata: Metadata = {
         type: 'website',
         url: 'https://fxtrusts.com/solutions/forex-broker',
     },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Start a Forex Broker | Complete Turnkey Solution',
+        description: 'Launch your forex brokerage in weeks. MT5 white label, CRM, liquidity included. No hidden fees.',
+    },
     alternates: {
         canonical: 'https://fxtrusts.com/solutions/forex-broker',
     },
