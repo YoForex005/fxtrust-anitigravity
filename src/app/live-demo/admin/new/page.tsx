@@ -4,7 +4,7 @@ import NewAccountContent from './NewAccountContent';
 export const metadata: Metadata = {
     title: 'New Client Registration | Account Creation | FxTrusts',
     description: 'Manually register a new client account directly into the CRM system.',
-    routers: {
+    robots: {
         index: false,
         follow: false,
     },
