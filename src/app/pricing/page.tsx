@@ -6,8 +6,14 @@ export const metadata: Metadata = {
     description: 'Transparent pricing for Forex Broker CRM and MT5 White Label. No hidden fees. Calculator included.',
     openGraph: {
         title: 'Transparent Pricing for Forex Brokers',
-        description: 'See exactly what you pay. No "contact sales" for basic pricing.',
+        description: 'See exactly what you pay. No \"contact sales\" for basic pricing.',
         type: 'website',
+        url: 'https://fxtrusts.com/pricing',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'Transparent Pricing for Forex Brokers',
+        description: 'See exactly what you pay. No hidden fees.',
     },
 };
 

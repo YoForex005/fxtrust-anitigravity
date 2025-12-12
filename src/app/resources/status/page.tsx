@@ -8,6 +8,12 @@ export const metadata: Metadata = {
         title: 'FxTrusts System Status',
         description: 'Real-time operational status of FxTrusts trading infrastructure.',
         type: 'website',
+        url: 'https://fxtrusts.com/resources/status',
+    },
+    twitter: {
+        card: 'summary_large_image',
+        title: 'FxTrusts System Status',
+        description: 'Real-time operational status of FxTrusts trading infrastructure.',
     },
 };
 
