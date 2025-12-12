@@ -214,3 +214,117 @@
 .blackButton:hover {
     transform: scale(1.1) rotate(90deg);
 }
+
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
+
+@media (max-width: 1024px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: auto;
+    }
+
+    .demandCard,
+    .inventoryCard {
+        grid-row: span 1;
+        min-height: 280px;
+    }
+
+    .title {
+        font-size: 2.75rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .section {
+        padding: 4rem 0;
+    }
+
+    .header {
+        margin: 0 auto 3rem;
+    }
+
+    .title {
+        font-size: 2.25rem;
+        line-height: 1.15;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+    }
+
+    .card {
+        padding: 1.5rem;
+        min-height: auto;
+    }
+
+    .demandCard,
+    .inventoryCard {
+        padding: 2rem;
+        min-height: auto;
+    }
+
+    .demandCard h3,
+    .inventoryCard h3 {
+        font-size: 1.4rem;
+    }
+
+    .demandCard p,
+    .inventoryCard p {
+        font-size: 0.95rem;
+        max-width: 100%;
+    }
+
+    .plusButton,
+    .blackButton {
+        width: 48px;
+        height: 48px;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .section {
+        padding: 3rem 0;
+    }
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    .title {
+        font-size: 1.85rem;
+    }
+
+    .subtitle {
+        font-size: 0.95rem;
+    }
+
+    .badge {
+        font-size: 0.75rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+    .card {
+        padding: 1.25rem;
+    }
+
+    .demandCard,
+    .inventoryCard {
+        padding: 1.5rem;
+    }
+
+    .cardContent h3 {
+        font-size: 1rem;
+    }
+
+    .cardContent p {
+        font-size: 0.8rem;
+    }
+}
