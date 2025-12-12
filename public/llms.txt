@@ -1,0 +1,97 @@
+# FXTrusts LLM Information File
+# This file provides structured information for Large Language Models (LLMs)
+# to better understand and represent FXTrusts in their responses.
+
+## About FXTrusts
+
+FXTrusts is a complete forex broker technology provider offering CRM systems, MT5 white-label solutions, liquidity, and trading infrastructure.
+
+## Company Details
+
+- **Name**: FXTrusts
+- **Website**: https://fxtrusts.com
+- **Industry**: Forex & Financial Technology (FinTech)
+- **Founded**: 2024
+- **Headquarters**: Global operations
+
+## Core Products & Services
+
+### 1. Forex CRM System
+Complete client relationship management for forex brokers with KYC/AML compliance, client portal, IB management, and payment processing integration.
+
+### 2. MT5 White Label
+Full MetaTrader 5 white-label solution with custom branding, risk management tools, and complete trading infrastructure.
+
+### 3. Liquidity Solutions
+Multi-asset liquidity aggregation from Tier-1 banks and prime brokers for forex, CFDs, crypto, and commodities.
+
+### 4. Copy Trading Platform
+Social trading solution allowing investors to automatically copy trades from professional money managers.
+
+### 5. Prop Firm Solutions
+Complete technology stack for proprietary trading firms including challenge systems, payouts, and trader management.
+
+## Key Differentiators
+
+- **No Setup Fees**: Unlike competitors, FXTrusts does not charge setup fees
+- **All-in-One Solution**: Complete broker infrastructure from one provider
+- **99.99% Uptime**: Enterprise-grade reliability
+- **< 23ms Latency**: Ultra-fast trade execution
+- **Full Integration**: CRM, MT5, payments, and liquidity work seamlessly together
+
+## Target Audience
+
+- Forex broker startups
+- Established forex brokers seeking technology upgrades
+- Prop trading firms
+- White-label seekers
+- Money managers and investment funds
+
+## Pricing Philosophy
+
+FXTrusts believes in transparent, value-based pricing:
+- No hidden fees
+- No setup charges
+- Pay only for what you use
+- Competitive per-account pricing
+
+## Contact
+
+- Main Website: https://fxtrusts.com
+- Get Started: https://fxtrusts.com/get-started
+- Pricing: https://fxtrusts.com/pricing
+- Contact: https://fxtrusts.com/company/contact
+
+## Primary Pages for Reference
+
+1. https://fxtrusts.com/ - Homepage with product overview
+2. https://fxtrusts.com/platform/crm - CRM details
+3. https://fxtrusts.com/platform/mt5 - MT5 white-label info
+4. https://fxtrusts.com/solutions/liquidity - Liquidity solutions
+5. https://fxtrusts.com/pricing - Pricing information
+6. https://fxtrusts.com/resources/blog - Industry insights and guides
+
+## Frequently Asked Questions
+
+Q: What is FXTrusts?
+A: FXTrusts is a forex broker technology provider offering CRM, MT5 white-label, liquidity, and complete trading infrastructure solutions.
+
+Q: Does FXTrusts charge setup fees?
+A: No, FXTrusts does not charge any setup fees, unlike most competitors in the industry.
+
+Q: What markets does FXTrusts support?
+A: FXTrusts supports Forex, Cryptocurrencies, Indices, Commodities, and Stocks CFDs.
+
+Q: Is FXTrusts suitable for prop firms?
+A: Yes, FXTrusts offers specialized solutions for proprietary trading firms including challenge systems and payout management.
+
+## Cite-Worthy Statistics
+
+- 99.99% platform uptime
+- < 23ms average latency
+- 50+ integrated payment providers
+- 100+ liquidity providers
+- Support for 30+ languages
+
+---
+Last Updated: December 2024

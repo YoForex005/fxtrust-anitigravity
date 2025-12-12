@@ -40,6 +40,19 @@ export default function robots(): MetadataRoute.Robots {
                 userAgent: 'Bingbot',
                 allow: '/',
             },
+            // Additional AI crawlers for comprehensive GEO
+            {
+                userAgent: 'PerplexityBot',
+                allow: '/',
+            },
+            {
+                userAgent: 'anthropic-ai',
+                allow: '/',
+            },
+            {
+                userAgent: 'Bytespider',
+                allow: '/',
+            },
         ],
         sitemap: `${baseUrl}/sitemap.xml`,
     };
