@@ -1,15 +1,51 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useRouter } from 'next/navigation';
 import QualificationStep from './QualificationStep';
 import ContactStep from './ContactStep';
 import BookingStep from './BookingStep';
 import styles from './Onboarding.module.css';
 
+// Extend Window interface for gtag
+declare global {
+    interface Window {
+        gtag?: (...args: unknown[]) => void;
+    }
+}
+
 export default function OnboardingWizard() {
     const router = useRouter();
     const [step, setStep] = useState(1);
+    const hasTrackedClick = useRef(false);
+
+    // Track page load
+    useEffect(() => {
+        if (typeof window !== 'undefined' && window.gtag) {
+            window.gtag('event', 'conversion_event_book_appointment', {
+                event_category: 'get_started',
+                event_label: 'page_view'
+            });
+        }
+    }, []);
+
+    // Track first click/interaction
+    useEffect(() => {
+        const handleFirstClick = () => {
+            if (!hasTrackedClick.current && typeof window !== 'undefined' && window.gtag) {
+                window.gtag('event', 'conversion_event_book_appointment', {
+                    event_category: 'get_started',
+                    event_label: 'user_interaction'
+                });
+                hasTrackedClick.current = true;
+                // Remove listener after first click
+                document.removeEventListener('click', handleFirstClick);
+            }
+        };
+
+        document.addEventListener('click', handleFirstClick);
+        return () => document.removeEventListener('click', handleFirstClick);
+    }, []);
     const [qualificationData, setQualificationData] = useState({
         businessModel: '',
         status: '',
@@ -35,7 +71,7 @@ export default function OnboardingWizard() {
 
     const nextStep = () => setStep(prev => prev + 1);
     const prevStep = () => setStep(prev => prev - 1);
-    
+
     const handleContactNext = async () => {
         try {
             await fetch('/api/signups/submit', {
@@ -73,9 +109,9 @@ export default function OnboardingWizard() {
         <div className={styles.wizardContainer}>
             {/* Progress Bar */}
             <div className={styles.progressBarContainer}>
-                <div 
+                <div
                     className={styles.progressBarFill}
-                    style={{ width: `${(step / 6) * 100}%` }} 
+                    style={{ width: `${(step / 6) * 100}%` }}
                 />
             </div>
 
