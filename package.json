@@ -13,7 +13,7 @@
     "next": "16.0.10",
     "react": "19.2.0",
     "react-dom": "19.2.0",
-    "xlsx": "^0.18.5"
+    "xlsx": "npm:@e965/xlsx@^0.20.3"
   },
   "devDependencies": {
     "@types/node": "^20",
