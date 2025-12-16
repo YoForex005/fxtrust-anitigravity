@@ -45,31 +45,44 @@ const QUESTION_CONFIG = {
 } as const;
 
 export async function GET(request: Request) {
-    // 1. Check if Password is configured
+    const { searchParams } = new URL(request.url);
+    const secret = searchParams.get('secret');
     const protectedPassword = process.env.EXPORT_PASSWORD;
 
-    if (protectedPassword) {
-        // 2. Check Authorization header
-        const authHeader = request.headers.get('authorization');
+    if (protectedPassword && secret !== protectedPassword) {
+        // Return HTML form if password is wrong or missing
+        const html = `
+        <!DOCTYPE html>
+        <html>
+        <head>
+            <title>Secure Download</title>
+            <style>
+                body { font-family: system-ui, -apple-system, sans-serif; display: flex; height: 100vh; justify-content: center; alignItems: center; background: #f3f4f6; margin: 0; }
+                .card { background: white; padding: 2rem; border-radius: 1rem; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1); width: 100%; max-width: 400px; text-align: center; }
+                h1 { margin-top: 0; font-size: 1.5rem; margin-bottom: 1rem; color: #111827; }
+                input { width: 100%; padding: 0.75rem; border: 1px solid #e5e7eb; border-radius: 0.5rem; margin-bottom: 1rem; box-sizing: border-box; font-size: 1rem; }
+                button { width: 100%; padding: 0.75rem; background: #2563eb; color: white; border: none; border-radius: 0.5rem; font-weight: bold; cursor: pointer; font-size: 1rem; transition: background 0.2s; }
+                button:hover { background: #1d4ed8; }
+                .error { color: #ef4444; margin-top: 1rem; font-size: 0.875rem; background: #fee2e2; padding: 0.5rem; border-radius: 0.375rem; }
+            </style>
+        </head>
+        <body>
+            <div class="card">
+                <h1>Admin Access</h1>
+                <p style="color: #6b7280; margin-bottom: 1.5rem;">Enter password to download confidential data.</p>
+                <form method="GET">
+                    <input type="password" name="secret" placeholder="Enter secure password" required autofocus>
+                    <button type="submit">Unlock & Download</button>
+                    ${secret ? '<div class="error">Incorrect password. Please try again.</div>' : ''}
+                </form>
+            </div>
+        </body>
+        </html>
+        `;
 
-        if (!authHeader) {
-            return new NextResponse('Authentication required', {
-                status: 401,
-                headers: { 'WWW-Authenticate': 'Basic realm="Secure Area"' },
-            });
-        }
-
-        // 3. Decode Basic Auth
-        const authValue = authHeader.split(' ')[1];
-        const [user, pwd] = Buffer.from(authValue, 'base64').toString().split(':');
-
-        // 4. Validate Password
-        if (pwd !== protectedPassword) {
-            return new NextResponse('Invalid Password', {
-                status: 401,
-                headers: { 'WWW-Authenticate': 'Basic realm="Secure Area"' },
-            });
-        }
+        return new NextResponse(html, {
+            headers: { 'Content-Type': 'text/html' },
+        });
     }
 
     const signups = getAllSignups();
