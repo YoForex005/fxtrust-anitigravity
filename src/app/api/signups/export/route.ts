@@ -44,7 +44,34 @@ const QUESTION_CONFIG = {
     },
 } as const;
 
-export async function GET() {
+export async function GET(request: Request) {
+    // 1. Check if Password is configured
+    const protectedPassword = process.env.EXPORT_PASSWORD;
+
+    if (protectedPassword) {
+        // 2. Check Authorization header
+        const authHeader = request.headers.get('authorization');
+
+        if (!authHeader) {
+            return new NextResponse('Authentication required', {
+                status: 401,
+                headers: { 'WWW-Authenticate': 'Basic realm="Secure Area"' },
+            });
+        }
+
+        // 3. Decode Basic Auth
+        const authValue = authHeader.split(' ')[1];
+        const [user, pwd] = Buffer.from(authValue, 'base64').toString().split(':');
+
+        // 4. Validate Password
+        if (pwd !== protectedPassword) {
+            return new NextResponse('Invalid Password', {
+                status: 401,
+                headers: { 'WWW-Authenticate': 'Basic realm="Secure Area"' },
+            });
+        }
+    }
+
     const signups = getAllSignups();
 
     const rows = signups.map((signup, index) => {
@@ -72,6 +99,12 @@ export async function GET() {
             'Company Name': signup.contact.companyName,
             'Phone': signup.contact.phone,
             'Telegram': signup.contact.telegram ?? '',
+            'Whatsapp': signup.contact.whatsapp ?? '',
+            'Meeting Time': signup.meetingDetails?.startTime ? new Date(signup.meetingDetails.startTime).toLocaleString() : '',
+            'Meeting End': signup.meetingDetails?.endTime ? new Date(signup.meetingDetails.endTime).toLocaleString() : '',
+            'Meeting Link': signup.meetingDetails?.joinUrl ?? '',
+            'Meeting Location': signup.meetingDetails?.location ?? '',
+            'Calendly Event': signup.meetingDetails?.eventUri ?? '',
         };
     });
 

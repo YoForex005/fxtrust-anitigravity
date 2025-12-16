@@ -26,6 +26,7 @@ export async function POST(request: Request) {
                 email: contactData.email ?? '',
                 companyName: contactData.companyName ?? '',
                 phone: contactData.phone ?? '',
+                whatsapp: contactData.whatsapp ?? '',
                 telegram: contactData.telegram ?? '',
             },
         });

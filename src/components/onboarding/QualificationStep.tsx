@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react';
 import styles from './Onboarding.module.css';
+import { motion, Variants } from 'framer-motion';
 
 interface QualificationData {
     businessModel: string;
@@ -94,40 +95,54 @@ export default function QualificationStep({ data, updateData, onNext, step }: Qu
         return () => window.removeEventListener('keydown', handleKeyPress);
     }, [currentQuestion]);
 
+    const containerVariants: Variants = {
+        hidden: { opacity: 0 },
+        visible: {
+            opacity: 1,
+            transition: {
+                staggerChildren: 0.1
+            }
+        },
+        exit: { opacity: 0, y: -20, transition: { duration: 0.3 } }
+    };
+
+    const itemVariants: Variants = {
+        hidden: { opacity: 0, y: 20 },
+        visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
+    };
+
     if (!currentQuestion) return null;
 
     return (
-        <div 
+        <motion.div 
             className={styles.stepWrapper}
-            style={{
-                opacity: animatingOut ? 0 : 1,
-                transform: animatingOut ? 'translateY(-10px)' : 'translateY(0)',
-                transition: 'all 0.3s ease-out',
-            }}
+            variants={containerVariants}
+            initial="hidden"
+            animate="visible"
+            exit="exit"
+            key={currentQIndex} // Key ensures animation reruns when question changes
         >
-            <div className={styles.stepIndicator}>
+            <motion.div className={styles.stepIndicator} variants={itemVariants}>
                 <span>{step}</span>
                 <span>/</span>
-                <span>{questions.length + 2}</span> {/* Total steps including Contact & Booking */}
-            </div>
+                <span>{questions.length + 2}</span>
+            </motion.div>
 
-            <h2 className={styles.stepTitle}>
+            <motion.h2 className={styles.stepTitle} variants={itemVariants}>
                 {currentQuestion.label}
-            </h2>
+            </motion.h2>
 
             <div className={styles.optionsGrid}>
                 {currentQuestion.options.map((opt, index) => {
                     const isSelected = data[currentQuestion.key as keyof QualificationData] === opt.value;
                     return (
-                        <button
+                        <motion.button
                             key={opt.value}
                             onClick={() => handleSelect(opt.value)}
                             className={`${styles.optionButton} ${isSelected ? styles.selected : ''}`}
-                            style={{
-                                animation: `fadeInUp 0.5s ease-out forwards`,
-                                animationDelay: `${index * 100}ms`,
-                                opacity: 0
-                            }}
+                            variants={itemVariants}
+                            whileHover={{ scale: 1.02, backgroundColor: '#F3F4F6' }}
+                            whileTap={{ scale: 0.98 }}
                         >
                             <span className={styles.keyBox}>
                                 {opt.key}
@@ -136,16 +151,19 @@ export default function QualificationStep({ data, updateData, onNext, step }: Qu
                                 {opt.label}
                             </span>
                             {isSelected && (
-                                <span style={{ marginLeft: 'auto', color: '#2563EB', animation: 'scaleIn 0.2s ease-out' }}>
+                                <motion.span 
+                                    style={{ marginLeft: 'auto', color: '#2563EB' }}
+                                    initial={{ scale: 0 }}
+                                    animate={{ scale: 1 }}
+                                >
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12" /></svg>
-                                </span>
+                                </motion.span>
                             )}
-                        </button>
+                        </motion.button>
                     );
                 })}
             </div>
             
-            {/* Removed Previous button here as it's handled by parent or not needed for single question flow */}
-        </div>
+        </motion.div>
     );
 }

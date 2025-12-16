@@ -5,11 +5,12 @@ import Script from 'next/script';
 
 interface CalendlySchedulerProps {
     url: string;
-    onEventScheduled?: () => void;
+    onEventScheduled?: (payload: any) => void;
     style?: React.CSSProperties;
+    onLoad?: () => void;
 }
 
-export default function CalendlyScheduler({ url, onEventScheduled, style }: CalendlySchedulerProps) {
+export default function CalendlyScheduler({ url, onEventScheduled, style, onLoad }: CalendlySchedulerProps) {
     useEffect(() => {
         if (typeof window === 'undefined' || !onEventScheduled) return;
 
@@ -36,14 +37,10 @@ export default function CalendlyScheduler({ url, onEventScheduled, style }: Cale
             console.log('Calendly message event:', eventName, data);
 
             if (eventName === 'calendly.event_scheduled' || eventName.includes('event_scheduled')) {
-                console.log('CalendlyScheduler: event scheduled detected, redirecting to /thank-you');
-
-                if (typeof window !== 'undefined') {
-                    window.location.href = '/thank-you';
-                }
+                console.log('CalendlyScheduler: event scheduled detected', data.payload);
 
                 if (onEventScheduled) {
-                    onEventScheduled();
+                    onEventScheduled(data.payload);
                 }
             }
         };
@@ -71,6 +68,7 @@ export default function CalendlyScheduler({ url, onEventScheduled, style }: Cale
             <Script
                 src="https://assets.calendly.com/assets/external/widget.js"
                 strategy="lazyOnload"
+                onLoad={onLoad}
             />
         </>
     );

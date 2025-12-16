@@ -6,6 +6,7 @@ import QualificationStep from './QualificationStep';
 import ContactStep from './ContactStep';
 import BookingStep from './BookingStep';
 import styles from './Onboarding.module.css';
+import { motion, AnimatePresence } from 'framer-motion';
 
 // Extend Window interface for gtag
 declare global {
@@ -17,6 +18,8 @@ declare global {
 export default function OnboardingWizard() {
     const router = useRouter();
     const [step, setStep] = useState(1);
+    const [showIntro, setShowIntro] = useState(true);
+    const [signupId, setSignupId] = useState<string | null>(null);
     const hasTrackedClick = useRef(false);
 
     // Track page load
@@ -29,23 +32,14 @@ export default function OnboardingWizard() {
         }
     }, []);
 
-    // Track first click/interaction
+    // Intro Animation Timer
     useEffect(() => {
-        const handleFirstClick = () => {
-            if (!hasTrackedClick.current && typeof window !== 'undefined' && window.gtag) {
-                window.gtag('event', 'conversion_event_book_appointment', {
-                    event_category: 'get_started',
-                    event_label: 'user_interaction'
-                });
-                hasTrackedClick.current = true;
-                // Remove listener after first click
-                document.removeEventListener('click', handleFirstClick);
-            }
-        };
-
-        document.addEventListener('click', handleFirstClick);
-        return () => document.removeEventListener('click', handleFirstClick);
+        const timer = setTimeout(() => {
+            setShowIntro(false);
+        }, 2000); // 2 seconds intro
+        return () => clearTimeout(timer);
     }, []);
+
     const [qualificationData, setQualificationData] = useState({
         businessModel: '',
         status: '',
@@ -58,6 +52,7 @@ export default function OnboardingWizard() {
         email: '',
         companyName: '',
         phone: '',
+        whatsapp: '',
         telegram: ''
     });
 
@@ -72,9 +67,10 @@ export default function OnboardingWizard() {
     const nextStep = () => setStep(prev => prev + 1);
     const prevStep = () => setStep(prev => prev - 1);
 
-    const handleContactNext = async () => {
-        try {
-            await fetch('/api/signups/submit', {
+    // This is now called after Qualification (last step before booking)
+    const handleQualificationComplete = async () => {
+         try {
+            const response = await fetch('/api/signups/submit', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
@@ -82,6 +78,11 @@ export default function OnboardingWizard() {
                     contactData,
                 }),
             });
+
+            const result = await response.json();
+            if (result.success && result.signup && result.signup.id) {
+                setSignupId(result.signup.id);
+            }
 
             if (typeof window !== 'undefined') {
                 sessionStorage.setItem('fxtrusts_onboarding_submitted', '1');
@@ -91,10 +92,30 @@ export default function OnboardingWizard() {
         } finally {
             nextStep();
         }
-    };
+    }
 
-    const handleComplete = () => {
-        console.log('Onboarding complete, redirecting to /thank-you');
+    const handleComplete = async (eventDetails?: any) => {
+        console.log('Onboarding complete, saving meeting details...', eventDetails);
+        
+        if (signupId && eventDetails) {
+            try {
+                await fetch('/api/signups/update-meeting', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        id: signupId,
+                        meetingDetails: {
+                           eventUri: eventDetails.event.uri,
+                           inviteeUri: eventDetails.invitee.uri
+                        }
+                    }),
+                });
+            } catch (error) {
+                console.error('Failed to update meeting details', error);
+            }
+        }
+
+        console.log('Redirecting to /thank-you');
         try {
             router.push('/thank-you');
         } catch (e) {
@@ -105,8 +126,39 @@ export default function OnboardingWizard() {
         }
     };
 
+    if (showIntro) {
+        return (
+            <motion.div 
+                className={styles.introContainer}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+            >
+                <motion.h1 
+                    className={styles.introTitle}
+                    initial={{ scale: 0.8, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                >
+                    Let's Build Your Brokerage
+                </motion.h1>
+                <motion.div
+                    initial={{ width: 0 }}
+                    animate={{ width: 200 }}
+                    style={{ height: 4, background: '#2563EB', borderRadius: 2 }}
+                    transition={{ duration: 1.5, ease: "easeInOut" }}
+                />
+            </motion.div>
+        );
+    }
+
     return (
-        <div className={styles.wizardContainer}>
+        <motion.div 
+            className={styles.wizardContainer}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+        >
             {/* Progress Bar */}
             <div className={styles.progressBarContainer}>
                 <div
@@ -116,30 +168,56 @@ export default function OnboardingWizard() {
             </div>
 
             <div className={styles.stepContent}>
-                {step <= 4 && (
-                    <QualificationStep
-                        data={qualificationData}
-                        updateData={updateQualification}
-                        onNext={nextStep}
-                        step={step}
-                    />
-                )}
-                {step === 5 && (
-                    <ContactStep
-                        data={contactData}
-                        updateData={updateContact}
-                        onNext={handleContactNext}
-                        onBack={prevStep}
-                    />
-                )}
-                {step === 6 && (
-                    <BookingStep
-                        onBack={prevStep}
-                        onComplete={handleComplete}
-                        contactData={contactData}
-                    />
-                )}
+                 <AnimatePresence mode='wait'>
+                    {step === 1 && (
+                        <motion.div
+                            key="step1"
+                            initial={{ opacity: 0, x: 20 }}
+                            animate={{ opacity: 1, x: 0 }}
+                            exit={{ opacity: 0, x: -20 }}
+                            transition={{ duration: 0.3 }}
+                        >
+                            <ContactStep
+                                data={contactData}
+                                updateData={updateContact}
+                                onNext={nextStep}
+                                onBack={() => {}} // No back from step 1
+                            />
+                        </motion.div>
+                    )}
+                    {step >= 2 && step <= 5 && (
+                        <motion.div
+                             key={`step${step}`}
+                             initial={{ opacity: 0, x: 20 }}
+                             animate={{ opacity: 1, x: 0 }}
+                             exit={{ opacity: 0, x: -20 }}
+                             transition={{ duration: 0.3 }}
+                        >
+                            <QualificationStep
+                                data={qualificationData}
+                                updateData={updateQualification}
+                                onNext={step === 5 ? handleQualificationComplete : nextStep}
+                                step={step - 1} // QualificationStep expects 1-4, but current step is 2-5
+                            />
+                         </motion.div>
+                    )}
+                    {step === 6 && (
+                        <motion.div
+                             key="step6"
+                             initial={{ opacity: 0, x: 20 }}
+                             animate={{ opacity: 1, x: 0 }}
+                             exit={{ opacity: 0, x: -20 }}
+                             transition={{ duration: 0.3 }}
+                        >
+                            <BookingStep
+                                onBack={prevStep}
+                                onComplete={handleComplete}
+                                contactData={contactData}
+                            />
+                        </motion.div>
+                    )}
+                </AnimatePresence>
             </div>
-        </div>
+        </motion.div>
     );
 }
