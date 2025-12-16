@@ -67,6 +67,29 @@ export default function OnboardingWizard() {
     const nextStep = () => setStep(prev => prev + 1);
     const prevStep = () => setStep(prev => prev - 1);
 
+    const handleContactSubmit = async () => {
+        try {
+            // Save initial contact data
+            const response = await fetch('/api/signups/submit', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    contactData,
+                    // Sending empty/partial qualificationData is now allowed by backend
+                }),
+            });
+
+            const result = await response.json();
+            if (result.success && result.signup && result.signup.id) {
+                setSignupId(result.signup.id);
+            }
+        } catch (error) {
+            console.error('Failed to save contact data', error);
+        } finally {
+            nextStep();
+        }
+    };
+
     // This is now called after Qualification (last step before booking)
     const handleQualificationComplete = async () => {
          try {
@@ -74,6 +97,7 @@ export default function OnboardingWizard() {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
+                    id: signupId, // Pass the existing ID to update
                     qualificationData,
                     contactData,
                 }),
@@ -180,7 +204,7 @@ export default function OnboardingWizard() {
                             <ContactStep
                                 data={contactData}
                                 updateData={updateContact}
-                                onNext={nextStep}
+                                onNext={handleContactSubmit}
                                 onBack={() => {}} // No back from step 1
                             />
                         </motion.div>

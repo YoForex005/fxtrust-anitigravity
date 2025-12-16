@@ -19,7 +19,7 @@ export type ContactData = {
 };
 
 export type SignupPayload = {
-    qualification: QualificationData;
+    qualification?: QualificationData;
     contact: ContactData;
 };
 
@@ -66,7 +66,7 @@ export function appendSignup(signup: SignupPayload): SignupRecord {
     return record;
 }
 
-export function updateSignup(id: string, meetingDetails: MeetingDetails): boolean {
+export function updateSignup(id: string, updates: Partial<SignupRecord> | { meetingDetails: MeetingDetails }): boolean {
     ensureStore();
     const raw = fs.readFileSync(SIGNUPS_FILE, 'utf8') || '[]';
     const parsed: SignupRecord[] = JSON.parse(raw);
@@ -74,7 +74,7 @@ export function updateSignup(id: string, meetingDetails: MeetingDetails): boolea
     const index = parsed.findIndex(r => r.id === id);
     if (index === -1) return false;
 
-    parsed[index].meetingDetails = meetingDetails;
+    parsed[index] = { ...parsed[index], ...updates };
 
     fs.writeFileSync(SIGNUPS_FILE, JSON.stringify(parsed, null, 2), 'utf8');
     return true;
