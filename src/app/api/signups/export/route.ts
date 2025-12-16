@@ -80,10 +80,10 @@ export async function GET(request: Request) {
         const techConfig = QUESTION_CONFIG.techNeeds;
         const timeConfig = QUESTION_CONFIG.timeline;
 
-        const bmAnswer = bmConfig.options[signup.qualification.businessModel as keyof typeof bmConfig.options] ?? signup.qualification.businessModel;
-        const statusAnswer = statusConfig.options[signup.qualification.status as keyof typeof statusConfig.options] ?? signup.qualification.status;
-        const techAnswer = techConfig.options[signup.qualification.techNeeds as keyof typeof techConfig.options] ?? signup.qualification.techNeeds;
-        const timeAnswer = timeConfig.options[signup.qualification.timeline as keyof typeof timeConfig.options] ?? signup.qualification.timeline;
+        const bmAnswer = bmConfig.options[signup.qualification?.businessModel as keyof typeof bmConfig.options] ?? signup.qualification?.businessModel ?? 'N/A';
+        const statusAnswer = statusConfig.options[signup.qualification?.status as keyof typeof statusConfig.options] ?? signup.qualification?.status ?? 'N/A';
+        const techAnswer = techConfig.options[signup.qualification?.techNeeds as keyof typeof techConfig.options] ?? signup.qualification?.techNeeds ?? 'N/A';
+        const timeAnswer = timeConfig.options[signup.qualification?.timeline as keyof typeof timeConfig.options] ?? signup.qualification?.timeline ?? 'N/A';
 
         return {
             '#': index + 1,
