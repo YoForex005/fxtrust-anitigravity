@@ -1,83 +1,88 @@
-# SEO Media & Performance Audit Report
-
-**Generated:** December 12, 2025  
-**Framework:** Next.js 16 (App Router)  
-**Total Scanned:** All `.tsx` files in `/src`
+# SEO Audit: Media
+**Generated:** 2024-12-18 | **Framework:** Next.js 15
 
 ---
 
-## 1. Legacy Image Detection
+## 1. Image Component Usage
 
-### ✅ No Legacy `<img>` Tags Found
+| Check | Status | Details |
+|-------|--------|---------|
+| Legacy `<img>` tags | ⚠️ WARNING | 1 instance found |
+| Location | `src/app/layout.tsx:123` | Meta Pixel noscript fallback |
+| Impact | LOW | Hidden tracking pixel (1x1), not user-facing |
 
-| Search | Result |
-|--------|--------|
-| `<img ` in `.tsx` files | 0 matches |
-| `<Image` (next/image) | 13 components |
+### Legacy `<img>` Details:
+```tsx
+// File: src/app/layout.tsx (Line 123-129)
+<noscript>
+  <img
+    height="1"
+    width="1"
+    style={{ display: 'none' }}
+    src="https://www.facebook.com/tr?id=..."
+    alt=""
+  />
+</noscript>
+```
 
-**Verdict:** ✅ Fully optimized for Next.js Image component
+**Recommendation:** This is a Meta Pixel tracking image inside `<noscript>`. Converting to `next/image` is **NOT recommended** as:
+1. It's a 1x1 transparent tracking pixel
+2. It needs raw HTML for Meta's tracking to work
+3. It's hidden from users
 
----
-
-## 2. Accessibility & Core Web Vitals
-
-### 2.1 Alt Props Audit
-
-#### ✅ All Image Components Have `alt` Props
-
-| Component | `alt` Value | Status |
-|-----------|-------------|--------|
-| `Hero.tsx` | `"FxTrusts MetaTrader 5..."` | ✅ |
-| `Header.tsx` | `"FxTrusts Logo"` | ✅ |
-| `Header.tsx` | `{lang.label}` (flags) | ✅ |
-| `Footer.tsx` | `"FxTrusts Logo"` | ✅ |
-| `Navbar.tsx` | `"FxTrusts Logo"` | ✅ |
-| `LiveDemo.tsx` | Dashboard descriptions | ✅ |
-| `Features.tsx` | `"Trading Quotes..."` | ✅ |
-| `ClientSidebar.tsx` | `"FxTrusts Logo"` | ✅ |
-| `DynamicsHeader.tsx` | `"FxTrusts Logo"` | ✅ |
-| `Sidebar.tsx` | `"FxTrusts Logo"` | ✅ |
-| `ClientContent.tsx` | `{trader.name}` | ✅ |
-| `ClientHeader.tsx` | `"FxTrusts Logo"` | ✅ |
-
-### 2.2 Priority Prop (LCP)
-
-| File | Has Priority? | Status |
-|------|---------------|--------|
-| `Hero.tsx` | ✅ `priority` | Correct |
-| `Header.tsx` | ✅ `priority` | Correct |
-
-**Verdict:** ✅ LCP images properly prioritized
+**Status: ✅ ACCEPTABLE (No action needed)**
 
 ---
 
-## 3. Link Safety
+## 2. Alt Tag Compliance
 
-### 3.1 External Links
+| Component Category | Alt Tags | Status |
+|--------------------|----------|--------|
+| Header Logo | ✅ Present | ✅ PASS |
+| Footer Logo | ✅ Present | ✅ PASS |
+| Hero Images | ✅ Using CSS/Background | ✅ PASS |
+| Blog Images | ✅ Alt tags defined | ✅ PASS |
+| Schema Images | ✅ Alt in metadata | ✅ PASS |
 
-| Status | Count |
-|--------|-------|
-| External links with `target="_blank"` | ✅ All |
-| External links with `rel="noopener"` | ✅ All |
+---
 
-### 3.2 Internal Links
+## 3. External Link Safety
 
-**Status:** ✅ All use Next.js `<Link>` component
+| Check | Status | Details |
+|-------|--------|---------|
+| `target="_blank"` links | 1 found | TradingView widget |
+| `rel="noopener noreferrer"` | ✅ Present | Correctly configured |
 
-### 3.3 404 Links
+### External Link Details:
+```tsx
+// File: src/app/live-demo/client/TradingViewWidget.tsx
+<a href="https://www.tradingview.com/" 
+   rel="noopener noreferrer nofollow" 
+   target="_blank">
+```
 
-**Status:** ✅ No broken internal links detected
+**Status: ✅ PASS - Secure attributes present**
+
+---
+
+## 4. Image Optimization
+
+| Feature | Implementation | Status |
+|---------|----------------|--------|
+| next/image usage | Used in components | ✅ PASS |
+| priority attribute | Set on LCP images | ✅ PASS |
+| sizes attribute | Defined where needed | ✅ PASS |
+| WebP/AVIF support | Automatic via Next.js | ✅ PASS |
 
 ---
 
 ## Summary
 
-| Metric | Status |
-|--------|--------|
-| Legacy `<img>` tags | ✅ 0 found |
-| Images with `alt` | ✅ 13/13 (100%) |
-| LCP with `priority` | ✅ 2/2 |
-| External link security | ✅ Pass |
-| Internal link validity | ✅ Pass |
+| Category | Status |
+|----------|--------|
+| Legacy `<img>` | ✅ 1 found (acceptable - tracking pixel) |
+| Alt Tags | ✅ Compliant |
+| External Links | ✅ Secure |
+| Image Optimization | ✅ Configured |
 
-**Overall Media SEO Health: 100% ✅**
+**MEDIA AUDIT: ✅ PASS**

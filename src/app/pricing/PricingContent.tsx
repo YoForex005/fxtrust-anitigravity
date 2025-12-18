@@ -10,62 +10,62 @@ export default function PricingContent() {
     const [accountCount, setAccountCount] = useState(150);
 
     // Entry Plan pricing tiers (10-149 accounts) - $700 base fee
-    // Each tier shows the average effective cost per account for that range
+    // Each tier shows the average effective cost per account for that range (+20%)
     const entryPricingTiers: { [key: string]: number } = {
-        '10': 48.21,   // 10-19 accounts
-        '20': 46.93,   // 20-29 accounts
-        '30': 45.68,   // 30-39 accounts
-        '40': 44.48,   // 40-49 accounts
-        '50': 43.32,   // 50-59 accounts
-        '60': 42.20,   // 60-69 accounts
-        '70': 41.11,   // 70-79 accounts
-        '80': 40.07,   // 80-89 accounts
-        '90': 39.07,   // 90-99 accounts
-        '100': 38.10,  // 100-109 accounts
-        '110': 37.18,  // 110-119 accounts
-        '120': 36.29,  // 120-129 accounts
-        '130': 35.45,  // 130-139 accounts
-        '140': 34.64,  // 140-149 accounts
+        '10': 57.85,   // 10-19 accounts (was 48.21)
+        '20': 56.32,   // 20-29 accounts (was 46.93)
+        '30': 54.82,   // 30-39 accounts (was 45.68)
+        '40': 53.38,   // 40-49 accounts (was 44.48)
+        '50': 51.98,   // 50-59 accounts (was 43.32)
+        '60': 50.64,   // 60-69 accounts (was 42.20)
+        '70': 49.33,   // 70-79 accounts (was 41.11)
+        '80': 48.08,   // 80-89 accounts (was 40.07)
+        '90': 46.88,   // 90-99 accounts (was 39.07)
+        '100': 45.72,  // 100-109 accounts (was 38.10)
+        '110': 44.62,  // 110-119 accounts (was 37.18)
+        '120': 43.55,  // 120-129 accounts (was 36.29)
+        '130': 42.54,  // 130-139 accounts (was 35.45)
+        '140': 41.57,  // 140-149 accounts (was 34.64)
     };
 
     // Standard Plan pricing tiers (150-500 accounts) - $1,300 base fee
-    // Each tier shows the average effective cost per account for that range
+    // Each tier shows the average effective cost per account for that range (+20%)
     const standardPricingTiers: { [key: string]: number } = {
-        '150': 24.80,  // 150-159 accounts
-        '160': 24.36,  // 160-169 accounts
-        '170': 23.92,  // 170-179 accounts
-        '180': 23.47,  // 180-189 accounts
-        '190': 23.03,  // 190-199 accounts
-        '200': 22.59,  // 200-209 accounts
-        '210': 22.14,  // 210-219 accounts
-        '220': 21.70,  // 220-229 accounts
-        '230': 21.26,  // 230-239 accounts
-        '240': 20.81,  // 240-249 accounts
-        '250': 20.37,  // 250-259 accounts
-        '260': 19.93,  // 260-269 accounts
-        '270': 19.49,  // 270-279 accounts
-        '280': 19.04,  // 280-289 accounts
-        '290': 18.60,  // 290-299 accounts
-        '300': 18.16,  // 300-309 accounts
-        '310': 17.72,  // 310-319 accounts
-        '320': 17.27,  // 320-329 accounts
-        '330': 16.83,  // 330-339 accounts
-        '340': 16.39,  // 340-349 accounts
-        '350': 15.94,  // 350-359 accounts
-        '360': 15.50,  // 360-369 accounts
-        '370': 15.06,  // 370-379 accounts
-        '380': 14.62,  // 380-389 accounts
-        '390': 14.17,  // 390-399 accounts
-        '400': 13.73,  // 400-409 accounts
-        '410': 13.29,  // 410-419 accounts
-        '420': 12.84,  // 420-429 accounts
-        '430': 12.40,  // 430-439 accounts
-        '440': 11.96,  // 440-449 accounts
-        '450': 11.52,  // 450-459 accounts
-        '460': 11.07,  // 460-469 accounts
-        '470': 10.63,  // 470-479 accounts
-        '480': 10.19,  // 480-489 accounts
-        '490': 9.74,   // 490-500 accounts
+        '150': 29.76,  // 150-159 accounts (was 24.80)
+        '160': 29.23,  // 160-169 accounts (was 24.36)
+        '170': 28.70,  // 170-179 accounts (was 23.92)
+        '180': 28.16,  // 180-189 accounts (was 23.47)
+        '190': 27.64,  // 190-199 accounts (was 23.03)
+        '200': 27.11,  // 200-209 accounts (was 22.59)
+        '210': 26.57,  // 210-219 accounts (was 22.14)
+        '220': 26.04,  // 220-229 accounts (was 21.70)
+        '230': 25.51,  // 230-239 accounts (was 21.26)
+        '240': 24.97,  // 240-249 accounts (was 20.81)
+        '250': 24.44,  // 250-259 accounts (was 20.37)
+        '260': 23.92,  // 260-269 accounts (was 19.93)
+        '270': 23.39,  // 270-279 accounts (was 19.49)
+        '280': 22.85,  // 280-289 accounts (was 19.04)
+        '290': 22.32,  // 290-299 accounts (was 18.60)
+        '300': 21.79,  // 300-309 accounts (was 18.16)
+        '310': 21.26,  // 310-319 accounts (was 17.72)
+        '320': 20.72,  // 320-329 accounts (was 17.27)
+        '330': 20.20,  // 330-339 accounts (was 16.83)
+        '340': 19.67,  // 340-349 accounts (was 16.39)
+        '350': 19.13,  // 350-359 accounts (was 15.94)
+        '360': 18.60,  // 360-369 accounts (was 15.50)
+        '370': 18.07,  // 370-379 accounts (was 15.06)
+        '380': 17.54,  // 380-389 accounts (was 14.62)
+        '390': 17.00,  // 390-399 accounts (was 14.17)
+        '400': 16.48,  // 400-409 accounts (was 13.73)
+        '410': 15.95,  // 410-419 accounts (was 13.29)
+        '420': 15.41,  // 420-429 accounts (was 12.84)
+        '430': 14.88,  // 430-439 accounts (was 12.40)
+        '440': 14.35,  // 440-449 accounts (was 11.96)
+        '450': 13.82,  // 450-459 accounts (was 11.52)
+        '460': 13.28,  // 460-469 accounts (was 11.07)
+        '470': 12.76,  // 470-479 accounts (was 10.63)
+        '480': 12.23,  // 480-489 accounts (was 10.19)
+        '490': 11.69,  // 490-500 accounts (was 9.74)
     };
 
     // Get the tier key for a given account count
@@ -201,12 +201,12 @@ export default function PricingContent() {
                                             <span>${entryCost.base.toLocaleString()}</span>
                                         </div>
                                         <div className={styles.costLine}>
-                                            <span>Active Accounts ({accountCount} × ${entryCost.perAccount.toFixed(2)}):</span>
-                                            <span>${entryCost.accountsTotal.toLocaleString()}</span>
+                                            <span>Per Account Rate:</span>
+                                            <span>${entryCost.effectiveCostPerAccount.toFixed(2)}/account</span>
                                         </div>
                                         <div className={styles.costLineDivider}></div>
                                         <div className={styles.costLine}>
-                                            <span className={styles.costLineLabel}>Monthly Total:</span>
+                                            <span className={styles.costLineLabel}>Monthly Total ({accountCount} accounts):</span>
                                             <span className={styles.costLineValue}>${entryCost.monthly.toLocaleString()}</span>
                                         </div>
                                         <div className={styles.costLine}>
@@ -246,12 +246,12 @@ export default function PricingContent() {
                                             <span>${standardCost.base.toLocaleString()}</span>
                                         </div>
                                         <div className={styles.costLine}>
-                                            <span>Active Accounts ({Math.max(accountCount, 150)} × ${standardCost.perAccount.toFixed(2)}):</span>
-                                            <span>${standardCost.accountsTotal.toLocaleString()}</span>
+                                            <span>Per Account Rate:</span>
+                                            <span>${standardCost.effectiveCostPerAccount.toFixed(2)}/account</span>
                                         </div>
                                         <div className={styles.costLineDivider}></div>
                                         <div className={styles.costLine}>
-                                            <span className={styles.costLineLabel}>Monthly Total:</span>
+                                            <span className={styles.costLineLabel}>Monthly Total ({Math.max(accountCount, 150)} accounts):</span>
                                             <span className={styles.costLineValue}>${standardCost.monthly.toLocaleString()}</span>
                                         </div>
                                         <div className={styles.costLine}>
