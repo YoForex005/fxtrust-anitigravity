@@ -1,20 +1,10 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import Image from 'next/image';
 import styles from './LiveDemo.module.css';
 
 export default function LiveDemo() {
-    const router = useRouter();
-
-    const handleAdminClick = () => {
-        router.push('/live-demo/admin');
-    };
-
-    const handleClientClick = () => {
-        router.push('/live-demo/client');
-    };
-
     return (
         <section className={styles.section} id="live-demo">
             <div className={styles.container}>
@@ -32,7 +22,7 @@ export default function LiveDemo() {
                         </p>
                     </div>
 
-                    <div className={styles.browserWrapper} onClick={handleAdminClick}>
+                    <Link href="/live-demo/admin" prefetch={true} className={styles.browserWrapper}>
                         <div className={styles.browserMockup}>
                             <div className={styles.browserHeader}>
                                 <div className={styles.trafficLights}>
@@ -56,7 +46,7 @@ export default function LiveDemo() {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </Link>
                 </div>
 
                 {/* Client Dashboard Demo */}
@@ -73,7 +63,7 @@ export default function LiveDemo() {
                         </p>
                     </div>
 
-                    <div className={styles.browserWrapper} onClick={handleClientClick}>
+                    <Link href="/live-demo/client" prefetch={true} className={styles.browserWrapper}>
                         <div className={styles.browserMockup}>
                             <div className={styles.browserHeader}>
                                 <div className={styles.trafficLights}>
@@ -97,9 +87,10 @@ export default function LiveDemo() {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </Link>
                 </div>
             </div>
         </section>
     );
 }
+

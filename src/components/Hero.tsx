@@ -30,7 +30,6 @@ export default function Hero() {
                         <span>→</span>
                     </Link>
                 </div>
-
             </div>
         </section>
     );

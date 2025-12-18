@@ -6,20 +6,58 @@ import styles from './ROICalculator.module.css';
 export default function ROICalculator() {
     const [activeUsers, setActiveUsers] = useState(50);
 
+    // Entry Plan pricing tiers (10-149 accounts) - $700 base fee
+    const entryPricingTiers: { [key: string]: number } = {
+        '10': 48.21, '20': 46.93, '30': 45.68, '40': 44.48,
+        '50': 43.32, '60': 42.20, '70': 41.11, '80': 40.07,
+        '90': 39.07, '100': 38.10, '110': 37.18, '120': 36.29,
+        '130': 35.45, '140': 34.64,
+    };
+
+    // Standard Plan pricing tiers (150-500 accounts) - $1,300 base fee
+    const standardPricingTiers: { [key: string]: number } = {
+        '150': 24.80, '160': 24.36, '170': 23.92, '180': 23.47,
+        '190': 23.03, '200': 22.59, '210': 22.14, '220': 21.70,
+        '230': 21.26, '240': 20.81, '250': 20.37, '260': 19.93,
+        '270': 19.49, '280': 19.04, '290': 18.60, '300': 18.16,
+        '310': 17.72, '320': 17.27, '330': 16.83, '340': 16.39,
+        '350': 15.94, '360': 15.50, '370': 15.06, '380': 14.62,
+        '390': 14.17, '400': 13.73, '410': 13.29, '420': 12.84,
+        '430': 12.40, '440': 11.96, '450': 11.52, '460': 11.07,
+        '470': 10.63, '480': 10.19, '490': 9.74,
+    };
+
+    // Get the tier key for a given account count
+    const getTierKey = (accounts: number): string => {
+        const tierStart = Math.floor(accounts / 10) * 10;
+        return tierStart.toString();
+    };
+
+    // Determine if using Entry or Standard plan
+    const isStandardPlan = activeUsers >= 150;
+    const baseFee = isStandardPlan ? 1300 : 700;
+
+    // Get effective rate per account based on plan and tier
+    const getEffectiveRate = (accounts: number): number => {
+        const tierKey = getTierKey(accounts);
+        if (accounts >= 150) {
+            return standardPricingTiers[tierKey] || standardPricingTiers['490'];
+        }
+        return entryPricingTiers[tierKey] || entryPricingTiers['140'];
+    };
+
+    const effectiveRate = getEffectiveRate(activeUsers);
+    const monthlyTotal = activeUsers * effectiveRate;
+    const perUserCost = (monthlyTotal - baseFee) / activeUsers;
+
     const traditional = {
         setupFee: 10000,
         monthlyBase: 5000,
         perUserCost: 100,
     };
 
-    const fxtrust = {
-        setupFee: 0,
-        monthlyBase: 700,
-        perUserCost: 60,
-    };
-
     const traditionalTotal = traditional.setupFee + (traditional.monthlyBase + (activeUsers * traditional.perUserCost)) * 12;
-    const fxtrustTotal = (fxtrust.monthlyBase + (activeUsers * fxtrust.perUserCost)) * 12;
+    const fxtrustTotal = monthlyTotal * 12;
     const savings = traditionalTotal - fxtrustTotal;
     const savingsPercent = ((savings / traditionalTotal) * 100).toFixed(0);
 
@@ -95,11 +133,11 @@ export default function ROICalculator() {
                                 </div>
                                 <div className={styles.breakdownItem}>
                                     <span>Monthly Base</span>
-                                    <span>${fxtrust.monthlyBase}/mo</span>
+                                    <span>${baseFee.toLocaleString()}/mo</span>
                                 </div>
                                 <div className={styles.breakdownItem}>
                                     <span>Per Active User</span>
-                                    <span>${fxtrust.perUserCost}/user</span>
+                                    <span>${effectiveRate.toFixed(2)}/user</span>
                                 </div>
                             </div>
                             <div className={styles.total}>

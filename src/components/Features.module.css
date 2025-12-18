@@ -67,11 +67,15 @@
 /* Flow Diagram */
 .flowDiagram {
     display: grid;
-    grid-template-columns: 300px 100px 250px 100px 400px;
+    grid-template-columns: minmax(220px, 280px) minmax(60px, 100px) minmax(200px, 250px) minmax(60px, 100px) minmax(280px, 380px);
     gap: 0;
     align-items: center;
     justify-content: center;
     position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    box-sizing: border-box;
 }
 
 /* Inputs Column */
@@ -539,18 +543,21 @@
 .devicesStack {
     position: relative;
     width: 100%;
-    height: 600px;
+    max-width: 360px;
+    height: 500px;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    gap: 2rem;
+    justify-content: center;
     perspective: 1000px;
 }
 
 /* Laptop Mockup */
 .laptopMockup {
-    flex-shrink: 0;
+    position: absolute;
+    top: 20px;
+    left: 0;
     transition: transform 0.5s ease;
+    z-index: 1;
 }
 
 .laptopMockup:hover {
@@ -558,11 +565,11 @@
 }
 
 .laptopScreen {
-    width: 340px;
-    height: 220px;
+    width: 280px;
+    height: 175px;
     background: linear-gradient(180deg, #FFFFFF 0%, #F9FAFB 100%);
     border-radius: 10px 10px 0 0;
-    border: 6px solid #1F2937;
+    border: 5px solid #1F2937;
     border-bottom: none;
     overflow: hidden;
     box-shadow:
@@ -638,7 +645,7 @@
 }
 
 .laptopBase {
-    width: 380px;
+    width: 310px;
     height: 10px;
     background: linear-gradient(to bottom, #374151, #1F2937);
     border-radius: 0 0 6px 6px;
@@ -652,7 +659,7 @@
     bottom: -3px;
     left: 50%;
     transform: translateX(-50%);
-    width: 90px;
+    width: 70px;
     height: 3px;
     background: #1F2937;
     border-radius: 0 0 3px 3px;
@@ -660,18 +667,19 @@
 
 /* Phone Mockup */
 .phoneFrame {
-    width: 280px;
-    height: 560px;
+    width: 200px;
+    height: 400px;
     background: linear-gradient(135deg, #1F2937 0%, #111827 100%);
-    border-radius: 40px;
-    padding: 12px;
+    border-radius: 32px;
+    padding: 10px;
     box-shadow:
         0 50px 100px rgba(0, 0, 0, 0.3),
         0 0 0 2px rgba(255, 255, 255, 0.1) inset,
         0 0 20px rgba(0, 0, 0, 0.5);
-    position: relative;
+    position: absolute;
+    right: -20px;
+    top: 80px;
     transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-    flex-shrink: 0;
     z-index: 10;
 }
 
@@ -761,30 +769,70 @@
    RESPONSIVE STYLES
    ============================================ */
 
-/* Tablet Landscape */
-@media (max-width: 1200px) {
+/* Laptop Large */
+@media (max-width: 1400px) {
     .flowDiagram {
-        grid-template-columns: 250px 80px 200px 80px 320px;
+        grid-template-columns: minmax(200px, 260px) minmax(50px, 80px) minmax(180px, 230px) minmax(50px, 80px) minmax(250px, 340px);
     }
 
     .codeSnippet {
-        width: 250px;
-        top: -70px;
-        right: -100px;
+        width: 220px;
+        top: -50px;
+        right: -60px;
     }
 
-    .phoneFrame {
-        width: 240px;
+    .devicesStack {
+        max-width: 340px;
         height: 480px;
     }
 
+    .phoneFrame {
+        width: 190px;
+        height: 380px;
+        right: -25px;
+        top: 70px;
+    }
+
     .laptopScreen {
-        width: 280px;
-        height: 180px;
+        width: 270px;
+        height: 170px;
     }
 
     .laptopBase {
-        width: 320px;
+        width: 300px;
+    }
+}
+
+/* Tablet Landscape */
+@media (max-width: 1200px) {
+    .flowDiagram {
+        grid-template-columns: minmax(180px, 250px) minmax(50px, 80px) minmax(180px, 200px) minmax(50px, 80px) minmax(220px, 300px);
+        max-width: 100%;
+    }
+
+    .codeSnippet {
+        display: none;
+    }
+
+    .devicesStack {
+        max-width: 320px;
+        height: 450px;
+    }
+
+    .phoneFrame {
+        width: 180px;
+        height: 360px;
+        right: -30px;
+        top: 60px;
+    }
+
+    .laptopScreen {
+        width: 260px;
+        height: 160px;
+    }
+
+    .laptopBase {
+        width: 290px;
     }
 }
 
@@ -832,28 +880,34 @@
     }
 
     .devicesStack {
-        flex-direction: column;
+        position: relative;
         height: auto;
-        gap: 2rem;
-        align-items: center;
+        min-height: 400px;
+        max-width: 300px;
+        margin: 0 auto;
     }
 
     .phoneFrame {
-        width: 220px;
-        height: 440px;
+        position: absolute;
+        right: -40px;
+        top: 60px;
+        width: 180px;
+        height: 360px;
     }
 
     .laptopMockup {
-        order: 2;
+        position: relative;
+        top: 0;
+        left: 0;
     }
 
     .laptopScreen {
-        width: 320px;
-        height: 200px;
+        width: 280px;
+        height: 175px;
     }
 
     .laptopBase {
-        width: 360px;
+        width: 310px;
     }
 
     .outputColumn {

@@ -9,45 +9,119 @@ import styles from './pricing.module.css';
 export default function PricingContent() {
     const [accountCount, setAccountCount] = useState(150);
 
-    // Simple flat-rate pricing to match home page
-    // Entry: $700 base + $60/account
-    const getEntryLevelPrice = (accounts: number): number => {
-        return 60.00; // Fixed $60 per account
+    // Entry Plan pricing tiers (10-149 accounts) - $700 base fee
+    // Each tier shows the average effective cost per account for that range
+    const entryPricingTiers: { [key: string]: number } = {
+        '10': 48.21,   // 10-19 accounts
+        '20': 46.93,   // 20-29 accounts
+        '30': 45.68,   // 30-39 accounts
+        '40': 44.48,   // 40-49 accounts
+        '50': 43.32,   // 50-59 accounts
+        '60': 42.20,   // 60-69 accounts
+        '70': 41.11,   // 70-79 accounts
+        '80': 40.07,   // 80-89 accounts
+        '90': 39.07,   // 90-99 accounts
+        '100': 38.10,  // 100-109 accounts
+        '110': 37.18,  // 110-119 accounts
+        '120': 36.29,  // 120-129 accounts
+        '130': 35.45,  // 130-139 accounts
+        '140': 34.64,  // 140-149 accounts
     };
 
-    // Standard Plan: $1,300 base + $50/account (150 minimum)
-    const getStandardPlanPrice = (accounts: number): number => {
-        return 50.00; // Fixed $50 per account
+    // Standard Plan pricing tiers (150-500 accounts) - $1,300 base fee
+    // Each tier shows the average effective cost per account for that range
+    const standardPricingTiers: { [key: string]: number } = {
+        '150': 24.80,  // 150-159 accounts
+        '160': 24.36,  // 160-169 accounts
+        '170': 23.92,  // 170-179 accounts
+        '180': 23.47,  // 180-189 accounts
+        '190': 23.03,  // 190-199 accounts
+        '200': 22.59,  // 200-209 accounts
+        '210': 22.14,  // 210-219 accounts
+        '220': 21.70,  // 220-229 accounts
+        '230': 21.26,  // 230-239 accounts
+        '240': 20.81,  // 240-249 accounts
+        '250': 20.37,  // 250-259 accounts
+        '260': 19.93,  // 260-269 accounts
+        '270': 19.49,  // 270-279 accounts
+        '280': 19.04,  // 280-289 accounts
+        '290': 18.60,  // 290-299 accounts
+        '300': 18.16,  // 300-309 accounts
+        '310': 17.72,  // 310-319 accounts
+        '320': 17.27,  // 320-329 accounts
+        '330': 16.83,  // 330-339 accounts
+        '340': 16.39,  // 340-349 accounts
+        '350': 15.94,  // 350-359 accounts
+        '360': 15.50,  // 360-369 accounts
+        '370': 15.06,  // 370-379 accounts
+        '380': 14.62,  // 380-389 accounts
+        '390': 14.17,  // 390-399 accounts
+        '400': 13.73,  // 400-409 accounts
+        '410': 13.29,  // 410-419 accounts
+        '420': 12.84,  // 420-429 accounts
+        '430': 12.40,  // 430-439 accounts
+        '440': 11.96,  // 440-449 accounts
+        '450': 11.52,  // 450-459 accounts
+        '460': 11.07,  // 460-469 accounts
+        '470': 10.63,  // 470-479 accounts
+        '480': 10.19,  // 480-489 accounts
+        '490': 9.74,   // 490-500 accounts
     };
 
-    // Calculate costs dynamically
+    // Get the tier key for a given account count
+    const getTierKey = (accounts: number): string => {
+        const tierStart = Math.floor(accounts / 10) * 10;
+        return tierStart.toString();
+    };
+
+    // Get Entry plan effective rate per account for the given tier
+    const getEntryEffectiveRate = (accounts: number): number => {
+        const tierKey = getTierKey(accounts);
+        return entryPricingTiers[tierKey] || entryPricingTiers['140']; // fallback to highest tier
+    };
+
+    // Get Standard plan effective rate per account for the given tier
+    const getStandardEffectiveRate = (accounts: number): number => {
+        const tierKey = getTierKey(accounts);
+        return standardPricingTiers[tierKey] || standardPricingTiers['490']; // fallback to highest tier
+    };
+
+    // Calculate costs dynamically based on the effective rate (which includes base fee)
     const calculateCost = (plan: 'entry' | 'standard' | 'enterprise', accounts: number) => {
         if (plan === 'entry') {
             const baseMonthly = 700;
-            const perAccount = getEntryLevelPrice(accounts);
-            const accountsTotal = accounts * perAccount;
-            const monthlyTotal = baseMonthly + accountsTotal;
+            const effectiveRate = getEntryEffectiveRate(accounts);
+            // The effective rate already includes the base fee distributed across accounts
+            // Monthly total = accounts × effective rate
+            const monthlyTotal = accounts * effectiveRate;
+            // Calculate what the per-account portion would be (excluding base fee)
+            const accountsTotal = monthlyTotal - baseMonthly;
+            const perAccount = accountsTotal / accounts;
             return {
                 base: baseMonthly,
                 perAccount: perAccount,
                 accountsTotal: accountsTotal,
                 monthly: monthlyTotal,
                 yearly: monthlyTotal * 12,
-                effectiveCostPerAccount: monthlyTotal / accounts
+                effectiveCostPerAccount: effectiveRate
             };
         } else if (plan === 'standard') {
             const validAccounts = Math.max(accounts, 150);
             const baseMonthly = 1300;
-            const perAccount = getStandardPlanPrice(validAccounts);
-            const accountsTotal = validAccounts * perAccount;
-            const monthlyTotal = baseMonthly + accountsTotal;
+            const effectiveRate = getStandardEffectiveRate(validAccounts);
+            // The effective rate already includes the base fee distributed across accounts
+            // Monthly total = accounts × effective rate
+            const monthlyTotal = validAccounts * effectiveRate;
+            // Calculate what the per-account portion would be (excluding base fee)
+            const accountsTotal = monthlyTotal - baseMonthly;
+            const perAccount = accountsTotal / validAccounts;
             return {
                 base: baseMonthly,
                 perAccount: perAccount,
                 accountsTotal: accountsTotal,
                 monthly: monthlyTotal,
                 yearly: monthlyTotal * 12,
-                effectiveCostPerAccount: monthlyTotal / validAccounts
+                effectiveCostPerAccount: effectiveRate
             };
         }
         return { base: 0, perAccount: 0, accountsTotal: 0, monthly: 0, yearly: 0, effectiveCostPerAccount: 0 };
