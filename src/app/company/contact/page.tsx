@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import InnerPageHeader from '@/components/InnerPageHeader';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import ContactForm from '@/components/ContactForm';
 
 export const metadata: Metadata = {
     title: 'Contact Us | Sales & Support | FxTrusts',
@@ -113,36 +114,7 @@ export default function ContactPage() {
 
                     {/* Form Side */}
                     <div style={{ display: 'flex', flexDirection: 'column', gap: '2rem' }}>
-                        <div style={{ background: 'white', padding: '3rem', borderRadius: '24px', boxShadow: '0 20px 40px rgba(0,0,0,0.05)' }}>
-                            <form style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
-                                <div>
-                                    <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: '#374151' }}>Name</label>
-                                    <input type="text" placeholder="John Doe" style={{ width: '100%', padding: '1rem', borderRadius: '12px', border: '1px solid #E5E7EB', fontSize: '1rem', outline: 'none', transition: 'border-color 0.2s' }} />
-                                </div>
-                                <div>
-                                    <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: '#374151' }}>Email</label>
-                                    <input type="email" placeholder="john@brokerage.com" style={{ width: '100%', padding: '1rem', borderRadius: '12px', border: '1px solid #E5E7EB', fontSize: '1rem', outline: 'none', transition: 'border-color 0.2s' }} />
-                                </div>
-                                <div>
-                                    <label style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: '#374151' }}>What's Broken?</label>
-                                    <textarea placeholder="Tell us what your current provider is doing wrong..." rows={5} style={{ width: '100%', padding: '1rem', borderRadius: '12px', border: '1px solid #E5E7EB', fontSize: '1rem', fontFamily: 'inherit', outline: 'none', transition: 'border-color 0.2s' }}></textarea>
-                                </div>
-                                <button style={{
-                                    background: '#111827',
-                                    color: 'white',
-                                    padding: '1rem',
-                                    borderRadius: '12px',
-                                    fontWeight: '600',
-                                    fontSize: '1.1rem',
-                                    border: 'none',
-                                    cursor: 'pointer',
-                                    marginTop: '1rem',
-                                    transition: 'transform 0.2s'
-                                }}>
-                                    Send Message
-                                </button>
-                            </form>
-                        </div>
+                        <ContactForm />
 
                         {/* Support Tiers (New Content) */}
                         <div style={{ background: '#1E293B', padding: '2rem', borderRadius: '24px', color: 'white' }}>
