@@ -34,7 +34,7 @@ export default function ContactStep({ data, updateData, onNext, onBack }: Contac
         if (!data.email || !/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(data.email)) newErrors.email = "Please enter a valid email address";
         if (!data.companyName) newErrors.companyName = "Required";
         if (!data.phone) newErrors.phone = "Required";
-        
+
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
     };
@@ -88,7 +88,7 @@ export default function ContactStep({ data, updateData, onNext, onBack }: Contac
     };
 
     return (
-        <motion.div 
+        <motion.div
             className={styles.stepWrapper}
             variants={containerVariants}
             initial="hidden"
@@ -121,24 +121,25 @@ export default function ContactStep({ data, updateData, onNext, onBack }: Contac
             </div>
 
             <div className={styles.formGrid} style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '3rem', marginBottom: '2.5rem' }}>
-                 <motion.div className={styles.inputGroup} variants={itemVariants}>
+                <motion.div className={styles.inputGroup} variants={itemVariants}>
                     <label className={`${styles.inputLabel} ${focusedField === 'phone' ? styles.focused : ''}`}>
                         Phone Number *
                     </label>
                     <div className={!!errors.phone ? styles.errorBorder : ''}>
                         <PhoneInput
+                            id="contact-phone-input"
                             international
                             withCountryCallingCode
                             placeholder="Enter phone number"
                             defaultCountry="US"
                             value={data.phone}
                             onChange={(value) => updateData('phone', value || '')}
-                            className={styles.phoneInput} 
+                            className={styles.phoneInput}
                             onFocus={() => setFocusedField('phone')}
                             onBlur={() => setFocusedField(null)}
                         />
                     </div>
-                     {errors.phone && (
+                    {errors.phone && (
                         <span className={styles.errorMessage}>
                             {errors.phone}
                         </span>
@@ -149,26 +150,26 @@ export default function ContactStep({ data, updateData, onNext, onBack }: Contac
                     <label className={`${styles.inputLabel} ${focusedField === 'whatsapp' ? styles.focused : ''}`}>
                         WhatsApp Number
                     </label>
-                     <PhoneInput
-                            international
-                            withCountryCallingCode
-                            placeholder="Enter WhatsApp number"
-                            defaultCountry="US"
-                            value={data.whatsapp}
-                            onChange={(value) => updateData('whatsapp', value || '')}
-                            className={styles.phoneInput}
-                            onFocus={() => setFocusedField('whatsapp')}
-                            onBlur={() => setFocusedField(null)}
-                        />
+                    <PhoneInput
+                        international
+                        withCountryCallingCode
+                        placeholder="Enter WhatsApp number"
+                        defaultCountry="US"
+                        value={data.whatsapp}
+                        onChange={(value) => updateData('whatsapp', value || '')}
+                        className={styles.phoneInput}
+                        onFocus={() => setFocusedField('whatsapp')}
+                        onBlur={() => setFocusedField(null)}
+                    />
                 </motion.div>
             </div>
 
-             <div style={{ marginBottom: '4rem' }}>
+            <div style={{ marginBottom: '4rem' }}>
                 {renderInput('telegram', 'Telegram ID', '@username', 'text', false)}
             </div>
 
             <motion.div className={styles.navButtons} variants={itemVariants}>
-                 <div /> 
+                <div />
                 <motion.button
                     onClick={handleNext}
                     className={styles.nextBtn}

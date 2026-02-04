@@ -41,7 +41,7 @@ const organizationSchema = {
     },
     contactPoint: {
         '@type': 'ContactPoint',
-        telephone: '+971551461476',
+        telephone: '+447897015780',
         contactType: 'sales',
         email: 'business@fxtrusts.com',
         areaServed: 'Worldwide',
@@ -112,7 +112,7 @@ export default function PressPage() {
                                 </tr>
                                 <tr>
                                     <th>Contact Phone</th>
-                                    <td>+971 55 146 1476</td>
+                                    <td>+44 7897 015780</td>
                                 </tr>
                                 <tr>
                                     <th>Website</th>
@@ -155,7 +155,7 @@ export default function PressPage() {
                         <h2 className={styles.sectionTitle}>Media Contact</h2>
                         <div className={styles.contactCard}>
                             <p><strong>Email:</strong> business@fxtrusts.com</p>
-                            <p><strong>Phone:</strong> +971 55 146 1476</p>
+                            <p><strong>Phone:</strong> +44 7897 015780</p>
                             <p><strong>Address:</strong> B2007-127, 33rd floor, Latifa Tower, Trade Center First, Sheikh Zayed Road, Dubai, UAE</p>
                         </div>
                     </div>
