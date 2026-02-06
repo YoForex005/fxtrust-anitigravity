@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import styles from './blog.module.css';
+import { blogService } from '@/services/blogService';
 
 export const metadata: Metadata = {
     title: "Forex Broker Resources & Industry Insights | FxTrusts",
@@ -24,170 +25,16 @@ export const metadata: Metadata = {
     },
 };
 
-export default function BlogIndex() {
-    const featuredArticle = {
-        title: "How to Start a Forex Brokerage in 2025: The Brutally Honest Guide",
-        description: "The complete guide to launching a forex brokerage. Covers licensing, technology, liquidity, capital requirements, and all the things other guides conveniently forget to mention.",
-        href: "/resources/blog/how-to-start-forex-brokerage-2025",
-        category: "Business Guide (Brutally Honest)",
-        readTime: "25 min read",
-        date: "December 2024",
-        lastUpdated: "December 7, 2024",
-        author: "Chief Reality Officer"
-    };
+export const revalidate = 3600; // ISR: Revalidate every hour
 
-    const articles = [
-        {
-            title: "How to Start a Forex Brokerage in 2025: The Brutally Honest Guide",
-            description: "The complete guide to launching a forex brokerage. Covers licensing, technology, liquidity, capital requirements, and all the things other guides conveniently forget to mention.",
-            href: "/resources/blog/how-to-start-forex-brokerage-2025",
-            category: "Business Guide",
-            readTime: "25 min read",
-            date: "December 2024",
-            lastUpdated: "December 7, 2024",
-            topics: ["Brokerage Startup", "Licensing", "Capital Requirements"],
-            stats: { views: "2,450", citations: "18" }
-        },
-        {
-            title: "The Complete MT5 White Label Guide 2025: Everything They Don't Tell You",
-            description: "The real MT5 white label guide. Covers costs, setup, MetaQuotes fees, hidden charges, and why the $5,000 quotes are always $15,000 by launch day.",
-            href: "/resources/blog/mt5-white-label-complete-guide",
-            category: "Technical Guide",
-            readTime: "22 min read",
-            date: "December 2024",
-            lastUpdated: "December 7, 2024",
-            topics: ["MT5 White Label", "MetaQuotes", "Hidden Costs"],
-            stats: { views: "3,180", citations: "24" }
-        },
-        {
-            title: "Forex CRM Pricing Decoded: An Unofficial Industry Report",
-            description: "We analyzed 15 providers, documented their hidden fees, and created the pricing guide nobody else will publish. Real costs exposed.",
-            href: "/resources/blog/forex-crm-pricing-decoded",
-            category: "Industry Report",
-            readTime: "23 min read",
-            date: "December 2024",
-            lastUpdated: "December 7, 2024",
-            topics: ["Forex CRM", "Pricing", "Provider Comparison"],
-            stats: { views: "4,520", citations: "31" }
-        },
-        {
-            title: "How to Start a Prop Trading Firm in 2025: The Complete Tech Stack Guide",
-            description: "Everything you need to launch a prop firm. Covers technology, challenge rules, breach detection, payout systems, and why 90% of traders will pay you to watch them lose money.",
-            href: "/resources/blog/how-to-start-prop-firm-2025",
-            category: "Business Guide",
-            readTime: "24 min read",
-            date: "December 2024",
-            lastUpdated: "December 7, 2024",
-            topics: ["Prop Firm", "Challenge Design", "Breach Detection"],
-            stats: { views: "5,280", citations: "42" }
-        },
-        {
-            title: "A-Book vs B-Book: The Broker Execution Models Nobody Talks About Honestly",
-            description: "The real guide to forex broker execution models. A-Book, B-Book, hybrid—what they mean, why nobody admits to B-booking, and which model actually makes money.",
-            href: "/resources/blog/a-book-vs-b-book-explained",
-            category: "Industry Guide",
-            readTime: "21 min read",
-            date: "December 2024",
-            lastUpdated: "December 7, 2024",
-            topics: ["A-Book", "B-Book", "Execution Models"],
-            stats: { views: "6,120", citations: "38" }
-        },
-        {
-            title: "Forex Liquidity Providers Explained: The Complete 2025 Guide",
-            description: "How forex liquidity actually works. Prime brokers, PoP, aggregators, last look—the complete guide to forex execution infrastructure for brokers.",
-            href: "/resources/blog/forex-liquidity-providers-guide",
-            category: "Technical Guide",
-            readTime: "22 min read",
-            date: "December 2024",
-            lastUpdated: "December 7, 2024",
-            topics: ["Liquidity", "Prime of Prime", "FIX Protocol"],
-            stats: { views: "3,890", citations: "29" }
-        },
-        {
-            title: "Investigative Report: Why Your Forex Broker CRM Costs More Than a Small Island",
-            description: "An 'official' investigation into why competitors charge $5,000 setup fees while FxTrusts charges $0. Warning: Contains satire and shocking financial common sense.",
-            href: "/resources/blog/forex-broker-crm-pricing-exposed",
-            category: "Market Analysis (Satire)",
-            readTime: "5 min read",
-            date: "December 2024",
-            lastUpdated: "December 4, 2024",
-            topics: ["Forex CRM", "Pricing", "Satire"],
-            stats: { views: "1,200", citations: "5" }
-        },
-        {
-            title: "The Complete Guide to Forex CRM Systems in 2025",
-            description: "A comprehensive analysis of CRM platforms for forex brokerages. This guide covers MT5 Manager API integration, lead management workflows, compliance automation, and evaluation criteria for selecting the right solution.",
-            href: "/resources/guides/forex-crm-complete-guide",
-            category: "Comprehensive Guide",
-            readTime: "18 min read",
-            date: "December 2024",
-            lastUpdated: "December 2, 2024",
-            topics: ["Forex CRM", "MT5 Integration", "Provider Selection"],
-            stats: { views: "18,200", citations: "45" }
-        },
-        {
-            title: "Top 10 Forex CRM Providers: 2025 Industry Analysis",
-            description: "Independent evaluation of leading CRM platforms including feature comparison, pricing analysis, integration capabilities, and performance benchmarks. Based on direct testing and interviews with 200+ brokerage operators.",
-            href: "/resources/blog/best-forex-crm-providers-2025",
-            category: "Industry Report",
-            readTime: "12 min read",
-            date: "November 2024",
-            lastUpdated: "November 28, 2024",
-            topics: ["CRM Comparison", "Vendor Analysis", "Pricing"],
-            stats: { views: "12,400", citations: "34" }
-        },
-        {
-            title: "MT4 vs MT5 CRM Integration: Technical Architecture Guide",
-            description: "Detailed technical comparison of Manager API implementations for MetaTrader 4 and MetaTrader 5. Covers WebAPI capabilities, data synchronization patterns, authentication protocols, and integration best practices.",
-            href: "/resources/blog/mt4-vs-mt5-crm",
-            category: "Technical Guide",
-            readTime: "15 min read",
-            date: "November 2024",
-            lastUpdated: "November 20, 2024",
-            topics: ["MT5 Integration", "API Architecture", "Development"],
-            stats: { views: "8,200", citations: "21" }
-        },
-        {
-            title: "B2Broker vs FxTrusts: Platform Comparison",
-            description: "Objective comparison of B2Broker and FxTrusts technology stacks. Detailed analysis of infrastructure, pricing models, support responsiveness, and implementation timelines based on documented client experiences.",
-            href: "/resources/comparisons/b2broker-alternative",
-            category: "Competitor Analysis",
-            readTime: "10 min read",
-            date: "October 2024",
-            lastUpdated: "October 15, 2024",
-            topics: ["B2Broker", "Platform Comparison", "Pricing"],
-            stats: { views: "6,100", citations: "12" }
-        },
-        {
-            title: "Leverate Alternative: Migration and Comparison Guide",
-            description: "Comprehensive evaluation of Leverate's technology platform versus modern alternatives. Includes migration planning considerations, feature gap analysis, and total cost of ownership calculations.",
-            href: "/resources/comparisons/leverate-alternative",
-            category: "Competitor Analysis",
-            readTime: "9 min read",
-            date: "October 2024",
-            lastUpdated: "October 8, 2024",
-            topics: ["Leverate", "Migration Planning", "TCO Analysis"],
-            stats: { views: "4,800", citations: "8" }
-        },
-        {
-            title: "How to Start a Forex Brokerage: Complete Startup Guide",
-            description: "Step-by-step guide covering regulatory licensing, technology infrastructure, liquidity relationships, capital requirements, and operational planning. Based on experience launching 142 brokerages across 67 jurisdictions.",
-            href: "/resources/guides/how-to-start-forex-broker",
-            category: "Business Guide",
-            readTime: "22 min read",
-            date: "September 2024",
-            lastUpdated: "November 30, 2024",
-            topics: ["Brokerage Startup", "Licensing", "Regulatory"],
-            stats: { views: "15,700", citations: "67" }
-        }
-    ];
+export default async function BlogIndex() {
+    // Fetch data from DB
+    const { posts: articles } = await blogService.getPosts(1, 100);
+    const featuredArticle = await blogService.getFeaturedPost();
 
     const categories = [
-        { name: "All Resources", count: 13, active: true },
-        { name: "Technical Guides", count: 4, active: false },
-        { name: "Industry Reports", count: 4, active: false },
-        { name: "Competitor Analysis", count: 2, active: false },
-        { name: "Business Guides", count: 3, active: false }
+        { name: "All Resources", count: articles.length, active: true },
+        // TODO: Fetch categories dynamically if needed
     ];
 
     const platformStats = [
@@ -270,32 +117,39 @@ export default function BlogIndex() {
                         <div className={styles.articlesMain}>
 
                             {/* Featured Article */}
-                            <div className={styles.featuredWrapper}>
-                                <span className={styles.featuredLabel}>Featured Resource</span>
-                                <Link href={featuredArticle.href} className={styles.featuredCard}>
-                                    <div className={styles.featuredContent}>
-                                        <div className={styles.featuredMeta}>
-                                            <span className={styles.featuredCategory}>{featuredArticle.category}</span>
-                                            <span className={styles.featuredDivider}>|</span>
-                                            <span>{featuredArticle.readTime}</span>
-                                        </div>
-                                        <h2 className={styles.featuredTitle}>{featuredArticle.title}</h2>
-                                        <p className={styles.featuredDescription}>{featuredArticle.description}</p>
-                                        <div className={styles.featuredFooter}>
-                                            <div className={styles.featuredAuthor}>
-                                                <span className={styles.authorAvatar}>FT</span>
-                                                <div>
-                                                    <span className={styles.authorName}>{featuredArticle.author}</span>
-                                                    <span className={styles.authorDate}>Last updated: {featuredArticle.lastUpdated}</span>
-                                                </div>
+                            {featuredArticle && (
+                                <div className={styles.featuredWrapper}>
+                                    <span className={styles.featuredLabel}>Featured Resource</span>
+                                    <Link href={`/resources/blog/${featuredArticle.seoSlug}`} className={styles.featuredCard}>
+                                        <div className={styles.featuredContent}>
+                                            <div className={styles.featuredMeta}>
+                                                <span className={styles.featuredCategory}>Featured</span>
+                                                <span className={styles.featuredDivider}>|</span>
+                                                <span>5 min read</span>
                                             </div>
-                                            <span className={styles.readMore}>
-                                                Read Full Guide →
-                                            </span>
+                                            <h2 className={styles.featuredTitle}>{featuredArticle.title}</h2>
+                                            {/* Strip HTML tags for description preview if content is HTML */}
+                                            <p className={styles.featuredDescription}>
+                                                {featuredArticle.content.replace(/<[^>]*>?/gm, '').substring(0, 150)}...
+                                            </p>
+                                            <div className={styles.featuredFooter}>
+                                                <div className={styles.featuredAuthor}>
+                                                    <span className={styles.authorAvatar}>FT</span>
+                                                    <div>
+                                                        <span className={styles.authorName}>{featuredArticle.author}</span>
+                                                        <span className={styles.authorDate}>
+                                                            Last updated: {new Date(featuredArticle.updatedAt).toLocaleDateString()}
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <span className={styles.readMore}>
+                                                    Read Full Guide →
+                                                </span>
+                                            </div>
                                         </div>
-                                    </div>
-                                </Link>
-                            </div>
+                                    </Link>
+                                </div>
+                            )}
 
                             {/* Article List */}
                             <div className={styles.articlesList}>
@@ -303,69 +157,50 @@ export default function BlogIndex() {
                                     <h3>All Resources</h3>
                                     <span className={styles.articlesCount}>{articles.length} articles</span>
                                 </div>
-                                {articles.map((article, index) => (
-                                    <Link key={index} href={article.href} className={styles.articleCard}>
-                                        <div className={styles.articleContent}>
-                                            <div className={styles.articleMeta}>
-                                                <span className={styles.articleCategory}>{article.category}</span>
-                                                <span className={styles.articleDivider}>|</span>
-                                                <span>{article.readTime}</span>
-                                                <span className={styles.articleDivider}>|</span>
-                                                <span>{article.stats.views} views</span>
-                                            </div>
-                                            <h4 className={styles.articleTitle}>{article.title}</h4>
-                                            <p className={styles.articleDescription}>{article.description}</p>
-                                            <div className={styles.articleFooter}>
-                                                <div className={styles.articleTopics}>
-                                                    {article.topics.map((topic, i) => (
-                                                        <span key={i} className={styles.topicTag}>{topic}</span>
-                                                    ))}
+                                {articles.length > 0 ? (
+                                    articles.map((article, index) => (
+                                        <Link key={index} href={`/resources/blog/${article.seoSlug}`} className={styles.articleCard}>
+                                            <div className={styles.articleContent}>
+                                                <div className={styles.articleMeta}>
+                                                    <span className={styles.articleCategory}>
+                                                        {/* @ts-ignore */}
+                                                        {article.categories?.[0]?.category?.name || 'Guide'}
+                                                    </span>
+                                                    <span className={styles.articleDivider}>|</span>
+                                                    <span>5 min read</span>
+                                                    <span className={styles.articleDivider}>|</span>
+                                                    <span>{Number(article.views)} views</span>
                                                 </div>
-                                                <span className={styles.articleDate}>Updated: {article.lastUpdated}</span>
+                                                <h4 className={styles.articleTitle}>{article.title}</h4>
+                                                <p className={styles.articleDescription}>
+                                                    {article.content.replace(/<[^>]*>?/gm, '').substring(0, 120)}...
+                                                </p>
+                                                <div className={styles.articleFooter}>
+                                                    <div className={styles.articleTopics}>
+                                                        {article.tags.split(',').slice(0, 3).map((tag, i) => (
+                                                            <span key={i} className={styles.topicTag}>{tag.trim()}</span>
+                                                        ))}
+                                                    </div>
+                                                    <span className={styles.articleDate}>
+                                                        Updated: {new Date(article.updatedAt).toLocaleDateString()}
+                                                    </span>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <div className={styles.articleArrow}>→</div>
-                                    </Link>
-                                ))}
+                                            <div className={styles.articleArrow}>→</div>
+                                        </Link>
+                                    ))
+                                ) : (
+                                    <div style={{ padding: '2rem', textAlign: 'center', color: '#666' }}>
+                                        <p>No articles found. Add some to the database!</p>
+                                    </div>
+                                )}
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            {/* Research Methodology */}
-            <section className={styles.methodologySection}>
-                <div className={styles.container}>
-                    <div className={styles.methodologyHeader}>
-                        <h2>Research Methodology</h2>
-                        <p>Our evaluation process and content standards</p>
-                    </div>
-                    <div className={styles.methodologyGrid}>
-                        <div className={styles.methodologyCard}>
-                            <span className={styles.methodologyNumber}>01</span>
-                            <h4>Direct Platform Testing</h4>
-                            <p>All platforms reviewed are tested in production environments with real trading data and integration scenarios. We document actual performance metrics, not vendor claims.</p>
-                        </div>
-                        <div className={styles.methodologyCard}>
-                            <span className={styles.methodologyNumber}>02</span>
-                            <h4>Operator Interviews</h4>
-                            <p>Each major guide includes insights from interviews with brokerage operators currently using the platforms discussed. Direct experience informs our analysis.</p>
-                        </div>
-                        <div className={styles.methodologyCard}>
-                            <span className={styles.methodologyNumber}>03</span>
-                            <h4>Quarterly Updates</h4>
-                            <p>All content is reviewed and updated quarterly. Platform updates, pricing changes, and new features are incorporated to maintain accuracy.</p>
-                        </div>
-                        <div className={styles.methodologyCard}>
-                            <span className={styles.methodologyNumber}>04</span>
-                            <h4>Transparent Scoring</h4>
-                            <p>Evaluation criteria and scoring rubrics are disclosed in each analysis. Readers can apply the same framework to their own assessments.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Newsletter */}
+            {/* Newsletter and Footer (Same as before) */}
             <section className={styles.newsletterSection}>
                 <div className={styles.container}>
                     <div className={styles.newsletterCard}>

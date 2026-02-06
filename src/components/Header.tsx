@@ -255,6 +255,8 @@ export default function Header() {
                         </div>
                     </div>
 
+                    <Link href="/resources/blog" className={styles.navLink}>Blog</Link>
+
                     <Link href="/pricing" className={styles.navLink}>{nav.pricing}</Link>
 
                     <div className={styles.navItem}>
@@ -434,9 +436,13 @@ export default function Header() {
                         <div className={`${styles.mobileSubmenu} ${expandedMobileMenu === 'resources' ? styles.mobileSubmenuOpen : ''}`}>
                             <Link href="/docs" className={styles.mobileSublink} onClick={() => setIsMenuOpen(false)}>API Documentation</Link>
                             <Link href="/status" className={styles.mobileSublink} onClick={() => setIsMenuOpen(false)}>Server Status</Link>
-                            <Link href="/blog" className={styles.mobileSublink} onClick={() => setIsMenuOpen(false)}>The Blog</Link>
+                            <Link href="/resources/blog" className={styles.mobileSublink} onClick={() => setIsMenuOpen(false)}>The Blog</Link>
                         </div>
                     </div>
+
+                    <Link href="/resources/blog" className={styles.mobileMenuDirectLink} onClick={() => setIsMenuOpen(false)}>
+                        Blog
+                    </Link>
 
                     <Link href="/pricing" className={styles.mobileMenuDirectLink} onClick={() => setIsMenuOpen(false)}>
                         {nav.pricing}

@@ -1,0 +1,98 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// Blog Model
+model Blog {
+  id            BigInt         @id @default(autoincrement())
+  title         String         @db.VarChar(255)
+  seoSlug       String         @unique @map("seo_slug") @db.VarChar(255)
+  status        BlogStatus
+  views         BigInt?        @default(0)
+  createdAt     DateTime       @default(now()) @map("created_at") @db.Timestamptz(6)
+  content       String
+  author        String         @db.VarChar(255)
+  featuredImage String         @map("featured_image") @db.VarChar(255)
+  tags          String         @db.VarChar(255)
+  categoryId    BigInt         @map("category_id")
+  downloadLink  String?        @map("download_link") @db.VarChar(255)
+  updatedAt     DateTime       @default(now()) @updatedAt @map("updated_at")
+
+  // Relations
+  categories BlogCategory[]
+  seoMeta    SeoMeta[]
+
+  @@map("blogs")
+}
+
+// BlogCategory Join Table (Many-to-Many)
+model BlogCategory {
+  blogId     BigInt   @map("blog_id")
+  categoryId Int      @map("category_id")
+  blog       Blog     @relation(fields: [blogId], references: [id], onDelete: Cascade)
+  category   Category @relation(fields: [categoryId], references: [categoryId], onDelete: Cascade)
+
+  @@id([blogId, categoryId])
+  @@map("blog_categories")
+}
+
+// Category Model
+model Category {
+  categoryId  Int             @id @default(autoincrement()) @map("category_id")
+  name        String          @unique @db.VarChar(255)
+  description String?
+  status      CategoryStatus? @default(active)
+
+  // Relations
+  blogs BlogCategory[]
+
+  @@map("categories")
+}
+
+// SEO Meta Model
+model SeoMeta {
+  id             Int         @id @default(autoincrement())
+  postId         BigInt      @map("post_id")
+  seoTitle       String?     @map("seo_title") @db.VarChar(255)
+  seoDescription String?     @map("seo_description")
+  seoKeywords    String?     @map("seo_keywords")
+  seoSlug        String?     @map("seo_slug") @db.VarChar(255)
+  canonicalUrl   String?     @map("canonical_url") @db.VarChar(255)
+  metaRobots     MetaRobots? @default(index_follow) @map("meta_robots")
+  ogTitle        String?     @map("og_title") @db.VarChar(255)
+  ogDescription  String?     @map("og_description")
+  ogImage        String?     @map("og_image") @db.VarChar(255)
+  createdAt      DateTime    @default(now()) @map("created_at")
+  updatedAt      DateTime    @default(now()) @updatedAt @map("updated_at")
+
+  // Relations
+  blog Blog @relation(fields: [postId], references: [id], onDelete: Cascade)
+
+  @@map("seo_meta")
+}
+
+// Enums
+enum BlogStatus {
+  published
+  draft
+  scheduled
+
+  @@map("blogs_status")
+}
+
+enum CategoryStatus {
+  active
+  inactive
+}
+
+enum MetaRobots {
+  index_follow     @map("index, follow")
+  noindex_follow   @map("noindex, follow")
+  index_nofollow   @map("index, nofollow")
+  noindex_nofollow @map("noindex, nofollow")
+}

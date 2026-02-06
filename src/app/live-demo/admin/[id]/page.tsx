@@ -11,11 +11,12 @@ export const metadata: Metadata = {
 };
 
 interface PageProps {
-    params: {
+    params: Promise<{
         id: string;
-    };
+    }>;
 }
 
-export default function AccountDetailPage({ params }: PageProps) {
-    return <AccountDetailContent accountId={params.id} />;
+export default async function AccountDetailPage({ params }: PageProps) {
+    const { id } = await params;
+    return <AccountDetailContent accountId={id} />;
 }
