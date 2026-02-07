@@ -194,7 +194,7 @@ export default function TicketsView() {
                                     <div className={styles.ticketMessageHeader}>
                                         <span className={styles.ticketMessageAuthor}>{message.author}</span>
                                         <span className={styles.ticketMessageTime}>
-                                            {new Date(message.timestamp).toLocaleString()}
+                                            {new Date(message.timestamp).toLocaleString('en-US')}
                                         </span>
                                     </div>
                                     <p className={styles.ticketMessageText}>{message.message}</p>

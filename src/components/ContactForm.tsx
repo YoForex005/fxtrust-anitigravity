@@ -37,25 +37,25 @@ export default function ContactForm() {
     };
 
     return (
-        <div style={{ background: 'white', padding: '3rem', borderRadius: '24px', boxShadow: '0 20px 40px rgba(0,0,0,0.05)' }}>
+        <div className="bg-white p-8 lg:p-12 rounded-3xl shadow-[0_20px_40px_rgba(0,0,0,0.05)] text-center lg:text-left">
             {status === 'success' ? (
-                <div style={{ textAlign: 'center', padding: '2rem 0' }}>
-                    <div style={{ width: '60px', height: '60px', background: '#ecfdf5', borderRadius: '50%', color: '#059669', display: 'flex', alignItems: 'center', justifyContent: 'center', margin: '0 auto 1rem' }}>
+                <div className="text-center py-8">
+                    <div className="w-16 h-16 bg-emerald-50 rounded-full text-emerald-600 flex items-center justify-center mx-auto mb-4">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="20 6 9 17 4 12" /></svg>
                     </div>
-                    <h3 style={{ fontSize: '1.5rem', fontWeight: '700', color: '#111827', marginBottom: '0.5rem' }}>Message Sent!</h3>
-                    <p style={{ color: '#6B7280' }}>We'll get back to you shortly.</p>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-2">Message Sent!</h3>
+                    <p className="text-gray-500">We'll get back to you shortly.</p>
                     <button
                         onClick={() => setStatus('idle')}
-                        style={{ marginTop: '1.5rem', color: '#4353F2', fontWeight: '600', background: 'none', border: 'none', cursor: 'pointer' }}
+                        className="mt-6 text-blue-600 font-semibold bg-transparent border-none cursor-pointer hover:underline"
                     >
                         Send another message
                     </button>
                 </div>
             ) : (
-                <form onSubmit={handleSubmit} style={{ display: 'flex', flexDirection: 'column', gap: '1.5rem' }}>
+                <form onSubmit={handleSubmit} className="flex flex-col gap-6">
                     <div>
-                        <label htmlFor="name" style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: '#374151' }}>Name</label>
+                        <label htmlFor="name" className="block mb-2 font-semibold text-gray-700 text-center lg:text-left">Name</label>
                         <input
                             id="name"
                             name="name"
@@ -64,11 +64,11 @@ export default function ContactForm() {
                             placeholder="John Doe"
                             value={formData.name}
                             onChange={handleChange}
-                            style={{ width: '100%', padding: '1rem', borderRadius: '12px', border: '1px solid #E5E7EB', fontSize: '1rem', outline: 'none', transition: 'border-color 0.2s' }}
+                            className="w-full p-4 rounded-xl border border-gray-200 text-base outline-none focus:border-blue-500 transition-colors text-center lg:text-left"
                         />
                     </div>
                     <div>
-                        <label htmlFor="email" style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: '#374151' }}>Email</label>
+                        <label htmlFor="email" className="block mb-2 font-semibold text-gray-700 text-center lg:text-left">Email</label>
                         <input
                             id="email"
                             name="email"
@@ -77,11 +77,11 @@ export default function ContactForm() {
                             placeholder="john@brokerage.com"
                             value={formData.email}
                             onChange={handleChange}
-                            style={{ width: '100%', padding: '1rem', borderRadius: '12px', border: '1px solid #E5E7EB', fontSize: '1rem', outline: 'none', transition: 'border-color 0.2s' }}
+                            className="w-full p-4 rounded-xl border border-gray-200 text-base outline-none focus:border-blue-500 transition-colors text-center lg:text-left"
                         />
                     </div>
                     <div>
-                        <label htmlFor="message" style={{ display: 'block', marginBottom: '0.5rem', fontWeight: '600', color: '#374151' }}>What's Broken?</label>
+                        <label htmlFor="message" className="block mb-2 font-semibold text-gray-700 text-center lg:text-left">What's Broken?</label>
                         <textarea
                             id="message"
                             name="message"
@@ -90,12 +90,12 @@ export default function ContactForm() {
                             rows={5}
                             value={formData.message}
                             onChange={handleChange}
-                            style={{ width: '100%', padding: '1rem', borderRadius: '12px', border: '1px solid #E5E7EB', fontSize: '1rem', fontFamily: 'inherit', outline: 'none', transition: 'border-color 0.2s' }}
+                            className="w-full p-4 rounded-xl border border-gray-200 text-base font-inherit outline-none focus:border-blue-500 transition-colors text-center lg:text-left"
                         ></textarea>
                     </div>
 
                     {status === 'error' && (
-                        <div style={{ color: '#DC2626', fontSize: '0.9rem', padding: '0.5rem', background: '#FEF2F2', borderRadius: '8px' }}>
+                        <div className="text-red-600 text-sm p-2 bg-red-50 rounded-lg text-center">
                             Something went wrong. Please try again or email us directly.
                         </div>
                     )}
@@ -103,22 +103,10 @@ export default function ContactForm() {
                     <button
                         type="submit"
                         disabled={status === 'loading'}
-                        style={{
-                            background: status === 'loading' ? '#9CA3AF' : '#111827',
-                            color: 'white',
-                            padding: '1rem',
-                            borderRadius: '12px',
-                            fontWeight: '600',
-                            fontSize: '1.1rem',
-                            border: 'none',
-                            cursor: status === 'loading' ? 'not-allowed' : 'pointer',
-                            marginTop: '1rem',
-                            transition: 'transform 0.2s',
-                            display: 'flex',
-                            alignItems: 'center',
-                            justifyContent: 'center',
-                            gap: '0.5rem'
-                        }}
+                        className={`
+                            w-full p-4 rounded-full font-bold text-lg border-none cursor-pointer mt-4 transition-transform flex items-center justify-center gap-2
+                            ${status === 'loading' ? 'bg-gray-400 cursor-not-allowed' : 'bg-gray-900 text-white hover:scale-[1.02]'}
+                        `}
                     >
                         {status === 'loading' ? (
                             <>Sending...</>

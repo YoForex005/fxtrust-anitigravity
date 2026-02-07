@@ -142,7 +142,7 @@ export default function TransactionDepositsView() {
                                                 {deposit.status}
                                             </span>
                                         </td>
-                                        <td style={{ fontSize: '0.85rem' }}>{new Date(deposit.date).toLocaleString()}</td>
+                                        <td style={{ fontSize: '0.85rem' }}>{new Date(deposit.date).toLocaleString('en-US')}</td>
                                         <td>
                                             <button className={styles.moreButton} onClick={() => setSelectedTransaction(deposit)}>
                                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
@@ -203,7 +203,7 @@ export default function TransactionDepositsView() {
                             </div>
                             <div className={styles.clientDetailRow}>
                                 <span className={styles.clientDetailLabel}>Date:</span>
-                                <span className={styles.clientDetailValue}>{new Date(selectedTransaction.date).toLocaleString()}</span>
+                                <span className={styles.clientDetailValue}>{new Date(selectedTransaction.date).toLocaleString('en-US')}</span>
                             </div>
                             {selectedTransaction.notes && (
                                 <div className={styles.clientDetailRow}>

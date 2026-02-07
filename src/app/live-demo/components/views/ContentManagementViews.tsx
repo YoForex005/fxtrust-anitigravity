@@ -56,7 +56,7 @@ export function BannersView() {
             data={banners}
             summaryCards={[
                 { label: 'Active Banners', value: banners.filter(b => b.status === 'Active').length, icon: <span>🖼️</span> },
-                { label: 'Total Clicks', value: totalClicks.toLocaleString(), trend: '+5% today', trendUp: true, icon: <span>🖱️</span> }
+                { label: 'Total Clicks', value: totalClicks.toLocaleString('en-US'), trend: '+5% today', trendUp: true, icon: <span>🖱️</span> }
             ]}
             columns={[
                 { header: 'Name', accessor: 'name' },

@@ -17,14 +17,14 @@ export function WithdrawalsView() {
             data={mockWithdrawals}
             summaryCards={[
                 { label: 'Pending Requests', value: pendingCount, trend: 'Needs Action', trendUp: false, icon: <span>⏳</span> },
-                { label: 'Processed Today', value: `$${totalProcessed.toLocaleString()}`, trend: '+12% vs avg', trendUp: true, icon: <span>💸</span> },
+                { label: 'Processed Today', value: `$${totalProcessed.toLocaleString('en-US')}`, trend: '+12% vs avg', trendUp: true, icon: <span>💸</span> },
                 { label: 'Rejected', value: rejectedCount, icon: <span>🚫</span> }
             ]}
             columns={[
                 { header: 'Client', accessor: 'clientName', className: 'font-medium' },
                 { header: 'Amount', accessor: (item) => `${item.amount} ${item.currency}` },
                 { header: 'Method', accessor: 'method' },
-                { header: 'Date', accessor: (item) => new Date(item.date).toLocaleString() },
+                { header: 'Date', accessor: (item) => new Date(item.date).toLocaleString('en-US') },
                 {
                     header: 'Status', accessor: (item) => (
                         <span className={`status-badge status-${item.status.toLowerCase()}`}>{item.status}</span>
@@ -53,7 +53,7 @@ export function InternalTransfersView() {
             subtitle="Log of wallet-to-account transfers"
             data={mockInternalTransfers}
             summaryCards={[
-                { label: 'Total Volume', value: `$${totalVolume.toLocaleString()}`, icon: <span>🔄</span> },
+                { label: 'Total Volume', value: `$${totalVolume.toLocaleString('en-US')}`, icon: <span>🔄</span> },
                 { label: 'Success Rate', value: `${successRate}%`, trend: 'Healthy', trendUp: true, icon: <span>✅</span> }
             ]}
             columns={[

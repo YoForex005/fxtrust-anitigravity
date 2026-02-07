@@ -32,7 +32,7 @@ export default function LiveStats() {
     const formatNumber = (num: number) => {
         if (num >= 1000000000) return `$${(num / 1000000000).toFixed(2)}B`;
         if (num >= 1000000) return `$${(num / 1000000).toFixed(1)}M`;
-        if (num >= 1000) return num.toLocaleString();
+        if (num >= 1000) return num.toLocaleString('en-US');
         return num.toString();
     };
 
@@ -107,7 +107,7 @@ export default function LiveStats() {
                                 <path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z" />
                             </svg>
                         </div>
-                        <div className={styles.statValue}>{stats.transactions.toLocaleString()}</div>
+                        <div className={styles.statValue}>{stats.transactions.toLocaleString('en-US')}</div>
                         <div className={styles.statLabel}>Transactions Today</div>
                         <div className={styles.statTrend}>
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">

@@ -151,7 +151,7 @@ export default function LiquidityPage() {
             <section className={`${styles.section} ${styles.altSection}`}>
                 <div className={styles.container}>
                     <div className={styles.splitFeature}>
-                        <div className={styles.featureContent}>
+                        <div className={`${styles.featureContent} mobile-center-override`}>
                             <div className={styles.featureBadge}>THE SOLUTION</div>
                             <h2>15+ LPs. One Best Price.<br />Always.</h2>
                             <p>

@@ -16,7 +16,7 @@ export function ActiveBonusesView() {
             summaryCards={[
                 { label: 'Total Campaigns', value: totalBonuses, icon: <span>🎁</span> },
                 { label: 'Active Now', value: activeBonuses, trend: 'Stable', trendUp: true, icon: <span>⚡</span> },
-                { label: 'Total Redeemed', value: totalRedeemed.toLocaleString(), trend: '+12% this week', trendUp: true, icon: <span>👥</span> }
+                { label: 'Total Redeemed', value: totalRedeemed.toLocaleString('en-US'), trend: '+12% this week', trendUp: true, icon: <span>👥</span> }
             ]}
             columns={[
                 { header: 'Name', accessor: 'name', className: 'font-medium' },

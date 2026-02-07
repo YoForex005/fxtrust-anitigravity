@@ -31,7 +31,7 @@ export function AdminsView() {
                         <span className={`status-badge status-${item.status}`}>{item.status}</span>
                     )
                 },
-                { header: 'Last Login', accessor: (item) => new Date(item.lastLogin).toLocaleString() }
+                { header: 'Last Login', accessor: (item) => new Date(item.lastLogin).toLocaleString('en-US') }
             ]}
             actions={[
                 { label: 'Edit', onClick: () => { }, variant: 'secondary' },

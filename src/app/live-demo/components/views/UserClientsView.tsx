@@ -249,7 +249,7 @@ export default function UserClientsView() {
                                 </div>
                                 <div className={styles.clientDetailRow}>
                                     <span className={styles.clientDetailLabel}>Last Activity:</span>
-                                    <span className={styles.clientDetailValue}>{new Date(selectedClient.lastActivity).toLocaleString()}</span>
+                                    <span className={styles.clientDetailValue}>{new Date(selectedClient.lastActivity).toLocaleString('en-US')}</span>
                                 </div>
                             </div>
 

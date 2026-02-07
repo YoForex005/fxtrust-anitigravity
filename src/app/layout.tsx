@@ -132,7 +132,7 @@ export default function RootLayout({
         {/* Structured Data */}
         <DynamicBreadcrumbs />
       </head>
-      <body className={inter.className}>
+      <body className={`${inter.className} overflow-x-hidden`}>
         <OrganizationSchema />
         <GoogleTranslate />
         {children}

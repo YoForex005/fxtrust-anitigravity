@@ -26,7 +26,7 @@ export function IBTreeView() {
             summaryCards={[
                 { label: 'Total Partners', value: totalIBs, icon: <span>🤝</span> },
                 { label: 'Network Volume', value: `$${(totalVolume / 1000000).toFixed(1)}M`, trend: 'High Activity', trendUp: true, icon: <span>📊</span> },
-                { label: 'Total Commissions', value: `$${totalEarned.toLocaleString()}`, icon: <span>💰</span> }
+                { label: 'Total Commissions', value: `$${totalEarned.toLocaleString('en-US')}`, icon: <span>💰</span> }
             ]}
             columns={[
                 {
@@ -41,7 +41,7 @@ export function IBTreeView() {
                 { header: 'Commission', accessor: (item) => `${item.commissionRate}%` },
                 { header: 'Clients', accessor: 'totalClients' },
                 { header: 'Volume', accessor: (item) => `$${(item.monthlyVolume / 1000000).toFixed(1)}M` },
-                { header: 'Total Earned', accessor: (item) => `$${item.totalEarned.toLocaleString()}` }
+                { header: 'Total Earned', accessor: (item) => `$${item.totalEarned.toLocaleString('en-US')}` }
             ]}
             actions={[
                 { label: 'View Details', onClick: () => { } }
@@ -67,12 +67,12 @@ export function IBCommissionsView() {
             subtitle="Commission payouts and reports"
             data={commissions}
             summaryCards={[
-                { label: 'Pending Payouts', value: `$${pendingPayouts.toLocaleString()}`, trend: 'Due Soon', trendUp: false, icon: <span>⏳</span> },
-                { label: 'Total Paid (MTD)', value: `$${totalPaid.toLocaleString()}`, icon: <span>✅</span> }
+                { label: 'Pending Payouts', value: `$${pendingPayouts.toLocaleString('en-US')}`, trend: 'Due Soon', trendUp: false, icon: <span>⏳</span> },
+                { label: 'Total Paid (MTD)', value: `$${totalPaid.toLocaleString('en-US')}`, icon: <span>✅</span> }
             ]}
             columns={[
                 { header: 'IB Name', accessor: 'ib' },
-                { header: 'Amount', accessor: (item) => `$${item.amount.toLocaleString()}` },
+                { header: 'Amount', accessor: (item) => `$${item.amount.toLocaleString('en-US')}` },
                 { header: 'Period', accessor: 'period' },
                 {
                     header: 'Status', accessor: (item) => (

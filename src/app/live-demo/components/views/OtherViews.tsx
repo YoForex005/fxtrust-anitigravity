@@ -68,7 +68,7 @@ export function RewardsView() {
             data={rewards}
             columns={[
                 { header: 'Item', accessor: 'item', className: 'font-medium' },
-                { header: 'Points Cost', accessor: (item) => item.points.toLocaleString() },
+                { header: 'Points Cost', accessor: (item) => item.points.toLocaleString('en-US') },
                 { header: 'Stock', accessor: 'stock' },
                 { header: 'Total Claimed', accessor: 'claimed' }
             ]}

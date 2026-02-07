@@ -89,7 +89,7 @@
     top: 0;
     right: 20px;
     transform: translateY(50%);
-    
+
     background: linear-gradient(135deg, #4353F2 0%, #7B8BF6 100%);
     color: white;
     padding: 0.4rem 1rem;
@@ -197,7 +197,7 @@
     background: linear-gradient(135deg, #4353F2 0%, #7B8BF6 100%);
     color: white;
     border: none;
-    border-radius: 6px;
+    border-radius: 100px;
     font-family: var(--font-inter);
     font-size: 1rem;
     font-weight: 700;
@@ -389,7 +389,7 @@
     background: white;
     color: #4353F2;
     border: 2px solid #4353F2;
-    border-radius: 14px;
+    border-radius: 100px;
     font-family: var(--font-inter);
     font-size: 1.05rem;
     font-weight: 700;

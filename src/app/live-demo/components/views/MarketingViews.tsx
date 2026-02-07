@@ -16,16 +16,16 @@ export function CampaignsView() {
             subtitle="Track performance of email and ad campaigns"
             data={mockCampaigns}
             summaryCards={[
-                { label: 'Total Revenue', value: `$${totalRevenue.toLocaleString()}`, trend: '+22% vs last month', trendUp: true, icon: <span>📈</span> },
+                { label: 'Total Revenue', value: `$${totalRevenue.toLocaleString('en-US')}`, trend: '+22% vs last month', trendUp: true, icon: <span>📈</span> },
                 { label: 'Active Campaigns', value: activeCampaigns, icon: <span>📢</span> },
                 { label: 'Avg Open Rate', value: `${avgOpenRate}%`, trend: 'Industry Avg', trendUp: true, icon: <span>📧</span> }
             ]}
             columns={[
                 { header: 'Campaign Name', accessor: 'name', className: 'font-medium' },
                 { header: 'Type', accessor: 'type' },
-                { header: 'Sent', accessor: (item) => item.sent.toLocaleString() },
+                { header: 'Sent', accessor: (item) => item.sent.toLocaleString('en-US') },
                 { header: 'Open Rate', accessor: (item) => `${((item.opened / item.sent) * 100).toFixed(1)}%` },
-                { header: 'Revenue', accessor: (item) => `$${item.revenue.toLocaleString()}` },
+                { header: 'Revenue', accessor: (item) => `$${item.revenue.toLocaleString('en-US')}` },
                 {
                     header: 'Status', accessor: (item) => (
                         <span className={`status-badge status-${item.status.toLowerCase()}`}>{item.status}</span>
@@ -58,15 +58,15 @@ export function AffiliateSystemView() {
             subtitle="External traffic sources and performance"
             data={affiliates}
             summaryCards={[
-                { label: 'Total Payouts', value: `$${totalPayouts.toLocaleString()}`, icon: <span>💸</span> },
-                { label: 'Top Partner', value: topPartner.name, trend: `$${topPartner.payout.toLocaleString()}`, trendUp: true, icon: <span>🏆</span> }
+                { label: 'Total Payouts', value: `$${totalPayouts.toLocaleString('en-US')}`, icon: <span>💸</span> },
+                { label: 'Top Partner', value: topPartner.name, trend: `$${topPartner.payout.toLocaleString('en-US')}`, trendUp: true, icon: <span>🏆</span> }
             ]}
             columns={[
                 { header: 'Partner', accessor: 'name', className: 'font-medium' },
-                { header: 'Clicks', accessor: (item) => item.clicks.toLocaleString() },
+                { header: 'Clicks', accessor: (item) => item.clicks.toLocaleString('en-US') },
                 { header: 'Signups', accessor: 'signups' },
                 { header: 'Conversion', accessor: 'conversion' },
-                { header: 'Payout', accessor: (item) => `$${item.payout.toLocaleString()}` }
+                { header: 'Payout', accessor: (item) => `$${item.payout.toLocaleString('en-US')}` }
             ]}
         />
     );

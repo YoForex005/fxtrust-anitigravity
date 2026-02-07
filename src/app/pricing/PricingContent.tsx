@@ -198,7 +198,7 @@ export default function PricingContent() {
                                         <div className={styles.breakdownTitle}>Monthly Breakdown:</div>
                                         <div className={styles.costLine}>
                                             <span>Platform Base Fee:</span>
-                                            <span>${entryCost.base.toLocaleString()}</span>
+                                            <span>${entryCost.base.toLocaleString('en-US')}</span>
                                         </div>
                                         <div className={styles.costLine}>
                                             <span>Per Account Rate:</span>
@@ -207,7 +207,7 @@ export default function PricingContent() {
                                         <div className={styles.costLineDivider}></div>
                                         <div className={styles.costLine}>
                                             <span className={styles.costLineLabel}>Monthly Total ({accountCount} accounts):</span>
-                                            <span className={styles.costLineValue}>${entryCost.monthly.toLocaleString()}</span>
+                                            <span className={styles.costLineValue}>${entryCost.monthly.toLocaleString('en-US')}</span>
                                         </div>
                                         <div className={styles.costLine}>
                                             <span className={styles.costLineSmall}>Effective cost per account:</span>
@@ -216,7 +216,7 @@ export default function PricingContent() {
                                     </div>
 
                                     <div className={styles.annualCost}>
-                                        <span>Annual Cost: ${entryCost.yearly.toLocaleString()}</span>
+                                        <span>Annual Cost: ${entryCost.yearly.toLocaleString('en-US')}</span>
                                     </div>
                                 </div>
 
@@ -243,7 +243,7 @@ export default function PricingContent() {
                                         <div className={styles.breakdownTitle}>Monthly Breakdown:</div>
                                         <div className={styles.costLine}>
                                             <span>Platform Base Fee:</span>
-                                            <span>${standardCost.base.toLocaleString()}</span>
+                                            <span>${standardCost.base.toLocaleString('en-US')}</span>
                                         </div>
                                         <div className={styles.costLine}>
                                             <span>Per Account Rate:</span>
@@ -252,7 +252,7 @@ export default function PricingContent() {
                                         <div className={styles.costLineDivider}></div>
                                         <div className={styles.costLine}>
                                             <span className={styles.costLineLabel}>Monthly Total ({Math.max(accountCount, 150)} accounts):</span>
-                                            <span className={styles.costLineValue}>${standardCost.monthly.toLocaleString()}</span>
+                                            <span className={styles.costLineValue}>${standardCost.monthly.toLocaleString('en-US')}</span>
                                         </div>
                                         <div className={styles.costLine}>
                                             <span className={styles.costLineSmall}>Effective cost per account:</span>
@@ -261,9 +261,9 @@ export default function PricingContent() {
                                     </div>
 
                                     <div className={styles.annualCost}>
-                                        <span>Annual Cost: ${standardCost.yearly.toLocaleString()}</span>
+                                        <span>Annual Cost: ${standardCost.yearly.toLocaleString('en-US')}</span>
                                         {accountCount >= 150 && (
-                                            <span className={styles.annualSavings}>Save ${savings.toLocaleString()}/year vs Entry</span>
+                                            <span className={styles.annualSavings}>Save ${savings.toLocaleString('en-US')}/year vs Entry</span>
                                         )}
                                     </div>
                                 </div>
@@ -271,7 +271,7 @@ export default function PricingContent() {
 
                             {accountCount >= 150 && (
                                 <div className={styles.savingsHighlight}>
-                                    <strong>You'd save ${(savings / 12).toLocaleString()}/month</strong> with Standard vs Entry at {accountCount} accounts. That's money you could spend on acquisition instead of infrastructure.
+                                    <strong>You'd save ${(savings / 12).toLocaleString('en-US')}/month</strong> with Standard vs Entry at {accountCount} accounts. That's money you could spend on acquisition instead of infrastructure.
                                 </div>
                             )}
                         </div>

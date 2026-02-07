@@ -104,11 +104,11 @@ export default function ROICalculator() {
                             <div className={styles.breakdown}>
                                 <div className={styles.breakdownItem}>
                                     <span>Setup Fee</span>
-                                    <span>${traditional.setupFee.toLocaleString()}</span>
+                                    <span>${traditional.setupFee.toLocaleString('en-US')}</span>
                                 </div>
                                 <div className={styles.breakdownItem}>
                                     <span>Monthly Base</span>
-                                    <span>${traditional.monthlyBase.toLocaleString()}/mo</span>
+                                    <span>${traditional.monthlyBase.toLocaleString('en-US')}/mo</span>
                                 </div>
                                 <div className={styles.breakdownItem}>
                                     <span>Per User Cost</span>
@@ -117,7 +117,7 @@ export default function ROICalculator() {
                             </div>
                             <div className={styles.total}>
                                 <span>First Year Total</span>
-                                <span className={styles.totalValue}>${traditionalTotal.toLocaleString()}</span>
+                                <span className={styles.totalValue}>${traditionalTotal.toLocaleString('en-US')}</span>
                             </div>
                         </div>
 
@@ -133,7 +133,7 @@ export default function ROICalculator() {
                                 </div>
                                 <div className={styles.breakdownItem}>
                                     <span>Monthly Base</span>
-                                    <span>${baseFee.toLocaleString()}/mo</span>
+                                    <span>${baseFee.toLocaleString('en-US')}/mo</span>
                                 </div>
                                 <div className={styles.breakdownItem}>
                                     <span>Per Active User</span>
@@ -142,7 +142,7 @@ export default function ROICalculator() {
                             </div>
                             <div className={styles.total}>
                                 <span>First Year Total</span>
-                                <span className={styles.totalValue + ' ' + styles.green}>${fxtrustTotal.toLocaleString()}</span>
+                                <span className={styles.totalValue + ' ' + styles.green}>${fxtrustTotal.toLocaleString('en-US')}</span>
                             </div>
                         </div>
                     </div>
@@ -155,7 +155,7 @@ export default function ROICalculator() {
                         </div>
                         <div className={styles.savingsContent}>
                             <div className={styles.savingsLabel}>Money You're Literally Throwing Away</div>
-                            <div className={styles.savingsAmount}>${savings.toLocaleString()}</div>
+                            <div className={styles.savingsAmount}>${savings.toLocaleString('en-US')}</div>
                             <div className={styles.savingsSubtext}>That's {savingsPercent}% you could've spent on literally anything else</div>
                         </div>
                         <button className={styles.ctaButton}>

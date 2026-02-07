@@ -1090,37 +1090,169 @@
 
 @media (max-width: 600px) {
     .hero {
-        padding: 100px 0 80px;
+        padding: 100px 0 120px;
+        /* Increased bottom padding to clear the 100px bottom shape */
         min-height: auto;
     }
 
     .headline {
-        font-size: 2.25rem;
+        font-size: 1.75rem;
+        /* Reduced from 2rem/2.25rem */
+        padding: 0 1rem;
+    }
+
+    .badge {
+        font-size: 0.75rem;
+        padding: 0.5rem 1rem;
+        text-align: left;
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
     .subtext {
-        font-size: 1rem;
+        font-size: 0.95rem;
+        padding: 0 1rem;
     }
 
-    .calculatorCard {
-        padding: 2rem 1.5rem;
+    /* Sections Padding */
+    .calculatorSection,
+    .transparencySection,
+    .setupSection,
+    .hiddenCostsSection,
+    .faqSection,
+    .finalCTA {
+        padding: 3rem 0;
+    }
+
+    .sectionHeader {
+        margin-bottom: 2.5rem;
     }
 
     .sectionHeader h2 {
-        font-size: 2rem;
+        font-size: 1.75rem;
     }
 
+    /* Calculator Card */
+    .calculatorCard {
+        padding: 1.5rem;
+        text-align: center;
+    }
+
+    .sliderContainer {
+        margin: 0 auto;
+    }
+
+    .sliderLabel {
+        font-size: 1rem;
+    }
+
+    .accountNumber {
+        font-size: 3rem;
+    }
+
+    /* Cost Cards */
+    .costCard {
+        padding: 1.5rem;
+        text-align: center;
+    }
+
+    .planBadge {
+        margin-left: auto;
+        margin-right: auto;
+        width: fit-content;
+    }
+
+    .costLineValue {
+        font-size: 1.125rem;
+    }
+
+    /* Plan Details */
+    .planDetailCard {
+        padding: 1.5rem;
+        text-align: center;
+    }
+
+    .popularBadge {
+        left: 50%;
+        transform: translateX(-50%);
+        width: max-content;
+    }
+
+    .planHeader h3 {
+        font-size: 1.75rem;
+    }
+
+    .price {
+        font-size: 1.5rem;
+    }
+
+    .whatsIncluded li,
+    .whatsNotIncluded li,
+    .taskList li {
+        text-align: left;
+    }
+
+    .customPricing {
+        padding: 1rem 0;
+    }
+
+    /* Hidden Costs */
+    .neverChargeCard {
+        text-align: center;
+    }
+
+    .neverIcon {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Timeline */
+    .timelineDay {
+        padding: 1.5rem;
+        text-align: center;
+        /* Grid layout override for timeline to stack and center */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dayTitle {
+        font-size: 1.1rem;
+    }
+
+    .hourEstimate {
+        margin-top: 1rem;
+    }
+
+    /* FAQ */
+    .faqItem {
+        padding: 1.5rem;
+        text-align: center;
+    }
+
+    /* CTA */
     .ctaContent h2 {
-        font-size: 1.875rem;
+        font-size: 1.75rem;
     }
 
     .ctaButtons {
         flex-direction: column;
+        align-items: center;
+        /* Center the buttons */
+        gap: 1rem;
     }
 
     .primaryCTAButton,
     .secondaryCTAButton {
-        width: 100%;
+        width: auto;
+        /* Allow buttons to size to content */
         justify-content: center;
+        padding: 0.75rem 1.5rem;
+        /* Reduced padding */
+        border-radius: 100px;
+        /* Pill shape */
+        min-width: 200px;
+        /* Minimum width for consistency */
     }
 }

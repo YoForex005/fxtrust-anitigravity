@@ -63,7 +63,7 @@ export function CodeTerminal({ title = "bash", code, language = 'javascript', cl
             }
 
             // Keywords
-            const keywords = ['const', 'let', 'var', 'function', 'return', 'if', 'else', 'for', 'while', 'import', 'export', 'default', 'class', 'interface'];
+            const keywords = ['const', 'let', 'var', 'function', 'return', 'if', 'else', 'for', 'while', 'import', 'export', 'default', 'interface'];
             keywords.forEach(kw => {
                 const regex = new RegExp(`\\b${kw}\\b`, 'g');
                 highlightedLine = highlightedLine.replace(regex, `<span class="${styles.keyword}">${kw}</span>`);

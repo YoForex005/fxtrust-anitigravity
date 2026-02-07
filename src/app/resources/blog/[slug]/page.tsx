@@ -46,10 +46,10 @@ export default async function BlogPost({ params }: Props) {
     return (
         <main className={styles.main}>
             <Header />
-            <article className={articleStyles.articleContainer}>
+            <article className={articleStyles.article}>
                 <header className={articleStyles.articleHeader}>
-                    <h1 className={articleStyles.title}>{post.title}</h1>
-                    <div className={articleStyles.meta}>
+                    <h1 className={articleStyles.articleTitle}>{post.title}</h1>
+                    <div className={articleStyles.articleMeta}>
                         <span>By {post.author}</span>
                         <span> | </span>
                         <span>{new Date(post.createdAt).toLocaleDateString()}</span>

@@ -105,7 +105,7 @@ export default function ManifestoPage() {
 
                     {/* The Future of FX Section (New Content) */}
                     <div style={{ background: '#111827', padding: '3rem', borderRadius: '24px', color: 'white', marginBottom: '4rem' }}>
-                        <h2 style={{ fontSize: '2rem', fontWeight: '800', marginBottom: '1.5rem' }}>The Future of FX</h2>
+                        <h2 style={{ fontSize: '2rem', fontWeight: '800', marginBottom: '1.5rem', color: 'white' }}>The Future of FX</h2>
                         <p style={{ fontSize: '1.1rem', lineHeight: '1.8', color: '#9CA3AF', marginBottom: '1.5rem' }}>
                             The old model of "Call Center Brokerage" is dying. Regulators are cracking down. Clients are getting smarter. The future belongs to:
                         </p>

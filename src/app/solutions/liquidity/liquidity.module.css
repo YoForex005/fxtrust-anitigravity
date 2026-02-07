@@ -71,6 +71,7 @@
     border-radius: 16px;
     border: 1px solid rgba(10, 22, 40, 0.08);
     transition: all 0.3s ease;
+    text-align: center;
 }
 
 .painCard:hover {
@@ -87,7 +88,7 @@
     align-items: center;
     justify-content: center;
     color: #D4AF37;
-    margin-bottom: 1.5rem;
+    margin: 0 auto 1.5rem auto;
 }
 
 .painTitle {
@@ -327,6 +328,7 @@
     border-radius: 16px;
     border: 1px solid rgba(10, 22, 40, 0.08);
     transition: all 0.3s ease;
+    text-align: center;
 }
 
 .modelCard:hover {
@@ -352,6 +354,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 0.5rem;
+    justify-content: center;
 }
 
 .modelPros span {
@@ -420,6 +423,7 @@
     border-radius: 16px;
     border: 1px solid rgba(10, 22, 40, 0.08);
     transition: all 0.3s ease;
+    text-align: center;
 }
 
 .faqCard:hover {
@@ -531,12 +535,41 @@
 /* Responsive */
 @media (max-width: 1024px) {
     .splitFeature {
-        grid-template-columns: 1fr;
-        gap: 3rem;
+        grid-template-columns: 1fr !important;
+        gap: 3rem !important;
     }
 
     .featureContent {
-        max-width: 100%;
+        max-width: 100% !important;
+        text-align: center !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        margin: 0 auto !important;
+        width: 100% !important;
+    }
+
+    .featureList {
+        width: 100% !important;
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        padding: 0 !important;
+        margin: 1.5rem 0 0 0 !important;
+    }
+
+    .featureList li {
+        width: fit-content !important;
+        margin: 0 auto 1.25rem auto !important;
+        text-align: left !important;
+        justify-content: center !important;
+    }
+
+    .featureContent p {
+        text-align: center !important;
+        max-width: 100% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
     }
 
     .painGrid,
@@ -563,6 +596,8 @@
         font-size: 2rem;
     }
 
+    /* featureContent and featureList centering moved to 1024px block */
+
     .featureContent h2 {
         font-size: 1.75rem;
     }
@@ -578,5 +613,43 @@
     .ctaButtons {
         flex-direction: column;
         align-items: center;
+    }
+
+    /* Mockup Fixes */
+    .aggregatorMockup {
+        padding: 1rem;
+    }
+
+    .priceDisplay {
+        padding: 1rem 0.5rem !important;
+        gap: 0.25rem !important;
+    }
+
+    .priceValue {
+        font-size: 1.3rem !important;
+    }
+
+    .spreadBox {
+        padding: 0.4rem 0.6rem !important;
+        font-size: 0.8rem !important;
+    }
+
+    .priceLabel {
+        font-size: 0.6rem !important;
+    }
+
+    .lpSource {
+        font-size: 0.6rem !important;
+    }
+}
+
+@media (max-width: 390px) {
+    .priceValue {
+        font-size: 1.1rem !important;
+    }
+
+    .spreadBox {
+        padding: 0.25rem 0.4rem !important;
+        font-size: 0.7rem !important;
     }
 }

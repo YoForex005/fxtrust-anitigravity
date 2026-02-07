@@ -997,7 +997,24 @@
     }
 
     .laptopBase {
-        width: 320px;
+        width: 100%;
+        height: 6px;
+    }
+
+    .devicesStack {
+        height: auto;
+        min-height: auto;
+        margin-bottom: 2rem;
+    }
+
+    .phoneFrame {
+        position: relative;
+        right: auto;
+        top: auto;
+        margin: 0 auto;
+        width: 200px;
+        height: 400px;
+        transform: none !important;
     }
 
     .clientBadge {
@@ -1030,6 +1047,11 @@
     }
 
     .badge {
+        font-size: 0.7rem;
+        padding: 0.4rem 1rem;
+    }
+
+    .clientBadge {
         font-size: 0.7rem;
         padding: 0.4rem 1rem;
     }
@@ -1075,11 +1097,16 @@
     }
 
     .laptopMockup {
-        display: none;
+        position: relative;
+        top: 0;
+        left: 0;
+        margin-bottom: 2rem;
     }
 
     .devicesStack {
+        flex-direction: column;
         height: auto;
-        min-height: 400px;
+        min-height: auto;
+        gap: 2rem;
     }
 }

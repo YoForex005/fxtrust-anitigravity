@@ -2,13 +2,26 @@ import { prisma } from '@/lib/prisma';
 import { BlogStatus, Prisma } from '@prisma/client';
 
 export const blogService = {
-    // Get all published posts with pagination
-    async getPosts(page = 1, limit = 9) {
+    // Get all published posts with pagination and optional category filter
+    async getPosts(page = 1, limit = 9, category?: string) {
         const skip = (page - 1) * limit;
         try {
+            const where: Prisma.BlogWhereInput = {
+                status: BlogStatus.published,
+                ...(category && category !== 'All Posts' ? {
+                    categories: {
+                        some: {
+                            category: {
+                                name: category
+                            }
+                        }
+                    }
+                } : {})
+            };
+
             const [posts, total] = await Promise.all([
                 prisma.blog.findMany({
-                    where: { status: BlogStatus.published },
+                    where,
                     include: {
                         categories: {
                             include: { category: true }
@@ -18,7 +31,7 @@ export const blogService = {
                     skip,
                     take: limit,
                 }),
-                prisma.blog.count({ where: { status: BlogStatus.published } })
+                prisma.blog.count({ where })
             ]);
 
             return {
