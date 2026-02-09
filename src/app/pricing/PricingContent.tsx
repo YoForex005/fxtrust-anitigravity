@@ -560,8 +560,11 @@ export default function PricingContent() {
                         <div className={styles.neverChargeGrid}>
                             <div className={styles.neverChargeCard}>
                                 <div className={styles.neverIcon}>
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" strokeWidth="2">
-                                        <path d="M18 6L6 18M6 6l12 12" />
+                                    {/* Download/Export Icon */}
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                                        <polyline points="7 10 12 15 17 10" />
+                                        <line x1="12" y1="15" x2="12" y2="3" />
                                     </svg>
                                 </div>
                                 <h4>Migration Fees</h4>
@@ -570,8 +573,15 @@ export default function PricingContent() {
 
                             <div className={styles.neverChargeCard}>
                                 <div className={styles.neverIcon}>
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" strokeWidth="2">
-                                        <path d="M18 6L6 18M6 6l12 12" />
+                                    {/* Lifebuoy/Support Icon */}
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                        <circle cx="12" cy="12" r="10" />
+                                        <circle cx="12" cy="12" r="4" />
+                                        <line x1="4.93" y1="4.93" x2="9.17" y2="9.17" />
+                                        <line x1="14.83" y1="14.83" x2="19.07" y2="19.07" />
+                                        <line x1="14.83" y1="9.17" x2="19.07" y2="4.93" />
+                                        <line x1="14.83" y1="9.17" x2="18.36" y2="5.64" />
+                                        <line x1="4.93" y1="19.07" x2="9.17" y2="14.83" />
                                     </svg>
                                 </div>
                                 <h4>Support Tickets</h4>
@@ -580,8 +590,10 @@ export default function PricingContent() {
 
                             <div className={styles.neverChargeCard}>
                                 <div className={styles.neverIcon}>
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" strokeWidth="2">
-                                        <path d="M18 6L6 18M6 6l12 12" />
+                                    {/* Code/API Icon */}
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                        <polyline points="16 18 22 12 16 6" />
+                                        <polyline points="8 6 2 12 8 18" />
                                     </svg>
                                 </div>
                                 <h4>API Access</h4>
@@ -590,8 +602,11 @@ export default function PricingContent() {
 
                             <div className={styles.neverChargeCard}>
                                 <div className={styles.neverIcon}>
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" strokeWidth="2">
-                                        <path d="M18 6L6 18M6 6l12 12" />
+                                    {/* Refresh/Update Icon */}
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                        <path d="M23 4v6h-6" />
+                                        <path d="M1 20v-6h6" />
+                                        <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15" />
                                     </svg>
                                 </div>
                                 <h4>Platform Updates</h4>
@@ -600,8 +615,10 @@ export default function PricingContent() {
 
                             <div className={styles.neverChargeCard}>
                                 <div className={styles.neverIcon}>
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" strokeWidth="2">
-                                        <path d="M18 6L6 18M6 6l12 12" />
+                                    {/* Shield Check/No Penalty Icon */}
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                        <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                                        <path d="m9 12 2 2 4-4" />
                                     </svg>
                                 </div>
                                 <h4>Overage Penalties</h4>
@@ -610,8 +627,13 @@ export default function PricingContent() {
 
                             <div className={styles.neverChargeCard}>
                                 <div className={styles.neverIcon}>
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" strokeWidth="2">
-                                        <path d="M18 6L6 18M6 6l12 12" />
+                                    {/* Network/Connection Icon */}
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                        <rect x="16" y="16" width="6" height="6" rx="1" />
+                                        <rect x="2" y="16" width="6" height="6" rx="1" />
+                                        <rect x="9" y="2" width="6" height="6" rx="1" />
+                                        <path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3" />
+                                        <path d="M12 12V8" />
                                     </svg>
                                 </div>
                                 <h4>Gateway Connection Fees</h4>

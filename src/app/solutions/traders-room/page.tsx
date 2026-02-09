@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import Header from '@/components/Header';
+
 import Footer from '@/components/Footer';
 import styles from './traders-room.module.css';
 
@@ -27,7 +27,7 @@ export const metadata: Metadata = {
 export default function TradersRoomPage() {
     return (
         <main className={styles.main}>
-            <Header />
+
 
             {/* Hero Section */}
             <section className={styles.hero}>

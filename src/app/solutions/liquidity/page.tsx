@@ -1,5 +1,5 @@
 import InnerPageHeader from '@/components/InnerPageHeader';
-import Header from '@/components/Header';
+
 import Footer from '@/components/Footer';
 import styles from './liquidity.module.css';
 import { MacWindow } from '@/components/DeviceFrames';
@@ -74,7 +74,7 @@ export default function LiquidityPage() {
     return (
         <main>
             <FAQSchema faqs={liquidityFaqs} />
-            <Header />
+
             <InnerPageHeader
                 badge="Deep Pools"
                 badgeIcon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>}

@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import Header from '@/components/Header';
+
 import Footer from '@/components/Footer';
 import styles from './forex-broker.module.css';
 import ProductSchema from '@/components/seo/ProductSchema';
@@ -86,7 +86,7 @@ export default function ForexBrokerPage() {
             />
             <FAQSchema faqs={faqs} />
 
-            <Header />
+
 
             {/* Hero Section */}
             <section className={styles.hero}>

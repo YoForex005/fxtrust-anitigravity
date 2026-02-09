@@ -415,9 +415,11 @@ export default function APIDocsPage() {
                     <div className={styles.sdkGrid}>
                         <div className={styles.sdkCard}>
                             <div className={styles.sdkIcon}>
-                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" strokeWidth="1.5">
-                                    <path d="M12 2L2 7l10 5 10-5-10-5z" />
-                                    <path d="M2 17l10 5 10-5M2 12l10 5 10-5" />
+                                {/* JS/TS Icon - Braces */}
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="M7 8l-4 4 4 4" />
+                                    <path d="M17 8l4 4-4 4" />
+                                    <line x1="14" y1="4" x2="10" y2="20" />
                                 </svg>
                             </div>
                             <h3>JavaScript / TypeScript</h3>
@@ -425,9 +427,10 @@ export default function APIDocsPage() {
                         </div>
                         <div className={styles.sdkCard}>
                             <div className={styles.sdkIcon}>
-                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" strokeWidth="1.5">
-                                    <path d="M12 2L2 7l10 5 10-5-10-5z" />
-                                    <path d="M2 17l10 5 10-5M2 12l10 5 10-5" />
+                                {/* Python Icon - Snake-like curves */}
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="M12 2c-3 0-5 2-5 5v2h5v-2a3 3 0 0 1 3-3 3 3 0 0 1 3 3v5h-5v2h5a5 5 0 0 0 5-5v-2a5 5 0 0 0-5-5h-3z" />
+                                    <path d="M12 22c3 0 5-2 5-5v-2H12v2a3 3 0 0 1-3 3 3 3 0 0 1-3-3v-5h5v-2H6a5 5 0 0 0-5 5v2a5 5 0 0 0 5 5h3z" />
                                 </svg>
                             </div>
                             <h3>Python</h3>
@@ -435,9 +438,10 @@ export default function APIDocsPage() {
                         </div>
                         <div className={styles.sdkCard}>
                             <div className={styles.sdkIcon}>
-                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" strokeWidth="1.5">
-                                    <path d="M12 2L2 7l10 5 10-5-10-5z" />
-                                    <path d="M2 17l10 5 10-5M2 12l10 5 10-5" />
+                                {/* PHP Icon - Variable/Script */}
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="M12 2v20" />
+                                    <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
                                 </svg>
                             </div>
                             <h3>PHP</h3>
@@ -445,9 +449,14 @@ export default function APIDocsPage() {
                         </div>
                         <div className={styles.sdkCard}>
                             <div className={styles.sdkIcon}>
-                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" strokeWidth="1.5">
-                                    <path d="M12 2L2 7l10 5 10-5-10-5z" />
-                                    <path d="M2 17l10 5 10-5M2 12l10 5 10-5" />
+                                {/* C# / .NET Icon - Hexagon or C style */}
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#D4AF37" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                    <path d="M10 9l-2-2-2 2" />
+                                    <path d="M14 9l2-2 2 2" />
+                                    <path d="M12 14v8" />
+                                    <path d="M7 16l5-3 5 3" />
+                                    <path d="M4 11h16" />
+                                    <circle cx="12" cy="12" r="9" />
                                 </svg>
                             </div>
                             <h3>C# / .NET</h3>

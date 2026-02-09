@@ -1,5 +1,5 @@
 import InnerPageHeader from '@/components/InnerPageHeader';
-import Header from '@/components/Header';
+
 import Footer from '@/components/Footer';
 import styles from './risk.module.css';
 import { MacWindow } from '@/components/DeviceFrames';
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
 export default function RiskManagementPage() {
     return (
         <main>
-            <Header />
+
             <InnerPageHeader
                 badge="Sleep at Night"
                 badgeIcon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>}

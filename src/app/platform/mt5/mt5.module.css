@@ -535,7 +535,7 @@
     padding: 1rem 2rem;
     background: linear-gradient(135deg, #D4AF37 0%, #B8942F 100%);
     color: #0A1628;
-    border-radius: 10px;
+    border-radius: 100px;
     font-weight: 700;
     font-size: 1rem;
     text-decoration: none;
@@ -555,7 +555,7 @@
     background: transparent;
     color: #FFFFFF;
     border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 10px;
+    border-radius: 100px;
     font-weight: 600;
     font-size: 1rem;
     text-decoration: none;
@@ -606,28 +606,134 @@
 }
 
 @media (max-width: 768px) {
+    .container {
+        padding: 0 1.25rem;
+    }
+
     .section {
         padding: 3.5rem 0;
+    }
+
+    .sectionHeader {
+        text-align: center;
     }
 
     .sectionHeader h2 {
         font-size: 2rem;
     }
 
+    .badge {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* Pain Grid */
+    .painCard {
+        text-align: center;
+    }
+
+    .painIcon {
+        margin: 0 auto 1.5rem;
+    }
+
+    /* Feature Split */
+    .featureContent {
+        text-align: center;
+    }
+
     .featureContent h2 {
         font-size: 1.75rem;
     }
 
-    .ctaContent h2 {
-        font-size: 2rem;
+    .featureList {
+        display: inline-block;
+        text-align: left;
+    }
+
+    .featureList li {
+        justify-content: flex-start;
+    }
+
+    /* Features Grid */
+    .featureCard {
+        text-align: center;
+    }
+
+    .featureCard h3 {
+        display: inline-block;
+    }
+
+    .featureCard li {
+        padding-left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+    }
+
+    .featureCard li::before {
+        position: static;
+    }
+
+    /* FAQ Grid */
+    .faqCard {
+        text-align: center;
     }
 
     .specsGrid {
         grid-template-columns: repeat(2, 1fr);
     }
 
+    @media (max-width: 600px) {
+        .specsGrid {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .ctaContent h2 {
+        font-size: 2rem;
+    }
+
     .ctaButtons {
         flex-direction: column;
         align-items: center;
+    }
+
+    /* MT5 Mockup Responsive */
+    .mockupContent {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .mockupSidebar {
+        width: 100%;
+        display: flex;
+        overflow-x: auto;
+        padding: 0.5rem;
+        gap: 0.5rem;
+    }
+
+    .sidebarItem {
+        flex: 1;
+        text-align: center;
+        padding: 0.75rem 0.5rem;
+        white-space: nowrap;
+        border-bottom: 2px solid transparent;
+        /* Highlight bottom instead of left */
+    }
+
+    .sidebarItem.active {
+        border-left: none;
+        border-bottom-color: #D4AF37;
+        background: rgba(212, 175, 55, 0.1);
+    }
+
+    .mockupMain {
+        padding: 1.5rem 1rem;
+    }
+
+    .statsRow {
+        flex-direction: column;
+        gap: 0.75rem;
     }
 }

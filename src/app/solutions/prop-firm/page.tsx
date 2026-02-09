@@ -1,5 +1,5 @@
 import InnerPageHeader from '@/components/InnerPageHeader';
-import Header from '@/components/Header';
+
 import Footer from '@/components/Footer';
 import styles from './prop.module.css';
 import { MacWindow, CodeTerminal } from '@/components/DeviceFrames';
@@ -74,7 +74,7 @@ export default function PropFirmPage() {
     return (
         <main>
             <FAQSchema faqs={propFirmFaqs} />
-            <Header />
+
             <InnerPageHeader
                 badge="The Challenge Engine"
                 badgeIcon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" /><polyline points="14 2 14 8 20 8" /><path d="M12 18v-6" /><path d="M8 15l4-4 4 4" /></svg>}

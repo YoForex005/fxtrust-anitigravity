@@ -660,7 +660,7 @@
     padding: 1rem 2rem;
     background: linear-gradient(135deg, #D4AF37 0%, #B8942F 100%);
     color: #0A1628;
-    border-radius: 10px;
+    border-radius: 100px;
     font-weight: 700;
     font-size: 1rem;
     text-decoration: none;
@@ -680,7 +680,7 @@
     background: transparent;
     color: #FFFFFF;
     border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 10px;
+    border-radius: 100px;
     font-weight: 600;
     font-size: 1rem;
     text-decoration: none;
@@ -725,6 +725,55 @@
     .timeline::before {
         display: none;
     }
+
+    /* Centering Styles */
+    .featureContent,
+    .pushContent {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .featureList {
+        width: 100%;
+    }
+
+    .featureList li {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .painCard,
+    .featureCard,
+    .faqCard,
+    .specCard {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .painIcon,
+    .featureNumber,
+    .featureBadge,
+    .appLogo {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .pushExamples {
+        align-items: center;
+        width: 100%;
+    }
+
+    .pushExample {
+        justify-content: center;
+        text-align: center;
+        width: 100%;
+    }
+
+
 }
 
 @media (max-width: 768px) {
@@ -746,7 +795,7 @@
     }
 
     .specsGrid {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
     }
 
     .ctaButtons {

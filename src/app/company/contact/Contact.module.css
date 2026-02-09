@@ -1,0 +1,214 @@
+.contactSection {
+    padding: 80px 0;
+    background: #F8FAFC;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+}
+
+.getInTouchTitle {
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    color: #111827;
+}
+
+.getInTouchText {
+    color: #6B7280;
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+}
+
+.contactInfoList {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.contactInfoItem {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.iconWrapper {
+    width: 50px;
+    height: 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.emailIcon {
+    background: #EFF6FF;
+    color: #4353F2;
+}
+
+.telegramIcon {
+    background: #F0FDF4;
+    color: #16A34A;
+}
+
+.whatsappIcon {
+    background: #F0FDF4;
+    color: #16A34A;
+}
+
+.itemTitle {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.25rem;
+}
+
+.itemText {
+    color: #6B7280;
+    margin-bottom: 0.25rem;
+}
+
+.itemLink {
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.emailLink {
+    color: #4353F2;
+}
+
+.socialLink {
+    color: #16A34A;
+}
+
+.officesSection {
+    margin-top: 4rem;
+}
+
+.officesTitle {
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    color: #111827;
+}
+
+.officesGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+.officeItem h4 {
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.5rem;
+}
+
+.officeItem p {
+    color: #6B7280;
+    font-size: 0.9rem;
+}
+
+.formSide {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.supportTiersCard {
+    background: #1E293B;
+    padding: 2rem;
+    border-radius: 24px;
+    color: white;
+}
+
+.supportTiersTitle {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+}
+
+.tierList {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.tierItem {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #374151;
+    padding-bottom: 0.5rem;
+}
+
+.tierItem:last-child {
+    border-bottom: none;
+}
+
+.tierLabel {
+    color: #9CA3AF;
+}
+
+.tierValue {
+    font-weight: bold;
+}
+
+.enterpriseLabel,
+.enterpriseValue {
+    color: #F59E0B;
+    font-weight: bold;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 1024px) {
+    .container {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        padding: 0 1.5rem;
+        gap: 3rem;
+    }
+
+    .contactSection {
+        padding: 60px 0;
+    }
+
+    /* Target the direct children of container for ordering when flex column is active */
+    .contactInfoWrapper {
+        order: 1;
+    }
+
+    .formWrapper {
+        order: 2;
+    }
+
+    .officesSection {
+        order: 3;
+        margin-top: 2rem;
+    }
+
+    .supportTiersCard {
+        order: 4;
+    }
+
+    .officesGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .getInTouchTitle {
+        font-size: 1.75rem;
+    }
+
+    .getInTouchText {
+        margin-bottom: 2rem;
+    }
+}
