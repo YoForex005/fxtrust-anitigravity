@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 
-import Footer from '@/components/Footer';
+
 import styles from './liquidity-access.module.css';
 
 export const metadata: Metadata = {
@@ -133,7 +133,7 @@ export default function LiquidityAccessPage() {
                 </div>
             </section>
 
-            <Footer />
+
         </main>
     );
 }

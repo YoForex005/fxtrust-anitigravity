@@ -1,6 +1,6 @@
 import InnerPageHeader from '@/components/InnerPageHeader';
 
-import Footer from '@/components/Footer';
+
 import styles from './liquidity.module.css';
 import { MacWindow } from '@/components/DeviceFrames';
 import Link from 'next/link';
@@ -463,7 +463,7 @@ export default function LiquidityPage() {
                 </div>
             </section>
 
-            <Footer />
+
         </main>
     );
 }

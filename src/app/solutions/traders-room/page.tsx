@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 
-import Footer from '@/components/Footer';
+
 import styles from './traders-room.module.css';
 
 export const metadata: Metadata = {
@@ -126,7 +126,7 @@ export default function TradersRoomPage() {
                 </div>
             </section>
 
-            <Footer />
+
         </main>
     );
 }

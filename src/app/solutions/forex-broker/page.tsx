@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 
-import Footer from '@/components/Footer';
+
 import styles from './forex-broker.module.css';
 import ProductSchema from '@/components/seo/ProductSchema';
 import FAQSchema from '@/components/seo/FAQSchema';
@@ -648,7 +648,7 @@ export default function ForexBrokerPage() {
                 </div>
             </section>
 
-            <Footer />
+
         </main>
     );
 }

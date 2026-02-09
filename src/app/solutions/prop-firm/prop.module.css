@@ -455,7 +455,7 @@
     color: white;
     border: none;
     padding: 0.875rem;
-    border-radius: 10px;
+    border-radius: 100px;
     font-weight: 700;
     cursor: pointer;
     transition: all 0.2s ease;
@@ -470,7 +470,7 @@
     color: white;
     border: none;
     padding: 0.875rem;
-    border-radius: 10px;
+    border-radius: 100px;
     font-weight: 700;
     cursor: pointer;
     transition: all 0.2s ease;

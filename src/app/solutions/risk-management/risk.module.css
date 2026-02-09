@@ -260,7 +260,7 @@
     color: #D4AF37;
     border: none;
     padding: 0.875rem;
-    border-radius: 8px;
+    border-radius: 100px;
     font-weight: 700;
     cursor: pointer;
     transition: all 0.2s ease;
@@ -437,7 +437,7 @@
     background: linear-gradient(135deg, #0A1628 0%, #1A2742 100%);
     color: white;
     border: none;
-    border-radius: 8px;
+    border-radius: 100px;
     font-weight: 700;
     cursor: pointer;
     transition: all 0.2s ease;
@@ -453,7 +453,7 @@
     background: white;
     color: #0A1628;
     border: 1px solid #D1D5DB;
-    border-radius: 8px;
+    border-radius: 100px;
     font-weight: 700;
     cursor: pointer;
     transition: all 0.2s ease;
@@ -551,7 +551,7 @@
     padding: 1rem 2rem;
     background: linear-gradient(135deg, #D4AF37 0%, #B8942F 100%);
     color: #0A1628;
-    border-radius: 10px;
+    border-radius: 100px;
     font-weight: 700;
     font-size: 1rem;
     text-decoration: none;
@@ -571,7 +571,7 @@
     background: transparent;
     color: #FFFFFF;
     border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 10px;
+    border-radius: 100px;
     font-weight: 600;
     font-size: 1rem;
     text-decoration: none;

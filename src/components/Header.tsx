@@ -121,15 +121,28 @@ export default function Header() {
         company: 'Company',
     };
 
-    const isTransparentHome = pathname === '/' && !scrolled;
-    const isPricingPage = pathname === '/pricing' && !scrolled;
+    const lightSolutions = [
+        '/solutions/mt5',
+        '/solutions/crm',
+        '/solutions/liquidity',
+        '/solutions/prop-firm',
+        '/solutions/risk-management',
+        '/solutions/crypto-payments',
+        '/solutions/traders-room'
+    ];
+
+    const isTransparentPage = (
+        pathname === '/' ||
+        pathname === '/pricing' ||
+        (pathname?.startsWith('/solutions/') && !lightSolutions.includes(pathname))
+    ) && !scrolled;
 
     return (
-        <header className={`${styles.header} ${scrolled ? styles.scrolled : ''} ${isTransparentHome ? styles.transparentHome : ''} ${isPricingPage ? styles.transparentHome : ''}`}>
+        <header className={`${styles.header} ${scrolled ? styles.scrolled : ''} ${isTransparentPage ? styles.transparentHome : ''}`}>
             <div className={styles.container}>
                 <Link href="/" className={styles.logo}>
                     <Image
-                        src={(isTransparentHome || isPricingPage) ? "/fxtrustwhite.png" : "/logo.png"}
+                        src={isTransparentPage ? "/fxtrustwhite.png" : "/logo.png"}
                         alt="FxTrusts Logo"
                         width={160}
                         height={50}

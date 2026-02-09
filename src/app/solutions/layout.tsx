@@ -1,4 +1,5 @@
 import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 import { ReactNode } from 'react';
 
 export default function SolutionsLayout({ children }: { children: ReactNode }) {
@@ -6,6 +7,7 @@ export default function SolutionsLayout({ children }: { children: ReactNode }) {
         <>
             <Header />
             {children}
+            <Footer />
         </>
     );
 }

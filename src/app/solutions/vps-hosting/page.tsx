@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-import Footer from '@/components/Footer';
+
 import styles from '../solution-subpage.module.css';
 
 export const metadata: Metadata = {
@@ -56,7 +56,7 @@ export default function VPSHostingPage() {
                     </div>
                 </div>
             </section>
-            <Footer />
+
         </main>
     );
 }

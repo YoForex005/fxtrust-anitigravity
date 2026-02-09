@@ -1,6 +1,6 @@
 import InnerPageHeader from '@/components/InnerPageHeader';
 
-import Footer from '@/components/Footer';
+
 import styles from './crypto.module.css';
 import Link from 'next/link';
 import type { Metadata } from 'next';
@@ -457,7 +457,7 @@ export default function CryptoPaymentsPage() {
                 </div>
             </section>
 
-            <Footer />
+
         </main>
     );
 }

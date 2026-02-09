@@ -595,7 +595,7 @@
     padding: 1rem 2rem;
     background: linear-gradient(135deg, #D4AF37 0%, #B8942F 100%);
     color: #0A1628;
-    border-radius: 10px;
+    border-radius: 100px;
     font-weight: 700;
     font-size: 1rem;
     text-decoration: none;
@@ -615,7 +615,7 @@
     background: transparent;
     color: #FFFFFF;
     border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 10px;
+    border-radius: 100px;
     font-weight: 600;
     font-size: 1rem;
     text-decoration: none;
@@ -661,8 +661,57 @@
         font-size: 2rem;
     }
 
+    .featureContent {
+        text-align: center;
+        margin: 0 auto;
+    }
+
     .featureContent h2 {
         font-size: 1.75rem;
+    }
+
+    .featureBadge {
+        margin: 0 auto 1.5rem;
+    }
+
+    .featureList li {
+        justify-content: center;
+    }
+
+    .painCard,
+    .specCard,
+    .uptimeCard,
+    .faqCard {
+        text-align: center;
+    }
+
+    .painIcon {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .specValue {
+        justify-content: center;
+        display: flex;
+        /* Ensure flex behavior centers if needed, or text-align handles it */
+        border-bottom: 1px solid #EEF1F6;
+        /* Keep border */
+    }
+
+    .specList li {
+        justify-content: center;
+        display: flex;
+        text-align: center;
+    }
+
+    .networkSteps {
+        align-items: center;
+    }
+
+    .networkStep {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
     .ctaContent h2 {

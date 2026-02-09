@@ -1,6 +1,6 @@
 import InnerPageHeader from '@/components/InnerPageHeader';
 
-import Footer from '@/components/Footer';
+
 import styles from './prop.module.css';
 import { MacWindow, CodeTerminal } from '@/components/DeviceFrames';
 import Link from 'next/link';
@@ -522,7 +522,7 @@ if (equity >= profitTarget && tradingDays >= minDays) {
                 </div>
             </section>
 
-            <Footer />
+
         </main>
     );
 }
