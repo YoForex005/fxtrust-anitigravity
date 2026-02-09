@@ -1,0 +1,30 @@
+@media (max-width: 768px) {
+  .manifestoContent {
+    text-align: center;
+  }
+
+  .manifestoQuote {
+    border-left: 0 !important;
+    border-top: 4px solid #4353f2;
+    padding-left: 0 !important;
+    padding-top: 1.25rem;
+  }
+
+  .philosophyGrid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .futureList li {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .architectsRow {
+    justify-content: center;
+  }
+
+  .signatureRow {
+    flex-direction: column;
+    justify-content: center;
+  }
+}

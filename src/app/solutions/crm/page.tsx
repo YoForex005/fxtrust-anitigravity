@@ -4,36 +4,26 @@ import ContentPageLayout from '@/components/ContentPageLayout';
 import FAQSchema from '@/components/seo/FAQSchema';
 
 export const metadata: Metadata = {
-    title: 'Forex CRM Software | Best Forex Broker CRM System | FxTrusts',
-    description: 'Best Forex CRM provider for brokers. Complete forex broker CRM solution with MT5 CRM integration, automated KYC, multi-tier IB system, and marketing automation.',
+    title: 'Forex CRM | Enterprise Back-Office & KYC Management',
+    description: 'Optimize your brokerage operations with a high-performance Forex CRM. Manage leads, automate KYC, and track deposits with an integrated back-office solution.',
     keywords: [
-        'forex CRM',
-        'forex CRM provider',
-        'forex broker CRM',
-        'best forex CRM',
-        'forex CRM software',
-        'mt5 CRM',
-        'forex CRM system',
-        'forex CRM solution',
-        'best forex CRM systems',
-        'b2b CRM',
-        'forex CRM developer',
-        'mt4 CRM',
-        'business forex CRM solution',
-        'forex back office',
-        'brokerage CRM',
-        'leverate CRM alternative',
+        'Forex CRM',
+        'Broker Back-Office Software',
+        'Forex Lead Tracking',
+        'Automated KYC System',
+        'Brokerage Management Platform',
+        'MT4 MT5 CRM Integration',
     ],
     openGraph: {
-        title: 'Forex CRM Software | Built for Brokers',
-        description: 'Scalable CRM with automated KYC, multi-tier IB system, and complete client lifecycle management.',
+        title: 'Forex CRM | Enterprise Back-Office & KYC Management',
+        description: 'Optimize your brokerage operations with a high-performance Forex CRM. Manage leads, automate KYC, and track deposits with an integrated back-office solution.',
         type: 'website',
         url: 'https://fxtrusts.com/solutions/crm',
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Forex CRM Software | Built for Brokers',
-        description: 'Scalable CRM with automated KYC, multi-tier IB system, and complete client lifecycle management.',
+        title: 'Forex CRM | Enterprise Back-Office & KYC Management',
+        description: 'Optimize your brokerage operations with a high-performance Forex CRM. Manage leads, automate KYC, and track deposits with an integrated back-office solution.',
     },
     alternates: {
         canonical: 'https://fxtrusts.com/solutions/crm',
@@ -42,53 +32,61 @@ export const metadata: Metadata = {
 
 export default function CRMPage() {
     const tableOfContents = [
-        { id: 'overview', title: 'CRM Overview' },
-        { id: 'client-management', title: 'Client Management' },
-        { id: 'kyc-aml', title: 'KYC & AML' },
-        { id: 'ib-system', title: 'IB Partner System' },
-        { id: 'marketing', title: 'Marketing Automation' },
-        { id: 'reporting', title: 'Reporting & Analytics' },
-        { id: 'integration', title: 'Platform Integration' },
-        { id: 'faq', title: 'FAQ' },
+        { id: 'solution', title: 'Forex CRM Solution' },
+        { id: 'platform-overview', title: 'Platform Overview' },
+        { id: 'why', title: 'Why Forex CRM?' },
+        { id: 'branding', title: 'White Label Branding' },
+        { id: 'infrastructure', title: 'Server Hosting & Infrastructure' },
+        { id: 'features', title: 'Platform Features' },
+        { id: 'api', title: 'API & Integration' },
+        { id: 'pricing', title: 'Pricing & Setup' },
+        { id: 'faq', title: 'Frequently Asked Questions' },
     ];
 
-    const relatedLinks = [
-        { title: 'MT5 White Label', href: '/solutions/mt5', readTime: '5 min' },
-        { title: 'Liquidity Solutions', href: '/solutions/liquidity', readTime: '4 min' },
-        { title: 'Copy Trading', href: '/platform/copy-trading', readTime: '4 min' },
+    const featuresInclude = [
+        'Multi-tier IB/Affiliate System',
+        'Automated KYC/AML Verification',
+        'Real-time Transaction Monitoring',
+        'Advanced Sales Analytics',
+        'Role-based Staff Permissions',
+        'Bulk Email & SMS Integration',
+        'MT4/MT5 Manager Sync',
     ];
 
-    const quickFacts = [
-        { label: 'Setup Time', value: '48 hours' },
-        { label: 'Languages', value: '15+' },
-        { label: 'Integrations', value: '50+' },
-        { label: 'Uptime', value: '99.9%' },
-    ];
+    const ctaTitle = "Launch Your Forex CRM in [X Days]";
+    const ctaText = "Take control of your sales funnel and back-office with our turnkey CRM solution.";
+    const ctaButtonText = "Get Started";
+
+    /*
+    Note: The "Need help?" card is handled by the ContentPageLayout via contact props.
+    Phone/Email are handled there or can be customized if ContentPageLayout supports it.
+    Looking at ContentPageLayout, it has contactTitle, contactText, contactEmail.
+    */
 
     const faqs = [
         {
-            question: 'What is included in the Forex CRM?',
-            answer: 'Everything you\'d expect: client management, lead tracking, automated KYC, multi-tier IB commissions, payment integrations, marketing automation, and reporting dashboards. We apologize for not making you pay extra for each feature—an oversight our competitors would never commit.',
+            question: 'How long does it take to deploy the Forex CRM?',
+            answer: 'A standard setup typically takes [7 to 10] business days, assuming your trading server (MT4/MT5) is already active. This includes the configuration of basic staff roles and standard payment gateways.',
         },
         {
-            question: 'Does the CRM integrate with MetaTrader 5?',
-            answer: 'Yes. Native MT5 integration via the Manager API. Accounts create themselves, balances sync automatically, and trading data appears like magic. We regret to inform you there\'s no 6-week "integration project" to bill you for.',
+            question: 'Can we customize the KYC requirements per country?',
+            answer: 'Yes. The CRM allows you to set granular KYC rules and document requirements based on the lead\'s country of residence, ensuring you stay compliant with various local regulations.',
         },
         {
-            question: 'How long does CRM setup take?',
-            answer: '48 hours. Yes, really. Configuration, branding, payment gateways, and staff training—all done before your competitor\'s sales team has even sent you a quote. We understand this timeline may cause confusion.',
+            question: 'Does this CRM integrate with our existing website?',
+            answer: 'Absolutely. We provide Web APIs and iframes for registration forms, allowing lead data to flow instantly from your website into the CRM sales pipeline.',
         },
         {
-            question: 'Can I customize the client portal?',
-            answer: 'Fully white-labeled. Colors, logos, layouts, content—all yours. 15+ languages included. We\'ve been told we should charge separately for "premium customization," but we forgot to read that memo.',
+            question: 'How many trading accounts can the CRM handle?',
+            answer: 'Our enterprise infrastructure is designed to scale from hundreds to [hundreds of thousands] of accounts without performance degradation, utilizing optimized database structures.',
         },
         {
-            question: 'What KYC providers do you integrate with?',
-            answer: 'SumSub, ShuftiPro, and Onfido for the robots. Manual review for the edge cases. Documents get verified, clients get approved, and your compliance team stops staying late. Industry standard? Arguably better.',
+            question: 'What are the minimum requirements to start?',
+            answer: 'You will need an active trading server license (like MT4/MT5) and a registered corporate entity to begin the integration of payment gateways and KYC modules.',
         },
         {
-            question: 'Is the CRM available in multiple languages?',
-            answer: '15+ languages: English, Arabic, Chinese, Spanish, Portuguese, Russian, and more. Your global ambitions are covered. We apologize for not charging per language—another revenue stream we inexplicably ignored.',
+            question: 'Is my client data safe from internal theft?',
+            answer: 'We provide role-based access control (RBAC). You can hide sensitive data like phone numbers or emails from junior staff, and all data exports require admin-level approval with logged activity.',
         },
     ];
 
@@ -96,246 +94,212 @@ export default function CRMPage() {
         <main>
             <FAQSchema faqs={faqs} />
             <InnerPageHeader
-                badge="Broker Management"
+                badge="BROKER INFRASTRUCTURE"
                 badgeIcon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>}
-                title="Institutional CRM"
-                subtitle="The backbone of your brokerage operations—built for scale. Manage leads, automate KYC, and track IB performance from a single interface."
-            />
+                title="Forex CRM"
+                subtitle="Centralize your brokerage operations with an enterprise-grade CRM designed for high-volume data and rapid scaling. Convert more leads and automate compliance workflows from a single, secure interface."
+            >
+                <div style={{ marginTop: '20px', display: 'flex', gap: '10px', flexWrap: 'wrap', justifyContent: 'center' }}>
+                    <span style={{ display: 'flex', alignItems: 'center', gap: '5px', fontSize: '0.9rem', color: '#4B5563', backgroundColor: 'rgba(255,255,255,0.5)', padding: '4px 12px', borderRadius: '20px', border: '1px solid rgba(0,0,0,0.05)' }}>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" strokeWidth="2"><polyline points="20 6 9 17 4 12" /></svg>
+                        360° Lead Management
+                    </span>
+                    <span style={{ display: 'flex', alignItems: 'center', gap: '5px', fontSize: '0.9rem', color: '#4B5563', backgroundColor: 'rgba(255,255,255,0.5)', padding: '4px 12px', borderRadius: '20px', border: '1px solid rgba(0,0,0,0.05)' }}>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" strokeWidth="2"><polyline points="20 6 9 17 4 12" /></svg>
+                        Automated Compliance
+                    </span>
+                    <span style={{ display: 'flex', alignItems: 'center', gap: '5px', fontSize: '0.9rem', color: '#4B5563', backgroundColor: 'rgba(255,255,255,0.5)', padding: '4px 12px', borderRadius: '20px', border: '1px solid rgba(0,0,0,0.05)' }}>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" strokeWidth="2"><polyline points="20 6 9 17 4 12" /></svg>
+                        Seamless Integration
+                    </span>
+                </div>
+            </InnerPageHeader>
+
             <ContentPageLayout
                 tableOfContents={tableOfContents}
-                relatedLinks={relatedLinks}
-                quickFacts={quickFacts}
-                ctaTitle="Launch Your Brokerage CRM"
-                ctaText="Complete CRM solution ready in 48 hours."
-                ctaButtonText="Get Started"
-                ctaButtonHref="/company/contact"
+                ctaTitle={ctaTitle}
+                ctaText={ctaText}
+                ctaButtonText={ctaButtonText}
+                features={featuresInclude}
+                contactTitle="Need help?"
+                contactText="Speak with a CRM specialist to tailor the platform to your workflow."
+                contactEmail="support@domain.com"
             >
-                <h1>Forex CRM Built for High-Volume Brokers</h1>
+                <h2 id="solution">Forex CRM Solution</h2>
                 <p>
-                    Our CRM isn't just a database—it's a complete automation engine designed specifically for forex and crypto brokerages. From the moment a lead enters your funnel to their tenth trading anniversary, our platform manages the entire client lifecycle with minimal manual intervention.
+                    The Forex CRM is a mission-critical platform for modern brokers, fintech founders, and sales teams. Unlike generic CRMs, this solution is purpose-built to handle the unique complexities of financial trading, including real-time synchronization with trading servers, complex multi-tier affiliate structures, and rigorous regulatory reporting requirements.
                 </p>
                 <p>
-                    Unlike generic CRM solutions adapted for finance, our system was built from the ground up for the unique requirements of retail trading operations. Every feature, workflow, and integration is optimized for brokerage-specific use cases.
+                    By automating the &quot;heavy lifting&quot; of back-office management, your team can focus on what matters: acquiring leads and retaining high-value traders. From the moment a lead enters your funnel to their 100th deposit, the CRM provides the transparency and automation needed to scale a global brokerage.
                 </p>
+                <ul className="feature-list">
+                    <li><strong>Unified Lead &amp; Client Tracking:</strong> A single source of truth for all client interactions, trading history, and financial transactions.</li>
+                    <li><strong>Turnkey Back-Office Management:</strong> Comprehensive tools for your support, sales, and compliance teams to manage accounts efficiently.</li>
+                    <li><strong>Automated Onboarding Flow:</strong> Reduce time-to-trade by automating account approval and KYC document verification.</li>
+                    <li><strong>Advanced Financial Reporting:</strong> Generate real-time reports on Net Deposit, AUM, and Sales Performance to drive data-led decisions.</li>
+                </ul>
 
-                <h2 id="overview">CRM Overview</h2>
+                <h2 id="platform-overview">Platform Overview</h2>
                 <p>
-                    The FxTrusts CRM provides a unified back-office solution that connects to MetaTrader, payment providers, verification services, and marketing platforms. Your team operates from a single dashboard with complete visibility into client status, trading activity, and business metrics.
+                    Our CRM is built for speed and reliability, ensuring your sales and support teams can operate without latency during peak market volatility.
                 </p>
-
                 <div className="statsGrid">
                     <div className="statBox">
-                        <strong>500+</strong>
-                        <span>Brokers Live</span>
-                    </div>
-                    <div className="statBox">
-                        <strong>10M+</strong>
-                        <span>Clients Managed</span>
-                    </div>
-                    <div className="statBox">
                         <strong>99.9%</strong>
-                        <span>Uptime SLA</span>
+                        <span>Uptime SLA ensuring your sales team never loses a lead.</span>
                     </div>
                     <div className="statBox">
-                        <strong>15+</strong>
-                        <span>Languages</span>
+                        <strong>[X]</strong>
+                        <span>Days average setup for full CRM and server integration.</span>
+                    </div>
+                    <div className="statBox">
+                        <strong>100+</strong>
+                        <span>Pre-integrated Tools including PSPs, KYC providers, and VoIP.</span>
+                    </div>
+                    <div className="statBox">
+                        <strong>24/7</strong>
+                        <span>Infrastructure Monitoring to protect sensitive client data.</span>
                     </div>
                 </div>
 
-                <h2 id="client-management">Client Management</h2>
-                <p>
-                    Comprehensive client profiles provide your team with everything needed to serve and retain clients effectively.
-                </p>
-
-                <h3>Client Portal</h3>
-                <p>
-                    White-labeled client portal where traders manage their accounts, deposit funds, request withdrawals, and access trading platforms. Fully customizable with your branding, colors, and content.
-                </p>
-                <ul>
-                    <li><strong>Account Dashboard</strong> – Balance, equity, margin usage, trading history</li>
-                    <li><strong>Deposit & Withdrawal</strong> – Multiple payment method integration</li>
-                    <li><strong>Document Upload</strong> – KYC document submission and status tracking</li>
-                    <li><strong>Platform Access</strong> – Direct links to MT5 web, desktop, and mobile</li>
-                    <li><strong>Support Tickets</strong> – Integrated help desk with live chat</li>
-                </ul>
-
-                <h3>Back-Office Client View</h3>
-                <p>
-                    Your staff sees comprehensive client profiles including:
-                </p>
-                <ul>
-                    <li>Complete trading history and performance metrics</li>
-                    <li>All communications (email, chat, calls)</li>
-                    <li>Deposit and withdrawal history</li>
-                    <li>KYC verification status and documents</li>
-                    <li>IB relationships and referral chains</li>
-                    <li>Custom notes and follow-up reminders</li>
-                </ul>
-
+                <h2 id="why">Why Forex CRM?</h2>
                 <div className="featureGrid">
                     <div className="featureCard">
-                        <h4>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
-                            Multi-Account Types
-                        </h4>
-                        <p>Standard, ECN, Islamic, Demo, Contest. Configure unlimited account types with different conditions.</p>
+                        <h4>Optimized Sales Pipeline</h4>
+                        <p>Use automated lead distribution to ensure your best sales reps are handling the highest quality leads.</p>
                     </div>
                     <div className="featureCard">
-                        <h4>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><line x1="2" y1="12" x2="22" y2="12" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
-                            Multi-Currency Wallets
-                        </h4>
-                        <p>USD, EUR, GBP, crypto wallets per client. Automatic currency conversion at competitive rates.</p>
+                        <h4>Compliance &amp; KYC Automation</h4>
+                        <p>Integrated modules for document verification significantly reduce manual labor and human error.</p>
                     </div>
                     <div className="featureCard">
-                        <h4>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>
-                            Custom Fields
-                        </h4>
-                        <p>Add unlimited custom fields to client profiles. Capture any data your business needs.</p>
+                        <h4>Seamless Trading Server Sync</h4>
+                        <p>Real-time updates from MT4/MT5 ensure your back-office data always matches the trading floor.</p>
                     </div>
                     <div className="featureCard">
-                        <h4>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /></svg>
-                            Activity Logging
-                        </h4>
-                        <p>Complete audit trail of all actions. Know who did what, when, and why.</p>
+                        <h4>Scalable IB/Affiliate Modules</h4>
+                        <p>Manage complex multi-level commission structures and track payouts with absolute precision.</p>
+                    </div>
+                    <div className="featureCard">
+                        <h4>Granular Role Permissions</h4>
+                        <p>Maintain security by restricting staff access to sensitive data based on their specific roles.</p>
+                    </div>
+                    <div className="featureCard">
+                        <h4>Performance Analytics</h4>
+                        <p>Visual dashboards provide instant insights into deposit trends, withdrawal ratios, and ROI.</p>
+                    </div>
+                    <div className="featureCard">
+                        <h4>Retention Marketing</h4>
+                        <p>Use built-in communication tools to target dormant accounts and encourage re-deposits.</p>
                     </div>
                 </div>
 
-                <h2 id="kyc-aml">KYC & AML Compliance</h2>
+                <h2 id="branding">White Label Branding</h2>
                 <p>
-                    Automated verification workflows that reduce manual processing while maintaining regulatory compliance across jurisdictions.
+                    Our CRM is designed to be invisible to your clients while empowering your staff. For your team, the interface is fully white-labeled to match your internal corporate identity.
                 </p>
-
-                <h3>Verification Integrations</h3>
-                <ul>
-                    <li><strong>SumSub</strong> – Identity verification, document check, liveness detection</li>
-                    <li><strong>ShuftiPro</strong> – Alternative verification with global coverage</li>
-                    <li><strong>Onfido</strong> – Enterprise-grade identity verification</li>
-                    <li><strong>Manual Review</strong> – Back-office document review for edge cases</li>
+                <ul className="feature-list">
+                    <li><strong>Staff Portal Branding:</strong> Customize the administrative dashboard with your company colors and logo for a professional internal workspace.</li>
+                    <li><strong>Custom Reporting Templates:</strong> Generate branded PDF reports and statements for your clients and regulatory bodies.</li>
+                    <li><strong>Integrated Communication:</strong> White-label all system-generated messages, including automated emails and SMS notifications for lead status changes.</li>
+                    <li><strong>Custom Field Management:</strong> Tailor the CRM database to collect the specific data points required for your region&#39;s compliance and sales strategy.</li>
                 </ul>
 
-                <h3>Automated Workflows</h3>
+                <h2 id="infrastructure">Server Hosting &amp; Infrastructure</h2>
                 <p>
-                    Configure verification requirements by jurisdiction, deposit amount, or client segment. Automatic approval triggers for low-risk clients, escalation queues for manual review.
+                    We understand that your CRM stores your most valuable asset—your client data. Our infrastructure is built on high-security cloud environments with multi-layered protection.
                 </p>
-
-                <h3>AML Monitoring</h3>
+                <h3>Data Center Locations</h3>
                 <ul>
-                    <li>PEP (Politically Exposed Person) screening</li>
-                    <li>Sanctions list checking</li>
-                    <li>Suspicious transaction monitoring</li>
-                    <li>Automated SAR (Suspicious Activity Report) generation</li>
+                    <li><strong>[London, UK]</strong> - Tier-3 Secure Facility</li>
+                    <li><strong>[Singapore]</strong> - APAC Connectivity Hub</li>
+                    <li><strong>[New York, USA]</strong> - Financial Infrastructure Center</li>
+                    <li><strong>[Frankfurt, Germany]</strong> - Data Sovereignty Optimized</li>
                 </ul>
-
+                <h3>Infrastructure Specifications</h3>
+                <ul>
+                    <li>AES-256 data encryption at rest and in transit.</li>
+                    <li>Daily automated off-site backups with [X] day retention.</li>
+                    <li>Load-balanced web servers for zero-lag dashboard performance.</li>
+                    <li>Advanced DDoS protection and Web Application Firewall (WAF).</li>
+                    <li>Dedicated IP addresses for secure administrative access.</li>
+                </ul>
                 <div className="infoBox">
-                    <p>
-                        <strong>GDPR Compliant:</strong> All client data stored with encryption at rest and in transit. Data retention policies, right to deletion, and export capabilities built in.
-                    </p>
+                    <p><strong>SLA/Uptime Statement:</strong> Our infrastructure maintains a [99.9%] availability rate. We employ proactive monitoring and automated failover systems to ensure your back-office is always accessible.</p>
                 </div>
 
-                <h2 id="ib-system">Introducing Broker (IB) System</h2>
+                <h2 id="features">Platform Features</h2>
+                <p>Comprehensive tools to manage every facet of your brokerage business.</p>
+                <h3>Back-office &amp; Management Features</h3>
+                <ul>
+                    <li>Centralized &quot;Client Card&quot; with full 360-degree history.</li>
+                    <li>Multi-account management (Live, Demo, Archive).</li>
+                    <li>Bulk account creation and leverage adjustment tools.</li>
+                    <li>Internal ticketing system for client support requests.</li>
+                    <li>Deposit and Withdrawal request approval workflows.</li>
+                    <li>Real-time notification system for major account events.</li>
+                </ul>
+                <h3>Lead &amp; Sales Tracking</h3>
+                <ul>
+                    <li>Lead source tracking (UTM parameters) for marketing ROI.</li>
+                    <li>Automated lead assignment based on country, language, or weight.</li>
+                    <li>Sales performance leaderboards and conversion tracking.</li>
+                    <li>Call log integration for VoIP systems.</li>
+                </ul>
+                <h3>Compliance &amp; KYC</h3>
+                <ul>
+                    <li>Multi-tier document upload (POI, POR, etc.).</li>
+                    <li>Automated blacklist and PEP screening options.</li>
+                    <li>Regulatory reporting exports for MiFID, ASIC, and other jurisdictions.</li>
+                </ul>
+
+                <h2 id="api">API &amp; Integration</h2>
+                <p>The CRM acts as the hub for your entire brokerage, connecting your website, trading servers, and external service providers.</p>
+                <h3>Manager / Admin API</h3>
+                <ul>
+                    <li>Programmatic account opening and group movement.</li>
+                    <li>Real-time balance and credit adjustments via external triggers.</li>
+                    <li>Secure data export for proprietary business intelligence tools.</li>
+                </ul>
+                <h3>Gateway &amp; Connectivity API</h3>
+                <ul>
+                    <li><strong>Trading Servers:</strong> Native connectors for MT4, MT5, and cTrader.</li>
+                    <li><strong>Payment Gateways:</strong> Support for [50+] global and local PSPs.</li>
+                    <li><strong>KYC Providers:</strong> Integrated APIs for [Sumsub, Onfido, etc.].</li>
+                </ul>
+                <h3>Web API / SDK</h3>
                 <p>
-                    Our multi-tier IB system automates partner management, commission calculations, and payouts—supporting unlimited hierarchy levels.
+                    We provide a RESTful Web API that allows your developers to build custom registration forms, client portals, or mobile apps that communicate directly with the CRM backend. This ensures a seamless flow of data from your public website to your private back-office.
                 </p>
 
-                <h3>IB Features</h3>
-                <ul>
-                    <li><strong>Multi-Tier Commissions</strong> – Support for sub-IBs with configurable revenue sharing</li>
-                    <li><strong>Automatic Payouts</strong> – Daily, weekly, or monthly commission payments</li>
-                    <li><strong>IB Portal</strong> – Partners access their own dashboard with real-time statistics</li>
-                    <li><strong>Marketing Materials</strong> – Branded landing pages, banners, tracking links</li>
-                    <li><strong>Rebate Options</strong> – Spread rebates, volume rebates, or hybrid models</li>
-                    <li><strong>Referral Tracking</strong> – Unique tracking codes with attribution windows</li>
-                </ul>
-
-                <h3>Commission Structures</h3>
+                <h2 id="pricing">Pricing &amp; Setup</h2>
                 <p>
-                    Configure any commission model your business requires:
+                    Our pricing is designed to scale with your business, moving from a fixed entry fee to a flexible model based on your account volume.
                 </p>
+                <h3>What’s Included</h3>
                 <ul>
-                    <li>Fixed per-lot commission ($X per lot traded)</li>
-                    <li>Spread markup sharing (percentage of spread)</li>
-                    <li>Revenue sharing (percentage of net trading revenue)</li>
-                    <li>CPA (cost per acquisition) for new depositing clients</li>
-                    <li>Hybrid models combining multiple methods</li>
+                    <li>Full CRM administrative dashboard access.</li>
+                    <li>Basic KYC module and document storage.</li>
+                    <li>Connectivity for [X] trading server(s).</li>
+                    <li>[X] Staff accounts with role-based access.</li>
+                    <li>Integration with standard payment gateways.</li>
+                    <li>Monthly security updates and bug fixes.</li>
                 </ul>
-
-                <h2 id="marketing">Marketing Automation</h2>
-                <p>
-                    Convert leads and retain clients with integrated marketing tools—no third-party subscriptions needed.
-                </p>
-
-                <h3>Email Marketing</h3>
+                <h3>Optional Add-Ons</h3>
                 <ul>
-                    <li><strong>Drag-and-Drop Builder</strong> – Create beautiful emails without coding</li>
-                    <li><strong>Automated Campaigns</strong> – Drip sequences triggered by user behavior</li>
-                    <li><strong>Segmentation</strong> – Target by deposit level, activity, location, or custom tags</li>
-                    <li><strong>A/B Testing</strong> – Test subject lines, content, and send times</li>
-                    <li><strong>Deliverability</strong> – Dedicated SMTP with SPF, DKIM, and DMARC</li>
+                    <li>Advanced Multi-Tier IB/Affiliate Module.</li>
+                    <li>White-label Trader&#39;s Room (Client Portal).</li>
+                    <li>Custom VoIP/Call Center integration.</li>
+                    <li>Specialized regulatory reporting modules.</li>
                 </ul>
-
-                <h3>Automated Triggers</h3>
-                <p>
-                    Pre-built automation for common scenarios:
-                </p>
-                <ul>
-                    <li>Welcome series for new registrations</li>
-                    <li>Deposit reminders for leads who registered but didn't fund</li>
-                    <li>Win-back campaigns for dormant accounts</li>
-                    <li>Birthday and anniversary messages</li>
-                    <li>KYC completion reminders</li>
-                </ul>
-
-                <h2 id="reporting">Reporting & Analytics</h2>
-                <p>
-                    Real-time dashboards and customizable reports give you complete visibility into business performance.
-                </p>
-
-                <h3>Pre-Built Reports</h3>
-                <ul>
-                    <li><strong>Executive Dashboard</strong> – High-level KPIs, trends, and alerts</li>
-                    <li><strong>Sales Pipeline</strong> – Lead to client conversion funnel</li>
-                    <li><strong>Deposit & Withdrawal</strong> – Cash flow analysis by payment method</li>
-                    <li><strong>Trading Volume</strong> – Volume by symbol, client segment, or time period</li>
-                    <li><strong>IB Performance</strong> – Partner rankings, commissions, and client quality</li>
-                    <li><strong>Risk Exposure</strong> – Current positions, largest clients, concentration risks</li>
-                </ul>
-
-                <h3>Custom Reports</h3>
-                <p>
-                    Build custom reports with our report builder. Export to CSV, Excel, or PDF. Schedule automatic delivery to stakeholder email addresses.
-                </p>
-
-                <h2 id="integration">Platform Integration</h2>
-                <p>
-                    Our CRM integrates seamlessly with the technology stack modern brokerages need.
-                </p>
-
-                <h3>Trading Platforms</h3>
-                <ul>
-                    <li>MetaTrader 5 – Full Manager API integration</li>
-                    <li>MetaTrader 4 – Legacy support available</li>
-                    <li>cTrader – Optional integration</li>
-                </ul>
-
-                <h3>Payment Providers</h3>
-                <ul>
-                    <li>Bank wire transfers</li>
-                    <li>Credit/Debit cards (Stripe, Checkout.com)</li>
-                    <li>E-wallets (Skrill, Neteller, PayPal)</li>
-                    <li>Crypto payments (BitPay, Coinbase Commerce)</li>
-                    <li>Local payment methods by region</li>
-                </ul>
-
-                <h3>Third-Party Services</h3>
-                <ul>
-                    <li>VoIP systems (Twilio, VoIP.ms, custom SIP)</li>
-                    <li>Live chat (Intercom, Zendesk, Tawk.to)</li>
-                    <li>Analytics (Google Analytics, Mixpanel)</li>
-                    <li>CRM sync (Salesforce, HubSpot via API)</li>
-                </ul>
+                <h3>Setup Timeline</h3>
+                <ol>
+                    <li><strong>Requirement Mapping (Days 1-2):</strong> Staff roles and data field configuration.</li>
+                    <li><strong>Server Connectivity (Days 3-4):</strong> Linking the CRM to your MT4/MT5 environment.</li>
+                    <li><strong>Branding &amp; Styling (Days 5-6):</strong> Applying your logo and internal color scheme.</li>
+                    <li><strong>UAT &amp; Training (Days 7-9):</strong> Staff training and workflow testing.</li>
+                    <li><strong>Go-Live (Day [X]):</strong> Production deployment and lead ingestion.</li>
+                </ol>
 
                 <h2 id="faq">Frequently Asked Questions</h2>
                 <div className="faqGrid">

@@ -4,32 +4,26 @@ import ContentPageLayout from '@/components/ContentPageLayout';
 import FAQSchema from '@/components/seo/FAQSchema';
 
 export const metadata: Metadata = {
-    title: 'MT5 White Label | MetaTrader 5 Manager | MT5 CRM Integration | FxTrusts',
-    description: 'Launch your forex brokerage on MetaTrader 5 with our fully managed white label solution. Complete MT5 CRM integration, MetaTrader 5 manager access, branding, hosting included.',
+    title: 'MetaTrader 5 (MT5) White Label License | Branded Broker Platform',
+    description: 'Launch your own branded brokerage with a MetaTrader 5 (MT5) White Label. Fully customizable, secure hosting, and 24/7 expert support for brokers.',
     keywords: [
-        'MT5 white label',
-        'MetaTrader 5 broker',
-        'mt5 CRM',
-        'metatrader 5 manager',
-        'metatrader 5 administrator',
-        'MT5 white label cost',
-        'MT5 solution',
-        'MetaQuotes',
-        'forex white label',
-        'mt5 integration',
-        'metatrader broker',
-        'white label trading platform',
+        'MT5 White Label License',
+        'Branded MetaTrader 5',
+        'MT5 White Label Pricing',
+        'Brokerage Infrastructure',
+        'MT5 Server Hosting',
+        'Forex White Label Solution',
     ],
     openGraph: {
-        title: 'MT5 White Label | Launch Your Broker in 48 Hours',
-        description: 'Fully managed MetaTrader 5 white label. Branding, hosting, support included.',
+        title: 'MetaTrader 5 (MT5) White Label License | Branded Broker Platform',
+        description: 'Launch your own branded brokerage with a MetaTrader 5 (MT5) White Label. Fully customizable, secure hosting, and 24/7 expert support for brokers.',
         type: 'website',
         url: 'https://fxtrusts.com/solutions/mt5',
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'MT5 White Label | Launch Your Broker in 48 Hours',
-        description: 'Fully managed MetaTrader 5 white label. Branding, hosting, support included.',
+        title: 'MetaTrader 5 (MT5) White Label License | Branded Broker Platform',
+        description: 'Launch your own branded brokerage with a MetaTrader 5 (MT5) White Label. Fully customizable, secure hosting, and 24/7 expert support for brokers.',
     },
     alternates: {
         canonical: 'https://fxtrusts.com/solutions/mt5',
@@ -38,13 +32,14 @@ export const metadata: Metadata = {
 
 export default function MT5Page() {
     const tableOfContents = [
-        { id: 'overview', title: 'Platform Overview' },
+        { id: 'platform-overview', title: 'Platform Overview' },
+        { id: 'why', title: 'Why MetaTrader 5?' },
         { id: 'branding', title: 'White Label Branding' },
-        { id: 'hosting', title: 'Server Hosting' },
+        { id: 'infrastructure', title: 'Server Hosting & Infrastructure' },
         { id: 'features', title: 'Platform Features' },
         { id: 'api', title: 'API & Integration' },
         { id: 'pricing', title: 'Pricing & Setup' },
-        { id: 'faq', title: 'FAQ' },
+        { id: 'faq', title: 'Frequently Asked Questions' },
     ];
 
     const relatedLinks = [
@@ -54,262 +49,286 @@ export default function MT5Page() {
     ];
 
     const quickFacts = [
-        { label: 'Setup Time', value: '48 hours' },
-        { label: 'Platforms', value: 'Desktop, Web, Mobile' },
-        { label: 'Instruments', value: 'Unlimited' },
+        { label: 'Uptime SLA', value: '99.9%' },
+        { label: 'Setup Time', value: '7-14 Days' },
+        { label: 'Instruments', value: '100+' },
         { label: 'Support', value: '24/7' },
     ];
 
     const faqs = [
         {
-            question: 'How long does MT5 white label setup really take?',
-            answer: '48 hours for standard configurations. We know, we know—other providers quote "4-6 weeks" and charge a $10,000 "implementation fee." We forgot to add the delays and the fee. It\'s a character flaw.',
+            question: 'How long does it take to launch my branded MT5 platform?',
+            answer: 'The typical setup time is between 7 to 14 business days, depending on the complexity of your integrations and the speed of branding asset delivery. We guide you through every step to ensure a smooth transition to live trading.',
         },
         {
-            question: 'Do I need to negotiate with MetaQuotes directly?',
-            answer: 'No. We hold the licensing relationship. You get the platform, the updates, and the support without sending legal documents to Cyprus and waiting 3 months for approval. You\'re welcome.',
+            question: 'Can I fully customize the platform with my own logo?',
+            answer: 'Yes. Your MT5 White Label will be fully branded. This includes your logo on the desktop terminal, mobile apps (iOS and Android), and the web-based version, ensuring a consistent brand identity for your clients.',
         },
         {
-            question: 'Can I get my own branded mobile apps?',
-            answer: 'Yes. iOS and Android apps under your company name in the App Store and Google Play. It\'s an optional add-on, and yes, we actually tell you how much it costs upfront. Revolutionary, we know.',
+            question: 'What kind of integrations are supported?',
+            answer: 'Our platform supports a wide range of integrations via Manager and Web APIs. You can easily connect to popular CRMs, various Payment Service Providers (PSPs), and external liquidity sources to create a seamless workflow.',
         },
         {
-            question: 'What if I already have an MT4 brokerage?',
-            answer: 'We can migrate your accounts, history, and configurations. Your traders won\'t even notice (except they\'ll suddenly have a much better platform). MT4 support is still available if you need it.',
+            question: 'Is it possible to migrate from MT4 to MT5?',
+            answer: 'Absolutely. We provide full migration support to help you move your existing client database and trading history from MT4 to MT5 with minimal downtime, ensuring your traders experience no disruption.',
         },
         {
-            question: 'Is there a minimum number of accounts?',
-            answer: 'No. Start with 10 accounts or 10,000—the platform scales seamlessly. We don\'t believe in the "enterprise minimum" model where you pay for 5,000 accounts you don\'t have yet.',
+            question: 'What are the minimum requirements to start?',
+            answer: 'To start an MT5 White Label, you generally need a registered legal entity and basic compliance documentation. While we don\'t enforce strict minimums on accounts or volume, we recommend a business plan that supports a base monthly fee.',
         },
         {
-            question: 'What happens if MetaQuotes releases an update?',
-            answer: 'We test it, stage it, and deploy it—usually same-day for security patches. You don\'t have to worry about update logistics or compatibility. That\'s the "fully managed" part.',
+            question: 'What kind of support do I receive after launch?',
+            answer: 'We provide 24/7 technical support and server monitoring. Your dedicated account manager will be available to assist with configuration changes, platform updates, and any technical queries your team might have.',
         },
+    ];
+
+    const features = [
+        'Branded Desktop, Web & Mobile',
+        'Advanced Risk Management',
+        'Multi-Asset Liquidity Bridge',
+        'Integrated CRM & Back Office',
+        '21 Timeframes & 80+ Indicators',
+        'MQL5 Algorithmic Support',
     ];
 
     return (
         <main>
             <FAQSchema faqs={faqs} />
             <InnerPageHeader
-                badge="The Industry Standard"
+                badge="White Label Broker Solution"
                 badgeIcon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>}
-                title="MetaTrader 5 White Label"
-                subtitle="Launch your broker on the world's most trusted trading platform. Fully managed, with branding, hosting, and support included."
+                title="MetaTrader 5 (MT5) White Label License (Branded platform)"
+                subtitle="Scale your brokerage with a fully branded, high-performance MT5 environment. Gain complete control over your trading ecosystem without the overhead of a full server license."
+                primaryButtonText="Get Started"
+                primaryButtonHref="/company/contact"
+                secondaryButtonText="Talk to an Expert"
+                secondaryButtonHref="/company/contact"
             />
             <ContentPageLayout
                 tableOfContents={tableOfContents}
                 relatedLinks={relatedLinks}
                 quickFacts={quickFacts}
-                ctaTitle="Launch Your MT5 Broker"
-                ctaText="Go live in 48 hours with full branding and support."
+                ctaTitle="Launch Your MT5 Brokerage in X Days"
+                ctaText="Get a turnkey, branded trading environment designed for modern brokers."
                 ctaButtonText="Get Started"
                 ctaButtonHref="/company/contact"
+                features={features}
+                contactTitle="Need help?"
+                contactText="Our technical specialists are available to discuss your custom requirements."
+                contactEmail="support@domain.com"
             >
-                <h1>MetaTrader 5 White Label Solution</h1>
-                <p>
-                    MetaTrader 5 is the multi-asset trading platform of choice for professional traders worldwide. Our white label solution provides everything you need to launch a fully branded MT5 brokerage—from server hosting and branding to liquidity integration and ongoing support.
-                </p>
-                <p>
-                    Unlike DIY solutions that require MetaQuotes licensing negotiations and infrastructure setup, we handle all technical complexity. You focus on client acquisition while we manage servers, updates, and maintenance.
-                </p>
+                <div id="solution">
+                    <h1>MetaTrader 5 (MT5) White Label License (Branded platform) Solution</h1>
+                    <p>
+                        The MetaTrader 5 (MT5) White Label solution is a comprehensive package designed for emerging brokers, fintech startups, and established financial institutions looking to offer a premium trading experience. By utilizing our infrastructure, you bypass the massive capital expenditure and technical complexity of purchasing a full MetaQuotes server license, while still providing your clients with the industry’s gold-standard platform.
+                    </p>
+                    <p>
+                        This turnkey solution is built for scalability. Whether you are targeting retail forex traders or institutional investors, the MT5 White Label allows you to operate under your own brand name, set your own trading conditions, and manage your clients through a powerful, centralized backend.
+                    </p>
+                    <ul>
+                        <li><strong>Turnkey Brokerage Setup:</strong> A complete ecosystem including the trading terminal, manager tools, and liquidity connectivity.</li>
+                        <li><strong>Total Brand Ownership:</strong> Your logo and company information are visible across all desktop, mobile, and web versions.</li>
+                        <li><strong>Cost-Effective Entry:</strong> Access the world’s most advanced multi-asset platform with a manageable monthly fee structure.</li>
+                        <li><strong>Multi-Asset Capabilities:</strong> Offer trading in Forex, Stocks, Futures, and Cryptocurrencies from a single interface.</li>
+                        <li><strong>Advanced Risk Controls:</strong> Comprehensive tools to manage exposure, leverage, and client groups in real-time.</li>
+                    </ul>
+                </div>
 
-                <h2 id="overview">Platform Overview</h2>
+                <h2 id="platform-overview">Platform Overview</h2>
                 <p>
-                    MetaTrader 5 supports forex, stocks, indices, commodities, and cryptocurrency trading from a single platform. With built-in technical analysis, algorithmic trading, and copy trading capabilities, MT5 provides everything modern traders expect.
+                    The MT5 White Label infrastructure is engineered for low-latency execution and high-volume reliability. We provide the technical backbone so you can focus on marketing and client acquisition.
                 </p>
 
                 <div className="statsGrid">
                     <div className="statBox">
-                        <strong>80%</strong>
-                        <span>Market Share</span>
+                        <strong>99.9%</strong>
+                        <span>Uptime SLA</span>
                     </div>
                     <div className="statBox">
-                        <strong>38</strong>
-                        <span>Timeframes</span>
+                        <strong>X Days</strong>
+                        <span>Setup Time</span>
                     </div>
                     <div className="statBox">
                         <strong>100+</strong>
-                        <span>Indicators</span>
+                        <span>Instruments</span>
                     </div>
                     <div className="statBox">
-                        <strong>6</strong>
-                        <span>Order Types</span>
+                        <strong>24/7</strong>
+                        <span>Support</span>
                     </div>
                 </div>
 
-                <h3>Why MetaTrader 5?</h3>
+                <h2 id="why">Why MetaTrader 5?</h2>
                 <ul>
-                    <li><strong>Industry Standard</strong> – Traders know and trust the platform</li>
-                    <li><strong>Multi-Asset</strong> – Trade forex, stocks, and crypto from one account</li>
-                    <li><strong>Advanced Charting</strong> – 21 timeframes, 80+ indicators, custom objects</li>
-                    <li><strong>Algorithmic Trading</strong> – MQL5 language for Expert Advisors</li>
-                    <li><strong>Mobile Apps</strong> – Native iOS and Android applications</li>
-                    <li><strong>Web Terminal</strong> – Trade from any browser, no download required</li>
+                    <li><strong>Superior Multi-Asset Support:</strong> MT5 was designed from the ground up to handle more than just Forex, including centralized exchange-traded instruments.</li>
+                    <li><strong>Hedging and Netting:</strong> Offer your clients the flexibility of both accounting systems to suit diverse trading strategies.</li>
+                    <li><strong>Expanded Technical Analysis:</strong> Features 21 timeframes and over 80 built-in indicators for professional-grade market study.</li>
+                    <li><strong>Depth of Market (DOM):</strong> Provide transparency with a built-in Depth of Market feature for real-time liquidity analysis.</li>
+                    <li><strong>MQL5 Modernity:</strong> Benefit from a faster, more efficient programming language for automated trading bots and signals.</li>
+                    <li><strong>Regulatory Readiness:</strong> Built-in reporting and compliance tools help you meet the standards of various global jurisdictions.</li>
+                    <li><strong>Economic Calendar:</strong> Keep your clients engaged with an integrated, real-time news and event feed within the terminal.</li>
                 </ul>
 
                 <h2 id="branding">White Label Branding</h2>
                 <p>
-                    Your MT5 platform carries your brand identity across all touchpoints. We customize every client-facing element to reinforce your brand.
+                    Maintaining brand consistency is vital for building trust with your traders. Our MT5 White Label ensures that your identity is the only one your clients see, providing a professional and cohesive user experience across all touchpoints.
                 </p>
 
                 <div className="featureGrid">
                     <div className="featureCard">
                         <h4>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2" /><circle cx="8.5" cy="8.5" r="1.5" /><polyline points="21 15 16 10 5 21" /></svg>
-                            Desktop Platform
+                            Custom Terminal Branding
                         </h4>
-                        <p>Your logo in the terminal header, About dialog, and installer splash screens.</p>
+                        <p>Your company name and logo are integrated into the "About" section, splash screens, and header of the desktop and mobile applications.</p>
                     </div>
                     <div className="featureCard">
                         <h4>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><line x1="2" y1="12" x2="22" y2="12" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
-                            Web Terminal
+                            Web & Mobile Presence
                         </h4>
-                        <p>Custom domain, full color scheme customization, your favicon and branding.</p>
+                        <p>Offer branded web terminals that require no installation, alongside fully functional mobile apps for iOS and Android.</p>
                     </div>
                     <div className="featureCard">
                         <h4>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2" /><line x1="12" y1="18" x2="12.01" y2="18" /></svg>
-                            Mobile Apps
+                            Client Portal & CRM
                         </h4>
-                        <p>Branded iOS and Android apps published under your company name (optional add-on).</p>
+                        <p>Integrate your branded client area where users can manage accounts, deposits, and KYC documents seamlessly.</p>
                     </div>
                     <div className="featureCard">
                         <h4>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg>
-                            Server Labels
+                            Custom Trading Groups
                         </h4>
-                        <p>Your company name appears as the server in client terminals.</p>
+                        <p>Define your own symbols, spreads, commissions, and swap rates to create unique product offerings tailored to your audience.</p>
                     </div>
                 </div>
 
-                <h2 id="hosting">Server Hosting & Infrastructure</h2>
+                <h2 id="infrastructure">Server Hosting & Infrastructure</h2>
                 <p>
-                    We provide enterprise-grade hosting with the reliability and performance institutional clients expect.
+                    We utilize premium data centers to ensure that your MT5 server environment remains stable, secure, and lightning-fast. Our infrastructure is optimized to reduce slippage and maximize execution speed for your global client base.
                 </p>
 
                 <h3>Data Center Locations</h3>
                 <ul>
-                    <li><strong>Equinix LD4 (London)</strong> – Primary location, optimal for European LPs</li>
-                    <li><strong>Equinix NY4 (New York)</strong> – US market access, close to major venues</li>
-                    <li><strong>Equinix TY3 (Tokyo)</strong> – Asia-Pacific coverage</li>
-                    <li><strong>Custom Locations</strong> – Available for enterprise clients</li>
+                    <li><strong>London, UK</strong> - LD4 Equinix</li>
+                    <li><strong>New York, USA</strong> - NY4 Equinix</li>
+                    <li><strong>Singapore</strong> - SG1 Equinix</li>
+                    <li><strong>Dubai, UAE</strong> - Regional Hub</li>
                 </ul>
 
                 <h3>Infrastructure Specifications</h3>
                 <ul>
-                    <li><strong>Server Configuration</strong> – Dedicated servers, 8vCPU+ configurations</li>
-                    <li><strong>Network</strong> – Multiple tier-1 carrier connections, DDoS protection</li>
-                    <li><strong>Redundancy</strong> – Database replication, automated failover</li>
-                    <li><strong>Backups</strong> – Daily incremental, weekly full backups with 30-day retention</li>
-                    <li><strong>Monitoring</strong> – 24/7 infrastructure monitoring with &lt;5 minute response</li>
+                    <li>Equinix-based cross-connects for ultra-low latency.</li>
+                    <li>Full hardware redundancy with automated failover systems.</li>
+                    <li>Tier-1 DDoS protection to safeguard against malicious attacks.</li>
+                    <li>Encrypted database backups performed Daily/Hourly.</li>
+                    <li>Real-time server health monitoring and load balancing.</li>
                 </ul>
 
                 <div className="infoBox">
                     <p>
-                        <strong>Uptime Guarantee:</strong> 99.9% uptime SLA with service credits for any downtime. Enterprise clients receive 99.99% SLA with dedicated support team.
+                        <strong>SLA Commitment:</strong> We guarantee a 99.9% network uptime. Our infrastructure is audited regularly to ensure compliance with the highest security standards in the fintech industry.
                     </p>
                 </div>
 
                 <h2 id="features">Platform Features</h2>
                 <p>
-                    MT5 provides the comprehensive feature set that modern traders expect, with capabilities that exceed MT4 in every dimension.
+                    MT5 offers an unparalleled suite of tools for both the trader and the broker.
                 </p>
 
                 <h3>Trading Features</h3>
                 <ul>
-                    <li><strong>Order Types</strong> – Market, Limit, Stop, Stop Limit, Trailing Stop, Fill Policy options</li>
-                    <li><strong>Hedging & Netting</strong> – Support both position accounting modes</li>
-                    <li><strong>Partial Close</strong> – Close portions of positions</li>
-                    <li><strong>Close By</strong> – Close opposite positions to reduce margin</li>
-                    <li><strong>One-Click Trading</strong> – Instant execution from chart or DOM</li>
-                    <li><strong>Depth of Market</strong> – Level 2 pricing visualization</li>
+                    <li>Two order accounting modes: Netting and Hedging.</li>
+                    <li>One-click trading and advanced Market Depth.</li>
+                    <li>Full set of trade orders, including pending and stop orders.</li>
+                    <li>Market, Request, Instant, and Exchange execution modes.</li>
+                    <li>Internal mailing system for direct client communication.</li>
+                    <li>Historical data management and export capabilities.</li>
                 </ul>
 
-                <h3>Analysis Tools</h3>
+                <h3>Analytics Tools</h3>
                 <ul>
-                    <li><strong>38 Timeframes</strong> – From 1-minute to monthly charts</li>
-                    <li><strong>80+ Indicators</strong> – Technical analysis library</li>
-                    <li><strong>44 Graphical Objects</strong> – Lines, channels, Elliott waves, Fibonacci</li>
-                    <li><strong>Economic Calendar</strong> – Built-in news and event tracking</li>
-                    <li><strong>Fundamental Analysis</strong> – Market news and economic data</li>
+                    <li>80+ built-in technical indicators and analytical objects.</li>
+                    <li>Advanced charting with unlimited number of charts.</li>
+                    <li>Integrated Economic Calendar with impact ratings.</li>
+                    <li>Financial news streaming from major global providers.</li>
                 </ul>
 
-                <h3>Algorithmic Trading</h3>
+                <h3>Algorithmic & Automation</h3>
                 <ul>
-                    <li><strong>MQL5 Language</strong> – C++-like language for strategy development</li>
-                    <li><strong>Strategy Tester</strong> – Tick-level backtesting with optimization</li>
-                    <li><strong>MQL5 Market</strong> – Thousands of Expert Advisors and indicators</li>
-                    <li><strong>VPS Hosting</strong> – Low-latency algo execution options</li>
+                    <li>Integrated MQL5 development environment.</li>
+                    <li>High-speed Strategy Tester for EAs and indicators.</li>
+                    <li>Access to the MQL5 Market and Signals service.</li>
+                    <li>Virtual Hosting (VPS) support for automated trading.</li>
                 </ul>
 
                 <h2 id="api">API & Integration</h2>
                 <p>
-                    Full programmatic access to your MT5 server enables custom integrations and advanced automation.
+                    Our MT5 White Label is designed to be the core of a larger, extensible business ecosystem through powerful API support.
                 </p>
 
-                <h3>Manager API</h3>
-                <p>
-                    Complete access to the MT5 Manager API for back-office integration:
-                </p>
+                <h3>Manager & Admin API</h3>
                 <ul>
-                    <li>Account management (create, modify, delete)</li>
-                    <li>Trade execution and manipulation</li>
-                    <li>Symbol and group configuration</li>
-                    <li>Risk management and exposure monitoring</li>
-                    <li>Report generation and data export</li>
+                    <li>Automate account creation and group management.</li>
+                    <li>Real-time balance and credit adjustments via CRM.</li>
+                    <li>Customized reporting for compliance and internal audits.</li>
+                    <li>Detailed permission control for staff and sub-white labels.</li>
                 </ul>
 
-                <h3>Gateway API</h3>
-                <p>
-                    Liquidity bridge connectivity through standard protocols:
-                </p>
+                <h3>Gateway & Connectivity API</h3>
                 <ul>
-                    <li>FIX 4.4 for institutional connectivity</li>
-                    <li>Custom gateway development supported</li>
-                    <li>Multiple LP aggregation</li>
+                    <li>Connect to multiple Tier-1 liquidity providers.</li>
+                    <li>Aggregate feeds to provide the best possible spreads.</li>
+                    <li>Support for FIX Bridge technology.</li>
+                    <li>Custom plugins for non-standard asset classes.</li>
                 </ul>
 
-                <h3>Web API</h3>
+                <h3>Web API / SDK</h3>
                 <p>
-                    REST API for web and mobile application development, providing access to account data, history, and trading operations through standard HTTP endpoints.
+                    We provide a REST-based Web API that allows you to build custom web interfaces, integrate with third-party CRMs, and create unique mobile experiences. Use our SDKs to develop webhooks for real-time notifications regarding deposits, withdrawals, and margin calls.
                 </p>
+
+                <h3>Common Integrations:</h3>
+                <ul>
+                    <li>Popular Forex CRMs (e.g., [Provider Name])</li>
+                    <li>Payment Service Providers (PSPs) and Crypto Gateways</li>
+                    <li>KYC/AML Verification services</li>
+                    <li>Marketing automation and email tools</li>
+                </ul>
 
                 <h2 id="pricing">Pricing & Setup</h2>
                 <p>
-                    Our MT5 white label includes everything needed for immediate launch.
+                    We offer flexible pricing models designed to grow alongside your brokerage, ensuring that your costs remain aligned with your active user base.
                 </p>
 
                 <h3>What's Included</h3>
                 <ul>
-                    <li>MT5 server licensing and hosting</li>
-                    <li>Complete branding package</li>
-                    <li>Web terminal with your domain</li>
-                    <li>CRM integration</li>
-                    <li>Liquidity bridge connection</li>
-                    <li>24/7 technical support</li>
-                    <li>Platform updates and maintenance</li>
+                    <li>Branded MT5 Desktop, Web, and Mobile terminals.</li>
+                    <li>MT5 Manager access with full administrative rights.</li>
+                    <li>Standard hosting and server maintenance.</li>
+                    <li>Basic liquidity connectivity setup.</li>
+                    <li>Technical onboarding and staff training.</li>
+                    <li>24/7 Emergency technical support.</li>
                 </ul>
 
                 <h3>Optional Add-Ons</h3>
                 <ul>
-                    <li><strong>Branded Mobile Apps</strong> – iOS and Android under your company name</li>
-                    <li><strong>Manager Terminal Licenses</strong> – Additional back-office access</li>
-                    <li><strong>Additional Server Regions</strong> – Multi-region deployment</li>
-                    <li><strong>VPS for Clients</strong> – Low-latency algo trading hosting</li>
+                    <li>Advanced CRM integration.</li>
+                    <li>Custom Liquidity Bridge configurations.</li>
+                    <li>PAMM/MAM/Copy Trading modules.</li>
+                    <li>Additional security layers and custom firewalls.</li>
                 </ul>
 
                 <h3>Setup Timeline</h3>
                 <ol>
-                    <li><strong>Day 1</strong> – Contract signing and branding assets received</li>
-                    <li><strong>Day 2</strong> – Server provisioning and branding application</li>
-                    <li><strong>Day 3-5</strong> – Liquidity connection and symbol configuration</li>
-                    <li><strong>Day 5-7</strong> – CRM integration and testing</li>
-                    <li><strong>Day 7+</strong> – Go live with monitoring and support</li>
+                    <li><strong>Consultation & Agreement (Days 1-2):</strong> Requirement gathering and contract signing.</li>
+                    <li><strong>Infrastructure Provisioning (Days 3-5):</strong> Server setup and security configuration.</li>
+                    <li><strong>Branding & Customization (Days 5-7):</strong> Terminal branding and group settings.</li>
+                    <li><strong>Integration & Testing (Days 7-10):</strong> API connections and UAT (User Acceptance Testing).</li>
+                    <li><strong>Go-Live & Support (Day [X]):</strong> Final launch and hand-over to your team.</li>
                 </ol>
-                <p>
-                    Express setup (48 hours) available for standard configurations using pre-built liquidity feeds and default symbol sets.
-                </p>
 
                 <h2 id="faq">Frequently Asked Questions</h2>
                 <div className="faqGrid">

@@ -19,7 +19,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: "B2B Broker Solutions | Liquidity, CRM & White Label | FxTrusts",
-  description: "FxTrusts is the premier B2B Broker technology provider. We offer a complete ecosystem: Liquidity, CRM, and MT5 White Label. Better technology than B2Broker, better pricing.",
+  description: "FxTrusts is the premier B2B Broker technology provider. The complete ecosystem: Liquidity, CRM, and MT5 White Label. Superior technology, better pricing.",
   keywords: [
     'B2B forex broker',
     'forex broker technology',

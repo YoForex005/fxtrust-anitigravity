@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import InnerPageHeader from '@/components/InnerPageHeader';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import styles from './manifesto.module.css';
 
 export const metadata: Metadata = {
     title: 'Our Manifesto | Why We Built FxTrusts',
@@ -35,8 +36,8 @@ export default function ManifestoPage() {
             />
 
             <section style={{ padding: '80px 0', maxWidth: '800px', margin: '0 auto' }}>
-                <div style={{ padding: '0 2rem' }}>
-                    <div style={{ borderLeft: '4px solid #4353F2', paddingLeft: '2rem', marginBottom: '3rem' }}>
+                <div className={styles.manifestoContent} style={{ padding: '0 2rem' }}>
+                    <div className={styles.manifestoQuote} style={{ borderLeft: '4px solid #4353F2', paddingLeft: '2rem', marginBottom: '3rem' }}>
                         <h2 style={{ fontSize: '2rem', fontWeight: '800', marginBottom: '1rem', color: '#111827' }}>We Were You.</h2>
                         <p style={{ fontSize: '1.25rem', lineHeight: '1.6', color: '#4B5563', fontStyle: 'italic' }}>
                             "Ten years ago, we started a brokerage. We had big dreams. We wanted to disrupt the market. Then we met the tech providers."
@@ -75,7 +76,7 @@ export default function ManifestoPage() {
                     {/* Our Philosophy Section (New Content) */}
                     <div style={{ marginTop: '4rem', marginBottom: '4rem' }}>
                         <h2 style={{ fontSize: '2rem', fontWeight: '800', marginBottom: '2rem', color: '#111827' }}>Our Philosophy</h2>
-                        <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
+                        <div className={styles.philosophyGrid} style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '2rem' }}>
                             <div>
                                 <h3 style={{ fontSize: '1.25rem', fontWeight: '700', marginBottom: '0.5rem', color: '#111827' }}>No Salesmen</h3>
                                 <p style={{ color: '#4B5563', lineHeight: '1.6' }}>
@@ -109,7 +110,7 @@ export default function ManifestoPage() {
                         <p style={{ fontSize: '1.1rem', lineHeight: '1.8', color: '#9CA3AF', marginBottom: '1.5rem' }}>
                             The old model of "Call Center Brokerage" is dying. Regulators are cracking down. Clients are getting smarter. The future belongs to:
                         </p>
-                        <ul style={{ listStyle: 'none', padding: 0 }}>
+                        <ul className={styles.futureList} style={{ listStyle: 'none', padding: 0 }}>
                             <li style={{ display: 'flex', alignItems: 'center', gap: '1rem', marginBottom: '1rem' }}>
                                 <span style={{ color: '#10B981', fontWeight: 'bold' }}>✓</span>
                                 <span><strong>Prop Firms:</strong> Skill-based trading, not gambling.</span>
@@ -131,7 +132,7 @@ export default function ManifestoPage() {
                     {/* The Architects Section (New Content) */}
                     <div style={{ marginBottom: '4rem' }}>
                         <h2 style={{ fontSize: '2rem', fontWeight: '800', marginBottom: '2rem', color: '#111827' }}>The Architects</h2>
-                        <div style={{ display: 'flex', gap: '2rem', overflowX: 'auto', paddingBottom: '1rem' }}>
+                        <div className={styles.architectsRow} style={{ display: 'flex', gap: '2rem', overflowX: 'auto', paddingBottom: '1rem' }}>
                             <div style={{ minWidth: '200px', textAlign: 'center' }}>
                                 <div style={{ width: '100px', height: '100px', background: '#E5E7EB', borderRadius: '50%', margin: '0 auto 1rem', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '2rem' }}>👨‍💻</div>
                                 <h3 style={{ fontSize: '1.1rem', fontWeight: '700', marginBottom: '0.25rem' }}>The CTO</h3>
@@ -150,7 +151,7 @@ export default function ManifestoPage() {
                         </div>
                     </div>
 
-                    <div style={{ marginTop: '4rem', borderTop: '1px solid #E5E7EB', paddingTop: '2rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
+                    <div className={styles.signatureRow} style={{ marginTop: '4rem', borderTop: '1px solid #E5E7EB', paddingTop: '2rem', display: 'flex', alignItems: 'center', gap: '1rem' }}>
                         <div style={{ width: '60px', height: '60px', background: '#111827', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', color: 'white', fontWeight: 'bold' }}>FX</div>
                         <div>
                             <p style={{ fontFamily: 'cursive', fontSize: '1.5rem', color: '#111827', margin: 0 }}>The FxTrusts Team</p>

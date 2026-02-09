@@ -79,7 +79,16 @@ export default function ContentPageLayout({
     ctaText = 'Contact our team for more information.',
     ctaButtonText = 'Contact Us',
     ctaButtonHref = '/company/contact',
-}: ContentPageLayoutProps) {
+    features = [],
+    contactTitle = 'Need Help?',
+    contactText = 'Our team is available 24/7',
+    contactEmail = 'business@fxtrusts.com',
+}: ContentPageLayoutProps & {
+    features?: string[];
+    contactTitle?: string;
+    contactText?: string;
+    contactEmail?: string;
+}) {
     return (
         <div className={styles.pageLayout}>
             {/* Left Sidebar */}
@@ -159,6 +168,24 @@ export default function ContentPageLayout({
                     </div>
                 </div>
 
+                {/* Features Card - NEW */}
+                {features.length > 0 && (
+                    <div className={styles.relatedCard}>
+                        <h4 className={styles.relatedTitle}>
+                            <CheckIcon />
+                            Features Include
+                        </h4>
+                        <ul className={styles.featuresList} style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                            {features.map((feature, i) => (
+                                <li key={i} style={{ display: 'flex', alignItems: 'center', gap: '8px', marginBottom: '8px', fontSize: '0.9rem', color: '#475569' }}>
+                                    <span style={{ color: '#10B981', flexShrink: 0 }}>✓</span>
+                                    {feature}
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                )}
+
                 {/* Related Links */}
                 {relatedLinks.length > 0 && (
                     <div className={styles.relatedCard}>
@@ -189,10 +216,10 @@ export default function ContentPageLayout({
                             <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                         </svg>
                     </div>
-                    <h4 className={styles.contactTitle}>Need Help?</h4>
-                    <p className={styles.contactText}>Our team is available 24/7</p>
-                    <a href="mailto:business@fxtrusts.com" className={styles.contactEmail}>
-                        business@fxtrusts.com
+                    <h4 className={styles.contactTitle}>{contactTitle}</h4>
+                    <p className={styles.contactText}>{contactText}</p>
+                    <a href={`mailto:${contactEmail}`} className={styles.contactEmail}>
+                        {contactEmail}
                     </a>
                 </div>
             </aside>
