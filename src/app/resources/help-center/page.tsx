@@ -1,6 +1,8 @@
 import { Metadata } from 'next';
+import Header from '@/components/Header';
 import ContentPageLayout from '@/components/ContentPageLayout';
 import PageHeader from '@/components/PageHeader';
+import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
     title: 'Help Center | Support Resources | FxTrusts',
@@ -47,6 +49,7 @@ export default function HelpCenterPage() {
 
     return (
         <main>
+            <Header />
             <PageHeader
                 title="Help Center"
                 subtitle="Everything you need to get the most out of FxTrusts."
@@ -270,6 +273,7 @@ export default function HelpCenterPage() {
                     We actively incorporate client feedback into our product roadmap. Submit feature requests through the Ideas Portal in your dashboard, and vote on suggestions from other brokerages.
                 </p>
             </ContentPageLayout>
+            <Footer />
         </main>
     );
 }

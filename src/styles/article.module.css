@@ -419,22 +419,95 @@
 
     .articleTitle {
         font-size: 1.75rem;
+        text-align: center;
+    }
+
+    .articleDescription {
+        text-align: center;
+    }
+
+    .breadcrumb {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .articleMeta {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .authorRow {
+        justify-content: center;
     }
 
     .content h2 {
         font-size: 1.5rem;
+        text-align: center;
     }
 
     .content h3 {
         font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .content h4 {
+        text-align: center;
+    }
+
+    .content p {
+        text-align: center;
+    }
+
+    .content ul,
+    .content ol {
+        text-align: left;
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .toc {
+        text-align: center;
+    }
+
+    .tocList {
+        text-align: left;
     }
 
     .table {
         font-size: 0.8rem;
+        display: block;
+        overflow-x: auto;
     }
 
     .table th,
     .table td {
         padding: 0.75rem;
+        text-align: center;
+    }
+
+    .callout {
+        text-align: center;
+    }
+
+    .calloutText {
+        text-align: center;
+    }
+
+    .faqItem {
+        text-align: center;
+    }
+
+    .faqAnswer {
+        text-align: center;
+    }
+
+    .ctaBox {
+        text-align: center;
+    }
+
+    .ctaBtn {
+        display: inline-block;
+        margin: 0 auto;
     }
 }

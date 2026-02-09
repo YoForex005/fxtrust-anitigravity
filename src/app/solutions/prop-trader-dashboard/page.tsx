@@ -12,7 +12,7 @@ export default function PropTraderDashboardPage() {
     return (
         <main className={styles.main}>
             <InnerPageHeader
-                badge="Trader HUD"
+                badge="Trader Hub"
                 badgeIcon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="m16 10-4 4-4-4" /></svg>}
                 title="The Ultimate Trader Dashboard"
                 subtitle="Give your traders the tools they need to succeed. Real-time equity tracking, drawdown monitors, and advanced performance analytics in one sleek interface."
