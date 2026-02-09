@@ -1,7 +1,5 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
-
-
+import InnerPageHeader from '@/components/InnerPageHeader';
 import styles from '../solution-subpage.module.css';
 
 export const metadata: Metadata = {
@@ -13,25 +11,12 @@ export const metadata: Metadata = {
 export default function ReportServerPage() {
     return (
         <main className={styles.main}>
-
-            <section className={styles.hero}>
-                <div className={styles.heroContainer}>
-                    <div className={styles.heroBadge}>
-                        <span className={styles.badgeDot}></span>
-                        <span>DATA INTELLIGENCE</span>
-                    </div>
-                    <h1 className={styles.heroTitle}>
-                        Advanced <span className={styles.heroHighlight}>MT5</span> Reporting
-                    </h1>
-                    <p className={styles.heroSubtitle}>
-                        Convert raw trading data into actionable insights. Our report server
-                        provides deep-dive analytics for risk management, marketing, and compliance.
-                    </p>
-                    <div className={styles.heroActions}>
-                        <Link href="/company/contact" className={styles.btnPrimary}>Analyze Your Data</Link>
-                    </div>
-                </div>
-            </section>
+            <InnerPageHeader
+                badge="Data Intelligence"
+                badgeIcon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>}
+                title="Advanced MT5 Reporting"
+                subtitle="Convert raw trading data into actionable insights. Our report server provides deep-dive analytics for risk management, marketing, and compliance."
+            />
 
             <section className={styles.section}>
                 <div className={styles.container}>

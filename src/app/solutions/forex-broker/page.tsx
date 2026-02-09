@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 
-
+import InnerPageHeader from '@/components/InnerPageHeader';
 import styles from './forex-broker.module.css';
 import ProductSchema from '@/components/seo/ProductSchema';
 import FAQSchema from '@/components/seo/FAQSchema';
@@ -29,6 +29,7 @@ export const metadata: Metadata = {
         "mt5 white label",
         "forex broker technology",
         "launch forex brokerage",
+        "white label mt5 cost",
     ],
     openGraph: {
         title: 'Start a Forex Broker | Complete Turnkey Solution',
@@ -86,37 +87,24 @@ export default function ForexBrokerPage() {
             />
             <FAQSchema faqs={faqs} />
 
-
-
-            {/* Hero Section */}
-            <section className={styles.hero}>
-                <div className={styles.heroContainer}>
-                    <div className={styles.heroBadge}>
-                        <span className={styles.badgeDot}></span>
-                        <span>TURNKEY SOLUTION</span>
-                    </div>
-                    <h1 className={styles.heroTitle}>
-                        Start a <span className={styles.heroHighlight}>FOREX BROKER</span> with our<br />
-                        Turnkey Solution
-                    </h1>
-                    <p className={styles.heroSubtitle}>
-                        Everything you need to launch a professional forex brokerage. MetaTrader 5 white label,
-                        institutional liquidity, CRM, and payment processing. We handle the technology
-                        complexity so you can focus on what matters—acquiring and retaining clients.
-                    </p>
-                    <div className={styles.heroActions}>
-                        <Link href="/company/contact" className={styles.btnPrimary}>
-                            Get Started
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                <path d="M5 12h14M12 5l7 7-7 7" />
-                            </svg>
-                        </Link>
-                        <Link href="/live-demo" className={styles.btnSecondary}>
-                            View Live Demo
-                        </Link>
-                    </div>
+            <InnerPageHeader
+                badge="Turnkey Solution"
+                badgeIcon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" /></svg>}
+                title="Start a Forex Broker with our Turnkey Solution"
+                subtitle="Everything you need to launch a professional forex brokerage. MetaTrader 5 white label, institutional liquidity, CRM, and payment processing. We handle the technology complexity so you can focus on what matters—acquiring and retaining clients."
+            >
+                <div className={styles.heroActions}>
+                    <Link href="/company/contact" className={styles.btnPrimary}>
+                        Get Started
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </Link>
+                    <Link href="/live-demo" className={styles.btnSecondary}>
+                        View Live Demo
+                    </Link>
                 </div>
-            </section>
+            </InnerPageHeader>
 
             {/* Stats Bar */}
             <section className={styles.statsBar}>

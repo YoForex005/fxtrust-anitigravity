@@ -194,8 +194,18 @@
         grid-template-columns: 1fr;
     }
 
-    .liquidityHeadline {
-        font-size: 1.75rem;
+    .liquidityCard {
+        align-items: center;
+        text-align: center;
+    }
+
+    .liquidityText {
+        margin: 0 auto;
+    }
+
+    .turnkeyCard {
+        align-items: center;
+        text-align: center;
     }
 
     .section {

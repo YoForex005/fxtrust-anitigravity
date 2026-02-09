@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 
-
+import InnerPageHeader from '@/components/InnerPageHeader';
 import styles from '../solution-subpage.module.css';
 
 export const metadata: Metadata = {
@@ -13,25 +13,12 @@ export const metadata: Metadata = {
 export default function CopyTradingPage() {
     return (
         <main className={styles.main}>
-
-            <section className={styles.hero}>
-                <div className={styles.heroContainer}>
-                    <div className={styles.heroBadge}>
-                        <span className={styles.badgeDot}></span>
-                        <span>SOCIAL INVESTING</span>
-                    </div>
-                    <h1 className={styles.heroTitle}>
-                        Branded <span className={styles.heroHighlight}>COPY TRADING</span>
-                    </h1>
-                    <p className={styles.heroSubtitle}>
-                        Build a thriving social trading ecosystem. Allow your top traders to share their
-                        strategies and enable others to follow them automatically.
-                    </p>
-                    <div className={styles.heroActions}>
-                        <Link href="/company/contact" className={styles.btnPrimary}>Launch Platform</Link>
-                    </div>
-                </div>
-            </section>
+            <InnerPageHeader
+                badge="Social Investing"
+                badgeIcon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>}
+                title="Branded Copy Trading"
+                subtitle="Build a thriving social trading ecosystem. Allow your top traders to share their strategies and enable others to follow them automatically."
+            />
 
             <section className={styles.section}>
                 <div className={styles.container}>

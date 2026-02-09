@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
+import InnerPageHeader from '@/components/InnerPageHeader';
 import ContentPageLayout from '@/components/ContentPageLayout';
-import PageHeader from '@/components/PageHeader';
 import FAQSchema from '@/components/seo/FAQSchema';
 
 export const metadata: Metadata = {
@@ -90,10 +90,11 @@ export default function MT5Page() {
     return (
         <main>
             <FAQSchema faqs={faqs} />
-            <PageHeader
+            <InnerPageHeader
+                badge="The Industry Standard"
+                badgeIcon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>}
                 title="MetaTrader 5 White Label"
-                subtitle="Launch your broker on the world's most trusted trading platform."
-                badge="Solutions"
+                subtitle="Launch your broker on the world's most trusted trading platform. Fully managed, with branding, hosting, and support included."
             />
             <ContentPageLayout
                 tableOfContents={tableOfContents}

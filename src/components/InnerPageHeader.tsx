@@ -6,9 +6,10 @@ interface InnerPageHeaderProps {
     badgeIcon?: ReactNode; // Changed from string to ReactNode for SVGs
     title: string;
     subtitle: string;
+    children?: ReactNode;
 }
 
-export default function InnerPageHeader({ badge, badgeIcon, title, subtitle }: InnerPageHeaderProps) {
+export default function InnerPageHeader({ badge, badgeIcon, title, subtitle, children }: InnerPageHeaderProps) {
     return (
         <header className={styles.header}>
             <div className={styles.glow}></div>
@@ -19,6 +20,7 @@ export default function InnerPageHeader({ badge, badgeIcon, title, subtitle }: I
                 </div>
                 <h1 className={styles.title} dangerouslySetInnerHTML={{ __html: title }}></h1>
                 <p className={styles.subtitle} dangerouslySetInnerHTML={{ __html: subtitle }}></p>
+                {children && <div className={styles.actions}>{children}</div>}
             </div>
         </header>
     );

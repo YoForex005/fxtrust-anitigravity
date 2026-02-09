@@ -1,6 +1,6 @@
 import { Metadata } from 'next';
+import InnerPageHeader from '@/components/InnerPageHeader';
 import ContentPageLayout from '@/components/ContentPageLayout';
-import PageHeader from '@/components/PageHeader';
 import FAQSchema from '@/components/seo/FAQSchema';
 
 export const metadata: Metadata = {
@@ -95,10 +95,11 @@ export default function CRMPage() {
     return (
         <main>
             <FAQSchema faqs={faqs} />
-            <PageHeader
+            <InnerPageHeader
+                badge="Broker Management"
+                badgeIcon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>}
                 title="Institutional CRM"
-                subtitle="The backbone of your brokerage operations—built for scale."
-                badge="Solutions"
+                subtitle="The backbone of your brokerage operations—built for scale. Manage leads, automate KYC, and track IB performance from a single interface."
             />
             <ContentPageLayout
                 tableOfContents={tableOfContents}

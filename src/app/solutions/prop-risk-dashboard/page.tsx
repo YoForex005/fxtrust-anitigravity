@@ -1,7 +1,5 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
-
-
+import InnerPageHeader from '@/components/InnerPageHeader';
 import styles from '../solution-subpage.module.css';
 
 export const metadata: Metadata = {
@@ -13,25 +11,12 @@ export const metadata: Metadata = {
 export default function PropRiskDashboardPage() {
     return (
         <main className={styles.main}>
-
-            <section className={styles.hero}>
-                <div className={styles.heroContainer}>
-                    <div className={styles.heroBadge}>
-                        <span className={styles.badgeDot}></span>
-                        <span>RISK COMMANDER</span>
-                    </div>
-                    <h1 className={styles.heroTitle}>
-                        Intelligent <span className={styles.heroHighlight}>RISK</span> Monitoring
-                    </h1>
-                    <p className={styles.heroSubtitle}>
-                        Protect your firm's capital with real-time analytics. Detect toxic flow, HFT strategies,
-                        and fraudulent account patterns before they impact your bottom line.
-                    </p>
-                    <div className={styles.heroActions}>
-                        <Link href="/company/contact" className={styles.btnPrimary}>Get Risk Report</Link>
-                    </div>
-                </div>
-            </section>
+            <InnerPageHeader
+                badge="Risk Commander"
+                badgeIcon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>}
+                title="Intelligent Risk Monitoring"
+                subtitle="Protect your firm's capital with real-time analytics. Detect toxic flow, HFT strategies, and fraudulent account patterns before they impact your bottom line."
+            />
 
             <section className={styles.section}>
                 <div className={styles.container}>

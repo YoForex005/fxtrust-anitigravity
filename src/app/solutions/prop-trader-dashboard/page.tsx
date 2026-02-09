@@ -1,7 +1,5 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
-
-
+import InnerPageHeader from '@/components/InnerPageHeader';
 import styles from '../solution-subpage.module.css';
 
 export const metadata: Metadata = {
@@ -13,25 +11,12 @@ export const metadata: Metadata = {
 export default function PropTraderDashboardPage() {
     return (
         <main className={styles.main}>
-
-            <section className={styles.hero}>
-                <div className={styles.heroContainer}>
-                    <div className={styles.heroBadge}>
-                        <span className={styles.badgeDot}></span>
-                        <span>TRADER HUD</span>
-                    </div>
-                    <h1 className={styles.heroTitle}>
-                        The Ultimate <span className={styles.heroHighlight}>TRADER</span> Dashboard
-                    </h1>
-                    <p className={styles.heroSubtitle}>
-                        Give your traders the tools they need to succeed. Real-time equity tracking,
-                        drawdown monitors, and advanced performance analytics in one sleek interface.
-                    </p>
-                    <div className={styles.heroActions}>
-                        <Link href="/company/contact" className={styles.btnPrimary}>View Demo Dashboard</Link>
-                    </div>
-                </div>
-            </section>
+            <InnerPageHeader
+                badge="Trader HUD"
+                badgeIcon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="m16 10-4 4-4-4" /></svg>}
+                title="The Ultimate Trader Dashboard"
+                subtitle="Give your traders the tools they need to succeed. Real-time equity tracking, drawdown monitors, and advanced performance analytics in one sleek interface."
+            />
 
             <section className={styles.section}>
                 <div className={styles.container}>

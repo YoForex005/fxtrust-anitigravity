@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 
-
+import InnerPageHeader from '@/components/InnerPageHeader';
 import styles from '../solution-subpage.module.css';
 
 export const metadata: Metadata = {
@@ -13,25 +13,12 @@ export const metadata: Metadata = {
 export default function EconomicCalendarPage() {
     return (
         <main className={styles.main}>
-
-            <section className={styles.hero}>
-                <div className={styles.heroContainer}>
-                    <div className={styles.heroBadge}>
-                        <span className={styles.badgeDot}></span>
-                        <span>MARKET CONTEXT</span>
-                    </div>
-                    <h1 className={styles.heroTitle}>
-                        Real-Time <span className={styles.heroHighlight}>Market</span> Insights
-                    </h1>
-                    <p className={styles.heroSubtitle}>
-                        Empower your traders with institutional-grade data. Integrated economic
-                        calendars and breaking news feeds keep them informed and trading.
-                    </p>
-                    <div className={styles.heroActions}>
-                        <Link href="/company/contact" className={styles.btnPrimary}>Integrate Feeds</Link>
-                    </div>
-                </div>
-            </section>
+            <InnerPageHeader
+                badge="Market Context"
+                badgeIcon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M19 4H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2z" /><line x1="16" y1="2" x2="16" y2="6" /><line x1="8" y1="2" x2="8" y2="6" /><line x1="3" y1="10" x2="21" y2="10" /></svg>}
+                title="Real-Time Market Insights"
+                subtitle="Empower your traders with institutional-grade data. Integrated economic calendars and breaking news feeds keep them informed and trading."
+            />
 
             <section className={styles.section}>
                 <div className={styles.container}>

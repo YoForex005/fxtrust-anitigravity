@@ -1,7 +1,5 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
-
-
+import InnerPageHeader from '@/components/InnerPageHeader';
 import styles from '../solution-subpage.module.css';
 
 export const metadata: Metadata = {
@@ -13,25 +11,12 @@ export const metadata: Metadata = {
 export default function MobileAppWLPage() {
     return (
         <main className={styles.main}>
-
-            <section className={styles.hero}>
-                <div className={styles.heroContainer}>
-                    <div className={styles.heroBadge}>
-                        <span className={styles.badgeDot}></span>
-                        <span>BRAND MOBILITY</span>
-                    </div>
-                    <h1 className={styles.heroTitle}>
-                        Native <span className={styles.heroHighlight}>Mobile</span> Branding
-                    </h1>
-                    <p className={styles.heroSubtitle}>
-                        Your logo in the App Store and Google Play. Offer a premium native trading
-                        experience that keeps your clients engaged anywhere, anytime.
-                    </p>
-                    <div className={styles.heroActions}>
-                        <Link href="/company/contact" className={styles.btnPrimary}>Launch Your App</Link>
-                    </div>
-                </div>
-            </section>
+            <InnerPageHeader
+                badge="Brand Mobility"
+                badgeIcon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2" /><line x1="12" y1="18" x2="12.01" y2="18" /></svg>}
+                title="Native Mobile Branding"
+                subtitle="Your logo in the App Store and Google Play. Offer a premium native trading experience that keeps your clients engaged anywhere, anytime."
+            />
 
             <section className={styles.section}>
                 <div className={styles.container}>

@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import Link from 'next/link';
 
 
+import InnerPageHeader from '@/components/InnerPageHeader';
 import styles from './traders-room.module.css';
 
 export const metadata: Metadata = {
@@ -27,35 +28,24 @@ export const metadata: Metadata = {
 export default function TradersRoomPage() {
     return (
         <main className={styles.main}>
-
-
-            {/* Hero Section */}
-            <section className={styles.hero}>
-                <div className={styles.heroContainer}>
-                    <div className={styles.heroBadge}>
-                        <span className={styles.badgeDot}></span>
-                        <span>CLIENT EXPERIENCE</span>
-                    </div>
-                    <h1 className={styles.heroTitle}>
-                        A <span className={styles.heroHighlight}>TRADER'S ROOM</span> Built for Conversion
-                    </h1>
-                    <p className={styles.heroSubtitle}>
-                        First impressions matter. Give your traders a sleek, modern dashboard where they can manage their accounts,
-                        deposit funds instantly, and access your services with zero friction.
-                    </p>
-                    <div className={styles.heroActions}>
-                        <Link href="/company/contact" className={styles.btnPrimary}>
-                            Request a Demo
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                <path d="M5 12h14M12 5l7 7-7 7" />
-                            </svg>
-                        </Link>
-                        <Link href="/live-demo" className={styles.btnSecondary}>
-                            View Live Demo
-                        </Link>
-                    </div>
+            <InnerPageHeader
+                badge="Client Experience"
+                badgeIcon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>}
+                title="A Trader's Room Built for Conversion"
+                subtitle="First impressions matter. Give your traders a sleek, modern dashboard where they can manage their accounts, deposit funds instantly, and access your services with zero friction."
+            >
+                <div className={styles.heroActions}>
+                    <Link href="/company/contact" className={styles.btnPrimary}>
+                        Request a Demo
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </Link>
+                    <Link href="/live-demo" className={styles.btnSecondary}>
+                        View Live Demo
+                    </Link>
                 </div>
-            </section>
+            </InnerPageHeader>
 
             {/* Features Grid */}
             <section className={styles.section}>

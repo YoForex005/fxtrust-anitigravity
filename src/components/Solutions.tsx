@@ -6,13 +6,16 @@ export default function Solutions() {
             <div className={styles.container}>
                 <div className={styles.header}>
                     <h2 className={styles.headline}>
-                        Built to Handle Every Scenario<br />(Yes, Even That One You're Thinking About)
+                        Built to Handle Every Scenario
                     </h2>
+                    <p className={styles.subheadline}>
+                        (Yes, Even That One You&apos;re Thinking About)
+                    </p>
                 </div>
 
                 <div className={styles.grid}>
-                    {/* Card 1: Hero (Tall, Orange) */}
-                    <div className={`${styles.card} ${styles.cardTall} ${styles.cardOrange}`}>
+                    {/* Card 1: Hero (Wide, Orange) */}
+                    <div className={`${styles.card} ${styles.cardWideFeatured} ${styles.cardOrange}`}>
                         <div className={styles.cardHeader}>
                             <div className={styles.icon}>
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -46,8 +49,8 @@ export default function Solutions() {
                         </p>
                     </div>
 
-                    {/* Card 3: CRM (Tall, Blue) - User asked for Wide/Tall, using Tall to fit grid nicely */}
-                    <div className={`${styles.card} ${styles.cardTall} ${styles.cardBlue}`}>
+                    {/* Card 3: CRM (Wide, Blue) */}
+                    <div className={`${styles.card} ${styles.cardWideFeatured} ${styles.cardBlue}`}>
                         <div className={styles.cardHeader}>
                             <div className={styles.icon}>
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
@@ -136,8 +139,8 @@ export default function Solutions() {
                         </p>
                     </div>
 
-                    {/* Card 9: Server Infrastructure (Tall, Beige) */}
-                    <div className={`${styles.card} ${styles.cardTall} ${styles.cardBeige}`}>
+                    {/* Card 9: Server Infrastructure (Wide, Beige) */}
+                    <div className={`${styles.card} ${styles.cardWideFeatured} ${styles.cardBeige}`}>
                         <div className={styles.cardHeader}>
                             <div className={styles.icon}>
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">

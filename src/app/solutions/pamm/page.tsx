@@ -1,7 +1,5 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
-
-
+import InnerPageHeader from '@/components/InnerPageHeader';
 import styles from '../solution-subpage.module.css';
 
 export const metadata: Metadata = {
@@ -13,25 +11,12 @@ export const metadata: Metadata = {
 export default function PAMMPage() {
     return (
         <main className={styles.main}>
-
-            <section className={styles.hero}>
-                <div className={styles.heroContainer}>
-                    <div className={styles.heroBadge}>
-                        <span className={styles.badgeDot}></span>
-                        <span>ASSET MANAGEMENT</span>
-                    </div>
-                    <h1 className={styles.heroTitle}>
-                        Complete <span className={styles.heroHighlight}>PAMM</span> Solutions
-                    </h1>
-                    <p className={styles.heroSubtitle}>
-                        Empower your money managers with a robust Percentage Allocation Management Module.
-                        Automate profit distribution, fee calculations, and investor onboarding.
-                    </p>
-                    <div className={styles.heroActions}>
-                        <Link href="/company/contact" className={styles.btnPrimary}>Setup PAMM</Link>
-                    </div>
-                </div>
-            </section>
+            <InnerPageHeader
+                badge="Asset Management"
+                badgeIcon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>}
+                title="Complete PAMM Solutions"
+                subtitle="Empower your money managers with a robust Percentage Allocation Management Module. Automate profit distribution, fee calculations, and investor onboarding."
+            />
 
             <section className={styles.section}>
                 <div className={styles.container}>

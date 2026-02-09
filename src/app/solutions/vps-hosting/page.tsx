@@ -1,6 +1,5 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
-
+import InnerPageHeader from '@/components/InnerPageHeader';
 import styles from '../solution-subpage.module.css';
 
 export const metadata: Metadata = {
@@ -12,24 +11,12 @@ export const metadata: Metadata = {
 export default function VPSHostingPage() {
     return (
         <main className={styles.main}>
-            <section className={styles.hero}>
-                <div className={styles.heroContainer}>
-                    <div className={styles.heroBadge}>
-                        <span className={styles.badgeDot}></span>
-                        <span>LATENCY OPTIMIZED</span>
-                    </div>
-                    <h1 className={styles.heroTitle}>
-                        Ultra-Low <span className={styles.heroHighlight}>Latency</span> VPS
-                    </h1>
-                    <p className={styles.heroSubtitle}>
-                        Ensure 100% uptime for your traders' Expert Advisors and bots.
-                        Co-located with major liquidity hubs for sub-millisecond execution.
-                    </p>
-                    <div className={styles.heroActions}>
-                        <Link href="/company/contact" className={styles.btnPrimary}>Get VPS Pricing</Link>
-                    </div>
-                </div>
-            </section>
+            <InnerPageHeader
+                badge="Latency Optimized"
+                badgeIcon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7" /></svg>}
+                title="Ultra-Low Latency VPS"
+                subtitle="Ensure 100% uptime for your traders' Expert Advisors and bots. Co-located with major liquidity hubs for sub-millisecond execution."
+            />
 
             <section className={styles.section}>
                 <div className={styles.container}>

@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 
-
+import InnerPageHeader from '@/components/InnerPageHeader';
 import styles from '../solution-subpage.module.css';
 
 export const metadata: Metadata = {
@@ -13,25 +13,12 @@ export const metadata: Metadata = {
 export default function EvaluationEnginePage() {
     return (
         <main className={styles.main}>
-
-            <section className={styles.hero}>
-                <div className={styles.heroContainer}>
-                    <div className={styles.heroBadge}>
-                        <span className={styles.badgeDot}></span>
-                        <span>AUTO-PILOT PASS</span>
-                    </div>
-                    <h1 className={styles.heroTitle}>
-                        The <span className={styles.heroHighlight}>EVALUATION</span> Engine
-                    </h1>
-                    <p className={styles.heroSubtitle}>
-                        Stop manual account management. Our engine handles the transition from demo to funded
-                        instantly, ensuring a seamless experience for your top traders.
-                    </p>
-                    <div className={styles.heroActions}>
-                        <Link href="/company/contact" className={styles.btnPrimary}>Automate Now</Link>
-                    </div>
-                </div>
-            </section>
+            <InnerPageHeader
+                badge="Auto-pilot Pass"
+                badgeIcon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="m22 2-7 20-4-9-9-4Z" /><path d="M22 2 11 13" /></svg>}
+                title="The Evaluation Engine"
+                subtitle="Stop manual account management. Our engine handles the transition from demo to funded instantly, ensuring a seamless experience for your top traders."
+            />
 
             <section className={styles.section}>
                 <div className={styles.container}>

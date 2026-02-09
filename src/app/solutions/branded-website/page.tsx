@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 
-
+import InnerPageHeader from '@/components/InnerPageHeader';
 import styles from '../solution-subpage.module.css';
 
 export const metadata: Metadata = {
@@ -13,25 +13,12 @@ export const metadata: Metadata = {
 export default function BrandedWebsitePage() {
     return (
         <main className={styles.main}>
-
-            <section className={styles.hero}>
-                <div className={styles.heroContainer}>
-                    <div className={styles.heroBadge}>
-                        <span className={styles.badgeDot}></span>
-                        <span>CONVERSION DRIVEN</span>
-                    </div>
-                    <h1 className={styles.heroTitle}>
-                        Premium <span className={styles.heroHighlight}>Broker</span> Websites
-                    </h1>
-                    <p className={styles.heroSubtitle}>
-                        Don't lose clients to bad design. We build high-performance, SEO-optimized
-                        websites and landing pages that convert visitors into active traders.
-                    </p>
-                    <div className={styles.heroActions}>
-                        <Link href="/company/contact" className={styles.btnPrimary}>Build Your Site</Link>
-                    </div>
-                </div>
-            </section>
+            <InnerPageHeader
+                badge="Conversion Driven"
+                badgeIcon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="m16 10-4 4-4-4" /></svg>}
+                title="Premium Broker Websites"
+                subtitle="Don't lose clients to bad design. We build high-performance, SEO-optimized websites and landing pages that convert visitors into active traders."
+            />
 
             <section className={styles.section}>
                 <div className={styles.container}>

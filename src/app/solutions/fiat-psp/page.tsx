@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 
-
+import InnerPageHeader from '@/components/InnerPageHeader';
 import styles from '../solution-subpage.module.css';
 
 export const metadata: Metadata = {
@@ -13,25 +13,12 @@ export const metadata: Metadata = {
 export default function FiatPSPPage() {
     return (
         <main className={styles.main}>
-
-            <section className={styles.hero}>
-                <div className={styles.heroContainer}>
-                    <div className={styles.heroBadge}>
-                        <span className={styles.badgeDot}></span>
-                        <span>FIAT INFRASTRUCTURE</span>
-                    </div>
-                    <h1 className={styles.heroTitle}>
-                        Global <span className={styles.heroHighlight}>Fiat</span> Integration
-                    </h1>
-                    <p className={styles.heroSubtitle}>
-                        Connect to top-tier Payment Service Providers (PSPs) worldwide.
-                        Optimize approval rates and offer local payment methods to your users.
-                    </p>
-                    <div className={styles.heroActions}>
-                        <Link href="/company/contact" className={styles.btnPrimary}>Contact Sales</Link>
-                    </div>
-                </div>
-            </section>
+            <InnerPageHeader
+                badge="Fiat Infrastructure"
+                badgeIcon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2" /><line x1="1" y1="10" x2="23" y2="10" /></svg>}
+                title="Global Fiat Integration"
+                subtitle="Connect to top-tier Payment Service Providers (PSPs) worldwide. Optimize approval rates and offer local payment methods to your users."
+            />
 
             <section className={styles.section}>
                 <div className={styles.container}>

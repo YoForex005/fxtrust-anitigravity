@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 
-
+import InnerPageHeader from '@/components/InnerPageHeader';
 import styles from './liquidity-access.module.css';
 
 export const metadata: Metadata = {
@@ -28,35 +28,24 @@ export const metadata: Metadata = {
 export default function LiquidityAccessPage() {
     return (
         <main className={styles.main}>
-
-
-            {/* Hero Section */}
-            <section className={styles.hero}>
-                <div className={styles.heroContainer}>
-                    <div className={styles.heroBadge}>
-                        <span className={styles.badgeDot}></span>
-                        <span>INSTITUTIONAL GRADE</span>
-                    </div>
-                    <h1 className={styles.heroTitle}>
-                        Direct <span className={styles.heroHighlight}>TIER-1 ACCESS</span> to Global Markets
-                    </h1>
-                    <p className={styles.heroSubtitle}>
-                        Why settle for second-tier pricing? Connect your brokerage to the world's leading liquidity providers
-                        and offer your clients the tightest spreads across all asset classes.
-                    </p>
-                    <div className={styles.heroActions}>
-                        <Link href="/company/contact" className={styles.btnPrimary}>
-                            Connect to Liquidity
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                <path d="M5 12h14M12 5l7 7-7 7" />
-                            </svg>
-                        </Link>
-                        <Link href="/pricing" className={styles.btnSecondary}>
-                            View Pricing Plans
-                        </Link>
-                    </div>
+            <InnerPageHeader
+                badge="Institutional Grade"
+                badgeIcon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>}
+                title="Direct Tier-1 Access to Global Markets"
+                subtitle="Why settle for second-tier pricing? Connect your brokerage to the world's leading liquidity providers and offer your clients the tightest spreads across all asset classes."
+            >
+                <div className={styles.heroActions}>
+                    <Link href="/company/contact" className={styles.btnPrimary}>
+                        Connect to Liquidity
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </Link>
+                    <Link href="/pricing" className={styles.btnSecondary}>
+                        View Pricing Plans
+                    </Link>
                 </div>
-            </section>
+            </InnerPageHeader>
 
             {/* Asset Classes Section */}
             <section className={styles.section}>

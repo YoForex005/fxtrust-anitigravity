@@ -1,7 +1,5 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
-
-
+import InnerPageHeader from '@/components/InnerPageHeader';
 import styles from '../solution-subpage.module.css';
 
 export const metadata: Metadata = {
@@ -13,25 +11,12 @@ export const metadata: Metadata = {
 export default function OffshoreFormationPage() {
     return (
         <main className={styles.main}>
-
-            <section className={styles.hero}>
-                <div className={styles.heroContainer}>
-                    <div className={styles.heroBadge}>
-                        <span className={styles.badgeDot}></span>
-                        <span>LEGAL STRUCTURE</span>
-                    </div>
-                    <h1 className={styles.heroTitle}>
-                        Offshore <span className={styles.heroHighlight}>Company</span> Formation
-                    </h1>
-                    <p className={styles.heroSubtitle}>
-                        Establish your brokerage in globally recognized jurisdictions.
-                        We handle the bureaucracy, documentation, and local requirements for a smooth launch.
-                    </p>
-                    <div className={styles.heroActions}>
-                        <Link href="/company/contact" className={styles.btnPrimary}>Start Formation</Link>
-                    </div>
-                </div>
-            </section>
+            <InnerPageHeader
+                badge="Legal Structure"
+                badgeIcon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>}
+                title="Offshore Company Formation"
+                subtitle="Establish your brokerage in globally recognized jurisdictions. We handle the bureaucracy, documentation, and local requirements for a smooth launch."
+            />
 
             <section className={styles.section}>
                 <div className={styles.container}>

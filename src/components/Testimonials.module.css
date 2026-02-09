@@ -254,10 +254,22 @@
 
     .card {
         padding: 2rem;
+        align-items: center;
+        text-align: center;
+    }
+
+    .cardHeader {
+        justify-content: center;
+        width: 100%;
+    }
+
+    .author {
+        justify-content: center;
     }
 
     .authorHeader {
         flex-wrap: wrap;
         gap: 0.5rem;
+        justify-content: center;
     }
 }

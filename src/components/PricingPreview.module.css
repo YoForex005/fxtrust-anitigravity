@@ -427,6 +427,20 @@
         grid-template-columns: 1fr;
     }
 
+    .card {
+        align-items: center;
+        text-align: center;
+    }
+
+    .priceContainer {
+        justify-content: center;
+    }
+
+    .features li {
+        justify-content: center;
+        text-align: center;
+    }
+
     .setupHeader {
         flex-direction: column;
         text-align: center;

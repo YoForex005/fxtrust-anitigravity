@@ -1,7 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
-
-
+import InnerPageHeader from '@/components/InnerPageHeader';
 import styles from '../solution-subpage.module.css';
 
 export const metadata: Metadata = {
@@ -13,26 +12,17 @@ export const metadata: Metadata = {
 export default function PropChallengeManagerPage() {
     return (
         <main className={styles.main}>
-
-            <section className={styles.hero}>
-                <div className={styles.heroContainer}>
-                    <div className={styles.heroBadge}>
-                        <span className={styles.badgeDot}></span>
-                        <span>CHALLENGE ARCHITECT</span>
-                    </div>
-                    <h1 className={styles.heroTitle}>
-                        Precision <span className={styles.heroHighlight}>CHALLENGE</span> Management
-                    </h1>
-                    <p className={styles.heroSubtitle}>
-                        Define your edge. Create 1, 2, or 3-step challenges with custom evaluation rules,
-                        dynamic profit targets, and intelligent drawdown tracking.
-                    </p>
-                    <div className={styles.heroActions}>
-                        <Link href="/company/contact" className={styles.btnPrimary}>Build Your Rules</Link>
-                        <Link href="/solutions/prop-firm" className={styles.btnSecondary}>Explore Prop Tech</Link>
-                    </div>
+            <InnerPageHeader
+                badge="Challenge Architect"
+                badgeIcon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z" /></svg>}
+                title="Precision Challenge Management"
+                subtitle="Define your edge. Create 1, 2, or 3-step challenges with custom evaluation rules, dynamic profit targets, and intelligent drawdown tracking."
+            >
+                <div className={styles.heroActions}>
+                    <Link href="/company/contact" className={styles.btnPrimary}>Build Your Rules</Link>
+                    <Link href="/solutions/prop-firm" className={styles.btnSecondary}>Explore Prop Tech</Link>
                 </div>
-            </section>
+            </InnerPageHeader>
 
             <section className={styles.section}>
                 <div className={styles.container}>

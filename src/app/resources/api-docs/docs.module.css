@@ -682,17 +682,84 @@
         font-size: 2rem;
     }
 
+    .featureContent {
+        text-align: center;
+        margin: 0 auto;
+    }
+
     .featureContent h2 {
         font-size: 1.75rem;
     }
 
-    .ctaContent h2 {
-        font-size: 2rem;
+    .featureList {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .badge {
+        justify-content: center;
+    }
+
+    .authStep {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 2rem 1.5rem;
+    }
+
+    .warningBox {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .endpointCategory {
+        text-align: center;
+    }
+
+    .endpointCategory h3 {
+        justify-content: center;
+    }
+
+    .endpointList li {
+        justify-content: center;
+    }
+
+    .webhookInfo {
+        gap: 1rem;
+    }
+
+    .infoCard {
+        text-align: center;
+    }
+
+    .limitCard,
+    .sdkCard,
+    .resourceCard {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .headersTable {
+        text-align: center;
+    }
+
+    .headerRow {
+        flex-direction: column;
+        gap: 0.5rem;
+        padding: 1.5rem 0;
     }
 
     .statsGrid,
     .sdkGrid {
         grid-template-columns: 1fr;
+    }
+
+    .ctaContent h2 {
+        font-size: 2rem;
     }
 
     .ctaButtons {

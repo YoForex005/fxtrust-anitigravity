@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 
-
+import InnerPageHeader from '@/components/InnerPageHeader';
 import styles from '../solution-subpage.module.css';
 
 export const metadata: Metadata = {
@@ -13,25 +13,12 @@ export const metadata: Metadata = {
 export default function KYCAMLVerificationPage() {
     return (
         <main className={styles.main}>
-
-            <section className={styles.hero}>
-                <div className={styles.heroContainer}>
-                    <div className={styles.heroBadge}>
-                        <span className={styles.badgeDot}></span>
-                        <span>INSTANT VERIFICATION</span>
-                    </div>
-                    <h1 className={styles.heroTitle}>
-                        Automated <span className={styles.heroHighlight}>KYC/AML</span> Flow
-                    </h1>
-                    <p className={styles.heroSubtitle}>
-                        Onboard clients in minutes, not days. Fully integrated verification systems
-                        that handle identity, address, and AML screening automatically.
-                    </p>
-                    <div className={styles.heroActions}>
-                        <Link href="/company/contact" className={styles.btnPrimary}>Integrate KYC</Link>
-                    </div>
-                </div>
-            </section>
+            <InnerPageHeader
+                badge="Instant Verification"
+                badgeIcon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" /></svg>}
+                title="Automated KYC/AML Flow"
+                subtitle="Onboard clients in minutes, not days. Fully integrated verification systems that handle identity, address, and AML screening automatically."
+            />
 
             <section className={styles.section}>
                 <div className={styles.container}>

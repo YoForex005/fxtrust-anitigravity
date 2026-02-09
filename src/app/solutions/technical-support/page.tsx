@@ -1,7 +1,5 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
-
-
+import InnerPageHeader from '@/components/InnerPageHeader';
 import styles from '../solution-subpage.module.css';
 
 export const metadata: Metadata = {
@@ -13,25 +11,12 @@ export const metadata: Metadata = {
 export default function TechnicalSupportPage() {
     return (
         <main className={styles.main}>
-
-            <section className={styles.hero}>
-                <div className={styles.heroContainer}>
-                    <div className={styles.heroBadge}>
-                        <span className={styles.badgeDot}></span>
-                        <span>GLOBAL ASSISTANCE</span>
-                    </div>
-                    <h1 className={styles.heroTitle}>
-                        24/7 <span className={styles.heroHighlight}>Technical</span> Support
-                    </h1>
-                    <p className={styles.heroSubtitle}>
-                        Your traders never sleep, and neither should your support. Professional L1/L2
-                        helpdesk services to resolve technical issues instantly and keep clients happy.
-                    </p>
-                    <div className={styles.heroActions}>
-                        <Link href="/company/contact" className={styles.btnPrimary}>Get Support Plan</Link>
-                    </div>
-                </div>
-            </section>
+            <InnerPageHeader
+                badge="Global Assistance"
+                badgeIcon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" /></svg>}
+                title="24/7 Technical Support"
+                subtitle="Your traders never sleep, and neither should your support. Professional L1/L2 helpdesk services to resolve technical issues instantly and keep clients happy."
+            />
 
             <section className={styles.section}>
                 <div className={styles.container}>

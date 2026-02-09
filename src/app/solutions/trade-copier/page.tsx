@@ -1,7 +1,5 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
-
-
+import InnerPageHeader from '@/components/InnerPageHeader';
 import styles from '../solution-subpage.module.css';
 
 export const metadata: Metadata = {
@@ -13,25 +11,12 @@ export const metadata: Metadata = {
 export default function TradeCopierPage() {
     return (
         <main className={styles.main}>
-
-            <section className={styles.hero}>
-                <div className={styles.heroContainer}>
-                    <div className={styles.heroBadge}>
-                        <span className={styles.badgeDot}></span>
-                        <span>ULTRA-FAST REPLICATION</span>
-                    </div>
-                    <h1 className={styles.heroTitle}>
-                        Professional <span className={styles.heroHighlight}>TRADE COPIER</span>
-                    </h1>
-                    <p className={styles.heroSubtitle}>
-                        Reliable, sub-millisecond trade replication for MT5 accounts. Perfect for
-                        managing multiple accounts or providing signal services.
-                    </p>
-                    <div className={styles.heroActions}>
-                        <Link href="/company/contact" className={styles.btnPrimary}>Get Trade Copier</Link>
-                    </div>
-                </div>
-            </section>
+            <InnerPageHeader
+                badge="Ultra-Fast Replication"
+                badgeIcon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" /></svg>}
+                title="Professional Trade Copier"
+                subtitle="Reliable, sub-millisecond trade replication for MT5 accounts. Perfect for managing multiple accounts or providing signal services."
+            />
 
             <section className={styles.section}>
                 <div className={styles.container}>

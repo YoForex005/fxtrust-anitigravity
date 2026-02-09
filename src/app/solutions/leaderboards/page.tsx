@@ -1,7 +1,5 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
-import Header from '@/components/Header';
-
+import InnerPageHeader from '@/components/InnerPageHeader';
 import styles from '../solution-subpage.module.css';
 
 export const metadata: Metadata = {
@@ -13,25 +11,12 @@ export const metadata: Metadata = {
 export default function LeaderboardsPage() {
     return (
         <main className={styles.main}>
-            <Header />
-            <section className={styles.hero}>
-                <div className={styles.heroContainer}>
-                    <div className={styles.heroBadge}>
-                        <span className={styles.badgeDot}></span>
-                        <span>COMMUNITY GROWTH</span>
-                    </div>
-                    <h1 className={styles.heroTitle}>
-                        Engaging <span className={styles.heroHighlight}>LEADERBOARDS</span>
-                    </h1>
-                    <p className={styles.heroSubtitle}>
-                        Turn trading into a social experience. Drive higher engagement and community growth
-                        with real-time leaderboards and competitive trading events.
-                    </p>
-                    <div className={styles.heroActions}>
-                        <Link href="/company/contact" className={styles.btnPrimary}>Start a Competition</Link>
-                    </div>
-                </div>
-            </section>
+            <InnerPageHeader
+                badge="Community Growth"
+                badgeIcon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>}
+                title="Engaging Leaderboards"
+                subtitle="Turn trading into a social experience. Drive higher engagement and community growth with real-time leaderboards and competitive trading events."
+            />
 
             <section className={styles.section}>
                 <div className={styles.container}>

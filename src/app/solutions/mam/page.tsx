@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 
-
+import InnerPageHeader from '@/components/InnerPageHeader';
 import styles from '../solution-subpage.module.css';
 
 export const metadata: Metadata = {
@@ -13,25 +13,12 @@ export const metadata: Metadata = {
 export default function MAMPage() {
     return (
         <main className={styles.main}>
-
-            <section className={styles.hero}>
-                <div className={styles.heroContainer}>
-                    <div className={styles.heroBadge}>
-                        <span className={styles.badgeDot}></span>
-                        <span>MULTI-ACCOUNT CONTROL</span>
-                    </div>
-                    <h1 className={styles.heroTitle}>
-                        Professional <span className={styles.heroHighlight}>MAM</span> Software
-                    </h1>
-                    <p className={styles.heroSubtitle}>
-                        The ultimate tool for professional money managers. Execute trades across hundreds of
-                        sub-accounts with customizable allocation methods and zero latency.
-                    </p>
-                    <div className={styles.heroActions}>
-                        <Link href="/company/contact" className={styles.btnPrimary}>Request MAM Demo</Link>
-                    </div>
-                </div>
-            </section>
+            <InnerPageHeader
+                badge="Multi-Account Control"
+                badgeIcon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2" /><line x1="3" y1="9" x2="21" y2="9" /><line x1="9" y1="21" x2="9" y2="9" /></svg>}
+                title="Professional MAM Software"
+                subtitle="The ultimate tool for professional money managers. Execute trades across hundreds of sub-accounts with customizable allocation methods and zero latency."
+            />
 
             <section className={styles.section}>
                 <div className={styles.container}>

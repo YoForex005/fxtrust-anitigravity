@@ -1,7 +1,5 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
-
-
+import InnerPageHeader from '@/components/InnerPageHeader';
 import styles from '../solution-subpage.module.css';
 
 export const metadata: Metadata = {
@@ -13,25 +11,12 @@ export const metadata: Metadata = {
 export default function WalletSystemPage() {
     return (
         <main className={styles.main}>
-
-            <section className={styles.hero}>
-                <div className={styles.heroContainer}>
-                    <div className={styles.heroBadge}>
-                        <span className={styles.badgeDot}></span>
-                        <span>INTERNAL BANKING</span>
-                    </div>
-                    <h1 className={styles.heroTitle}>
-                        Secure <span className={styles.heroHighlight}>Wallet</span> Systems
-                    </h1>
-                    <p className={styles.heroSubtitle}>
-                        Your own internal financial hub. Give traders the ability to store funds,
-                        perform internal transfers, and manage multiple currencies in a secure vault.
-                    </p>
-                    <div className={styles.heroActions}>
-                        <Link href="/company/contact" className={styles.btnPrimary}>Setup Wallet</Link>
-                    </div>
-                </div>
-            </section>
+            <InnerPageHeader
+                badge="Internal Banking"
+                badgeIcon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 12V7H5v10h16v-2" /><path d="M16 12h4v4h-4z" /></svg>}
+                title="Secure Wallet Systems"
+                subtitle="Your own internal financial hub. Give traders the ability to store funds, perform internal transfers, and manage multiple currencies in a secure vault."
+            />
 
             <section className={styles.section}>
                 <div className={styles.container}>

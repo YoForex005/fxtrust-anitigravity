@@ -121,20 +121,9 @@ export default function Header() {
         company: 'Company',
     };
 
-    const lightSolutions = [
-        '/solutions/mt5',
-        '/solutions/crm',
-        '/solutions/liquidity',
-        '/solutions/prop-firm',
-        '/solutions/risk-management',
-        '/solutions/crypto-payments',
-        '/solutions/traders-room'
-    ];
-
     const isTransparentPage = (
         pathname === '/' ||
-        pathname === '/pricing' ||
-        (pathname?.startsWith('/solutions/') && !lightSolutions.includes(pathname))
+        pathname === '/pricing'
     ) && !scrolled;
 
     return (
@@ -155,14 +144,14 @@ export default function Header() {
 
                 <nav className={styles.nav}>
                     {/* Platform Dropdown */}
-                    <div className={`${styles.navItem} ${styles.megaMenuParent}`}>
-                        <div className={styles.navLink}>
+                    <div className={styles.navItem}>
+                        <Link href="/platform/mt5" className={styles.navLink}>
                             {nav.platform}
                             <svg className={styles.chevron} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                                 <path d="M6 9l6 6 6-6" />
                             </svg>
-                        </div>
-                        <div className={`${styles.dropdown} ${styles.megaMenu}`}>
+                        </Link>
+                        <div className={styles.dropdown}>
                             <Link href="/platform/mt5" className={styles.dropdownItem}>
                                 <div className={styles.itemContent}>
                                     <span className={styles.itemTitle}>MetaTrader 5 White Label</span>

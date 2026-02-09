@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 
-
+import InnerPageHeader from '@/components/InnerPageHeader';
 import styles from '../solution-subpage.module.css';
 
 export const metadata: Metadata = {
@@ -13,25 +13,12 @@ export const metadata: Metadata = {
 export default function AutomatedPayoutsPage() {
     return (
         <main className={styles.main}>
-
-            <section className={styles.hero}>
-                <div className={styles.heroContainer}>
-                    <div className={styles.heroBadge}>
-                        <span className={styles.badgeDot}></span>
-                        <span>SCALABLE PAYOUTS</span>
-                    </div>
-                    <h1 className={styles.heroTitle}>
-                        Streamlined <span className={styles.heroHighlight}>Payout</span> Systems
-                    </h1>
-                    <p className={styles.heroSubtitle}>
-                        Scale your Prop Firm or Brokerage without manual payout headaches.
-                        Process thousands of withdrawals across crypto and fiat channels automatically.
-                    </p>
-                    <div className={styles.heroActions}>
-                        <Link href="/company/contact" className={styles.btnPrimary}>Automate Payouts</Link>
-                    </div>
-                </div>
-            </section>
+            <InnerPageHeader
+                badge="Scalable Payouts"
+                badgeIcon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>}
+                title="Streamlined Payout Systems"
+                subtitle="Scale your Prop Firm or Brokerage without manual payout headaches. Process thousands of withdrawals across crypto and fiat channels automatically."
+            />
 
             <section className={styles.section}>
                 <div className={styles.container}>
