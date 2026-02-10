@@ -100,7 +100,7 @@ export default function LeaderboardsPage() {
             <InnerPageHeader
                 badge="Broker Infrastructure"
                 badgeIcon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" /></svg>}
-                title="Trader Leaderboards & Competitions<br />(Gamification tools)"
+                title="Trader Leaderboards & Competitions"
                 subtitle="Transform your trading platform into a high-engagement ecosystem. Use real-time leaderboards and automated competitions to spark community competition, increase trading volume, and identify top-tier talent."
                 primaryButtonText="Get Started"
                 primaryButtonHref="/company/contact"

@@ -100,7 +100,7 @@ export default function LiquidityPage() {
             <InnerPageHeader
                 badge="Broker Infrastructure"
                 badgeIcon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>}
-                title="Liquidity Bridge & Aggregation<br />(Connectivity to LPs/A-Book)"
+                title="Liquidity Bridge & Aggregation"
                 subtitle="Unlock institutional-grade execution with a robust bridge and aggregation engine. Connect your trading platform to global liquidity providers, minimize latency, and optimize your A-Book risk management."
                 primaryButtonText="Get Started"
                 primaryButtonHref="/company/contact"

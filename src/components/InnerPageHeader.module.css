@@ -177,3 +177,89 @@
     transform: translateY(-2px);
     color: #4353F2;
 }
+
+.extraDataGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+    text-align: left;
+}
+
+.extraDataItem {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(67, 83, 242, 0.1);
+    padding: 1.5rem;
+    border-radius: 16px;
+    transition: transform 0.3s ease;
+}
+
+.extraDataItem:hover {
+    transform: translateY(-2px);
+    background: rgba(255, 255, 255, 0.8);
+    border-color: rgba(67, 83, 242, 0.2);
+}
+
+.extraDataLabel {
+    font-size: 0.875rem;
+    color: #6B7280;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+.extraDataValue {
+    font-family: var(--font-inter);
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: #111827;
+    line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+    .extraDataGrid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+}
+
+.benefitsRow {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.benefitItem {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #4B5563;
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.benefitIcon {
+    color: #4353F2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.benefitIcon svg {
+    width: 20px;
+    height: 20px;
+}
+
+@media (max-width: 640px) {
+    .benefitsRow {
+        flex-direction: column;
+        gap: 1rem;
+        align-items: center;
+    }
+}

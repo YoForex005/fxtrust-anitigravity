@@ -99,19 +99,27 @@ export default function TradersRoomPage() {
             <InnerPageHeader
                 badge="Broker Infrastructure"
                 badgeIcon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" /></svg>}
-                title="Trader’s Room / Client Portal (User dashboard for deposits & profile)"
+                title="Trader’s Room / Client Portal"
                 subtitle="Empower your traders with a seamless, self-service dashboard designed to drive deposits and simplify account management. Reduce manual support and increase client lifetime value."
                 primaryButtonText="Get Started"
                 primaryButtonHref="/company/contact"
                 secondaryButtonText="Talk to an Expert"
                 secondaryButtonHref="/company/contact"
-            >
-                <div>
-                    <p>Instant Onboarding: Automated KYC and account opening workflows.</p>
-                    <p>Integrated Payments: Support for 50+ PSPs and crypto gateways.</p>
-                    <p>Fully Branded: White-label UI that matches your brokerage identity.</p>
-                </div>
-            </InnerPageHeader>
+                benefits={[
+                    {
+                        icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><polyline points="16 11 18 13 22 9" /></svg>,
+                        text: "Instant Onboarding"
+                    },
+                    {
+                        icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2" /><line x1="1" y1="10" x2="23" y2="10" /></svg>,
+                        text: "50+ Integrated PSPs"
+                    },
+                    {
+                        icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>,
+                        text: "Fully White-Label"
+                    }
+                ]}
+            />
             <ContentPageLayout
                 tableOfContents={tableOfContents}
                 relatedLinks={relatedLinks}
@@ -126,9 +134,9 @@ export default function TradersRoomPage() {
                 contactEmail="support@domain.com"
             >
                 <div id="solution">
-                    <h1>Trader’s Room / Client Portal Solution</h1>
+                    <h1>Trader&apos;s Room / Client Portal Solution</h1>
                     <p>
-                        The Trader’s Room (or Client Cabinet) is the central nervous system of your client’s relationship with your brokerage. It is a secure, web-based portal where traders manage their financial operations, personal profiles, and trading accounts without requiring direct assistance from your support desk. Designed for fintech founders and brokers, this solution bridges the gap between your marketing website and the trading platform.
+                        The Trader&apos;s Room (or Client Cabinet) is the central nervous system of your client&apos;s relationship with your brokerage. It is a secure, web-based portal where traders manage their financial operations, personal profiles, and trading accounts without requiring direct assistance from your support desk. Designed for fintech founders and brokers, this solution bridges the gap between your marketing website and the trading platform.
                     </p>
                     <p>
                         Our portal is optimized for high conversion and retention. By providing a frictionless environment for depositing funds, verifying identity, and accessing educational resources, you ensure that the barrier to entry for new traders is as low as possible. It serves as the primary touchpoint for everything from initial registration to advanced IB management.
@@ -137,7 +145,7 @@ export default function TradersRoomPage() {
                         <li><strong>Streamlined Financial Operations:</strong> Centralized hub for managing deposits, withdrawals, and internal transfers across multiple trading accounts.</li>
                         <li><strong>Comprehensive Profile Management:</strong> Secure storage for KYC documents, contact preferences, and security settings like Two-Factor Authentication (2FA).</li>
                         <li><strong>Direct Trading Integration:</strong> Seamless sync with MT4, MT5, and other platforms to view equity, margin, and balance in real-time.</li>
-                        <li><strong>Marketing & Engagement Tools:</strong> Targeted banners, notifications, and bonus management systems to drive active trading behavior.</li>
+                        <li><strong>Marketing &amp; Engagement Tools:</strong> Targeted banners, notifications, and bonus management systems to drive active trading behavior.</li>
                     </ul>
                 </div>
 
@@ -167,7 +175,7 @@ export default function TradersRoomPage() {
 
                 <h2 id="why">Why Trader’s Room?</h2>
                 <ul>
-                    <li><strong>Optimized UX for Conversion:</strong> A clean, intuitive interface reduces "churn" during the registration and deposit process.</li>
+                    <li><strong>Optimized UX for Conversion:</strong> A clean, intuitive interface reduces &quot;churn&quot; during the registration and deposit process.</li>
                     <li><strong>Automated Compliance:</strong> Integrated KYC/AML workflows allow for rapid document verification and account approval.</li>
                     <li><strong>Reduced Operational Costs:</strong> Self-service tools for password resets and fund transfers significantly lower support ticket volume.</li>
                     <li><strong>Security & Trust:</strong> Bank-grade encryption and 2FA options provide clients with the peace of mind required to fund their accounts.</li>
@@ -178,7 +186,7 @@ export default function TradersRoomPage() {
 
                 <h2 id="branding">White Label Branding</h2>
                 <p>
-                    Your Trader’s Room should feel like a natural extension of your website. We offer deep customization options to ensure your brand remains front and center throughout the user journey.
+                    Your Trader&apos;s Room should feel like a natural extension of your website. We offer deep customization options to ensure your brand remains front and center throughout the user journey.
                 </p>
 
                 <div className="featureGrid">
@@ -230,7 +238,7 @@ export default function TradersRoomPage() {
 
                 <h2 id="features">Platform Features</h2>
                 <p>
-                    Our Trader’s Room is packed with features designed to enhance the client experience and simplify brokerage management.
+                    Our Trader&apos;s Room is packed with features designed to enhance the client experience and simplify brokerage management.
                 </p>
 
                 <h3>Account Management</h3>
@@ -258,9 +266,9 @@ export default function TradersRoomPage() {
                     <li>Compliance notifications for expiring documents or KYC requirements.</li>
                 </ul>
 
-                <h2 id="api">API & Integration</h2>
+                <h2 id="api">API &amp; Integration</h2>
                 <p>
-                    The Trader’s Room is designed to be highly extensible, allowing you to connect with the third-party tools you already use.
+                    The Trader&apos;s Room is designed to be highly extensible, allowing you to connect with the third-party tools you already use.
                 </p>
 
                 <h3>Manager / Admin API</h3>
@@ -295,9 +303,9 @@ export default function TradersRoomPage() {
                     Our pricing is structured to be transparent and scalable, catering to both startup brokers and established institutions.
                 </p>
 
-                <h3>What’s Included</h3>
+                <h3>What&apos;s Included</h3>
                 <ul>
-                    <li>Fully branded Trader’s Room web portal.</li>
+                    <li>Fully branded Trader&apos;s Room web portal.</li>
                     <li>Integration with MT4/MT5 servers.</li>
                     <li>Standard KYC module and profile management.</li>
                     <li>Core payment gateway integrations.</li>

@@ -98,22 +98,21 @@ export default function CRMPage() {
                 badgeIcon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>}
                 title="Forex CRM"
                 subtitle="Centralize your brokerage operations with an enterprise-grade CRM designed for high-volume data and rapid scaling. Convert more leads and automate compliance workflows from a single, secure interface."
-            >
-                <div style={{ marginTop: '20px', display: 'flex', gap: '10px', flexWrap: 'wrap', justifyContent: 'center' }}>
-                    <span style={{ display: 'flex', alignItems: 'center', gap: '5px', fontSize: '0.9rem', color: '#4B5563', backgroundColor: 'rgba(255,255,255,0.5)', padding: '4px 12px', borderRadius: '20px', border: '1px solid rgba(0,0,0,0.05)' }}>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" strokeWidth="2"><polyline points="20 6 9 17 4 12" /></svg>
-                        360° Lead Management
-                    </span>
-                    <span style={{ display: 'flex', alignItems: 'center', gap: '5px', fontSize: '0.9rem', color: '#4B5563', backgroundColor: 'rgba(255,255,255,0.5)', padding: '4px 12px', borderRadius: '20px', border: '1px solid rgba(0,0,0,0.05)' }}>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" strokeWidth="2"><polyline points="20 6 9 17 4 12" /></svg>
-                        Automated Compliance
-                    </span>
-                    <span style={{ display: 'flex', alignItems: 'center', gap: '5px', fontSize: '0.9rem', color: '#4B5563', backgroundColor: 'rgba(255,255,255,0.5)', padding: '4px 12px', borderRadius: '20px', border: '1px solid rgba(0,0,0,0.05)' }}>
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10B981" strokeWidth="2"><polyline points="20 6 9 17 4 12" /></svg>
-                        Seamless Integration
-                    </span>
-                </div>
-            </InnerPageHeader>
+                benefits={[
+                    {
+                        icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>,
+                        text: "360° Lead Management"
+                    },
+                    {
+                        icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>,
+                        text: "Automated Compliance"
+                    },
+                    {
+                        icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="16 3 21 3 21 8"></polyline><line x1="4" y1="20" x2="21" y2="3"></line><polyline points="21 16 21 21 16 21"></polyline><line x1="15" y1="15" x2="21" y2="21"></line><line x1="4" y1="4" x2="9" y2="9"></line></svg>,
+                        text: "Seamless Integration"
+                    }
+                ]}
+            />
 
             <ContentPageLayout
                 tableOfContents={tableOfContents}
@@ -202,7 +201,7 @@ export default function CRMPage() {
                     <li><strong>Staff Portal Branding:</strong> Customize the administrative dashboard with your company colors and logo for a professional internal workspace.</li>
                     <li><strong>Custom Reporting Templates:</strong> Generate branded PDF reports and statements for your clients and regulatory bodies.</li>
                     <li><strong>Integrated Communication:</strong> White-label all system-generated messages, including automated emails and SMS notifications for lead status changes.</li>
-                    <li><strong>Custom Field Management:</strong> Tailor the CRM database to collect the specific data points required for your region&#39;s compliance and sales strategy.</li>
+                    <li><strong>Custom Field Management:</strong> Tailor the CRM database to collect the specific data points required for your region&apos;s compliance and sales strategy.</li>
                 </ul>
 
                 <h2 id="infrastructure">Server Hosting &amp; Infrastructure</h2>
@@ -288,7 +287,7 @@ export default function CRMPage() {
                 <h3>Optional Add-Ons</h3>
                 <ul>
                     <li>Advanced Multi-Tier IB/Affiliate Module.</li>
-                    <li>White-label Trader&#39;s Room (Client Portal).</li>
+                    <li>White-label Trader&apos;s Room (Client Portal).</li>
                     <li>Custom VoIP/Call Center integration.</li>
                     <li>Specialized regulatory reporting modules.</li>
                 </ul>

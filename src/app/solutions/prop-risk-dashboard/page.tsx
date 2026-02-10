@@ -100,7 +100,7 @@ export default function PropRiskDashboardPage() {
             <InnerPageHeader
                 badge="Broker Infrastructure"
                 badgeIcon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" /></svg>}
-                title="Prop Risk Dashboard<br />(Monitoring for HFT, news trading, & fraud)"
+                title="Prop Risk Dashboard"
                 subtitle="Shield your firm’s liquidity and reputation with real-time behavioral surveillance. Identify prohibited strategies, detect toxic HFT flow, and automate news-trading enforcement from a single, centralized risk command center."
                 primaryButtonText="Get Started"
                 primaryButtonHref="/company/contact"

@@ -100,7 +100,7 @@ export default function EvaluationEnginePage() {
             <InnerPageHeader
                 badge="Prop Tech Infrastructure"
                 badgeIcon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>}
-                title="Automated Evaluation Engine (Auto-transition from demo to funded)"
+                title="Automated Evaluation Engine"
                 subtitle="Eliminate manual bottlenecks and reward talent instantly. Our engine monitors every trade in real-time, automatically transitioning successful traders from evaluation phases to funded live environments the moment objectives are met."
                 primaryButtonText="Get Started"
                 primaryButtonHref="/company/contact"

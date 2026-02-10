@@ -12,6 +12,16 @@ interface InnerPageHeaderProps {
     primaryButtonHref?: string;
     secondaryButtonText?: string;
     secondaryButtonHref?: string;
+    extraData?: {
+        items: Array<{
+            label: string;
+            value: string;
+        }>;
+    };
+    benefits?: Array<{
+        icon: ReactNode;
+        text: string;
+    }>;
 }
 
 export default function InnerPageHeader({
@@ -23,7 +33,9 @@ export default function InnerPageHeader({
     primaryButtonText,
     primaryButtonHref,
     secondaryButtonText,
-    secondaryButtonHref
+    secondaryButtonHref,
+    extraData,
+    benefits
 }: InnerPageHeaderProps) {
     return (
         <header className={styles.header}>
@@ -36,7 +48,7 @@ export default function InnerPageHeader({
                 <h1 className={styles.title} dangerouslySetInnerHTML={{ __html: title }}></h1>
                 <p className={styles.subtitle} dangerouslySetInnerHTML={{ __html: subtitle }}></p>
 
-                {(children || primaryButtonText || secondaryButtonText) && (
+                {(primaryButtonText || secondaryButtonText) && (
                     <div className={styles.actions}>
                         {primaryButtonText && primaryButtonHref && (
                             <Link href={primaryButtonHref} className={styles.primaryBtn}>
@@ -48,9 +60,32 @@ export default function InnerPageHeader({
                                 {secondaryButtonText}
                             </Link>
                         )}
-                        {children}
                     </div>
                 )}
+
+                {extraData && extraData.items.length > 0 && (
+                    <div className={styles.extraDataGrid}>
+                        {extraData.items.map((item, index) => (
+                            <div key={index} className={styles.extraDataItem}>
+                                <div className={styles.extraDataLabel}>{item.label}</div>
+                                <div className={styles.extraDataValue}>{item.value}</div>
+                            </div>
+                        ))}
+                    </div>
+                )}
+
+                {benefits && benefits.length > 0 && (
+                    <div className={styles.benefitsRow}>
+                        {benefits.map((benefit, index) => (
+                            <div key={index} className={styles.benefitItem}>
+                                <span className={styles.benefitIcon}>{benefit.icon}</span>
+                                <span>{benefit.text}</span>
+                            </div>
+                        ))}
+                    </div>
+                )}
+
+                {children}
             </div>
         </header>
     );

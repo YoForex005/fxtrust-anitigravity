@@ -100,7 +100,7 @@ export default function PropTraderDashboardPage() {
             <InnerPageHeader
                 badge="White Label Solution"
                 badgeIcon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" /></svg>}
-                title="Prop Dashboard for Traders<br />(Progress trackers & analytics)"
+                title="Prop Dashboard for Traders"
                 subtitle="Give your traders the professional edge they need to succeed. Our high-performance dashboard provides crystal-clear visibility into evaluation objectives, real-time drawdown tracking, and deep behavioral analytics to keep traders informed and engaged."
                 primaryButtonText="Get Started"
                 primaryButtonHref="/company/contact"
