@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import InnerPageHeader from '@/components/InnerPageHeader';
 import ContentPageLayout from '@/components/ContentPageLayout';
 import FAQSchema from '@/components/seo/FAQSchema';
+import FAQAccordion from '@/components/FAQAccordion';
 
 export const metadata: Metadata = {
     title: 'Forex CRM | Enterprise Back-Office & KYC Management',
@@ -53,7 +54,7 @@ export default function CRMPage() {
         'MT4/MT5 Manager Sync',
     ];
 
-    const ctaTitle = "Launch Your Forex CRM in [X Days]";
+    const ctaTitle = "Launch Your Forex CRM in 10 Days";
     const ctaText = "Take control of your sales funnel and back-office with our turnkey CRM solution.";
     const ctaButtonText = "Get Started";
 
@@ -66,7 +67,7 @@ export default function CRMPage() {
     const faqs = [
         {
             question: 'How long does it take to deploy the Forex CRM?',
-            answer: 'A standard setup typically takes [7 to 10] business days, assuming your trading server (MT4/MT5) is already active. This includes the configuration of basic staff roles and standard payment gateways.',
+            answer: 'A standard setup typically takes 7 to 10 business days, assuming your trading server (MT4/MT5) is already active. This includes the configuration of basic staff roles and standard payment gateways.',
         },
         {
             question: 'Can we customize the KYC requirements per country?',
@@ -78,7 +79,7 @@ export default function CRMPage() {
         },
         {
             question: 'How many trading accounts can the CRM handle?',
-            answer: 'Our enterprise infrastructure is designed to scale from hundreds to [hundreds of thousands] of accounts without performance degradation, utilizing optimized database structures.',
+            answer: 'Our enterprise infrastructure is designed to scale from hundreds to over 100,000 accounts without performance degradation, utilizing optimized database structures.',
         },
         {
             question: 'What are the minimum requirements to start?',
@@ -148,7 +149,7 @@ export default function CRMPage() {
                         <span>Uptime SLA ensuring your sales team never loses a lead.</span>
                     </div>
                     <div className="statBox">
-                        <strong>[X]</strong>
+                        <strong>7-10</strong>
                         <span>Days average setup for full CRM and server integration.</span>
                     </div>
                     <div className="statBox">
@@ -210,21 +211,21 @@ export default function CRMPage() {
                 </p>
                 <h3>Data Center Locations</h3>
                 <ul>
-                    <li><strong>[London, UK]</strong> - Tier-3 Secure Facility</li>
-                    <li><strong>[Singapore]</strong> - APAC Connectivity Hub</li>
-                    <li><strong>[New York, USA]</strong> - Financial Infrastructure Center</li>
-                    <li><strong>[Frankfurt, Germany]</strong> - Data Sovereignty Optimized</li>
+                    <li><strong>London, UK</strong> - Tier-3 Secure Facility</li>
+                    <li><strong>Singapore</strong> - APAC Connectivity Hub</li>
+                    <li><strong>New York, USA</strong> - Financial Infrastructure Center</li>
+                    <li><strong>Frankfurt, Germany</strong> - Data Sovereignty Optimized</li>
                 </ul>
                 <h3>Infrastructure Specifications</h3>
                 <ul>
                     <li>AES-256 data encryption at rest and in transit.</li>
-                    <li>Daily automated off-site backups with [X] day retention.</li>
+                    <li>Daily automated off-site backups with 30-day retention.</li>
                     <li>Load-balanced web servers for zero-lag dashboard performance.</li>
                     <li>Advanced DDoS protection and Web Application Firewall (WAF).</li>
                     <li>Dedicated IP addresses for secure administrative access.</li>
                 </ul>
                 <div className="infoBox">
-                    <p><strong>SLA/Uptime Statement:</strong> Our infrastructure maintains a [99.9%] availability rate. We employ proactive monitoring and automated failover systems to ensure your back-office is always accessible.</p>
+                    <p><strong>SLA/Uptime Statement:</strong> Our infrastructure maintains a 99.9% availability rate. We employ proactive monitoring and automated failover systems to ensure your back-office is always accessible.</p>
                 </div>
 
                 <h2 id="features">Platform Features</h2>
@@ -263,8 +264,8 @@ export default function CRMPage() {
                 <h3>Gateway &amp; Connectivity API</h3>
                 <ul>
                     <li><strong>Trading Servers:</strong> Native connectors for MT4, MT5, and cTrader.</li>
-                    <li><strong>Payment Gateways:</strong> Support for [50+] global and local PSPs.</li>
-                    <li><strong>KYC Providers:</strong> Integrated APIs for [Sumsub, Onfido, etc.].</li>
+                    <li><strong>Payment Gateways:</strong> Support for 50+ global and local PSPs.</li>
+                    <li><strong>KYC Providers:</strong> Integrated APIs for Sumsub, Onfido, and more.</li>
                 </ul>
                 <h3>Web API / SDK</h3>
                 <p>
@@ -279,8 +280,8 @@ export default function CRMPage() {
                 <ul>
                     <li>Full CRM administrative dashboard access.</li>
                     <li>Basic KYC module and document storage.</li>
-                    <li>Connectivity for [X] trading server(s).</li>
-                    <li>[X] Staff accounts with role-based access.</li>
+                    <li>Connectivity for active trading server(s).</li>
+                    <li>Unlimited Staff accounts with role-based access.</li>
                     <li>Integration with standard payment gateways.</li>
                     <li>Monthly security updates and bug fixes.</li>
                 </ul>
@@ -297,18 +298,11 @@ export default function CRMPage() {
                     <li><strong>Server Connectivity (Days 3-4):</strong> Linking the CRM to your MT4/MT5 environment.</li>
                     <li><strong>Branding &amp; Styling (Days 5-6):</strong> Applying your logo and internal color scheme.</li>
                     <li><strong>UAT &amp; Training (Days 7-9):</strong> Staff training and workflow testing.</li>
-                    <li><strong>Go-Live (Day [X]):</strong> Production deployment and lead ingestion.</li>
+                    <li><strong>Go-Live (Day 10):</strong> Production deployment and lead ingestion.</li>
                 </ol>
 
                 <h2 id="faq">Frequently Asked Questions</h2>
-                <div className="faqGrid">
-                    {faqs.map((faq, index) => (
-                        <div key={index} className="faqItem">
-                            <h4>{faq.question}</h4>
-                            <p>{faq.answer}</p>
-                        </div>
-                    ))}
-                </div>
+                <FAQAccordion faqs={faqs} />
             </ContentPageLayout>
         </main>
     );

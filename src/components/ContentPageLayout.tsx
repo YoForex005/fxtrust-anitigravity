@@ -147,7 +147,51 @@ export default function ContentPageLayout({
             {/* Main Content */}
             <main className={styles.mainContent}>
                 <article className={styles.article}>
-                    {children}
+                    {(() => {
+                        const groups: React.ReactNode[] = [];
+                        let currentGroup: React.ReactNode[] = [];
+
+                        const flushGroup = () => {
+                            if (currentGroup.length > 0) {
+                                groups.push(
+                                    <div key={`group-${groups.length}`} className={styles.sectionCard}>
+                                        {currentGroup}
+                                    </div>
+                                );
+                                currentGroup = [];
+                            }
+                        };
+
+                        React.Children.forEach(children, (child) => {
+                            if (!React.isValidElement(child)) {
+                                if (child !== null && child !== undefined) {
+                                    currentGroup.push(child);
+                                }
+                                return;
+                            }
+
+                            const element = child as React.ReactElement<any>;
+                            // A new section starts if:
+                            // 1. It's an H1 or H2
+                            // 2. It's a div or section with an ID (likely an anchor target)
+                            const isNewSection =
+                                element.type === 'h1' ||
+                                element.type === 'h2' ||
+                                (typeof element.type === 'string' &&
+                                    (element.type === 'div' || element.type === 'section') &&
+                                    element.props.id);
+
+                            if (isNewSection && currentGroup.length > 0) {
+                                flushGroup();
+                            }
+
+                            currentGroup.push(child);
+                        });
+
+                        flushGroup();
+
+                        return groups;
+                    })()}
                 </article>
             </main>
 

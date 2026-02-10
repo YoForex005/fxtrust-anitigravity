@@ -245,9 +245,26 @@
     margin: 0 auto;
 }
 
+/* Section Card Style */
+.sectionCard {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 20px;
+    padding: 3rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02), 0 8px 32px -4px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    margin-bottom: 2rem;
+}
+
+.sectionCard:hover {
+    border-color: rgba(212, 175, 55, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02), 0 12px 40px -4px rgba(0, 0, 0, 0.08);
+}
+
 /* Introduction Section */
 .introSection {
-    padding: 6rem 0;
+    padding: 3rem 0;
     background: white;
 }
 
@@ -380,7 +397,7 @@
 
 /* Package Section */
 .packageSection {
-    padding: 6rem 0;
+    padding: 3rem 0;
     background: var(--color-gray-light);
 }
 
@@ -462,7 +479,7 @@
 
 /* Technology Section */
 .techSection {
-    padding: 6rem 0;
+    padding: 3rem 0;
     background: white;
 }
 
@@ -583,7 +600,7 @@
 
 /* Process Section */
 .processSection {
-    padding: 6rem 0;
+    padding: 3rem 0;
     background: var(--color-gray-light);
 }
 
@@ -658,7 +675,7 @@
 
 /* Additional Section */
 .additionalSection {
-    padding: 6rem 0;
+    padding: 3rem 0;
     background: white;
 }
 
@@ -704,7 +721,7 @@
 
 /* FAQ Section */
 .faqSection {
-    padding: 6rem 0;
+    padding: 3rem 0;
     background: var(--color-gray-light);
 }
 

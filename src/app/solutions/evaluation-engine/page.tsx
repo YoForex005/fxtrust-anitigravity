@@ -3,6 +3,7 @@ import { Metadata } from 'next';
 import InnerPageHeader from '@/components/InnerPageHeader';
 import ContentPageLayout from '@/components/ContentPageLayout';
 import FAQSchema from '@/components/seo/FAQSchema';
+import FAQAccordion from '@/components/FAQAccordion';
 
 export const metadata: Metadata = {
     title: 'Automated Evaluation Engine | Instant Prop Firm Transitions',

@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import InnerPageHeader from '@/components/InnerPageHeader';
 import ContentPageLayout from '@/components/ContentPageLayout';
 import FAQSchema from '@/components/seo/FAQSchema';
+import FAQAccordion from '@/components/FAQAccordion';
 
 export const metadata: Metadata = {
     title: 'Trader’s Room & Client Portal | Secure Broker User Dashboard',
@@ -124,7 +125,7 @@ export default function TradersRoomPage() {
                 tableOfContents={tableOfContents}
                 relatedLinks={relatedLinks}
                 quickFacts={quickFacts}
-                ctaTitle="Launch Your Trader’s Room in X Days"
+                ctaTitle="Launch Your Trader’s Room in 10 Days"
                 ctaText="Deploy a professional, high-converting client cabinet with full CRM sync."
                 ctaButtonText="Get Started"
                 ctaButtonHref="/company/contact"
@@ -160,7 +161,7 @@ export default function TradersRoomPage() {
                         <span>Uptime SLA ensuring clients can deposit funds at any time.</span>
                     </div>
                     <div className="statBox">
-                        <strong>X Days</strong>
+                        <strong>7-10 Days</strong>
                         <span>Average setup for standard branded portal deployment.</span>
                     </div>
                     <div className="statBox">
@@ -327,18 +328,11 @@ export default function TradersRoomPage() {
                     <li><strong>Infrastructure Setup (Days 3-5):</strong> Cloud environment and database provisioning.</li>
                     <li><strong>Platform Integration (Days 5-8):</strong> Connection to trading servers and PSPs.</li>
                     <li><strong>Testing & QA (Days 8-10):</strong> Security checks and end-to-end transaction testing.</li>
-                    <li><strong>Go-Live (Day X):</strong> Production launch and staff training.</li>
+                    <li><strong>Go-Live (Day 10):</strong> Production launch and staff training.</li>
                 </ol>
 
                 <h2 id="faq">Frequently Asked Questions</h2>
-                <div className="faqGrid">
-                    {faqs.map((faq, index) => (
-                        <div key={index} className="faqItem">
-                            <h4>{faq.question}</h4>
-                            <p>{faq.answer}</p>
-                        </div>
-                    ))}
-                </div>
+                <FAQAccordion faqs={faqs} />
             </ContentPageLayout>
         </main>
     );

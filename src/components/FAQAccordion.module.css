@@ -1,0 +1,106 @@
+.faqContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.faqCard {
+    background: white;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02), 0 8px 24px -4px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.faqCard:hover {
+    border-color: rgba(30, 64, 175, 0.15);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02), 0 12px 40px -4px rgba(0, 0, 0, 0.08);
+}
+
+.faqCard.active {
+    border-color: #1E40AF;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.02), 0 20px 48px -8px rgba(30, 64, 175, 0.12);
+}
+
+.faqQuestion {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    text-align: left;
+    gap: 1rem;
+    transition: background 0.2s ease;
+}
+
+.faqQuestion h4 {
+    margin: 0;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #0F172A;
+    line-height: 1.4;
+    flex: 1;
+}
+
+.iconWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: #F8FAFC;
+    border-radius: 50%;
+    color: #1E40AF;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.faqCard.active .iconWrapper {
+    background: #1E40AF;
+    color: white;
+    transform: rotate(45deg);
+}
+
+.faqAnswerWrapper {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    opacity: 0;
+}
+
+.faqCard.active .faqAnswerWrapper {
+    max-height: 500px;
+    /* Arbitrary large value */
+    opacity: 1;
+}
+
+.faqAnswer {
+    padding: 0 2rem 1.5rem;
+}
+
+.faqAnswer p {
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #475569;
+}
+
+@media (max-width: 768px) {
+    .faqQuestion {
+        padding: 1.25rem 1.5rem;
+    }
+
+    .faqAnswer {
+        padding: 0 1.5rem 1.25rem;
+    }
+
+    .faqQuestion h4 {
+        font-size: 1rem;
+    }
+}

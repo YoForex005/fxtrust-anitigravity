@@ -3,6 +3,7 @@ import { Metadata } from 'next';
 import InnerPageHeader from '@/components/InnerPageHeader';
 import ContentPageLayout from '@/components/ContentPageLayout';
 import FAQSchema from '@/components/seo/FAQSchema';
+import FAQAccordion from '@/components/FAQAccordion';
 
 export const metadata: Metadata = {
     title: 'Crypto Payment Gateway | Instant BTC, USDT, ETH Deposits',
@@ -348,14 +349,7 @@ export default function CryptoGatewayPage() {
 
                 <div id="faq">
                     <h2>Frequently Asked Questions</h2>
-                    <div className="faqGrid">
-                        {faqs.map((faq, index) => (
-                            <div key={index} className="faqItem">
-                                <h4>{faq.question}</h4>
-                                <p>{faq.answer}</p>
-                            </div>
-                        ))}
-                    </div>
+                    <FAQAccordion faqs={faqs} />
                 </div>
             </ContentPageLayout>
         </main>

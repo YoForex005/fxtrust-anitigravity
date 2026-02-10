@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import InnerPageHeader from '@/components/InnerPageHeader';
 import ContentPageLayout from '@/components/ContentPageLayout';
 import FAQSchema from '@/components/seo/FAQSchema';
+import FAQAccordion from '@/components/FAQAccordion';
 
 export const metadata: Metadata = {
     title: 'MetaTrader 5 (MT5) White Label License | Branded Broker Platform',
@@ -97,18 +98,32 @@ export default function MT5Page() {
             <InnerPageHeader
                 badge="White Label Broker Solution"
                 badgeIcon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>}
-                title="MetaTrader 5 (MT5) White Label License"
+                title="MetaTrader 5 White Label License"
                 subtitle="Scale your brokerage with a fully branded, high-performance MT5 environment. Gain complete control over your trading ecosystem without the overhead of a full server license."
                 primaryButtonText="Get Started"
                 primaryButtonHref="/company/contact"
                 secondaryButtonText="Talk to an Expert"
                 secondaryButtonHref="/company/contact"
+                benefits={[
+                    {
+                        icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>,
+                        text: "Institutional Grade"
+                    },
+                    {
+                        icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" /></svg>,
+                        text: "Multi-Asset Ready"
+                    },
+                    {
+                        icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>,
+                        text: "7-14 Day Setup"
+                    }
+                ]}
             />
             <ContentPageLayout
                 tableOfContents={tableOfContents}
                 relatedLinks={relatedLinks}
                 quickFacts={quickFacts}
-                ctaTitle="Launch Your MT5 Brokerage in X Days"
+                ctaTitle="Launch Your MT5 Brokerage in 14 Days"
                 ctaText="Get a turnkey, branded trading environment designed for modern brokers."
                 ctaButtonText="Get Started"
                 ctaButtonHref="/company/contact"
@@ -145,7 +160,7 @@ export default function MT5Page() {
                         <span>Uptime SLA</span>
                     </div>
                     <div className="statBox">
-                        <strong>X Days</strong>
+                        <strong>7-14 Days</strong>
                         <span>Setup Time</span>
                     </div>
                     <div className="statBox">
@@ -327,18 +342,11 @@ export default function MT5Page() {
                     <li><strong>Infrastructure Provisioning (Days 3-5):</strong> Server setup and security configuration.</li>
                     <li><strong>Branding & Customization (Days 5-7):</strong> Terminal branding and group settings.</li>
                     <li><strong>Integration & Testing (Days 7-10):</strong> API connections and UAT (User Acceptance Testing).</li>
-                    <li><strong>Go-Live & Support (Day [X]):</strong> Final launch and hand-over to your team.</li>
+                    <li><strong>Go-Live & Support (Day 14):</strong> Final launch and hand-over to your team.</li>
                 </ol>
 
                 <h2 id="faq">Frequently Asked Questions</h2>
-                <div className="faqGrid">
-                    {faqs.map((faq, index) => (
-                        <div key={index} className="faqItem">
-                            <h4>{faq.question}</h4>
-                            <p>{faq.answer}</p>
-                        </div>
-                    ))}
-                </div>
+                <FAQAccordion faqs={faqs} />
             </ContentPageLayout>
         </main>
     );
