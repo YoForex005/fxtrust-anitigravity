@@ -187,15 +187,57 @@ export default function CryptoGatewayPage() {
 
                 <div id="why">
                     <h2>Why Crypto Payment Gateway?</h2>
-                    <ul>
-                        <li><strong>Zero Chargeback Risk:</strong> Unlike credit card payments, blockchain transactions are final and irreversible, protecting your brokerage from fraud.</li>
-                        <li><strong>Ultra-Low Fees:</strong> Bypass the expensive 3-5% fees charged by traditional processors and card networks.</li>
-                        <li><strong>Instant Global Reach:</strong> Accept deposits from clients in regions where traditional banking is restricted or inefficient.</li>
-                        <li><strong>Stablecoin Efficiency:</strong> Utilize USDT and USDC to provide the stability of fiat with the speed and transparency of the blockchain.</li>
-                        <li><strong>Automated Reconciliation:</strong> Every transaction is logged and synced with your CRM, eliminating manual accounting errors.</li>
-                        <li><strong>Enhanced Security:</strong> Multi-signature wallets and cold storage protocols ensure your company and client funds are always protected.</li>
-                        <li><strong>Regulatory Compliance:</strong> Built-in tools for KYT (Know Your Transaction) to flag and block high-risk or sanctioned wallet addresses.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><line x1="4.93" y1="4.93" x2="19.07" y2="19.07" /></svg>
+                                No Chargebacks
+                            </h4>
+                            <p>Zero Chargeback Risk: Unlike credit card payments, blockchain transactions are final and irreversible, protecting your brokerage from fraud.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
+                                Low Fees
+                            </h4>
+                            <p>Ultra-Low Fees: Bypass the expensive 3-5% fees charged by traditional processors and card networks.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M2 12h20" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                Global Reach
+                            </h4>
+                            <p>Instant Global Reach: Accept deposits from clients in regions where traditional banking is restricted or inefficient.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" /></svg>
+                                Stablecoins
+                            </h4>
+                            <p>Stablecoin Efficiency: Utilize USDT and USDC to provide the stability of fiat with the speed and transparency of the blockchain.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>
+                                Automation
+                            </h4>
+                            <p>Automated Reconciliation: Every transaction is logged and synced with your CRM, eliminating manual accounting errors.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>
+                                Security
+                            </h4>
+                            <p>Enhanced Security: Multi-signature wallets and cold storage protocols ensure your company and client funds are always protected.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                                Compliance
+                            </h4>
+                            <p>Regulatory Compliance: Built-in tools for KYT (Know Your Transaction) to flag and block high-risk or sanctioned wallet addresses.</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="branding">
@@ -241,21 +283,75 @@ export default function CryptoGatewayPage() {
                         Processing blockchain transactions requires a highly secure and distributed server environment to ensure data integrity and rapid confirmation.
                     </p>
                     <h3>Data Center Locations</h3>
-                    <ul>
-                        <li><strong>London, UK</strong> - Tier-4 Financial Facility</li>
-                        <li><strong>New York, USA</strong> - Equinix NY4</li>
-                        <li><strong>Singapore</strong> - SG1 Regional Hub</li>
-                        <li><strong>Frankfurt, Germany</strong> - Data Sovereignty Optimized</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                London, UK
+                            </h4>
+                            <p>Tier-4 Financial Facility</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                New York, USA
+                            </h4>
+                            <p>Equinix NY4</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                Singapore
+                            </h4>
+                            <p>SG1 Regional Hub</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                Frankfurt, Germany
+                            </h4>
+                            <p>Data Sovereignty Optimized</p>
+                        </div>
+                    </div>
 
                     <h3>Infrastructure Specifications</h3>
-                    <ul>
-                        <li><strong>HSM (Hardware Security Modules):</strong> Enterprise-grade security for private key management.</li>
-                        <li><strong>Multi-Sig Architecture:</strong> Requires multiple approvals for large-scale payouts.</li>
-                        <li><strong>DDoS & Web Application Firewall:</strong> Constant protection against network-level attacks.</li>
-                        <li><strong>Distributed Nodes:</strong> Direct connectivity to Bitcoin, Ethereum, and Tron full nodes for instant data.</li>
-                        <li><strong>Cold Storage Protocol:</strong> Majority of assets held offline in air-gapped environments.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>
+                                HSM
+                            </h4>
+                            <p>HSM (Hardware Security Modules): Enterprise-grade security for private key management.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                                Multi-Sig
+                            </h4>
+                            <p>Multi-Sig Architecture: Requires multiple approvals for large-scale payouts.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                                DDoS
+                            </h4>
+                            <p>DDoS & Web Application Firewall: Constant protection against network-level attacks.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><line x1="2" y1="12" x2="22" y2="12" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                Nodes
+                            </h4>
+                            <p>Distributed Nodes: Direct connectivity to Bitcoin, Ethereum, and Tron full nodes for instant data.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2" /><rect x="2" y="14" width="20" height="8" rx="2" ry="2" /><line x1="6" y1="6" x2="6.01" y2="6" /><line x1="6" y1="18" x2="6.01" y2="18" /></svg>
+                                Cold Storage
+                            </h4>
+                            <p>Cold Storage Protocol: Majority of assets held offline in air-gapped environments.</p>
+                        </div>
+                    </div>
                     <div className="infoBox">
                         <p><strong>Security Statement:</strong> We implement [AES-256] encryption and Two-Factor Authentication (2FA) for all administrative actions. Our infrastructure is audited regularly to ensure compliance with global fintech security standards.</p>
                     </div>
@@ -266,29 +362,107 @@ export default function CryptoGatewayPage() {
                     <p>A comprehensive toolset for managing digital asset flows within your brokerage.</p>
 
                     <h3>Payment & Deposit Features</h3>
-                    <ul>
-                        <li>Support for BTC, ETH, USDT (ERC20/TRC20/BEP20), USDC, and LTC.</li>
-                        <li>Dynamic QR code generation for easy mobile deposits.</li>
-                        <li>Configurable confirmation requirements (e.g., 1 confirmation for small, 3 for large).</li>
-                        <li>Automated gas fee optimization for outbound payouts.</li>
-                        <li>Internal wallet-to-wallet transfers for liquidity management.</li>
-                        <li>Support for "Dust" transactions and automated wallet sweeping.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8" /><line x1="12" y1="18" x2="12" y2="22" /><line x1="12" y1="2" x2="12" y2="6" /></svg>
+                                Multi-Chain
+                            </h4>
+                            <p>Support for BTC, ETH, USDT (ERC20/TRC20/BEP20), USDC, and LTC.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="3" y="3" width="7" height="7" /><rect x="14" y="3" width="7" height="7" /><rect x="14" y="14" width="7" height="7" /><rect x="3" y="14" width="7" height="7" /></svg>
+                                QR Codes
+                            </h4>
+                            <p>Dynamic QR code generation for easy mobile deposits.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><polyline points="20 6 9 17 4 12" /></svg>
+                                Confirmations
+                            </h4>
+                            <p>Configurable confirmation requirements (e.g., 1 confirmation for small, 3 for large).</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>
+                                Gas Fees
+                            </h4>
+                            <p>Automated gas fee optimization for outbound payouts.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" /><polyline points="3.27 6.96 12 12.01 20.73 6.96" /><line x1="12" y1="22.08" x2="12" y2="12" /></svg>
+                                Transfers
+                            </h4>
+                            <p>Internal wallet-to-wallet transfers for liquidity management.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
+                                Dust Sweep
+                            </h4>
+                            <p>Support for "Dust" transactions and automated wallet sweeping.</p>
+                        </div>
+                    </div>
 
                     <h3>Analytics & Reporting</h3>
-                    <ul>
-                        <li>Real-time transaction explorer with blockchain links.</li>
-                        <li>Daily settlement reports in your base fiat currency.</li>
-                        <li>Visual charts for deposit trends and payout volumes.</li>
-                        <li>Exportable data for tax and regulatory compliance.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /></svg>
+                                Explorer
+                            </h4>
+                            <p>Real-time transaction explorer with blockchain links.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>
+                                Reports
+                            </h4>
+                            <p>Daily settlement reports in your base fiat currency.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><line x1="18" y1="20" x2="18" y2="10" /><line x1="12" y1="20" x2="12" y2="4" /><line x1="6" y1="20" x2="6" y2="14" /></svg>
+                                Charts
+                            </h4>
+                            <p>Visual charts for deposit trends and payout volumes.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" /></svg>
+                                Exports
+                            </h4>
+                            <p>Exportable data for tax and regulatory compliance.</p>
+                        </div>
+                    </div>
 
                     <h3>Fraud Prevention</h3>
-                    <ul>
-                        <li>Real-time AML screening of incoming wallet addresses.</li>
-                        <li>"Risk Scoring" for every transaction based on blockchain history.</li>
-                        <li>Automated blocking of sanctioned or high-risk entities.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                                AML
+                            </h4>
+                            <p>Real-time AML screening of incoming wallet addresses.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" /><line x1="12" y1="9" x2="12" y2="13" /><line x1="12" y1="17" x2="12.01" y2="17" /></svg>
+                                Risk Scoring
+                            </h4>
+                            <p>"Risk Scoring" for every transaction based on blockchain history.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><line x1="4.93" y1="4.93" x2="19.07" y2="19.07" /></svg>
+                                Blocking
+                            </h4>
+                            <p>Automated blocking of sanctioned or high-risk entities.</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="api">
@@ -296,19 +470,54 @@ export default function CryptoGatewayPage() {
                     <p>Our gateway is designed for easy integration with any trading server or CRM ecosystem.</p>
 
                     <h3>Manager / Admin API</h3>
-                    <ul>
-                        <li>Programmatically generate new deposit addresses for your CRM.</li>
-                        <li>Automated balance syncing with MT4/MT5 accounts.</li>
-                        <li>Bulk payout processing for IB commissions and trader withdrawals.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2" /><line x1="9" y1="3" x2="9" y2="21" /></svg>
+                                Addresses
+                            </h4>
+                            <p>Programmatically generate new deposit addresses for your CRM.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M21.21 15.89A10 10 0 1 1 8 2.83" /><path d="M22 12A10 10 0 0 0 12 2v10z" /></svg>
+                                Sync
+                            </h4>
+                            <p>Automated balance syncing with MT4/MT5 accounts.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2" /><line x1="3" y1="9" x2="21" y2="9" /></svg>
+                                Bulk Payouts
+                            </h4>
+                            <p>Bulk payout processing for IB commissions and trader withdrawals.</p>
+                        </div>
+                    </div>
 
                     <h3>Gateway & Connectivity API</h3>
-                    <ul>
-                        <li><strong>RESTful API:</strong> Modern, well-documented endpoints for any web environment.</li>
-                        <li><strong>Webhooks:</strong> Instant push notifications for transaction status changes.</li>
-                        <li><strong>MT4/MT5 Integration:</strong> Native plugins to automate the funding of trading accounts.</li>
-                    </ul>
-
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" /></svg>
+                                REST API
+                            </h4>
+                            <p>RESTful API: Modern, well-documented endpoints for any web environment.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" /><path d="M13.73 21a2 2 0 0 1-3.46 0" /></svg>
+                                Webhooks
+                            </h4>
+                            <p>Webhooks: Instant push notifications for transaction status changes.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" /></svg>
+                                MT4/5
+                            </h4>
+                            <p>MT4/MT5 Integration: Native plugins to automate the funding of trading accounts.</p>
+                        </div>
+                    </div>
                     <h3>Web API / SDK</h3>
                     <p>
                         We provide a comprehensive SDK for developers. This allows you to build custom "Payment Request" flows within your mobile app or client portal, enabling traders to fund their accounts with a single tap. Our SDK supports all major programming languages and includes pre-built UI components.
@@ -320,31 +529,121 @@ export default function CryptoGatewayPage() {
                     <p>Our pricing is transparent, typically involving a small percentage per transaction with no hidden setup or monthly maintenance fees.</p>
 
                     <h3>What’s Included</h3>
-                    <ul>
-                        <li>Full White Label Crypto Gateway license.</li>
-                        <li>Support for [X] Blockchains and [X] Stablecoins.</li>
-                        <li>Merchant dashboard for finance and compliance teams.</li>
-                        <li>Automated fiat settlement and conversion tools.</li>
-                        <li>[24/7] Technical monitoring of blockchain nodes.</li>
-                        <li>Monthly security and compliance updates.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>
+                                License
+                            </h4>
+                            <p>Full White Label Crypto Gateway license.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8" /><line x1="12" y1="18" x2="12" y2="22" /><line x1="12" y1="2" x2="12" y2="6" /></svg>
+                                Blockchains
+                            </h4>
+                            <p>Support for [X] Blockchains and [X] Stablecoins.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="3" y="3" width="7" height="7" /><rect x="14" y="3" width="7" height="7" /><rect x="14" y="14" width="7" height="7" /><rect x="3" y="14" width="7" height="7" /></svg>
+                                Dashboard
+                            </h4>
+                            <p>Merchant dashboard for finance and compliance teams.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
+                                Settlement
+                            </h4>
+                            <p>Automated fiat settlement and conversion tools.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><line x1="2" y1="12" x2="22" y2="12" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                Monitoring
+                            </h4>
+                            <p>[24/7] Technical monitoring of blockchain nodes.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" /></svg>
+                                Updates
+                            </h4>
+                            <p>Monthly security and compliance updates.</p>
+                        </div>
+                    </div>
 
                     <h3>Optional Add-Ons</h3>
-                    <ul>
-                        <li>Dedicated liquidity pools for large-scale payouts.</li>
-                        <li>Custom blockchain support (e.g., Solana, Avalanche).</li>
-                        <li>Advanced KYT (Know Your Transaction) integration.</li>
-                        <li>White-labeled mobile payment app for traders.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M16 12l-4-4-4 4" /><line x1="12" y1="16" x2="12" y2="8" /></svg>
+                                Liquidity Pools
+                            </h4>
+                            <p>Dedicated liquidity pools for large-scale payouts.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" /><polyline points="3.27 6.96 12 12.01 20.73 6.96" /><line x1="12" y1="22.08" x2="12" y2="12" /></svg>
+                                Custom Chains
+                            </h4>
+                            <p>Custom blockchain support (e.g., Solana, Avalanche).</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" /><line x1="12" y1="9" x2="12" y2="13" /><line x1="12" y1="17" x2="12.01" y2="17" /></svg>
+                                Advanced KYT
+                            </h4>
+                            <p>Advanced KYT (Know Your Transaction) integration.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2" /><line x1="12" y1="18" x2="12.01" y2="18" /></svg>
+                                Mobile App
+                            </h4>
+                            <p>White-labeled mobile payment app for traders.</p>
+                        </div>
+                    </div>
 
                     <h3>Setup Timeline</h3>
-                    <ol>
-                        <li><strong>Compliance Review (Days 1-2):</strong> Onboarding and business verification.</li>
-                        <li><strong>API Integration (Days 3-5):</strong> Linking the gateway to your website and CRM.</li>
-                        <li><strong>UI/UX Branding (Days 5-6):</strong> Customizing the payment modals and emails.</li>
-                        <li><strong>UAT & Testing (Days 7-8):</strong> Processing test transactions on Testnet.</li>
-                        <li><strong>Go-Live (Day [X]):</strong> Production environment activation for live deposits.</li>
-                    </ol>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#1E40AF', marginRight: '8px' }}>01</span>
+                                Compliance
+                            </h4>
+                            <p>Compliance Review: Onboarding and business verification (Days 1-2).</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#1E40AF', marginRight: '8px' }}>02</span>
+                                API
+                            </h4>
+                            <p>API Integration: Linking the gateway to your website and CRM (Days 3-5).</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#1E40AF', marginRight: '8px' }}>03</span>
+                                UI/UX
+                            </h4>
+                            <p>UI/UX Branding: Customizing the payment modals and emails (Days 5-6).</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#1E40AF', marginRight: '8px' }}>04</span>
+                                UAT
+                            </h4>
+                            <p>UAT & Testing: Processing test transactions on Testnet (Days 7-8).</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#1E40AF', marginRight: '8px' }}>05</span>
+                                Go-Live
+                            </h4>
+                            <p>Go-Live: Production environment activation for live deposits (Day [X]).</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="faq">

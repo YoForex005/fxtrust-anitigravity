@@ -191,15 +191,57 @@ export default function KycAmlVerificationPage() {
 
                 <div id="why">
                     <h2>Why Automated KYC/AML Verification?</h2>
-                    <ul>
-                        <li><strong>Drastic Reduction in Drop-offs:</strong> Traders who are verified instantly are significantly more likely to make their first deposit immediately.</li>
-                        <li><strong>Eliminate Human Error:</strong> AI doesn&apos;t get tired; it identifies subtle forgeries and inconsistent data that manual reviewers might miss.</li>
-                        <li><strong>Lower Operational Costs:</strong> Remove the need for a large, in-house compliance team to review documents 24/7.</li>
-                        <li><strong>Regulatory Peace of Mind:</strong> Meet the strict &quot;Due Diligence&quot; requirements of regulators like CySEC, ASIC, and the FCA with ease.</li>
-                        <li><strong>Enhanced Data Privacy:</strong> By using tokenized verification, sensitive ID data is handled by certified providers, reducing your firm&apos;s data liability.</li>
-                        <li><strong>Customizable Risk Tiers:</strong> Set different verification requirements based on the trader’s country or their planned deposit volume.</li>
-                        <li><strong>Mobile-First Experience:</strong> Native mobile SDKs allow traders to use their smartphone camera for seamless &quot;Liveness&quot; and ID capture.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                                Drop-offs
+                            </h4>
+                            <p>Drastic Reduction in Drop-offs: Traders who are verified instantly are significantly more likely to make their first deposit immediately.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>
+                                Error
+                            </h4>
+                            <p>Eliminate Human Error: AI doesn't get tired; it identifies subtle forgeries and inconsistent data that manual reviewers might miss.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><line x1="12" y1="1" x2="12" y2="23" /><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
+                                Costs
+                            </h4>
+                            <p>Lower Operational Costs: Remove the need for a large, in-house compliance team to review documents 24/7.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                                Peace
+                            </h4>
+                            <p>Regulatory Peace of Mind: Meet the strict "Due Diligence" requirements of regulators like CySEC, ASIC, and the FCA with ease.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>
+                                Privacy
+                            </h4>
+                            <p>Enhanced Data Privacy: By using tokenized verification, sensitive ID data is handled by certified providers, reducing your firm's data liability.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2" /></svg>
+                                Tiers
+                            </h4>
+                            <p>Customizable Risk Tiers: Set different verification requirements based on the trader’s country or their planned deposit volume.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2" /><line x1="12" y1="18" x2="12.01" y2="18" /></svg>
+                                Mobile
+                            </h4>
+                            <p>Mobile-First Experience: Native mobile SDKs allow traders to use their smartphone camera for seamless "Liveness" and ID capture.</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="branding">
@@ -245,21 +287,75 @@ export default function KycAmlVerificationPage() {
                         The processing of PII (Personally Identifiable Information) requires the highest tier of data security and server redundancy.
                     </p>
                     <h3>Data Center Locations</h3>
-                    <ul>
-                        <li><strong>Global Nodes:</strong> Geographically distributed to comply with local data residency laws.</li>
-                        <li><strong>London, UK:</strong> Tier-4 Compliance Hub.</li>
-                        <li><strong>Frankfurt, Germany:</strong> GDPR-Optimized Hosting.</li>
-                        <li><strong>Singapore:</strong> Asian Security Node.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                Global
+                            </h4>
+                            <p>Global Nodes: Geographically distributed to comply with local data residency laws.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                London
+                            </h4>
+                            <p>London, UK: Tier-4 Compliance Hub.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                Frankfurt
+                            </h4>
+                            <p>Frankfurt, Germany: GDPR-Optimized Hosting.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                Singapore
+                            </h4>
+                            <p>Singapore: Asian Security Node.</p>
+                        </div>
+                    </div>
 
                     <h3>Infrastructure Specifications</h3>
-                    <ul>
-                        <li><strong>AES-256 Encryption:</strong> All data in transit and at rest is protected by military-grade encryption.</li>
-                        <li><strong>SOC2 & ISO 27001:</strong> Hosting environments that meet the gold standards of information security.</li>
-                        <li><strong>Redundant API Tunnels:</strong> Secondary gateways to ensure that if one provider node is slow, the system stays responsive.</li>
-                        <li><strong>Tokenized Data Handling:</strong> We store &quot;Verification Tokens&quot; rather than raw ID images wherever possible to maximize security.</li>
-                        <li><strong>DDoS Hardening:</strong> Enterprise-level protection to ensure your onboarding flow remains live during peak volatility.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>
+                                AES-256
+                            </h4>
+                            <p>AES-256 Encryption: All data in transit and at rest is protected by military-grade encryption.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                                SOC2
+                            </h4>
+                            <p>SOC2 & ISO 27001: Hosting environments that meet the gold standards of information security.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" /></svg>
+                                Tunnels
+                            </h4>
+                            <p>Redundant API Tunnels: Secondary gateways to ensure that if one provider node is slow, the system stays responsive.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>
+                                Token
+                            </h4>
+                            <p>Tokenized Data Handling: We store "Verification Tokens" rather than raw ID images wherever possible to maximize security.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                                DDoS
+                            </h4>
+                            <p>DDoS Hardening: Enterprise-level protection to ensure your onboarding flow remains live during peak volatility.</p>
+                        </div>
+                    </div>
                     <div className="infoBox">
                         <p><strong>Compliance Note:</strong> Our integration ensures that your firm is GDPR and CCPA compliant. We provide the technical framework for the Right to be Forgotten and secure data access requests.</p>
                     </div>
@@ -270,27 +366,93 @@ export default function KycAmlVerificationPage() {
                     <p>Comprehensive tools designed to manage the full lifecycle of a trader&apos;s identity verification.</p>
 
                     <h3>Identity Features</h3>
-                    <ul>
-                        <li><strong>Document Verification:</strong> Automatic recognition of Passports, ID cards, and Driver&apos;s Licenses.</li>
-                        <li><strong>Liveness & Face Match:</strong> Comparing a real-time &quot;selfie&quot; with the document photo to ensure the person is present.</li>
-                        <li><strong>Proof of Address (PoA):</strong> Automated extraction and verification of utility bills and bank statements.</li>
-                        <li><strong>Cross-Check Database:</strong> Matching user data against global birth and residency registries.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2" /><line x1="16" y1="2" x2="16" y2="6" /><line x1="8" y1="2" x2="8" y2="6" /><line x1="3" y1="10" x2="21" y2="10" /></svg>
+                                Docs
+                            </h4>
+                            <p>Document Verification: Automatic recognition of Passports, ID cards, and Driver's Licenses.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M8 14s1.5 2 4 2 4-2 4-2" /><line x1="9" y1="9" x2="9.01" y2="9" /><line x1="15" y1="9" x2="15.01" y2="9" /></svg>
+                                Liveness
+                            </h4>
+                            <p>Liveness & Face Match: Comparing a real-time "selfie" with the document photo to ensure the person is present.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /></svg>
+                                PoA
+                            </h4>
+                            <p>Proof of Address (PoA): Automated extraction and verification of utility bills and bank statements.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /></svg>
+                                Check
+                            </h4>
+                            <p>Cross-Check Database: Matching user data against global birth and residency registries.</p>
+                        </div>
+                    </div>
 
                     <h3>AML & Risk Features</h3>
-                    <ul>
-                        <li><strong>Sanction List Screening:</strong> OFAC, UN, HMT, and EU list checks.</li>
-                        <li><strong>PEP Screening:</strong> Identifying &quot;Politically Exposed Persons&quot; for enhanced due diligence.</li>
-                        <li><strong>Adverse Media:</strong> Screening for negative news associated with the user.</li>
-                        <li><strong>Ongoing Monitoring:</strong> Daily re-screening of your active user base.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" /><line x1="12" y1="9" x2="12" y2="13" /><line x1="12" y1="17" x2="12.01" y2="17" /></svg>
+                                Sanction
+                            </h4>
+                            <p>Sanction List Screening: OFAC, UN, HMT, and EU list checks.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg>
+                                PEP
+                            </h4>
+                            <p>PEP Screening: Identifying "Politically Exposed Persons" for enhanced due diligence.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><circle cx="12" cy="12" r="10" /><line x1="4.93" y1="4.93" x2="19.07" y2="19.07" /></svg>
+                                Media
+                            </h4>
+                            <p>Adverse Media: Screening for negative news associated with the user.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2" /></svg>
+                                Monitor
+                            </h4>
+                            <p>Ongoing Monitoring: Daily re-screening of your active user base.</p>
+                        </div>
+                    </div>
 
                     <h3>Management Tools</h3>
-                    <ul>
-                        <li><strong>Manual Review Portal:</strong> For &quot;Borderline&quot; cases that require a human compliance officer&apos;s final say.</li>
-                        <li><strong>Audit Trail Generation:</strong> Detailed logs for every check, ready for regulatory inspections.</li>
-                        <li><strong>Custom Logic Engine:</strong> e.g., &quot;If from Country A, require 2 forms of ID; if from Country B, require Video ID.&quot;</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M2 12h20M2 12a10 10 0 0 1 20 0M2 12a10 10 0 0 0 20 0" /></svg>
+                                Review
+                            </h4>
+                            <p>Manual Review Portal: For "Borderline" cases that require a human compliance officer's final say.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>
+                                Audit
+                            </h4>
+                            <p>Audit Trail Generation: Detailed logs for every check, ready for regulatory inspections.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><circle cx="12" cy="12" r="3" /><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z" /></svg>
+                                Logic
+                            </h4>
+                            <p>Custom Logic Engine: e.g., "If from Country A, require 2 forms of ID; if from Country B, require Video ID."</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="api">
@@ -298,18 +460,54 @@ export default function KycAmlVerificationPage() {
                     <p>Our KYC/AML solution is designed to be the &quot;Check Engine&quot; for your registration and payout workflows.</p>
 
                     <h3>Manager / Admin API</h3>
-                    <ul>
-                        <li>Programmatically trigger a &quot;Re-verify&quot; request if a trader&apos;s ID expires.</li>
-                        <li>Fetch PDF verification certificates for your compliance archives.</li>
-                        <li>Management of &quot;Risk Scores&quot; to flag high-risk accounts to your sales team.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38" /></svg>
+                                Retry
+                            </h4>
+                            <p>Programmatically trigger a "Re-verify" request if a trader's ID expires.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>
+                                Certs
+                            </h4>
+                            <p>Fetch PDF verification certificates for your compliance archives.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2" /></svg>
+                                Score
+                            </h4>
+                            <p>Management of "Risk Scores" to flag high-risk accounts to your sales team.</p>
+                        </div>
+                    </div>
 
                     <h3>Gateway & Connectivity API</h3>
-                    <ul>
-                        <li><strong>Sumsub/Onfido Bridge:</strong> Native API tunnels that handle all complex data transformations.</li>
-                        <li><strong>CRM Sync:</strong> Instant status updates (Approved/Rejected/Pending) to your Broker CRM.</li>
-                        <li><strong>Withdrawal Gateways:</strong> Block payouts automatically via API if a trader&apos;s KYC status is not &quot;Approved.&quot;</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" /><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" /></svg>
+                                Bridge
+                            </h4>
+                            <p>Sumsub/Onfido Bridge: Native API tunnels that handle all complex data transformations.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4" /><path d="M3 5v14a2 2 0 0 0 2 2h16v-5" /><path d="M18 12a2 2 0 0 0 0 4h4v-4Z" /></svg>
+                                Sync
+                            </h4>
+                            <p>CRM Sync: Instant status updates (Approved/Rejected/Pending) to your Broker CRM.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><circle cx="12" cy="12" r="10" /><line x1="4.93" y1="4.93" x2="19.07" y2="19.07" /></svg>
+                                Block
+                            </h4>
+                            <p>Withdrawal Gateways: Block payouts automatically via API if a trader's KYC status is not "Approved."</p>
+                        </div>
+                    </div>
 
                     <h3>Web API / SDK</h3>
                     <p>
@@ -322,31 +520,121 @@ export default function KycAmlVerificationPage() {
                     <p>Our pricing is based on a &quot;Pay-as-you-go&quot; model per verification check, ensuring you only pay for the volume you actually process.</p>
 
                     <h3>What’s Included</h3>
-                    <ul>
-                        <li>Integration with 1 chosen provider (Sumsub or Onfido).</li>
-                        <li>Full Web & Mobile SDK access.</li>
-                        <li>Basic AML screening (Sanctions/PEP).</li>
-                        <li>Automated status syncing with your CRM.</li>
-                        <li>24/7 Infrastructure monitoring.</li>
-                        <li>Quarterly compliance updates to matching new ID types.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" /><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" /></svg>
+                                Integrate
+                            </h4>
+                            <p>Integration with 1 chosen provider (Sumsub or Onfido).</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2" /><line x1="12" y1="18" x2="12.01" y2="18" /></svg>
+                                SDK
+                            </h4>
+                            <p>Full Web & Mobile SDK access.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4" /><path d="M3 5v14a2 2 0 0 0 2 2h16v-5" /><path d="M18 12a2 2 0 0 0 0 4h4v-4Z" /></svg>
+                                AML
+                            </h4>
+                            <p>Basic AML screening (Sanctions/PEP).</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38" /></svg>
+                                Sync
+                            </h4>
+                            <p>Automated status syncing with your CRM.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><circle cx="12" cy="12" r="10" /><line x1="2" y1="12" x2="22" y2="12" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                24/7
+                            </h4>
+                            <p>24/7 Infrastructure monitoring.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>
+                                Updates
+                            </h4>
+                            <p>Quarterly compliance updates to matching new ID types.</p>
+                        </div>
+                    </div>
 
                     <h3>Optional Add-Ons</h3>
-                    <ul>
-                        <li>Video Verification (Live Agent calls).</li>
-                        <li>Corporate KYC (KYB) for institutional clients.</li>
-                        <li>Enhanced AML (Adverse Media + Social Media checks).</li>
-                        <li>Automated Proof of Address (PoA) extraction.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><polygon points="23 7 16 12 23 17 23 7" /><rect x="1" y="5" width="15" height="14" rx="2" ry="2" /></svg>
+                                Video
+                            </h4>
+                            <p>Video Verification (Live Agent calls).</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
+                                Corporate
+                            </h4>
+                            <p>Corporate KYC (KYB) for institutional clients.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><circle cx="12" cy="12" r="10" /><line x1="2" y1="12" x2="22" y2="12" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                Enhanced
+                            </h4>
+                            <p>Enhanced AML (Adverse Media + Social Media checks).</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" /><polyline points="9 22 9 12 15 12 15 22" /></svg>
+                                PoA
+                            </h4>
+                            <p>Automated Proof of Address (PoA) extraction.</p>
+                        </div>
+                    </div>
 
                     <h3>Setup Timeline</h3>
-                    <ol>
-                        <li><strong>Provider Account Setup (Days 1-2):</strong> Securing your API credentials from Sumsub/Onfido.</li>
-                        <li><strong>Workflow Configuration (Days 2-3):</strong> Defining your &quot;Pass/Fail&quot; rules and required levels.</li>
-                        <li><strong>UI/UX Integration (Days 3-5):</strong> Embedding the SDK into your portal or mobile app.</li>
-                        <li><strong>Sandbox Testing (Days 5-7):</strong> Running test IDs through the system to verify CRM sync.</li>
-                        <li><strong>Go-Live (Day X):</strong> Production activation for all new registrations.</li>
-                    </ol>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#2563EB', marginRight: '8px' }}>01</span>
+                                Account
+                            </h4>
+                            <p>Provider Account Setup (Days 1-2): Securing your API credentials from Sumsub/Onfido.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#2563EB', marginRight: '8px' }}>02</span>
+                                Config
+                            </h4>
+                            <p>Workflow Configuration (Days 2-3): Defining your "Pass/Fail" rules and required levels.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#2563EB', marginRight: '8px' }}>03</span>
+                                UI/UX
+                            </h4>
+                            <p>UI/UX Integration (Days 3-5): Embedding the SDK into your portal or mobile app.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#2563EB', marginRight: '8px' }}>04</span>
+                                Test
+                            </h4>
+                            <p>Sandbox Testing (Days 5-7): Running test IDs through the system to verify CRM sync.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#2563EB', marginRight: '8px' }}>05</span>
+                                Live
+                            </h4>
+                            <p>Go-Live (Day X): Production activation for all new registrations.</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="faq">

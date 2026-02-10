@@ -191,15 +191,57 @@ export default function OffshoreFormationPage() {
 
                 <div id="why">
                     <h2>Why Offshore Company Formation?</h2>
-                    <ul>
-                        <li><strong>Optimized Tax Structures:</strong> Many offshore jurisdictions offer competitive tax rates or exemptions on international business income.</li>
-                        <li><strong>Operational Privacy:</strong> Maintain a level of corporate privacy for directors and shareholders as permitted by local regulations.</li>
-                        <li><strong>Lower Capital Requirements:</strong> Start your brokerage with significantly lower paid-up capital compared to onshore jurisdictions.</li>
-                        <li><strong>Flexible Regulatory Frameworks:</strong> Benefit from legal environments that are specifically designed to foster fintech and trading innovation.</li>
-                        <li><strong>Ease of PSP Onboarding:</strong> A correctly structured offshore entity is a prerequisite for securing international payment gateways.</li>
-                        <li><strong>Global Scalability:</strong> An offshore company allows you to onboard clients from various regions without the heavy restrictions of localized licenses.</li>
-                        <li><strong>Asset Protection:</strong> Legal structures that provide a robust shield between your personal assets and your business operations.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
+                                Tax
+                            </h4>
+                            <p>Optimized Tax Structures: Many offshore jurisdictions offer competitive tax rates or exemptions on international business income.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" /></svg>
+                                Privacy
+                            </h4>
+                            <p>Operational Privacy: Maintain a level of corporate privacy for directors and shareholders as permitted by local regulations.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><line x1="12" y1="1" x2="12" y2="23" /><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
+                                Capital
+                            </h4>
+                            <p>Lower Capital Requirements: Start your brokerage with significantly lower paid-up capital compared to onshore jurisdictions.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>
+                                Regulation
+                            </h4>
+                            <p>Flexible Regulatory Frameworks: Benefit from legal environments that are specifically designed to foster fintech and trading innovation.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2" /><line x1="1" y1="10" x2="23" y2="10" /></svg>
+                                Banking
+                            </h4>
+                            <p>Ease of PSP Onboarding: A correctly structured offshore entity is a prerequisite for securing international payment gateways.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><circle cx="12" cy="12" r="10" /><line x1="2" y1="12" x2="22" y2="12" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                Global
+                            </h4>
+                            <p>Global Scalability: An offshore company allows you to onboard clients from various regions without the heavy restrictions of localized licenses.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                                Protection
+                            </h4>
+                            <p>Asset Protection: Legal structures that provide a robust shield between your personal assets and your business operations.</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="branding">
@@ -245,21 +287,75 @@ export default function OffshoreFormationPage() {
                         A legal entity is only as strong as the data security and documentation management that supports it.
                     </p>
                     <h3>Data Center Locations</h3>
-                    <ul>
-                        <li><strong>SVG</strong> - Local Administrative Hub</li>
-                        <li><strong>Mauritius</strong> - FSC Liaison Office</li>
-                        <li><strong>Labuan, Malaysia</strong> - Regional Financial Center</li>
-                        <li><strong>Cloud Nodes</strong> - Secure Document Storage (Global)</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                SVG
+                            </h4>
+                            <p>SVG - Local Administrative Hub</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                Mauritius
+                            </h4>
+                            <p>Mauritius - FSC Liaison Office</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                Labuan
+                            </h4>
+                            <p>Labuan, Malaysia - Regional Financial Center</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" /></svg>
+                                Cloud
+                            </h4>
+                            <p>Cloud Nodes - Secure Document Storage (Global)</p>
+                        </div>
+                    </div>
 
                     <h3>Infrastructure Specifications</h3>
-                    <ul>
-                        <li><strong>Encrypted Document Vault:</strong> Your corporate records are stored with AES-256 encryption.</li>
-                        <li><strong>Automated Renewal Alerts:</strong> Never miss a filing deadline with our automated notification system.</li>
-                        <li><strong>Tier-4 Data Centers:</strong> Our administrative servers are hosted in high-security facilities.</li>
-                        <li><strong>Redundant Backups:</strong> Digital copies of all physical corporate seals and documents are mirrored globally.</li>
-                        <li><strong>Secure Agent Portals:</strong> Direct, encrypted communication lines with local registered agents.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>
+                                Vault
+                            </h4>
+                            <p>Encrypted Document Vault: Your corporate records are stored with AES-256 encryption.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" /><path d="M13.73 21a2 2 0 0 1-3.46 0" /></svg>
+                                Alerts
+                            </h4>
+                            <p>Automated Renewal Alerts: Never miss a filing deadline with our automated notification system.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2" /><rect x="2" y="14" width="20" height="8" rx="2" ry="2" /><line x1="6" y1="6" x2="6.01" y2="6" /><line x1="6" y1="18" x2="6.01" y2="18" /></svg>
+                                Tier-4
+                            </h4>
+                            <p>Tier-4 Data Centers: Our administrative servers are hosted in high-security facilities.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="17 8 12 3 7 8" /><line x1="12" y1="3" x2="12" y2="15" /></svg>
+                                Backups
+                            </h4>
+                            <p>Redundant Backups: Digital copies of all physical corporate seals and documents are mirrored globally.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
+                                Agents
+                            </h4>
+                            <p>Secure Agent Portals: Direct, encrypted communication lines with local registered agents.</p>
+                        </div>
+                    </div>
                     <div className="infoBox">
                         <p><strong>Legal Disclaimer:</strong> Formation of an offshore company involves compliance with international and local laws. Our infrastructure ensures that your KYC/AML data is handled with the highest level of security and in accordance with GDPR standards where applicable.</p>
                     </div>
@@ -270,29 +366,107 @@ export default function OffshoreFormationPage() {
                     <p>Comprehensive services to support your corporate lifecycle from inception to expansion.</p>
 
                     <h3>Incorporation Features</h3>
-                    <ul>
-                        <li>St. Vincent (SVG) LLC / IBC Formation.</li>
-                        <li>Mauritius GBC / Authorized Company Setup.</li>
-                        <li>Labuan (Malaysia) IBFC Company Incorporation.</li>
-                        <li>Provision of Registered Agent and Office.</li>
-                        <li>Preparation of Memorandum and Articles of Association.</li>
-                        <li>Issuance of Share Certificates.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M3 21h18M5 21V7l8-4 8 4v14M8 21V12a4 4 0 0 1 8 0v9" /></svg>
+                                SVG
+                            </h4>
+                            <p>St. Vincent (SVG) LLC / IBC Formation.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" /></svg>
+                                Mauritius
+                            </h4>
+                            <p>Mauritius GBC / Authorized Company Setup.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z" /><line x1="4" y1="22" x2="4" y2="15" /></svg>
+                                Labuan
+                            </h4>
+                            <p>Labuan (Malaysia) IBFC Company Incorporation.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="8.5" cy="7" r="4" /><polyline points="17 11 19 13 23 9" /></svg>
+                                Agents
+                            </h4>
+                            <p>Provision of Registered Agent and Office.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>
+                                Docs
+                            </h4>
+                            <p>Preparation of Memorandum and Articles of Association.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2" /><line x1="16" y1="2" x2="16" y2="6" /><line x1="8" y1="2" x2="8" y2="6" /><line x1="3" y1="10" x2="21" y2="10" /></svg>
+                                Shares
+                            </h4>
+                            <p>Issuance of Share Certificates.</p>
+                        </div>
+                    </div>
 
                     <h3>Corporate Management Tools</h3>
-                    <ul>
-                        <li>Annual Return filings and government fee management.</li>
-                        <li>Certificate of Incumbency and Good Standing requests.</li>
-                        <li>Apostille and Legalization of documents for international use.</li>
-                        <li>Nominee Director and Shareholder services (subject to vetting).</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>
+                                Returns
+                            </h4>
+                            <p>Annual Return filings and government fee management.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M8 14s1.5 2 4 2 4-2 4-2" /><line x1="9" y1="9" x2="9.01" y2="9" /><line x1="15" y1="9" x2="15.01" y2="9" /></svg>
+                                Standing
+                            </h4>
+                            <p>Certificate of Incumbency and Good Standing requests.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                                Apostille
+                            </h4>
+                            <p>Apostille and Legalization of documents for international use.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg>
+                                Nominee
+                            </h4>
+                            <p>Nominee Director and Shareholder services (subject to vetting).</p>
+                        </div>
+                    </div>
 
                     <h3>Compliance & Banking</h3>
-                    <ul>
-                        <li>Introduction to offshore and neo-banking institutions.</li>
-                        <li>Preparation of business plans and financial projections.</li>
-                        <li>Economic Substance reporting (where required by the jurisdiction).</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2" /><line x1="1" y1="10" x2="23" y2="10" /></svg>
+                                Intro
+                            </h4>
+                            <p>Introduction to offshore and neo-banking institutions.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>
+                                Plans
+                            </h4>
+                            <p>Preparation of business plans and financial projections.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>
+                                Substance
+                            </h4>
+                            <p>Economic Substance reporting (where required by the jurisdiction).</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="api">
@@ -300,18 +474,54 @@ export default function OffshoreFormationPage() {
                     <p>Our corporate services are designed to integrate with your broader brokerage operations.</p>
 
                     <h3>Manager / Admin API</h3>
-                    <ul>
-                        <li>Securely fetch digital copies of your corporate documents for PSP applications.</li>
-                        <li>Automated sync of company renewal dates with your internal business calendar.</li>
-                        <li>Management of multiple entities through a single administrative dashboard.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>
+                                Docs
+                            </h4>
+                            <p>Securely fetch digital copies of your corporate documents for PSP applications.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2" /><line x1="16" y1="2" x2="16" y2="6" /><line x1="8" y1="2" x2="8" y2="6" /><line x1="3" y1="10" x2="21" y2="10" /></svg>
+                                Sync
+                            </h4>
+                            <p>Automated sync of company renewal dates with your internal business calendar.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><polygon points="12 2 2 7 12 12 22 7 12 2" /><polyline points="2 17 12 22 22 17" /><polyline points="2 12 12 17 22 12" /></svg>
+                                Admin
+                            </h4>
+                            <p>Management of multiple entities through a single administrative dashboard.</p>
+                        </div>
+                    </div>
 
                     <h3>Gateway & Connectivity API</h3>
-                    <ul>
-                        <li><strong>CRM Integration:</strong> Link your corporate legal data with your backend for compliance reporting.</li>
-                        <li><strong>Payment Gateway Sync:</strong> Provide automated proof of incorporation to your integrated PSPs.</li>
-                        <li><strong>Banking API:</strong> (Where available) Connect your corporate accounts to your internal treasury management.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
+                                CRM
+                            </h4>
+                            <p>CRM Integration: Link your corporate legal data with your backend for compliance reporting.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2" /><line x1="1" y1="10" x2="23" y2="10" /></svg>
+                                PSP
+                            </h4>
+                            <p>Payment Gateway Sync: Provide automated proof of incorporation to your integrated PSPs.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M3 21h18M5 21V7l8-4 8 4v14M8 21V12a4 4 0 0 1 8 0v9" /></svg>
+                                Bank
+                            </h4>
+                            <p>Banking API: (Where available) Connect your corporate accounts to your internal treasury management.</p>
+                        </div>
+                    </div>
 
                     <h3>Web API / SDK</h3>
                     <p>
@@ -324,31 +534,121 @@ export default function OffshoreFormationPage() {
                     <p>Our pricing is transparent, including all government fees, agent fees, and the first year of registered office services.</p>
 
                     <h3>What’s Included</h3>
-                    <ul>
-                        <li>Full incorporation in the selected jurisdiction.</li>
-                        <li>Government filing fees for the first year.</li>
-                        <li>Registered Office and Registered Agent services.</li>
-                        <li>A complete set of digital and physical corporate documents.</li>
-                        <li>Courier delivery of physical documents (DHL/FedEx).</li>
-                        <li>First-year compliance and secretarial support.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>
+                                Formation
+                            </h4>
+                            <p>Full incorporation in the selected jurisdiction.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><line x1="12" y1="1" x2="12" y2="23" /><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
+                                Fees
+                            </h4>
+                            <p>Government filing fees for the first year.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M3 21h18M5 21V7l8-4 8 4v14M8 21V12a4 4 0 0 1 8 0v9" /></svg>
+                                Office
+                            </h4>
+                            <p>Registered Office and Registered Agent services.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>
+                                Documents
+                            </h4>
+                            <p>A complete set of digital and physical corporate documents.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><rect x="1" y="3" width="15" height="13" /><polygon points="16 8 20 8 23 11 23 16 16 16 16 8" /><circle cx="5.5" cy="18.5" r="2.5" /><circle cx="18.5" cy="18.5" r="2.5" /></svg>
+                                Courier
+                            </h4>
+                            <p>Courier delivery of physical documents (DHL/FedEx).</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                                Support
+                            </h4>
+                            <p>First-year compliance and secretarial support.</p>
+                        </div>
+                    </div>
 
                     <h3>Optional Add-Ons</h3>
-                    <ul>
-                        <li>Nominee services for privacy and local compliance.</li>
-                        <li>Bank account opening assistance (Offshore/EMI).</li>
-                        <li>Apostille services for international document recognition.</li>
-                        <li>Trademark and intellectual property registration.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg>
+                                Nominee
+                            </h4>
+                            <p>Nominee services for privacy and local compliance.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2" /><line x1="1" y1="10" x2="23" y2="10" /></svg>
+                                Bank
+                            </h4>
+                            <p>Bank account opening assistance (Offshore/EMI).</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                                Apostille
+                            </h4>
+                            <p>Apostille services for international document recognition.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+                                Trademark
+                            </h4>
+                            <p>Trademark and intellectual property registration.</p>
+                        </div>
+                    </div>
 
                     <h3>Setup Timeline</h3>
-                    <ol>
-                        <li><strong>Name Reservation (Day 1):</strong> Checking and securing your desired company name.</li>
-                        <li><strong>KYC Submission (Days 2-3):</strong> Collecting and vetting director/shareholder ID documents.</li>
-                        <li><strong>Document Drafting (Days 4-5):</strong> Preparing the Memorandum and Articles.</li>
-                        <li><strong>Registration Filing (Days 6-10):</strong> Submitting the application to the local registry.</li>
-                        <li><strong>Digital Delivery (Day 10+):</strong> Receiving your digital Certificate of Incorporation.</li>
-                    </ol>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#2563EB', marginRight: '8px' }}>01</span>
+                                Name
+                            </h4>
+                            <p>Name Reservation (Day 1): Checking and securing your desired company name.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#2563EB', marginRight: '8px' }}>02</span>
+                                KYC
+                            </h4>
+                            <p>KYC Submission (Days 2-3): Collecting and vetting director/shareholder ID documents.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#2563EB', marginRight: '8px' }}>03</span>
+                                Draft
+                            </h4>
+                            <p>Document Drafting (Days 4-5): Preparing the Memorandum and Articles.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#2563EB', marginRight: '8px' }}>04</span>
+                                Filing
+                            </h4>
+                            <p>Registration Filing (Days 6-10): Submitting the application to the local registry.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#2563EB', marginRight: '8px' }}>05</span>
+                                Delivery
+                            </h4>
+                            <p>Digital Delivery (Day 10+): Receiving your digital Certificate of Incorporation.</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="faq">

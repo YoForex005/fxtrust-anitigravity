@@ -191,15 +191,57 @@ export default function TechnicalSupportPage() {
 
                 <div id="why">
                     <h2>Why Outsourced Technical Support?</h2>
-                    <ul>
-                        <li><strong>Uninterrupted Service:</strong> Global markets never sleep; our 24/7 presence ensures your traders get help at 2:00 AM as easily as 2:00 PM.</li>
-                        <li><strong>Deep Industry Knowledge:</strong> Our agents aren&apos;t generic; they are trained specifically in Forex, Crypto, and CFD market mechanics.</li>
-                        <li><strong>Cost Efficiency:</strong> Eliminate the costs of recruiting, training, and housing a 24/7 internal helpdesk across multiple time zones.</li>
-                        <li><strong>Reduced Executive Stress:</strong> Rest easy knowing that technical emergencies are being handled by professionals who know your stack.</li>
-                        <li><strong>Increased Trader Lifetime Value (LTV):</strong> Fast, accurate support builds massive trust, leading to higher retention and larger deposits.</li>
-                        <li><strong>Security & Compliance:</strong> All support interactions are recorded and handled according to strict data privacy and security protocols.</li>
-                        <li><strong>Seamless Scalability:</strong> Whether you have 500 or 50,000 active traders, our team scales to meet your ticket volume instantly.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
+                                Service
+                            </h4>
+                            <p>Uninterrupted Service: Global markets never sleep; our 24/7 presence ensures your traders get help at 2:00 AM as easily as 2:00 PM.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" /><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" /></svg>
+                                Knowledge
+                            </h4>
+                            <p>Deep Industry Knowledge: Our agents aren't generic; they are trained specifically in Forex, Crypto, and CFD market mechanics.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><line x1="12" y1="1" x2="12" y2="23" /><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
+                                Cost
+                            </h4>
+                            <p>Cost Efficiency: Eliminate the costs of recruiting, training, and housing a 24/7 internal helpdesk across multiple time zones.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg>
+                                Stress
+                            </h4>
+                            <p>Reduced Executive Stress: Rest easy knowing that technical emergencies are being handled by professionals who know your stack.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2" /></svg>
+                                LTV
+                            </h4>
+                            <p>Increased Trader Lifetime Value (LTV): Fast, accurate support builds massive trust, leading to higher retention and larger deposits.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>
+                                Security
+                            </h4>
+                            <p>Security & Compliance: All support interactions are recorded and handled according to strict data privacy and security protocols.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" /></svg>
+                                Scalability
+                            </h4>
+                            <p>Seamless Scalability: Whether you have 500 or 50,000 active traders, our team scales to meet your ticket volume instantly.</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="branding">
@@ -245,22 +287,82 @@ export default function TechnicalSupportPage() {
                         Support quality is backed by a redundant, high-speed technical infrastructure that ensures our agents are always connected.
                     </p>
                     <h3>Data Center Locations</h3>
-                    <ul>
-                        <li><strong>London, UK:</strong> Strategic Management Hub</li>
-                        <li><strong>Dubai, UAE:</strong> MENA Region Support Center</li>
-                        <li><strong>Singapore:</strong> APAC Support Center</li>
-                        <li><strong>Cloud-Based:</strong> Redundant global helpdesk nodes</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                London
+                            </h4>
+                            <p>London, UK: Strategic Management Hub</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                Dubai
+                            </h4>
+                            <p>Dubai, UAE: MENA Region Support Center</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                Singapore
+                            </h4>
+                            <p>Singapore: APAC Support Center</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" /></svg>
+                                Cloud
+                            </h4>
+                            <p>Cloud-Based: Redundant global helpdesk nodes</p>
+                        </div>
+                    </div>
 
                     <h3>Infrastructure Specifications</h3>
-                    <ul>
-                        <li><strong>High-Availability CRM:</strong> Redundant helpdesk servers to ensure we never miss a client incoming message.</li>
-                        <li><strong>Encrypted Voice/Data:</strong> All support calls and chats are protected by enterprise-grade TLS 1.3 encryption.</li>
-                        <li><strong>Direct Manager Access:</strong> Secure, VPN-tunnel access to your MT4/MT5 Manager terminals (view-only or limited admin).</li>
-                        <li><strong>Automated Failover:</strong> If one support hub faces an outage, traffic is instantly rerouted to our other global centers.</li>
-                        <li><strong>Compliant Data Handling:</strong> Full adherence to GDPR and regional data residency requirements for PII.</li>
-                        <li><strong>SLA Guarantee:</strong> We offer a strictly enforced 99.9% uptime for our helpdesk accessibility. Our agents utilize dual-ISP connections and backup power to ensure they are online during global market volatility.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
+                                CRM
+                            </h4>
+                            <p>High-Availability CRM: Redundant helpdesk servers to ensure we never miss a client incoming message.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>
+                                Security
+                            </h4>
+                            <p>Encrypted Voice/Data: All support calls and chats are protected by enterprise-grade TLS 1.3 encryption.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" /></svg>
+                                Manager
+                            </h4>
+                            <p>Direct Manager Access: Secure, VPN-tunnel access to your MT4/MT5 Manager terminals (view-only or limited admin).</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" /></svg>
+                                Failover
+                            </h4>
+                            <p>Automated Failover: If one support hub faces an outage, traffic is instantly rerouted to our other global centers.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                                Compliant
+                            </h4>
+                            <p>Compliant Data Handling: Full adherence to GDPR and regional data residency requirements for PII.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2" /></svg>
+                                SLA
+                            </h4>
+                            <p>SLA Guarantee: We offer a strictly enforced 99.9% uptime for our helpdesk accessibility. Our agents utilize dual-ISP connections and backup power.</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="features">
@@ -268,29 +370,107 @@ export default function TechnicalSupportPage() {
                     <p>Comprehensive helpdesk capabilities designed to manage the specific technical needs of a modern brokerage.</p>
 
                     <h3>L1 Support Features (General)</h3>
-                    <ul>
-                        <li>Platform installation and login assistance.</li>
-                        <li>Basic MT4/MT5/cTrader navigation.</li>
-                        <li>Password resets and 2FA troubleshooting.</li>
-                        <li>&quot;How-to&quot; guidance for deposits and withdrawals.</li>
-                        <li>KYC document status updates and guidance.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" /><line x1="12" y1="17" x2="12.01" y2="17" /></svg>
+                                Install
+                            </h4>
+                            <p>Platform installation and login assistance.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><polygon points="3 11 22 2 13 21 11 13 3 11" /></svg>
+                                Navigation
+                            </h4>
+                            <p>Basic MT4/MT5/cTrader navigation.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>
+                                Access
+                            </h4>
+                            <p>Password resets and 2FA troubleshooting.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 8v4" /><path d="M12 16h.01" /></svg>
+                                Funds
+                            </h4>
+                            <p>"How-to" guidance for deposits and withdrawals.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>
+                                KYC
+                            </h4>
+                            <p>KYC document status updates and guidance.</p>
+                        </div>
+                    </div>
 
                     <h3>L2 Support Features (Technical)</h3>
-                    <ul>
-                        <li>Trade execution forensics (investigating slippage/execution time).</li>
-                        <li>Bridge and Liquidity Provider (LP) connectivity checks.</li>
-                        <li>API key configuration for algorithmic traders.</li>
-                        <li>EA (Expert Advisor) error log analysis.</li>
-                        <li>Mobile app sync and data feed troubleshooting.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /></svg>
+                                Forensics
+                            </h4>
+                            <p>Trade execution forensics (investigating slippage/execution time).</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                                Bridge
+                            </h4>
+                            <p>Bridge and Liquidity Provider (LP) connectivity checks.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg>
+                                Algo
+                            </h4>
+                            <p>API key configuration for algorithmic traders.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>
+                                Logs
+                            </h4>
+                            <p>EA (Expert Advisor) error log analysis.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2" /><line x1="12" y1="18" x2="12.01" y2="18" /></svg>
+                                Mobile
+                            </h4>
+                            <p>Mobile app sync and data feed troubleshooting.</p>
+                        </div>
+                    </div>
 
                     <h3>Reporting & Analytics</h3>
-                    <ul>
-                        <li>Weekly &quot;Issue Trend&quot; reports to identify recurring platform bugs.</li>
-                        <li>Client Satisfaction (CSAT) and Net Promoter Score (NPS) tracking.</li>
-                        <li>Agent performance metrics (Average Handling Time, Resolution Rate).</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><line x1="18" y1="20" x2="18" y2="10" /><line x1="12" y1="20" x2="12" y2="4" /><line x1="6" y1="20" x2="6" y2="14" /></svg>
+                                Trends
+                            </h4>
+                            <p>Weekly "Issue Trend" reports to identify recurring platform bugs.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                                CSAT
+                            </h4>
+                            <p>Client Satisfaction (CSAT) and Net Promoter Score (NPS) tracking.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
+                                Metrics
+                            </h4>
+                            <p>Agent performance metrics (Average Handling Time, Resolution Rate).</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="api">
@@ -298,18 +478,54 @@ export default function TechnicalSupportPage() {
                     <p>Our support team integrates deeply with your technology stack to provide context-aware assistance.</p>
 
                     <h3>Manager / Admin API</h3>
-                    <ul>
-                        <li>Secure integration with your Broker CRM to view real-time trader status.</li>
-                        <li>Automated ticket creation from &quot;Platform Error&quot; webhooks.</li>
-                        <li>Ability to pull historical trade logs via API for L2 investigations.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>
+                                CRM
+                            </h4>
+                            <p>Secure integration with your Broker CRM to view real-time trader status.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>
+                                Ticket
+                            </h4>
+                            <p>Automated ticket creation from "Platform Error" webhooks.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><line x1="18" y1="20" x2="18" y2="10" /><line x1="12" y1="20" x2="12" y2="4" /><line x1="6" y1="20" x2="6" y2="14" /></svg>
+                                Logs
+                            </h4>
+                            <p>Ability to pull historical trade logs via API for L2 investigations.</p>
+                        </div>
+                    </div>
 
                     <h3>Gateway & Connectivity API</h3>
-                    <ul>
-                        <li><strong>MetaTrader Manager:</strong> Secure access for account monitoring and group management.</li>
-                        <li><strong>Client Portal Integration:</strong> Deep linking between helpdesk tickets and the trader&apos;s dashboard.</li>
-                        <li><strong>Slack/Teams Integration:</strong> Real-time escalation channel between our team and your senior management.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" /></svg>
+                                Manager
+                            </h4>
+                            <p>MetaTrader Manager: Secure access for account monitoring and group management.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" /><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" /></svg>
+                                Portal
+                            </h4>
+                            <p>Client Portal Integration: Deep linking between helpdesk tickets and the trader's dashboard.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" /></svg>
+                                Chat
+                            </h4>
+                            <p>Slack/Teams Integration: Real-time escalation channel between our team and your senior management.</p>
+                        </div>
+                    </div>
 
                     <h3>Web API / SDK</h3>
                     <p>
@@ -322,31 +538,121 @@ export default function TechnicalSupportPage() {
                     <p>Our pricing is based on a &quot;Pay-as-you-go&quot; model per verification check, ensuring you only pay for the volume you actually process.</p>
 
                     <h3>What’s Included</h3>
-                    <ul>
-                        <li>24/7/365 Coverage across L1 and L2 tiers.</li>
-                        <li>Access to our branded multi-channel helpdesk software.</li>
-                        <li>Multi-language support for 10 core languages.</li>
-                        <li>Weekly operational and technical performance reports.</li>
-                        <li>Continuous training and knowledge base maintenance.</li>
-                        <li>Dedicated Account Manager for your firm.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
+                                24/7
+                            </h4>
+                            <p>24/7/365 Coverage across L1 and L2 tiers.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
+                                Access
+                            </h4>
+                            <p>Access to our branded multi-channel helpdesk software.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><circle cx="12" cy="12" r="10" /><line x1="2" y1="12" x2="22" y2="12" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                Lang
+                            </h4>
+                            <p>Multi-language support for 10 core languages.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><line x1="18" y1="20" x2="18" y2="10" /><line x1="12" y1="20" x2="12" y2="4" /><line x1="6" y1="20" x2="6" y2="14" /></svg>
+                                Reports
+                            </h4>
+                            <p>Weekly operational and technical performance reports.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" /><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" /></svg>
+                                Training
+                            </h4>
+                            <p>Continuous training and knowledge base maintenance.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg>
+                                Manager
+                            </h4>
+                            <p>Dedicated Account Manager for your firm.</p>
+                        </div>
+                    </div>
 
                     <h3>Optional Add-Ons</h3>
-                    <ul>
-                        <li>Outbound &quot;Welcome Calls&quot; for new registrations.</li>
-                        <li>Dedicated agents (Exclusive to your brand).</li>
-                        <li>Technical &quot;Live Video&quot; support sessions.</li>
-                        <li>Specialized support for Proprietary Trading Firms (Rules/Breach assistance).</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
+                                Calls
+                            </h4>
+                            <p>Outbound "Welcome Calls" for new registrations.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
+                                Agents
+                            </h4>
+                            <p>Dedicated agents (Exclusive to your brand).</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><polygon points="23 7 16 12 23 17 23 7" /><rect x="1" y="5" width="15" height="14" rx="2" ry="2" /></svg>
+                                Video
+                            </h4>
+                            <p>Technical "Live Video" support sessions.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2563EB" strokeWidth="2"><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                Prop
+                            </h4>
+                            <p>Specialized support for Proprietary Trading Firms (Rules/Breach assistance).</p>
+                        </div>
+                    </div>
 
                     <h3>Setup Timeline</h3>
-                    <ol>
-                        <li><strong>Workflow Configuration (Days 2-3):</strong> Defining your &quot;Pass/Fail&quot; rules and required levels.</li>
-                        <li><strong>Infrastructure Link (Days 3-5):</strong> Setting up API access and helpdesk instances.</li>
-                        <li><strong>Team Training (Days 5-10):</strong> Training our agents on your brand’s specific &quot;Playbook.&quot;</li>
-                        <li><strong>Shadowing Phase (Days 10-14):</strong> Working alongside your team to verify accuracy.</li>
-                        <li><strong>Go-Live (Day 14):</strong> Our team takes full responsibility for 24/7 technical helpdesk operations.</li>
-                    </ol>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#2563EB', marginRight: '8px' }}>01</span>
+                                Config
+                            </h4>
+                            <p>Workflow Configuration (Days 2-3): Defining your "Pass/Fail" rules and required levels.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#2563EB', marginRight: '8px' }}>02</span>
+                                Link
+                            </h4>
+                            <p>Infrastructure Link (Days 3-5): Setting up API access and helpdesk instances.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#2563EB', marginRight: '8px' }}>03</span>
+                                Training
+                            </h4>
+                            <p>Team Training (Days 5-10): Training our agents on your brand’s specific "Playbook."</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#2563EB', marginRight: '8px' }}>04</span>
+                                Shadow
+                            </h4>
+                            <p>Shadowing Phase (Days 10-14): Working alongside your team to verify accuracy.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#2563EB', marginRight: '8px' }}>05</span>
+                                Live
+                            </h4>
+                            <p>Go-Live (Day 14): Our team takes full responsibility for 24/7 technical helpdesk operations.</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="faq">

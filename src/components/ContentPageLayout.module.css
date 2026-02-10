@@ -204,13 +204,19 @@
 
 /* Article Typography */
 .article h1 {
-    font-family: var(--font-sans);
-    font-size: 2.5rem;
-    font-weight: 700;
-    line-height: 1.2;
-    letter-spacing: -0.02em;
-    color: #0F172A;
-    margin: 0 0 1rem;
+    font-family: var(--font-inter);
+    font-size: 4.5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    color: #111827;
+    letter-spacing: -0.03em;
+    margin-bottom: 2rem;
+    background: linear-gradient(135deg, #111827 0%, #4B5563 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    text-align: center;
 }
 
 .article h2 {
@@ -221,6 +227,7 @@
     letter-spacing: -0.01em;
     color: #0F172A;
     margin: 0 0 1.5rem;
+    text-align: center;
 }
 
 /* Section Cards within Article */
@@ -246,6 +253,7 @@
     line-height: 1.4;
     color: #1E293B;
     margin: 2rem 0 0.75rem;
+    text-align: center;
 }
 
 .article h4 {
@@ -255,6 +263,7 @@
     line-height: 1.4;
     color: #334155;
     margin: 1.5rem 0 0.5rem;
+    text-align: center;
 }
 
 .article p {
@@ -685,6 +694,10 @@
     .article {
         padding: 0;
         text-align: left;
+    }
+
+    .article h1 {
+        font-size: 2.5rem;
     }
 
     .article h1,

@@ -180,34 +180,55 @@ export default function MobileAppWLPage() {
 
                 <div id="why">
                     <h2>Why White Label Mobile App?</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div className="p-4 bg-gray-50 rounded-lg">
-                            <h3 className="font-semibold text-gray-900 mb-2">Ownership of the Ecosystem</h3>
-                            <p className="text-sm text-gray-600">Avoid sending your clients to third-party app providers; keep them within your own branded environment.</p>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                                Ecosystem
+                            </h4>
+                            <p>Ownership of the Ecosystem: Avoid third-party providers; keep clients in your branded environment.</p>
                         </div>
-                        <div className="p-4 bg-gray-50 rounded-lg">
-                            <h3 className="font-semibold text-gray-900 mb-2">Direct Communication</h3>
-                            <p className="text-sm text-gray-600">Use powerful push notifications to alert traders of margin calls, price hits, or promotional offers instantly.</p>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" /></svg>
+                                Communication
+                            </h4>
+                            <p>Direct Communication: Push notifications for margin calls, price hits, or promos.</p>
                         </div>
-                        <div className="p-4 bg-gray-50 rounded-lg">
-                            <h3 className="font-semibold text-gray-900 mb-2">Superior User Retention</h3>
-                            <p className="text-sm text-gray-600">A dedicated, easy-to-use app significantly lowers churn compared to mobile-web interfaces.</p>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
+                                Retention
+                            </h4>
+                            <p>Superior User Retention: dedicated apps lower churn compared to mobile-web.</p>
                         </div>
-                        <div className="p-4 bg-gray-50 rounded-lg">
-                            <h3 className="font-semibold text-gray-900 mb-2">Custom Integration</h3>
-                            <p className="text-sm text-gray-600">Tailor the app’s funding and support features to match your specific localized payment providers.</p>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 2.69l5.74 5.88a1 1 0 0 1 .23.95l-1.35 6a1 1 0 0 1-.5.7l-4.12 2.37a1 1 0 0 1-1 0l-4.12-2.37a1 1 0 0 1-.5-.7l-1.35-6a1 1 0 0 1 .23-.95L12 2.69z" /></svg>
+                                Integration
+                            </h4>
+                            <p>Custom Integration: Tailor funding and support features to your needs.</p>
                         </div>
-                        <div className="p-4 bg-gray-50 rounded-lg">
-                            <h3 className="font-semibold text-gray-900 mb-2">Compliance Readiness</h3>
-                            <p className="text-sm text-gray-600">Built-in modules for KYC document uploads and AML-compliant data handling.</p>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>
+                                Compliance
+                            </h4>
+                            <p>Compliance Readiness: Built-in KYC upload and AML monitoring modules.</p>
                         </div>
-                        <div className="p-4 bg-gray-50 rounded-lg">
-                            <h3 className="font-semibold text-gray-900 mb-2">Low Latency Execution</h3>
-                            <p className="text-sm text-gray-600">Native code ensures that order execution is as fast as your server allows, with zero web-browser lag.</p>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
+                                Speed
+                            </h4>
+                            <p>Low Latency Execution: Native code ensures zero-lag order execution.</p>
                         </div>
-                        <div className="p-4 bg-gray-50 rounded-lg">
-                            <h3 className="font-semibold text-gray-900 mb-2">Regular Updates</h3>
-                            <p className="text-sm text-gray-600">We handle the technical maintenance and OS updates, ensuring your app always works on the latest iPhone or Android models.</p>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M23 6l-9.5 9.5-5-5L1 18" /><path d="M17 6h6v6" /></svg>
+                                Updates
+                            </h4>
+                            <p>Regular Updates: We handle technical maintenance and OS compatibility.</p>
                         </div>
                     </div>
                 </div>
@@ -243,21 +264,81 @@ export default function MobileAppWLPage() {
                         The performance of a mobile app is only as good as the backend infrastructure supporting it. We provide a world-class financial hosting environment.
                     </p>
                     <h3>Data Center Locations</h3>
-                    <ul>
-                        <li><strong>London, UK</strong> - Equinix LD4 (Direct Cross-Connects)</li>
-                        <li><strong>New York, USA</strong> - Equinix NY4</li>
-                        <li><strong>Singapore</strong> - SG1 (Asian Regional Hub)</li>
-                        <li><strong>Dubai, UAE</strong> - MENA Region Hub</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                London
+                            </h4>
+                            <p>London, UK - Equinix LD4 (Direct Cross-Connects)</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                New York
+                            </h4>
+                            <p>New York, USA - Equinix NY4</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                Singapore
+                            </h4>
+                            <p>Singapore - SG1 (Asian Regional Hub)</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                Dubai
+                            </h4>
+                            <p>Dubai, UAE - MENA Region Hub</p>
+                        </div>
+                    </div>
                     <h3>Infrastructure Specifications</h3>
-                    <ul>
-                        <li><strong>Dedicated API Gateway:</strong> Isolated endpoints for mobile traffic to ensure high-speed data delivery.</li>
-                        <li><strong>Edge Caching:</strong> Global content delivery networks (CDNs) to reduce chart loading times for users worldwide.</li>
-                        <li><strong>DDoS Protection:</strong> Hardware-level traffic filtering to prevent app service interruptions.</li>
-                        <li><strong>Secure WebSockets:</strong> Real-time price streaming via encrypted, low-latency data pipes.</li>
-                        <li><strong>Automated Failover:</strong> Redundant server clusters ensure the app remains online even during maintenance.</li>
-                        <li><strong>SLA Statement:</strong> We guarantee [99.9%] availability for the mobile backend services. Our infrastructure is colocated in the same data centers as major liquidity providers to minimize price-feed latency.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M4 17l6-6-6-6" /><path d="M12 19h8" /></svg>
+                                API
+                            </h4>
+                            <p>Dedicated API Gateway: Isolated endpoints for high-speed mobile data.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M5 12.55a11 11 0 0 1 14.08 0" /><path d="M1.42 9a16 16 0 0 1 21.16 0" /><path d="M8.53 16.11a6 6 0 0 1 6.95 0" /><line x1="12" y1="20" x2="12" y2="20" /></svg>
+                                Caching
+                            </h4>
+                            <p>Edge Caching: Global CDNs to reduce chart loading times.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>
+                                DDoS
+                            </h4>
+                            <p>DDoS Protection: Hardware-level traffic filtering.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" /><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" /></svg>
+                                Sockets
+                            </h4>
+                            <p>Secure WebSockets: Real-time price streaming via encrypted pipes.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M18.36 6.64a9 9 0 1 1-12.73 0" /><line x1="12" y1="2" x2="12" y2="12" /></svg>
+                                Failover
+                            </h4>
+                            <p>Automated Failover: Redundant clusters ensure online status.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
+                                SLA
+                            </h4>
+                            <p>SLA Statement: 99.9% availability guarantee.</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="features">
@@ -265,29 +346,107 @@ export default function MobileAppWLPage() {
                     <p>Designed to provide a professional-grade experience for both novice and experienced traders.</p>
 
                     <h3>Trading & Analysis Features</h3>
-                    <ul>
-                        <li>Full order book visibility and one-click execution.</li>
-                        <li>Multi-chart viewing with landscape and portrait support.</li>
-                        <li>Advanced technical tools: RSI, MACD, Bollinger Bands, and more.</li>
-                        <li>Multiple order types: Market, Limit, Stop, and Trailing Stop.</li>
-                        <li>Real-time position management and P&L tracking.</li>
-                        <li>Price alerts and automated trading signals.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2" /><line x1="9" y1="9" x2="15" y2="15" /><line x1="15" y1="9" x2="9" y2="15" /></svg>
+                                Execution
+                            </h4>
+                            <p>Full order book visibility and one-click execution.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" /></svg>
+                                Charts
+                            </h4>
+                            <p>Multi-chart viewing with landscape and portrait support.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2" /></svg>
+                                Analysis
+                            </h4>
+                            <p>Advanced technical tools: RSI, MACD, Bollinger Bands.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" /></svg>
+                                Orders
+                            </h4>
+                            <p>Multiple types: Market, Limit, Stop, and Trailing Stop.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 20V10" /><path d="M18 20V4" /><path d="M6 20v-4" /></svg>
+                                Positions
+                            </h4>
+                            <p>Real-time position management and P&L tracking.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" /><path d="M13.73 21a2 2 0 0 1-3.46 0" /></svg>
+                                Signals
+                            </h4>
+                            <p>Price alerts and automated trading signals.</p>
+                        </div>
+                    </div>
 
                     <h3>Mobile-Specific Tools</h3>
-                    <ul>
-                        <li>Biometric Login (FaceID / Fingerprint).</li>
-                        <li>Dark Mode and Light Mode support.</li>
-                        <li>Integrated "Live Chat" for instant client support.</li>
-                        <li>In-app document scanner for rapid KYC verification.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 2a5 5 0 0 1 5 5v2a5 5 0 0 1-10 0V7a5 5 0 0 1 5-5z" /><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" /></svg>
+                                Biometrics
+                            </h4>
+                            <p>Biometric Login (FaceID / Fingerprint) for security.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="5" /><line x1="12" y1="1" x2="12" y2="3" /><line x1="12" y1="21" x2="12" y2="23" /><line x1="4.22" y1="4.22" x2="5.64" y2="5.64" /><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" /><line x1="1" y1="12" x2="3" y2="12" /><line x1="21" y1="12" x2="23" y2="12" /><line x1="4.22" y1="19.78" x2="5.64" y2="18.36" /><line x1="18.36" y1="5.64" x2="19.78" y2="4.22" /></svg>
+                                Themes
+                            </h4>
+                            <p>Dark Mode and Light Mode support.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" /></svg>
+                                Chat
+                            </h4>
+                            <p>Integrated "Live Chat" for instant client support.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2" /><line x1="12" y1="8" x2="12" y2="16" /><line x1="8" y1="12" x2="16" y2="12" /></svg>
+                                Scanner
+                            </h4>
+                            <p>In-app document scanner for rapid KYC verification.</p>
+                        </div>
+                    </div>
 
                     <h3>Back-Office Connectivity</h3>
-                    <ul>
-                        <li>Real-time balance and equity synchronization with MT4/MT5/cTrader.</li>
-                        <li>Integrated deposit/withdrawal requests via local and crypto gateways.</li>
-                        <li>Full trade history with filterable reporting.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" /><polyline points="9 9 13 4 15 4 17 4 20 4" /></svg>
+                                Sync
+                            </h4>
+                            <p>Real-time balance and equity synchronization with platforms.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><line x1="12" y1="1" x2="12" y2="23" /><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
+                                Funds
+                            </h4>
+                            <p>Integrated deposit/withdrawal requests via local and crypto gateways.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>
+                                History
+                            </h4>
+                            <p>Full trade history with filterable reporting.</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="api">
@@ -295,18 +454,54 @@ export default function MobileAppWLPage() {
                     <p>The mobile app is designed to be the front-end for your existing brokerage or prop firm technology stack.</p>
 
                     <h3>Manager / Admin API</h3>
-                    <ul>
-                        <li>Control featured instruments and promotional banners within the app.</li>
-                        <li>Monitor app usage analytics and user behavior.</li>
-                        <li>Manage push notification campaigns from a centralized dashboard.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="3" y="3" width="7" height="7" /><rect x="14" y="3" width="7" height="7" /><rect x="14" y="14" width="7" height="7" /><rect x="3" y="14" width="7" height="7" /></svg>
+                                Control
+                            </h4>
+                            <p>Control featured instruments and promotional banners within the app.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" /></svg>
+                                Analytics
+                            </h4>
+                            <p>Monitor app usage analytics and user behavior.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" /><path d="M13.73 21a2 2 0 0 1-3.46 0" /></svg>
+                                Notifications
+                            </h4>
+                            <p>Manage push notification campaigns from a centralized dashboard.</p>
+                        </div>
+                    </div>
 
                     <h3>Gateway & Connectivity API</h3>
-                    <ul>
-                        <li><strong>MetaTrader 4/5:</strong> Native bridge for real-time account and trade syncing.</li>
-                        <li><strong>cTrader:</strong> Deep integration via Open API.</li>
-                        <li><strong>Payment Gateways:</strong> Integration with [PSP A], [PSP B], and crypto processors.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" /></svg>
+                                MT4/MT5
+                            </h4>
+                            <p>MetaTrader 4/5: Native bridge for real-time account and trade syncing.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><line x1="2" y1="12" x2="22" y2="12" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                cTrader
+                            </h4>
+                            <p>cTrader: Deep integration via Open API.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2" /><line x1="1" y1="10" x2="23" y2="10" /></svg>
+                                Payments
+                            </h4>
+                            <p>Payment Gateways: Integration with PSPs and crypto processors.</p>
+                        </div>
+                    </div>
 
                     <h3>Web API / SDK</h3>
                     <p>
@@ -319,31 +514,107 @@ export default function MobileAppWLPage() {
                     <p>Our pricing is structured with a setup fee for branding and store submission, followed by a monthly maintenance and support fee.</p>
 
                     <h3>What’s Included</h3>
-                    <ul>
-                        <li>Custom-branded iOS and Android applications.</li>
-                        <li>Direct submission to Apple and Google stores.</li>
-                        <li>Integration with [1] trading server and [1] CRM.</li>
-                        <li>Secure mobile backend hosting.</li>
-                        <li>Regular OS compatibility and security updates.</li>
-                        <li>[24/7] Technical support for infrastructure.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2" /><line x1="12" y1="18" x2="12.01" y2="18" /></svg>
+                                Apps
+                            </h4>
+                            <p>Custom-branded iOS and Android applications.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M20 6L9 17l-5-5" /></svg>
+                                Submission
+                            </h4>
+                            <p>Direct submission to Apple and Google stores.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="8.5" cy="7" r="4" /><line x1="20" y1="8" x2="20" y2="14" /><line x1="23" y1="11" x2="17" y2="11" /></svg>
+                                Integration
+                            </h4>
+                            <p>Integration with [1] trading server and [1] CRM.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
+                                Support
+                            </h4>
+                            <p>[24/7] Technical support for infrastructure.</p>
+                        </div>
+                    </div>
 
                     <h3>Optional Add-Ons</h3>
-                    <ul>
-                        <li>Custom feature development (e.g., social trading integration).</li>
-                        <li>Multi-language translation services.</li>
-                        <li>Advanced marketing and App Store Optimization (ASO).</li>
-                        <li>Integrated "Trader Leaderboards" and competitions.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 20h9" /><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" /></svg>
+                                Custom
+                            </h4>
+                            <p>Custom feature development (e.g., social trading).</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><line x1="2" y1="12" x2="22" y2="12" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                Languages
+                            </h4>
+                            <p>Multi-language translation services.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+                                ASO
+                            </h4>
+                            <p>Advanced marketing and App Store Optimization.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" /><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" /><path d="M4 22h16" /><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" /><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" /><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" /></svg>
+                                Competitions
+                            </h4>
+                            <p>Integrated "Trader Leaderboards" and competitions.</p>
+                        </div>
+                    </div>
 
                     <h3>Setup Timeline</h3>
-                    <ol>
-                        <li><strong>Design & Branding (Days 1-5):</strong> Defining the look, feel, and brand assets.</li>
-                        <li><strong>API Configuration (Days 5-10):</strong> Linking the app to your trading server and CRM.</li>
-                        <li><strong>Beta Testing (Days 10-15):</strong> Rigorous testing on multiple device models.</li>
-                        <li><strong>Store Submission (Days 15-20):</strong> Handling the approval process with Apple and Google.</li>
-                        <li><strong>Go-Live (Day [X]):</strong> Official launch on the App Store and Google Play.</li>
-                    </ol>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#1E40AF', marginRight: '8px' }}>01</span>
+                                Design
+                            </h4>
+                            <p>Design & Branding (Days 1-5): Defining the look, feel, and brand assets.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#1E40AF', marginRight: '8px' }}>02</span>
+                                API
+                            </h4>
+                            <p>API Configuration (Days 5-10): Linking the app to your trading server and CRM.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#1E40AF', marginRight: '8px' }}>03</span>
+                                Testing
+                            </h4>
+                            <p>Beta Testing (Days 10-15): Rigorous testing on multiple device models.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#1E40AF', marginRight: '8px' }}>04</span>
+                                Submission
+                            </h4>
+                            <p>Store Submission (Days 15-20): Handling the approval process.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#1E40AF', marginRight: '8px' }}>05</span>
+                                Go-Live
+                            </h4>
+                            <p>Go-Live (Day [X]): Official launch on the App Store and Google Play.</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="faq">

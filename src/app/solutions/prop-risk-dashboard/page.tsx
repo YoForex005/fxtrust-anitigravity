@@ -179,15 +179,57 @@ export default function PropRiskDashboardPage() {
 
                 <div id="why">
                     <h2>Why Prop Risk Monitoring?</h2>
-                    <ul>
-                        <li><strong>Capital Preservation:</strong> Prevent "hit-and-run" strategies from depleting your firm's liquidity through latency exploits.</li>
-                        <li><strong>Regulatory Compliance:</strong> Maintain an audit trail of why accounts were flagged or suspended, protecting your firm from legal disputes.</li>
-                        <li><strong>Automated News Filters:</strong> Eliminate manual checking of trade timestamps against economic calendars; our system does it instantly.</li>
-                        <li><strong>Group Trading Detection:</strong> Reveal hidden networks of traders executing identical trades to bypass individual drawdown limits.</li>
-                        <li><strong>Fraud Prevention:</strong> Block users attempting to use stolen identities or prohibited "account management" services.</li>
-                        <li><strong>Customizable Sensitivity:</strong> Fine-tune your risk parameters to allow specific strategies while blocking truly toxic flow.</li>
-                        <li><strong>Payout Security:</strong> Run an automated "Risk Clearance" check before approving any trader payout requests.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
+                                Capital Preservation
+                            </h4>
+                            <p>Prevent "hit-and-run" strategies from depleting your firm's liquidity through latency exploits.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>
+                                Compliance
+                            </h4>
+                            <p>Maintain an audit trail of why accounts were flagged or suspended, protecting your firm from legal disputes.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" /><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" /><path d="M4 22h16" /><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" /><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" /><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" /></svg>
+                                News Filters
+                            </h4>
+                            <p>Eliminate manual checking of trade timestamps against economic calendars; our system does it instantly.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
+                                Group Detection
+                            </h4>
+                            <p>Reveal hidden networks of traders executing identical trades to bypass individual drawdown limits.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                                Fraud Prevention
+                            </h4>
+                            <p>Block users attempting to use stolen identities or prohibited "account management" services.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><line x1="12" y1="8" x2="12" y2="16" /><line x1="8" y1="12" x2="16" y2="12" /></svg>
+                                Custom Sensitivity
+                            </h4>
+                            <p>Fine-tune your risk parameters to allow specific strategies while blocking truly toxic flow.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2" /><line x1="1" y1="10" x2="23" y2="10" /></svg>
+                                Payout Security
+                            </h4>
+                            <p>Run an automated "Risk Clearance" check before approving any trader payout requests.</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="branding">
@@ -233,21 +275,75 @@ export default function PropRiskDashboardPage() {
                         Monitoring risk requires a direct, low-latency connection to the trading server's message bus to capture trade data the moment it is generated.
                     </p>
                     <h3>Data Center Locations</h3>
-                    <ul>
-                        <li><strong>London, UK</strong> - Equinix LD4 (Primary Monitoring Hub)</li>
-                        <li><strong>New York, USA</strong> - Equinix NY4 (Global Surveillance Node)</li>
-                        <li><strong>Singapore</strong> - Equinix SG1 (APAC Risk Node)</li>
-                        <li><strong>Frankfurt, Germany</strong> - FR2 (European Data Center)</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                London, UK
+                            </h4>
+                            <p>Equinix LD4 (Primary Monitoring Hub)</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                New York, USA
+                            </h4>
+                            <p>Equinix NY4 (Global Surveillance Node)</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                Singapore
+                            </h4>
+                            <p>Equinix SG1 (APAC Risk Node)</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                Frankfurt, Germany
+                            </h4>
+                            <p>FR2 (European Data Center)</p>
+                        </div>
+                    </div>
 
                     <h3>Infrastructure Specifications</h3>
-                    <ul>
-                        <li>High-availability clusters to ensure zero monitoring downtime.</li>
-                        <li>Direct API/Plugin access to MT4/MT5 and cTrader backends.</li>
-                        <li>Multi-layered database for historical trade pattern analysis.</li>
-                        <li>Isolated environments for sensitive PII (Personally Identifiable Information).</li>
-                        <li>Real-time offsite backups for all audit logs and risk events.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" /><path d="M13.73 21a2 2 0 0 1-3.46 0" /></svg>
+                                High Availability
+                            </h4>
+                            <p>High-availability clusters to ensure zero monitoring downtime.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 20V10" /><path d="M18 20V4" /><path d="M6 20v-4" /></svg>
+                                Direct Access
+                            </h4>
+                            <p>Direct API/Plugin access to MT4/MT5 and cTrader backends.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" /></svg>
+                                Historical DB
+                            </h4>
+                            <p>Multi-layered database for historical trade pattern analysis.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>
+                                Isolated Env
+                            </h4>
+                            <p>Isolated environments for sensitive PII (Personally Identifiable Information).</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z" /><polyline points="17 21 17 13 7 13 7 21" /><polyline points="7 3 7 8 15 8" /></svg>
+                                Real-Time Backups
+                            </h4>
+                            <p>Real-time offsite backups for all audit logs and risk events.</p>
+                        </div>
+                    </div>
                     <div className="infoBox">
                         <p><strong>Risk Assurance Statement:</strong> Our infrastructure is designed to process over [X] trades per second. We guarantee that our monitoring logic is synchronized with your server time to within [X] milliseconds.</p>
                     </div>
@@ -258,29 +354,107 @@ export default function PropRiskDashboardPage() {
                     <p>Comprehensive tools to identify and mitigate every modern prop firm risk.</p>
 
                     <h3>Detection & Monitoring Features</h3>
-                    <ul>
-                        <li><strong>HFT & Arbitrage:</strong> Detect sub-second trade durations and price-feed exploits.</li>
-                        <li><strong>News Trading:</strong> Automated cross-referencing with global economic calendars.</li>
-                        <li><strong>Grid & Martingale Tracking:</strong> Identify high-risk money management styles.</li>
-                        <li><strong>Correlation Engine:</strong> Spot identical trading patterns across multiple accounts.</li>
-                        <li><strong>Inactivity Monitoring:</strong> Flag accounts that are being "warehoused" or used for hedging.</li>
-                        <li><strong>IP/Geo-location Tracking:</strong> Alert on suspicious login patterns or VPN usage.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
+                                HFT & Arbitrage
+                            </h4>
+                            <p>Detect sub-second trade durations and price-feed exploits.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" /><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" /><path d="M4 22h16" /><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" /><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" /><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" /></svg>
+                                News Trading
+                            </h4>
+                            <p>Automated cross-referencing with global economic calendars.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" /></svg>
+                                Grid & Martingale
+                            </h4>
+                            <p>Identify high-risk money management styles.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
+                                Correlation
+                            </h4>
+                            <p>Spot identical trading patterns across multiple accounts.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><line x1="12" y1="8" x2="12" y2="16" /><line x1="8" y1="12" x2="16" y2="12" /></svg>
+                                Inactivity
+                            </h4>
+                            <p>Flag accounts that are being "warehoused" or used for hedging.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                IP Tracking
+                            </h4>
+                            <p>Alert on suspicious login patterns or VPN usage.</p>
+                        </div>
+                    </div>
 
                     <h3>Analytics Tools</h3>
-                    <ul>
-                        <li>Real-time "Risk Heatmap" of all active traders.</li>
-                        <li>Historical "Drift" analysis (detecting when a trader changes their style).</li>
-                        <li>Detailed breach logs with visual chart overlays of the event.</li>
-                        <li>Comparison tool for suspected "Copy Trading" groups.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2" /></svg>
+                                Risk Heatmap
+                            </h4>
+                            <p>Real-time "Risk Heatmap" of all active traders.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 20V10" /><path d="M18 20V4" /><path d="M6 20v-4" /></svg>
+                                Drift Analysis
+                            </h4>
+                            <p>Historical "Drift" analysis (detecting when a trader changes their style).</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>
+                                Breach Logs
+                            </h4>
+                            <p>Detailed breach logs with visual chart overlays of the event.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
+                                Copy Trading
+                            </h4>
+                            <p>Comparison tool for suspected "Copy Trading" groups.</p>
+                        </div>
+                    </div>
 
                     <h3>Automation Capability</h3>
-                    <ul>
-                        <li>Automated "Hard Breach" account suspension.</li>
-                        <li>"Soft Breach" warnings via Email/Telegram/SMS.</li>
-                        <li>Automated tagging of accounts for manual review by senior risk officers.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><line x1="15" y1="9" x2="9" y2="15" /><line x1="9" y1="9" x2="15" y2="15" /></svg>
+                                Hard Breach
+                            </h4>
+                            <p>Automated "Hard Breach" account suspension.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" /><path d="M13.73 21a2 2 0 0 1-3.46 0" /></svg>
+                                Soft Breach
+                            </h4>
+                            <p>"Soft Breach" warnings via Email/Telegram/SMS.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>
+                                Auto Tagging
+                            </h4>
+                            <p>Automated tagging of accounts for manual review by senior risk officers.</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="api">
@@ -288,19 +462,54 @@ export default function PropRiskDashboardPage() {
                     <p>The Risk Dashboard is built to be the "Integrity Layer" of your brokerage tech stack.</p>
 
                     <h3>Manager / Admin API</h3>
-                    <ul>
-                        <li>Bulk update risk parameters across specific account groups.</li>
-                        <li>Programmatically suspend or reactivate accounts based on external audits.</li>
-                        <li>Export risk data to third-party BI tools or regulatory reporting engines.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" /><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" /></svg>
+                                Bulk Updates
+                            </h4>
+                            <p>Bulk update risk parameters across specific account groups.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><line x1="15" y1="9" x2="9" y2="15" /><line x1="9" y1="9" x2="15" y2="15" /></svg>
+                                Auto Suspend
+                            </h4>
+                            <p>Programmatically suspend or reactivate accounts based on external audits.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" /></svg>
+                                Data Export
+                            </h4>
+                            <p>Export risk data to third-party BI tools or regulatory reporting engines.</p>
+                        </div>
+                    </div>
 
                     <h3>Platform Connectivity</h3>
-                    <ul>
-                        <li><strong>MetaTrader 4/5:</strong> Full server-side integration via Manager API.</li>
-                        <li><strong>cTrader:</strong> Native connectivity via Web Services and Open API.</li>
-                        <li><strong>Match-Trader:</strong> Support for modern prop-focused trading environments.</li>
-                    </ul>
-
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" /></svg>
+                                MetaTrader 4/5
+                            </h4>
+                            <p>Full server-side integration via Manager API.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M8 14s1.5 2 4 2 4-2 4-2" /><line x1="9" y1="9" x2="9.01" y2="9" /><line x1="15" y1="9" x2="15.01" y2="9" /></svg>
+                                cTrader
+                            </h4>
+                            <p>Native connectivity via Web Services and Open API.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2" /><rect x="2" y="14" width="20" height="8" rx="2" ry="2" /><line x1="6" y1="6" x2="6.01" y2="6" /><line x1="6" y1="18" x2="6.01" y2="18" /></svg>
+                                Match-Trader
+                            </h4>
+                            <p>Support for modern prop-focused trading environments.</p>
+                        </div>
+                    </div>
                     <h3>Web API / SDK</h3>
                     <p>
                         We provide a REST API for custom dashboard development. This allows you to pull "Risk Status" data directly into your CRM, so your support team can see instantly if a trader's account was disabled due to a rule breach or a technical error.
@@ -312,31 +521,121 @@ export default function PropRiskDashboardPage() {
                     <p>Our pricing is structured based on the volume of accounts monitored, ensuring you only pay for the protection you need.</p>
 
                     <h3>What’s Included</h3>
-                    <ul>
-                        <li>Full access to the Risk Dashboard & Admin UI.</li>
-                        <li>HFT and Anti-Fraud detection modules.</li>
-                        <li>Pre-configured News Trading event database.</li>
-                        <li>[X] trading server connection(s).</li>
-                        <li>Automated email/Telegram alert system.</li>
-                        <li>Regular logic updates to counter new "cheat" strategies.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2" /><line x1="3" y1="9" x2="21" y2="9" /><line x1="9" y1="21" x2="9" y2="9" /></svg>
+                                Dashboard
+                            </h4>
+                            <p>Full access to the Risk Dashboard & Admin UI.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                                Detection
+                            </h4>
+                            <p>HFT and Anti-Fraud detection modules.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6" /><path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18" /><path d="M4 22h16" /><path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22" /><path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22" /><path d="M18 2H6v7a6 6 0 0 0 12 0V2Z" /></svg>
+                                News Trading
+                            </h4>
+                            <p>Pre-configured News Trading event database.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M2 17h2v.006c0 1.637 1.258 2.064 2.126 2.394.869.33 2.874 1.6 2.874 1.6h.016L12 21l-3.32-8.68A2 2 0 0 1 8.35 11h7.3a2 2 0 0 1 1.67 1.32L20.66 21l-7.23-2.906a3.52 3.52 0 0 0-1.42-.3h-.01" /></svg>
+                                Connection
+                            </h4>
+                            <p>1 trading server connection.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" /><path d="M13.73 21a2 2 0 0 1-3.46 0" /></svg>
+                                Alerts
+                            </h4>
+                            <p>Automated email/Telegram alert system.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M21 2v6h-6" /><path d="M3 12a9 9 0 0 1 15-6.7L21 8" /><path d="M3 22v-6h6" /><path d="M21 12a9 9 0 0 1-15 6.7L3 16" /></svg>
+                                Updates
+                            </h4>
+                            <p>Regular logic updates to counter new "cheat" strategies.</p>
+                        </div>
+                    </div>
 
                     <h3>Optional Add-Ons</h3>
-                    <ul>
-                        <li>Custom "Strategy Fingerprinting" for unique firm rules.</li>
-                        <li>Dedicated risk officer support for payout audits.</li>
-                        <li>Advanced KYC/IP correlation with third-party databases.</li>
-                        <li>White-labeled mobile risk alert app for firm owners.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
+                                Fingerprinting
+                            </h4>
+                            <p>Custom "Strategy Fingerprinting" for unique firm rules.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
+                                Audits
+                            </h4>
+                            <p>Dedicated risk officer support for payout audits.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                KYC/IP
+                            </h4>
+                            <p>Advanced KYC/IP correlation with third-party databases.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2" /><line x1="12" y1="18" x2="12.01" y2="18" /></svg>
+                                Mobile Risk
+                            </h4>
+                            <p>White-labeled mobile risk alert app for firm owners.</p>
+                        </div>
+                    </div>
 
                     <h3>Setup Timeline</h3>
-                    <ol>
-                        <li><strong>Risk Audit (Days 1-2):</strong> Defining your firm’s "Toxic" parameters.</li>
-                        <li><strong>Server Connectivity (Days 3-4):</strong> Establishing secure API links to trading servers.</li>
-                        <li><strong>Threshold Calibration (Days 5-7):</strong> Testing the logic against historical trade data.</li>
-                        <li><strong>Workflow Integration (Days 7-8):</strong> Setting up automated alerts and suspensions.</li>
-                        <li><strong>Go-Live (Day [X]):</strong> Full real-time monitoring activation.</li>
-                    </ol>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#1E40AF', marginRight: '8px' }}>01</span>
+                                Audit
+                            </h4>
+                            <p>Risk Audit: Defining your firm's "Toxic" parameters (Days 1-2).</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#1E40AF', marginRight: '8px' }}>02</span>
+                                Connect
+                            </h4>
+                            <p>Server Connectivity: Establishing secure API links to trading servers (Days 3-4).</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#1E40AF', marginRight: '8px' }}>03</span>
+                                Calibrate
+                            </h4>
+                            <p>Threshold Calibration: Testing the logic against historical trade data (Days 5-7).</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#1E40AF', marginRight: '8px' }}>04</span>
+                                Integrate
+                            </h4>
+                            <p>Workflow Integration: Setting up automated alerts and suspensions (Days 7-8).</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#1E40AF', marginRight: '8px' }}>05</span>
+                                Go-Live
+                            </h4>
+                            <p>Go-Live: Full real-time monitoring activation (Day 10).</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="faq">

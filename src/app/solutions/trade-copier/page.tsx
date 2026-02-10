@@ -190,15 +190,57 @@ export default function TradeCopierPage() {
 
                 <div id="why">
                     <h2>Why Trade Copier Services?</h2>
-                    <ul>
-                        <li><strong>Efficiency at Scale:</strong> Eliminate the human error of manual multi-tasking by automating your entire account portfolio.</li>
-                        <li><strong>Custom Risk Management:</strong> Define specific lot-size multipliers or fixed lot settings for each sub-account individually.</li>
-                        <li><strong>Cross-Broker Connectivity:</strong> Bridge accounts across different brokers to take advantage of varied liquidity or regulatory environments.</li>
-                        <li><strong>Partial Close Synchronization:</strong> Ensure that when you scale out of a position on the Master, your sub-accounts follow suit instantly.</li>
-                        <li><strong>Hidden Operations:</strong> Sub-accounts can be configured to hide stop-losses and take-profits from the broker to prevent price hunting.</li>
-                        <li><strong>Disaster Recovery:</strong> If one terminal goes offline, the cloud-based copier continues to monitor and manage open positions.</li>
-                        <li><strong>Global Access:</strong> Manage your Master-to-Sub relationships from anywhere in the world via a secure web interface.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z" /><polyline points="13 2 13 9 20 9" /></svg>
+                                Efficiency
+                            </h4>
+                            <p>Efficiency at Scale: Eliminate the human error of manual multi-tasking by automating your entire account portfolio.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                                Risk Mgmt
+                            </h4>
+                            <p>Custom Risk Management: Define specific lot-size multipliers or fixed lot settings for each sub-account individually.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M2 12h20" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                Connectivity
+                            </h4>
+                            <p>Cross-Broker Connectivity: Bridge accounts across different brokers to take advantage of varied liquidity or regulatory environments.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M21.21 15.89A10 10 0 1 1 8 2.83" /><path d="M22 12A10 10 0 0 0 12 2v10z" /></svg>
+                                Sync
+                            </h4>
+                            <p>Partial Close Synchronization: Ensure that when you scale out of a position on the Master, your sub-accounts follow suit instantly.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M17.94 17.94A10 10 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24" /><line x1="1" y1="1" x2="23" y2="23" /></svg>
+                                Stealth
+                            </h4>
+                            <p>Hidden Operations: Sub-accounts can be configured to hide stop-losses and take-profits from the broker to prevent price hunting.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M18.36 6.64a9 9 0 1 1-12.73 0" /><line x1="12" y1="2" x2="12" y2="12" /></svg>
+                                Recovery
+                            </h4>
+                            <p>Disaster Recovery: If one terminal goes offline, the cloud-based copier continues to monitor and manage open positions.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><line x1="2" y1="12" x2="22" y2="12" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                Access
+                            </h4>
+                            <p>Global Access: Manage your Master-to-Sub relationships from anywhere in the world via a secure web interface.</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="branding">
@@ -245,21 +287,75 @@ export default function TradeCopierPage() {
                     </p>
 
                     <h3>Data Center Locations</h3>
-                    <ul>
-                        <li><strong>London, UK</strong> - Equinix LD4</li>
-                        <li><strong>New York, USA</strong> - Equinix NY4</li>
-                        <li><strong>Singapore</strong> - Equinix SG1</li>
-                        <li><strong>Frankfurt, Germany</strong> - Equinix FR2</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                London, UK
+                            </h4>
+                            <p>Equinix LD4</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                New York, USA
+                            </h4>
+                            <p>Equinix NY4</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                Singapore
+                            </h4>
+                            <p>Equinix SG1</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                Frankfurt, Germany
+                            </h4>
+                            <p>Equinix FR2</p>
+                        </div>
+                    </div>
 
                     <h3>Infrastructure Specifications</h3>
-                    <ul>
-                        <li>High-speed fiber-optic cross-connects between major broker servers.</li>
-                        <li>Redundant cloud nodes to ensure the copier engine never goes offline.</li>
-                        <li>End-to-end AES-256 encryption for all trade data and account credentials.</li>
-                        <li>Low-latency API gateways for MT4, MT5, and cTrader.</li>
-                        <li>Real-time automated backups of all account mappings and settings.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" /></svg>
+                                Fiber
+                            </h4>
+                            <p>High-speed fiber-optic cross-connects between major broker servers.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2" /><rect x="2" y="14" width="20" height="8" rx="2" ry="2" /><line x1="6" y1="6" x2="6.01" y2="6" /><line x1="6" y1="18" x2="6.01" y2="18" /></svg>
+                                Redundant
+                            </h4>
+                            <p>Redundant cloud nodes to ensure the copier engine never goes offline.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>
+                                Encryption
+                            </h4>
+                            <p>End-to-end AES-256 encryption for all trade data and account credentials.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242" /><path d="M12 12v9" /><path d="m16 16-4-4-4 4" /></svg>
+                                Gateways
+                            </h4>
+                            <p>Low-latency API gateways for MT4, MT5, and cTrader.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" /></svg>
+                                Backups
+                            </h4>
+                            <p>Real-time automated backups of all account mappings and settings.</p>
+                        </div>
+                    </div>
 
                     <div className="infoBox">
                         <p><strong>Uptime Statement:</strong> We guarantee a [99.9%] uptime for the copier engine. Our infrastructure is colocated in the same data centers as the world's largest liquidity providers to ensure the lowest possible latency.</p>
@@ -271,26 +367,86 @@ export default function TradeCopierPage() {
                     <p>Our trade copier is packed with tools for professional account replication.</p>
 
                     <h3>Replication Features</h3>
-                    <ul>
-                        <li><strong>Many-to-One / One-to-Many:</strong> Copy from multiple masters to one sub, or vice versa.</li>
-                        <li><strong>Lot Multipliers:</strong> Scale trades by [0.5x], [1.0x], [2.0x], etc.</li>
-                        <li><strong>Equity Proportional:</strong> Automatically calculate lots based on the equity ratio between accounts.</li>
-                        <li><strong>Symbol Mapping:</strong> Map "GOLD" on Master to "XAUUSD" on Sub effortlessly.</li>
-                        <li><strong>Filtering:</strong> Copy only specific symbols, magic numbers, or trade comments.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
+                                Many-to-One
+                            </h4>
+                            <p>Many-to-One / One-to-Many: Copy from multiple masters to one sub, or vice versa.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><line x1="12" y1="5" x2="12" y2="19" /><line x1="5" y1="12" x2="19" y2="12" /></svg>
+                                Multipliers
+                            </h4>
+                            <p>Lot Multipliers: Scale trades by [0.5x], [1.0x], [2.0x], etc.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M21.21 15.89A10 10 0 1 1 8 2.83" /><path d="M22 12A10 10 0 0 0 12 2v10z" /></svg>
+                                Proportional
+                            </h4>
+                            <p>Equity Proportional: Automatically calculate lots based on the equity ratio between accounts.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M16.2 7.8l-2 6.3-6.4 2.1 2-6.3z" /></svg>
+                                Mapping
+                            </h4>
+                            <p>Symbol Mapping: Map "GOLD" on Master to "XAUUSD" on Sub effortlessly.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3" /></svg>
+                                Filtering
+                            </h4>
+                            <p>Filtering: Copy only specific symbols, magic numbers, or trade comments.</p>
+                        </div>
+                    </div>
 
                     <h3>Management Tools</h3>
-                    <ul>
-                        <li><strong>Global Stop-Loss:</strong> Set a hard equity stop across all sub-accounts.</li>
-                        <li><strong>Inverse Copying:</strong> Replicate a losing strategy in reverse to profit from poor performance.</li>
-                        <li><strong>Max Open Trades:</strong> Limit the number of concurrent positions on sub-accounts.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><line x1="4.93" y1="4.93" x2="19.07" y2="19.07" /></svg>
+                                Global SL
+                            </h4>
+                            <p>Global Stop-Loss: Set a hard equity stop across all sub-accounts.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><polyline points="23 4 23 10 17 10" /><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10" /></svg>
+                                Inverse
+                            </h4>
+                            <p>Inverse Copying: Replicate a losing strategy in reverse to profit from poor performance.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2" /><line x1="3" y1="9" x2="21" y2="9" /></svg>
+                                Max Trades
+                            </h4>
+                            <p>Max Open Trades: Limit the number of concurrent positions on sub-accounts.</p>
+                        </div>
+                    </div>
 
                     <h3>Analytics & Logs</h3>
-                    <ul>
-                        <li><strong>Real-Time Trade Stream:</strong> See trades being copied in a live console.</li>
-                        <li><strong>Slippage Analytics:</strong> Track the price difference between Master and Sub for every trade.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><polyline points="4 17 10 11 14 15 20 9" /><line x1="20" y1="9" x2="20" y2="15" /></svg>
+                                Trade Stream
+                            </h4>
+                            <p>Real-Time Trade Stream: See trades being copied in a live console.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><line x1="12" y1="1" x2="12" y2="23" /><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
+                                Slippage
+                            </h4>
+                            <p>Slippage Analytics: Track the price difference between Master and Sub for every trade.</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="api">
@@ -298,19 +454,54 @@ export default function TradeCopierPage() {
                     <p>The trade copier is designed to be a flexible component of your larger trading operations.</p>
 
                     <h3>Manager / Admin API</h3>
-                    <ul>
-                        <li>Programmatically link new sub-accounts via your existing CRM.</li>
-                        <li>Modify risk parameters and multipliers via external API calls.</li>
-                        <li>Extract real-time performance data for your own proprietary dashboards.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" /><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" /></svg>
+                                Link
+                            </h4>
+                            <p>Programmatically link new sub-accounts via your existing CRM.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
+                                Risk Params
+                            </h4>
+                            <p>Modify risk parameters and multipliers via external API calls.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" /></svg>
+                                Data
+                            </h4>
+                            <p>Extract real-time performance data for your own proprietary dashboards.</p>
+                        </div>
+                    </div>
 
                     <h3>Gateway & Connectivity API</h3>
-                    <ul>
-                        <li><strong>MetaTrader 4/5:</strong> Native support via Manager API and Terminal plugins.</li>
-                        <li><strong>cTrader:</strong> Integration via Open API.</li>
-                        <li><strong>FIX API:</strong> Connect institutional Master feeds directly to retail sub-accounts.</li>
-                    </ul>
-
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" /></svg>
+                                MT4/5
+                            </h4>
+                            <p>MetaTrader 4/5: Native support via Manager API and Terminal plugins.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M8 14s1.5 2 4 2 4-2 4-2" /><line x1="9" y1="9" x2="9.01" y2="9" /><line x1="15" y1="9" x2="15.01" y2="9" /></svg>
+                                cTrader
+                            </h4>
+                            <p>cTrader: Integration via Open API.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" /></svg>
+                                FIX API
+                            </h4>
+                            <p>FIX API: Connect institutional Master feeds directly to retail sub-accounts.</p>
+                        </div>
+                    </div>
                     <h3>Web API / SDK</h3>
                     <p>
                         We provide a RESTful API and Webhooks. This allows you to build a custom front-end where your clients can log in and manage their own copier settings, see their status, and view their individual slippage reports.
@@ -322,31 +513,114 @@ export default function TradeCopierPage() {
                     <p>Our pricing is flexible, offering both per-account monthly fees and volume-based enterprise licenses.</p>
 
                     <h3>What’s Included</h3>
-                    <ul>
-                        <li>Full Trade Copier license and Admin UI.</li>
-                        <li>Support for [X] Master and [X] Sub accounts.</li>
-                        <li>Standard symbol mapping and risk configuration.</li>
-                        <li>Cloud-based hosting on Equinix infrastructure.</li>
-                        <li>Regular security and software updates.</li>
-                        <li>[24/7] Technical support for connectivity issues.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>
+                                License
+                            </h4>
+                            <p>Full Trade Copier license and Admin UI.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
+                                Support
+                            </h4>
+                            <p>Support for [X] Master and [X] Sub accounts.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M16.2 7.8l-2 6.3-6.4 2.1 2-6.3z" /></svg>
+                                Mapping
+                            </h4>
+                            <p>Standard symbol mapping and risk configuration.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2" /><rect x="2" y="14" width="20" height="8" rx="2" ry="2" /><line x1="6" y1="6" x2="6.01" y2="6" /><line x1="6" y1="18" x2="6.01" y2="18" /></svg>
+                                Hosting
+                            </h4>
+                            <p>Cloud-based hosting on Equinix infrastructure.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" /></svg>
+                                Updates
+                            </h4>
+                            <p>Regular security and software updates.</p>
+                        </div>
+                    </div>
 
                     <h3>Optional Add-Ons</h3>
-                    <ul>
-                        <li>Advanced Inverse (Reverse) Copying module.</li>
-                        <li>Custom bridge development for proprietary platforms.</li>
-                        <li>White-labeled mobile app for copier management.</li>
-                        <li>High-availability dedicated server cluster.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><polyline points="23 4 23 10 17 10" /><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10" /></svg>
+                                Inverse Copying
+                            </h4>
+                            <p>Advanced Inverse (Reverse) Copying module.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" /></svg>
+                                Custom Bridge
+                            </h4>
+                            <p>Custom bridge development for proprietary platforms.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2" /><line x1="12" y1="18" x2="12.01" y2="18" /></svg>
+                                Mobile App
+                            </h4>
+                            <p>White-labeled mobile app for copier management.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2" /><rect x="2" y="14" width="20" height="8" rx="2" ry="2" /><line x1="6" y1="6" x2="6.01" y2="6" /><line x1="6" y1="18" x2="6.01" y2="18" /></svg>
+                                Dedicated Cluster
+                            </h4>
+                            <p>High-availability dedicated server cluster.</p>
+                        </div>
+                    </div>
 
                     <h3>Setup Timeline</h3>
-                    <ol>
-                        <li><strong>Requirement Mapping (Days 1-2):</strong> Identifying account locations and brokers.</li>
-                        <li><strong>Infrastructure Provisioning (Days 3-4):</strong> Setting up cloud nodes and API tunnels.</li>
-                        <li><strong>Account Mapping (Days 5-6):</strong> Configuring symbol maps and lot multipliers.</li>
-                        <li><strong>UAT & Testing (Days 7-8):</strong> Testing replication speed and accuracy on demo accounts.</li>
-                        <li><strong>Go-Live (Day [X]):</strong> Activation of live account replication.</li>
-                    </ol>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#1E40AF', marginRight: '8px' }}>01</span>
+                                Mapping
+                            </h4>
+                            <p>Requirement Mapping: Identifying account locations and brokers (Days 1-2).</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#1E40AF', marginRight: '8px' }}>02</span>
+                                Provisioning
+                            </h4>
+                            <p>Infrastructure Provisioning: Setting up cloud nodes and API tunnels (Days 3-4).</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#1E40AF', marginRight: '8px' }}>03</span>
+                                Account Mapping
+                            </h4>
+                            <p>Account Mapping: Configuring symbol maps and lot multipliers (Days 5-6).</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#1E40AF', marginRight: '8px' }}>04</span>
+                                UAT
+                            </h4>
+                            <p>UAT & Testing: Testing replication speed and accuracy on demo accounts (Days 7-8).</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#1E40AF', marginRight: '8px' }}>05</span>
+                                Go-Live
+                            </h4>
+                            <p>Go-Live: Activation of live account replication (Day [X]).</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="faq">

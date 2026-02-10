@@ -144,25 +144,91 @@ export default function LiquidityAccessPage() {
                         Our liquidity infrastructure is optimized for institutional speed, ensuring that price discovery and execution happen in milliseconds.
                     </p>
                     {/* Note: Key stats are displayed in the Quick Facts sidebar for better visibility */}
-                    <ul>
-                        <li><strong>99.9%</strong> — Fill Rate on standard market orders during peak volatility.</li>
-                        <li><strong>3-5 Days</strong> — Average setup for FIX API or Bridge integration.</li>
-                        <li><strong>100+</strong> — Trading Instruments available across all asset classes.</li>
-                        <li><strong>24/7</strong> — Technical Support for feed stability and connectivity.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" /></svg>
+                                99.9% Fill Rate
+                            </h4>
+                            <p>Consistent execution on standard market orders even during peak volatility.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
+                                3-5 Days Setup
+                            </h4>
+                            <p>Average setup time for FIX API or Bridge integration.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" /></svg>
+                                100+ Instruments
+                            </h4>
+                            <p>Trading Instruments available across all asset classes.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" /><path d="M13.73 21a2 2 0 0 1-3.46 0" /></svg>
+                                24/7 Support
+                            </h4>
+                            <p>Technical Support for feed stability and connectivity.</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="why">
                     <h2>Why Tier-1 Liquidity?</h2>
-                    <ul>
-                        <li><strong>Institutional Price Depth:</strong> Access multiple levels of liquidity to ensure large orders are filled with minimal market impact.</li>
-                        <li><strong>Competitive Edge:</strong> Raw spreads from Tier-1 providers allow you to offer the most attractive pricing to your retail and professional traders.</li>
-                        <li><strong>Risk Management:</strong> Diversifying across multiple LPs protects your brokerage from the downtime or pricing gaps of a single provider.</li>
-                        <li><strong>Rapid Execution:</strong> Low-latency fiber-optic connections to major data centers minimize the risk of requotes and slippage.</li>
-                        <li><strong>Multi-Asset Efficiency:</strong> Manage all your risk and margins in one place, rather than maintaining separate capital across different providers.</li>
-                        <li><strong>No &quot;Last Look&quot; Options:</strong> Access execution models that offer guaranteed fills without the provider having the option to reject trades.</li>
-                        <li><strong>Regulatory Compliance:</strong> Our liquidity sources are vetted and follow global standards for financial market integrity.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" /></svg>
+                                Institutional Depth
+                            </h4>
+                            <p>Access multiple levels of liquidity to ensure large orders are filled with minimal market impact.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" /></svg>
+                                Competitive Edge
+                            </h4>
+                            <p>Raw spreads from Tier-1 providers allow you to offer the most attractive pricing to your traders.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                                Risk Management
+                            </h4>
+                            <p>Diversifying across multiple LPs protects your brokerage from downtime or pricing gaps.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" /></svg>
+                                Rapid Execution
+                            </h4>
+                            <p>Low-latency fiber-optic connections to major data centers minimize requotes and slippage.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a4 4 0 0 0-4-4H2z" /><path d="M22 3h-6a4 4 0 0 0-4 4v14a4 4 0 0 1 4-4h6z" /></svg>
+                                Multi-Asset Efficiency
+                            </h4>
+                            <p>Manage all your risk and margins in one place, rather than maintaining separate capital across providers.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><line x1="15" y1="9" x2="9" y2="15" /><line x1="9" y1="9" x2="15" y2="15" /></svg>
+                                No "Last Look"
+                            </h4>
+                            <p>Access execution models that offer guaranteed fills without the provider having the option to reject trades.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                                Regulatory Compliance
+                            </h4>
+                            <p>Our liquidity sources are vetted and follow global standards for financial market integrity.</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="branding">
@@ -170,12 +236,36 @@ export default function LiquidityAccessPage() {
                     <p>
                         For brokers offering sub-white labels or institutional services, our liquidity solution allows you to maintain a professional, branded ecosystem for your partners.
                     </p>
-                    <ul>
-                        <li><strong>Custom Markup Profiles:</strong> Define your own spread markups and commissions per instrument or per client group to manage your revenue streams.</li>
-                        <li><strong>Branded Reporting:</strong> Generate daily and monthly execution reports featuring your brokerage logo for your institutional or B2B clients.</li>
-                        <li><strong>Proprietary Feed Naming:</strong> Name your liquidity streams (e.g., &quot;Prime-Gold Feed&quot;) within your trading server to differentiate your product tiers.</li>
-                        <li><strong>Client API Documentation:</strong> Provide your own branded documentation for clients who wish to connect directly to your liquidity via FIX API.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
+                                Custom Markups
+                            </h4>
+                            <p>Define your own spread markups and commissions per instrument or per client group.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>
+                                Branded Reporting
+                            </h4>
+                            <p>Generate daily and monthly execution reports featuring your brokerage logo.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" /><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" /></svg>
+                                Feed Naming
+                            </h4>
+                            <p>Name your liquidity streams (e.g., "Prime-Gold Feed") to differentiate your product tiers.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>
+                                API Docs
+                            </h4>
+                            <p>Provide your own branded documentation for clients connecting via FIX API.</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="infrastructure">
@@ -184,20 +274,74 @@ export default function LiquidityAccessPage() {
                         The stability of your liquidity feed depends on where it is hosted. Our infrastructure is colocated within the world&#39;s most critical financial ecosystems.
                     </p>
                     <h3>Data Center Locations</h3>
-                    <ul>
-                        <li><strong>London, UK</strong> - Equinix LD4 (Primary FX Hub)</li>
-                        <li><strong>New York, USA</strong> - Equinix NY4 (Global Equities/FX)</li>
-                        <li><strong>Tokyo, Japan</strong> - Equinix TY3 (Asian Market Hub)</li>
-                        <li><strong>Singapore</strong> - Equinix SG1 (Emerging Market Access)</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                London, UK
+                            </h4>
+                            <p>Equinix LD4 (Primary FX Hub)</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                New York, USA
+                            </h4>
+                            <p>Equinix NY4 (Global Equities/FX)</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                Tokyo, Japan
+                            </h4>
+                            <p>Equinix TY3 (Asian Market Hub)</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                Singapore
+                            </h4>
+                            <p>Equinix SG1 (Emerging Market Access)</p>
+                        </div>
+                    </div>
                     <h3>Infrastructure Specifications</h3>
-                    <ul>
-                        <li>High-speed cross-connects for sub-millisecond latency.</li>
-                        <li>Redundant fiber-optic paths to prevent single points of failure.</li>
-                        <li>Enterprise-grade DDoS protection for all API endpoints.</li>
-                        <li>Hardware-level optimization for FIX protocol messaging.</li>
-                        <li>Real-time monitoring of network jitter and packet loss.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" /></svg>
+                                Low Latency
+                            </h4>
+                            <p>High-speed cross-connects for sub-millisecond latency.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" /></svg>
+                                Redundancy
+                            </h4>
+                            <p>Redundant fiber-optic paths to prevent single points of failure.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                                DDoS Protection
+                            </h4>
+                            <p>Enterprise-grade DDoS protection for all API endpoints.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2" /><rect x="2" y="14" width="20" height="8" rx="2" ry="2" /><line x1="6" y1="6" x2="6.01" y2="6" /><line x1="6" y1="18" x2="6.01" y2="18" /></svg>
+                                Hardware Optimization
+                            </h4>
+                            <p>Hardware-level optimization for FIX protocol messaging.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2" /></svg>
+                                Real-time Monitoring
+                            </h4>
+                            <p>Real-time monitoring of network jitter and packet loss.</p>
+                        </div>
+                    </div>
                     <p>
                         <strong>SLA Statement:</strong> We guarantee a network availability of 99.9%. Our infrastructure is designed to handle extreme bursts of market data during high-impact economic news without performance degradation.
                     </p>
@@ -209,27 +353,105 @@ export default function LiquidityAccessPage() {
                         A comprehensive multi-asset offering designed to meet the needs of modern traders.
                     </p>
                     <h3>Trading Features</h3>
-                    <ul>
-                        <li><strong>Forex:</strong> 80+ pairs including majors, minors, and exotics.</li>
-                        <li><strong>Metals:</strong> Spot Gold, Silver, Platinum, and Palladium with institutional depth.</li>
-                        <li><strong>Indices:</strong> Global benchmarks including US30, GER40, UK100, and JPN225.</li>
-                        <li><strong>Energies:</strong> WTI and Brent Crude Oil, plus Natural Gas.</li>
-                        <li><strong>Crypto CFDs:</strong> High-liquidity pairs for BTC, ETH, and other major altcoins.</li>
-                        <li><strong>Flexible Leverage:</strong> Asset-specific leverage options to suit your risk profile.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" /></svg>
+                                Forex
+                            </h4>
+                            <p>80+ pairs including majors, minors, and exotics.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" /></svg>
+                                Metals
+                            </h4>
+                            <p>Spot Gold, Silver, Platinum, and Palladium with institutional depth.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M3 3v18h18M18.7 8l-5.1 5.2-2.8-2.7L7 14.3" /></svg>
+                                Indices
+                            </h4>
+                            <p>Global benchmarks including US30, GER40, UK100, and JPN225.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+                                Energies
+                            </h4>
+                            <p>WTI and Brent Crude Oil, plus Natural Gas.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4" /><path d="M3 5v14a2 2 0 0 0 2 2h16v-5" /><path d="M18 12a2 2 0 0 0 0 4h4v-4Z" /></svg>
+                                Crypto CFDs
+                            </h4>
+                            <p>High-liquidity pairs for BTC, ETH, and other major altcoins.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                                Flexible Leverage
+                            </h4>
+                            <p>Asset-specific leverage options to suit your risk profile.</p>
+                        </div>
+                    </div>
                     <h3>Analytics Tools</h3>
-                    <ul>
-                        <li>Real-time Depth of Market (DoM) visualizers.</li>
-                        <li>Historical tick data availability for backtesting.</li>
-                        <li>Rejection rate and slippage analysis per instrument.</li>
-                        <li>Volume distribution reports across various liquidity sources.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 20V10" /><path d="M18 20V4" /><path d="M6 20v-4" /></svg>
+                                Depth of Market
+                            </h4>
+                            <p>Real-time Depth of Market (DoM) visualizers.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
+                                Historical Data
+                            </h4>
+                            <p>Historical tick data availability for backtesting.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>
+                                Slippage Analysis
+                            </h4>
+                            <p>Rejection rate and slippage analysis per instrument.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" /></svg>
+                                Volume Reports
+                            </h4>
+                            <p>Volume distribution reports across various liquidity sources.</p>
+                        </div>
+                    </div>
                     <h3>Execution Technology</h3>
-                    <ul>
-                        <li>Aggregation of 20+ different liquidity sources.</li>
-                        <li>Smart Order Routing (SOR) to find the best available price.</li>
-                        <li>Support for Market, Limit, and Stop orders.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5" /></svg>
+                                Liquidity Aggregation
+                            </h4>
+                            <p>Aggregation of 20+ different liquidity sources.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M9 11l3 3L22 4M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11" /></svg>
+                                Smart Order Routing
+                            </h4>
+                            <p>SOR to find the best available price.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" /></svg>
+                                Order Types
+                            </h4>
+                            <p>Support for Market, Limit, and Stop orders.</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="api">
@@ -238,21 +460,63 @@ export default function LiquidityAccessPage() {
                         Our liquidity solution is built for easy integration with any professional trading setup.
                     </p>
                     <h3>Manager / Admin API</h3>
-                    <ul>
-                        <li>Real-time margin monitoring and balance management.</li>
-                        <li>Instant adjustment of leverage and risk parameters.</li>
-                        <li>Automated reporting for internal accounting systems.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 20V10" /><path d="M18 20V4" /><path d="M6 20v-4" /></svg>
+                                Margin Monitoring
+                            </h4>
+                            <p>Real-time margin monitoring and balance management.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><line x1="4" y1="21" x2="4" y2="14" /><line x1="4" y1="10" x2="4" y2="3" /><line x1="12" y1="21" x2="12" y2="12" /><line x1="12" y1="8" x2="12" y2="3" /><line x1="20" y1="21" x2="20" y2="16" /><line x1="20" y1="12" x2="20" y2="3" /><line x1="1" y1="14" x2="7" y2="14" /><line x1="9" y1="8" x2="15" y2="8" /><line x1="17" y1="16" x2="23" y2="16" /></svg>
+                                Leverage Control
+                            </h4>
+                            <p>Instant adjustment of leverage and risk parameters.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>
+                                Automated Reporting
+                            </h4>
+                            <p>Automated reporting for internal accounting systems.</p>
+                        </div>
+                    </div>
                     <h3>Gateway & Connectivity API</h3>
-                    <ul>
-                        <li><strong>FIX API 4.4:</strong> The industry standard for institutional connectivity.</li>
-                        <li><strong>Bridge Integration:</strong> Native support for Gold-i, OneZero, and PrimeXM bridges.</li>
-                        <li><strong>Platform Support:</strong> Direct connectivity for MetaTrader 4, MetaTrader 5, and cTrader.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6" /></svg>
+                                FIX API 4.4
+                            </h4>
+                            <p>The industry standard for institutional connectivity.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2" /><rect x="2" y="14" width="20" height="8" rx="2" ry="2" /><line x1="6" y1="6" x2="6.01" y2="6" /><line x1="6" y1="18" x2="6.01" y2="18" /></svg>
+                                Bridge Integration
+                            </h4>
+                            <p>Native support for Gold-i, OneZero, and PrimeXM bridges.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" /></svg>
+                                Platform Support
+                            </h4>
+                            <p>Direct connectivity for MetaTrader 4, MetaTrader 5, and cTrader.</p>
+                        </div>
+                    </div>
                     <h3>Web API / SDK</h3>
-                    <p>
-                        We provide a comprehensive REST API for brokers who wish to display real-time pricing on their marketing websites or build custom trading applications. Our SDKs support multiple programming languages to ensure your development team can integrate our feeds quickly and efficiently.
-                    </p>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z" /></svg>
+                                REST API & SDKs
+                            </h4>
+                            <p>Comprehensive REST API for real-time pricing and SDKs supporting multiple languages for custom app building.</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="pricing">
@@ -261,29 +525,119 @@ export default function LiquidityAccessPage() {
                         Our pricing is transparent and designed to support the growth of your brokerage business.
                     </p>
                     <h3>What’s Included</h3>
-                    <ul>
-                        <li>Access to the full multi-asset liquidity pool.</li>
-                        <li>Dedicated FIX API credentials.</li>
-                        <li>Standard symbol mapping and configuration.</li>
-                        <li>Daily execution and swap reports.</li>
-                        <li>24/7 Technical account management.</li>
-                        <li>Initial latency and execution testing.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" /></svg>
+                                Liquidity Pool
+                            </h4>
+                            <p>Access to the full multi-asset liquidity pool.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4" /></svg>
+                                FIX Credentials
+                            </h4>
+                            <p>Dedicated FIX API credentials.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M16 18l6-6-6-6M8 6l-6 6 6 6" /></svg>
+                                Symbol Mapping
+                            </h4>
+                            <p>Standard symbol mapping and configuration.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>
+                                Execution Reports
+                            </h4>
+                            <p>Daily execution and swap reports.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9" /><path d="M13.73 21a2 2 0 0 1-3.46 0" /></svg>
+                                Account Management
+                            </h4>
+                            <p>24/7 Technical account management.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                                Latency Testing
+                            </h4>
+                            <p>Initial latency and execution testing.</p>
+                        </div>
+                    </div>
                     <h3>Optional Add-Ons</h3>
-                    <ul>
-                        <li>Custom symbol naming and asset packaging.</li>
-                        <li>Dedicated high-availability cross-connects.</li>
-                        <li>Advanced B-Book risk management tools.</li>
-                        <li>Specialized cryptocurrency liquidity for large-ticket sizes.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" /><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" /></svg>
+                                Custom Naming
+                            </h4>
+                            <p>Custom symbol naming and asset packaging.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" /></svg>
+                                Cross-Connects
+                            </h4>
+                            <p>Dedicated high-availability cross-connects.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                                Risk Tools
+                            </h4>
+                            <p>Advanced B-Book risk management tools.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M21 12V7H5a2 2 0 0 1 0-4h14v4" /><path d="M3 5v14a2 2 0 0 0 2 2h16v-5" /><path d="M18 12a2 2 0 0 0 0 4h4v-4Z" /></svg>
+                                Crypto Liquidity
+                            </h4>
+                            <p>Specialized cryptocurrency liquidity for large-ticket sizes.</p>
+                        </div>
+                    </div>
                     <h3>Setup Timeline</h3>
-                    <ol>
-                        <li><strong>Onboarding & Compliance (Days 1-3):</strong> Document submission and account opening.</li>
-                        <li><strong>Connectivity Provisioning (Days 3-5):</strong> Setup of FIX API and cross-connects.</li>
-                        <li><strong>Bridge Configuration (Days 5-7):</strong> Mapping symbols and configuring markups.</li>
-                        <li><strong>Testing (Days 7-9):</strong> UAT and execution quality verification.</li>
-                        <li><strong>Go-Live (Day 10):</strong> Production environment activation.</li>
-                    </ol>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#1E40AF', marginRight: '8px' }}>01</span>
+                                Onboarding
+                            </h4>
+                            <p>Document submission and account opening (Days 1-3).</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#1E40AF', marginRight: '8px' }}>02</span>
+                                Provisioning
+                            </h4>
+                            <p>Setup of FIX API and cross-connects (Days 3-5).</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#1E40AF', marginRight: '8px' }}>03</span>
+                                Bridge Config
+                            </h4>
+                            <p>Mapping symbols and configuring markups (Days 5-7).</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#1E40AF', marginRight: '8px' }}>04</span>
+                                User Testing
+                            </h4>
+                            <p>UAT and execution quality verification (Days 7-9).</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#1E40AF', marginRight: '8px' }}>05</span>
+                                Go-Live
+                            </h4>
+                            <p>Production environment activation (Day 10).</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="faq">

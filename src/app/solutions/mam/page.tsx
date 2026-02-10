@@ -190,15 +190,57 @@ export default function MAMPage() {
 
                 <div id="why">
                     <h2>Why MAM?</h2>
-                    <ul>
-                        <li><strong>Flexibility in Allocation:</strong> Unlike PAMM, managers can manually adjust lot sizes for specific accounts if needed, providing high-touch portfolio management.</li>
-                        <li><strong>Professional Execution:</strong> Support for all order types, including pending orders and partial closes, synchronized across the entire account group.</li>
-                        <li><strong>Investor Retention:</strong> High transparency levels allow investors to feel more in control of their individual accounts while benefiting from professional management.</li>
-                        <li><strong>Scalable Business Model:</strong> Manage a diverse range of investors with different capital levels without increasing administrative overhead.</li>
-                        <li><strong>Automated Billing:</strong> Eliminate manual spreadsheets with automated high-water mark tracking and fee distribution.</li>
-                        <li><strong>Risk Management:</strong> Set global risk parameters or individual account caps to protect investors from over-leveraging.</li>
-                        <li><strong>Enhanced Reporting:</strong> Provide managers with a comprehensive overview of their total AUM (Assets Under Management) and real-time performance metrics.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M16 12h-4v4" /></svg>
+                                Flexible
+                            </h4>
+                            <p>Unlike PAMM, managers can manually adjust lot sizes for specific accounts if needed, providing high-touch portfolio management.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" /></svg>
+                                Execution
+                            </h4>
+                            <p>Support for all order types, including pending orders and partial closes, synchronized across the entire account group.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
+                                Retention
+                            </h4>
+                            <p>High transparency levels allow investors to feel more in control of their individual accounts while benefiting from professional management.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" /></svg>
+                                Scalable
+                            </h4>
+                            <p>Manage a diverse range of investors with different capital levels without increasing administrative overhead.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="2" y="4" width="20" height="16" rx="2" /><line x1="2" y1="10" x2="22" y2="10" /></svg>
+                                Automated
+                            </h4>
+                            <p>Eliminate manual spreadsheets with automated high-water mark tracking and fee distribution.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                                Risk Mgmt
+                            </h4>
+                            <p>Set global risk parameters or individual account caps to protect investors from over-leveraging.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><line x1="18" y1="20" x2="18" y2="10" /><line x1="12" y1="20" x2="12" y2="4" /><line x1="6" y1="20" x2="6" y2="14" /></svg>
+                                Reporting
+                            </h4>
+                            <p>Provide managers with a comprehensive overview of their total AUM (Assets Under Management) and real-time performance metrics.</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="branding">
@@ -244,21 +286,75 @@ export default function MAMPage() {
                         The MAM engine requires a high-performance server-side plugin to ensure that trades are allocated in milliseconds across all linked accounts.
                     </p>
                     <h3>Data Center Locations</h3>
-                    <ul>
-                        <li><strong>London, UK</strong> - Equinix LD4 (Primary FX Hub)</li>
-                        <li><strong>New York, USA</strong> - Equinix NY4</li>
-                        <li><strong>Singapore</strong> - Equinix SG1</li>
-                        <li><strong>Tokyo, Japan</strong> - Equinix TY3</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                London, UK
+                            </h4>
+                            <p>Equinix LD4 (Primary FX Hub)</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                New York, USA
+                            </h4>
+                            <p>Equinix NY4</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                Singapore
+                            </h4>
+                            <p>Equinix SG1</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                Tokyo, Japan
+                            </h4>
+                            <p>Equinix TY3</p>
+                        </div>
+                    </div>
 
                     <h3>Infrastructure Specifications</h3>
-                    <ul>
-                        <li>Server-side plugin architecture for zero-latency trade distribution.</li>
-                        <li>High-speed API connectivity to the MT4/MT5/cTrader backend.</li>
-                        <li>Redundant server clusters to ensure continuous allocation during peaks.</li>
-                        <li>Proactive DDoS protection and secure data encryption.</li>
-                        <li>Automated daily backups of all allocation logs and fee data.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" /></svg>
+                                Zero Latency
+                            </h4>
+                            <p>Server-side plugin architecture for zero-latency trade distribution.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2" /></svg>
+                                Speed
+                            </h4>
+                            <p>High-speed API connectivity to the MT4/MT5/cTrader backend.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>
+                                Redundancy
+                            </h4>
+                            <p>Redundant server clusters to ensure continuous allocation during peaks.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                                Security
+                            </h4>
+                            <p>Proactive DDoS protection and secure data encryption.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" /></svg>
+                                Backups
+                            </h4>
+                            <p>Automated daily backups of all allocation logs and fee data.</p>
+                        </div>
+                    </div>
                     <div className="infoBox">
                         <p><strong>SLA Statement:</strong> We guarantee [99.9%] availability for the MAM server environment. Our infrastructure is optimized to ensure that even during high-volatility news events, trade allocation remains perfectly synchronized.</p>
                     </div>
@@ -269,28 +365,100 @@ export default function MAMPage() {
                     <p>Our MAM tools offer the most comprehensive set of allocation and management features available today.</p>
 
                     <h3>Allocation Methods</h3>
-                    <ul>
-                        <li><strong>Lot Allocation:</strong> Pre-defined lot sizes for each sub-account.</li>
-                        <li><strong>Percent Allocation:</strong> Distribution based on a percentage of the Master's volume.</li>
-                        <li><strong>Proportional by Balance:</strong> Based on the ratio of investor balance to total pool.</li>
-                        <li><strong>Proportional by Equity:</strong> Based on real-time equity ratios.</li>
-                        <li><strong>Equity Percent:</strong> Each account trades a specific percentage of its own equity.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2" /><line x1="12" y1="8" x2="12" y2="16" /><line x1="8" y1="12" x2="16" y2="12" /></svg>
+                                Lot Allocation
+                            </h4>
+                            <p>Pre-defined lot sizes for each sub-account.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M16 12h-4v4" /></svg>
+                                Percent
+                            </h4>
+                            <p>Distribution based on a percentage of the Master's volume.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M21.21 15.89A10 10 0 1 1 8 2.83" /><path d="M22 12A10 10 0 0 0 12 2v10z" /></svg>
+                                Balance
+                            </h4>
+                            <p>Proportional by Balance: Based on the ratio of investor balance to total pool.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><line x1="12" y1="1" x2="12" y2="23" /><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
+                                Equity
+                            </h4>
+                            <p>Proportional by Equity: Based on real-time equity ratios.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" /></svg>
+                                Equity %
+                            </h4>
+                            <p>Each account trades a specific percentage of its own equity.</p>
+                        </div>
+                    </div>
 
                     <h3>Management & Billing</h3>
-                    <ul>
-                        <li>Automated performance fee with High-Water Mark (HWM).</li>
-                        <li>Monthly or quarterly management fee deductions.</li>
-                        <li>Volume-based commission (Rebate) tracking.</li>
-                        <li>Master account hard-stop and equity protection tools.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" /></svg>
+                                Fees
+                            </h4>
+                            <p>Automated performance fee with High-Water Mark (HWM).</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="2" y="4" width="20" height="16" rx="2" /><line x1="2" y1="10" x2="22" y2="10" /></svg>
+                                Management
+                            </h4>
+                            <p>Monthly or quarterly management fee deductions.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
+                                Commission
+                            </h4>
+                            <p>Volume-based commission (Rebate) tracking.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><line x1="4.93" y1="4.93" x2="19.07" y2="19.07" /></svg>
+                                Hard Stop
+                            </h4>
+                            <p>Master account hard-stop and equity protection tools.</p>
+                        </div>
+                    </div>
 
                     <h3>Analytics & Reporting</h3>
-                    <ul>
-                        <li>Real-time P&L and Equity tracking for all sub-accounts.</li>
-                        <li>Comprehensive history of all trades and fee deductions.</li>
-                        <li>"Health" dashboard to monitor margin levels across the group.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2" /><line x1="3" y1="9" x2="21" y2="9" /><line x1="9" y1="21" x2="9" y2="9" /></svg>
+                                P&L
+                            </h4>
+                            <p>Real-time P&L and Equity tracking for all sub-accounts.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>
+                                History
+                            </h4>
+                            <p>Comprehensive history of all trades and fee deductions.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2" /></svg>
+                                Health
+                            </h4>
+                            <p>"Health" dashboard to monitor margin levels across the group.</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="api">
@@ -298,18 +466,54 @@ export default function MAMPage() {
                     <p>The MAM solution is built for extensibility, allowing it to function as a core part of your brokerage ecosystem.</p>
 
                     <h3>Manager / Admin API</h3>
-                    <ul>
-                        <li>Programmatically link or unlink investor accounts.</li>
-                        <li>Modify allocation methods and fee structures via external CRM.</li>
-                        <li>Export real-time AUM and performance data for auditing.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71" /><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" /></svg>
+                                Link/Unlink
+                            </h4>
+                            <p>Programmatically link or unlink investor accounts.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
+                                Modify Fees
+                            </h4>
+                            <p>Modify allocation methods and fee structures via external CRM.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" /></svg>
+                                Export Data
+                            </h4>
+                            <p>Export real-time AUM and performance data for auditing.</p>
+                        </div>
+                    </div>
 
                     <h3>Platform Connectivity</h3>
-                    <ul>
-                        <li><strong>MetaTrader 4/5:</strong> Full server-side integration via Manager API.</li>
-                        <li><strong>cTrader:</strong> Support for managed account environments through Open API.</li>
-                        <li><strong>Proprietary Platforms:</strong> Integration options available via FIX API or Web Services.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" /></svg>
+                                MetaTrader 4/5
+                            </h4>
+                            <p>Full server-side integration via Manager API.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M8 14s1.5 2 4 2 4-2 4-2" /><line x1="9" y1="9" x2="9.01" y2="9" /><line x1="15" y1="9" x2="15.01" y2="9" /></svg>
+                                cTrader
+                            </h4>
+                            <p>Support for managed account environments through Open API.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2" /><line x1="9" y1="3" x2="9" y2="21" /></svg>
+                                Proprietary
+                            </h4>
+                            <p>Integration options available via FIX API or Web Services.</p>
+                        </div>
+                    </div>
 
                     <h3>Web API / SDK</h3>
                     <p>
@@ -322,31 +526,121 @@ export default function MAMPage() {
                     <p>Our pricing is structured to support both boutique fund managers and large-scale global brokerages.</p>
 
                     <h3>What’s Included</h3>
-                    <ul>
-                        <li>Full MAM Manager & Admin dashboard license.</li>
-                        <li>Server-side allocation plugin for MT4/MT5.</li>
-                        <li>5+ Standard allocation methods.</li>
-                        <li>Automated fee calculation and distribution engine.</li>
-                        <li>Initial branding and UI customization.</li>
-                        <li>Regular security and performance updates.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2" /><line x1="3" y1="9" x2="21" y2="9" /><line x1="9" y1="21" x2="9" y2="9" /></svg>
+                                Dashboard
+                            </h4>
+                            <p>Full MAM Manager & Admin dashboard license.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" /></svg>
+                                Plugin
+                            </h4>
+                            <p>Server-side allocation plugin for MT4/MT5.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M16 12h-4v4" /></svg>
+                                Methods
+                            </h4>
+                            <p>5+ Standard allocation methods.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
+                                Engine
+                            </h4>
+                            <p>Automated fee calculation and distribution engine.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2" /><line x1="3" y1="9" x2="21" y2="9" /><line x1="9" y1="21" x2="9" y2="9" /></svg>
+                                Branding
+                            </h4>
+                            <p>Initial branding and UI customization.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" /></svg>
+                                Updates
+                            </h4>
+                            <p>Regular security and performance updates.</p>
+                        </div>
+                    </div>
 
                     <h3>Optional Add-Ons</h3>
-                    <ul>
-                        <li>Custom allocation method development.</li>
-                        <li>White-labeled investor mobile application.</li>
-                        <li>Multi-server/Cross-platform allocation support.</li>
-                        <li>Advanced anti-fraud and strategy-theft protection.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>
+                                Custom Dev
+                            </h4>
+                            <p>Custom allocation method development.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2" /><line x1="12" y1="18" x2="12.01" y2="18" /></svg>
+                                Mobile App
+                            </h4>
+                            <p>White-labeled investor mobile application.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" /></svg>
+                                Multi-Server
+                            </h4>
+                            <p>Multi-server/Cross-platform allocation support.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                                Anti-Fraud
+                            </h4>
+                            <p>Advanced anti-fraud and strategy-theft protection.</p>
+                        </div>
+                    </div>
 
                     <h3>Setup Timeline</h3>
-                    <ol>
-                        <li><strong>Configuration Mapping (Days 1-2):</strong> Selecting allocation methods and fee rules.</li>
-                        <li><strong>Server Integration (Days 3-5):</strong> Installing the MAM plugin on your trading server.</li>
-                        <li><strong>UI/UX Branding (Days 5-7):</strong> Customizing the manager and investor portals.</li>
-                        <li><strong>UAT & Verification (Days 7-9):</strong> Testing trade allocation and fee accuracy.</li>
-                        <li><strong>Go-Live (Day [X]):</strong> Production launch and manager onboarding.</li>
-                    </ol>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#1E40AF', marginRight: '8px' }}>01</span>
+                                Config
+                            </h4>
+                            <p>Configuration Mapping: Selecting allocation methods and fee rules (Days 1-2).</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#1E40AF', marginRight: '8px' }}>02</span>
+                                Install
+                            </h4>
+                            <p>Server Integration: Installing the MAM plugin on your trading server (Days 3-5).</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#1E40AF', marginRight: '8px' }}>03</span>
+                                Style
+                            </h4>
+                            <p>UI/UX Branding: Customizing the manager and investor portals (Days 5-7).</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#1E40AF', marginRight: '8px' }}>04</span>
+                                Test
+                            </h4>
+                            <p>UAT & Verification: Testing trade allocation and fee accuracy (Days 7-9).</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#1E40AF', marginRight: '8px' }}>05</span>
+                                Live
+                            </h4>
+                            <p>Go-Live: Production launch and manager onboarding (Day 10).</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="faq">

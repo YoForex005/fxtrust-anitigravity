@@ -192,15 +192,57 @@ export default function WalletSystemPage() {
 
                 <div id="why">
                     <h2>Why Multi-Currency Wallet System?</h2>
-                    <ul>
-                        <li><strong>Reduced Transaction Costs:</strong> By keeping fund movements internal, you eliminate the blockchain gas fees or banking costs associated with frequent external transfers.</li>
-                        <li><strong>Institutional Security:</strong> Utilize a hybrid storage model where the majority of assets are held in air-gapped cold storage while maintaining hot-wallet liquidity for daily operations.</li>
-                        <li><strong>Improved Conversion Rates:</strong> A professional wallet interface builds trust, encouraging clients to keep more capital within your platform for longer periods.</li>
-                        <li><strong>Currency Conversion Revenue:</strong> Monetize internal transfers by offering real-time fiat-to-crypto or cross-currency swaps with custom spread management.</li>
-                        <li><strong>Streamlined Compliance:</strong> Simplify your AML and KYC workflows by centralizing all funding and withdrawal activities into a single, audited wallet history.</li>
-                        <li><strong>Scalable Infrastructure:</strong> As your firm grows, easily add new currency pairs or blockchain networks without re-engineering your core backend.</li>
-                        <li><strong>User-Centric UX:</strong> Provide your traders with a "Banking-as-a-Service" feel, complete with real-time balance updates and historical performance charts.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
+                                Costs
+                            </h4>
+                            <p>Reduced Transaction Costs: By keeping fund movements internal, you eliminate blockchain gas fees.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>
+                                Security
+                            </h4>
+                            <p>Institutional Security: Utilize a hybrid storage model where the majority of assets are held in air-gapped cold storage.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="8.5" cy="7" r="4" /><line x1="20" y1="8" x2="20" y2="14" /><line x1="23" y1="11" x2="17" y2="11" /></svg>
+                                Conversion Rates
+                            </h4>
+                            <p>Improved Conversion Rates: A professional interface encourages clients to keep more capital within your platform.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><line x1="12" y1="1" x2="12" y2="23" /><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
+                                Revenue
+                            </h4>
+                            <p>Currency Conversion Revenue: Monetize internal transfers by offering real-time fiat-to-crypto swaps.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                                Compliance
+                            </h4>
+                            <p>Streamlined Compliance: Simplify AML and KYC workflows by centralizing all funding activities.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" /></svg>
+                                Scalable
+                            </h4>
+                            <p>Scalable Infrastructure: Easily add new currency pairs or blockchain networks without re-engineering.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M8 14s1.5 2 4 2 4-2 4-2" /><line x1="9" y1="9" x2="9.01" y2="9" /><line x1="15" y1="9" x2="15.01" y2="9" /></svg>
+                                User-Centric
+                            </h4>
+                            <p>User-Centric UX: Provide your traders with a "Banking-as-a-Service" feel.</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="branding">
@@ -234,20 +276,74 @@ export default function WalletSystemPage() {
                         Financial storage requires a hardened, distributed environment that prioritizes security and data redundancy above all else.
                     </p>
                     <h3>Data Center Locations</h3>
-                    <ul>
-                        <li><strong>London, UK</strong> - Equinix LD4 (Financial Core)</li>
-                        <li><strong>New York, USA</strong> - Equinix NY4</li>
-                        <li><strong>Singapore</strong> - SG1 (Regional Hub)</li>
-                        <li><strong>Frankfurt, Germany</strong> - FR2 (Data Security Optimized)</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                London, UK
+                            </h4>
+                            <p>Equinix LD4 (Financial Core)</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                New York, USA
+                            </h4>
+                            <p>Equinix NY4</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                Singapore
+                            </h4>
+                            <p>SG1 (Regional Hub)</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                Frankfurt
+                            </h4>
+                            <p>FR2 (Data Security Optimized)</p>
+                        </div>
+                    </div>
                     <h3>Infrastructure Specifications</h3>
-                    <ul>
-                        <li><strong>Hybrid Storage Model:</strong> Integration with top-tier providers for cold storage and hot wallet liquidity management.</li>
-                        <li><strong>Multi-Signature Authorization:</strong> Large-scale or suspicious transfers require multiple internal approvals before execution.</li>
-                        <li><strong>End-to-End Encryption:</strong> All transaction data is protected by TLS 1.3 and AES-256 protocols.</li>
-                        <li><strong>Redundant Database Clusters:</strong> Real-time data mirroring to ensure no balance information is ever lost.</li>
-                        <li><strong>Intrusion Detection:</strong> 24/7 automated scanning for unauthorized access or suspicious behavioral patterns.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>
+                                Storage
+                            </h4>
+                            <p>Hybrid Storage Model: Integration with top-tier providers for cold storage.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                                Multi-Sig
+                            </h4>
+                            <p>Multi-Signature Authorization: Large-scale or suspicious transfers require multiple internal approvals.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2" /><rect x="2" y="14" width="20" height="8" rx="2" ry="2" /><line x1="6" y1="6" x2="6.01" y2="6" /><line x1="6" y1="18" x2="6.01" y2="18" /></svg>
+                                Encryption
+                            </h4>
+                            <p>End-to-End Encryption: All transaction data is protected by TLS 1.3 and AES-256 protocols.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" /><polyline points="3.27 6.96 12 12.01 20.73 6.96" /><line x1="12" y1="22.08" x2="12" y2="12" /></svg>
+                                Redundant
+                            </h4>
+                            <p>Redundant Database Clusters: Real-time data mirroring to ensure no balance information is lost.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                                IDS
+                            </h4>
+                            <p>Intrusion Detection: 24/7 automated scanning for unauthorized access.</p>
+                        </div>
+                    </div>
                     <div className="infoBox">
                         <p><strong>Uptime Statement:</strong> We guarantee a [99.9%] uptime for the wallet backend. Our infrastructure is stress-tested to handle extreme transaction spikes during high-volatility market events.</p>
                     </div>
@@ -259,26 +355,100 @@ export default function WalletSystemPage() {
                         A comprehensive set of tools designed to manage every aspect of the modern trader's capital.
                     </p>
                     <h3>Storage & Transfer Features</h3>
-                    <ul>
-                        <li>Multi-asset support (Fiat, Crypto, Stablecoins).</li>
-                        <li>Instant internal transfers to MT4/MT5/cTrader.</li>
-                        <li>Real-time currency conversion with mid-market rate feeds.</li>
-                        <li>Recurring transfer scheduling (e.g., automated profit harvesting).</li>
-                        <li>"Vault" feature for long-term, non-tradable storage.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" /></svg>
+                                Assets
+                            </h4>
+                            <p>Multi-asset support (Fiat, Crypto, Stablecoins).</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z" /><polyline points="13 2 13 9 20 9" /></svg>
+                                Transfers
+                            </h4>
+                            <p>Instant internal transfers to MT4/MT5/cTrader.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
+                                Conversion
+                            </h4>
+                            <p>Real-time currency conversion with mid-market rate feeds.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2" /><line x1="16" y1="2" x2="16" y2="6" /><line x1="8" y1="2" x2="8" y2="6" /><line x1="3" y1="10" x2="21" y2="10" /></svg>
+                                Schedule
+                            </h4>
+                            <p>Recurring transfer scheduling (e.g., automated profit harvesting).</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>
+                                Vault
+                            </h4>
+                            <p>"Vault" feature for long-term, non-tradable storage.</p>
+                        </div>
+                    </div>
+
                     <h3>Analytics & Reporting</h3>
-                    <ul>
-                        <li>Visual portfolio allocation charts (Crypto vs. Fiat).</li>
-                        <li>Real-time P&L tracking for stored assets.</li>
-                        <li>Exportable transaction logs in CSV, JSON, and PDF formats.</li>
-                        <li>Daily balance snapshots for user accounting.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M21.21 15.89A10 10 0 1 1 8 2.83" /><path d="M22 12A10 10 0 0 0 12 2v10z" /></svg>
+                                Portfolio
+                            </h4>
+                            <p>Visual portfolio allocation charts (Crypto vs. Fiat).</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><line x1="18" y1="20" x2="18" y2="10" /><line x1="12" y1="20" x2="12" y2="4" /><line x1="6" y1="20" x2="6" y2="14" /></svg>
+                                P&L
+                            </h4>
+                            <p>Real-time P&L tracking for stored assets.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>
+                                Export
+                            </h4>
+                            <p>Exportable transaction logs in CSV, JSON, and PDF formats.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
+                                Snapshots
+                            </h4>
+                            <p>Daily balance snapshots for user accounting.</p>
+                        </div>
+                    </div>
+
                     <h3>Algorithmic Protection</h3>
-                    <ul>
-                        <li>Automated "Velocity Checks" to flag suspicious transfer frequencies.</li>
-                        <li>Hard-limit caps for unverified or "Level 1" accounts.</li>
-                        <li>Anti-fraud correlation logic for internal wallet movements.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" /></svg>
+                                Velocity
+                            </h4>
+                            <p>Automated "Velocity Checks" to flag suspicious transfer frequencies.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><line x1="4.93" y1="4.93" x2="19.07" y2="19.07" /></svg>
+                                Limits
+                            </h4>
+                            <p>Hard-limit caps for unverified or "Level 1" accounts.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                                Anti-Fraud
+                            </h4>
+                            <p>Anti-fraud correlation logic for internal wallet movements.</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="api">
@@ -287,17 +457,54 @@ export default function WalletSystemPage() {
                         The wallet system is designed to be the central point of integration for your entire brokerage tech stack.
                     </p>
                     <h3>Manager / Admin API</h3>
-                    <ul>
-                        <li>Programmatically adjust client balances for marketing or dispute resolution.</li>
-                        <li>Extract aggregate data on firm-wide liabilities and asset holdings.</li>
-                        <li>Set global exchange rate markups for internal conversions.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>
+                                Balances
+                            </h4>
+                            <p>Programmatically adjust client balances for marketing or dispute resolution.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><polyline points="22 12 16 12 14 15 10 15 8 12 2 12" /><path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z" /></svg>
+                                Data
+                            </h4>
+                            <p>Extract aggregate data on firm-wide liabilities and asset holdings.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><line x1="12" y1="1" x2="12" y2="23" /><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
+                                Markups
+                            </h4>
+                            <p>Set global exchange rate markups for internal conversions.</p>
+                        </div>
+                    </div>
+
                     <h3>Gateway & Connectivity API</h3>
-                    <ul>
-                        <li><strong>Payment Gateways:</strong> Direct integration with major PSPs and crypto processors.</li>
-                        <li><strong>Trading Platforms:</strong> Native bridges to MetaTrader and cTrader Manager APIs.</li>
-                        <li><strong>KYC Providers:</strong> Automated wallet locking/unlocking based on verification status.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2" /><line x1="1" y1="10" x2="23" y2="10" /></svg>
+                                Payments
+                            </h4>
+                            <p>Payment Gateways: Direct integration with major PSPs and crypto processors.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" /></svg>
+                                Platforms
+                            </h4>
+                            <p>Trading Platforms: Native bridges to MetaTrader and cTrader Manager APIs.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg>
+                                KYC
+                            </h4>
+                            <p>KYC Providers: Automated wallet locking/unlocking based on verification status.</p>
+                        </div>
+                    </div>
                     <h3>Web API / SDK</h3>
                     <p>
                         We provide a modern RESTful API and a comprehensive SDK. This allow your developers to build custom "Funding Widgets" directly into your trading terminal or marketing site, enabling clients to check their wallet balance and initiate transfers without leaving their trading environment.
@@ -310,29 +517,114 @@ export default function WalletSystemPage() {
                         Our pricing structure is flexible, scaling alongside your client base and the complexity of your asset list.
                     </p>
                     <h3>What’s Included</h3>
-                    <ul>
-                        <li>Full White Label Wallet Admin UI and Client Interface.</li>
-                        <li>Integration with major Fiat and Crypto networks.</li>
-                        <li>Automated internal transfer engine for 1 trading server.</li>
-                        <li>Basic real-time conversion (FX) module.</li>
-                        <li>24/7 Technical infrastructure monitoring.</li>
-                        <li>Regular security audits and performance updates.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2" /><line x1="3" y1="9" x2="21" y2="9" /><line x1="9" y1="21" x2="9" y2="9" /></svg>
+                                UI
+                            </h4>
+                            <p>Full White Label Wallet Admin UI and Client Interface.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><line x1="2" y1="12" x2="22" y2="12" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                Networks
+                            </h4>
+                            <p>Integration with major Fiat and Crypto networks.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" /></svg>
+                                Transfers
+                            </h4>
+                            <p>Automated internal transfer engine for 1 trading server.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M8 3v3a2 2 0 0 1-2 2H3m18 0h-3a2 2 0 0 1-2-2V3m0 18v-3a2 2 0 0 1 2-2h3M3 16h3a2 2 0 0 1 2 2v3" /></svg>
+                                FX
+                            </h4>
+                            <p>Basic real-time conversion (FX) module.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" /><polyline points="16 6 12 2 8 6" /><line x1="12" y1="2" x2="12" y2="15" /></svg>
+                                Updates
+                            </h4>
+                            <p>Regular security audits and performance updates.</p>
+                        </div>
+                    </div>
+
                     <h3>Optional Add-Ons</h3>
-                    <ul>
-                        <li>Advanced "Staking" or "Yield" modules for stored assets.</li>
-                        <li>Custom blockchain integration (e.g., Layer 2 networks).</li>
-                        <li>Multi-entity support for brokers with multiple jurisdictions.</li>
-                        <li>Priority "Warm Wallet" management services.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
+                                Staking
+                            </h4>
+                            <p>Advanced "Staking" or "Yield" modules for stored assets.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="2" y="7" width="20" height="14" rx="2" ry="2" /><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" /></svg>
+                                Blockchain
+                            </h4>
+                            <p>Custom blockchain integration (e.g., Layer 2 networks).</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                Multi-Entity
+                            </h4>
+                            <p>Multi-entity support for brokers with multiple jurisdictions.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1" /><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z" /><line x1="6" y1="1" x2="6" y2="4" /><line x1="10" y1="1" x2="10" y2="4" /><line x1="14" y1="1" x2="14" y2="4" /></svg>
+                                Warm Wallet
+                            </h4>
+                            <p>Priority "Warm Wallet" management services.</p>
+                        </div>
+                    </div>
+
                     <h3>Setup Timeline</h3>
-                    <ol>
-                        <li><strong>Architecture Mapping (Days 1-2):</strong> Defining asset list and transfer rules.</li>
-                        <li><strong>Infrastructure Provisioning (Days 3-5):</strong> Setting up secure nodes and API tunnels.</li>
-                        <li><strong>Platform Integration (Days 5-7):</strong> Linking the wallet to your trading servers and CRM.</li>
-                        <li><strong>UI/UX Customization (Days 7-9):</strong> Styling the client dashboard and notifications.</li>
-                        <li><strong>Go-Live (Day [X]):</strong> Production activation for live client funding and storage.</li>
-                    </ol>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#1E40AF', marginRight: '8px' }}>01</span>
+                                Mapping
+                            </h4>
+                            <p>Architecture Mapping (Days 1-2): Defining asset list and transfer rules.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#1E40AF', marginRight: '8px' }}>02</span>
+                                Provision
+                            </h4>
+                            <p>Infrastructure Provisioning (Days 3-5): Setting up secure nodes and API tunnels.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#1E40AF', marginRight: '8px' }}>03</span>
+                                Integrate
+                            </h4>
+                            <p>Platform Integration (Days 5-7): Linking the wallet to your trading servers and CRM.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#1E40AF', marginRight: '8px' }}>04</span>
+                                Custom
+                            </h4>
+                            <p>UI/UX Customization (Days 7-9): Styling the client dashboard and notifications.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#1E40AF', marginRight: '8px' }}>05</span>
+                                Go-Live
+                            </h4>
+                            <p>Go-Live (Day [X]): Production activation for live client funding and storage.</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="faq">

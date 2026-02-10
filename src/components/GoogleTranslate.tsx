@@ -65,7 +65,7 @@ export default function GoogleTranslate() {
         // If no cookie, detect location and set language
         if (!hasLanguageCookie) {
             console.log('FxTrust: No language cookie found. Starting auto-translation check...');
-            
+
             fetch('https://ipapi.co/json/')
                 .then(res => res.json())
                 .then(data => {
@@ -101,7 +101,7 @@ export default function GoogleTranslate() {
                     if (countryToLang[countryCode]) {
                         langCode = countryToLang[countryCode];
                     }
-                    
+
                     console.log(`FxTrust: Detected Country: ${countryCode}, Mapped Language: ${langCode}`);
 
                     // Set cookie to prevent re-detection on next load (valid for session)
@@ -127,7 +127,7 @@ export default function GoogleTranslate() {
             <div id="google_translate_element" style={{ display: 'none' }}></div>
             <Script
                 src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
-                strategy="afterInteractive"
+                strategy="lazyOnload"
             />
         </>
     );

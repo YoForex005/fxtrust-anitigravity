@@ -181,34 +181,55 @@ export default function VPSHostingPage() {
 
                 <div id="why">
                     <h2>Why Ultra-Low Latency VPS Hosting?</h2>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        <div className="p-4 bg-gray-50 rounded-lg">
-                            <h3 className="font-semibold text-gray-900 mb-2">Slippage Reduction</h3>
-                            <p className="text-sm text-gray-600">Direct cross-connects mean your orders reach the broker’s bridge faster than traditional residential connections.</p>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
+                                Slippage
+                            </h4>
+                            <p>Slippage Reduction: Direct cross-connects mean your orders reach the broker’s bridge faster.</p>
                         </div>
-                        <div className="p-4 bg-gray-50 rounded-lg">
-                            <h3 className="font-semibold text-gray-900 mb-2">Uninterrupted Connectivity</h3>
-                            <p className="text-sm text-gray-600">Multi-homed network architecture prevents "No Connection" errors that can disrupt EA logic.</p>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M5 12.55a11 11 0 0 1 14.08 0" /><path d="M1.42 9a16 16 0 0 1 21.16 0" /><path d="M8.53 16.11a6 6 0 0 1 6.95 0" /><line x1="12" y1="20" x2="12.01" y2="20" /></svg>
+                                Connectivity
+                            </h4>
+                            <p>Uninterrupted Connectivity: Multi-homed network architecture prevents "No Connection" errors.</p>
                         </div>
-                        <div className="p-4 bg-gray-50 rounded-lg">
-                            <h3 className="font-semibold text-gray-900 mb-2">Dedicated Resources</h3>
-                            <p className="text-sm text-gray-600">Unlike shared hosting, your VPS has allocated RAM and CPU, ensuring your terminal never freezes during high volatility.</p>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" /></svg>
+                                Dedicated
+                            </h4>
+                            <p>Dedicated Resources: Allocated RAM and CPU ensure your terminal never freezes.</p>
                         </div>
-                        <div className="p-4 bg-gray-50 rounded-lg">
-                            <h3 className="font-semibold text-gray-900 mb-2">Pre-Optimized OS</h3>
-                            <p className="text-sm text-gray-600">Our Windows Server templates are tweaked to disable non-essential updates and services that could interfere with trading.</p>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" /></svg>
+                                Optimized
+                            </h4>
+                            <p>Pre-Optimized OS: Windows Server templates tweaked to disable non-essential services.</p>
                         </div>
-                        <div className="p-4 bg-gray-50 rounded-lg">
-                            <h3 className="font-semibold text-gray-900 mb-2">Remote Management</h3>
-                            <p className="text-sm text-gray-600">Access your trading environment from any device (Desktop, Tablet, Mobile) using secure Remote Desktop Protocol (RDP).</p>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2" /><line x1="12" y1="18" x2="12.01" y2="18" /></svg>
+                                Remote
+                            </h4>
+                            <p>Remote Management: Access your environment from any device via secure RDP.</p>
                         </div>
-                        <div className="p-4 bg-gray-50 rounded-lg">
-                            <h3 className="font-semibold text-gray-900 mb-2">Multi-Terminal Support</h3>
-                            <p className="text-sm text-gray-600">Powerful enough to run several MetaTrader instances simultaneously for diversified portfolio management.</p>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" /></svg>
+                                Multi-Terminal
+                            </h4>
+                            <p>Multi-Terminal Support: Run several MetaTrader instances simultaneously.</p>
                         </div>
-                        <div className="p-4 bg-gray-50 rounded-lg">
-                            <h3 className="font-semibold text-gray-900 mb-2">Security & Isolation</h3>
-                            <p className="text-sm text-gray-600">Every VPS is protected by a dedicated firewall and is completely isolated from other users on the same physical hardware.</p>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>
+                                Isolation
+                            </h4>
+                            <p>Security & Isolation: Dedicated firewall and complete isolation from other users.</p>
                         </div>
                     </div>
                 </div>
@@ -244,21 +265,75 @@ export default function VPSHostingPage() {
                         The location of your server is the most critical factor in achieving low latency. We colocate our hardware in the world’s most important financial hubs.
                     </p>
                     <h3>Data Center Locations</h3>
-                    <ul>
-                        <li><strong>London, UK</strong> - Equinix LD4 (Major FX Center)</li>
-                        <li><strong>New York, USA</strong> - Equinix NY4 (Global Financial Hub)</li>
-                        <li><strong>Tokyo, Japan</strong> - Equinix TY3 (Asian Markets)</li>
-                        <li><strong>Frankfurt, Germany</strong> - Equinix FR2 (European Liquidity)</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                London, UK
+                            </h4>
+                            <p>Equinix LD4 (Major FX Center)</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                New York, USA
+                            </h4>
+                            <p>Equinix NY4 (Global Financial Hub)</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                Tokyo, Japan
+                            </h4>
+                            <p>Equinix TY3 (Asian Markets)</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                Frankfurt
+                            </h4>
+                            <p>Equinix FR2 (European Liquidity)</p>
+                        </div>
+                    </div>
 
                     <h3>Infrastructure Specifications</h3>
-                    <ul>
-                        <li><strong>Enterprise CPUs:</strong> High-clock-speed processors for rapid trade calculation.</li>
-                        <li><strong>NVMe Storage:</strong> Significantly faster than standard SSDs for instant log access.</li>
-                        <li><strong>Tier-1 Bandwidth:</strong> Redundant fiber connections to Cogent, GTT, and Telia.</li>
-                        <li><strong>DDoS Mitigation:</strong> Hardware-level filtering to block malicious traffic without adding latency.</li>
-                        <li><strong>RAID 10 Redundancy:</strong> All data mirrored across multiple drives to prevent data loss.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="4" y="4" width="16" height="16" rx="2" ry="2" /><rect x="9" y="9" width="6" height="6" /><line x1="9" y1="1" x2="9" y2="4" /><line x1="15" y1="1" x2="15" y2="4" /><line x1="9" y1="20" x2="9" y2="23" /><line x1="15" y1="20" x2="15" y2="23" /><line x1="20" y1="9" x2="23" y2="9" /><line x1="20" y1="14" x2="23" y2="14" /><line x1="1" y1="9" x2="4" y2="9" /><line x1="1" y1="14" x2="4" y2="14" /></svg>
+                                CPUs
+                            </h4>
+                            <p>Enterprise CPUs: High-clock-speed processors for rapid trade calculation.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                                NVMe
+                            </h4>
+                            <p>NVMe Storage: Significantly faster than standard SSDs for instant log access.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 2.69l5.74 5.88a1 1 0 0 1 .23.95l-1.35 6a1 1 0 0 1-.5.7l-4.12 2.37a1 1 0 0 1-1 0l-4.12-2.37a1 1 0 0 1-.5-.7l-1.35-6a1 1 0 0 1 .23-.95L12 2.69z" /></svg>
+                                Bandwidth
+                            </h4>
+                            <p>Tier-1 Bandwidth: Redundant fiber connections to Cogent, GTT, and Telia.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>
+                                DDoS
+                            </h4>
+                            <p>DDoS Mitigation: Hardware-level filtering to block malicious traffic.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2" /><rect x="2" y="14" width="20" height="8" rx="2" ry="2" /><line x1="6" y1="6" x2="6.01" y2="6" /><line x1="6" y1="18" x2="6.01" y2="18" /></svg>
+                                RAID
+                            </h4>
+                            <p>RAID 10 Redundancy: All data mirrored across multiple drives.</p>
+                        </div>
+                    </div>
                     <div className="infoBox">
                         <p><strong>Performance Note:</strong> Our servers are optimized for MT4/MT5/cTrader. By using our London LD4 or New York NY4 nodes, many traders achieve a sub-1ms ping to their broker’s execution server.</p>
                     </div>
@@ -269,28 +344,100 @@ export default function VPSHostingPage() {
                     <p>Hosting features designed to give algorithmic traders a technological advantage.</p>
 
                     <h3>Trading-Specific Features</h3>
-                    <ul>
-                        <li>Optimized RDP for high-speed remote access.</li>
-                        <li>Autostart scripts to relaunch terminals after a server reboot.</li>
-                        <li>Low-latency network stack tuning for MT4/MT5.</li>
-                        <li>Support for Unlimited Expert Advisors (subject to RAM).</li>
-                        <li>Dedicated IP addresses for clean connection reputation.</li>
-                        <li>One-click installation for major trading platforms.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" /></svg>
+                                RDP
+                            </h4>
+                            <p>Optimized RDP for high-speed remote access.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M23 4v6h-6" /><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10" /></svg>
+                                Autostart
+                            </h4>
+                            <p>Autostart scripts to relaunch terminals after a server reboot.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" /></svg>
+                                Tuning
+                            </h4>
+                            <p>Low-latency network stack tuning for MT4/MT5.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
+                                Unlimited
+                            </h4>
+                            <p>Support for Unlimited Expert Advisors (subject to RAM).</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="4" y="4" width="16" height="16" rx="2" ry="2" /><line x1="9" y1="9" x2="15" y2="15" /><line x1="15" y1="9" x2="9" y2="15" /></svg>
+                                IPs
+                            </h4>
+                            <p>Dedicated IP addresses for clean connection reputation.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" /><polyline points="16 6 12 2 8 6" /><line x1="12" y1="2" x2="12" y2="15" /></svg>
+                                Install
+                            </h4>
+                            <p>One-click installation for major trading platforms.</p>
+                        </div>
+                    </div>
 
                     <h3>Analytics & Tools</h3>
-                    <ul>
-                        <li>Real-time CPU and RAM usage monitoring.</li>
-                        <li>Ping-testing tools to verify latency to broker IPs.</li>
-                        <li>Network traffic visualizers for data usage tracking.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M21.21 15.89A10 10 0 1 1 8 2.83" /><path d="M22 12A10 10 0 0 0 12 2v10z" /></svg>
+                                Monitoring
+                            </h4>
+                            <p>Real-time CPU and RAM usage monitoring.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" /></svg>
+                                Latency
+                            </h4>
+                            <p>Ping-testing tools to verify latency to broker IPs.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M23 6l-9.5 9.5-5-5L1 18" /><path d="M17 6h6v6" /></svg>
+                                Traffic
+                            </h4>
+                            <p>Network traffic visualizers for data usage tracking.</p>
+                        </div>
+                    </div>
 
                     <h3>Algorithmic Safety</h3>
-                    <ul>
-                        <li>Automated "Heartbeat" monitoring (optional).</li>
-                        <li>Scheduled daily or weekly snapshots of the entire VPS.</li>
-                        <li>Integrated Windows Defender and Layer 7 traffic filtering.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" /></svg>
+                                Heartbeat
+                            </h4>
+                            <p>Automated "Heartbeat" monitoring (optional).</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" /><circle cx="12" cy="13" r="4" /></svg>
+                                Snapshots
+                            </h4>
+                            <p>Scheduled daily or weekly snapshots of the entire VPS.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                                Defender
+                            </h4>
+                            <p>Integrated Windows Defender and Layer 7 traffic filtering.</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="api">
@@ -298,18 +445,54 @@ export default function VPSHostingPage() {
                     <p>Our hosting infrastructure can be fully integrated into your existing brokerage or prop firm tech stack.</p>
 
                     <h3>Manager / Admin API</h3>
-                    <ul>
-                        <li>Programmatically provision or terminate VPS instances for clients.</li>
-                        <li>Monitor server health and resource usage across your entire client base.</li>
-                        <li>Automate the password reset and OS reinstallation process.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" /></svg>
+                                Provisioning
+                            </h4>
+                            <p>Programmatically provision or terminate VPS instances for clients.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2" /></svg>
+                                Health
+                            </h4>
+                            <p>Monitor server health and resource usage across your entire client base.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>
+                                Passwords
+                            </h4>
+                            <p>Automate the password reset and OS reinstallation process.</p>
+                        </div>
+                    </div>
 
                     <h3>Gateway & Connectivity API</h3>
-                    <ul>
-                        <li><strong>Broker Sync:</strong> Direct API links to verify client volume before granting "Free VPS" status.</li>
-                        <li><strong>CRM Integration:</strong> Support for Salesforce, HubSpot, or Custom CRMs to manage VPS billing.</li>
-                        <li><strong>Billing Gateway:</strong> Automated invoicing via Stripe, PayPal, or Crypto.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 2.69l5.74 5.88a1 1 0 0 1 .23.95l-1.35 6a1 1 0 0 1-.5.7l-4.12 2.37a1 1 0 0 1-1 0l-4.12-2.37a1 1 0 0 1-.5-.7l-1.35-6a1 1 0 0 1 .23-.95L12 2.69z" /></svg>
+                                Sync
+                            </h4>
+                            <p>Broker Sync: Direct API links to verify client volume before granting "Free VPS".</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
+                                CRM
+                            </h4>
+                            <p>CRM Integration: Support for Salesforce, HubSpot, or Custom CRMs.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2" /><line x1="1" y1="10" x2="23" y2="10" /></svg>
+                                Billing
+                            </h4>
+                            <p>Billing Gateway: Automated invoicing via Stripe, PayPal, or Crypto.</p>
+                        </div>
+                    </div>
 
                     <h3>Web API / SDK</h3>
                     <p>
@@ -322,31 +505,114 @@ export default function VPSHostingPage() {
                     <p>Our pricing is structured based on resource allocation (RAM/CPU/Disk), allowing you to scale as your EA complexity increases.</p>
 
                     <h3>What’s Included</h3>
-                    <ul>
-                        <li>Dedicated Windows Server License.</li>
-                        <li>Choice of LD4, NY4, TY3, FR2 locations.</li>
-                        <li>Unmetered 1Gbps or 10Gbps bandwidth.</li>
-                        <li>Layer 7 DDoS Protection.</li>
-                        <li>Weekly automated backups.</li>
-                        <li>24/7 Technical support via tickets and chat.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" /></svg>
+                                License
+                            </h4>
+                            <p>Dedicated Windows Server License.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                Locations
+                            </h4>
+                            <p>Choice of LD4, NY4, TY3, FR2 locations.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z" /><polyline points="13 2 13 9 20 9" /></svg>
+                                Bandwidth
+                            </h4>
+                            <p>Unmetered 1Gbps or 10Gbps bandwidth.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>
+                                DDoS
+                            </h4>
+                            <p>Layer 7 DDoS Protection.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2" /><circle cx="12" cy="7" r="4" /></svg>
+                                Support
+                            </h4>
+                            <p>24/7 Technical support via tickets and chat.</p>
+                        </div>
+                    </div>
 
                     <h3>Optional Add-Ons</h3>
-                    <ul>
-                        <li>Extra Dedicated IPv4 addresses.</li>
-                        <li>Managed "Setup Service" for EA installation.</li>
-                        <li>Daily off-site cloud backups.</li>
-                        <li>Priority "Ultra-Low Latency" network routes.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="4" y="4" width="16" height="16" rx="2" ry="2" /><line x1="9" y1="9" x2="15" y2="15" /><line x1="15" y1="9" x2="9" y2="15" /></svg>
+                                IPs
+                            </h4>
+                            <p>Extra Dedicated IPv4 addresses.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8" /><polyline points="16 6 12 2 8 6" /><line x1="12" y1="2" x2="12" y2="15" /></svg>
+                                Setup
+                            </h4>
+                            <p>Managed "Setup Service" for EA installation.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 2.69l5.74 5.88a1 1 0 0 1 .23.95l-1.35 6a1 1 0 0 1-.5.7l-4.12 2.37a1 1 0 0 1-1 0l-4.12-2.37a1 1 0 0 1-.5-.7l-1.35-6a1 1 0 0 1 .23-.95L12 2.69z" /></svg>
+                                Backups
+                            </h4>
+                            <p>Daily off-site cloud backups.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M16.2 7.8l-2 6.3-4 2.1 2-6.3z" /></svg>
+                                Priority
+                            </h4>
+                            <p>Priority "Ultra-Low Latency" network routes.</p>
+                        </div>
+                    </div>
 
                     <h3>Setup Timeline</h3>
-                    <ol>
-                        <li><strong>Plan Selection (Minute 0):</strong> Choose your location and resource tier.</li>
-                        <li><strong>Automated Provisioning (Minutes 1-5):</strong> Our system deploys your OS template.</li>
-                        <li><strong>Credential Delivery (Minute 6):</strong> Receive your RDP login via secure email.</li>
-                        <li><strong>Terminal Setup (Minutes 10-20):</strong> Install your EA and trading software.</li>
-                        <li><strong>Go-Live (Minute 30):</strong> Your bot is active and trading 24/7.</li>
-                    </ol>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#1E40AF', marginRight: '8px' }}>01</span>
+                                Plan
+                            </h4>
+                            <p>Plan Selection (Minute 0): Choose your location and resource tier.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#1E40AF', marginRight: '8px' }}>02</span>
+                                Provision
+                            </h4>
+                            <p>Automated Provisioning (Minutes 1-5): Our system deploys your OS template.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#1E40AF', marginRight: '8px' }}>03</span>
+                                Access
+                            </h4>
+                            <p>Credential Delivery (Minute 6): Receive your RDP login via secure email.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#1E40AF', marginRight: '8px' }}>04</span>
+                                Setup
+                            </h4>
+                            <p>Terminal Setup (Minutes 10-20): Install your EA and trading software.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#1E40AF', marginRight: '8px' }}>05</span>
+                                Go-Live
+                            </h4>
+                            <p>Go-Live (Minute 30): Your bot is active and trading 24/7.</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="faq">

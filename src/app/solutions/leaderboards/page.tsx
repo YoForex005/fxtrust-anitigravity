@@ -179,15 +179,57 @@ export default function LeaderboardsPage() {
 
                 <div id="why">
                     <h2>Why Gamification Tools?</h2>
-                    <ul>
-                        <li><strong>Drive Trading Volume:</strong> Competitions naturally encourage higher activity levels as traders vie for the top spots on the board.</li>
-                        <li><strong>Virality & Social Sharing:</strong> Traders love to share their rankings on social media, providing your brand with organic, high-trust marketing.</li>
-                        <li><strong>Enhanced User Experience:</strong> Break the monotony of solo trading with interactive community elements and performance-based rewards.</li>
-                        <li><strong>Lower Customer Acquisition Cost:</strong> Competitions are high-converting lead magnets that attract a wide range of trading experience levels.</li>
-                        <li><strong>Brand Authority:</strong> Displaying a live leaderboard of successful traders proves your platform is where winners trade.</li>
-                        <li><strong>Flexible Ranking Criteria:</strong> Rank traders by ROI, net profit, sharpe ratio, or even consistency scores to suit your firm's goals.</li>
-                        <li><strong>Automated Risk Filtering:</strong> Automatically disqualify traders who breach drawdown or leverage rules during a competition.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
+                                Drive Volume
+                            </h4>
+                            <p>Competitions naturally encourage higher activity levels as traders vie for the top spots on the board.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="18" cy="5" r="3" /><circle cx="6" cy="12" r="3" /><circle cx="18" cy="19" r="3" /><line x1="8.59" y1="13.51" x2="15.42" y2="17.49" /><line x1="15.41" y1="6.51" x2="8.59" y2="10.49" /></svg>
+                                Virality
+                            </h4>
+                            <p>Traders love to share their rankings on social media, providing your brand with organic, high-trust marketing.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+                                Experience
+                            </h4>
+                            <p>Break the monotony of solo trading with interactive community elements and performance-based rewards.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="8.5" cy="7" r="4" /><line x1="20" y1="8" x2="20" y2="14" /><line x1="23" y1="11" x2="17" y2="11" /></svg>
+                                Acquisition
+                            </h4>
+                            <p>Competitions are high-converting lead magnets that attract a wide range of trading experience levels.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 2l9 4.9V17L12 22l-9-4.9V7z" /></svg>
+                                Authority
+                            </h4>
+                            <p>Displaying a live leaderboard of successful traders proves your platform is where winners trade.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><line x1="18" y1="20" x2="18" y2="10" /><line x1="12" y1="20" x2="12" y2="4" /><line x1="6" y1="20" x2="6" y2="14" /></svg>
+                                Flexible Ranking
+                            </h4>
+                            <p>Rank traders by ROI, net profit, sharpe ratio, or even consistency scores to suit your firm's goals.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                                Automated Risk
+                            </h4>
+                            <p>Automatically disqualify traders who breach drawdown or leverage rules during a competition.</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="branding">
@@ -233,21 +275,75 @@ export default function LeaderboardsPage() {
                         Processing live rankings for thousands of accounts requires a robust server setup and direct API connectivity to the trading environment.
                     </p>
                     <h3>Data Center Locations</h3>
-                    <ul>
-                        <li><strong>London, UK</strong> - Equinix LD4 (Primary Hub)</li>
-                        <li><strong>New York, USA</strong> - Equinix NY4</li>
-                        <li><strong>Singapore</strong> - Equinix SG1</li>
-                        <li><strong>Frankfurt, Germany</strong> - Equinix FR2</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                London, UK
+                            </h4>
+                            <p>Equinix LD4 (Primary Hub)</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                New York, USA
+                            </h4>
+                            <p>Equinix NY4</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                Singapore
+                            </h4>
+                            <p>Equinix SG1</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                Frankfurt, Germany
+                            </h4>
+                            <p>Equinix FR2</p>
+                        </div>
+                    </div>
 
                     <h3>Infrastructure Specifications</h3>
-                    <ul>
-                        <li>High-frequency data polling from MT4/MT5/cTrader servers.</li>
-                        <li>Redundant logic engines to ensure data integrity across multiple time zones.</li>
-                        <li>Dedicated database clusters for historical contest results and trader stats.</li>
-                        <li>CDN-accelerated front-end for global accessibility.</li>
-                        <li>256-bit encryption for all trader and financial data.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" /></svg>
+                                High Frequency
+                            </h4>
+                            <p>High-frequency data polling from MT4/MT5/cTrader servers.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2" /><rect x="2" y="14" width="20" height="8" rx="2" ry="2" /><line x1="6" y1="6" x2="6.01" y2="6" /><line x1="6" y1="18" x2="6.01" y2="18" /></svg>
+                                Redundant Logic
+                            </h4>
+                            <p>Redundant logic engines to ensure data integrity across multiple time zones.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" /></svg>
+                                Database Clusters
+                            </h4>
+                            <p>Dedicated database clusters for historical contest results and trader stats.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><line x1="2" y1="12" x2="22" y2="12" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                Global CDN
+                            </h4>
+                            <p>CDN-accelerated front-end for global accessibility.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>
+                                Encryption
+                            </h4>
+                            <p>256-bit encryption for all trader and financial data.</p>
+                        </div>
+                    </div>
                     <div className="infoBox">
                         <p><strong>Uptime Statement:</strong> We guarantee a [99.9%] uptime for the leaderboard and competition services. Our infrastructure is stress-tested to handle extreme data spikes during the opening and closing minutes of major contests.</p>
                     </div>
@@ -258,29 +354,107 @@ export default function LeaderboardsPage() {
                     <p>Our tools provide a comprehensive suite of features to make your trading contests as engaging as possible.</p>
 
                     <h3>Competition Features</h3>
-                    <ul>
-                        <li>Single-phase or multi-phase contest structures.</li>
-                        <li>Entry fee management (credits, balance, or free-to-play).</li>
-                        <li>Automated account provisioning for demo contests.</li>
-                        <li>Rule enforcement (Max drawdown, minimum trade days, news filters).</li>
-                        <li>Dynamic prize pool calculations (Fixed or based on entry fees).</li>
-                        <li>Time-based categories: Daily, Weekly, Monthly, and Seasonal.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" /></svg>
+                                Multi-Phase
+                            </h4>
+                            <p>Single-phase or multi-phase contest structures.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><line x1="12" y1="1" x2="12" y2="23" /><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
+                                Entry Fees
+                            </h4>
+                            <p>Entry fee management (credits, balance, or free-to-play).</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="8.5" cy="7" r="4" /><line x1="20" y1="8" x2="20" y2="14" /><line x1="23" y1="11" x2="17" y2="11" /></svg>
+                                Demo Provisioning
+                            </h4>
+                            <p>Automated account provisioning for demo contests.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                                Rules
+                            </h4>
+                            <p>Rule enforcement (Max drawdown, minimum trade days, news filters).</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="8" r="7" /><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88" /></svg>
+                                Prize Pools
+                            </h4>
+                            <p>Dynamic prize pool calculations (Fixed or based on entry fees).</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><polyline points="12 6 12 12 16 14" /></svg>
+                                Categories
+                            </h4>
+                            <p>Time-based categories: Daily, Weekly, Monthly, and Seasonal.</p>
+                        </div>
+                    </div>
 
                     <h3>Analytics & Badges</h3>
-                    <ul>
-                        <li>Real-time ROI and PnL calculation engines.</li>
-                        <li>Equity curves and drawdown visualizers for top traders.</li>
-                        <li>"Most Improved" and "Top Gainer" automated highlight reels.</li>
-                        <li>Achievement badges for milestones (e.g., 100 trades, 10% gain).</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2" /></svg>
+                                ROI Engine
+                            </h4>
+                            <p>Real-time ROI and PnL calculation engines.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M3 3v18h18" /><path d="M18.7 8l-5.1 5.2-2.8-2.7L7 14.3" /></svg>
+                                Curves
+                            </h4>
+                            <p>Equity curves and drawdown visualizers for top traders.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="5" /><line x1="12" y1="1" x2="12" y2="3" /><line x1="12" y1="21" x2="12" y2="23" /><line x1="4.22" y1="4.22" x2="5.64" y2="5.64" /><line x1="18.36" y1="18.36" x2="19.78" y2="19.78" /><line x1="1" y1="12" x2="3" y2="12" /><line x1="21" y1="12" x2="23" y2="12" /><line x1="4.22" y1="19.78" x2="5.64" y2="18.36" /><line x1="18.36" y1="5.64" x2="19.78" y2="4.22" /></svg>
+                                Highlights
+                            </h4>
+                            <p>"Most Improved" and "Top Gainer" automated highlight reels.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+                                Badges
+                            </h4>
+                            <p>Achievement badges for milestones (e.g., 100 trades, 10% gain).</p>
+                        </div>
+                    </div>
 
                     <h3>Anti-Cheat Systems</h3>
-                    <ul>
-                        <li>Detection of IP-matching and group trading.</li>
-                        <li>Monitoring for arbitrage and HFT exploits during contests.</li>
-                        <li>Automated disqualification logic for hard-rule breaches.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
+                                Group Detection
+                            </h4>
+                            <p>Detection of IP-matching and group trading.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><line x1="15" y1="9" x2="9" y2="15" /><line x1="9" y1="9" x2="15" y2="15" /></svg>
+                                Arbitrage
+                            </h4>
+                            <p>Monitoring for arbitrage and HFT exploits during contests.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>
+                                Disqualification
+                            </h4>
+                            <p>Automated disqualification logic for hard-rule breaches.</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="api">
@@ -288,19 +462,54 @@ export default function LeaderboardsPage() {
                     <p>The gamification engine acts as a bridge between your trading server and your marketing front-end.</p>
 
                     <h3>Manager / Admin API</h3>
-                    <ul>
-                        <li>Remotely start, stop, or extend competitions.</li>
-                        <li>Manually adjust rankings or disqualify users if necessary.</li>
-                        <li>Extract competition data for external marketing reports and PR.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><polygon points="10 8 16 12 10 16 10 8" /></svg>
+                                Remote Control
+                            </h4>
+                            <p>Remotely start, stop, or extend competitions.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7" /><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z" /></svg>
+                                Manual Adjustments
+                            </h4>
+                            <p>Manually adjust rankings or disqualify users if necessary.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" /></svg>
+                                Data Extraction
+                            </h4>
+                            <p>Extract competition data for external marketing reports and PR.</p>
+                        </div>
+                    </div>
 
                     <h3>Platform Connectivity</h3>
-                    <ul>
-                        <li><strong>MetaTrader 4/5:</strong> Deep integration via Manager API and custom plugins.</li>
-                        <li><strong>cTrader:</strong> Native support via Open API and Web Services.</li>
-                        <li><strong>Match-Trader / DXTrade:</strong> Connectivity for modern brokerage environments.</li>
-                    </ul>
-
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" /></svg>
+                                MetaTrader 4/5
+                            </h4>
+                            <p>Deep integration via Manager API and custom plugins.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M8 14s1.5 2 4 2 4-2 4-2" /><line x1="9" y1="9" x2="9.01" y2="9" /><line x1="15" y1="9" x2="15.01" y2="9" /></svg>
+                                cTrader
+                            </h4>
+                            <p>Native support via Open API and Web Services.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="2" y="2" width="20" height="8" rx="2" ry="2" /><rect x="2" y="14" width="20" height="8" rx="2" ry="2" /><line x1="6" y1="6" x2="6.01" y2="6" /><line x1="6" y1="18" x2="6.01" y2="18" /></svg>
+                                Match-Trader
+                            </h4>
+                            <p>Connectivity for modern brokerage environments.</p>
+                        </div>
+                    </div>
                     <h3>Web API / SDK</h3>
                     <p>
                         We provide a RESTful API that allows you to embed live leaderboards directly into your marketing website or mobile app. Our webhooks can trigger Discord or Telegram bot notifications whenever a new trader takes the #1 spot, driving real-time community engagement.
@@ -312,31 +521,121 @@ export default function LeaderboardsPage() {
                     <p>Our pricing is modular, allowing you to choose between standard leaderboards and full-scale competition management.</p>
 
                     <h3>What’s Included</h3>
-                    <ul>
-                        <li>Full Leaderboard & Competition Admin UI.</li>
-                        <li>Integration with [1] trading server.</li>
-                        <li>Automated ranking and ROI calculation.</li>
-                        <li>Branded certificate and badge generator.</li>
-                        <li>Standard email notification system.</li>
-                        <li>Basic anti-cheat monitoring.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2" /><line x1="3" y1="9" x2="21" y2="9" /><line x1="9" y1="21" x2="9" y2="9" /></svg>
+                                Admin UI
+                            </h4>
+                            <p>Full Leaderboard & Competition Admin UI.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" /></svg>
+                                Integration
+                            </h4>
+                            <p>Integration with [1] trading server.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
+                                Rankings
+                            </h4>
+                            <p>Automated ranking and ROI calculation.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" /></svg>
+                                Certificates
+                            </h4>
+                            <p>Branded certificate and badge generator.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg>
+                                Notifications
+                            </h4>
+                            <p>Standard email notification system.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                                Anti-Cheat
+                            </h4>
+                            <p>Basic anti-cheat monitoring.</p>
+                        </div>
+                    </div>
 
                     <h3>Optional Add-Ons</h3>
-                    <ul>
-                        <li>Advanced anti-fraud and correlation detection.</li>
-                        <li>Entry fee payment gateway integration.</li>
-                        <li>Custom mobile-app leaderboard components.</li>
-                        <li>Multi-server support for global brokerages.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><line x1="12" y1="8" x2="12" y2="16" /><line x1="8" y1="12" x2="16" y2="12" /></svg>
+                                Correlation
+                            </h4>
+                            <p>Advanced anti-fraud and correlation detection.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2" /><line x1="1" y1="10" x2="23" y2="10" /></svg>
+                                Payments
+                            </h4>
+                            <p>Entry fee payment gateway integration.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2" /><line x1="12" y1="18" x2="12.01" y2="18" /></svg>
+                                Mobile App
+                            </h4>
+                            <p>Custom mobile-app leaderboard components.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                Multi-Server
+                            </h4>
+                            <p>Multi-server support for global brokerages.</p>
+                        </div>
+                    </div>
 
                     <h3>Setup Timeline</h3>
-                    <ol>
-                        <li><strong>Logic Configuration (Days 1-2):</strong> Defining ranking formulas and contest rules.</li>
-                        <li><strong>Server Integration (Days 3-4):</strong> Establishing secure links to trading data.</li>
-                        <li><strong>UI Customization (Days 5-6):</strong> Branding the leaderboard and contest pages.</li>
-                        <li><strong>UAT & Testing (Days 7-8):</strong> Simulating trade events and ranking updates.</li>
-                        <li><strong>Go-Live (Day [X]):</strong> Launching your first official competition.</li>
-                    </ol>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#1E40AF', marginRight: '8px' }}>01</span>
+                                Logic
+                            </h4>
+                            <p>Logic Configuration: Defining ranking formulas and contest rules (Days 1-2).</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#1E40AF', marginRight: '8px' }}>02</span>
+                                Integrate
+                            </h4>
+                            <p>Server Integration: Establishing secure links to trading data (Days 3-4).</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#1E40AF', marginRight: '8px' }}>03</span>
+                                Customize
+                            </h4>
+                            <p>UI Customization: Branding the leaderboard and contest pages (Days 5-6).</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#1E40AF', marginRight: '8px' }}>04</span>
+                                Test
+                            </h4>
+                            <p>UAT & Testing: Simulating trade events and ranking updates (Days 7-8).</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#1E40AF', marginRight: '8px' }}>05</span>
+                                Go-Live
+                            </h4>
+                            <p>Go-Live: Launching your first official competition (Day 10).</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="faq">

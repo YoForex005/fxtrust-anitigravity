@@ -1,17 +1,16 @@
 .hero {
+    position: relative;
+    width: 100%;
     min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-top: 100px;
-    padding-bottom: 120px;
-    position: relative;
     overflow: hidden;
-    background: radial-gradient(circle at top, #111827 0%, #020617 55%, #020617 100%);
+    padding: 8rem 2rem 4rem;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
 }
 
 .heroBg {
-    position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;

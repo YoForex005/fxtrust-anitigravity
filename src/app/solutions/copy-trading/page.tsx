@@ -190,15 +190,57 @@ export default function CopyTradingPage() {
 
                 <div id="why">
                     <h2>Why Social Trading?</h2>
-                    <ul>
-                        <li><strong>Higher Client Lifetime Value:</strong> Investors who follow successful strategies tend to trade longer and remain active on your platform.</li>
-                        <li><strong>Lower Barrier to Entry:</strong> Attract novice traders who may be intimidated by manual trading but are comfortable following a pro.</li>
-                        <li><strong>Monetize Top Talent:</strong> Turn your most successful traders into "Strategy Providers," allowing them to earn fees and bringing more volume to your book.</li>
-                        <li><strong>Diversified Revenue:</strong> Collect additional fees through the platform’s automated billing system for performance and management.</li>
-                        <li><strong>Organic Growth:</strong> Social trading platforms naturally encourage users to share their results, providing your brand with viral marketing potential.</li>
-                        <li><strong>Advanced Risk Filtering:</strong> Followers can set their own stop-loss limits and maximum drawdown levels to protect their individual accounts.</li>
-                        <li><strong>Transparency & Trust:</strong> Real-time leaderboards with un-editable trading history build high levels of trust within your community.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
+                                LTV
+                            </h4>
+                            <p>Higher Client Lifetime Value: Investors who follow successful strategies tend to trade longer and remain active on your platform.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="8.5" cy="7" r="4" /><polyline points="17 11 19 13 23 9" /></svg>
+                                Entry
+                            </h4>
+                            <p>Lower Barrier to Entry: Attract novice traders who may be intimidated by manual trading but are comfortable following a pro.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+                                Talent
+                            </h4>
+                            <p>Monetize Top Talent: Turn your most successful traders into "Strategy Providers," allowing them to earn fees and bringing more volume to your book.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                                Revenue
+                            </h4>
+                            <p>Diversified Revenue: Collect additional fees through the platform’s automated billing system for performance and management.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>
+                                Viral
+                            </h4>
+                            <p>Organic Growth: Social trading platforms naturally encourage users to share their results, providing your brand with viral marketing potential.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z" /><line x1="12" y1="9" x2="12" y2="13" /><line x1="12" y1="17" x2="12.01" y2="17" /></svg>
+                                Filtering
+                            </h4>
+                            <p>Advanced Risk Filtering: Followers can set their own stop-loss limits and maximum drawdown levels to protect their individual accounts.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" /></svg>
+                                Trust
+                            </h4>
+                            <p>Transparency & Trust: Real-time leaderboards with un-editable trading history build high levels of trust within your community.</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="branding">
@@ -244,21 +286,75 @@ export default function CopyTradingPage() {
                         Copy trading requires an infrastructure that can handle massive spikes in trade volume, especially when a popular Master trader opens a position.
                     </p>
                     <h3>Data Center Locations</h3>
-                    <ul>
-                        <li><strong>London, UK</strong> - Equinix LD4 (Primary Trading Hub)</li>
-                        <li><strong>New York, USA</strong> - Equinix NY4</li>
-                        <li><strong>Singapore</strong> - Equinix SG1</li>
-                        <li><strong>Tokyo, Japan</strong> - Equinix TY3</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                London, UK
+                            </h4>
+                            <p>Equinix LD4 (Primary Trading Hub)</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                New York, USA
+                            </h4>
+                            <p>Equinix NY4</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                Singapore
+                            </h4>
+                            <p>Equinix SG1</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" /></svg>
+                                Tokyo, Japan
+                            </h4>
+                            <p>Equinix TY3</p>
+                        </div>
+                    </div>
 
                     <h3>Infrastructure Specifications</h3>
-                    <ul>
-                        <li>Server-side plugins for direct MT4/MT5/cTrader core integration.</li>
-                        <li>High-availability database clusters for sub-millisecond data retrieval.</li>
-                        <li>Tier-1 DDoS protection to ensure the social marketplace remains online.</li>
-                        <li>End-to-end encryption for all trade signals and account credentials.</li>
-                        <li>Automated real-time backups of all follower settings and history.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" /></svg>
+                                Plugins
+                            </h4>
+                            <p>Server-side plugins for direct MT4/MT5/cTrader core integration.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" /></svg>
+                                Database
+                            </h4>
+                            <p>High-availability database clusters for sub-millisecond data retrieval.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                                Protection
+                            </h4>
+                            <p>Tier-1 DDoS protection to ensure the social marketplace remains online.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2" /><path d="M7 11V7a5 5 0 0 1 10 0v4" /></svg>
+                                Encryption
+                            </h4>
+                            <p>End-to-end encryption for all trade signals and account credentials.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" /></svg>
+                                Backups
+                            </h4>
+                            <p>Automated real-time backups of all follower settings and history.</p>
+                        </div>
+                    </div>
                     <div className="infoBox">
                         <p><strong>Infrastructure Statement:</strong> We guarantee a [99.9%] uptime for the social trading engine. Our load-balanced architecture ensures that even if a Master has [1,000+] followers, every order is duplicated within [X] milliseconds.</p>
                     </div>
@@ -269,28 +365,100 @@ export default function CopyTradingPage() {
                     <p>Comprehensive tools designed for both the professional strategy provider and the retail follower.</p>
 
                     <h3>Copying & Execution Features</h3>
-                    <ul>
-                        <li><strong>Proportional Copying:</strong> Volume based on Equity/Balance ratios.</li>
-                        <li><strong>Fixed Lot Copying:</strong> Every trade is copied at a pre-defined volume.</li>
-                        <li><strong>Multiplier Mode:</strong> Copy a Master at [2x] or [0.5x] their risk.</li>
-                        <li><strong>Partial Close Support:</strong> Automatically syncs partial exits across all followers.</li>
-                        <li><strong>Reverse Trading:</strong> Option for followers to "Fade" or trade against a strategy.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M21.21 15.89A10 10 0 1 1 8 2.83" /><path d="M22 12A10 10 0 0 0 12 2v10z" /></svg>
+                                Proportional
+                            </h4>
+                            <p>Proportional Copying: Volume based on Equity/Balance ratios.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2" /><line x1="12" y1="8" x2="12" y2="16" /><line x1="8" y1="12" x2="16" y2="12" /></svg>
+                                Fixed
+                            </h4>
+                            <p>Fixed Lot Copying: Every trade is copied at a pre-defined volume.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><line x1="12" y1="5" x2="12" y2="19" /><line x1="5" y1="12" x2="19" y2="12" /></svg>
+                                Multiplier
+                            </h4>
+                            <p>Multiplier Mode: Copy a Master at [2x] or [0.5x] their risk.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>
+                                Partial
+                            </h4>
+                            <p>Partial Close Support: Automatically syncs partial exits across all followers.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><polyline points="23 4 23 10 17 10" /><path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10" /></svg>
+                                Reverse
+                            </h4>
+                            <p>Reverse Trading: Option for followers to "Fade" or trade against a strategy.</p>
+                        </div>
+                    </div>
 
                     <h3>Analytics & Social Tools</h3>
-                    <ul>
-                        <li>Sharpe Ratio, Max Drawdown, and Recovery Factor tracking.</li>
-                        <li>Interactive equity curves with time-frame filtering.</li>
-                        <li>Strategy tags (e.g., "Scalping," "Gold-only," "Low Risk").</li>
-                        <li>News feed for Strategy Providers to post updates to followers.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" /></svg>
+                                Ratios
+                            </h4>
+                            <p>Sharpe Ratio, Max Drawdown, and Recovery Factor tracking.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" /></svg>
+                                Curves
+                            </h4>
+                            <p>Interactive equity curves with time-frame filtering.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z" /><line x1="7" y1="7" x2="7.01" y2="7" /></svg>
+                                Tags
+                            </h4>
+                            <p>Strategy tags (e.g., "Scalping," "Gold-only," "Low Risk").</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /><line x1="16" y1="13" x2="8" y2="13" /><line x1="16" y1="17" x2="8" y2="17" /><polyline points="10 9 9 9 8 9" /></svg>
+                                News
+                            </h4>
+                            <p>News feed for Strategy Providers to post updates to followers.</p>
+                        </div>
+                    </div>
 
                     <h3>Risk Management</h3>
-                    <ul>
-                        <li>Individual Follower Equity Stop-Loss.</li>
-                        <li>Maximum allowable slippage filters.</li>
-                        <li>Symbol-specific restrictions (e.g., block Crypto copying).</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><line x1="4.93" y1="4.93" x2="19.07" y2="19.07" /></svg>
+                                Stop-Loss
+                            </h4>
+                            <p>Individual Follower Equity Stop-Loss.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                                Slippage
+                            </h4>
+                            <p>Maximum allowable slippage filters.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><line x1="15" y1="9" x2="9" y2="15" /><line x1="9" y1="9" x2="15" y2="15" /></svg>
+                                Restrictions
+                            </h4>
+                            <p>Symbol-specific restrictions (e.g., block Crypto copying).</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="api">
@@ -298,18 +466,54 @@ export default function CopyTradingPage() {
                     <p>The Social Trading platform is designed to be the social layer of your existing brokerage tech stack.</p>
 
                     <h3>Manager / Admin API</h3>
-                    <ul>
-                        <li>Programmatically approve or feature specific Strategy Providers.</li>
-                        <li>Extract network-wide AUM (Assets Under Management) and volume data.</li>
-                        <li>Manage fee distributions and affiliate payouts via API.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" /><polyline points="22 4 12 14.01 9 11.01" /></svg>
+                                Approve
+                            </h4>
+                            <p>Programmatically approve or feature specific Strategy Providers.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" /></svg>
+                                AUM
+                            </h4>
+                            <p>Extract network-wide AUM (Assets Under Management) and volume data.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
+                                Fees
+                            </h4>
+                            <p>Manage fee distributions and affiliate payouts via API.</p>
+                        </div>
+                    </div>
 
                     <h3>Platform Connectivity</h3>
-                    <ul>
-                        <li><strong>MetaTrader 4/5:</strong> Full server-to-server synchronization.</li>
-                        <li><strong>cTrader:</strong> Native integration via Open API.</li>
-                        <li><strong>Web API:</strong> RESTful endpoints for building custom mobile and web dashboards.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" /></svg>
+                                MetaTrader 4/5
+                            </h4>
+                            <p>Full server-to-server synchronization.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M8 14s1.5 2 4 2 4-2 4-2" /><line x1="9" y1="9" x2="9.01" y2="9" /><line x1="15" y1="9" x2="15.01" y2="9" /></svg>
+                                cTrader
+                            </h4>
+                            <p>Native integration via Open API.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2" /><line x1="9" y1="3" x2="9" y2="21" /></svg>
+                                Web API
+                            </h4>
+                            <p>RESTful endpoints for building custom mobile and web dashboards.</p>
+                        </div>
+                    </div>
 
                     <h3>Web API / SDK</h3>
                     <p>
@@ -322,31 +526,121 @@ export default function CopyTradingPage() {
                     <p>Our pricing is modular, starting with a base license and scaling with the number of active followers or volume.</p>
 
                     <h3>What’s Included</h3>
-                    <ul>
-                        <li>Full White Label Social Marketplace & Leaderboard.</li>
-                        <li>Server-side trade copier for [1] trading server.</li>
-                        <li>Strategy Provider & Follower admin dashboards.</li>
-                        <li>Automated fee calculation and billing engine.</li>
-                        <li>Initial branding and UI/UX styling.</li>
-                        <li>Regular security and feature updates.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+                                Marketplace
+                            </h4>
+                            <p>Full White Label Social Marketplace & Leaderboard.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" /></svg>
+                                Copier
+                            </h4>
+                            <p>Server-side trade copier for [1] trading server.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2" /><line x1="3" y1="9" x2="21" y2="9" /><line x1="9" y1="21" x2="9" y2="9" /></svg>
+                                Dashboards
+                            </h4>
+                            <p>Strategy Provider & Follower admin dashboards.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" /></svg>
+                                Billing
+                            </h4>
+                            <p>Automated fee calculation and billing engine.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2" /><line x1="3" y1="9" x2="21" y2="9" /><line x1="9" y1="21" x2="9" y2="9" /></svg>
+                                Branding
+                            </h4>
+                            <p>Initial branding and UI/UX styling.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="7 10 12 15 17 10" /><line x1="12" y1="15" x2="12" y2="3" /></svg>
+                                Updates
+                            </h4>
+                            <p>Regular security and feature updates.</p>
+                        </div>
+                    </div>
 
                     <h3>Optional Add-Ons</h3>
-                    <ul>
-                        <li>Custom mobile app for social trading (iOS/Android).</li>
-                        <li>Multi-server/Cross-platform copying (e.g., MT4 to MT5).</li>
-                        <li>Advanced anti-fraud and "Copy-the-Copier" protection.</li>
-                        <li>Specialized marketing and SEO for your strategy marketplace.</li>
-                    </ul>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="5" y="2" width="14" height="20" rx="2" ry="2" /><line x1="12" y1="18" x2="12.01" y2="18" /></svg>
+                                Mobile App
+                            </h4>
+                            <p>Custom mobile app for social trading (iOS/Android).</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" /></svg>
+                                Multi-Server
+                            </h4>
+                            <p>Multi-server/Cross-platform copying (e.g., MT4 to MT5).</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" /></svg>
+                                Anti-Fraud
+                            </h4>
+                            <p>Advanced anti-fraud and "Copy-the-Copier" protection.</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#1E40AF" strokeWidth="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" /></svg>
+                                Marketing
+                            </h4>
+                            <p>Specialized marketing and SEO for your strategy marketplace.</p>
+                        </div>
+                    </div>
 
                     <h3>Setup Timeline</h3>
-                    <ol>
-                        <li><strong>Requirement Specification (Days 1-2):</strong> Defining fee structures and ranking logic.</li>
-                        <li><strong>Server Integration (Days 3-5):</strong> Linking the copier to your MT4/MT5/cTrader server.</li>
-                        <li><strong>UI/UX Customization (Days 5-7):</strong> Styling the leaderboard and trader profiles.</li>
-                        <li><strong>UAT & Load Testing (Days 7-9):</strong> Simulating mass-copy events for stability.</li>
-                        <li><strong>Go-Live (Day [X]):</strong> Production launch and onboarding your first Masters.</li>
-                    </ol>
+                    <div className="featureGrid">
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#1E40AF', marginRight: '8px' }}>01</span>
+                                Specs
+                            </h4>
+                            <p>Requirement Specification: Defining fee structures and ranking logic (Days 1-2).</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#1E40AF', marginRight: '8px' }}>02</span>
+                                Integrate
+                            </h4>
+                            <p>Server Integration: Linking the copier to your MT4/MT5/cTrader server (Days 3-5).</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#1E40AF', marginRight: '8px' }}>03</span>
+                                Style
+                            </h4>
+                            <p>UI/UX Customization: Styling the leaderboard and trader profiles (Days 5-7).</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#1E40AF', marginRight: '8px' }}>04</span>
+                                Test
+                            </h4>
+                            <p>UAT & Load Testing: Simulating mass-copy events for stability (Days 7-9).</p>
+                        </div>
+                        <div className="featureCard">
+                            <h4>
+                                <span style={{ fontSize: '1.5rem', fontWeight: '800', color: '#1E40AF', marginRight: '8px' }}>05</span>
+                                Go-Live
+                            </h4>
+                            <p>Go-Live: Production launch and onboarding your first Masters (Day 10).</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div id="faq">

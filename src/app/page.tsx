@@ -1,19 +1,22 @@
+import dynamic from 'next/dynamic';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
 import MT5Badge from '@/components/MT5Badge';
 import Logos from '@/components/Logos';
 import Problem from '@/components/Problem';
-import ROICalculator from '@/components/ROICalculator';
-import Features from '@/components/Features';
-import TrustBadges from '@/components/TrustBadges';
-import LiveStats from '@/components/LiveStats';
-import PricingPreview from '@/components/PricingPreview';
-import Testimonials from '@/components/Testimonials';
-import Solutions from '@/components/Solutions';
-import TurnkeySolutions from '@/components/TurnkeySolutions';
-import Operations from '@/components/Operations';
-import LiveDemo from '@/components/LiveDemo';
-import Footer from '@/components/Footer';
+
+// Lazy load below-the-fold components
+const ROICalculator = dynamic(() => import('@/components/ROICalculator'), { ssr: true });
+const Features = dynamic(() => import('@/components/Features'), { ssr: true });
+const TrustBadges = dynamic(() => import('@/components/TrustBadges'), { ssr: true });
+const LiveStats = dynamic(() => import('@/components/LiveStats'), { ssr: true });
+const PricingPreview = dynamic(() => import('@/components/PricingPreview'), { ssr: true });
+const Testimonials = dynamic(() => import('@/components/Testimonials'), { ssr: true });
+const Solutions = dynamic(() => import('@/components/Solutions'), { ssr: true });
+const TurnkeySolutions = dynamic(() => import('@/components/TurnkeySolutions'), { ssr: true });
+const Operations = dynamic(() => import('@/components/Operations'), { ssr: true });
+const LiveDemo = dynamic(() => import('@/components/LiveDemo'), { ssr: true });
+const Footer = dynamic(() => import('@/components/Footer'), { ssr: true });
 
 import { Metadata } from 'next';
 
