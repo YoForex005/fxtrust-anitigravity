@@ -4,6 +4,7 @@ import Script from "next/script";
 import "./globals.css";
 import DynamicBreadcrumbs from "../components/seo/DynamicBreadcrumbs";
 import OrganizationSchema from "../components/seo/OrganizationSchema";
+import Image from "next/image";
 
 import GoogleTranslate from "../components/GoogleTranslate";
 
@@ -120,12 +121,13 @@ export default function RootLayout({
           `}
         </Script>
         <noscript>
-          <img
-            height="1"
-            width="1"
+          <Image
+            height={1}
+            width={1}
             style={{ display: 'none' }}
             src="https://www.facebook.com/tr?id=25605243959108639&ev=PageView&noscript=1"
             alt=""
+            unoptimized
           />
         </noscript>
 

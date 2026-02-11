@@ -4,6 +4,14 @@ This file tracks all SEO maintenance runs and their outcomes.
 
 ---
 
+## [2026-02-11] Maintenance Run
+- **Structure:** ✅ FIXED
+- **Media:** ✅ FIXED
+- **Technical:** ✅ FIXED
+- **Summary:** Converted legacy Meta Pixel `<img>` to `next/image` in `layout.tsx`. Verified dynamic metadata for Blog routes. All systems healthy.
+
+---
+
 ## [2024-12-18] Maintenance Run
 
 **Run Time:** 16:21 IST  

@@ -88,8 +88,8 @@ export default async function BlogIndex(props: {
                     {/* Blog Grid */}
                     <div className={styles.grid}>
                         {articles.length > 0 ? (
-                            articles.map((article) => (
-                                <BlogCard key={Number(article.id)} post={article} />
+                            articles.map((article, i) => (
+                                <BlogCard key={Number(article.id)} post={article} priority={i === 0} />
                             ))
                         ) : (
                             <div style={{ gridColumn: 'span 3', textAlign: 'center', color: '#94A3B8', padding: '4rem' }}>

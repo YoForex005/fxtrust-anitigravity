@@ -60,42 +60,8 @@ export const metadata: Metadata = {
 };
 
 export default function Home() {
-  const jsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Organization',
-    name: 'FxTrusts',
-    url: 'https://fxtrusts.com',
-    logo: 'https://fxtrusts.com/logo.png',
-    sameAs: [
-      'https://twitter.com/fxtrusts',
-      'https://www.linkedin.com/company/fxtrusts',
-      'https://www.facebook.com/fxtrusts'
-    ],
-    contactPoint: {
-      '@type': 'ContactPoint',
-      telephone: '+1-555-0123-456',
-      contactType: 'sales',
-      areaServed: 'Worldwide',
-      availableLanguage: ['English', 'Spanish', 'Chinese']
-    },
-    offers: {
-      '@type': 'Offer',
-      itemOffered: {
-        '@type': 'SoftwareApplication',
-        name: 'FxTrusts CRM',
-        applicationCategory: 'BusinessApplication',
-        operatingSystem: 'Web',
-        description: 'Comprehensive Forex CRM for Brokers with MT5 integration.'
-      }
-    }
-  };
-
   return (
     <>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
       <Header />
       <Hero />
       <MT5Badge />

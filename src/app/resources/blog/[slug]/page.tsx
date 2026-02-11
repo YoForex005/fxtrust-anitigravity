@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { blogService } from '@/services/blogService';
@@ -30,6 +31,22 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
         openGraph: {
             title: post.seoMeta[0]?.ogTitle || post.title,
             description: post.seoMeta[0]?.ogDescription || post.content.substring(0, 160),
+            images: post.seoMeta[0]?.ogImage ? [
+                {
+                    url: post.seoMeta[0]?.ogImage,
+                    width: 1200,
+                    height: 630,
+                    alt: post.title,
+                }
+            ] : [],
+            type: 'article',
+            publishedTime: post.createdAt.toISOString(),
+            authors: [post.author],
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title: post.seoMeta[0]?.ogTitle || post.title,
+            description: post.seoMeta[0]?.ogDescription || post.content.substring(0, 160),
             images: post.seoMeta[0]?.ogImage ? [post.seoMeta[0]?.ogImage] : [],
         },
     };
@@ -56,7 +73,14 @@ export default async function BlogPost({ params }: Props) {
                     </div>
                     {post.featuredImage && (
                         <div className={articleStyles.featuredImageWrapper}>
-                            <img src={post.featuredImage} alt={post.title} className={articleStyles.featuredImage} />
+                            <Image
+                                src={post.featuredImage}
+                                alt={post.title}
+                                width={1200}
+                                height={630}
+                                priority
+                                className={articleStyles.featuredImage}
+                            />
                         </div>
                     )}
                 </header>

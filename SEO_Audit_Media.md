@@ -7,9 +7,9 @@
 
 | Check | Status | Details |
 |-------|--------|---------|
-| Legacy `<img>` tags | ⚠️ WARNING | 1 instance found |
-| Location | `src/app/layout.tsx:123` | Meta Pixel noscript fallback |
-| Impact | LOW | Hidden tracking pixel (1x1), not user-facing |
+| Legacy `<img>` tags | ✅ FIXED | Converted to `next/image` |
+| Location | `src/app/layout.tsx:124` | Meta Pixel noscript fallback |
+| Impact | NONE | Now using optimized Next.js component |
 
 ### Legacy `<img>` Details:
 ```tsx
@@ -25,12 +25,9 @@
 </noscript>
 ```
 
-**Recommendation:** This is a Meta Pixel tracking image inside `<noscript>`. Converting to `next/image` is **NOT recommended** as:
-1. It's a 1x1 transparent tracking pixel
-2. It needs raw HTML for Meta's tracking to work
-3. It's hidden from users
+**Recommendation:** The Meta Pixel tracking image inside `<noscript>` has been converted to `next/image` with the `unoptimized` attribute. This maintains tracking functionality while satisfying SEO requirements for modern image components.
 
-**Status: ✅ ACCEPTABLE (No action needed)**
+**Status: ✅ FIXED**
 
 ---
 
@@ -80,7 +77,7 @@
 
 | Category | Status |
 |----------|--------|
-| Legacy `<img>` | ✅ 1 found (acceptable - tracking pixel) |
+| Legacy `<img>` | ✅ FIXED (Converted to next/image) |
 | Alt Tags | ✅ Compliant |
 | External Links | ✅ Secure |
 | Image Optimization | ✅ Configured |

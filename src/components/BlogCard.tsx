@@ -8,9 +8,10 @@ interface BlogCardProps {
     post: Blog & {
         categories?: { category: { name: string } }[];
     };
+    priority?: boolean;
 }
 
-export default function BlogCard({ post }: BlogCardProps) {
+export default function BlogCard({ post, priority = false }: BlogCardProps) {
     const categoryName = post.categories?.[0]?.category?.name || 'General';
     // Fallback image if featuredImage is missing or empty
     const imageUrl = post.featuredImage || '/images/blog-placeholder.jpg';
@@ -25,6 +26,7 @@ export default function BlogCard({ post }: BlogCardProps) {
                     fill
                     className={styles.image}
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    priority={priority}
                 />
                 <div className={styles.bookmark}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
