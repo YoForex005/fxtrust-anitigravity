@@ -123,7 +123,7 @@ export default function PammPage() {
                 contactEmail="support@domain.com"
             >
                 <div id="solution">
-                    <h1>PAMM (Percentage Allocation Management Module) Solution</h1>
+                    <h2 className='sm:w-[20px]'>PAMM (Percentage Allocation Management Module) Solution</h2>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                         <div className="p-4 bg-blue-50 rounded-lg">
                             <h3 className="font-semibold text-blue-900 mb-2">Enterprise Scaling</h3>

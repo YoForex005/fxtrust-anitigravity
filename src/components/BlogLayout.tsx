@@ -293,7 +293,16 @@ export default function BlogLayout({
 
             {/* Main Content */}
             <main className={styles.mainContent}>
-                {children}
+                {React.Children.map(children, (child) => {
+                    if (!React.isValidElement(child)) return child;
+
+                    const element = child as React.ReactElement<any>;
+                    // Transform h1, h3, h4 to h2 for consistency and SEO as per request
+                    if (element.type === 'h1' || element.type === 'h3' || element.type === 'h4') {
+                        return React.createElement('h2', element.props, element.props.children);
+                    }
+                    return child;
+                })}
             </main>
 
             {/* Right Sidebar */}

@@ -171,21 +171,30 @@ export default function ContentPageLayout({
                             }
 
                             const element = child as React.ReactElement<any>;
+
+                            // Transform h1, h3, h4 to h2 for consistency and SEO as per request
+                            let processedChild = child;
+                            if (element.type === 'h1' || element.type === 'h3' || element.type === 'h4') {
+                                processedChild = React.createElement('h2', element.props, element.props.children);
+                            }
+
+                            const processedElement = processedChild as React.ReactElement<any>;
+
                             // A new section starts if:
-                            // 1. It's an H1 or H2
+                            // 1. It's an H1 or H2 (now both will be h2 after transformation)
                             // 2. It's a div or section with an ID (likely an anchor target)
                             const isNewSection =
-                                element.type === 'h1' ||
-                                element.type === 'h2' ||
-                                (typeof element.type === 'string' &&
-                                    (element.type === 'div' || element.type === 'section') &&
-                                    element.props.id);
+                                processedElement.type === 'h1' ||
+                                processedElement.type === 'h2' ||
+                                (typeof processedElement.type === 'string' &&
+                                    (processedElement.type === 'div' || processedElement.type === 'section') &&
+                                    processedElement.props.id);
 
                             if (isNewSection && currentGroup.length > 0) {
                                 flushGroup();
                             }
 
-                            currentGroup.push(child);
+                            currentGroup.push(processedChild);
                         });
 
                         flushGroup();

@@ -771,6 +771,13 @@
         padding: 1rem;
     }
 
+    .mainContent h1,
+    .mainContent h2,
+    .mainContent h3,
+    .mainContent h4 {
+        text-align: center;
+    }
+
     .rightSidebar {
         grid-template-columns: 1fr;
     }

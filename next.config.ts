@@ -20,6 +20,11 @@ const nextConfig: NextConfig = {
         hostname: 'pub-f38decde572b468aa897d403def33f2d.r2.dev',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'pub-9fc60e9b8d334d298b6a4a22f06229c0.r2.dev',
+        pathname: '/**',
+      },
     ],
   },
   async headers() {
