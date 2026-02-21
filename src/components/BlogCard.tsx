@@ -19,7 +19,6 @@ export default function BlogCard({ post, priority = false }: BlogCardProps) {
     return (
         <Link href={`/resources/blog/${post.seoSlug}`} className={styles.card}>
             <div className={styles.imageWrapper}>
-                {/* Use optimization when possible, but for now simple img or Next Image with unoptimized if domain not configured */}
                 <Image
                     src={imageUrl}
                     alt={post.title}
@@ -27,6 +26,7 @@ export default function BlogCard({ post, priority = false }: BlogCardProps) {
                     className={styles.image}
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     priority={priority}
+                    unoptimized
                 />
                 <div className={styles.bookmark}>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

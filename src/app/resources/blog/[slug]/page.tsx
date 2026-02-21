@@ -79,6 +79,7 @@ export default async function BlogPost({ params }: Props) {
                                 width={1200}
                                 height={630}
                                 priority
+                                unoptimized
                                 className={articleStyles.featuredImage}
                             />
                         </div>
