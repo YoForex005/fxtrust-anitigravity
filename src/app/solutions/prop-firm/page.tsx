@@ -1,494 +1,325 @@
-import InnerPageHeader from '@/components/InnerPageHeader';
-
-
 import styles from './prop.module.css';
-import { MacWindow, CodeTerminal } from '@/components/DeviceFrames';
+import { MacWindow } from '@/components/DeviceFrames';
 import Link from 'next/link';
+import Image from 'next/image';
 import type { Metadata } from 'next';
-import FAQAccordion from '@/components/FAQAccordion';
-import FAQSchema from '@/components/seo/FAQSchema';
 
 export const metadata: Metadata = {
-    title: 'Prop Firm Technology & CRM | Start Your Own Prop Firm | FXTrusts',
-    description: 'Complete technology stack for prop trading firms. Automated challenge management, real-time breach detection, payout automation, and risk dashboards.',
+    title: 'Prop Firm Technology & Backend System | FXTrusts',
+    description: 'Launch or scale your proprietary trading firm with our complete backend system. Automated challenge management, real-time risk tracking, broker integration, and instant payouts.',
     keywords: [
         'prop firm technology',
         'start prop trading firm',
         'prop firm CRM',
-        'funded trader platform',
+        'prop firm backend',
         'challenge management system',
         'prop firm software',
-        'trading challenge automation',
-        'prop trading company setup',
-        'funded account technology',
-        'prop firm risk management',
-        'trader evaluation software',
-        'prop firm payout system',
-        'trading challenge rules engine',
-        'prop trading infrastructure',
-        'FTMO alternative technology'
+        'trading challenge automation'
     ],
     openGraph: {
-        title: 'Prop Firm Tech Stack | Automate Challenges & Payouts | FXTrusts',
-        description: 'Launch your prop trading firm with automated breach detection, challenge management, and payout processing.',
+        title: 'Prop Firm Technology & Backend System | FXTrusts',
+        description: 'Launch your prop trading firm with our complete backend system and automate everything from challenges to payouts.',
         type: 'website',
         url: 'https://fxtrusts.com/solutions/prop-firm',
-    },
-    twitter: {
-        card: 'summary_large_image',
-        title: 'Prop Firm Technology | Start Your Funded Trader Program',
-        description: 'Complete tech stack for prop firms. Real-time breach detection, automated payouts, HFT blocking.',
     },
     alternates: {
         canonical: 'https://fxtrusts.com/solutions/prop-firm',
     },
 };
 
-const propFirmFaqs = [
-    {
-        question: 'Can I customize the challenge rules?',
-        answer: 'Yes. You can create 1-step, 2-step, or 3-step challenges. Customize drawdown limits, profit targets, time limits, minimum trading days, and lot size restrictions. All changeable from the admin panel in real-time.',
-    },
-    {
-        question: 'Do you provide the liquidity for funded accounts?',
-        answer: 'For the demo phase, we provide the price feed. For funded accounts, we can connect you to our liquidity partners (A-book) or you can run your own B-book execution. Most prop firms B-book everything since 90% of traders lose anyway.',
-    },
-    {
-        question: 'What about the "copy trading" cheaters?',
-        answer: 'We detect them. If two accounts open the same trades at the same time from different IPs, we flag it. You can auto-fail both accounts or manually review.',
-    },
-    {
-        question: 'Is running a prop firm legal?',
-        answer: 'We provide the technology. You\'re responsible for the legal structure. Most prop firms operate as "education companies" offering "simulated trading." Consult a lawyer in your jurisdiction.',
-    },
-    {
-        question: 'How fast is breach detection?',
-        answer: 'Sub-100 milliseconds. Our system monitors equity on every tick. The moment a trader crosses the threshold, positions are closed and trading is disabled—before they can dig themselves deeper.',
-    },
-    {
-        question: 'Can I white-label the platform?',
-        answer: 'Absolutely. Your logo, your domain, your brand colors. Traders never see our name. It looks like you built the entire system yourself.',
-    },
-];
-
 export default function PropFirmPage() {
     return (
-        <main>
-            <FAQSchema faqs={propFirmFaqs} />
+        <main className={styles.pageWrapper}>
+            {/* Hero Section */}
+            <section className={styles.heroSection}>
+                <div className={styles.container}>
+                    <div className={styles.badge}>Institutional Infrastructure</div>
+                    <h1 className={styles.headline}>
+                        The Backbone of<br />Modern Prop Firms
+                    </h1>
+                    <p className={styles.subheadline}>
+                        A complete proprietary trading backend system built to manage thousands of traders, automate compliance, and scale your firm with zero technical overhead.
+                    </p>
+                    <div className={styles.ctaGroup}>
+                        <Link href="/get-started" className={styles.primaryCta}>
+                            Launch Your Prop Firm
+                        </Link>
+                        <Link href="/company/contact" className={styles.secondaryCta}>
+                            Book a Demo
+                        </Link>
+                    </div>
+                </div>
+            </section>
 
-            <InnerPageHeader
-                badge="The Challenge Engine"
-                badgeIcon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z" /><polyline points="14 2 14 8 20 8" /><path d="M12 18v-6" /><path d="M8 15l4-4 4 4" /></svg>}
-                title="Prop Firm Tech.<br/>Automate the 'Fail' Button."
-                subtitle="Running a prop firm is 10% marketing and 90% risk management. If you're manually checking equity breaches, you're already dead. Our system watches every tick, enforces every rule, and fails every breacher in under 100ms."
-            />
-
-            {/* The Manual Review Problem */}
+            {/* Interactive Demo Section - Admin */}
             <section className={styles.section}>
                 <div className={styles.container}>
-                    <div className={styles.sectionCard}>
-                        <div className={styles.sectionHeader}>
-                            <div className={styles.badge}>
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                                    <circle cx="12" cy="12" r="10" />
-                                    <line x1="12" y1="8" x2="12" y2="12" />
-                                    <line x1="12" y1="16" x2="12.01" y2="16" />
-                                </svg>
-                                <span>THE MANUAL REVIEW TRAP</span>
-                            </div>
-                            <h2>You Have 5,000 Active Challenges. Can You Check Them All?</h2>
-                            <p>
-                                Non-Farm Payroll drops. Gold spikes $30. 237 traders hit their daily drawdown limit in the
-                                same second. Can your support team ban them all instantly? No. But our system can—and it
-                                will do it in under 100 milliseconds.
-                            </p>
-                        </div>
-
-                        <div className={styles.painGrid}>
-                            <div className={styles.painCard}>
-                                <div className={styles.painIcon}>
-                                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                                        <circle cx="12" cy="12" r="10" />
-                                        <line x1="12" y1="8" x2="12" y2="12" />
-                                        <line x1="12" y1="16" x2="12.01" y2="16" />
-                                    </svg>
-                                </div>
-                                <h3 className={styles.painTitle}>The Delayed Breach</h3>
-                                <p className={styles.painText}>
-                                    A trader hits -5% equity. You don't catch it for 10 minutes. In that time, he gambles,
-                                    gets lucky, and claws back to positive. Now you legally have to pay him. That's your
-                                    profit margin—gone—because you didn't automate.
-                                </p>
-                            </div>
-                            <div className={styles.painCard}>
-                                <div className={styles.painIcon}>
-                                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                                        <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
-                                    </svg>
-                                </div>
-                                <h3 className={styles.painTitle}>The HFT Cheaters</h3>
-                                <p className={styles.painText}>
-                                    They use high-frequency bots to exploit latency on your demo servers. They pass
-                                    challenges in 30 seconds without taking real risk. They're not traders—they're parasites.
-                                    Our toxic flow detection blocks them before they even get started.
-                                </p>
-                            </div>
-                            <div className={styles.painCard}>
-                                <div className={styles.painIcon}>
-                                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                                        <rect x="1" y="4" width="22" height="16" rx="2" ry="2" />
-                                        <line x1="1" y1="10" x2="23" y2="10" />
-                                    </svg>
-                                </div>
-                                <h3 className={styles.painTitle}>The Payout Nightmare</h3>
-                                <p className={styles.painText}>
-                                    100 traders request payouts on Friday. You're manually checking wallet addresses,
-                                    verifying trading history, calculating profit splits. It takes all weekend. Meanwhile,
-                                    Trustpilot reviews pile up: "Slow withdrawals!"
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* The Solution */}
-            <section className={`${styles.section} ${styles.altSection}`}>
-                <div className={styles.container}>
-                    <div className={styles.sectionCard}>
-                        <div className={styles.splitFeature}>
-                            <div className={styles.featureContent}>
-                                <div className={styles.featureBadge}>THE SOLUTION</div>
-                                <h2>Set the Rules.<br />We Enforce Them. Ruthlessly.</h2>
-                                <p>
-                                    Define your challenge parameters: Max Daily Loss, Max Trailing Drawdown, Profit Target,
-                                    Minimum Trading Days. Our system watches every tick on every account. If a rule is
-                                    broken, the account is disabled instantly—no human intervention required.
-                                </p>
-                                <ul className={styles.featureList}>
-                                    <li>
-                                        <span className={styles.checkIcon}>
-                                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                                                <polyline points="20 6 9 17 4 12"></polyline>
-                                            </svg>
-                                        </span>
-                                        Real-Time Breach Detection (Equity &amp; Balance)
-                                    </li>
-                                    <li>
-                                        <span className={styles.checkIcon}>
-                                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                                                <polyline points="20 6 9 17 4 12"></polyline>
-                                            </svg>
-                                        </span>
-                                        Automated Certificate Generation
-                                    </li>
-                                    <li>
-                                        <span className={styles.checkIcon}>
-                                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                                                <polyline points="20 6 9 17 4 12"></polyline>
-                                            </svg>
-                                        </span>
-                                        "Toxic Flow" Protection (HFT Blocking)
-                                    </li>
-                                    <li>
-                                        <span className={styles.checkIcon}>
-                                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                                                <polyline points="20 6 9 17 4 12"></polyline>
-                                            </svg>
-                                        </span>
-                                        Crypto Payout Automation
-                                    </li>
-                                    <li>
-                                        <span className={styles.checkIcon}>
-                                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                                                <polyline points="20 6 9 17 4 12"></polyline>
-                                            </svg>
-                                        </span>
-                                        IP &amp; Device Fingerprinting
-                                    </li>
-                                </ul>
-                            </div>
-                            <div className={styles.featureImage}>
-                                <MacWindow title="Prop Firm Admin - Risk Dashboard">
-                                    <div className={styles.dashboardMockup}>
-                                        <div className={styles.statsRow}>
-                                            <div className={styles.statBox}>
-                                                <div className={styles.statLabel}>Active Challenges</div>
-                                                <div className={styles.statValue}>1,248</div>
-                                            </div>
-                                            <div className={styles.statBox}>
-                                                <div className={styles.statLabel}>Breached Today</div>
-                                                <div className={styles.statValueBad}>42</div>
-                                            </div>
-                                            <div className={styles.statBox}>
-                                                <div className={styles.statLabel}>Passed Phase 1</div>
-                                                <div className={styles.statValueGood}>15</div>
-                                            </div>
-                                        </div>
-                                        <div className={styles.activityFeed}>
-                                            <div className={styles.feedHeader}>Recent Activity</div>
-                                            <div className={styles.feedItem}>
-                                                <span>User #8821 (Gold)</span>
-                                                <span className={styles.feedBad}>Hit Max Daily Loss (-5.2%)</span>
-                                            </div>
-                                            <div className={styles.feedItem}>
-                                                <span>User #9932 (EURUSD)</span>
-                                                <span className={styles.feedGood}>Passed Challenge (+10.1%)</span>
-                                            </div>
-                                            <div className={styles.feedItem}>
-                                                <span>User #7741 (BTCUSD)</span>
-                                                <span className={styles.feedWarning}>High Risk (4.8% DD)</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </MacWindow>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Rules Engine */}
-            <section className={styles.section}>
-                <div className={styles.container}>
-                    <div className={styles.sectionCard}>
-                        <div className={styles.sectionHeader}>
-                            <div className={styles.badge}>
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                                    <polyline points="16 18 22 12 16 6" />
-                                    <polyline points="8 6 2 12 8 18" />
-                                </svg>
-                                <span>THE RULES ENGINE</span>
-                            </div>
-                            <h2>Complex Logic Made Simple</h2>
-                            <p>
-                                If X happens, do Y. That's it. Our rules engine lets you define exactly what happens when
-                                a trader breaches, passes, or does something suspicious.
-                            </p>
-                        </div>
-
-                        <div className={styles.codeGrid}>
-                            <div className={styles.codeSection}>
-                                <h3 className={styles.codeTitle}>
-                                    <span className={styles.iconBad}>⛔</span>
-                                    The Breach Logic
-                                </h3>
-                                <CodeTerminal
-                                    title="breach_detection.js"
-                                    language="javascript"
-                                    code={`// Daily Drawdown Check (runs every tick)
-if (currentEquity < (startingEquity - dailyLossLimit)) {
-    closeAllPositions();
-    disableTrading();
-    sendEmail("Challenge Failed: Daily Loss");
-    logBreach("Daily Loss Limit Hit");
-    // Account disabled in <100ms
-}`}
-                                />
-                            </div>
-                            <div className={styles.codeSection}>
-                                <h3 className={styles.codeTitle}>
-                                    <span className={styles.iconGood}>✅</span>
-                                    The Success Logic
-                                </h3>
-                                <CodeTerminal
-                                    title="phase_upgrade.js"
-                                    language="javascript"
-                                    code={`// Phase 1 Pass Check
-if (equity >= profitTarget && tradingDays >= minDays) {
-    upgradeToPhase2();
-    resetEquity();
-    sendEmail("Congrats, You Passed!");
-    generateCertificate();
-    // Trader advances automatically
-}`}
-                                />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Dashboard Features */}
-            <section className={`${styles.section} ${styles.altSection}`}>
-                <div className={styles.container}>
-                    <div className={styles.sectionCard}>
-                        <div className={styles.sectionHeader}>
-                            <div className={styles.badge}>
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
-                                    <line x1="3" y1="9" x2="21" y2="9" />
-                                    <line x1="9" y1="21" x2="9" y2="9" />
-                                </svg>
-                                <span>THE "GOD MODE" DASHBOARD</span>
-                            </div>
-                            <h2>See Everything. Control Everything.</h2>
-                            <p>
-                                Your command center for managing thousands of traders. Real-time visibility into every
-                                account, every position, every breach attempt.
-                            </p>
-                        </div>
-
-                        <div className={styles.dashboardGrid}>
-                            <div className={styles.dashboardCard}>
-                                <h3>Risk Heatmap</h3>
-                                <p>
-                                    See which traders are dangerously close to their drawdown limits. Sort by "Distance to
-                                    Breach" to identify who's about to fail—and who might need a stop-out.
-                                </p>
-                            </div>
-                            <div className={styles.dashboardCard}>
-                                <h3>Exposure Monitor</h3>
-                                <p>
-                                    "We are net short 500 lots of Gold across all funded accounts." Know your firm's total
-                                    exposure in real-time so you can hedge if the market moves against you.
-                                </p>
-                            </div>
-                            <div className={styles.dashboardCard}>
-                                <h3>IP &amp; Device Tracking</h3>
-                                <p>
-                                    Catch traders who are account sharing, using VPS farms, or running unauthorized bots.
-                                    Flag duplicate IPs and device fingerprints instantly.
-                                </p>
-                            </div>
-                            <div className={styles.dashboardCard}>
-                                <h3>Revenue Analytics</h3>
-                                <p>
-                                    Track challenge purchases, pass rates, payout ratios, and lifetime value per trader.
-                                    Know exactly which marketing channels bring profitable customers.
-                                </p>
-                            </div>
-                            <div className={styles.dashboardCard}>
-                                <h3>Payout Queue</h3>
-                                <p>
-                                    All pending payouts in one place. One-click approval for legitimate requests. Auto-flag
-                                    suspicious patterns like "50% profit from one trade."
-                                </p>
-                            </div>
-                            <div className={styles.dashboardCard}>
-                                <h3>Audit Trail</h3>
-                                <p>
-                                    Every action logged. Every rule change recorded. When a trader disputes a breach, you
-                                    have the evidence—timestamped to the millisecond.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* Payout Flow */}
-            <section className={styles.section}>
-                <div className={styles.container}>
-                    <div className={styles.sectionCard}>
-                        <div className={styles.splitFeature}>
-                            <div className={styles.featureContent}>
-                                <h2>The Payout Flow:<br />Automated, Not Manual</h2>
-                                <p className={styles.payoutIntro}>
-                                    Don't make your traders wait. Don't make your staff work weekends. Our system automates
-                                    the boring parts so you just click "Approve."
-                                </p>
-                                <div className={styles.payoutSteps}>
-                                    <div className={styles.payoutStep}>
-                                        <span className={styles.stepNum}>1</span>
-                                        <div>
-                                            <strong>Request</strong>
-                                            <p>Trader clicks "Withdraw" in their dashboard. System checks eligibility (profit split, min trading days, no open positions).</p>
-                                        </div>
-                                    </div>
-                                    <div className={styles.payoutStep}>
-                                        <span className={styles.stepNum}>2</span>
-                                        <div>
-                                            <strong>Verification</strong>
-                                            <p>System scans for "Gambling" behavior (e.g., 50% profit from one trade). Flags for review if suspicious.</p>
-                                        </div>
-                                    </div>
-                                    <div className={styles.payoutStep}>
-                                        <span className={styles.stepNum}>3</span>
-                                        <div>
-                                            <strong>Execution</strong>
-                                            <p>You click "Approve." System sends crypto or wire via API. Trader gets email confirmation. Done in seconds.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className={styles.payoutMockup}>
-                                <div className={styles.payoutCard}>
-                                    <div className={styles.payoutHeader}>
-                                        <span>Payout Request #4921</span>
-                                        <span className={styles.payoutPending}>Pending Review</span>
-                                    </div>
-                                    <div className={styles.payoutDetails}>
-                                        <div className={styles.payoutField}>
-                                            <span className={styles.payoutLabel}>Amount</span>
-                                            <span className={styles.payoutValue}>$4,250.00</span>
-                                        </div>
-                                        <div className={styles.payoutField}>
-                                            <span className={styles.payoutLabel}>Method</span>
-                                            <span className={styles.payoutValue}>USDT (TRC20)</span>
-                                        </div>
-                                    </div>
-                                    <div className={styles.payoutActions}>
-                                        <button className={styles.rejectBtn}>Reject</button>
-                                        <button className={styles.approveBtn}>Approve</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            {/* FAQ Section */}
-            <section className={`${styles.section} ${styles.altSection}`}>
-                <div className={styles.container}>
-                    <div className={styles.sectionCard}>
-                        <div className={styles.sectionHeader}>
-                            <div className={styles.badge}>
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                    <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
-                                    <line x1="12" y1="17" x2="12.01" y2="17"></line>
-                                </svg>
-                                <span>FREQUENTLY ASKED QUESTIONS</span>
-                            </div>
-                            <h2>Questions About Starting a Prop Firm</h2>
-                            <p>
-                                The real questions—not the marketing ones.
-                            </p>
-                        </div>
-
-                        <FAQAccordion faqs={propFirmFaqs} />
-                    </div>
-                </div>
-            </section>
-
-            {/* CTA Section */}
-            <section className={styles.ctaSection}>
-                <div className={styles.container}>
-                    <div className={styles.ctaContent}>
-                        <h2>Launch Your Prop Firm in 30 Days</h2>
-                        <p>
-                            We handle the technology. You handle the marketing. Let's build your funded trader
-                            program together.
+                    <div className={styles.textCenter}>
+                        <h2 className={styles.sectionHeadline}>Test Drive the Platform <br /><span style={{ fontSize: "2rem", color: "#6b7280" }}>(Because You Don't Trust Marketing Copy)</span></h2>
+                        <p className={styles.sectionSubtext}>
+                            Click around. Break stuff. See if we're lying about the speed. No login required. We promise not to immediately sell your email to our sales team.
                         </p>
-                        <div className={styles.ctaButtons}>
-                            <Link href="/get-started" className={styles.primaryCta}>
-                                Start Your Prop Firm
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                                    <line x1="5" y1="12" x2="19" y2="12"></line>
-                                    <polyline points="12 5 19 12 12 19"></polyline>
+                    </div>
+
+                    <Link href="/live-demo/admin" prefetch={true} style={{ display: 'block', textDecoration: 'none' }}>
+                        <div className={styles.demoMockupWrapper}>
+                            <MacWindow title="Prop Firm Admin - Dashboard">
+                                <div className={styles.mockupContent}>
+                                    <div className={styles.dashboardInner}>
+                                        <div className={styles.dashHeader}>
+                                            <div className={styles.dashTitle}>Dashboard Overview</div>
+                                        </div>
+                                        <div className={styles.dashRow}>
+                                            <div className={styles.dashBox}>
+                                                <div className={styles.dashBoxLabel}>Total Clients</div>
+                                                <div className={styles.dashBoxValue}>123,451</div>
+                                            </div>
+                                            <div className={styles.dashBox}>
+                                                <div className={styles.dashBoxLabel}>Pending Account Breaches</div>
+                                                <div className={styles.dashBoxValue}>0</div>
+                                            </div>
+                                            <div className={styles.dashBox}>
+                                                <div className={styles.dashBoxLabel}>Pending Real-Time Breaches</div>
+                                                <div className={styles.dashBoxValue}>1,241</div>
+                                            </div>
+                                        </div>
+                                        <div className={styles.dashTable}>
+                                            <div className={styles.dashBoxLabel} style={{ marginBottom: "1rem" }}>Recent Login History</div>
+                                            {/* Mock Table Rows */}
+                                            <div style={{ display: "flex", justifyContent: "space-between", borderBottom: "1px solid #e2e8f0", paddingBottom: "0.5rem", marginBottom: "0.5rem", color: "#64748b", fontSize: "0.875rem" }}>
+                                                <span>Name</span><span>Email</span><span>IP Address</span><span>Status</span>
+                                            </div>
+                                            <div style={{ display: "flex", justifyContent: "space-between", paddingBottom: "0.5rem", fontSize: "0.875rem", color: "#0f172a" }}>
+                                                <span>John Doe</span><span>john@example.com</span><span>192.168.1.1</span><span style={{ color: "#16a34a" }}>Success</span>
+                                            </div>
+                                            <div style={{ display: "flex", justifyContent: "space-between", paddingBottom: "0.5rem", fontSize: "0.875rem", color: "#0f172a" }}>
+                                                <span>Jane Smith</span><span>jane@example.com</span><span>10.0.0.5</span><span style={{ color: "#16a34a" }}>Success</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </MacWindow>
+                            <div className={styles.playButtonOverlay}>
+                                <svg className={styles.playIcon} viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z" />
                                 </svg>
-                            </Link>
-                            <Link href="/pricing" className={styles.secondaryCta}>
-                                View Pricing
-                            </Link>
+                            </div>
+                        </div>
+                    </Link>
+                </div>
+            </section>
+
+            {/* Interactive Demo Section - Trader */}
+            <section className={`${styles.section} ${styles.altSection}`}>
+                <div className={styles.container}>
+                    <div className={styles.textCenter}>
+                        <div className={`${styles.badge} ${styles.badgeGreen}`}>Trader Experience</div>
+                        <h2 className={styles.sectionHeadline}>Now See It From the Trader's Side</h2>
+                        <p className={styles.sectionSubtext}>
+                            This is what your traders will actually see. Challenge tracking, real-time analytics, risk metrics... all the stuff they'll spam support about if it doesn't work perfectly.
+                        </p>
+                    </div>
+
+                    <Link href="/live-demo/client" prefetch={true} style={{ display: 'block', textDecoration: 'none' }}>
+                        <div className={styles.demoMockupWrapper}>
+                            <MacWindow title="Trader Portal - Challenge Phase 1">
+                                <div className={styles.mockupContent}>
+                                    <Image
+                                        src="/crm-dashboard.png"
+                                        alt="FXTrusts Client Dashboard"
+                                        width={800}
+                                        height={500}
+                                        className={styles.dashboardImage}
+                                    />
+                                    <div className={styles.playButtonOverlay}>
+                                        <div className={styles.playButton} style={{ background: 'rgba(16, 185, 129, 0.95)', boxShadow: '0 12px 40px rgba(16, 185, 129, 0.4)' }}>
+                                            <div className={styles.playIcon}></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </MacWindow>
+                            <div className={`${styles.playButtonOverlay} ${styles.green}`}>
+                                <svg className={styles.playIcon} viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M8 5v14l11-7z" />
+                                </svg>
+                            </div>
+                        </div>
+                    </Link>
+                </div>
+            </section>
+
+            {/* Core Infrastructure Section */}
+            <section className={styles.section}>
+                <div className={styles.container}>
+                    <div className={styles.textCenter}>
+                        <h2 className={styles.sectionHeadline}>Core Infrastructure Built to Scale</h2>
+                        <p className={styles.sectionSubtext}>
+                            We didn't just build a dashboard. We built an enterprise-grade execution and risk management ecosystem for the world's most demanding prop firms.
+                        </p>
+                    </div>
+
+                    <div className={styles.featureGrid}>
+                        <div className={styles.featureCard}>
+                            <div className={styles.featureIcon}>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+                                </svg>
+                            </div>
+                            <h3 className={styles.featureTitle}>Challenge Engine</h3>
+                            <p className={styles.featureDesc}>
+                                Configure custom Phase 1, Phase 2, or 1-Step evaluations. Automatically transition traders who pass straight to funded accounts.
+                            </p>
+                        </div>
+                        <div className={styles.featureCard}>
+                            <div className={styles.featureIcon}>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                                </svg>
+                            </div>
+                            <h3 className={styles.featureTitle}>Automated Rule Enforcement</h3>
+                            <p className={styles.featureDesc}>
+                                Set maximum daily loss, total drawdown, minimum trading days, and permitted instruments—enforced programmatically with sub-second accuracy.
+                            </p>
+                        </div>
+                        <div className={styles.featureCard}>
+                            <div className={styles.featureIcon}>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polyline points="12 6 12 12 16 14"></polyline>
+                                </svg>
+                            </div>
+                            <h3 className={styles.featureTitle}>Real-Time Risk Tracking</h3>
+                            <p className={styles.featureDesc}>
+                                Equity is monitored tick-by-tick. When a breach occurs, active positions are closed and the account is disabled instantly, minimizing firm liability.
+                            </p>
+                        </div>
+                        <div className={styles.featureCard}>
+                            <div className={styles.featureIcon}>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <rect x="2" y="5" width="20" height="14" rx="2"></rect>
+                                    <line x1="2" y1="10" x2="22" y2="10"></line>
+                                </svg>
+                            </div>
+                            <h3 className={styles.featureTitle}>Wallet &amp; Payouts</h3>
+                            <p className={styles.featureDesc}>
+                                Built-in multi-currency wallets and automated profit-split calculations. Streamline the withdrawal process with crypto or fiat PSP integrations.
+                            </p>
+                        </div>
+                        <div className={styles.featureCard}>
+                            <div className={styles.featureIcon}>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"></path>
+                                    <path d="M13.73 21a2 2 0 0 1-3.46 0"></path>
+                                </svg>
+                            </div>
+                            <h3 className={styles.featureTitle}>Broker Integration</h3>
+                            <p className={styles.featureDesc}>
+                                Native connections via Manager API to MT4, MT5, cTrader, and modern liquidity bridges. Plug into your existing infrastructure seamlessly.
+                            </p>
+                        </div>
+                        <div className={styles.featureCard}>
+                            <div className={styles.featureIcon}>
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                    <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                    <line x1="3" y1="9" x2="21" y2="9"></line>
+                                    <line x1="9" y1="21" x2="9" y2="9"></line>
+                                </svg>
+                            </div>
+                            <h3 className={styles.featureTitle}>Admin Control Panel</h3>
+                            <p className={styles.featureDesc}>
+                                A comprehensive CRM "God Mode" giving you complete oversight of thousands of accounts, risk metrics, KYC states, and global PnL.
+                            </p>
                         </div>
                     </div>
                 </div>
             </section>
 
+            {/* Why Choose Us Section */}
+            <section className={`${styles.section} ${styles.altSection}`}>
+                <div className={styles.container}>
+                    <div className={styles.splitSection}>
+                        <div className={styles.splitContent}>
+                            <h2 className={styles.sectionHeadline}>Enterprise Architecture You Can Trust</h2>
+                            <p className={styles.subheadline} style={{ fontSize: "1.125rem", margin: "0 0 2rem 0" }}>
+                                When your firm scales to 10,000+ active traders, you can't rely on amateur setups. You need guaranteed uptime, military-grade security, and absolute reliability.
+                            </p>
 
+                            <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
+                                <div style={{ display: "flex", gap: "1rem", alignItems: "flex-start" }}>
+                                    <div style={{ color: "#2563eb", flexShrink: 0, marginTop: "0.25rem" }}>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 style={{ fontSize: "1.125rem", fontWeight: "700", marginBottom: "0.25rem", color: "#111827" }}>99.99% Guaranteed Server Uptime</h4>
+                                        <p style={{ color: "#6b7280", margin: 0 }}>Hosted on institutional-grade infrastructure spanning multiple global data centers to eliminate single points of failure.</p>
+                                    </div>
+                                </div>
+                                <div style={{ display: "flex", gap: "1rem", alignItems: "flex-start" }}>
+                                    <div style={{ color: "#2563eb", flexShrink: 0, marginTop: "0.25rem" }}>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 style={{ fontSize: "1.125rem", fontWeight: "700", marginBottom: "0.25rem", color: "#111827" }}>Automated Flow Blocking</h4>
+                                        <p style={{ color: "#6b7280", margin: 0 }}>Automatically filter out toxic HFT flow, latency arbitrage, and localized exploiting strategies before they reach your book.</p>
+                                    </div>
+                                </div>
+                                <div style={{ display: "flex", gap: "1rem", alignItems: "flex-start" }}>
+                                    <div style={{ color: "#2563eb", flexShrink: 0, marginTop: "0.25rem" }}>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                            <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+                                            <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <h4 style={{ fontSize: "1.125rem", fontWeight: "700", marginBottom: "0.25rem", color: "#111827" }}>State-of-the-art Security</h4>
+                                        <p style={{ color: "#6b7280", margin: 0 }}>Encrypted databases, API rate limiting, strict Cloudflare protection, and isolated multi-tenant architecture.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div style={{ background: "#111827", borderRadius: "16px", padding: "3rem", color: "white", boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)" }}>
+                            <h3 style={{ fontSize: "1.5rem", fontWeight: "700", marginBottom: "2rem", color: "white" }}>Scaling by the Numbers</h3>
+                            <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
+                                <div style={{ borderBottom: "1px solid rgba(255,255,255,0.1)", paddingBottom: "1.5rem" }}>
+                                    <div style={{ fontSize: "2.5rem", fontWeight: "800", color: "#60a5fa" }}>&lt; 100ms</div>
+                                    <div style={{ color: "#9ca3af", fontSize: "0.875rem", textTransform: "uppercase", letterSpacing: "0.05em", fontWeight: "600", marginTop: "0.5rem" }}>Average Breach Detection Engine Latency</div>
+                                </div>
+                                <div style={{ borderBottom: "1px solid rgba(255,255,255,0.1)", paddingBottom: "1.5rem" }}>
+                                    <div style={{ fontSize: "2.5rem", fontWeight: "800", color: "#10b981" }}>5.2M+</div>
+                                    <div style={{ color: "#9ca3af", fontSize: "0.875rem", textTransform: "uppercase", letterSpacing: "0.05em", fontWeight: "600", marginTop: "0.5rem" }}>Daily Executions Processed</div>
+                                </div>
+                                <div>
+                                    <div style={{ fontSize: "2.5rem", fontWeight: "800", color: "#f472b6" }}>Zero</div>
+                                    <div style={{ color: "#9ca3af", fontSize: "0.875rem", textTransform: "uppercase", letterSpacing: "0.05em", fontWeight: "600", marginTop: "0.5rem" }}>Technical Bottlenecks</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Final CTA Section */}
+            <section className={styles.finalCtaSection}>
+                <div className={styles.container}>
+                    <h2 className={styles.finalCtaHeadline}>Ready to Launch Your Prop Firm?</h2>
+                    <p style={{ fontSize: "1.25rem", color: "#9ca3af", marginBottom: "3rem", maxWidth: "600px", margin: "0 auto 3rem" }}>
+                        Stop wrestling with patched-together plugins and unreliable bridges. Build on the infrastructure trusted by the fastest-growing firms in the industry.
+                    </p>
+                    <Link href="/get-started" className={styles.primaryCta}>
+                        Start Your Free Trial
+                        <svg style={{ marginLeft: "0.75rem", width: "20px", height: "20px" }} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                            <line x1="5" y1="12" x2="19" y2="12"></line>
+                            <polyline points="12 5 19 12 12 19"></polyline>
+                        </svg>
+                    </Link>
+                </div>
+            </section>
         </main>
     );
 }

@@ -634,7 +634,7 @@ export default function ForexBrokerPage() {
                                     <path d="M5 12h14M12 5l7 7-7 7" />
                                 </svg>
                             </Link>
-                            <Link href="/pricing" className={styles.btnGhost}>
+                            <Link href="/company/contact" className={styles.btnGhost}>
                                 View Pricing
                             </Link>
                         </div>

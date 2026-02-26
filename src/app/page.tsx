@@ -10,7 +10,7 @@ const ROICalculator = dynamic(() => import('@/components/ROICalculator'), { ssr:
 const Features = dynamic(() => import('@/components/Features'), { ssr: true });
 const TrustBadges = dynamic(() => import('@/components/TrustBadges'), { ssr: true });
 const LiveStats = dynamic(() => import('@/components/LiveStats'), { ssr: true });
-const PricingPreview = dynamic(() => import('@/components/PricingPreview'), { ssr: true });
+
 const Testimonials = dynamic(() => import('@/components/Testimonials'), { ssr: true });
 const Solutions = dynamic(() => import('@/components/Solutions'), { ssr: true });
 const TurnkeySolutions = dynamic(() => import('@/components/TurnkeySolutions'), { ssr: true });
@@ -71,7 +71,7 @@ export default function Home() {
       <Features />
       <TrustBadges />
       <LiveStats />
-      <PricingPreview />
+
       <Testimonials />
       <Solutions />
       <TurnkeySolutions />

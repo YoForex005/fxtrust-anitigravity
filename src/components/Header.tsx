@@ -235,7 +235,7 @@ export default function Header() {
                                     </Link>
                                 </div>
                                 <div className={styles.menuColumn}>
-                                    <div className={styles.sectionHeading}>Prop Firm Tech & Challenge Infrastructure</div>
+                                    <Link href="/solutions/prop-firm" className={styles.sectionHeading} style={{ textDecoration: 'none', cursor: 'pointer' }}>Prop Firm Tech & Challenge Infrastructure</Link>
                                     <Link href="/solutions/prop-challenge-manager" className={styles.dropdownItem}>
                                         <div className={styles.itemContent}>
                                             <span className={styles.itemTitle}>Prop Challenge Manager</span>
@@ -423,7 +423,7 @@ export default function Header() {
 
                     <Link href="/resources/blog" className={styles.navLink}>Blog</Link>
 
-                    <Link href="/pricing" className={styles.navLink}>{nav.pricing}</Link>
+
 
                     <div className={styles.navItem}>
                         <div className={styles.navLink}>
@@ -585,7 +585,7 @@ export default function Header() {
                             <Link href="/solutions/liquidity" className={styles.mobileSublink} onClick={() => setIsMenuOpen(false)}>Liquidity Bridge & Aggregation</Link>
                             <Link href="/solutions/liquidity-access" className={styles.mobileSublink} onClick={() => setIsMenuOpen(false)}>Tier-1 Liquidity Access</Link>
 
-                            <div className={styles.sectionHeading} style={{ fontSize: '0.7rem', color: '#666', marginTop: '1.5rem' }}>Prop Firm Tech & Challenge Infrastructure</div>
+                            <Link href="/solutions/prop-firm" className={styles.sectionHeading} style={{ fontSize: '0.7rem', color: '#666', marginTop: '1.5rem', textDecoration: 'none' }} onClick={() => setIsMenuOpen(false)}>Prop Firm Tech & Challenge Infrastructure</Link>
                             <Link href="/solutions/prop-challenge-manager" className={styles.mobileSublink} onClick={() => setIsMenuOpen(false)}>Prop Challenge Manager</Link>
                             <Link href="/solutions/evaluation-engine" className={styles.mobileSublink} onClick={() => setIsMenuOpen(false)}>Automated Evaluation Engine</Link>
                             <Link href="/solutions/prop-risk-dashboard" className={styles.mobileSublink} onClick={() => setIsMenuOpen(false)}>Prop Risk Dashboard</Link>
@@ -645,9 +645,7 @@ export default function Header() {
                         Blog
                     </Link>
 
-                    <Link href="/pricing" className={styles.mobileMenuDirectLink} onClick={() => setIsMenuOpen(false)}>
-                        {nav.pricing}
-                    </Link>
+
 
                     {/* Company */}
                     <div className={styles.mobileMenuItem}>

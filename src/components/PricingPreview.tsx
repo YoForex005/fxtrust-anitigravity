@@ -113,7 +113,7 @@ export default function PricingPreview() {
                                 ))}
                             </ul>
 
-                            <Link href="/pricing" className={styles.ctaButton}>
+                            <Link href="/company/contact" className={styles.ctaButton}>
                                 {plan.isEnterprise ? 'Contact Sales' : 'View Full Details'}
                             </Link>
                         </div>
@@ -181,7 +181,7 @@ export default function PricingPreview() {
                     </div>
                 </div>
 
-                <Link href="/pricing" className={styles.viewFullPricing}>
+                <Link href="/company/contact" className={styles.viewFullPricing}>
                     See Detailed Pricing & Comparison →
                 </Link>
             </div>

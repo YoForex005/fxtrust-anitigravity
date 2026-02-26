@@ -540,7 +540,7 @@ export default function WebTraderPage() {
                             <h3>Is there an extra cost for the web trader?</h3>
                             <p>
                                 It's included in your Standard and Enterprise plans at no additional charge. Entry plan
-                                brokers can add it for a modest monthly fee. See our <Link href="/pricing">pricing page</Link> for
+                                brokers can add it for a modest monthly fee. See our <Link href="/company/contact">contact page</Link> for
                                 the embarrassingly transparent breakdown.
                             </p>
                         </div>

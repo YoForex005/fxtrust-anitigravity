@@ -486,7 +486,7 @@ export default function MT5Page() {
                                     <polyline points="12 5 19 12 12 19"></polyline>
                                 </svg>
                             </Link>
-                            <Link href="/pricing" className={styles.secondaryCta}>
+                            <Link href="/company/contact" className={styles.secondaryCta}>
                                 View Pricing
                             </Link>
                         </div>

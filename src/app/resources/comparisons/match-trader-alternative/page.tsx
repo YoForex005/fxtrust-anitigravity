@@ -457,7 +457,7 @@ export default function MatchTraderAlternativePage() {
                             <Link href="/company/contact" className={styles.ctaBtn}>
                                 Request Comparison
                             </Link>
-                            <Link href="/pricing" className={styles.ctaBtnSecondary}>
+                            <Link href="/company/contact" className={styles.ctaBtnSecondary}>
                                 View Pricing
                             </Link>
                         </div>
