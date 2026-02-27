@@ -3,19 +3,19 @@ import { Suspense } from 'react';
 import dynamic from 'next/dynamic';
 
 // Dynamic import with loading skeleton for instant page display
-const DynamicsAdminContent = dynamic(
-    () => import('./DynamicsAdminContent'),
+const YoPipsAdminContent = dynamic(
+    () => import('./YoPipsAdminContent'),
     {
         loading: () => (
             <div style={{
                 display: 'flex',
                 height: '100vh',
-                background: '#f3f2f1'
+                background: '#0f0f11'
             }}>
                 {/* Sidebar skeleton */}
                 <div style={{
-                    width: '220px',
-                    background: '#1e1e1e',
+                    width: '260px',
+                    background: '#1a1a1e',
                     padding: '16px'
                 }}>
                     <div style={{ height: '32px', background: 'rgba(255,255,255,0.1)', borderRadius: '4px', marginBottom: '20px' }} />
@@ -25,8 +25,8 @@ const DynamicsAdminContent = dynamic(
                 </div>
                 {/* Main content skeleton */}
                 <div style={{ flex: 1, padding: '20px' }}>
-                    <div style={{ height: '40px', background: '#e1dfdd', borderRadius: '4px', marginBottom: '20px', width: '200px' }} />
-                    <div style={{ height: '300px', background: '#e1dfdd', borderRadius: '4px', opacity: 0.5 }} />
+                    <div style={{ height: '40px', background: '#1a1a1e', borderRadius: '4px', marginBottom: '20px', width: '200px' }} />
+                    <div style={{ height: '300px', background: '#1a1a1e', borderRadius: '4px', opacity: 0.5 }} />
                 </div>
             </div>
         )
@@ -34,36 +34,40 @@ const DynamicsAdminContent = dynamic(
 );
 
 export const metadata: Metadata = {
-    title: 'Forex CRM Live Demo | Admin Portal Dynamics 365 | FxTrusts',
-    description: 'Live interactive demo of FxTrusts Forex CRM Admin Portal. Experience the Dynamics 365-powered interface, account management, and reporting tools.',
-    keywords: ['forex crm demo', 'dynamics 365 forex', 'admin portal demo', 'broker crm test'],
+    title: 'Prop Firm Admin Dashboard | Live Demo | FxTrusts',
+    description: 'Live interactive demo of FxTrusts modern Prop Firm Admin Dashboard. Experience the sleek interface, seamless account management, and real-time reporting tools.',
+    keywords: ['prop firm demo', 'prop trading dashboard', 'admin portal demo', 'FxTrusts admin'],
     openGraph: {
-        title: 'Forex CRM Live Demo | Admin Portal Dynamics 365 | FxTrusts',
-        description: 'Live interactive demo of FxTrusts Forex CRM Admin Portal. Experience the Dynamics 365-powered interface, account management, and reporting tools.',
+        title: 'Prop Firm Admin Dashboard | Live Demo | FxTrusts',
+        description: 'Live interactive demo of FxTrusts modern Prop Firm Admin Dashboard. Experience the sleek interface, seamless account management, and real-time reporting tools.',
         type: 'website',
         url: 'https://fxtrusts.com/live-demo/admin',
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Forex CRM Live Demo | Admin Portal Dynamics 365 | FxTrusts',
-        description: 'Live interactive demo of FxTrusts Forex CRM Admin Portal. Experience the Dynamics 365-powered interface, account management, and reporting tools.',
+        title: 'Prop Firm Admin Dashboard | Live Demo | FxTrusts',
+        description: 'Live interactive demo of FxTrusts modern Prop Firm Admin Dashboard. Experience the sleek interface, seamless account management, and real-time reporting tools.',
     },
     alternates: {
         canonical: 'https://fxtrusts.com/live-demo/admin',
     },
 };
 
-export default function DynamicsAdminPage() {
+export default function YoPipsAdminPage() {
     return (
+        <>
+            <h1 className="sr-only">Yo Pips Admin Page</h1>
+            {/* Original Component */}
+            
         <Suspense fallback={
             <div style={{
                 display: 'flex',
                 height: '100vh',
-                background: '#f3f2f1'
+                background: '#0f0f11'
             }}>
                 <div style={{
-                    width: '220px',
-                    background: '#1e1e1e',
+                    width: '260px',
+                    background: '#1a1a1e',
                     padding: '16px'
                 }}>
                     <div style={{ height: '32px', background: 'rgba(255,255,255,0.1)', borderRadius: '4px', marginBottom: '20px' }} />
@@ -72,14 +76,14 @@ export default function DynamicsAdminPage() {
                     ))}
                 </div>
                 <div style={{ flex: 1, padding: '20px' }}>
-                    <div style={{ height: '40px', background: '#e1dfdd', borderRadius: '4px', marginBottom: '20px', width: '200px' }} />
-                    <div style={{ height: '300px', background: '#e1dfdd', borderRadius: '4px', opacity: 0.5 }} />
+                    <div style={{ height: '40px', background: '#1a1a1e', borderRadius: '4px', marginBottom: '20px', width: '200px' }} />
+                    <div style={{ height: '300px', background: '#1a1a1e', borderRadius: '4px', opacity: 0.5 }} />
                 </div>
             </div>
         }>
-            <DynamicsAdminContent />
+            <YoPipsAdminContent />
         </Suspense>
+    
+        </>
     );
 }
-
-

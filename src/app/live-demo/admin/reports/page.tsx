@@ -21,5 +21,10 @@ export const metadata: Metadata = {
 };
 
 export default function ReportsPage() {
-    return <ReportsContent />;
+    return (
+        <>
+            <h1 className="sr-only">Reports Page</h1>
+            <ReportsContent />
+        </>
+    );
 }

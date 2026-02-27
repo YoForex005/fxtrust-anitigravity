@@ -43,6 +43,10 @@ export const metadata: Metadata = {
 
 export default function HostingPage() {
     return (
+        <>
+            <h1 className="sr-only">Hosting Page</h1>
+            {/* Original Component */}
+            
         <main>
             <Header />
             <InnerPageHeader
@@ -510,5 +514,7 @@ export default function HostingPage() {
 
             <Footer />
         </main>
+    
+        </>
     );
 }

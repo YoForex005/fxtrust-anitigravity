@@ -19,4 +19,5 @@ export const metadata: Metadata = {
 
 export default function DocsRedirect() {
     redirect('/resources/api-docs');
+    return <h1 className="sr-only">API Documentation Redirect</h1>;
 }

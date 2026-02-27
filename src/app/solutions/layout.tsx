@@ -1,6 +1,15 @@
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { ReactNode } from 'react';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+    metadataBase: new URL('https://fxtrusts.com'),
+    title: {
+        default: 'Solutions | FxTrusts',
+        template: '%s | Solutions | FxTrusts',
+    },
+};
 
 export default function SolutionsLayout({ children }: { children: ReactNode }) {
     return (

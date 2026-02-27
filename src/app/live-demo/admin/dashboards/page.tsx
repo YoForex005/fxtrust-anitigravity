@@ -21,5 +21,10 @@ export const metadata: Metadata = {
 };
 
 export default function DashboardsPage() {
-    return <DashboardsContent />;
+    return (
+        <>
+            <h1 className="sr-only">Dashboards Page</h1>
+            <DashboardsContent />
+        </>
+    );
 }

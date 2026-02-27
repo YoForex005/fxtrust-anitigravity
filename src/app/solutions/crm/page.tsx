@@ -92,6 +92,10 @@ export default function CRMPage() {
     ];
 
     return (
+        <>
+            <h1 className="sr-only">C R M Page</h1>
+            {/* Original Component */}
+            
         <main>
             <FAQSchema faqs={faqs} />
             <InnerPageHeader
@@ -578,5 +582,7 @@ export default function CRMPage() {
                 <FAQAccordion faqs={faqs} />
             </ContentPageLayout>
         </main>
+    
+        </>
     );
 }

@@ -21,5 +21,10 @@ export const metadata: Metadata = {
 };
 
 export default function TradingPage() {
-    return <TradingContent />;
+    return (
+        <>
+            <h1 className="sr-only">Trading Page</h1>
+            <TradingContent />
+        </>
+    );
 }

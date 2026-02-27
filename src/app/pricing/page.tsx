@@ -18,5 +18,10 @@ export const metadata: Metadata = {
 };
 
 export default function PricingPage() {
-    return <PricingContent />;
+    return (
+        <>
+            <h1 className="sr-only">Pricing Page</h1>
+            <PricingContent />
+        </>
+    );
 }

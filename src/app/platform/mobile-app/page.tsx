@@ -43,6 +43,10 @@ export const metadata: Metadata = {
 
 export default function MobileAppPage() {
     return (
+        <>
+            <h1 className="sr-only">Mobile App Page</h1>
+            {/* Original Component */}
+            
         <main>
             <Header />
             <InnerPageHeader
@@ -521,5 +525,7 @@ export default function MobileAppPage() {
 
             <Footer />
         </main>
+    
+        </>
     );
 }

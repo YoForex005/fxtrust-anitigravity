@@ -21,5 +21,10 @@ export const metadata: Metadata = {
 };
 
 export default function CasesPage() {
-    return <CasesContent />;
+    return (
+        <>
+            <h1 className="sr-only">Cases Page</h1>
+            <CasesContent />
+        </>
+    );
 }

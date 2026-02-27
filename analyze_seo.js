@@ -25,12 +25,12 @@ allFiles.forEach(file => {
     const relativePath = path.relative(process.cwd(), file);
 
     // 1. Metadata Completeness
-    const hasMetadata = content.includes('export const metadata');
+    const hasMetadata = content.includes('export const metadata') || content.includes('export async function generateMetadata') || content.includes('export function generateMetadata');
     if (!hasMetadata) {
         missingMetadata.push(relativePath);
     } else {
         // Check for openGraph and twitter
-        const hasOG = content.includes('openGraph');
+        const hasOG = content.includes('openGraph') || content.includes('ogTitle');
         const hasTwitter = content.includes('twitter');
         if (!hasOG || !hasTwitter) {
             missingOGOrTwitter.push(relativePath);

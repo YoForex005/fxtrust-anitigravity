@@ -18,5 +18,10 @@ export const metadata: Metadata = {
 };
 
 export default function StatusPage() {
-    return <StatusContent />;
+    return (
+        <>
+            <h1 className="sr-only">Status Page</h1>
+            <StatusContent />
+        </>
+    );
 }

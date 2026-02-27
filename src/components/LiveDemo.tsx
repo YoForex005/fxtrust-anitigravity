@@ -22,7 +22,7 @@ export default function LiveDemo() {
                         </p>
                     </div>
 
-                    <Link href="/live-demo/admin" prefetch={true} className={styles.browserWrapper}>
+                    <Link href="/prop-firm/live-demo/admin" prefetch={true} className={styles.browserWrapper}>
                         <div className={styles.browserMockup}>
                             <div className={styles.browserHeader}>
                                 <div className={styles.trafficLights}>
@@ -33,10 +33,10 @@ export default function LiveDemo() {
                             </div>
                             <div className={styles.browserContent}>
                                 <Image
-                                    src="/crm-dashboard.png"
+                                    src="/admin.png"
                                     alt="FXTrusts Admin CRM Dashboard"
-                                    width={800}
-                                    height={500}
+                                    width={1600}
+                                    height={900}
                                     className={styles.dashboardImage}
                                 />
                                 <div className={styles.playButtonOverlay}>
@@ -63,7 +63,7 @@ export default function LiveDemo() {
                         </p>
                     </div>
 
-                    <Link href="/live-demo/client" prefetch={true} className={styles.browserWrapper}>
+                    <Link href="/prop-firm/live-demo/client" prefetch={true} className={styles.browserWrapper}>
                         <div className={styles.browserMockup}>
                             <div className={styles.browserHeader}>
                                 <div className={styles.trafficLights}>
@@ -74,10 +74,10 @@ export default function LiveDemo() {
                             </div>
                             <div className={styles.browserContent}>
                                 <Image
-                                    src="/crm-dashboard.png"
+                                    src="/client.png"
                                     alt="FXTrusts Client Dashboard"
-                                    width={800}
-                                    height={500}
+                                    width={1600}
+                                    height={900}
                                     className={styles.dashboardImage}
                                 />
                                 <div className={styles.playButtonOverlay}>

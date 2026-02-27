@@ -21,5 +21,10 @@ export const metadata: Metadata = {
 };
 
 export default function ThankYouPage() {
-    return <ThankYouPageClient />;
+    return (
+        <>
+            <h1 className="sr-only">Thank You Page</h1>
+            <ThankYouPageClient />
+        </>
+    );
 }

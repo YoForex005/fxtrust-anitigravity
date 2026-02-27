@@ -97,7 +97,7 @@ export default function Footer() {
                             <br /><br />
                             <strong>Middle East Office:</strong> B2007-127, 33rd floor, Latifa Tower, Trade Center first, Seikh Zayad Road, Dubai-UAE
                             <br />
-                            <strong>Contact:</strong> <a href="mailto:business@fxtrusts.com" style={{ color: '#3B82F6' }}>business@fxtrusts.com</a> | <a href="https://wa.me/447897015780" style={{ color: '#3B82F6' }}>+44 7897 015780</a> (Call + Whatsapp)
+                            <strong>Contact:</strong> <a href="mailto:business@fxtrusts.com" style={{ color: '#3B82F6' }}>business@fxtrusts.com</a> | <a href="https://wa.me/447897015780" target="_blank" rel="noopener noreferrer" style={{ color: '#3B82F6' }}>+44 7897 015780</a> (Call + Whatsapp)
                         </p>
                     </div>
                     <div className={styles.copyright}>

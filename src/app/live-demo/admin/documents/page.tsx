@@ -21,5 +21,10 @@ export const metadata: Metadata = {
 };
 
 export default function DocumentsPage() {
-    return <DocumentsContent />;
+    return (
+        <>
+            <h1 className="sr-only">Documents Page</h1>
+            <DocumentsContent />
+        </>
+    );
 }

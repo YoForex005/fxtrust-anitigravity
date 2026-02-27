@@ -25,6 +25,10 @@ export const metadata: Metadata = {
 
 export default function GetStartedPage() {
     return (
+        <>
+            <h1 className="sr-only">Get Started Page</h1>
+            {/* Original Component */}
+            
         <main style={{
             background: '#FFFFFF',
             minHeight: '100vh',
@@ -52,5 +56,7 @@ export default function GetStartedPage() {
 
             <Footer />
         </main>
+    
+        </>
     );
 }

@@ -4,6 +4,15 @@ import NewAccountContent from './NewAccountContent';
 export const metadata: Metadata = {
     title: 'New Client Registration | Account Creation | FxTrusts',
     description: 'Manually register a new client account directly into the CRM system.',
+    openGraph: {
+        title: 'New Client Registration | FxTrusts',
+        description: 'Manually register a new client account directly into the CRM system.',
+    },
+    twitter: {
+        card: 'summary',
+        title: 'New Client Registration | FxTrusts',
+        description: 'Manually register a new client account directly into the CRM system.',
+    },
     robots: {
         index: false,
         follow: false,
@@ -11,5 +20,10 @@ export const metadata: Metadata = {
 };
 
 export default function NewAccountPage() {
-    return <NewAccountContent />;
+    return (
+        <>
+            <h1 className="sr-only">New Account Page</h1>
+            <NewAccountContent />
+        </>
+    );
 }

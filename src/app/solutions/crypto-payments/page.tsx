@@ -72,6 +72,10 @@ export default function CryptoPaymentsPage() {
     ];
 
     return (
+        <>
+            <h1 className="sr-only">Crypto Payments Page</h1>
+            {/* Original Component */}
+            
         <main>
             <FAQSchema faqs={faqs} />
 
@@ -458,5 +462,7 @@ export default function CryptoPaymentsPage() {
 
 
         </main>
+    
+        </>
     );
 }

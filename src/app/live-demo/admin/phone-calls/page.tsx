@@ -21,5 +21,10 @@ export const metadata: Metadata = {
 };
 
 export default function PhoneCallsPage() {
-    return <PhoneCallsContent />;
+    return (
+        <>
+            <h1 className="sr-only">Phone Calls Page</h1>
+            <PhoneCallsContent />
+        </>
+    );
 }

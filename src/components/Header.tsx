@@ -235,7 +235,13 @@ export default function Header() {
                                     </Link>
                                 </div>
                                 <div className={styles.menuColumn}>
-                                    <Link href="/solutions/prop-firm" className={styles.sectionHeading} style={{ textDecoration: 'none', cursor: 'pointer' }}>Prop Firm Tech & Challenge Infrastructure</Link>
+                                    <div className={styles.sectionHeading} style={{ textDecoration: 'none', cursor: 'default' }}>Prop Firm Tech & Challenge Infrastructure</div>
+                                    <Link href="/solutions/prop-firm" className={styles.dropdownItem}>
+                                        <div className={styles.itemContent}>
+                                            <span className={styles.itemTitle}>Prop Firm Demonstration for Admin and Client</span>
+                                            <span className={styles.itemDesc}>See the platform in action</span>
+                                        </div>
+                                    </Link>
                                     <Link href="/solutions/prop-challenge-manager" className={styles.dropdownItem}>
                                         <div className={styles.itemContent}>
                                             <span className={styles.itemTitle}>Prop Challenge Manager</span>
@@ -585,7 +591,8 @@ export default function Header() {
                             <Link href="/solutions/liquidity" className={styles.mobileSublink} onClick={() => setIsMenuOpen(false)}>Liquidity Bridge & Aggregation</Link>
                             <Link href="/solutions/liquidity-access" className={styles.mobileSublink} onClick={() => setIsMenuOpen(false)}>Tier-1 Liquidity Access</Link>
 
-                            <Link href="/solutions/prop-firm" className={styles.sectionHeading} style={{ fontSize: '0.7rem', color: '#666', marginTop: '1.5rem', textDecoration: 'none' }} onClick={() => setIsMenuOpen(false)}>Prop Firm Tech & Challenge Infrastructure</Link>
+                            <div className={styles.sectionHeading} style={{ fontSize: '0.7rem', color: '#666', marginTop: '1.5rem', textDecoration: 'none' }}>Prop Firm Tech & Challenge Infrastructure</div>
+                            <Link href="/solutions/prop-firm" className={styles.mobileSublink} onClick={() => setIsMenuOpen(false)}>Prop Firm Demonstration for Admin and Client</Link>
                             <Link href="/solutions/prop-challenge-manager" className={styles.mobileSublink} onClick={() => setIsMenuOpen(false)}>Prop Challenge Manager</Link>
                             <Link href="/solutions/evaluation-engine" className={styles.mobileSublink} onClick={() => setIsMenuOpen(false)}>Automated Evaluation Engine</Link>
                             <Link href="/solutions/prop-risk-dashboard" className={styles.mobileSublink} onClick={() => setIsMenuOpen(false)}>Prop Risk Dashboard</Link>

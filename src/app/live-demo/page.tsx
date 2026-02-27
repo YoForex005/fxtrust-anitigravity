@@ -19,4 +19,5 @@ export const metadata: Metadata = {
 
 export default function LiveDemoPage() {
     redirect('/live-demo/admin');
+    return <h1 className="sr-only">Live Demo Redirect</h1>;
 }

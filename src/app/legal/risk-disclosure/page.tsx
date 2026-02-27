@@ -24,6 +24,10 @@ export const metadata: Metadata = {
 
 export default function RiskDisclosurePage() {
     return (
+        <>
+            <h1 className="sr-only">Risk Disclosure Page</h1>
+            {/* Original Component */}
+            
         <main>
             <PageHeader
                 title="Risk Disclosure"
@@ -92,5 +96,7 @@ export default function RiskDisclosurePage() {
                 </div>
             </div>
         </main>
+    
+        </>
     );
 }

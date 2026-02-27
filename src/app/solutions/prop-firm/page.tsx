@@ -22,6 +22,13 @@ export const metadata: Metadata = {
         type: 'website',
         url: 'https://fxtrusts.com/solutions/prop-firm',
     },
+    twitter: {
+        card: 'summary_large_image',
+        site: '@FxTrusts',
+        creator: '@FxTrusts',
+        title: 'Prop Firm Technology & Backend System | FXTrusts',
+        description: 'Launch your prop trading firm with our complete backend system and automate everything from challenges to payouts.',
+    },
     alternates: {
         canonical: 'https://fxtrusts.com/solutions/prop-firm',
     },
@@ -61,42 +68,18 @@ export default function PropFirmPage() {
                         </p>
                     </div>
 
-                    <Link href="/live-demo/admin" prefetch={true} style={{ display: 'block', textDecoration: 'none' }}>
+                    <Link href="/prop-firm/live-demo/admin" prefetch={true} style={{ display: 'block', textDecoration: 'none' }}>
                         <div className={styles.demoMockupWrapper}>
                             <MacWindow title="Prop Firm Admin - Dashboard">
-                                <div className={styles.mockupContent}>
-                                    <div className={styles.dashboardInner}>
-                                        <div className={styles.dashHeader}>
-                                            <div className={styles.dashTitle}>Dashboard Overview</div>
-                                        </div>
-                                        <div className={styles.dashRow}>
-                                            <div className={styles.dashBox}>
-                                                <div className={styles.dashBoxLabel}>Total Clients</div>
-                                                <div className={styles.dashBoxValue}>123,451</div>
-                                            </div>
-                                            <div className={styles.dashBox}>
-                                                <div className={styles.dashBoxLabel}>Pending Account Breaches</div>
-                                                <div className={styles.dashBoxValue}>0</div>
-                                            </div>
-                                            <div className={styles.dashBox}>
-                                                <div className={styles.dashBoxLabel}>Pending Real-Time Breaches</div>
-                                                <div className={styles.dashBoxValue}>1,241</div>
-                                            </div>
-                                        </div>
-                                        <div className={styles.dashTable}>
-                                            <div className={styles.dashBoxLabel} style={{ marginBottom: "1rem" }}>Recent Login History</div>
-                                            {/* Mock Table Rows */}
-                                            <div style={{ display: "flex", justifyContent: "space-between", borderBottom: "1px solid #e2e8f0", paddingBottom: "0.5rem", marginBottom: "0.5rem", color: "#64748b", fontSize: "0.875rem" }}>
-                                                <span>Name</span><span>Email</span><span>IP Address</span><span>Status</span>
-                                            </div>
-                                            <div style={{ display: "flex", justifyContent: "space-between", paddingBottom: "0.5rem", fontSize: "0.875rem", color: "#0f172a" }}>
-                                                <span>John Doe</span><span>john@example.com</span><span>192.168.1.1</span><span style={{ color: "#16a34a" }}>Success</span>
-                                            </div>
-                                            <div style={{ display: "flex", justifyContent: "space-between", paddingBottom: "0.5rem", fontSize: "0.875rem", color: "#0f172a" }}>
-                                                <span>Jane Smith</span><span>jane@example.com</span><span>10.0.0.5</span><span style={{ color: "#16a34a" }}>Success</span>
-                                            </div>
-                                        </div>
-                                    </div>
+                                <div className={styles.mockupContent} style={{ padding: 0 }}>
+                                    <Image
+                                        src="/admin.png"
+                                        alt="FXTrusts Admin Dashboard"
+                                        width={1600}
+                                        height={900}
+                                        priority={true}
+                                        style={{ width: '100%', height: 'auto', display: 'block' }}
+                                    />
                                 </div>
                             </MacWindow>
                             <div className={styles.playButtonOverlay}>
@@ -120,16 +103,16 @@ export default function PropFirmPage() {
                         </p>
                     </div>
 
-                    <Link href="/live-demo/client" prefetch={true} style={{ display: 'block', textDecoration: 'none' }}>
+                    <Link href="/prop-firm/live-demo/client" prefetch={true} style={{ display: 'block', textDecoration: 'none' }}>
                         <div className={styles.demoMockupWrapper}>
                             <MacWindow title="Trader Portal - Challenge Phase 1">
-                                <div className={styles.mockupContent}>
+                                <div className={styles.mockupContent} style={{ padding: 0 }}>
                                     <Image
-                                        src="/crm-dashboard.png"
+                                        src="/client.png"
                                         alt="FXTrusts Client Dashboard"
-                                        width={800}
-                                        height={500}
-                                        className={styles.dashboardImage}
+                                        width={1600}
+                                        height={900}
+                                        style={{ width: '100%', height: 'auto', display: 'block' }}
                                     />
                                     <div className={styles.playButtonOverlay}>
                                         <div className={styles.playButton} style={{ background: 'rgba(16, 185, 129, 0.95)', boxShadow: '0 12px 40px rgba(16, 185, 129, 0.4)' }}>
@@ -244,59 +227,59 @@ export default function PropFirmPage() {
                                 When your firm scales to 10,000+ active traders, you can't rely on amateur setups. You need guaranteed uptime, military-grade security, and absolute reliability.
                             </p>
 
-                            <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
-                                <div style={{ display: "flex", gap: "1rem", alignItems: "flex-start" }}>
-                                    <div style={{ color: "#2563eb", flexShrink: 0, marginTop: "0.25rem" }}>
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                            <div className={styles.bulletList}>
+                                <div className={styles.bulletItem}>
+                                    <div className={styles.bulletIcon}>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                             <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
                                             <polyline points="22 4 12 14.01 9 11.01"></polyline>
                                         </svg>
                                     </div>
-                                    <div>
-                                        <h4 style={{ fontSize: "1.125rem", fontWeight: "700", marginBottom: "0.25rem", color: "#111827" }}>99.99% Guaranteed Server Uptime</h4>
-                                        <p style={{ color: "#6b7280", margin: 0 }}>Hosted on institutional-grade infrastructure spanning multiple global data centers to eliminate single points of failure.</p>
+                                    <div className={styles.bulletTextContainer}>
+                                        <h4 style={{ margin: "0 0 0.35rem 0", fontSize: "1.125rem", fontWeight: "700", color: "#111827", textWrap: "balance" }}>99.99% Guaranteed Server Uptime</h4>
+                                        <p style={{ margin: 0, color: "#6b7280", lineHeight: "1.6", textWrap: "balance" }}>Hosted on institutional-grade infrastructure spanning multiple global data centers to eliminate single points of failure.</p>
                                     </div>
                                 </div>
-                                <div style={{ display: "flex", gap: "1rem", alignItems: "flex-start" }}>
-                                    <div style={{ color: "#2563eb", flexShrink: 0, marginTop: "0.25rem" }}>
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                <div className={styles.bulletItem}>
+                                    <div className={styles.bulletIcon}>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                             <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
                                             <polyline points="22 4 12 14.01 9 11.01"></polyline>
                                         </svg>
                                     </div>
-                                    <div>
-                                        <h4 style={{ fontSize: "1.125rem", fontWeight: "700", marginBottom: "0.25rem", color: "#111827" }}>Automated Flow Blocking</h4>
-                                        <p style={{ color: "#6b7280", margin: 0 }}>Automatically filter out toxic HFT flow, latency arbitrage, and localized exploiting strategies before they reach your book.</p>
+                                    <div className={styles.bulletTextContainer}>
+                                        <h4 style={{ margin: "0 0 0.35rem 0", fontSize: "1.125rem", fontWeight: "700", color: "#111827", textWrap: "balance" }}>Automated Flow Blocking</h4>
+                                        <p style={{ margin: 0, color: "#6b7280", lineHeight: "1.6", textWrap: "balance" }}>Automatically filter out toxic HFT flow, latency arbitrage, and localized exploiting strategies before they reach your book.</p>
                                     </div>
                                 </div>
-                                <div style={{ display: "flex", gap: "1rem", alignItems: "flex-start" }}>
-                                    <div style={{ color: "#2563eb", flexShrink: 0, marginTop: "0.25rem" }}>
-                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                                <div className={styles.bulletItem}>
+                                    <div className={styles.bulletIcon}>
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                                             <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
                                             <polyline points="22 4 12 14.01 9 11.01"></polyline>
                                         </svg>
                                     </div>
-                                    <div>
-                                        <h4 style={{ fontSize: "1.125rem", fontWeight: "700", marginBottom: "0.25rem", color: "#111827" }}>State-of-the-art Security</h4>
-                                        <p style={{ color: "#6b7280", margin: 0 }}>Encrypted databases, API rate limiting, strict Cloudflare protection, and isolated multi-tenant architecture.</p>
+                                    <div className={styles.bulletTextContainer}>
+                                        <h4 style={{ margin: "0 0 0.35rem 0", fontSize: "1.125rem", fontWeight: "700", color: "#111827", textWrap: "balance" }}>State-of-the-art Security</h4>
+                                        <p style={{ margin: 0, color: "#6b7280", lineHeight: "1.6", textWrap: "balance" }}>Encrypted databases, API rate limiting, strict Cloudflare protection, and isolated multi-tenant architecture.</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div style={{ background: "#111827", borderRadius: "16px", padding: "3rem", color: "white", boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.25)" }}>
-                            <h3 style={{ fontSize: "1.5rem", fontWeight: "700", marginBottom: "2rem", color: "white" }}>Scaling by the Numbers</h3>
-                            <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
-                                <div style={{ borderBottom: "1px solid rgba(255,255,255,0.1)", paddingBottom: "1.5rem" }}>
-                                    <div style={{ fontSize: "2.5rem", fontWeight: "800", color: "#60a5fa" }}>&lt; 100ms</div>
-                                    <div style={{ color: "#9ca3af", fontSize: "0.875rem", textTransform: "uppercase", letterSpacing: "0.05em", fontWeight: "600", marginTop: "0.5rem" }}>Average Breach Detection Engine Latency</div>
+                        <div className={styles.statsBox}>
+                            <h3 className={styles.statsHeadline}>Scaling by the Numbers</h3>
+                            <div className={styles.statsContainer}>
+                                <div className={styles.statItem}>
+                                    <div className={`${styles.statValue} ${styles.blueStat}`}>&lt; 100ms</div>
+                                    <div className={styles.statLabel}>Average Breach Detection Engine Latency</div>
                                 </div>
-                                <div style={{ borderBottom: "1px solid rgba(255,255,255,0.1)", paddingBottom: "1.5rem" }}>
-                                    <div style={{ fontSize: "2.5rem", fontWeight: "800", color: "#10b981" }}>5.2M+</div>
-                                    <div style={{ color: "#9ca3af", fontSize: "0.875rem", textTransform: "uppercase", letterSpacing: "0.05em", fontWeight: "600", marginTop: "0.5rem" }}>Daily Executions Processed</div>
+                                <div className={styles.statItem}>
+                                    <div className={`${styles.statValue} ${styles.greenStat}`}>5.2M+</div>
+                                    <div className={styles.statLabel}>Daily Executions Processed</div>
                                 </div>
-                                <div>
-                                    <div style={{ fontSize: "2.5rem", fontWeight: "800", color: "#f472b6" }}>Zero</div>
-                                    <div style={{ color: "#9ca3af", fontSize: "0.875rem", textTransform: "uppercase", letterSpacing: "0.05em", fontWeight: "600", marginTop: "0.5rem" }}>Technical Bottlenecks</div>
+                                <div className={styles.statItemLast}>
+                                    <div className={`${styles.statValue} ${styles.pinkStat}`}>Zero</div>
+                                    <div className={styles.statLabel}>Technical Bottlenecks</div>
                                 </div>
                             </div>
                         </div>

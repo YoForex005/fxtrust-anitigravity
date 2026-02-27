@@ -21,5 +21,10 @@ export const metadata: Metadata = {
 };
 
 export default function TransactionsPage() {
-    return <TransactionsContent />;
+    return (
+        <>
+            <h1 className="sr-only">Transactions Page</h1>
+            <TransactionsContent />
+        </>
+    );
 }

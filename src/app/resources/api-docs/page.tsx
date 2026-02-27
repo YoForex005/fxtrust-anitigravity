@@ -43,6 +43,10 @@ export const metadata: Metadata = {
 
 export default function APIDocsPage() {
     return (
+        <>
+            <h1 className="sr-only">A P I Docs Page</h1>
+            {/* Original Component */}
+            
         <main>
             <Header />
             <InnerPageHeader
@@ -511,5 +515,7 @@ export default function APIDocsPage() {
 
             <Footer />
         </main>
+    
+        </>
     );
 }

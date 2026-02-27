@@ -133,6 +133,21 @@ export default function RootLayout({
 
         {/* Structured Data */}
         <DynamicBreadcrumbs />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "FxTrusts",
+              "url": "https://fxtrusts.com",
+              "logo": "https://fxtrusts.com/logo.png",
+              "sameAs": [
+                "https://twitter.com/FxTrusts"
+              ]
+            })
+          }}
+        />
       </head>
       <body className={`${inter.className} overflow-x-hidden`}>
         <OrganizationSchema />

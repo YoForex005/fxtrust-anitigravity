@@ -96,6 +96,10 @@ export default function PammPage() {
     ];
 
     return (
+        <>
+            <h1 className="sr-only">Pamm Page</h1>
+            {/* Original Component */}
+            
         <main>
             <FAQSchema faqs={faqs} />
             <InnerPageHeader
@@ -644,5 +648,7 @@ export default function PammPage() {
                 </div>
             </ContentPageLayout>
         </main>
+    
+        </>
     );
 }

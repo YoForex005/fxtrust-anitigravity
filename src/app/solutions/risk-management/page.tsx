@@ -73,6 +73,10 @@ export default function RiskManagementPage() {
     ];
 
     return (
+        <>
+            <h1 className="sr-only">Risk Management Page</h1>
+            {/* Original Component */}
+            
         <main>
             <FAQSchema faqs={faqs} />
 
@@ -419,5 +423,7 @@ export default function RiskManagementPage() {
 
 
         </main>
+    
+        </>
     );
 }

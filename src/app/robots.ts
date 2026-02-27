@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
             {
                 userAgent: '*',
                 allow: '/',
-                disallow: ['/live-demo/admin', '/api/', '/private/'],
+                disallow: ['/prop-firm/live-demo/admin', '/api/', '/private/'],
             },
             // Explicitly allow AI/LLM crawlers for GEO (Generative Engine Optimization)
             {

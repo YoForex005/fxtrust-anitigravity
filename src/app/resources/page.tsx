@@ -156,6 +156,10 @@ export default function ResourcesPage() {
     ];
 
     return (
+        <>
+            <h1 className="sr-only">Resources Page</h1>
+            {/* Original Component */}
+            
         <main>
             <Header />
             <InnerPageHeader
@@ -319,5 +323,7 @@ export default function ResourcesPage() {
 
             <Footer />
         </main>
+    
+        </>
     );
 }

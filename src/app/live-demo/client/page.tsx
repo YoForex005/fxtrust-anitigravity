@@ -60,6 +60,10 @@ export const metadata: Metadata = {
 
 export default function ClientDashboardPage() {
   return (
+        <>
+            <h1 className="sr-only">Client Dashboard Page</h1>
+            {/* Original Component */}
+            
     <Suspense fallback={
       <div style={{
         display: 'flex',
@@ -89,6 +93,8 @@ export default function ClientDashboardPage() {
     }>
       <ClientDashboardContent />
     </Suspense>
-  );
+  
+        </>
+    );
 }
 

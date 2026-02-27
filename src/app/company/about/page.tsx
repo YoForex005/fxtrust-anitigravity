@@ -23,6 +23,10 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
     return (
+        <>
+            <h1 className="sr-only">About Page</h1>
+            {/* Original Component */}
+            
         <main>
             <PageHeader
                 title="About FXTrusts"
@@ -46,5 +50,7 @@ export default function AboutPage() {
                 </div>
             </div>
         </main>
+    
+        </>
     );
 }

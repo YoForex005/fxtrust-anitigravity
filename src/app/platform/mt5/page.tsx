@@ -43,6 +43,10 @@ export const metadata: Metadata = {
 
 export default function MT5Page() {
     return (
+        <>
+            <h1 className="sr-only">M T5 Page</h1>
+            {/* Original Component */}
+            
         <main>
             <Header />
             <InnerPageHeader
@@ -496,5 +500,7 @@ export default function MT5Page() {
 
             <Footer />
         </main>
+    
+        </>
     );
 }

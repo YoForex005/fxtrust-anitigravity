@@ -1,0 +1,136 @@
+.sidebar {
+    width: 240px;
+    /* Increased width for more items */
+    min-width: 240px;
+    background: #ffffff;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    color: #374151;
+    border-right: 1px solid #e5e7eb;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.sidebarCollapsed {
+    width: 80px;
+    min-width: 60px;
+}
+
+.sidebarCollapsed .navItem span,
+.sidebarCollapsed .logoutBtn span,
+.sidebarCollapsed .sectionTitle {
+    display: none;
+}
+
+.sidebarCollapsed .navItem {
+    justify-content: center;
+    padding: 14px;
+}
+
+.sidebarCollapsed .logoutBtn {
+    justify-content: center;
+    padding: 14px;
+}
+
+.sidebarNav {
+    flex: 1;
+    padding: 12px 8px;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    overflow-y: auto;
+}
+
+.navItem {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 14px;
+    color: #6b7280;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 500;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.navItem:hover {
+    background: #f3f4f6;
+    color: #1f2937;
+}
+
+.navItem.active {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    color: #fff;
+}
+
+.navItem svg {
+    flex-shrink: 0;
+}
+
+.sidebarBottom {
+    padding: 12px 8px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.logoutBtn {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    padding: 10px 14px;
+    background: transparent;
+    border: none;
+    border-radius: 8px;
+    color: #6b7280;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.logoutBtn:hover {
+    background: rgba(239, 68, 68, 0.1);
+    color: #ef4444;
+}
+
+.sectionTitle {
+    font-size: 11px;
+    font-weight: 600;
+    color: #9ca3af;
+    text-transform: uppercase;
+    padding: 12px 14px 4px;
+    margin-top: 8px;
+}
+
+.divider {
+    height: 1px;
+    background: #e5e7eb;
+    margin: 8px 0;
+}
+
+.shareApp {
+    text-align: center;
+    padding: 10px;
+    font-size: 12px;
+    color: #6b7280;
+}
+
+.socialIcons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    padding-bottom: 12px;
+}
+
+.socialIcon {
+    color: #9ca3af;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.socialIcon:hover {
+    color: #3b82f6;
+}

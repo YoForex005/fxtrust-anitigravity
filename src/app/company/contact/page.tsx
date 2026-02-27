@@ -27,6 +27,10 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
     return (
+        <>
+            <h1 className="sr-only">Contact Page</h1>
+            {/* Original Component */}
+            
         <main>
             <Header />
             <InnerPageHeader
@@ -65,7 +69,7 @@ export default function ContactPage() {
                                 <div>
                                     <h3 className={styles.itemTitle}>Telegram</h3>
                                     <p className={styles.itemText}>For faster, informal chat.</p>
-                                    <a href="#" className={`${styles.itemLink} ${styles.socialLink}`}>@FxTrustsSupport</a>
+                                    <a href="https://t.me/FxTrustsSupport" target="_blank" rel="noopener noreferrer" className={`${styles.itemLink} ${styles.socialLink}`}>@FxTrustsSupport</a>
                                 </div>
                             </div>
 
@@ -76,7 +80,7 @@ export default function ContactPage() {
                                 <div>
                                     <h3 className={styles.itemTitle}>WhatsApp Support</h3>
                                     <p className={styles.itemText}>Chat or Call us directly.</p>
-                                    <a href="https://wa.me/447897015780" className={`${styles.itemLink} ${styles.socialLink}`}>+44 7897 015780 (Call+Whatsapp)</a>
+                                    <a href="https://wa.me/447897015780" target="_blank" rel="noopener noreferrer" className={`${styles.itemLink} ${styles.socialLink}`}>+44 7897 015780 (Call+Whatsapp)</a>
                                 </div>
                             </div>
                         </div>
@@ -142,5 +146,7 @@ export default function ContactPage() {
 
             <Footer />
         </main>
+    
+        </>
     );
 }

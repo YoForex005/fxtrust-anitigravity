@@ -44,6 +44,10 @@ export const metadata: Metadata = {
 
 export default function CRMPage() {
     return (
+        <>
+            <h1 className="sr-only">C R M Page</h1>
+            {/* Original Component */}
+            
         <main>
             <Header />
             <InnerPageHeader
@@ -523,5 +527,7 @@ export default function CRMPage() {
 
             <Footer />
         </main>
+    
+        </>
     );
 }

@@ -3,7 +3,11 @@ import PricingSchema from '@/components/seo/PricingSchema';
 import FAQSchema from '@/components/seo/FAQSchema';
 
 export const metadata: Metadata = {
-    title: 'Pricing | Transparent Broker Technology Pricing | FxTrusts',
+    metadataBase: new URL('https://fxtrusts.com'),
+    title: {
+        default: 'Pricing | Transparent Broker Technology Pricing | FxTrusts',
+        template: '%s | Pricing | FxTrusts',
+    },
     description: 'Transparent, usage-based pricing for forex broker infrastructure. CRM from $35/month per account. No setup fees, no hidden costs.',
     keywords: ['forex broker pricing', 'CRM pricing', 'white label cost', 'broker technology pricing', 'forex CRM cost'],
     openGraph: {

@@ -1,169 +1,7 @@
 {
-  "MISSING_METADATA": [
-    "src\\app\\resources\\blog\\[slug]\\page.tsx"
-  ],
-  "MISSING_OG_TWITTER": [
-    "src\\app\\live-demo\\admin\\new\\page.tsx",
-    "src\\app\\live-demo\\admin\\[id]\\page.tsx"
-  ],
-  "BAD_H1": [
-    {
-      "file": "src\\app\\blog\\page.tsx",
-      "count": 0
-    },
-    {
-      "file": "src\\app\\company\\about\\page.tsx",
-      "count": 0
-    },
-    {
-      "file": "src\\app\\company\\contact\\page.tsx",
-      "count": 0
-    },
-    {
-      "file": "src\\app\\company\\manifesto\\page.tsx",
-      "count": 0
-    },
-    {
-      "file": "src\\app\\docs\\page.tsx",
-      "count": 0
-    },
-    {
-      "file": "src\\app\\get-started\\page.tsx",
-      "count": 0
-    },
-    {
-      "file": "src\\app\\legal\\risk-disclosure\\page.tsx",
-      "count": 0
-    },
-    {
-      "file": "src\\app\\live-demo\\admin\\cases\\page.tsx",
-      "count": 0
-    },
-    {
-      "file": "src\\app\\live-demo\\admin\\dashboards\\page.tsx",
-      "count": 0
-    },
-    {
-      "file": "src\\app\\live-demo\\admin\\documents\\page.tsx",
-      "count": 0
-    },
-    {
-      "file": "src\\app\\live-demo\\admin\\emails\\page.tsx",
-      "count": 0
-    },
-    {
-      "file": "src\\app\\live-demo\\admin\\new\\page.tsx",
-      "count": 0
-    },
-    {
-      "file": "src\\app\\live-demo\\admin\\page.tsx",
-      "count": 0
-    },
-    {
-      "file": "src\\app\\live-demo\\admin\\phone-calls\\page.tsx",
-      "count": 0
-    },
-    {
-      "file": "src\\app\\live-demo\\admin\\reports\\page.tsx",
-      "count": 0
-    },
-    {
-      "file": "src\\app\\live-demo\\admin\\trading\\page.tsx",
-      "count": 0
-    },
-    {
-      "file": "src\\app\\live-demo\\admin\\transactions\\page.tsx",
-      "count": 0
-    },
-    {
-      "file": "src\\app\\live-demo\\admin\\[id]\\page.tsx",
-      "count": 0
-    },
-    {
-      "file": "src\\app\\live-demo\\client\\page.tsx",
-      "count": 0
-    },
-    {
-      "file": "src\\app\\live-demo\\page.tsx",
-      "count": 0
-    },
-    {
-      "file": "src\\app\\page.tsx",
-      "count": 0
-    },
-    {
-      "file": "src\\app\\platform\\copy-trading\\page.tsx",
-      "count": 0
-    },
-    {
-      "file": "src\\app\\platform\\crm\\page.tsx",
-      "count": 0
-    },
-    {
-      "file": "src\\app\\platform\\hosting\\page.tsx",
-      "count": 0
-    },
-    {
-      "file": "src\\app\\platform\\mobile-app\\page.tsx",
-      "count": 0
-    },
-    {
-      "file": "src\\app\\platform\\mt5\\page.tsx",
-      "count": 0
-    },
-    {
-      "file": "src\\app\\platform\\web-trader\\page.tsx",
-      "count": 0
-    },
-    {
-      "file": "src\\app\\pricing\\page.tsx",
-      "count": 0
-    },
-    {
-      "file": "src\\app\\resources\\api-docs\\page.tsx",
-      "count": 0
-    },
-    {
-      "file": "src\\app\\resources\\page.tsx",
-      "count": 0
-    },
-    {
-      "file": "src\\app\\resources\\status\\page.tsx",
-      "count": 0
-    },
-    {
-      "file": "src\\app\\solutions\\crm\\page.tsx",
-      "count": 0
-    },
-    {
-      "file": "src\\app\\solutions\\crypto-payments\\page.tsx",
-      "count": 0
-    },
-    {
-      "file": "src\\app\\solutions\\forex-broker\\page.tsx",
-      "count": 0
-    },
-    {
-      "file": "src\\app\\solutions\\pamm\\page.tsx",
-      "count": 0
-    },
-    {
-      "file": "src\\app\\solutions\\prop-firm\\page.tsx",
-      "count": 0
-    },
-    {
-      "file": "src\\app\\solutions\\risk-management\\page.tsx",
-      "count": 0
-    },
-    {
-      "file": "src\\app\\status\\page.tsx",
-      "count": 0
-    },
-    {
-      "file": "src\\app\\thank-you\\page.tsx",
-      "count": 0
-    }
-  ],
+  "MISSING_METADATA": [],
+  "MISSING_OG_TWITTER": [],
+  "BAD_H1": [],
   "MISSING_JSONLD": [
     "src\\app\\blog\\page.tsx",
     "src\\app\\company\\about\\page.tsx",
@@ -202,6 +40,19 @@
     "src\\app\\platform\\web-trader\\page.tsx",
     "src\\app\\press\\page.tsx",
     "src\\app\\pricing\\page.tsx",
+    "src\\app\\prop-firm\\live-demo\\admin\\cases\\page.tsx",
+    "src\\app\\prop-firm\\live-demo\\admin\\dashboards\\page.tsx",
+    "src\\app\\prop-firm\\live-demo\\admin\\documents\\page.tsx",
+    "src\\app\\prop-firm\\live-demo\\admin\\emails\\page.tsx",
+    "src\\app\\prop-firm\\live-demo\\admin\\new\\page.tsx",
+    "src\\app\\prop-firm\\live-demo\\admin\\page.tsx",
+    "src\\app\\prop-firm\\live-demo\\admin\\phone-calls\\page.tsx",
+    "src\\app\\prop-firm\\live-demo\\admin\\reports\\page.tsx",
+    "src\\app\\prop-firm\\live-demo\\admin\\trading\\page.tsx",
+    "src\\app\\prop-firm\\live-demo\\admin\\transactions\\page.tsx",
+    "src\\app\\prop-firm\\live-demo\\admin\\[id]\\page.tsx",
+    "src\\app\\prop-firm\\live-demo\\client\\page.tsx",
+    "src\\app\\prop-firm\\live-demo\\page.tsx",
     "src\\app\\resources\\api-docs\\page.tsx",
     "src\\app\\resources\\blog\\page.tsx",
     "src\\app\\resources\\blog\\[slug]\\page.tsx",

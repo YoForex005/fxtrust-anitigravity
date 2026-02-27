@@ -44,6 +44,10 @@ export const metadata: Metadata = {
 
 export default function WebTraderPage() {
     return (
+        <>
+            <h1 className="sr-only">Web Trader Page</h1>
+            {/* Original Component */}
+            
         <main>
             <Header />
             <InnerPageHeader
@@ -575,5 +579,7 @@ export default function WebTraderPage() {
 
             <Footer />
         </main>
+    
+        </>
     );
 }

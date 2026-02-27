@@ -77,6 +77,10 @@ export default function ForexBrokerPage() {
     ];
 
     return (
+        <>
+            <h1 className="sr-only">Forex Broker Page</h1>
+            {/* Original Component */}
+            
         <main className={styles.main}>
             <ProductSchema
                 name="FxTrusts Forex Broker Turnkey"
@@ -644,5 +648,7 @@ export default function ForexBrokerPage() {
 
 
         </main>
+    
+        </>
     );
 }

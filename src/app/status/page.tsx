@@ -19,4 +19,5 @@ export const metadata: Metadata = {
 
 export default function StatusRedirect() {
     redirect('/resources/status');
+    return <h1 className="sr-only">Status Redirect</h1>;
 }

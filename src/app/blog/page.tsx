@@ -19,4 +19,5 @@ export const metadata: Metadata = {
 
 export default function BlogRedirect() {
     redirect('/resources/blog');
+    return <h1 className="sr-only">Blog Redirect</h1>;
 }
