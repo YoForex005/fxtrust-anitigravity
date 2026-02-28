@@ -37,7 +37,7 @@ export default function YoPipsAdminContent() {
             {/* Sidebar */}
             <aside className={`${styles.sidebar} ${isSidebarOpen ? styles.open : ''}`}>
                 <div className={styles.logoContainer}>
-                    <Image src="/yo_pips_logo.png" alt="YO PIPS" width={100} height={28} style={{ height: '28px', width: 'auto', display: 'block' }} />
+                    <Image src="/logo.png" alt="FX TRUSTS" width={160} height={45} style={{ height: 'auto', width: '160px', display: 'block' }} />
                 </div>
 
                 <div style={{ padding: '0 1.5rem', marginBottom: '1rem' }}>
@@ -76,7 +76,7 @@ export default function YoPipsAdminContent() {
                             key={item.name}
                             href="#"
                             className={`${styles.navItem} ${activeTab === item.name ? styles.active : ''}`}
-                            onClick={(e) => { e.preventDefault(); setActiveTab(item.name); }}
+                            onClick={(e) => { e.preventDefault(); setActiveTab(item.name); setIsSidebarOpen(false); }}
                         >
                             <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem', flex: 1 }}>
                                 {item.icon}
@@ -211,11 +211,11 @@ export default function YoPipsAdminContent() {
                                                     <stop offset="100%" stopColor="rgba(16, 185, 129, 0)" />
                                                 </linearGradient>
                                             </defs>
-                                            <line x1="0" y1="0" x2="800" y2="0" stroke="#374151" strokeWidth="0.5" strokeDasharray="4 4" />
-                                            <line x1="0" y1="50" x2="800" y2="50" stroke="#374151" strokeWidth="0.5" strokeDasharray="4 4" />
-                                            <line x1="0" y1="100" x2="800" y2="100" stroke="#374151" strokeWidth="0.5" strokeDasharray="4 4" />
-                                            <line x1="0" y1="150" x2="800" y2="150" stroke="#374151" strokeWidth="0.5" strokeDasharray="4 4" />
-                                            <line x1="0" y1="200" x2="800" y2="200" stroke="#374151" strokeWidth="0.5" />
+                                            <line x1="0" y1="0" x2="800" y2="0" stroke="#cbd5e1" strokeWidth="0.5" strokeDasharray="4 4" />
+                                            <line x1="0" y1="50" x2="800" y2="50" stroke="#cbd5e1" strokeWidth="0.5" strokeDasharray="4 4" />
+                                            <line x1="0" y1="100" x2="800" y2="100" stroke="#cbd5e1" strokeWidth="0.5" strokeDasharray="4 4" />
+                                            <line x1="0" y1="150" x2="800" y2="150" stroke="#cbd5e1" strokeWidth="0.5" strokeDasharray="4 4" />
+                                            <line x1="0" y1="200" x2="800" y2="200" stroke="#cbd5e1" strokeWidth="0.5" />
 
                                             <text x="0" y="10" fill="#6b7280" fontSize="12" style={{ transform: 'translateY(-5px)' }}>$10000</text>
                                             <text x="0" y="60" fill="#6b7280" fontSize="12" style={{ transform: 'translateY(-5px)' }}>$7500</text>
@@ -278,7 +278,7 @@ export default function YoPipsAdminContent() {
                                             </div>
                                         </div>
                                     </div>
-                                    <button className={styles.actionBtnOutline} style={{ width: '100%', marginTop: 'auto', backgroundColor: '#2d2d35', border: 'none' }}>
+                                    <button className={styles.actionBtnOutline} style={{ width: '100%', marginTop: 'auto', backgroundColor: '#e2e8f0', border: 'none' }}>
                                         View Detailed Report
                                     </button>
                                 </div>
@@ -314,12 +314,12 @@ export default function YoPipsAdminContent() {
                                                             </div>
                                                         </div>
                                                     </td>
-                                                    <td style={{ color: '#d1d5db' }}>{user.plan}</td>
-                                                    <td style={{ color: '#d1d5db' }}>{user.joined}</td>
+                                                    <td style={{ color: '#0f172a' }}>{user.plan}</td>
+                                                    <td style={{ color: '#0f172a' }}>{user.joined}</td>
                                                     <td>
                                                         <span className={styles.statusPill}>{user.status}</span>
                                                     </td>
-                                                    <td style={{ textAlign: 'right', color: '#6b7280', cursor: 'pointer' }}>
+                                                    <td style={{ textAlign: 'right', color: '#475569', cursor: 'pointer' }}>
                                                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
                                                     </td>
                                                 </tr>
@@ -559,7 +559,7 @@ export default function YoPipsAdminContent() {
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polygon points="22 3 2 3 10 12.46 10 19 14 21 14 12.46 22 3"></polygon></svg>
                                 Filter
                             </button>
-                            <div className={styles.searchContainer} style={{ width: 320 }}>
+                            <div className={styles.searchContainer}>
                                 <svg className={styles.searchIcon} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
                                 <input type="text" className={styles.searchInput} placeholder="Search by name or email" />
                             </div>
@@ -591,13 +591,13 @@ export default function YoPipsAdminContent() {
                                             <th>Name</th>
                                             <th>Email</th>
                                             <th>Status</th>
-                                            <th colSpan={2} style={{ textAlign: 'center', borderLeft: '1px solid #2d2d35' }}>Accounts</th>
-                                            <th colSpan={2} style={{ textAlign: 'center', borderLeft: '1px solid #2d2d35' }}>Challenges</th>
+                                            <th colSpan={2} style={{ textAlign: 'center', borderLeft: '1px solid #e2e8f0' }}>Accounts</th>
+                                            <th colSpan={2} style={{ textAlign: 'center', borderLeft: '1px solid #e2e8f0' }}>Challenges</th>
                                             <th>Imp</th>
                                             <th>Tags</th>
                                             <th>Action</th>
                                         </tr>
-                                        <tr style={{ fontSize: '0.7rem', color: '#6b7280' }}>
+                                        <tr style={{ fontSize: '0.7rem', color: '#475569' }}>
                                             <th></th>
                                             <th></th>
                                             <th></th>
@@ -631,24 +631,24 @@ export default function YoPipsAdminContent() {
                                                 <td className={styles.userNameCell}>{user.name}</td>
                                                 <td>
                                                     <div className={styles.userEmailCell}>
-                                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" strokeWidth="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#475569" strokeWidth="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                                                         {user.email}
                                                     </div>
                                                 </td>
                                                 <td>
                                                     <span className={user.status === 'Banned' ? styles.statusBadgeBanned : styles.statusBadgeActive}>{user.status}</span>
                                                 </td>
-                                                <td style={{ borderLeft: '1px solid #2d2d35', color: '#d1d5db', textAlign: 'center' }}>{user.aCur}</td>
-                                                <td style={{ color: '#d1d5db', textAlign: 'center' }}>{user.aTotal}</td>
-                                                <td style={{ borderLeft: '1px solid #2d2d35', color: '#d1d5db', textAlign: 'center' }}>{user.cCur}</td>
-                                                <td style={{ color: '#d1d5db', textAlign: 'center' }}>{user.cTotal}</td>
+                                                <td style={{ borderLeft: '1px solid #e2e8f0', color: '#0f172a', textAlign: 'center' }}>{user.aCur}</td>
+                                                <td style={{ color: '#0f172a', textAlign: 'center' }}>{user.aTotal}</td>
+                                                <td style={{ borderLeft: '1px solid #e2e8f0', color: '#0f172a', textAlign: 'center' }}>{user.cCur}</td>
+                                                <td style={{ color: '#0f172a', textAlign: 'center' }}>{user.cTotal}</td>
                                                 <td><button className={styles.goBtn}>GO</button></td>
-                                                <td style={{ color: '#6b7280', fontSize: '0.75rem' }}>—</td>
+                                                <td style={{ color: '#475569', fontSize: '0.75rem' }}>—</td>
                                                 <td>
                                                     <div className={styles.actionIconsCell}>
                                                         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" strokeWidth="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
-                                                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" strokeWidth="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
-                                                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><line x1="23" y1="11" x2="17" y2="11"></line></svg>
+                                                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#475569" strokeWidth="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                                                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#475569" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><line x1="23" y1="11" x2="17" y2="11"></line></svg>
                                                         {user.status === 'Banned' ? (
                                                             <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
                                                         ) : (
@@ -692,7 +692,7 @@ export default function YoPipsAdminContent() {
                             <div className={styles.headerSubtitle}>
                                 <h1>Plans</h1>
                                 <span className={styles.headerDivider}>|</span>
-                                <span style={{ color: '#d1d5db', fontSize: '0.875rem' }}>Trading Plans and Phases</span>
+                                <span style={{ color: '#0f172a', fontSize: '0.875rem' }}>Trading Plans and Phases</span>
                                 <a href="#" className={styles.headerSubLink}>
                                     Need Help?
                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
@@ -712,7 +712,7 @@ export default function YoPipsAdminContent() {
 
                         {/* Search bar */}
                         <div style={{ marginBottom: '1.5rem' }}>
-                            <div className={styles.searchContainer} style={{ width: 320 }}>
+                            <div className={styles.searchContainer}>
                                 <svg className={styles.searchIcon} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
                                 <input type="text" className={styles.searchInput} placeholder="Search" />
                             </div>
@@ -745,14 +745,14 @@ export default function YoPipsAdminContent() {
                                         ].map((plan) => (
                                             <tr key={plan.id}>
                                                 <td className={styles.checkboxCell}><input type="checkbox" /></td>
-                                                <td style={{ color: '#d1d5db' }}>{plan.id}</td>
-                                                <td style={{ color: '#ffffff', fontWeight: 600 }}>{plan.title}</td>
+                                                <td style={{ color: '#0f172a' }}>{plan.id}</td>
+                                                <td style={{ color: '#0f172a', fontWeight: 600 }}>{plan.title}</td>
                                                 <td>
                                                     <div className={styles.currencyCell}>
                                                         <span className={styles.currencyBox}>$</span>
                                                     </div>
                                                 </td>
-                                                <td style={{ color: '#d1d5db' }}>{plan.price}</td>
+                                                <td style={{ color: '#0f172a' }}>{plan.price}</td>
                                                 <td>
                                                     <label className={styles.toggleSwitch}>
                                                         <input type="checkbox" defaultChecked={plan.enabled} />
@@ -774,7 +774,7 @@ export default function YoPipsAdminContent() {
                                                 <td>
                                                     <div className={styles.actionIconsCell}>
                                                         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" strokeWidth="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
-                                                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" strokeWidth="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
+                                                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#475569" strokeWidth="2"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"></path><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"></path></svg>
                                                         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#ef4444" strokeWidth="2"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6l-1 14H6L5 6"></path><path d="M10 11v6M14 11v6"></path><path d="M9 6V4h6v2"></path></svg>
                                                     </div>
                                                 </td>
@@ -811,7 +811,7 @@ export default function YoPipsAdminContent() {
                             <div className={styles.headerSubtitle}>
                                 <h1>Accounts</h1>
                                 <span className={styles.headerDivider}>|</span>
-                                <span style={{ color: '#d1d5db', fontSize: '0.875rem' }}>Users with MT5 Accounts</span>
+                                <span style={{ color: '#0f172a', fontSize: '0.875rem' }}>Users with MT5 Accounts</span>
                                 <a href="#" className={styles.headerSubLink}>
                                     Need Help?
                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
@@ -873,8 +873,8 @@ export default function YoPipsAdminContent() {
                                             { user: 'Passed User 1', email: 'passed1770018873600_1@yopips.com', total: 1, trial: 0, paid: 0, funded: 0, archived: 0, joined: '2/2/2026' }
                                         ].map((item, idx) => (
                                             <tr key={idx}>
-                                                <td style={{ color: '#ffffff', fontWeight: 600 }}>{item.user}</td>
-                                                <td style={{ color: '#9ca3af' }}>{item.email}</td>
+                                                <td style={{ color: '#0f172a', fontWeight: 600 }}>{item.user}</td>
+                                                <td style={{ color: '#475569' }}>{item.email}</td>
                                                 <td style={{ textAlign: 'center' }}>
                                                     <span className={`${styles.countBadge} ${styles.badgeCyan}`}>{item.total}</span>
                                                 </td>
@@ -1018,7 +1018,7 @@ export default function YoPipsAdminContent() {
                                                 <td>
                                                     <div className={styles.rulesCell}>
                                                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ef4444" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-                                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6b7280" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+                                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#475569" strokeWidth="2"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
                                                     </div>
                                                 </td>
                                                 {/* Actions */}
@@ -1095,7 +1095,7 @@ export default function YoPipsAdminContent() {
                                         ].map((ticket, i) => (
                                             <tr key={i}>
                                                 <td className={styles.ticketId}>{ticket.id}</td>
-                                                <td style={{ color: '#e5e7eb', fontWeight: 500 }}>{ticket.subject}</td>
+                                                <td style={{ color: '#0f172a', fontWeight: 500 }}>{ticket.subject}</td>
                                                 <td>
                                                     <div className={styles.stackedUserCell}>
                                                         <span className={styles.userCellName}>{ticket.name}</span>
@@ -1132,7 +1132,7 @@ export default function YoPipsAdminContent() {
                             <div className={styles.headerSubtitle}>
                                 <h1>Contest Programs</h1>
                                 <span className={styles.headerDivider}>|</span>
-                                <span style={{ color: '#d1d5db', fontSize: '0.875rem' }}>Contest Programs and Conditions</span>
+                                <span style={{ color: '#0f172a', fontSize: '0.875rem' }}>Contest Programs and Conditions</span>
                                 <a href="#" className={styles.headerSubLink}>
                                     Need Help?
                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
@@ -1170,7 +1170,7 @@ export default function YoPipsAdminContent() {
                                     <tbody>
                                         {/* No data shown in screenshot — empty state */}
                                         <tr>
-                                            <td colSpan={7} style={{ textAlign: 'center', color: '#6b7280', padding: '2rem', fontSize: '0.875rem' }}>
+                                            <td colSpan={7} style={{ textAlign: 'center', color: '#475569', padding: '2rem', fontSize: '0.875rem' }}>
                                                 No contest programs found.
                                             </td>
                                         </tr>
@@ -1216,7 +1216,7 @@ export default function YoPipsAdminContent() {
 
                         {/* Search */}
                         <div className={styles.couponSearchBar}>
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#6b7280" strokeWidth="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#475569" strokeWidth="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
                             <input type="text" placeholder="Search coupons..." />
                         </div>
 
@@ -1282,7 +1282,7 @@ export default function YoPipsAdminContent() {
                             <div className={styles.headerSubtitle}>
                                 <h1>Payment Transactions</h1>
                                 <span className={styles.headerDivider}>|</span>
-                                <span style={{ color: '#d1d5db', fontSize: '0.875rem' }}>Real-time Payment Log</span>
+                                <span style={{ color: '#0f172a', fontSize: '0.875rem' }}>Real-time Payment Log</span>
                                 <a href="#" className={styles.headerSubLink}>
                                     Need Help?
                                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"></circle><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path><line x1="12" y1="17" x2="12.01" y2="17"></line></svg>
@@ -1355,7 +1355,7 @@ export default function YoPipsAdminContent() {
                                                 </td>
                                                 <td>
                                                     <div className={styles.txnGatewayCell}>
-                                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" strokeWidth="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
+                                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#475569" strokeWidth="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect><line x1="1" y1="10" x2="23" y2="10"></line></svg>
                                                         Coinpayments
                                                     </div>
                                                 </td>
@@ -1371,7 +1371,7 @@ export default function YoPipsAdminContent() {
                                                 <td><span className={styles.txnPending}>PENDING</span></td>
                                                 <td>
                                                     <div className={styles.txnDateCell}>
-                                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#9ca3af" strokeWidth="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                                                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#475569" strokeWidth="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
                                                         {tx.date}
                                                     </div>
                                                 </td>

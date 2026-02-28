@@ -13,15 +13,6 @@ export const metadata: Metadata = {
         title: 'Client Account Profile | FxTrusts',
         description: 'Comprehensive view of client data, including personal info, financial history, and activity logs.',
     },
-    openGraph: {
-        title: 'Client Account Profile | FxTrusts',
-        description: 'Comprehensive view of client data, including personal info, financial history, and activity logs.',
-    },
-    twitter: {
-        card: 'summary',
-        title: 'Client Account Profile | FxTrusts',
-        description: 'Comprehensive view of client data, including personal info, financial history, and activity logs.',
-    },
     robots: {
         index: false,
         follow: false,

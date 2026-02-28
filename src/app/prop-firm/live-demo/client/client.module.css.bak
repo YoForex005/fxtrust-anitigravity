@@ -6,7 +6,7 @@
   width: 100vw;
   background-color: #f8fafc;
   /* Very dark background */
-  color: #0f172a;
+  color: #c9d1d9;
   /* Default text color */
   font-family: 'Inter', -apple-system, sans-serif;
   overflow: hidden;
@@ -14,35 +14,34 @@
 
 /* Sidebar */
 .yopipsSidebar {
-  width: 250px;
-  background-color: #ffffff;
-  border-right: 1px solid #e2e8f0;
+  width: 260px;
+  background-color: #0f172a;
+  border-right: 1px solid #30363d;
   display: flex;
   flex-direction: column;
-  padding: 0 15px 32px 15px;
+  padding: 24px 16px;
   overflow-y: auto;
 }
 
 .yopipsLogo {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  margin-bottom: 24px;
-  margin-top: 0;
-  margin-left: -15px;
-  padding: 0;
+  gap: 12px;
+  font-size: 20px;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 32px;
+  letter-spacing: 0.5px;
 }
 
 .yopipsLogoIcon {
   color: #06b6d4;
-  width: 28px;
-  height: 28px;
 }
 
 .backBtn {
-  background-color: #ffffff;
-  border: 1px solid #00aecc;
-  color: #00aecc;
+  background-color: transparent;
+  border: 1px solid #06b6d4;
+  color: #06b6d4;
   border-radius: 8px;
   padding: 10px;
   display: flex;
@@ -50,15 +49,14 @@
   justify-content: center;
   gap: 8px;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 13px;
   cursor: pointer;
   margin-bottom: 32px;
   transition: all 0.2s;
 }
 
 .backBtn:hover {
-  background-color: #06b6d4;
-  color: #ffffff;
+  background-color: rgba(6, 182, 212, 0.1);
 }
 
 .backBtnIcon {
@@ -71,20 +69,26 @@
 }
 
 .menuLabel {
-  display: none;
+  font-size: 11px;
+  color: #8b949e;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+  padding-left: 12px;
+  text-transform: uppercase;
 }
 
 .menuItem {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 16px;
-  border-radius: 8px;
-  color: #435971;
+  padding: 10px 12px;
+  border-radius: 6px;
+  color: #8b949e;
   text-decoration: none;
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 500;
-  margin-bottom: 6px;
+  margin-bottom: 4px;
   cursor: pointer;
   transition: all 0.2s;
 }
@@ -102,17 +106,17 @@
 }
 
 .menuItem:hover {
-  background-color: #f8fbff;
-  color: #00aecc;
+  background-color: rgba(0, 0, 0, 0.05);
+  color: #fff;
 }
 
 .menuItem.active {
-  background-color: #e0faff;
-  color: #00aecc;
+  background-color: rgba(6, 182, 212, 0.1);
+  color: #06b6d4;
 }
 
 .menuItem.active .menuItemIcon {
-  color: #00aecc;
+  color: #06b6d4;
   opacity: 1;
 }
 
@@ -120,7 +124,7 @@
 .toggleSwitch {
   width: 32px;
   height: 18px;
-  background: #e2e8f0;
+  background: #30363d;
   border-radius: 12px;
   position: relative;
   cursor: pointer;
@@ -156,7 +160,7 @@
 /* Header */
 .yopipsHeader {
   height: 72px;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid #30363d;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -166,11 +170,11 @@
 
 .breadcrumb {
   font-size: 13px;
-  color: #475569;
+  color: #8b949e;
 }
 
 .breadcrumb span {
-  color: #0f172a;
+  color: #fff;
   font-weight: 500;
 }
 
@@ -179,7 +183,7 @@
   align-items: center;
   gap: 12px;
   font-size: 14px;
-  color: #0f172a;
+  color: #fff;
   font-weight: 500;
   cursor: pointer;
 }
@@ -187,12 +191,12 @@
 .userAvatar {
   width: 32px;
   height: 32px;
-  background-color: #06b6d4;
+  background-color: #1f51ff;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #0f172a;
+  color: #fff;
   font-weight: bold;
 }
 
@@ -207,24 +211,23 @@
 .pageTitle {
   font-size: 24px;
   font-weight: 700;
-  color: #0f172a;
+  color: #fff;
   margin: 0 0 8px 0;
 }
 
 .pageSubtitle {
   font-size: 14px;
-  color: #475569;
+  color: #8b949e;
   margin: 0 0 32px 0;
 }
 
 /* Common Card Style */
 .card {
-  background-color: #ffffff;
-  border: 1px solid #e2e8f0;
+  background-color: #0f172a;
+  border: 1px solid #30363d;
   border-radius: 12px;
   padding: 24px;
   margin-bottom: 24px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
 }
 
 /* Account Card Specific */
@@ -236,8 +239,8 @@
 }
 
 .accBadge {
-  background-color: rgba(15, 23, 42, 0.1);
-  color: #0f172a;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #fff;
   padding: 6px 12px;
   border-radius: 6px;
   font-size: 12px;
@@ -248,7 +251,7 @@
 }
 
 .accBadge span {
-  background: rgba(15, 23, 42, 0.2);
+  background: rgba(255, 255, 255, 0.2);
   padding: 2px 6px;
   border-radius: 4px;
 }
@@ -258,7 +261,7 @@
   align-items: center;
   gap: 12px;
   font-size: 14px;
-  color: #475569;
+  color: #8b949e;
 }
 
 .accountCardBody {
@@ -280,7 +283,7 @@
 
 .accLabel {
   font-size: 12px;
-  color: #475569;
+  color: #8b949e;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
@@ -288,7 +291,7 @@
 .accValue {
   font-size: 28px;
   font-weight: 700;
-  color: #0f172a;
+  color: #fff;
   display: flex;
   align-items: baseline;
   gap: 8px;
@@ -296,7 +299,7 @@
 
 .accValueSmall {
   font-size: 14px;
-  color: #475569;
+  color: #8b949e;
   font-weight: normal;
 }
 
@@ -313,7 +316,7 @@
 
 .progressBarContainer {
   height: 8px;
-  background-color: #e2e8f0;
+  background-color: #30363d;
   border-radius: 4px;
   overflow: hidden;
   margin-bottom: 12px;
@@ -333,7 +336,7 @@
   gap: 24px;
   margin-top: 24px;
   padding-top: 24px;
-  border-top: 1px solid #e2e8f0;
+  border-top: 1px solid #30363d;
 }
 
 .detailItem {
@@ -344,12 +347,12 @@
 
 .detailLabel {
   font-size: 12px;
-  color: #475569;
+  color: #8b949e;
 }
 
 .detailValue {
   font-size: 14px;
-  color: #0f172a;
+  color: #fff;
   font-weight: 500;
   display: flex;
   align-items: center;
@@ -372,8 +375,8 @@
 
 .btnSecondary {
   background-color: transparent;
-  border: 1px solid #e2e8f0;
-  color: #0f172a;
+  border: 1px solid #30363d;
+  color: #fff;
   padding: 10px 20px;
   border-radius: 8px;
   font-size: 14px;
@@ -390,8 +393,8 @@
 }
 
 .btnPrimary {
-  background-color: #06b6d4;
-  color: #0f172a;
+  background-color: #fff;
+  color: #f8fafc;
   border: none;
   padding: 10px 20px;
   border-radius: 8px;
@@ -414,19 +417,18 @@
 }
 
 .statCard {
-  background-color: #ffffff;
-  border: 1px solid #e2e8f0;
+  background-color: #0f172a;
+  border: 1px solid #30363d;
   border-radius: 12px;
   padding: 24px;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
 }
 
 .statTitle {
   font-size: 12px;
-  color: #475569;
+  color: #8b949e;
   text-transform: uppercase;
   display: flex;
   justify-content: space-between;
@@ -435,7 +437,7 @@
 .statValue {
   font-size: 28px;
   font-weight: 700;
-  color: #0f172a;
+  color: #fff;
 }
 
 /* Drawdown 2-col Grid */
@@ -454,13 +456,13 @@
 
 .ddTitle {
   font-size: 14px;
-  color: #0f172a;
+  color: #fff;
   font-weight: 500;
 }
 
 .ddLimit {
   font-size: 14px;
-  color: #475569;
+  color: #8b949e;
 }
 
 .ddBarContainer {
@@ -469,7 +471,7 @@
   border-radius: 8px;
   position: relative;
   overflow: hidden;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #30363d;
 }
 
 .ddBarFill {
@@ -497,7 +499,7 @@
   right: 16px;
   transform: translateY(-50%);
   font-size: 14px;
-  color: #0f172a;
+  color: #fff;
   font-weight: 500;
 }
 
@@ -511,7 +513,7 @@
 
 .historyTitle {
   font-size: 18px;
-  color: #0f172a;
+  color: #fff;
   font-weight: 600;
   margin-bottom: 4px;
   display: flex;
@@ -521,7 +523,7 @@
 
 .historySubtitle {
   font-size: 14px;
-  color: #475569;
+  color: #8b949e;
 }
 
 .historyTabs {
@@ -531,8 +533,8 @@
 
 .historyTab {
   background-color: transparent;
-  border: 1px solid #e2e8f0;
-  color: #475569;
+  border: 1px solid #30363d;
+  color: #8b949e;
   padding: 6px 16px;
   border-radius: 20px;
   font-size: 13px;
@@ -541,9 +543,9 @@
 }
 
 .historyTab.active {
-  background-color: #0f172a;
+  background-color: #fff;
   color: #f8fafc;
-  border-color: #0f172a;
+  border-color: #fff;
   font-weight: 500;
 }
 
@@ -559,13 +561,13 @@
 }
 
 .historyTable tr {
-  background-color: rgba(15, 23, 42, 0.02);
+  background-color: rgba(255, 255, 255, 0.02);
   border-radius: 8px;
 }
 
 .historyTable td {
   padding: 16px;
-  color: #0f172a;
+  color: #fff;
   font-size: 14px;
 }
 
@@ -600,11 +602,11 @@
 
 .tradeSymbol {
   font-weight: 600;
-  color: #0f172a;
+  color: #fff;
 }
 
 .tradeDate {
-  color: #475569;
+  color: #8b949e;
   font-size: 13px;
 }
 
@@ -632,12 +634,12 @@
   right: 24px;
   width: 56px;
   height: 56px;
-  background-color: #06b6d4;
+  background-color: #1f51ff;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #0f172a;
+  color: #fff;
   box-shadow: 0 8px 24px rgba(31, 81, 255, 0.4);
   cursor: pointer;
   z-index: 100;
@@ -660,14 +662,14 @@
 .profileTitle {
   font-size: 24px;
   font-weight: 700;
-  color: #0f172a;
+  color: #fff;
   display: flex;
   align-items: center;
   gap: 12px;
 }
 
 .profileTitle svg {
-  color: #475569;
+  color: #8b949e;
 }
 
 .profileActions {
@@ -676,9 +678,9 @@
 }
 
 .btnProfile {
-  background-color: #f1f5f9;
-  border: 1px solid #e2e8f0;
-  color: #0f172a;
+  background-color: #21262d;
+  border: 1px solid #30363d;
+  color: #c9d1d9;
   padding: 8px 16px;
   border-radius: 6px;
   font-size: 13px;
@@ -691,21 +693,21 @@
 }
 
 .btnProfile:hover {
-  background-color: #e2e8f0;
-  color: #0f172a;
+  background-color: #30363d;
+  color: #fff;
 }
 
 .profileTabs {
   display: flex;
   gap: 24px;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid #30363d;
   margin-bottom: 24px;
 }
 
 .profileTab {
   background: transparent;
   border: none;
-  color: #475569;
+  color: #8b949e;
   font-size: 14px;
   font-weight: 500;
   padding: 0 0 12px 0;
@@ -714,7 +716,7 @@
 }
 
 .profileTab:hover {
-  color: #0f172a;
+  color: #c9d1d9;
 }
 
 .profileTab.active {
@@ -746,7 +748,7 @@
 
 .profileCard {
   background-color: #f8fafc;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #30363d;
   border-radius: 6px;
   padding: 24px;
 }
@@ -761,13 +763,13 @@
 .profileCardTitle {
   font-size: 16px;
   font-weight: 600;
-  color: #0f172a;
+  color: #fff;
 }
 
 .profileIdBadge {
-  background-color: #f1f5f9;
-  border: 1px solid #e2e8f0;
-  color: #475569;
+  background-color: #21262d;
+  border: 1px solid #30363d;
+  color: #8b949e;
   padding: 4px 8px;
   border-radius: 4px;
   font-size: 12px;
@@ -784,7 +786,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 16px 0;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid #30363d;
 }
 
 .infoRow:last-child {
@@ -797,7 +799,7 @@
 }
 
 .infoLabel {
-  color: #475569;
+  color: #8b949e;
   font-size: 14px;
   display: flex;
   align-items: center;
@@ -805,7 +807,7 @@
 }
 
 .infoValue {
-  color: #0f172a;
+  color: #fff;
   font-size: 14px;
   font-weight: 500;
   text-align: right;
@@ -841,14 +843,14 @@
 }
 
 .helpText {
-  color: #475569;
+  color: #8b949e;
   font-size: 14px;
   line-height: 1.5;
   margin-bottom: 16px;
 }
 
 .helpLink {
-  color: #0f172a;
+  color: #fff;
   font-size: 14px;
   font-weight: 600;
   text-decoration: none;
@@ -863,7 +865,7 @@
 
 .sidebarFooter {
   padding: 24px;
-  border-top: 1px solid #e2e8f0;
+  border-top: 1px solid #30363d;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -875,13 +877,13 @@
   display: flex;
   gap: 16px;
   font-size: 12px;
-  color: #0f172a;
+  color: #fff;
   font-weight: 500;
 }
 
 .footerCopyright {
   font-size: 11px;
-  color: #475569;
+  color: #8b949e;
 }
 
 /* --- Billing Page Specific Styles --- */
@@ -915,7 +917,7 @@
 }
 
 .chartLabel {
-  color: #475569;
+  color: #8b949e;
   font-size: 11px;
   width: 20px;
   text-align: right;
@@ -923,7 +925,7 @@
 
 .chartLine {
   flex: 1;
-  border-bottom: 1px dashed #e2e8f0;
+  border-bottom: 1px dashed #30363d;
   position: relative;
 }
 
@@ -933,12 +935,12 @@
   left: 32px;
   right: 0;
   height: 2px;
-  background-color: #e2e8f0;
+  background-color: #30363d;
 }
 
 .totalPayoutSub {
   font-size: 12px;
-  color: #475569;
+  color: #8b949e;
 }
 
 .walletHeader {
@@ -950,7 +952,7 @@
 .walletTitle {
   font-size: 16px;
   font-weight: 600;
-  color: #0f172a;
+  color: #fff;
 }
 
 .walletItem {
@@ -958,7 +960,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 16px 0;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid #30363d;
 }
 
 .walletItem:first-of-type {
@@ -971,19 +973,19 @@
 }
 
 .walletLabel {
-  color: #475569;
+  color: #8b949e;
   font-size: 14px;
 }
 
 .walletValue {
-  color: #0f172a;
+  color: #fff;
   font-weight: 600;
   font-size: 14px;
 }
 
 .btnWhiteFull {
   width: 100%;
-  background-color: #0f172a;
+  background-color: #fff;
   color: #000;
   border: none;
   font-weight: 600;
@@ -1007,7 +1009,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 16px 0;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid #30363d;
 }
 
 .methodItem:last-of-type {
@@ -1023,16 +1025,16 @@
 .methodIcon {
   width: 40px;
   height: 28px;
-  background-color: #f1f5f9;
+  background-color: #21262d;
   border-radius: 4px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #30363d;
 }
 
 .methodTitle {
-  color: #0f172a;
+  color: #fff;
   font-size: 14px;
   font-weight: 600;
   display: flex;
@@ -1041,13 +1043,13 @@
 }
 
 .methodSub {
-  color: #475569;
+  color: #8b949e;
   font-size: 12px;
   margin-top: 2px;
 }
 
 .badgeDefault {
-  background-color: #0f172a;
+  background-color: #fff;
   color: #000;
   font-size: 10px;
   font-weight: 700;
@@ -1060,7 +1062,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 16px 0;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid #30363d;
 }
 
 .settingsRow:first-of-type {
@@ -1068,7 +1070,7 @@
 }
 
 .settingsLabel {
-  color: #475569;
+  color: #8b949e;
   font-size: 14px;
   display: flex;
   align-items: center;
@@ -1076,7 +1078,7 @@
 }
 
 .settingsValue {
-  color: #0f172a;
+  color: #fff;
   font-size: 14px;
   font-weight: 500;
   text-align: right;
@@ -1084,9 +1086,9 @@
 
 .btnGrayFull {
   width: 100%;
-  background-color: #f1f5f9;
-  color: #0f172a;
-  border: 1px solid #e2e8f0;
+  background-color: #21262d;
+  color: #c9d1d9;
+  border: 1px solid #30363d;
   font-weight: 600;
   padding: 12px;
   border-radius: 6px;
@@ -1097,14 +1099,14 @@
 }
 
 .btnGrayFull:hover {
-  background-color: #e2e8f0;
-  color: #0f172a;
+  background-color: #30363d;
+  color: #fff;
 }
 
 .btnSmall {
-  background-color: #f1f5f9;
-  color: #0f172a;
-  border: 1px solid #e2e8f0;
+  background-color: #21262d;
+  color: #c9d1d9;
+  border: 1px solid #30363d;
   padding: 4px 12px;
   border-radius: 4px;
   font-size: 12px;
@@ -1117,14 +1119,14 @@
 }
 
 .btnSmall:hover {
-  background-color: #e2e8f0;
-  color: #0f172a;
+  background-color: #30363d;
+  color: #fff;
 }
 
 /* Calculator specific */
 .calcInputContainer {
-  background-color: #f1f5f9;
-  border: 1px solid #e2e8f0;
+  background-color: #21262d;
+  border: 1px solid #30363d;
   border-radius: 6px;
   padding: 12px 16px;
   display: flex;
@@ -1134,7 +1136,7 @@
 }
 
 .calcInputSymbol {
-  color: #475569;
+  color: #8b949e;
   margin-right: 8px;
   font-weight: 600;
 }
@@ -1142,7 +1144,7 @@
 .calcInput {
   background: transparent;
   border: none;
-  color: #0f172a;
+  color: #fff;
   font-size: 16px;
   font-weight: 600;
   width: 100%;
@@ -1155,7 +1157,7 @@
 
 .sliderTrack {
   height: 6px;
-  background-color: #e2e8f0;
+  background-color: #30363d;
   border-radius: 3px;
   position: relative;
   margin-top: 16px;
@@ -1174,7 +1176,7 @@
 .sliderThumb {
   width: 16px;
   height: 16px;
-  background-color: #0f172a;
+  background-color: #fff;
   border-radius: 50%;
   position: absolute;
   top: -5px;
@@ -1187,14 +1189,14 @@
   justify-content: space-between;
   margin-top: 12px;
   font-size: 11px;
-  color: #475569;
+  color: #8b949e;
 }
 
 .ratioBox {
   padding: 24px;
   background-color: #f8fafc;
   border-radius: 6px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #30363d;
   height: 100%;
 }
 
@@ -1210,7 +1212,7 @@
 }
 
 .ratioLabel {
-  color: #475569;
+  color: #8b949e;
   font-size: 14px;
   display: flex;
   align-items: center;
@@ -1224,13 +1226,13 @@
 }
 
 .ratioValue {
-  color: #0f172a;
+  color: #fff;
   font-size: 16px;
   font-weight: 600;
 }
 
 .ratioBadge {
-  background-color: #0f172a;
+  background-color: #fff;
   color: #000;
   padding: 4px 8px;
   border-radius: 4px;
@@ -1247,20 +1249,20 @@
 }
 
 .ratioBarUser {
-  background-color: #0f172a;
+  background-color: #fff;
   height: 100%;
 }
 
 .ratioBarFirm {
-  background-color: #f1f5f9;
+  background-color: #21262d;
   height: 100%;
 }
 
 .compareSelect {
   width: 100%;
-  background-color: #f1f5f9;
-  border: 1px solid #e2e8f0;
-  color: #0f172a;
+  background-color: #21262d;
+  border: 1px solid #30363d;
+  color: #fff;
   padding: 12px 16px;
   border-radius: 6px;
   font-size: 14px;
@@ -1291,18 +1293,18 @@
 
 .planTable th {
   text-align: left;
-  color: #475569;
+  color: #8b949e;
   font-size: 12px;
   font-weight: 500;
   padding: 16px 0;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid #30363d;
 }
 
 .planTable td {
   padding: 16px 0;
-  color: #0f172a;
+  color: #fff;
   font-size: 13px;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid #30363d;
 }
 
 .planTable tr:last-child td {
@@ -1335,14 +1337,13 @@
 /* --- Academy Page Specific Styles --- */
 
 .academyHero {
-  background-color: #ffffff;
+  background-color: #0f172a;
   border-radius: 12px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #30363d;
   padding: 40px;
   display: flex;
   justify-content: space-between;
   margin-bottom: 40px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .academyHeroLeft {
@@ -1353,20 +1354,20 @@
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background-color: #f1f5f9;
-  border: 1px solid #e2e8f0;
+  background-color: #21262d;
+  border: 1px solid #30363d;
   padding: 6px 12px;
   border-radius: 20px;
   font-size: 12px;
   font-weight: 600;
-  color: #0f172a;
+  color: #c9d1d9;
   margin-bottom: 24px;
 }
 
 .academyHeroTitle {
   font-size: 42px;
   font-weight: 800;
-  color: #0f172a;
+  color: #fff;
   line-height: 1.1;
   margin-bottom: 16px;
 }
@@ -1380,7 +1381,7 @@
 
 .academyHeroSub {
   font-size: 16px;
-  color: #475569;
+  color: #8b949e;
   line-height: 1.5;
   margin-bottom: 32px;
 }
@@ -1391,13 +1392,13 @@
 }
 
 .btnPrimary {
-  background-color: #06b6d4;
-  color: #0f172a;
+  background-color: #fff;
+  color: #000;
   border: none;
-  padding: 10px 20px;
-  border-radius: 8px;
-  font-size: 14px;
   font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 6px;
+  font-size: 14px;
   cursor: pointer;
   transition: all 0.2s;
 }
@@ -1407,9 +1408,9 @@
 }
 
 .btnSecondary {
-  background-color: #f1f5f9;
-  color: #0f172a;
-  border: 1px solid #e2e8f0;
+  background-color: #21262d;
+  color: #c9d1d9;
+  border: 1px solid #30363d;
   font-weight: 600;
   padding: 12px 24px;
   border-radius: 6px;
@@ -1419,8 +1420,8 @@
 }
 
 .btnSecondary:hover {
-  background-color: #e2e8f0;
-  color: #0f172a;
+  background-color: #30363d;
+  color: #fff;
 }
 
 .academyHeroRight {
@@ -1437,11 +1438,10 @@
 
 .academyStatBox {
   flex: 1;
-  background-color: #ffffff;
+  background-color: #21262d;
   border-radius: 8px;
   padding: 20px;
-  border: 1px solid #e2e8f0;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  border: 1px solid #30363d;
 }
 
 .academyStatIcon {
@@ -1459,26 +1459,25 @@
 .academyStatValue {
   font-size: 24px;
   font-weight: 700;
-  color: #0f172a;
+  color: #fff;
   margin-bottom: 4px;
 }
 
 .academyStatLabel {
   font-size: 11px;
-  color: #475569;
+  color: #8b949e;
   text-transform: uppercase;
   letter-spacing: 0.5px;
 }
 
 .academyCurrentBox {
-  background: linear-gradient(135deg, #f8fafc, #f1f5f9);
+  background: linear-gradient(135deg, #1f2a40, #181329);
   border-radius: 8px;
   padding: 20px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #383159;
   display: flex;
   align-items: center;
   gap: 16px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .academyCurrentIcon {
@@ -1508,13 +1507,13 @@
 .academyCurrentTitle {
   font-size: 14px;
   font-weight: 600;
-  color: #0f172a;
+  color: #fff;
   margin-bottom: 8px;
 }
 
 .academyProgressBg {
   height: 4px;
-  background-color: rgba(15, 23, 42, 0.1);
+  background-color: rgba(255, 255, 255, 0.1);
   border-radius: 2px;
   overflow: hidden;
 }
@@ -1535,7 +1534,7 @@
 .libraryTitle {
   font-size: 20px;
   font-weight: 700;
-  color: #0f172a;
+  color: #fff;
 }
 
 .libraryFilters {
@@ -1544,9 +1543,9 @@
 }
 
 .filterPill {
-  background-color: #f1f5f9;
-  color: #475569;
-  border: 1px solid #e2e8f0;
+  background-color: #21262d;
+  color: #8b949e;
+  border: 1px solid #30363d;
   padding: 8px 16px;
   border-radius: 20px;
   font-size: 13px;
@@ -1556,14 +1555,14 @@
 }
 
 .filterPill:hover {
-  background-color: #e2e8f0;
-  color: #0f172a;
+  background-color: #30363d;
+  color: #c9d1d9;
 }
 
 .filterPill.active {
-  background-color: #0f172a;
-  color: #ffffff;
-  border-color: #0f172a;
+  background-color: #fff;
+  color: #000;
+  border-color: #fff;
   font-weight: 600;
 }
 
@@ -1575,13 +1574,12 @@
 }
 
 .courseCard {
-  background-color: #ffffff;
-  border: 1px solid #e2e8f0;
+  background-color: #0f172a;
+  border: 1px solid #30363d;
   border-radius: 12px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .courseTop {
@@ -1622,7 +1620,7 @@
 
 .courseBadge {
   background-color: rgba(0, 0, 0, 0.4);
-  color: #0f172a;
+  color: #fff;
   padding: 4px 8px;
   border-radius: 4px;
   font-size: 10px;
@@ -1640,14 +1638,14 @@
 .courseTitle {
   font-size: 16px;
   font-weight: 700;
-  color: #0f172a;
+  color: #fff;
   margin-bottom: 8px;
   line-height: 1.4;
 }
 
 .courseDesc {
   font-size: 13px;
-  color: #475569;
+  color: #8b949e;
   line-height: 1.5;
   margin-bottom: 24px;
   flex: 1;
@@ -1662,14 +1660,14 @@
   justify-content: space-between;
   align-items: center;
   font-size: 11px;
-  color: #475569;
+  color: #8b949e;
   font-weight: 600;
   margin-bottom: 8px;
 }
 
 .courseProgressBarBg {
   height: 4px;
-  background-color: #e2e8f0;
+  background-color: #30363d;
   border-radius: 2px;
   overflow: hidden;
 }
@@ -1685,8 +1683,8 @@
   gap: 16px;
   align-items: center;
   font-size: 12px;
-  color: #475569;
-  border-top: 1px solid #e2e8f0;
+  color: #8b949e;
+  border-top: 1px solid #30363d;
   padding-top: 16px;
 }
 
@@ -1698,9 +1696,9 @@
 
 .academyFooter {
   padding-top: 24px;
-  border-top: 1px solid #e2e8f0;
+  border-top: 1px solid #30363d;
   font-size: 11px;
-  color: #475569;
+  color: #8b949e;
 }
 
 /* --- Traders Page Specific Styles --- */
@@ -1711,12 +1709,12 @@
   gap: 12px;
   font-size: 20px;
   font-weight: 700;
-  color: #0f172a;
+  color: #fff;
   margin-bottom: 32px;
 }
 
 .tradersHeaderIcon {
-  color: #475569;
+  color: #8b949e;
 }
 
 .tradersActionBar {
@@ -1735,7 +1733,7 @@
   background-color: transparent;
   color: #484f58;
   /* Dimmed/Disabled look */
-  border: 1px solid #e2e8f0;
+  border: 1px solid #30363d;
   padding: 8px 16px;
   border-radius: 6px;
   font-size: 13px;
@@ -1747,8 +1745,8 @@
 }
 
 .tradersSearchBox {
-  background-color: #ffffff;
-  border: 1px solid #e2e8f0;
+  background-color: #21262d;
+  border: 1px solid #30363d;
   border-radius: 6px;
   padding: 8px 16px;
   display: flex;
@@ -1758,7 +1756,7 @@
 }
 
 .tradersSearchIcon {
-  color: #475569;
+  color: #8b949e;
   width: 16px;
   height: 16px;
 }
@@ -1766,14 +1764,14 @@
 .tradersSearchInput {
   background: transparent;
   border: none;
-  color: #0f172a;
+  color: #fff;
   font-size: 13px;
   width: 100%;
   outline: none;
 }
 
 .tradersSearchInput::placeholder {
-  color: #475569;
+  color: #8b949e;
 }
 
 .tradersStatsGrid {
@@ -1784,14 +1782,13 @@
 }
 
 .tradersStatCard {
-  background-color: #ffffff;
-  border: 1px solid #e2e8f0;
+  background-color: #0f172a;
+  border: 1px solid #30363d;
   border-radius: 12px;
   padding: 24px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .tradersStatInfo {
@@ -1802,7 +1799,7 @@
 
 .tradersStatLabel {
   font-size: 11px;
-  color: #475569;
+  color: #8b949e;
   text-transform: uppercase;
   letter-spacing: 0.5px;
   font-weight: 600;
@@ -1811,7 +1808,7 @@
 .tradersStatValue {
   font-size: 24px;
   font-weight: 700;
-  color: #0f172a;
+  color: #fff;
 }
 
 .tradersStatIconBox {
@@ -1839,8 +1836,8 @@
 }
 
 .tradersEmptyState {
-  background-color: #ffffff;
-  border: 1px solid #e2e8f0;
+  background-color: #0f172a;
+  border: 1px solid #30363d;
   border-radius: 12px;
   padding: 80px 24px;
   display: flex;
@@ -1849,28 +1846,27 @@
   justify-content: center;
   text-align: center;
   margin-bottom: 80px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .tradersEmptyIcon {
-  color: #475569;
+  color: #8b949e;
   margin-bottom: 24px;
 }
 
 .tradersEmptyTitle {
   font-size: 20px;
   font-weight: 700;
-  color: #0f172a;
+  color: #fff;
   margin-bottom: 12px;
 }
 
 .tradersEmptySub {
   font-size: 14px;
-  color: #475569;
+  color: #8b949e;
 }
 
 .tradersFooterNav {
-  border-top: 1px solid #e2e8f0;
+  border-top: 1px solid #30363d;
   padding-top: 32px;
   display: flex;
   flex-direction: column;
@@ -1883,7 +1879,7 @@
   gap: 24px;
   font-size: 13px;
   font-weight: 600;
-  color: #0f172a;
+  color: #fff;
 }
 
 .tradersFooterLinks span {
@@ -1896,7 +1892,7 @@
 
 .tradersFooterCopyright {
   font-size: 11px;
-  color: #475569;
+  color: #8b949e;
 }
 
 /* --- Leaderboard Page Specific Styles --- */
@@ -1928,13 +1924,13 @@
 .leaderboardTitleText h1 {
   font-size: 20px;
   font-weight: 800;
-  color: #0f172a;
+  color: #fff;
   margin-bottom: 4px;
 }
 
 .leaderboardTitleText p {
   font-size: 13px;
-  color: #475569;
+  color: #8b949e;
 }
 
 .leaderboardActions {
@@ -1946,7 +1942,7 @@
 .timeToggleGroup {
   display: flex;
   background-color: #0f172a;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #30363d;
   border-radius: 8px;
   overflow: hidden;
 }
@@ -1957,7 +1953,7 @@
   font-weight: 600;
   border: none;
   background: transparent;
-  color: #475569;
+  color: #8b949e;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -1966,7 +1962,7 @@
 }
 
 .btnTimeToggle:hover {
-  color: #0f172a;
+  color: #c9d1d9;
 }
 
 .btnTimeToggle.active {
@@ -1981,22 +1977,22 @@
   align-items: center;
   justify-content: center;
   background-color: #0f172a;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #30363d;
   border-radius: 8px;
-  color: #475569;
+  color: #8b949e;
   cursor: pointer;
   transition: all 0.2s;
 }
 
 .btnIconOnly:hover {
-  background-color: #e2e8f0;
-  color: #0f172a;
+  background-color: #30363d;
+  color: #c9d1d9;
 }
 
 .leaderboardEmptyState {
   background-color: #0f172a;
   border-radius: 12px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #30363d;
   min-height: 500px;
   display: flex;
   flex-direction: column;
@@ -2010,7 +2006,7 @@
   position: absolute;
   top: 40px;
   left: 60px;
-  color: #e2e8f0;
+  color: #30363d;
   opacity: 0.5;
 }
 
@@ -2022,13 +2018,13 @@
 .leaderboardEmptyTitle {
   font-size: 20px;
   font-weight: 700;
-  color: #0f172a;
+  color: #fff;
   margin-bottom: 12px;
 }
 
 .leaderboardEmptySub {
   font-size: 14px;
-  color: #475569;
+  color: #8b949e;
 }
 
 /* --- Trading Journal Page Specific Styles --- */
@@ -2049,25 +2045,25 @@
 .journalIconBox {
   width: 48px;
   height: 48px;
-  background-color: #f1f5f9;
+  background-color: #21262d;
   border-radius: 12px;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #30363d;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #0f172a;
+  color: #c9d1d9;
 }
 
 .journalTitleText h1 {
   font-size: 20px;
   font-weight: 800;
-  color: #0f172a;
+  color: #fff;
   margin-bottom: 4px;
 }
 
 .journalTitleText p {
   font-size: 13px;
-  color: #475569;
+  color: #8b949e;
 }
 
 .journalActions {
@@ -2077,30 +2073,25 @@
 }
 
 .journalAccountDropdown {
-  background-color: #ffffff;
-  border: 1px solid #e2e8f0;
+  background-color: #0f172a;
+  border: 1px solid #30363d;
   border-radius: 6px;
   padding: 8px 16px;
-  color: #0f172a;
+  color: #fff;
   font-size: 12px;
   font-weight: 600;
   display: flex;
   align-items: center;
   gap: 8px;
   cursor: pointer;
-  transition: all 0.2s;
-}
-
-.journalAccountDropdown:hover {
-  background-color: #f8fafc;
 }
 
 .btnSync {
-  background-color: #ffffff;
-  border: 1px solid #e2e8f0;
+  background-color: #0f172a;
+  border: 1px solid #30363d;
   border-radius: 6px;
   padding: 8px 16px;
-  color: #0f172a;
+  color: #c9d1d9;
   font-size: 12px;
   font-weight: 600;
   display: flex;
@@ -2111,15 +2102,15 @@
 }
 
 .btnSync:hover {
-  background-color: #f8fafc;
+  background-color: #30363d;
+  color: #fff;
 }
 
 .journalStatsContainer {
-  background-color: #ffffff;
-  border: 1px solid #e2e8f0;
+  background-color: #0f172a;
+  border: 1px solid #30363d;
   border-radius: 8px;
   margin-bottom: 24px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto auto;
@@ -2127,8 +2118,8 @@
 
 .journalStatCell {
   padding: 24px;
-  border-bottom: 1px solid #e2e8f0;
-  border-right: 1px solid #e2e8f0;
+  border-bottom: 1px solid #30363d;
+  border-right: 1px solid #30363d;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -2151,13 +2142,13 @@
 
 .jStatLabel {
   font-size: 10px;
-  color: #475569;
+  color: #8b949e;
   font-weight: 700;
   letter-spacing: 0.5px;
 }
 
 .jStatIcon {
-  color: #475569;
+  color: #8b949e;
 }
 
 .jStatValueRow {
@@ -2169,7 +2160,7 @@
 .jStatValueMain {
   font-size: 24px;
   font-weight: 700;
-  color: #0f172a;
+  color: #fff;
 }
 
 .jStatSubGreen {
@@ -2192,10 +2183,9 @@
 
 .journalPerfMetrics {
   flex: 1;
-  background-color: #ffffff;
-  border: 1px solid #e2e8f0;
+  background-color: #0f172a;
+  border: 1px solid #30363d;
   border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .jSectionHeader {
@@ -2203,9 +2193,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid #30363d;
   font-size: 10px;
-  color: #475569;
+  color: #8b949e;
   font-weight: 700;
   letter-spacing: 0.5px;
 }
@@ -2215,9 +2205,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid #30363d;
   font-size: 13px;
-  color: #0f172a;
+  color: #c9d1d9;
 }
 
 .jMetricRow:last-child {
@@ -2226,10 +2216,9 @@
 
 .jHourlyPnL {
   flex: 2;
-  background-color: #ffffff;
-  border: 1px solid #e2e8f0;
+  background-color: #0f172a;
+  border: 1px solid #30363d;
   border-radius: 8px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
   display: flex;
   flex-direction: column;
 }
@@ -2254,7 +2243,7 @@
 
 .jSessionsRow {
   display: flex;
-  border-top: 1px solid #e2e8f0;
+  border-top: 1px solid #30363d;
   padding: 16px 24px;
   gap: 40px;
 }
@@ -2267,16 +2256,15 @@
 
 .jSessionLabel {
   font-size: 10px;
-  color: #475569;
+  color: #8b949e;
   font-weight: 600;
 }
 
 .jBottomSection {
-  background-color: #ffffff;
-  border: 1px solid #e2e8f0;
+  background-color: #0f172a;
+  border: 1px solid #30363d;
   border-radius: 8px;
   margin-bottom: 16px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
 }
 
 .jSymbolGrid {
@@ -2284,10 +2272,10 @@
   grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
   padding: 12px 20px;
   font-size: 10px;
-  color: #475569;
+  color: #8b949e;
   font-weight: 600;
   text-align: right;
-  border-bottom: 1px solid #e2e8f0;
+  border-bottom: 1px solid #30363d;
 }
 
 .jSymbolGrid div:first-child {
@@ -2304,13 +2292,13 @@
 }
 
 .certificatesHeaderIcon {
-  color: #475569;
+  color: #8b949e;
 }
 
 .certificatesHeaderTitle {
   font-size: 20px;
   font-weight: 800;
-  color: #0f172a;
+  color: #fff;
   margin: 0;
 }
 
@@ -2323,7 +2311,7 @@
 
 .btnSyncDim {
   background-color: #0f172a;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #30363d;
   border-radius: 6px;
   padding: 8px 16px;
   color: #484f58;
@@ -2345,27 +2333,27 @@
   left: 12px;
   top: 50%;
   transform: translateY(-50%);
-  color: #475569;
+  color: #8b949e;
 }
 
 .certSearchInput {
   width: 100%;
-  background-color: #f1f5f9;
-  border: 1px solid #e2e8f0;
+  background-color: #21262d;
+  border: 1px solid #30363d;
   border-radius: 6px;
   padding: 8px 12px 8px 36px;
-  color: #0f172a;
+  color: #c9d1d9;
   font-size: 13px;
   outline: none;
 }
 
 .certSearchInput::placeholder {
-  color: #475569;
+  color: #8b949e;
 }
 
 .certCard {
   background-color: #0f172a;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #30363d;
   border-radius: 12px;
   width: 100%;
   max-width: 450px;
@@ -2392,7 +2380,7 @@
 
 .certStatusLabel {
   font-size: 11px;
-  color: #475569;
+  color: #8b949e;
   font-weight: 700;
   letter-spacing: 0.5px;
   margin-bottom: 8px;
@@ -2402,7 +2390,7 @@
 .certMainTitle {
   font-size: 20px;
   font-weight: 800;
-  color: #0f172a;
+  color: #fff;
   margin-bottom: 12px;
   letter-spacing: 0.5px;
 }
@@ -2416,7 +2404,7 @@
 
 .certPreviewLabel {
   font-size: 11px;
-  color: #475569;
+  color: #8b949e;
   text-align: right;
   margin-bottom: 16px;
 }
@@ -2430,7 +2418,7 @@
 .certPhaseTitle {
   font-size: 14px;
   font-weight: 700;
-  color: #0f172a;
+  color: #fff;
 }
 
 .certBadgeEarned {
@@ -2445,7 +2433,7 @@
 
 .certPhaseSub {
   font-size: 12px;
-  color: #475569;
+  color: #8b949e;
   margin-bottom: 24px;
   margin-top: 4px;
 }
@@ -2455,19 +2443,19 @@
   justify-content: space-between;
   align-items: center;
   padding: 12px 0;
-  border-top: 1px solid #e2e8f0;
+  border-top: 1px solid #30363d;
   font-size: 13px;
 }
 
 .certDetailLabel {
-  color: #475569;
+  color: #8b949e;
   display: flex;
   align-items: center;
   gap: 8px;
 }
 
 .certDetailValue {
-  color: #0f172a;
+  color: #fff;
   font-weight: 600;
 }
 
@@ -2502,9 +2490,9 @@
   width: 42px;
   height: 42px;
   background-color: transparent;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #30363d;
   border-radius: 6px;
-  color: #475569;
+  color: #8b949e;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2513,13 +2501,13 @@
 }
 
 .btnExternalLink:hover {
-  color: #0f172a;
-  border-color: #475569;
+  color: #c9d1d9;
+  border-color: #8b949e;
 }
 
 .achievementStatsContainer {
   background-color: #0f172a;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #30363d;
   border-radius: 12px;
   padding: 32px;
   margin-bottom: 40px;
@@ -2528,7 +2516,7 @@
 .achievementTitle {
   font-size: 14px;
   font-weight: 700;
-  color: #0f172a;
+  color: #fff;
   margin-bottom: 32px;
 }
 
@@ -2545,13 +2533,13 @@
 }
 
 .achievementCol.left {
-  border-right: 1px solid #e2e8f0;
+  border-right: 1px solid #30363d;
 }
 
 .achievementValueMain {
   font-size: 28px;
   font-weight: 800;
-  color: #0f172a;
+  color: #fff;
 }
 
 .achievementValueDim {
@@ -2562,7 +2550,7 @@
 
 .achievementLabel {
   font-size: 11px;
-  color: #475569;
+  color: #8b949e;
   font-weight: 700;
   letter-spacing: 0.5px;
 }
@@ -2594,13 +2582,13 @@
 .challengeTitle {
   font-size: 20px;
   font-weight: 800;
-  color: #0f172a;
+  color: #fff;
   margin-bottom: 4px;
 }
 
 .challengeSub {
   font-size: 13px;
-  color: #475569;
+  color: #8b949e;
   margin-bottom: 32px;
 }
 
@@ -2626,7 +2614,7 @@
 .cStepTitle {
   font-size: 14px;
   font-weight: 700;
-  color: #0f172a;
+  color: #fff;
 }
 
 .cCardsGrid {
@@ -2637,7 +2625,7 @@
 
 .cCard {
   background-color: #0f172a;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #30363d;
   border-radius: 8px;
   padding: 20px;
   flex: 1;
@@ -2648,7 +2636,7 @@
 }
 
 .cCard:hover {
-  border-color: #475569;
+  border-color: #8b949e;
 }
 
 .cCard.selected {
@@ -2665,11 +2653,11 @@
 .cCardTitle {
   font-size: 15px;
   font-weight: 700;
-  color: #0f172a;
+  color: #fff;
 }
 
 .cCardBadge {
-  background-color: #0f172a;
+  background-color: #fff;
   color: #000;
   font-size: 10px;
   font-weight: 700;
@@ -2678,8 +2666,8 @@
 }
 
 .cCardBadgeDim {
-  background-color: #e2e8f0;
-  color: #475569;
+  background-color: #30363d;
+  color: #8b949e;
   font-size: 10px;
   font-weight: 600;
   padding: 2px 8px;
@@ -2688,7 +2676,7 @@
 
 .cCardDesc {
   font-size: 11px;
-  color: #475569;
+  color: #8b949e;
   margin-bottom: 24px;
 }
 
@@ -2698,18 +2686,18 @@
   gap: 8px;
   font-size: 11px;
   font-weight: 600;
-  color: #475569;
+  color: #8b949e;
 }
 
 .cCard.selected .cCardRadioRow {
-  color: #0f172a;
+  color: #fff;
 }
 
 .cRadioIcon {
   width: 16px;
   height: 16px;
   border-radius: 50%;
-  border: 1px solid #475569;
+  border: 1px solid #8b949e;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2729,10 +2717,10 @@
 
 .cCurrencyBtn {
   background-color: #0f172a;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #30363d;
   border-radius: 6px;
   padding: 4px 12px;
-  color: #475569;
+  color: #8b949e;
   font-size: 11px;
   font-weight: 700;
   cursor: pointer;
@@ -2752,7 +2740,7 @@
 
 .cSizeCard {
   background-color: #0f172a;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #30363d;
   border-radius: 8px;
   padding: 16px 0;
   text-align: center;
@@ -2761,7 +2749,7 @@
 }
 
 .cSizeCard:hover {
-  border-color: #475569;
+  border-color: #8b949e;
 }
 
 .cSizeCard.selected {
@@ -2771,13 +2759,13 @@
 .cSizeValue {
   font-size: 15px;
   font-weight: 700;
-  color: #0f172a;
+  color: #fff;
   margin-bottom: 4px;
 }
 
 .cSizePrice {
   font-size: 11px;
-  color: #475569;
+  color: #8b949e;
 }
 
 /* Full Width Card layout */
@@ -2808,7 +2796,7 @@
 
 .orderSummaryCard {
   background-color: #1b1f24;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #30363d;
   border-radius: 12px;
   padding: 24px;
 }
@@ -2821,7 +2809,7 @@
 .osTitle {
   font-size: 14px;
   font-weight: 700;
-  color: #0f172a;
+  color: #fff;
   margin-bottom: 8px;
 }
 
@@ -2834,12 +2822,12 @@
 
 .osSubtitle {
   font-size: 11px;
-  color: #475569;
+  color: #8b949e;
 }
 
 .osDivider {
   height: 1px;
-  background-color: #e2e8f0;
+  background-color: #30363d;
   margin: 20px 0;
 }
 
@@ -2852,11 +2840,11 @@
 }
 
 .osLabel {
-  color: #475569;
+  color: #8b949e;
 }
 
 .osValue {
-  color: #0f172a;
+  color: #fff;
   font-weight: 600;
 }
 
@@ -2869,21 +2857,21 @@
 .osPromoInput {
   flex: 1;
   background-color: #0f172a;
-  border: 1px solid #e2e8f0;
+  border: 1px solid #30363d;
   border-radius: 6px;
   padding: 8px 12px;
-  color: #0f172a;
+  color: #c9d1d9;
   font-size: 12px;
   outline: none;
 }
 
 .osPromoInput::placeholder {
-  color: #475569;
+  color: #8b949e;
 }
 
 .osPromoBtn {
-  background-color: #e2e8f0;
-  color: #0f172a;
+  background-color: #30363d;
+  color: #c9d1d9;
   border: none;
   border-radius: 6px;
   padding: 0 12px;
@@ -2898,7 +2886,7 @@
   align-items: center;
   font-size: 15px;
   font-weight: 800;
-  color: #0f172a;
+  color: #fff;
   margin-bottom: 24px;
 }
 
@@ -2930,161 +2918,100 @@
   justify-content: center;
   gap: 6px;
   font-size: 10px;
-  color: #475569;
+  color: #8b949e;
 }
-
 /* Responsive Styles */
 @media (max-width: 1024px) {
-
-  .statsGrid,
-  .accDetailsGrid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .drawdownGrid {
-    grid-template-columns: 1fr;
-  }
-
-  .profileGrid {
-    grid-template-columns: 1fr;
-  }
-
-  .billingGrid {
-    grid-template-columns: 1fr;
-  }
-
-  .accBalancesRow {
-    gap: 20px;
-  }
+    .statsGrid, .accDetailsGrid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .drawdownGrid {
+        grid-template-columns: 1fr;
+    }
+    .profileGrid {
+        grid-template-columns: 1fr;
+    }
+    .billingGrid {
+        grid-template-columns: 1fr;
+    }
+    .accBalancesRow {
+        gap: 20px;
+    }
 }
 
 @media (max-width: 768px) {
-  .yopipsApp {
-    flex-direction: column;
-  }
-
-  .yopipsSidebar {
-    position: fixed;
-    left: -100%;
-    top: 0;
-    height: 100vh;
-    z-index: 1000;
-    transition: left 0.3s ease;
-    padding: 24px 16px 80px 16px;
-  }
-
-  .yopipsSidebar.open {
-    left: 0;
-  }
-
-  .overlay {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 999;
-  }
-
-  .overlay.open {
-    display: block;
-  }
-
-  .yopipsHeader {
-    padding: 0 20px;
-  }
-
-  .yopipsContent {
-    padding: 20px;
-  }
-
-  .statsGrid,
-  .accDetailsGrid {
-    grid-template-columns: 1fr;
-  }
-
-  .accBalancesRow {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .accBalancesRow>div:nth-child(2) {
-    width: 100% !important;
-    height: 1px !important;
-  }
-
-  .accountCardBody {
-    flex-direction: column;
-    gap: 24px;
-  }
-
-  .accTargetBox {
-    max-width: 100%;
-  }
-
-  .accountCardFooter {
-    flex-direction: column;
-    gap: 12px;
-  }
-
-  .historyTabs,
-  .profileTabs {
-    overflow-x: auto;
-    padding-bottom: 8px;
-  }
-
-  .mobileMenuBtn {
-    display: flex;
-    background: none;
-    border: none;
-    color: #0f172a;
-    cursor: pointer;
-    padding: 0.5rem;
-  }
+    .yopipsApp {
+        flex-direction: column;
+    }
+    .yopipsSidebar {
+        position: fixed;
+        left: -100%;
+        top: 0;
+        height: 100vh;
+        z-index: 1000;
+        transition: left 0.3s ease;
+        padding: 24px 16px 80px 16px;
+    }
+    .yopipsSidebar.open {
+        left: 0;
+    }
+    .overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,0.5);
+        z-index: 999;
+    }
+    .overlay.open {
+        display: block;
+    }
+    .yopipsHeader {
+        padding: 0 20px;
+    }
+    .yopipsContent {
+        padding: 20px;
+    }
+    .statsGrid, .accDetailsGrid {
+        grid-template-columns: 1fr;
+    }
+    .accBalancesRow {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .accBalancesRow > div:nth-child(2) {
+        width: 100% !important;
+        height: 1px !important;
+    }
+    .accountCardBody {
+        flex-direction: column;
+        gap: 24px;
+    }
+    .accTargetBox {
+        max-width: 100%;
+    }
+    .accountCardFooter {
+        flex-direction: column;
+        gap: 12px;
+    }
+    .historyTabs, .profileTabs {
+        overflow-x: auto;
+        padding-bottom: 8px;
+    }
+    .mobileMenuBtn {
+        display: flex;
+        background: none;
+        border: none;
+        color: #0f172a;
+        cursor: pointer;
+        padding: 0.5rem;
+    }
 }
 
 @media (min-width: 769px) {
-  .mobileMenuBtn {
-    display: none;
-  }
-}
-
-.sidebarNewChallengeBtn {
-  width: 100%;
-  background-color: #06b6d4;
-  color: #ffffff;
-  border: none;
-  border-radius: 10px;
-  padding: 14px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  font-weight: 700;
-  font-size: 14px;
-  cursor: pointer;
-  margin-bottom: 32px;
-  box-shadow: 0 4px 15px rgba(6, 182, 212, 0.3);
-  transition: all 0.3s ease;
-}
-
-.sidebarNewChallengeBtn:hover {
-  background-color: #0891b2;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(6, 182, 212, 0.4);
-}
-
-.logoutItem {
-  color: #ff4d4d !important;
-}
-
-.logoutItem svg {
-  color: #ff4d4d !important;
-  stroke: #ff4d4d !important;
-}
-
-.logoutItem:hover {
-  background-color: #fff5f5 !important;
+    .mobileMenuBtn {
+        display: none;
+    }
 }

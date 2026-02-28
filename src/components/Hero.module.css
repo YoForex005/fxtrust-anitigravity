@@ -8,6 +8,8 @@
     overflow: hidden;
     padding: 8rem 2rem 4rem;
     background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    box-sizing: border-box;
+    max-width: 100vw;
 }
 
 .heroBg {
@@ -36,11 +38,13 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 2rem;
     position: relative;
     z-index: 2;
+    box-sizing: border-box;
 }
 
 .badge {
@@ -95,6 +99,7 @@
     color: white;
     margin-bottom: 1.5rem;
     letter-spacing: -0.025em;
+    width: 100%;
     max-width: 1100px;
     animation: fadeInUp 0.8s ease-out;
     text-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
@@ -118,6 +123,7 @@
     color: rgba(255, 255, 255, 0.85);
     line-height: 1.7;
     margin-bottom: 2.5rem;
+    width: 100%;
     max-width: 620px;
     font-weight: 400;
     animation: fadeInUp 0.8s ease-out 0.2s backwards;
@@ -434,8 +440,11 @@
 
 @media (max-width: 768px) {
     .hero {
-        padding-top: 80px;
-        padding-bottom: 80px;
+        padding: 120px 1.5rem 80px;
+    }
+
+    .content {
+        padding: 0;
     }
 
     .headline {
@@ -455,12 +464,26 @@
     .actions {
         margin-bottom: 3rem;
         justify-content: center;
+        width: 100%;
+    }
+
+    .primaryBtn {
+        width: 100%;
+        justify-content: center;
     }
 }
 
 @media (max-width: 480px) {
+    .hero {
+        padding: 120px 0 60px;
+    }
+
+    .content {
+        padding: 0 1rem;
+    }
+
     .headline {
-        font-size: 2.5rem;
+        font-size: 2rem;
         line-height: 1.15;
     }
 
@@ -469,13 +492,15 @@
     }
 
     .primaryBtn {
-        padding: 1rem 2rem;
+        padding: 1rem 1.5rem;
         font-size: 0.95rem;
+        flex-direction: column;
+        gap: 0.3rem;
     }
 
     .badge {
-        font-size: 0.8rem;
-        padding: 0.4rem 0.9rem;
+        font-size: 0.75rem;
+        padding: 0.4rem 0.8rem;
     }
 
     .laptopMockup {

@@ -34,7 +34,7 @@ export default function YoPipsAdminContent() {
             {/* Sidebar */}
             <aside className={styles.sidebar}>
                 <div className={styles.logoContainer}>
-                    <Image src="/yo_pips_logo.png" alt="YO PIPS" width={100} height={28} style={{ height: '28px', width: 'auto', display: 'block' }} />
+                    <Image src="/fxtrustwhite.png" alt="FX TRUSTS" width={100} height={28} style={{ height: '28px', width: 'auto', display: 'block' }} />
                 </div>
 
                 <nav className={styles.navLinks}>

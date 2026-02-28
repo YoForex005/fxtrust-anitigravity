@@ -162,10 +162,10 @@ export default function ContentPageLayout({
                             }
                         };
 
-                        React.Children.forEach(children, (child) => {
+                        React.Children.forEach(children, (child, index) => {
                             if (!React.isValidElement(child)) {
                                 if (child !== null && child !== undefined) {
-                                    currentGroup.push(child);
+                                    currentGroup.push(<React.Fragment key={`fragment-${index}`}>{child}</React.Fragment>);
                                 }
                                 return;
                             }
@@ -175,7 +175,9 @@ export default function ContentPageLayout({
                             // Transform h1, h3, h4 to h2 for consistency and SEO as per request
                             let processedChild = child;
                             if (element.type === 'h1' || element.type === 'h3' || element.type === 'h4') {
-                                processedChild = React.createElement('h2', element.props, element.props.children);
+                                processedChild = React.createElement('h2', { ...element.props, key: element.key || `heading-${index}` }, element.props.children);
+                            } else {
+                                processedChild = React.cloneElement(element, { key: element.key || `child-${index}` });
                             }
 
                             const processedElement = processedChild as React.ReactElement<any>;

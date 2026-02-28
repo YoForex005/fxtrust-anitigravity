@@ -1,9 +1,9 @@
 .container {
     display: flex;
-    height: 100vh;
-    width: 100vw;
-    background-color: #0f0f11;
-    color: #ffffff;
+    height: 100dvh;
+    width: 100%;
+    background-color: #f8fafc;
+    color: #0f172a;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     overflow: hidden;
 }
@@ -11,10 +11,10 @@
 /* Sidebar Elements */
 .sidebar {
     width: 260px;
-    background-color: #1a1a1e;
+    background-color: #ffffff;
     display: flex;
     flex-direction: column;
-    border-right: 1px solid #2d2d35;
+    border-right: 1px solid #e2e8f0;
     padding: 1rem 0;
 }
 
@@ -44,7 +44,7 @@
 }
 
 .navLinks::-webkit-scrollbar-thumb {
-    background-color: #374151;
+    background-color: #cbd5e1;
     border-radius: 4px;
 }
 
@@ -58,7 +58,8 @@
     padding: 0.75rem 1rem;
     border-radius: 6px;
     cursor: pointer;
-    color: #9ca3af;
+    color: #475569;
+    /* Slate 600 - dark enough for contrast but slightly softer than pure black */
     font-size: 0.95rem;
     font-weight: 500;
     transition: all 0.2s ease;
@@ -67,14 +68,13 @@
 }
 
 .navItem:hover {
-    background-color: rgba(255, 255, 255, 0.05);
-    color: #ffffff;
+    background-color: #f1f5f9;
+    color: #06b6d4;
 }
 
 .navItem.active {
-    background-color: #f59e0b;
-    /* Yellow brand color */
-    color: #ffffff;
+    background-color: rgba(6, 182, 212, 0.1);
+    color: #06b6d4;
 }
 
 .sidebarBottom {
@@ -82,11 +82,41 @@
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-    border-top: 1px solid #2d2d35;
+    border-top: 1px solid #e2e8f0;
 }
 
 .navItemLogout {
     color: #ef4444;
+}
+
+.navItemLogout:hover {
+    color: #ef4444;
+    background-color: #fee2e2;
+}
+
+.backBtn {
+    background-color: transparent;
+    border: 1px solid #06b6d4;
+    color: #06b6d4;
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.backBtn:hover {
+    background-color: rgba(6, 182, 212, 0.1);
+}
+
+.backBtnIcon {
+    width: 16px;
+    height: 16px;
 }
 
 /* Main Content Area */
@@ -95,7 +125,7 @@
     display: flex;
     flex-direction: column;
     overflow-y: auto;
-    background-color: #111115;
+    background-color: #f8fafc;
 }
 
 /* Header */
@@ -104,18 +134,18 @@
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem 2rem;
-    background-color: #111115;
+    background-color: #f8fafc;
 }
 
 .headerLeft h1 {
     font-size: 1.5rem;
     font-weight: 700;
     margin: 0 0 0.25rem 0;
-    color: #ffffff;
+    color: #0f172a;
 }
 
 .headerLeft p {
-    color: #9ca3af;
+    color: #0f172a;
     font-size: 0.9rem;
     margin: 0;
 }
@@ -128,8 +158,8 @@
 
 .actionBtnOutline {
     background: transparent;
-    border: 1px solid #374151;
-    color: #ffffff;
+    border: 1px solid #cbd5e1;
+    color: #0f172a;
     padding: 0.5rem 1rem;
     border-radius: 6px;
     font-size: 0.875rem;
@@ -141,7 +171,7 @@
     background-color: #06b6d4;
     /* Cyan */
     border: none;
-    color: #ffffff;
+    color: #0f172a;
     padding: 0.5rem 1rem;
     border-radius: 6px;
     font-size: 0.875rem;
@@ -161,7 +191,7 @@
 .iconGroup {
     display: flex;
     gap: 1rem;
-    color: #9ca3af;
+    color: #0f172a;
 }
 
 .iconGroup svg {
@@ -194,12 +224,12 @@
 .userName {
     font-size: 0.875rem;
     font-weight: 500;
-    color: #ffffff;
+    color: #0f172a;
 }
 
 .userRole {
     font-size: 0.75rem;
-    color: #9ca3af;
+    color: #0f172a;
 }
 
 /* Dashboard Body */
@@ -218,12 +248,13 @@
 }
 
 .statCard {
-    background-color: #1a1a1e;
-    border: 1px solid #2d2d35;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
     border-radius: 12px;
     padding: 1.25rem;
     display: flex;
     flex-direction: column;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
 
 .statHeader {
@@ -264,7 +295,7 @@
 
 .statTitle {
     font-size: 0.75rem;
-    color: #9ca3af;
+    color: #0f172a;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     font-weight: 600;
@@ -274,7 +305,7 @@
 .statValue {
     font-size: 1.75rem;
     font-weight: 700;
-    color: #ffffff;
+    color: #0f172a;
 }
 
 /* Middle Row */
@@ -285,10 +316,11 @@
 }
 
 .card {
-    background-color: #1a1a1e;
-    border: 1px solid #2d2d35;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
     border-radius: 12px;
     padding: 1.5rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
 
 .cardHeader {
@@ -301,13 +333,13 @@
 .cardTitle {
     font-size: 1rem;
     font-weight: 600;
-    color: #ffffff;
+    color: #0f172a;
 }
 
 .filterSelect {
     background-color: transparent;
-    border: 1px solid #374151;
-    color: #9ca3af;
+    border: 1px solid #cbd5e1;
+    color: #0f172a;
     padding: 0.25rem 0.5rem;
     border-radius: 4px;
     font-size: 0.75rem;
@@ -352,7 +384,7 @@
 
 .statusLabel {
     font-size: 0.75rem;
-    color: #9ca3af;
+    color: #0f172a;
     text-transform: uppercase;
     font-weight: 600;
 }
@@ -360,7 +392,7 @@
 .statusCount {
     font-size: 1.25rem;
     font-weight: 700;
-    color: #ffffff;
+    color: #0f172a;
 }
 
 .statusIconWrapper {
@@ -400,15 +432,15 @@
     text-align: left;
     padding: 0.75rem 1rem;
     font-size: 0.75rem;
-    color: #9ca3af;
+    color: #0f172a;
     text-transform: uppercase;
     font-weight: 600;
-    border-bottom: 1px solid #2d2d35;
+    border-bottom: 1px solid #e2e8f0;
 }
 
 .dataTable td {
     padding: 1rem;
-    border-bottom: 1px solid #2d2d35;
+    border-bottom: 1px solid #e2e8f0;
     font-size: 0.875rem;
 }
 
@@ -432,15 +464,16 @@
 .nameCol {
     display: flex;
     flex-direction: column;
+    color: #0f172a;
 }
 
 .primaryText {
-    color: #ffffff;
+    color: #0f172a;
     font-weight: 500;
 }
 
 .secondaryText {
-    color: #9ca3af;
+    color: #0f172a;
     font-size: 0.75rem;
 }
 
@@ -480,18 +513,18 @@
 .approvalsTitle h1 {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #ffffff;
+    color: #0f172a;
     margin: 0;
 }
 
 .approvalsSubtitle {
-    color: #9ca3af;
+    color: #0f172a;
     font-size: 0.875rem;
 }
 
 .refreshBtn {
     background: transparent;
-    border: 1px solid #374151;
+    border: 1px solid #cbd5e1;
     color: #d1d5db;
     padding: 0.5rem 1rem;
     border-radius: 6px;
@@ -505,19 +538,19 @@
 }
 
 .refreshBtn:hover {
-    background: rgba(255, 255, 255, 0.05);
-    color: #ffffff;
+    background: rgba(0, 0, 0, 0.05);
+    color: #0f172a;
 }
 
 .tabsNav {
     display: flex;
     gap: 2rem;
-    border-bottom: 1px solid #2d2d35;
+    border-bottom: 1px solid #e2e8f0;
     margin-bottom: 2rem;
 }
 
 .tabItem {
-    color: #9ca3af;
+    color: #0f172a;
     font-size: 0.875rem;
     font-weight: 600;
     padding-bottom: 0.75rem;
@@ -548,10 +581,11 @@
 }
 
 .approvalsCard {
-    background-color: #1a1a1e;
-    border: 1px solid #2d2d35;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
     border-radius: 12px;
     overflow: hidden;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
 
 .approvalsTable {
@@ -563,15 +597,15 @@
     text-align: left;
     padding: 1rem;
     font-size: 0.75rem;
-    color: #9ca3af;
+    color: #0f172a;
     text-transform: uppercase;
     font-weight: 600;
-    border-bottom: 1px solid #2d2d35;
+    border-bottom: 1px solid #e2e8f0;
 }
 
 .approvalsTable td {
     padding: 1rem;
-    border-bottom: 1px solid #2d2d35;
+    border-bottom: 1px solid #e2e8f0;
     font-size: 0.875rem;
     vertical-align: middle;
 }
@@ -592,13 +626,13 @@
 }
 
 .userName {
-    color: #ffffff;
+    color: #0f172a;
     font-weight: 600;
     font-size: 0.875rem;
 }
 
 .userEmail {
-    color: #9ca3af;
+    color: #0f172a;
     font-size: 0.75rem;
 }
 
@@ -608,7 +642,7 @@
 }
 
 .typeMain {
-    color: #d1d5db;
+    color: #0f172a;
 }
 
 .typeValue {
@@ -617,7 +651,7 @@
 }
 
 .phaseData {
-    color: #d1d5db;
+    color: #0f172a;
 }
 
 .actionCell {
@@ -667,7 +701,7 @@
 
 /* Challenge Rules Specific Styles */
 .rulesHeaderDesc {
-    color: #9ca3af;
+    color: #0f172a;
     font-size: 0.825rem;
     margin-top: 0.5rem;
 }
@@ -680,13 +714,14 @@
 }
 
 .rulesStatCard {
-    background-color: #1a1a1e;
-    border: 1px solid #2d2d35;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
     border-radius: 8px;
     padding: 1.25rem;
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
 
 .rulesStatHeader {
@@ -701,7 +736,7 @@
 .rulesStatValue {
     font-size: 1.75rem;
     font-weight: 700;
-    color: #ffffff;
+    color: #0f172a;
 }
 
 .rulesActionBar {
@@ -721,14 +756,14 @@
     left: 1rem;
     top: 50%;
     transform: translateY(-50%);
-    color: #6b7280;
+    color: #0f172a;
 }
 
 .searchInput {
     width: 100%;
     background-color: transparent;
-    border: 1px solid #374151;
-    color: #ffffff;
+    border: 1px solid #cbd5e1;
+    color: #0f172a;
     padding: 0.6rem 1rem 0.6rem 2.5rem;
     border-radius: 9999px;
     font-size: 0.875rem;
@@ -737,7 +772,7 @@
 }
 
 .searchInput::placeholder {
-    color: #6b7280;
+    color: #0f172a;
 }
 
 .searchInput:focus {
@@ -771,7 +806,7 @@
 
 .btnGrayOutline {
     background: transparent;
-    border: 1px solid #374151;
+    border: 1px solid #cbd5e1;
     color: #d1d5db;
     padding: 0.5rem 1rem;
     border-radius: 6px;
@@ -785,8 +820,8 @@
 }
 
 .btnGrayOutline:hover {
-    background: rgba(255, 255, 255, 0.05);
-    color: #ffffff;
+    background: rgba(0, 0, 0, 0.05);
+    color: #0f172a;
 }
 
 .btnCyanOutline {
@@ -812,7 +847,7 @@
 .btnCyanSolid {
     background-color: #06b6d4;
     border: 1px solid #06b6d4;
-    color: #ffffff;
+    color: #0f172a;
     padding: 0.5rem 1rem;
     border-radius: 6px;
     font-size: 0.875rem;
@@ -829,11 +864,12 @@
 }
 
 .rulesTableContainer {
-    background-color: #1a1a1e;
-    border: 1px solid #2d2d35;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
     border-radius: 12px;
     overflow: hidden;
     min-height: 200px;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
 
 .rulesTable {
@@ -845,21 +881,21 @@
     text-align: left;
     padding: 1rem 1.5rem;
     font-size: 0.725rem;
-    color: #e5e7eb;
+    color: #0f172a;
     font-weight: 700;
-    border-bottom: 1px solid #2d2d35;
+    border-bottom: 1px solid #e2e8f0;
 }
 
 .rulesTable td {
     padding: 1rem 1.5rem;
-    border-bottom: 1px solid #2d2d35;
+    border-bottom: 1px solid #e2e8f0;
     font-size: 0.875rem;
 }
 
 .emptyTableState {
     text-align: center;
     padding: 4rem 2rem !important;
-    color: #9ca3af;
+    color: #0f172a;
     font-size: 0.875rem;
 }
 
@@ -871,8 +907,8 @@
 }
 
 .userStatCard {
-    background: linear-gradient(135deg, #1a1a2e, #2d2d3f);
-    border: 1px solid #2d2d35;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
     border-radius: 12px;
     padding: 1.5rem 2rem;
     min-width: 180px;
@@ -881,6 +917,7 @@
     gap: 0.5rem;
     position: relative;
     overflow: hidden;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
 }
 
 .userStatCard::after {
@@ -897,12 +934,12 @@
 .userStatValue {
     font-size: 2rem;
     font-weight: 800;
-    color: #ffffff;
+    color: #0f172a;
 }
 
 .userStatLabel {
     font-size: 0.875rem;
-    color: #9ca3af;
+    color: #0f172a;
     font-weight: 500;
 }
 
@@ -917,8 +954,8 @@
     flex: 1;
     max-width: 400px;
     background-color: transparent;
-    border: 1px solid #374151;
-    color: #ffffff;
+    border: 1px solid #cbd5e1;
+    color: #0f172a;
     padding: 0.55rem 1rem 0.55rem 2.5rem;
     border-radius: 9999px;
     font-size: 0.875rem;
@@ -926,7 +963,7 @@
 }
 
 .usersSearchInput::placeholder {
-    color: #6b7280;
+    color: #0f172a;
 }
 
 .usersSearchInput:focus {
@@ -941,9 +978,9 @@
 }
 
 .gridIconBtn {
-    background: #1a1a1e;
-    border: 1px solid #374151;
-    color: #9ca3af;
+    background: #ffffff;
+    border: 1px solid #cbd5e1;
+    color: #0f172a;
     padding: 0.5rem 0.75rem;
     border-radius: 6px;
     cursor: pointer;
@@ -955,8 +992,8 @@
 }
 
 .gridIconBtn:hover {
-    background: #2d2d35;
-    color: #ffffff;
+    background: #e2e8f0;
+    color: #0f172a;
 }
 
 .usersTable {
@@ -968,15 +1005,15 @@
     text-align: left;
     padding: 0.75rem 0.75rem;
     font-size: 0.75rem;
-    color: #9ca3af;
+    color: #0f172a;
     font-weight: 600;
-    border-bottom: 1px solid #2d2d35;
+    border-bottom: 1px solid #e2e8f0;
     white-space: nowrap;
 }
 
 .usersTable td {
     padding: 0.75rem 0.75rem;
-    border-bottom: 1px solid #2d2d35;
+    border-bottom: 1px solid #e2e8f0;
     font-size: 0.8rem;
     vertical-align: middle;
 }
@@ -1000,7 +1037,7 @@
 }
 
 .userEmailCell {
-    color: #9ca3af;
+    color: #0f172a;
     font-size: 0.8rem;
     display: flex;
     align-items: center;
@@ -1031,8 +1068,8 @@
 
 .goBtn {
     background: transparent;
-    border: 1px solid #374151;
-    color: #9ca3af;
+    border: 1px solid #cbd5e1;
+    color: #0f172a;
     padding: 0.2rem 0.6rem;
     border-radius: 4px;
     font-size: 0.7rem;
@@ -1042,15 +1079,15 @@
 }
 
 .goBtn:hover {
-    background: #2d2d35;
-    color: #ffffff;
+    background: #e2e8f0;
+    color: #0f172a;
 }
 
 .actionIconsCell {
     display: flex;
     align-items: center;
     gap: 0.75rem;
-    color: #6b7280;
+    color: #0f172a;
 }
 
 .actionIconsCell svg {
@@ -1059,7 +1096,7 @@
 }
 
 .actionIconsCell svg:hover {
-    color: #ffffff;
+    color: #0f172a;
 }
 
 .tableFooter {
@@ -1067,8 +1104,8 @@
     justify-content: space-between;
     align-items: center;
     padding: 1rem 1.5rem;
-    border-top: 1px solid #2d2d35;
-    color: #9ca3af;
+    border-top: 1px solid #e2e8f0;
+    color: #0f172a;
     font-size: 0.825rem;
 }
 
@@ -1080,8 +1117,8 @@
 
 .pageBtn {
     background: transparent;
-    border: 1px solid #374151;
-    color: #9ca3af;
+    border: 1px solid #cbd5e1;
+    color: #0f172a;
     width: 28px;
     height: 28px;
     border-radius: 4px;
@@ -1096,18 +1133,18 @@
 .pageBtn.activePage {
     background: #06b6d4;
     border-color: #06b6d4;
-    color: #ffffff;
+    color: #0f172a;
 }
 
 .pageBtn:hover:not(.activePage) {
-    background: #2d2d35;
-    color: #ffffff;
+    background: #e2e8f0;
+    color: #0f172a;
 }
 
 .perPageSelect {
     background: transparent;
-    border: 1px solid #374151;
-    color: #9ca3af;
+    border: 1px solid #cbd5e1;
+    color: #0f172a;
     padding: 0.2rem 0.5rem;
     border-radius: 4px;
     font-size: 0.75rem;
@@ -1123,7 +1160,7 @@
 .headerSubtitle h1 {
     font-size: 1.5rem;
     font-weight: 700;
-    color: #ffffff;
+    color: #0f172a;
     margin: 0;
 }
 
@@ -1141,21 +1178,21 @@
 }
 
 .headerDivider {
-    color: #374151;
+    color: #cbd5e1;
     font-size: 1rem;
 }
 
 .colSpanHeader {
     text-align: center;
-    color: #6b7280;
+    color: #0f172a;
     font-size: 0.7rem;
     font-weight: 600;
     padding-bottom: 0.5rem;
-    border-bottom: 1px solid #2d2d35;
+    border-bottom: 1px solid #e2e8f0;
 }
 
 .thBordered {
-    border-left: 1px solid #2d2d35;
+    border-left: 1px solid #e2e8f0;
 }
 
 .checkboxCell {
@@ -1191,7 +1228,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #374151;
+    background-color: #cbd5e1;
     border-radius: 22px;
     transition: .3s;
 }
@@ -1203,7 +1240,7 @@
     width: 16px;
     left: 3px;
     bottom: 3px;
-    background-color: white;
+    background-color: #0f172a;
     border-radius: 50%;
     transition: .3s;
 }
@@ -1222,8 +1259,8 @@
 }
 
 .currencyBox {
-    background: #2d2d35;
-    border: 1px solid #374151;
+    background: #e2e8f0;
+    border: 1px solid #cbd5e1;
     color: #d1d5db;
     padding: 0.25rem 0.6rem;
     border-radius: 6px;
@@ -1244,7 +1281,7 @@
 
 .reorderBtn {
     background: transparent;
-    border: 1px solid #374151;
+    border: 1px solid #cbd5e1;
     color: #d1d5db;
     padding: 0.5rem 1rem;
     border-radius: 6px;
@@ -1258,14 +1295,14 @@
 }
 
 .reorderBtn:hover {
-    background: rgba(255, 255, 255, 0.05);
-    color: #ffffff;
+    background: rgba(0, 0, 0, 0.05);
+    color: #0f172a;
 }
 
 /* Accounts Tab Styles */
 .overviewHeader {
     text-transform: uppercase;
-    color: #9ca3af;
+    color: #0f172a;
     font-size: 0.75rem;
     font-weight: 700;
     margin-bottom: 1rem;
@@ -1283,7 +1320,7 @@
     border-radius: 12px;
     font-size: 0.75rem;
     font-weight: 700;
-    color: #ffffff;
+    color: #0f172a;
 }
 
 .badgeCyan {
@@ -1317,7 +1354,7 @@
 }
 
 .joinedCell {
-    color: #d1d5db;
+    color: #0f172a;
     font-size: 0.75rem;
 }
 
@@ -1336,7 +1373,7 @@
 
 .newAccountBtn {
     background-color: #06b6d4;
-    color: white;
+    color: #0f172a;
     border: none;
     padding: 0.5rem 1.25rem;
     border-radius: 6px;
@@ -1370,12 +1407,12 @@
 .tradingObjTitle h1 {
     font-size: 1.4rem;
     font-weight: 700;
-    color: #ffffff;
+    color: #0f172a;
     margin: 0;
 }
 
 .tradingObjSubtitle {
-    color: #9ca3af;
+    color: #0f172a;
     font-size: 0.875rem;
 }
 
@@ -1414,7 +1451,7 @@
 
 .filtersBtn {
     background: transparent;
-    border: 1px solid #374151;
+    border: 1px solid #cbd5e1;
     color: #d1d5db;
     padding: 0.45rem 1rem;
     border-radius: 6px;
@@ -1428,14 +1465,14 @@
 }
 
 .filtersBtn:hover {
-    background: rgba(255, 255, 255, 0.05);
-    color: #ffffff;
+    background: rgba(0, 0, 0, 0.05);
+    color: #0f172a;
 }
 
 .phaseBadge {
     display: inline-block;
     background: #1d4ed8;
-    color: #ffffff;
+    color: #0f172a;
     font-size: 0.65rem;
     font-weight: 700;
     padding: 0.25rem 0.6rem;
@@ -1445,14 +1482,14 @@
 }
 
 .traderName {
-    color: #ffffff;
+    color: #0f172a;
     font-weight: 600;
     font-size: 0.875rem;
     margin-bottom: 4px;
 }
 
 .traderId {
-    color: #6b7280;
+    color: #0f172a;
     font-size: 0.7rem;
 }
 
@@ -1466,18 +1503,18 @@
 .metricValue {
     font-weight: 700;
     font-size: 0.875rem;
-    color: #ffffff;
+    color: #0f172a;
 }
 
 .metricLimit {
     font-size: 0.65rem;
-    color: #6b7280;
+    color: #0f172a;
 }
 
 .progressTrack {
     width: 100%;
     height: 4px;
-    background: #374151;
+    background: #cbd5e1;
     border-radius: 2px;
     overflow: hidden;
 }
@@ -1505,12 +1542,12 @@
 .daysValue {
     font-weight: 700;
     font-size: 0.875rem;
-    color: #ffffff;
+    color: #0f172a;
 }
 
 .daysMin {
     font-size: 0.65rem;
-    color: #6b7280;
+    color: #0f172a;
 }
 
 .rulesCell {
@@ -1529,7 +1566,7 @@
     text-transform: uppercase;
     font-size: 0.65rem;
     letter-spacing: 0.05em;
-    color: #6b7280;
+    color: #0f172a;
 }
 
 .objTable tbody tr {
@@ -1539,7 +1576,7 @@
 .moreBtn {
     background: transparent;
     border: none;
-    color: #6b7280;
+    color: #0f172a;
     cursor: pointer;
     padding: 0.25rem 0.5rem;
     border-radius: 4px;
@@ -1569,12 +1606,12 @@
 .helpdeskTitleRow h1 {
     font-size: 1.4rem;
     font-weight: 700;
-    color: #ffffff;
+    color: #0f172a;
     margin: 0;
 }
 
 .helpdeskSubtitle {
-    color: #9ca3af;
+    color: #0f172a;
     font-size: 0.8rem;
     margin-top: 4px;
 }
@@ -1598,7 +1635,7 @@
 
 .filterLabel {
     font-size: 0.7rem;
-    color: #9ca3af;
+    color: #0f172a;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.04em;
@@ -1606,7 +1643,7 @@
 
 .filterSelect {
     background: #1f2937;
-    border: 1px solid #374151;
+    border: 1px solid #cbd5e1;
     color: #d1d5db;
     padding: 0.4rem 2rem 0.4rem 0.75rem;
     border-radius: 6px;
@@ -1623,7 +1660,7 @@
 .ticketStatusOpen {
     display: inline-block;
     background: #0891b2;
-    color: #ffffff;
+    color: #0f172a;
     font-size: 0.65rem;
     font-weight: 700;
     padding: 0.2rem 0.6rem;
@@ -1682,7 +1719,7 @@
 }
 
 .userCellEmail {
-    color: #6b7280;
+    color: #0f172a;
     font-size: 0.72rem;
 }
 
@@ -1693,7 +1730,7 @@
 }
 
 .lastUpdated {
-    color: #9ca3af;
+    color: #0f172a;
     font-size: 0.75rem;
 }
 
@@ -1708,12 +1745,12 @@
 .couponTitle h1 {
     font-size: 1.4rem;
     font-weight: 700;
-    color: #ffffff;
+    color: #0f172a;
     margin: 0 0 4px 0;
 }
 
 .couponSubtitle {
-    color: #9ca3af;
+    color: #0f172a;
     font-size: 0.82rem;
 }
 
@@ -1723,7 +1760,7 @@
 
 .createCouponBtn {
     background: #06b6d4;
-    color: #ffffff;
+    color: #0f172a;
     border: none;
     padding: 0.55rem 1.25rem;
     border-radius: 6px;
@@ -1762,7 +1799,7 @@
 }
 
 .couponSearchBar input::placeholder {
-    color: #6b7280;
+    color: #0f172a;
 }
 
 .discountCell {
@@ -1775,7 +1812,7 @@
 }
 
 .discountIcon {
-    color: #9ca3af;
+    color: #0f172a;
     font-size: 0.75rem;
 }
 
@@ -1792,12 +1829,12 @@
 }
 
 .usageCell {
-    color: #9ca3af;
+    color: #0f172a;
     font-size: 0.82rem;
 }
 
 .validityCell {
-    color: #9ca3af;
+    color: #0f172a;
     font-size: 0.75rem;
     line-height: 1.5;
 }
@@ -1807,7 +1844,7 @@
     align-items: center;
     gap: 0.5rem;
     font-weight: 700;
-    color: #ffffff;
+    color: #0f172a;
     font-size: 0.875rem;
 }
 
@@ -1818,7 +1855,7 @@
 }
 
 .txnPlanName {
-    color: #ffffff;
+    color: #0f172a;
     font-size: 0.78rem;
     font-weight: 600;
 }
@@ -1839,19 +1876,19 @@
 
 .txnAmountCell {
     font-weight: 700;
-    color: #ffffff;
+    color: #0f172a;
     font-size: 0.875rem;
     line-height: 1.4;
 }
 
 .txnAmountUnit {
-    color: #9ca3af;
+    color: #0f172a;
     font-size: 0.65rem;
     font-weight: 400;
 }
 
 .txnOrderId {
-    color: #6b7280;
+    color: #0f172a;
     font-size: 0.65rem;
     max-width: 160px;
     word-break: break-all;
@@ -1881,23 +1918,37 @@
 }
 
 .txnDateCell {
-    color: #9ca3af;
+    color: #0f172a;
     font-size: 0.75rem;
     display: flex;
     align-items: center;
     gap: 0.35rem;
     white-space: nowrap;
 }
+
 /* Responsive Styles */
 @media (max-width: 1024px) {
-    .statsRow, .rulesStatsGrid {
+
+    .statsRow,
+    .rulesStatsGrid {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .middleRow {
         grid-template-columns: 1fr;
     }
-    .usersStatCards, .usersActionBar, .tabsNav {
+
+    .usersStatCards,
+    .usersActionBar,
+    .tabsNav {
         flex-wrap: wrap;
+    }
+
+    .tabsNav {
+        gap: 1rem;
+        flex-wrap: wrap;
+        white-space: normal;
+        padding-bottom: 0.5rem;
     }
 }
 
@@ -1905,17 +1956,20 @@
     .container {
         flex-direction: column;
     }
+
     .sidebar {
         position: fixed;
         left: -100%;
         top: 0;
-        height: 100vh;
+        height: 100dvh;
         z-index: 1000;
         transition: left 0.3s ease;
     }
+
     .sidebar.open {
         left: 0;
     }
+
     .overlay {
         display: none;
         position: fixed;
@@ -1923,37 +1977,142 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background: rgba(0,0,0,0.5);
+        background: rgba(0, 0, 0, 0.5);
         z-index: 999;
     }
+
     .overlay.open {
         display: block;
     }
+
     .header {
         flex-direction: column;
         align-items: flex-start;
         gap: 1rem;
     }
-    .statsRow, .rulesStatsGrid {
+
+    .headerRight {
+        flex-wrap: wrap;
+    }
+
+    .statsRow,
+    .rulesStatsGrid {
         grid-template-columns: 1fr;
     }
+
     .systemHeader {
         padding: 1rem;
         justify-content: space-between;
     }
+
     .dashboardBody {
         padding: 0 1rem 1rem;
     }
+
     .approvalsContainer {
         padding: 0 1rem 1rem;
     }
+
     .mobileMenuBtn {
         display: flex;
         background: none;
         border: none;
-        color: white;
+        color: #0f172a;
         cursor: pointer;
         padding: 0.5rem;
+    }
+
+    .rulesActionBar,
+    .usersActionBar,
+    .couponSearchBar {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+
+    .actionButtons,
+    .usersRightActions {
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .searchContainer {
+        width: 100% !important;
+    }
+
+    .searchContainer input {
+        width: 100%;
+    }
+
+    .approvalsHeader,
+    .tradingObjHeader,
+    .helpdeskHeader,
+    .couponHeader {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .userProfile {
+        display: none;
+    }
+
+    .iconGroup {
+        gap: 0.5rem;
+    }
+
+    /* Prevent horizontal scrolling in tables by making them block cards */
+    .tableContainer {
+        overflow-x: hidden !important;
+    }
+
+    .tableContainer table,
+    .tableContainer thead,
+    .tableContainer tbody,
+    .tableContainer th,
+    .tableContainer td,
+    .tableContainer tr {
+        display: block;
+        width: 100%;
+    }
+
+    .tableContainer thead {
+        display: none;
+    }
+
+    .tableContainer tr {
+        margin-bottom: 1rem;
+        background-color: #0f172a;
+        border: 1px solid #e2e8f0;
+        border-radius: 8px;
+        padding: 0.5rem;
+    }
+
+    .tableContainer td {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.75rem 0.5rem !important;
+        border-bottom: 1px solid #e2e8f0 !important;
+        text-align: left !important;
+        border-left: none !important;
+        height: auto !important;
+        gap: 0.4rem;
+    }
+
+    .tableContainer td:last-child {
+        border-bottom: none !important;
+    }
+
+    .userCell {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .actionCell,
+    .actionIconsCell {
+        flex-direction: row;
+        flex-wrap: wrap;
     }
 }
 
@@ -1965,27 +2124,26 @@
 
 /* Back Button Styles */
 .backBtn {
-  background-color: transparent;
-  border: 1px solid #06b6d4;
-  color: #06b6d4;
-  border-radius: 8px;
-  padding: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  font-weight: 600;
-  font-size: 13px;
-  cursor: pointer;
-  transition: all 0.2s;
+    background-color: transparent;
+    border: 1px solid #06b6d4;
+    color: #06b6d4;
+    border-radius: 8px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
 }
 
 .backBtn:hover {
-  background-color: rgba(6, 182, 212, 0.1);
+    background-color: rgba(6, 182, 212, 0.1);
 }
 
 .backBtnIcon {
-  width: 16px;
-  height: 16px;
+    width: 16px;
+    height: 16px;
 }
-

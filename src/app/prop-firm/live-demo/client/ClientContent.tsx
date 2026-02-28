@@ -27,7 +27,7 @@ export default function ClientContent() {
             <aside className={`${styles.yopipsSidebar} ${isSidebarOpen ? styles.open : ''}`}>
                 {/* Logo area */}
                 <div className={styles.yopipsLogo}>
-                    <Image src="/yo_pips_logo.png" alt="Yo Pips" width={130} height={34} style={{ objectFit: 'contain' }} />
+                    <Image src="/logo.png" alt="Yo Pips" width={260} height={86} style={{ objectFit: 'contain' }} />
                 </div>
 
                 {/* Back Button */}
@@ -47,7 +47,7 @@ export default function ClientContent() {
                         onClick={() => setActivePage('new-challenge')}
                     >
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" /></svg>
-                        New Yo Pips Challenge
+                        New FX Trusts Challenge
                     </button>
                     <div className={styles.menuLabel}>MAIN MENU</div>
                     <div className={`${styles.menuItem} ${activePage === 'dashboard' ? styles.active : ''}`} onClick={() => setActivePage('dashboard')}>
@@ -119,14 +119,14 @@ export default function ClientContent() {
                     </div>
                     <div className={styles.menuItem}>
                         <div className={styles.menuItemLeft}>
-                            <div style={{ width: 18, height: 18, borderRadius: '50%', backgroundColor: '#fdc20a', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                <span style={{ fontSize: 10, color: '#000', fontWeight: 'bold' }}>Q</span>
+                            <div style={{ width: 18, height: 18, borderRadius: '50%', backgroundColor: '#06b6d4', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                                <span style={{ fontSize: 10, color: '#0f172a', fontWeight: 'bold' }}>Q</span>
                             </div>
                             Siddhartha
                         </div>
-                        <span style={{ fontSize: 10, color: '#fdc20a' }}>PRO</span>
+                        <span style={{ fontSize: 10, color: '#06b6d4' }}>PRO</span>
                     </div>
-                    <div className={styles.menuItem} style={{ color: '#f85149' }}>
+                    <div className={`${styles.menuItem} ${styles.logoutItem}`}>
                         <div className={styles.menuItemLeft}>
                             <svg className={styles.menuItemIcon} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4" /><polyline points="16 17 21 12 16 7" /><line x1="21" y1="12" x2="9" y2="12" /></svg>
                             Logout Application
@@ -137,7 +137,7 @@ export default function ClientContent() {
 
             {/* Main Area */}
             <main className={styles.yopipsMain}>
-                <button className={styles.mobileMenuBtn} onClick={() => setIsSidebarOpen(true)} style={{ position: 'absolute', top: '15px', right: '15px', zIndex: 900, background: '#161b22', borderRadius: '4px', border: '1px solid #30363d' }}>
+                <button className={styles.mobileMenuBtn} onClick={() => setIsSidebarOpen(true)} style={{ position: 'absolute', top: '15px', right: '15px', zIndex: 900, background: '#ffffff', borderRadius: '4px', border: '1px solid #e2e8f0' }}>
                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
                 </button>
                 {/* Header */}
@@ -179,7 +179,7 @@ export default function ClientContent() {
                                             <div className={styles.accLabel}>ACCOUNT SIZE <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ marginLeft: 4, opacity: 0.5, verticalAlign: -2 }}><circle cx="12" cy="12" r="10" /><path d="M12 16v-4" /><path d="M12 8h.01" /></svg></div>
                                             <div className={styles.accValue}>$5,000.00</div>
                                         </div>
-                                        <div style={{ width: 1, backgroundColor: '#30363d', height: 40, alignSelf: 'center' }}></div>
+                                        <div style={{ width: 1, backgroundColor: '#e2e8f0', height: 40, alignSelf: 'center' }}></div>
                                         <div className={styles.accStatGroup}>
                                             <div className={styles.accLabel}>STATUS <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" style={{ marginLeft: 4, opacity: 0.5, verticalAlign: -2 }}><circle cx="12" cy="12" r="10" /><path d="M12 16v-4" /><path d="M12 8h.01" /></svg></div>
                                             <div className={styles.accValue}>
@@ -190,13 +190,13 @@ export default function ClientContent() {
 
                                     <div className={styles.accTargetBox}>
                                         <div className={styles.accTargetHeader}>
-                                            <div style={{ fontSize: 13, color: '#8b949e' }}>Profit Target</div>
-                                            <div style={{ fontSize: 13, color: '#fff', fontWeight: 600 }}>1000 Min</div>
+                                            <div style={{ fontSize: 13, color: '#475569' }}>Profit Target</div>
+                                            <div style={{ fontSize: 13, color: '#0f172a', fontWeight: 600 }}>1000 Min</div>
                                         </div>
                                         <div className={styles.progressBarContainer}>
                                             <div className={styles.progressBarFill} style={{ width: '80%' }}></div>
                                         </div>
-                                        <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 12, color: '#8b949e' }}>
+                                        <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 12, color: '#475569' }}>
                                             <span>Current Profit</span>
                                             <span>$800</span>
                                         </div>
@@ -276,7 +276,7 @@ export default function ClientContent() {
                                 <div className={styles.card} style={{ marginBottom: 0 }}>
                                     <div className={styles.ddHeader}>
                                         <div className={styles.ddTitle}>Daily Loss Limit 5%</div>
-                                        <div className={styles.ddLimit}>Max Daily Loss <span style={{ color: '#fff' }}>5.0%</span></div>
+                                        <div className={styles.ddLimit}>Max Daily Loss <span style={{ color: '#0f172a' }}>5.0%</span></div>
                                     </div>
                                     <div className={styles.ddBarContainer}>
                                         <div className={styles.ddBarFill} style={{ width: '20%' }}></div>
@@ -287,7 +287,7 @@ export default function ClientContent() {
                                 <div className={styles.card} style={{ marginBottom: 0 }}>
                                     <div className={styles.ddHeader}>
                                         <div className={styles.ddTitle}>Overall Maximum Loss (10%)</div>
-                                        <div className={styles.ddLimit}>Max Loss <span style={{ color: '#fff' }}>10.0%</span></div>
+                                        <div className={styles.ddLimit}>Max Loss <span style={{ color: '#0f172a' }}>10.0%</span></div>
                                     </div>
                                     <div className={styles.ddBarContainer}>
                                         <div className={styles.ddBarFill} style={{ width: '40%' }}></div>
@@ -323,13 +323,13 @@ export default function ClientContent() {
                                                 <tr key={i}>
                                                     <td>
                                                         <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-                                                            <span style={{ color: '#fdc20a', backgroundColor: 'rgba(253,194,10,0.1)', padding: '4px 8px', borderRadius: 4, fontSize: 12, fontWeight: 600 }}>YO PIPS</span>
-                                                            <span style={{ color: '#8b949e', fontSize: 13 }}>Ticket ID: {trade.id}</span>
+                                                            <span style={{ color: '#06b6d4', backgroundColor: 'rgba(6, 182, 212,0.1)', padding: '4px 8px', borderRadius: 4, fontSize: 12, fontWeight: 600 }}>FX TRUSTS</span>
+                                                            <span style={{ color: '#475569', fontSize: 13 }}>Ticket ID: {trade.id}</span>
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8b949e" strokeWidth="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" /></svg>
+                                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#475569" strokeWidth="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" /></svg>
                                                             Trade #: {trade.tradeId}
                                                         </div>
                                                     </td>
@@ -348,7 +348,7 @@ export default function ClientContent() {
                                                             <div className={`${styles.toggleSwitch} ${styles.active}`}>
                                                                 <div className={styles.toggleCircle}></div>
                                                             </div>
-                                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8b949e" strokeWidth="2"><circle cx="12" cy="12" r="1" /><circle cx="12" cy="5" r="1" /><circle cx="12" cy="19" r="1" /></svg>
+                                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#475569" strokeWidth="2"><circle cx="12" cy="12" r="1" /><circle cx="12" cy="5" r="1" /><circle cx="12" cy="19" r="1" /></svg>
                                                         </div>
                                                     </td>
                                                 </tr>
@@ -358,13 +358,13 @@ export default function ClientContent() {
                                                 <tr key={'copy' + i}>
                                                     <td>
                                                         <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-                                                            <span style={{ color: '#fdc20a', backgroundColor: 'rgba(253,194,10,0.1)', padding: '4px 8px', borderRadius: 4, fontSize: 12, fontWeight: 600 }}>YO PIPS</span>
-                                                            <span style={{ color: '#8b949e', fontSize: 13 }}>Ticket ID: {trade.id}</span>
+                                                            <span style={{ color: '#06b6d4', backgroundColor: 'rgba(6, 182, 212,0.1)', padding: '4px 8px', borderRadius: 4, fontSize: 12, fontWeight: 600 }}>FX TRUSTS</span>
+                                                            <span style={{ color: '#475569', fontSize: 13 }}>Ticket ID: {trade.id}</span>
                                                         </div>
                                                     </td>
                                                     <td>
                                                         <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8b949e" strokeWidth="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" /></svg>
+                                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#475569" strokeWidth="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12" /></svg>
                                                             Trade #: {trade.tradeId}
                                                         </div>
                                                     </td>
@@ -383,7 +383,7 @@ export default function ClientContent() {
                                                             <div className={`${styles.toggleSwitch} ${styles.active}`}>
                                                                 <div className={styles.toggleCircle}></div>
                                                             </div>
-                                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#8b949e" strokeWidth="2"><circle cx="12" cy="12" r="1" /><circle cx="12" cy="5" r="1" /><circle cx="12" cy="19" r="1" /></svg>
+                                                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#475569" strokeWidth="2"><circle cx="12" cy="12" r="1" /><circle cx="12" cy="5" r="1" /><circle cx="12" cy="19" r="1" /></svg>
                                                         </div>
                                                     </td>
                                                 </tr>
@@ -391,7 +391,7 @@ export default function ClientContent() {
                                         </tbody>
                                     </table>
                                     <div style={{ textAlign: 'center', marginTop: 24 }}>
-                                        <button style={{ background: 'transparent', border: 'none', color: '#8b949e', cursor: 'pointer', fontSize: 14 }}>
+                                        <button style={{ background: 'transparent', border: 'none', color: '#475569', cursor: 'pointer', fontSize: 14 }}>
                                             No more records found.
                                         </button>
                                     </div>
@@ -502,7 +502,7 @@ export default function ClientContent() {
                                             <div className={styles.infoRow}>
                                                 <div className={styles.infoLabel}>Account Status</div>
                                                 <div className={styles.infoValue}>
-                                                    <span className={styles.statusBadge} style={{ backgroundColor: '#1f6f50', color: '#fff', borderRadius: '4px' }}>Active</span>
+                                                    <span className={styles.statusBadge} style={{ backgroundColor: '#1f6f50', color: '#0f172a', borderRadius: '4px' }}>Active</span>
                                                 </div>
                                             </div>
                                             <div className={styles.infoRow}>
@@ -622,7 +622,7 @@ export default function ClientContent() {
                                             <div className={styles.methodItem}>
                                                 <div className={styles.methodLeft}>
                                                     <div className={styles.methodIcon}>
-                                                        <svg width="24" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2" /><line x1="1" y1="10" x2="23" y2="10" /></svg>
+                                                        <svg width="24" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2" /><line x1="1" y1="10" x2="23" y2="10" /></svg>
                                                     </div>
                                                     <div>
                                                         <div className={styles.methodTitle}>
@@ -635,7 +635,7 @@ export default function ClientContent() {
                                             <div className={styles.methodItem}>
                                                 <div className={styles.methodLeft}>
                                                     <div className={styles.methodIcon}>
-                                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="2"><rect x="2" y="5" width="20" height="14" rx="2" /><line x1="2" y1="10" x2="22" y2="10" /></svg>
+                                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2"><rect x="2" y="5" width="20" height="14" rx="2" /><line x1="2" y1="10" x2="22" y2="10" /></svg>
                                                     </div>
                                                     <div>
                                                         <div className={styles.methodTitle}>USDT Wallet</div>
@@ -669,7 +669,7 @@ export default function ClientContent() {
                                             <div className={styles.walletItem}>
                                                 <div className={styles.walletLabel}>Status:</div>
                                                 <div className={styles.walletValue}>
-                                                    <span className={styles.statusBadge} style={{ backgroundColor: '#1f6f50', color: '#fff', borderRadius: '4px', padding: '2px 8px' }}>Active</span>
+                                                    <span className={styles.statusBadge} style={{ backgroundColor: '#1f6f50', color: '#0f172a', borderRadius: '4px', padding: '2px 8px' }}>Active</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -704,7 +704,7 @@ export default function ClientContent() {
                                             <div className={styles.settingsRow} style={{ borderBottom: 'none' }}>
                                                 <div className={styles.settingsLabel}>Invoice Email</div>
                                                 <div className={styles.settingsValue}>
-                                                    <span className={styles.statusBadge} style={{ backgroundColor: '#1f6f50', color: '#fff', borderRadius: '4px', padding: '2px 8px' }}>Enabled</span>
+                                                    <span className={styles.statusBadge} style={{ backgroundColor: '#1f6f50', color: '#0f172a', borderRadius: '4px', padding: '2px 8px' }}>Enabled</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -761,7 +761,7 @@ export default function ClientContent() {
                                                 <div className={styles.ratioBarUser} style={{ width: '80%' }}></div>
                                                 <div className={styles.ratioBarFirm} style={{ width: '20%' }}></div>
                                             </div>
-                                            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 10, color: '#8b949e', fontWeight: 600 }}>
+                                            <div style={{ display: 'flex', justifyContent: 'space-between', fontSize: 10, color: '#475569', fontWeight: 600 }}>
                                                 <span>You: $8,000</span>
                                                 <span>Firm: $2,000</span>
                                             </div>
@@ -788,7 +788,7 @@ export default function ClientContent() {
                                         <div className={styles.walletValue}>$280</div>
                                     </div>
                                     <div className={styles.walletItem}>
-                                        <div className={styles.walletLabel} style={{ color: '#fff' }}>Yo Pips Price</div>
+                                        <div className={styles.walletLabel} style={{ color: '#0f172a' }}>Yo Pips Price</div>
                                         <div className={styles.ratioValueGreen}>$169</div>
                                     </div>
                                     <div className={styles.walletItem} style={{ borderBottom: 'none', paddingBottom: 0 }}>
@@ -1282,7 +1282,7 @@ export default function ClientContent() {
                                         <svg className={styles.jStatIcon} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
                                     </div>
                                     <div className={styles.jStatValueRow}>
-                                        <span className={styles.jStatValueMain} style={{ fontSize: '14px', color: '#8b949e' }}>-</span>
+                                        <span className={styles.jStatValueMain} style={{ fontSize: '14px', color: '#475569' }}>-</span>
                                     </div>
                                 </div>
                                 <div className={styles.journalStatCell}>
@@ -1323,7 +1323,7 @@ export default function ClientContent() {
                                     <div className={styles.jSectionHeader} style={{ borderBottom: 'none' }}>
                                         <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
                                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-                                            <span style={{ color: '#fff' }}>Hourly PnL</span>
+                                            <span style={{ color: '#0f172a' }}>Hourly PnL</span>
                                         </div>
                                         <span>UTC TIME</span>
                                     </div>
@@ -1389,11 +1389,11 @@ export default function ClientContent() {
                             </div>
 
                             <div className={styles.jSectionHeader} style={{ borderBottom: 'none', padding: '8px 0', alignItems: 'center' }}>
-                                <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: '14px', color: '#fff', fontWeight: 800 }}>
+                                <div style={{ display: 'flex', alignItems: 'center', gap: 8, fontSize: '14px', color: '#0f172a', fontWeight: 800 }}>
                                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
                                     Trade History
                                 </div>
-                                <span style={{ color: '#8b949e', fontSize: '11px', fontWeight: 500 }}>0 trades synced</span>
+                                <span style={{ color: '#475569', fontSize: '11px', fontWeight: 500 }}>0 trades synced</span>
                             </div>
                         </>
                     ) : activePage === 'certificates' ? (
@@ -1573,7 +1573,7 @@ export default function ClientContent() {
                                                 <div className={styles.cSizePrice}>$156</div>
                                             </div>
                                             <div className={`${styles.cSizeCard} ${styles.selected}`}>
-                                                <div className={styles.cSizeValue} style={{ color: '#fdc20a' }}>$50,000</div>
+                                                <div className={styles.cSizeValue} style={{ color: '#06b6d4' }}>$50,000</div>
                                                 <div className={styles.cSizePrice}>$289</div>
                                             </div>
                                             <div className={styles.cSizeCard}>
@@ -1590,7 +1590,7 @@ export default function ClientContent() {
                                             <div className={styles.cFullCardTexts}>
                                                 <span className={styles.cCardTitle}>MetaTrader 5</span>
                                             </div>
-                                            <div className={styles.cRadioIcon} style={{ borderColor: '#fdc20a', backgroundColor: '#fdc20a', color: '#000' }}>
+                                            <div className={styles.cRadioIcon} style={{ borderColor: '#06b6d4', backgroundColor: '#06b6d4', color: '#0f172a' }}>
                                                 <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4"><polyline points="20 6 9 17 4 12"></polyline></svg>
                                             </div>
                                         </div>
@@ -1604,7 +1604,7 @@ export default function ClientContent() {
                                                 <span className={styles.cCardTitle}>Crypto (CoinPayments)</span>
                                                 <span className={styles.cCardDesc} style={{ marginBottom: 0 }}>Bitcoin, Litecoin, USDT, etc.</span>
                                             </div>
-                                            <div className={styles.cRadioIcon} style={{ borderColor: '#fdc20a', backgroundColor: '#fdc20a', color: '#000' }}>
+                                            <div className={styles.cRadioIcon} style={{ borderColor: '#06b6d4', backgroundColor: '#06b6d4', color: '#0f172a' }}>
                                                 <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4"><polyline points="20 6 9 17 4 12"></polyline></svg>
                                             </div>
                                         </div>
