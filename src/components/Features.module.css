@@ -859,11 +859,19 @@
 
     .inputsColumn {
         gap: 1rem;
+        align-items: center;
+        width: 100%;
+    }
+
+    .outputColumn {
+        align-items: center;
+        text-align: center;
     }
 
     .inputCard {
         max-width: 400px;
         margin: 0 auto;
+        width: 100%;
     }
 
     .coreEngine {
@@ -924,15 +932,21 @@
 
     .header {
         margin-bottom: 3rem;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .headline {
         font-size: 2.5rem;
         line-height: 1.15;
+        text-align: center;
     }
 
     .subheadline {
         font-size: 1rem;
+        text-align: center;
     }
 
     .inputCard {
@@ -942,6 +956,19 @@
         align-items: center;
         text-align: center;
         width: 100%;
+    }
+
+    .inputsColumn {
+        align-items: center;
+    }
+
+    .outputColumn {
+        align-items: center;
+        text-align: center;
+    }
+
+    .outputLabel {
+        text-align: center;
     }
 
     .inputIcon {

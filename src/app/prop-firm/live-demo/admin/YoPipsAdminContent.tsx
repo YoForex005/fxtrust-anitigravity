@@ -846,11 +846,7 @@ export default function YoPipsAdminContent() {
                                         <tr>
                                             <th>User</th>
                                             <th>Email</th>
-                                            <th style={{ textAlign: 'center' }}>Total Accounts</th>
-                                            <th style={{ textAlign: 'center' }}>Free Trial</th>
-                                            <th style={{ textAlign: 'center' }}>Paid</th>
-                                            <th style={{ textAlign: 'center' }}>Funded</th>
-                                            <th style={{ textAlign: 'center' }}>Archived</th>
+                                            <th style={{ textAlign: 'center' }}>Account Stats</th>
                                             <th>Joined</th>
                                         </tr>
                                     </thead>
@@ -872,25 +868,34 @@ export default function YoPipsAdminContent() {
                                             { user: 'Passed User 2', email: 'passed1770018873520_2@yopips.com', total: 1, trial: 0, paid: 0, funded: 0, archived: 0, joined: '2/2/2026' },
                                             { user: 'Passed User 1', email: 'passed1770018873600_1@yopips.com', total: 1, trial: 0, paid: 0, funded: 0, archived: 0, joined: '2/2/2026' }
                                         ].map((item, idx) => (
-                                            <tr key={idx}>
-                                                <td style={{ color: '#0f172a', fontWeight: 600 }}>{item.user}</td>
-                                                <td style={{ color: '#475569' }}>{item.email}</td>
-                                                <td style={{ textAlign: 'center' }}>
-                                                    <span className={`${styles.countBadge} ${styles.badgeCyan}`}>{item.total}</span>
+                                            <tr key={idx} className={styles.accountsRow}>
+                                                <td data-label="User" className={styles.accountsUserCell} style={{ color: '#0f172a', fontWeight: 600 }}>{item.user}</td>
+                                                <td data-label="Email" className={styles.accountsEmailCell} style={{ color: '#475569' }}>{item.email}</td>
+                                                <td className={styles.accountsStatsTd}>
+                                                    <div className={styles.accountsStatsGrid}>
+                                                        <div className={styles.accountsStatItem}>
+                                                            <span className={styles.accountsStatLabel}>Total</span>
+                                                            <span className={`${styles.countBadge} ${styles.badgeCyan}`}>{item.total}</span>
+                                                        </div>
+                                                        <div className={styles.accountsStatItem}>
+                                                            <span className={styles.accountsStatLabel}>Trial</span>
+                                                            <span className={`${styles.countBadge} ${styles.badgeBlue}`}>{item.trial}</span>
+                                                        </div>
+                                                        <div className={styles.accountsStatItem}>
+                                                            <span className={styles.accountsStatLabel}>Paid</span>
+                                                            <span className={`${styles.countBadge} ${styles.badgePurple}`}>{item.paid}</span>
+                                                        </div>
+                                                        <div className={styles.accountsStatItem}>
+                                                            <span className={styles.accountsStatLabel}>Funded</span>
+                                                            <span className={`${styles.countBadge} ${styles.badgeGreen}`}>{item.funded}</span>
+                                                        </div>
+                                                        <div className={styles.accountsStatItem}>
+                                                            <span className={styles.accountsStatLabel}>Archived</span>
+                                                            <span className={`${styles.countBadge} ${styles.badgeGray}`}>{item.archived}</span>
+                                                        </div>
+                                                    </div>
                                                 </td>
-                                                <td style={{ textAlign: 'center' }}>
-                                                    <span className={`${styles.countBadge} ${styles.badgeBlue}`}>{item.trial}</span>
-                                                </td>
-                                                <td style={{ textAlign: 'center' }}>
-                                                    <span className={`${styles.countBadge} ${styles.badgePurple}`}>{item.paid}</span>
-                                                </td>
-                                                <td style={{ textAlign: 'center' }}>
-                                                    <span className={`${styles.countBadge} ${styles.badgeGreen}`}>{item.funded}</span>
-                                                </td>
-                                                <td style={{ textAlign: 'center' }}>
-                                                    <span className={`${styles.countBadge} ${styles.badgeGray}`}>{item.archived}</span>
-                                                </td>
-                                                <td className={styles.joinedCell}>{item.joined}</td>
+                                                <td data-label="Joined" className={styles.joinedCell}>{item.joined}</td>
                                             </tr>
                                         ))}
                                     </tbody>

@@ -326,6 +326,14 @@
     background: #059669;
 }
 
+.finalCtaSubtext {
+    font-size: 1.25rem;
+    color: #9ca3af;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    line-height: 1.6;
+}
+
 /* Dashboard Inner Mockups (for visual effect only) */
 .dashboardInner {
     display: flex;
@@ -479,6 +487,62 @@
 
     .statValue {
         font-size: 2rem !important;
+    }
+
+    /* ---- Light-mode overrides for mobile ---- */
+
+    /* Stats box: swap dark bg → light card */
+    .statsBox {
+        background: #ffffff !important;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08) !important;
+        border: 1px solid #e5e7eb !important;
+    }
+
+    .statsHeadline {
+        color: #111827 !important;
+    }
+
+    .statItem {
+        border-bottom-color: #e5e7eb !important;
+    }
+
+    .blueStat {
+        color: #2563eb !important;
+    }
+
+    .greenStat {
+        color: #059669 !important;
+    }
+
+    .pinkStat {
+        color: #db2777 !important;
+    }
+
+    .statLabel {
+        color: #6b7280 !important;
+    }
+
+    /* Final CTA section: swap dark bg → light */
+    .finalCtaSection {
+        background: #f8fafc !important;
+        color: #111827 !important;
+        border-top: 1px solid #e5e7eb !important;
+    }
+
+    .finalCtaHeadline {
+        color: #111827 !important;
+    }
+
+    .finalCtaSection .primaryCta {
+        background: #2563eb !important;
+    }
+
+    .finalCtaSection .primaryCta:hover {
+        background: #1d4ed8 !important;
+    }
+
+    .finalCtaSubtext {
+        color: #4b5563 !important;
     }
 }
 

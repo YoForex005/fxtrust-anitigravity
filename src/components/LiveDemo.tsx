@@ -33,7 +33,7 @@ export default function LiveDemo() {
                             </div>
                             <div className={styles.browserContent}>
                                 <Image
-                                    src="/admin.png"
+                                    src="/admin2.png"
                                     alt="FXTrusts Admin CRM Dashboard"
                                     width={1600}
                                     height={900}
@@ -74,7 +74,7 @@ export default function LiveDemo() {
                             </div>
                             <div className={styles.browserContent}>
                                 <Image
-                                    src="/client.png"
+                                    src="/client2.png"
                                     alt="FXTrusts Client Dashboard"
                                     width={1600}
                                     height={900}

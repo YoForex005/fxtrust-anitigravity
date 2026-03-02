@@ -1417,7 +1417,7 @@ export default function ClientContent() {
                                 <div className={styles.certTopIconY}>Y</div>
 
                                 <span className={styles.certStatusLabel}>PASSED</span>
-                                <div className={styles.certMainTitle}>YOPIPS PHASE 1</div>
+                                <div className={styles.certMainTitle}>FX TRUSTS</div>
                                 <div className={styles.certNameGold}>Siddhartha Test</div>
 
                                 <div className={styles.certPreviewLabel}>Click to preview</div>

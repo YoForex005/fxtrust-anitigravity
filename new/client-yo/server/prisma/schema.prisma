@@ -1,0 +1,106 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Role {
+  USER
+  ADMIN
+}
+
+enum ChallengeStatus {
+  PENDING
+  ACTIVE
+  PASSED
+  FAILED
+  CLOSED
+}
+
+enum AccountType {
+  CHALLENGE
+  FUNDED
+}
+
+enum PayoutStatus {
+  PENDING
+  APPROVED
+  REJECTED
+  PAID
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  password  String
+  name      String?
+  role      Role     @default(USER)
+  apiToken  String?  @default(uuid())
+  
+  tags      String?  // Comma separated tags e.g. "red,vip"
+  imp       String?  // Implementation note or importance
+  
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  
+  challenges Challenge[]
+  payouts    Payout[]
+  auditLogs  AuditLog[]
+}
+
+model Challenge {
+  id              Int             @id @default(autoincrement())
+  userId          Int
+  user            User            @relation(fields: [userId], references: [id])
+  
+  serverLogin     Int?            @unique // MT5 Login
+  serverPassword  String?
+  serverServer    String?         
+  
+  planType        String          // e.g. "100k Challenge"
+  accountType     AccountType     @default(CHALLENGE)
+  phase           Int             @default(1)
+  status          ChallengeStatus @default(PENDING)
+  
+  // Financials
+  initialBalance  Float
+  currentBalance  Float?
+  equity          Float?
+  
+  // Trading Objectives (Snapshot or Live)
+  maxDailyLoss    Float?
+  maxLoss         Float?
+  profitTarget    Float?
+  daysTraded      Int?            @default(0)
+  
+  startedAt       DateTime?       @default(now())
+  endedAt         DateTime?
+  
+  createdAt       DateTime        @default(now())
+  updatedAt       DateTime        @updatedAt
+}
+
+model Payout {
+  id            Int          @id @default(autoincrement())
+  userId        Int
+  user          User         @relation(fields: [userId], references: [id])
+  amount        Float
+  method        String
+  details       String
+  status        PayoutStatus @default(PENDING)
+  requestedAt   DateTime     @default(now())
+  processedAt   DateTime?
+}
+
+model AuditLog {
+  id        Int      @id @default(autoincrement())
+  userId    Int?
+  user      User?    @relation(fields: [userId], references: [id])
+  action    String
+  details   String?
+  ipAddress String?
+  createdAt DateTime @default(now())
+}

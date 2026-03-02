@@ -812,8 +812,8 @@
 }
 
 .statusBadge {
-  background-color: rgba(46, 160, 67, 0.15);
-  color: #3fb950;
+  background-color: rgba(26, 127, 55, 0.15);
+  color: #1a7f37;
   padding: 4px 12px;
   border-radius: 4px;
   font-size: 12px;
@@ -826,17 +826,17 @@
 .statusDotSmall {
   width: 6px;
   height: 6px;
-  background-color: #3fb950;
+  background-color: #1a7f37;
   border-radius: 50%;
 }
 
 .pointsValue {
-  color: #58a6ff;
+  color: #0969da;
   font-weight: 600;
 }
 
 .connectedValue {
-  color: #d29922;
+  color: #9a6700;
   font-weight: 600;
 }
 
@@ -984,7 +984,7 @@
 .btnWhiteFull {
   width: 100%;
   background-color: #0f172a;
-  color: #000;
+  color: #ffffff;
   border: none;
   font-weight: 600;
   padding: 12px;
@@ -999,7 +999,7 @@
 }
 
 .btnWhiteFull:hover {
-  background-color: #e6e6e6;
+  background-color: #1e293b;
 }
 
 .methodItem {
@@ -1048,7 +1048,7 @@
 
 .badgeDefault {
   background-color: #0f172a;
-  color: #000;
+  color: #ffffff;
   font-size: 10px;
   font-weight: 700;
   padding: 2px 6px;
@@ -1166,7 +1166,7 @@
   left: 0;
   top: 0;
   height: 100%;
-  background-color: #58a6ff;
+  background-color: #0969da;
   border-radius: 3px;
   width: 100%;
 }
@@ -1179,7 +1179,7 @@
   position: absolute;
   top: -5px;
   left: 10%;
-  box-shadow: 0 0 0 4px rgba(88, 166, 255, 0.2);
+  box-shadow: 0 0 0 4px rgba(9, 105, 218, 0.2);
 }
 
 .sliderLabels {
@@ -1218,7 +1218,7 @@
 }
 
 .ratioValueGreen {
-  color: #3fb950;
+  color: #1a7f37;
   font-size: 20px;
   font-weight: 700;
 }
@@ -1231,7 +1231,7 @@
 
 .ratioBadge {
   background-color: #0f172a;
-  color: #000;
+  color: #ffffff;
   padding: 4px 8px;
   border-radius: 4px;
   font-size: 12px;
@@ -1272,8 +1272,8 @@
 }
 
 .saveBadge {
-  background-color: rgba(46, 160, 67, 0.15);
-  color: #3fb950;
+  background-color: rgba(26, 127, 55, 0.15);
+  color: #1a7f37;
   font-size: 10px;
   font-weight: 700;
   padding: 2px 6px;
@@ -1310,24 +1310,24 @@
 }
 
 .tdGreen {
-  color: #3fb950 !important;
+  color: #1a7f37 !important;
   font-weight: 500;
 }
 
 .tdBlue {
-  color: #58a6ff !important;
+  color: #0969da !important;
 }
 
 .checkIcon {
-  color: #3fb950;
-  background-color: rgba(46, 160, 67, 0.15);
+  color: #1a7f37;
+  background-color: rgba(26, 127, 55, 0.15);
   border-radius: 4px;
   padding: 2px;
 }
 
 .crossIcon {
-  color: #f85149;
-  background-color: rgba(248, 81, 73, 0.15);
+  color: #cf222e;
+  background-color: rgba(207, 34, 46, 0.15);
   border-radius: 4px;
   padding: 2px;
 }
@@ -1372,7 +1372,7 @@
 }
 
 .gradientText {
-  background: linear-gradient(90deg, #58a6ff, #bc8cff);
+  background: linear-gradient(90deg, #0969da, #8250df);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -1449,11 +1449,11 @@
 }
 
 .academyStatIcon.gold {
-  color: #d29922;
+  color: #9a6700;
 }
 
 .academyStatIcon.green {
-  color: #3fb950;
+  color: #1a7f37;
 }
 
 .academyStatValue {
@@ -1484,12 +1484,12 @@
 .academyCurrentIcon {
   width: 48px;
   height: 48px;
-  background-color: rgba(88, 166, 255, 0.1);
+  background-color: rgba(9, 105, 218, 0.1);
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #58a6ff;
+  color: #0969da;
 }
 
 .academyCurrentInfo {
@@ -1498,7 +1498,7 @@
 
 .academyCurrentLabel {
   font-size: 10px;
-  color: #58a6ff;
+  color: #0969da;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -1521,7 +1521,7 @@
 
 .academyProgressFill {
   height: 100%;
-  background-color: #58a6ff;
+  background-color: #0969da;
   border-radius: 2px;
 }
 
@@ -1621,8 +1621,8 @@
 }
 
 .courseBadge {
-  background-color: rgba(0, 0, 0, 0.4);
-  color: #0f172a;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: #ffffff;
   padding: 4px 8px;
   border-radius: 4px;
   font-size: 10px;
@@ -1676,7 +1676,7 @@
 
 .courseProgressBarFill {
   height: 100%;
-  background-color: #58a6ff;
+  background-color: #0969da;
   border-radius: 2px;
 }
 
@@ -1945,7 +1945,7 @@
 
 .timeToggleGroup {
   display: flex;
-  background-color: #0f172a;
+  background-color: #f1f5f9;
   border: 1px solid #e2e8f0;
   border-radius: 8px;
   overflow: hidden;
@@ -1980,7 +1980,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #0f172a;
+  background-color: #ffffff;
   border: 1px solid #e2e8f0;
   border-radius: 8px;
   color: #475569;
@@ -1994,7 +1994,7 @@
 }
 
 .leaderboardEmptyState {
-  background-color: #0f172a;
+  background-color: #ffffff;
   border-radius: 12px;
   border: 1px solid #e2e8f0;
   min-height: 500px;
@@ -2010,8 +2010,8 @@
   position: absolute;
   top: 40px;
   left: 60px;
-  color: #e2e8f0;
-  opacity: 0.5;
+  color: #f1f5f9;
+  opacity: 1;
 }
 
 .leaderboardEmptyContent {
@@ -2322,7 +2322,7 @@
 }
 
 .btnSyncDim {
-  background-color: #0f172a;
+  background-color: #ffffff;
   border: 1px solid #e2e8f0;
   border-radius: 6px;
   padding: 8px 16px;
@@ -2364,7 +2364,7 @@
 }
 
 .certCard {
-  background-color: #0f172a;
+  background-color: #ffffff;
   border: 1px solid #e2e8f0;
   border-radius: 12px;
   width: 100%;
@@ -2434,8 +2434,8 @@
 }
 
 .certBadgeEarned {
-  background-color: rgba(63, 185, 80, 0.1);
-  color: #3fb950;
+  background-color: rgba(26, 127, 55, 0.15);
+  color: #1a7f37;
   padding: 2px 8px;
   border-radius: 4px;
   font-size: 11px;
@@ -2518,7 +2518,7 @@
 }
 
 .achievementStatsContainer {
-  background-color: #0f172a;
+  background-color: #ffffff;
   border: 1px solid #e2e8f0;
   border-radius: 12px;
   padding: 32px;
@@ -2557,7 +2557,7 @@
 .achievementValueDim {
   font-size: 28px;
   font-weight: 800;
-  color: #3fb950;
+  color: #1a7f37;
 }
 
 .achievementLabel {

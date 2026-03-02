@@ -73,7 +73,7 @@ export default function PropFirmPage() {
                             <MacWindow title="Prop Firm Admin - Dashboard">
                                 <div className={styles.mockupContent} style={{ padding: 0 }}>
                                     <Image
-                                        src="/admin.png"
+                                        src="/admin2.png"
                                         alt="FXTrusts Admin Dashboard"
                                         width={1600}
                                         height={900}
@@ -108,7 +108,7 @@ export default function PropFirmPage() {
                             <MacWindow title="Trader Portal - Challenge Phase 1">
                                 <div className={styles.mockupContent} style={{ padding: 0 }}>
                                     <Image
-                                        src="/client.png"
+                                        src="/client2.png"
                                         alt="FXTrusts Client Dashboard"
                                         width={1600}
                                         height={900}
@@ -291,7 +291,7 @@ export default function PropFirmPage() {
             <section className={styles.finalCtaSection}>
                 <div className={styles.container}>
                     <h2 className={styles.finalCtaHeadline}>Ready to Launch Your Prop Firm?</h2>
-                    <p style={{ fontSize: "1.25rem", color: "#9ca3af", marginBottom: "3rem", maxWidth: "600px", margin: "0 auto 3rem" }}>
+                    <p className={styles.finalCtaSubtext}>
                         Stop wrestling with patched-together plugins and unreliable bridges. Build on the infrastructure trusted by the fastest-growing firms in the industry.
                     </p>
                     <Link href="/get-started" className={styles.primaryCta}>

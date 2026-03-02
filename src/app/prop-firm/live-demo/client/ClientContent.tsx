@@ -6,7 +6,7 @@ import Image from 'next/image';
 import styles from './client.module.css';
 
 export default function ClientContent() {
-    const [lightMode, setLightMode] = useState(false);
+    const [lightMode, setLightMode] = useState(true);
     const [payoutEligible, setPayoutEligible] = useState(true);
     const [activePage, setActivePage] = useState('dashboard');
     const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -622,7 +622,7 @@ export default function ClientContent() {
                                             <div className={styles.methodItem}>
                                                 <div className={styles.methodLeft}>
                                                     <div className={styles.methodIcon}>
-                                                        <svg width="24" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2" /><line x1="1" y1="10" x2="23" y2="10" /></svg>
+                                                        <svg width="24" height="16" viewBox="0 0 24 24" fill="none" stroke="#0f172a" strokeWidth="2"><rect x="1" y="4" width="22" height="16" rx="2" ry="2" /><line x1="1" y1="10" x2="23" y2="10" /></svg>
                                                     </div>
                                                     <div>
                                                         <div className={styles.methodTitle}>
@@ -635,7 +635,7 @@ export default function ClientContent() {
                                             <div className={styles.methodItem}>
                                                 <div className={styles.methodLeft}>
                                                     <div className={styles.methodIcon}>
-                                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ffffff" strokeWidth="2"><rect x="2" y="5" width="20" height="14" rx="2" /><line x1="2" y1="10" x2="22" y2="10" /></svg>
+                                                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#0f172a" strokeWidth="2"><rect x="2" y="5" width="20" height="14" rx="2" /><line x1="2" y1="10" x2="22" y2="10" /></svg>
                                                     </div>
                                                     <div>
                                                         <div className={styles.methodTitle}>USDT Wallet</div>
@@ -669,7 +669,7 @@ export default function ClientContent() {
                                             <div className={styles.walletItem}>
                                                 <div className={styles.walletLabel}>Status:</div>
                                                 <div className={styles.walletValue}>
-                                                    <span className={styles.statusBadge} style={{ backgroundColor: '#1f6f50', color: '#0f172a', borderRadius: '4px', padding: '2px 8px' }}>Active</span>
+                                                    <span className={styles.statusBadge} style={{ backgroundColor: '#1a7f37', color: '#ffffff', borderRadius: '4px', padding: '2px 8px' }}>Active</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -704,7 +704,7 @@ export default function ClientContent() {
                                             <div className={styles.settingsRow} style={{ borderBottom: 'none' }}>
                                                 <div className={styles.settingsLabel}>Invoice Email</div>
                                                 <div className={styles.settingsValue}>
-                                                    <span className={styles.statusBadge} style={{ backgroundColor: '#1f6f50', color: '#0f172a', borderRadius: '4px', padding: '2px 8px' }}>Enabled</span>
+                                                    <span className={styles.statusBadge} style={{ backgroundColor: '#1a7f37', color: '#ffffff', borderRadius: '4px', padding: '2px 8px' }}>Enabled</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -884,7 +884,7 @@ export default function ClientContent() {
                             <div className={styles.academyHero}>
                                 <div className={styles.academyHeroLeft}>
                                     <div className={styles.academyHeroBadge}>
-                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#58a6ff" strokeWidth="2"><path d="M12 14l9-5-9-5-9 5 9 5z" /><path d="M12 14l6.16-3.422a12.083 12.083 0 0 1 .665 6.479A11.952 11.952 0 0 0 12 20.055a11.952 11.952 0 0 0-6.824-2.998 12.078 12.078 0 0 1 .665-6.479L12 14z" /><path d="M12 14v7" /></svg>
+                                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0969da" strokeWidth="2"><path d="M12 14l9-5-9-5-9 5 9 5z" /><path d="M12 14l6.16-3.422a12.083 12.083 0 0 1 .665 6.479A11.952 11.952 0 0 0 12 20.055a11.952 11.952 0 0 0-6.824-2.998 12.078 12.078 0 0 1 .665-6.479L12 14z" /><path d="M12 14v7" /></svg>
                                         Yo Pips Academy
                                     </div>
                                     <h1 className={styles.academyHeroTitle}>
@@ -946,7 +946,7 @@ export default function ClientContent() {
                                     <div className={`${styles.courseTop} ${styles.bgBlue}`}>
                                         <div className={styles.courseBadges}>
                                             <span className={styles.courseBadge}>BASICS</span>
-                                            <span className={styles.courseBadge} style={{ backgroundColor: '#000' }}>BEGINNER</span>
+                                            <span className={styles.courseBadge} style={{ backgroundColor: '#0f172a' }}>BEGINNER</span>
                                         </div>
                                     </div>
                                     <div className={styles.courseBottom}>
@@ -957,7 +957,7 @@ export default function ClientContent() {
                                                 <span>100% Complete</span>
                                             </div>
                                             <div className={styles.courseProgressBarBg}>
-                                                <div className={styles.courseProgressBarFill} style={{ width: '100%', backgroundColor: '#0052cc' }}></div>
+                                                <div className={styles.courseProgressBarFill} style={{ width: '100%', backgroundColor: '#0969da' }}></div>
                                             </div>
                                         </div>
                                         <div className={styles.courseMeta} style={{ justifyContent: 'space-between' }}>
@@ -977,7 +977,7 @@ export default function ClientContent() {
                                     <div className={`${styles.courseTop} ${styles.bgPurple}`}>
                                         <div className={styles.courseBadges}>
                                             <span className={styles.courseBadge}>TECHNICAL</span>
-                                            <span className={styles.courseBadge} style={{ backgroundColor: '#000' }}>ADVANCED</span>
+                                            <span className={styles.courseBadge} style={{ backgroundColor: '#0f172a' }}>ADVANCED</span>
                                         </div>
                                     </div>
                                     <div className={styles.courseBottom}>
@@ -988,7 +988,7 @@ export default function ClientContent() {
                                                 <span>65% Complete</span>
                                             </div>
                                             <div className={styles.courseProgressBarBg}>
-                                                <div className={styles.courseProgressBarFill} style={{ width: '65%', backgroundColor: '#0052cc' }}></div>
+                                                <div className={styles.courseProgressBarFill} style={{ width: '65%', backgroundColor: '#0969da' }}></div>
                                             </div>
                                         </div>
                                         <div className={styles.courseMeta}>
@@ -1003,7 +1003,7 @@ export default function ClientContent() {
                                     <div className={`${styles.courseTop} ${styles.bgOrange}`}>
                                         <div className={styles.courseBadges}>
                                             <span className={styles.courseBadge}>PSYCHOLOGY</span>
-                                            <span className={styles.courseBadge} style={{ backgroundColor: '#000' }}>ALL LEVELS</span>
+                                            <span className={styles.courseBadge} style={{ backgroundColor: '#0f172a' }}>ALL LEVELS</span>
                                         </div>
                                     </div>
                                     <div className={styles.courseBottom}>
@@ -1029,7 +1029,7 @@ export default function ClientContent() {
                                     <div className={`${styles.courseTop} ${styles.bgGreen}`}>
                                         <div className={styles.courseBadges}>
                                             <span className={styles.courseBadge}>STRATEGY</span>
-                                            <span className={styles.courseBadge} style={{ backgroundColor: '#000' }}>INTERMEDIATE</span>
+                                            <span className={styles.courseBadge} style={{ backgroundColor: '#0f172a' }}>INTERMEDIATE</span>
                                         </div>
                                     </div>
                                     <div className={styles.courseBottom}>
@@ -1047,7 +1047,7 @@ export default function ClientContent() {
                                     <div className={`${styles.courseTop} ${styles.bgTeal}`}>
                                         <div className={styles.courseBadges}>
                                             <span className={styles.courseBadge}>STRATEGY</span>
-                                            <span className={styles.courseBadge} style={{ backgroundColor: '#000' }}>EXPERT</span>
+                                            <span className={styles.courseBadge} style={{ backgroundColor: '#0f172a' }}>EXPERT</span>
                                         </div>
                                     </div>
                                     <div className={styles.courseBottom}>
@@ -1065,7 +1065,7 @@ export default function ClientContent() {
                                     <div className={`${styles.courseTop} ${styles.bgMagenta}`}>
                                         <div className={styles.courseBadges}>
                                             <span className={styles.courseBadge}>TECHNICAL</span>
-                                            <span className={styles.courseBadge} style={{ backgroundColor: '#000' }}>ADVANCED</span>
+                                            <span className={styles.courseBadge} style={{ backgroundColor: '#0f172a' }}>ADVANCED</span>
                                         </div>
                                     </div>
                                     <div className={styles.courseBottom}>
@@ -1422,7 +1422,7 @@ export default function ClientContent() {
                                 <div className={styles.certTopIconY}>Y</div>
 
                                 <span className={styles.certStatusLabel}>PASSED</span>
-                                <div className={styles.certMainTitle}>YOPIPS PHASE 1</div>
+                                <div className={styles.certMainTitle}>FX TRUSTS</div>
                                 <div className={styles.certNameGold}>Siddhartha Test</div>
 
                                 <div className={styles.certPreviewLabel}>Click to preview</div>
