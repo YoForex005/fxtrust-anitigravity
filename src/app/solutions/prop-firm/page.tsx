@@ -69,7 +69,7 @@ export default function PropFirmPage() {
                     </div>
 
                     <Link href="/prop-firm/live-demo/admin" prefetch={true} style={{ display: 'block', textDecoration: 'none' }}>
-                        <div className={styles.demoMockupWrapper}>
+                        <div>
                             <MacWindow title="Prop Firm Admin - Dashboard">
                                 <div className={styles.mockupContent} style={{ padding: 0 }}>
                                     <Image
@@ -104,7 +104,7 @@ export default function PropFirmPage() {
                     </div>
 
                     <Link href="/prop-firm/live-demo/client" prefetch={true} style={{ display: 'block', textDecoration: 'none' }}>
-                        <div className={styles.demoMockupWrapper}>
+                        <div>
                             <MacWindow title="Trader Portal - Challenge Phase 1">
                                 <div className={styles.mockupContent} style={{ padding: 0 }}>
                                     <Image
@@ -128,6 +128,28 @@ export default function PropFirmPage() {
                             </div>
                         </div>
                     </Link>
+                </div>
+            </section>
+
+            {/* Mobile App Section */}
+            <section className={styles.section}>
+                <div className={styles.container}>
+                    <div className={styles.textCenter}>
+                        <h2 className={styles.sectionHeadline}>Trade Anywhere with the FxTrusts Mobile App</h2>
+                        <p className={styles.sectionSubtext}>
+                            Give your traders full control of their accounts from anywhere. Monitor performance, manage risk, and execute trades directly from their mobile device.
+                        </p>
+                    </div>
+
+                    <div style={{ display: 'flex', justifyContent: 'center', marginTop: '3rem' }}>
+                        <Image
+                            src="/fxtrust_mobile.png"
+                            alt="FxTrusts Mobile App"
+                            width={500}
+                            height={1000}
+                            style={{ width: '100%', maxWidth: '250px', height: 'auto', display: 'block' }}
+                        />
+                    </div>
                 </div>
             </section>
 
