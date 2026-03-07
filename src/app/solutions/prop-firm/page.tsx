@@ -62,32 +62,31 @@ export default function PropFirmPage() {
             <section className={styles.section}>
                 <div className={styles.container}>
                     <div className={styles.textCenter}>
-                        <h2 className={styles.sectionHeadline}>Test Drive the Platform <br /><span style={{ fontSize: "2rem", color: "#6b7280" }}>(Because You Don't Trust Marketing Copy)</span></h2>
+                        <h2 className={styles.sectionHeadline}>Test Drive the Platform</h2>
+                        <p className={styles.sectionSubHeadline}>(Because You Don't Trust Marketing Copy)</p>
                         <p className={styles.sectionSubtext}>
                             Click around. Break stuff. See if we're lying about the speed. No login required. We promise not to immediately sell your email to our sales team.
                         </p>
                     </div>
 
                     <Link href="/prop-firm/live-demo/admin" prefetch={true} style={{ display: 'block', textDecoration: 'none' }}>
-                        <div>
-                            <MacWindow title="Prop Firm Admin - Dashboard">
-                                <div className={styles.mockupContent} style={{ padding: 0 }}>
-                                    <Image
-                                        src="/admin2.png"
-                                        alt="FXTrusts Admin Dashboard"
-                                        width={1600}
-                                        height={900}
-                                        priority={true}
-                                        style={{ width: '100%', height: 'auto', display: 'block' }}
-                                    />
+                        <MacWindow title="Prop Firm Admin - Dashboard">
+                            <div className={styles.mockupContent} style={{ padding: 0, position: 'relative' }}>
+                                <Image
+                                    src="/admin2.png"
+                                    alt="FXTrusts Admin Dashboard"
+                                    width={1600}
+                                    height={900}
+                                    priority={true}
+                                    style={{ width: '100%', height: 'auto', display: 'block' }}
+                                />
+                                <div className={styles.playButtonOverlay}>
+                                    <svg className={styles.playIcon} viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
                                 </div>
-                            </MacWindow>
-                            <div className={styles.playButtonOverlay}>
-                                <svg className={styles.playIcon} viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M8 5v14l11-7z" />
-                                </svg>
                             </div>
-                        </div>
+                        </MacWindow>
                     </Link>
                 </div>
             </section>
@@ -104,29 +103,22 @@ export default function PropFirmPage() {
                     </div>
 
                     <Link href="/prop-firm/live-demo/client" prefetch={true} style={{ display: 'block', textDecoration: 'none' }}>
-                        <div>
-                            <MacWindow title="Trader Portal - Challenge Phase 1">
-                                <div className={styles.mockupContent} style={{ padding: 0 }}>
-                                    <Image
-                                        src="/client2.png"
-                                        alt="FXTrusts Client Dashboard"
-                                        width={1600}
-                                        height={900}
-                                        style={{ width: '100%', height: 'auto', display: 'block' }}
-                                    />
-                                    <div className={styles.playButtonOverlay}>
-                                        <div className={styles.playButton} style={{ background: 'rgba(16, 185, 129, 0.95)', boxShadow: '0 12px 40px rgba(16, 185, 129, 0.4)' }}>
-                                            <div className={styles.playIcon}></div>
-                                        </div>
-                                    </div>
+                        <MacWindow title="Trader Portal - Challenge Phase 1">
+                            <div className={styles.mockupContent} style={{ padding: 0, position: 'relative' }}>
+                                <Image
+                                    src="/client2.png"
+                                    alt="FXTrusts Client Dashboard"
+                                    width={1600}
+                                    height={900}
+                                    style={{ width: '100%', height: 'auto', display: 'block' }}
+                                />
+                                <div className={`${styles.playButtonOverlay} ${styles.green}`}>
+                                    <svg className={styles.playIcon} viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M8 5v14l11-7z" />
+                                    </svg>
                                 </div>
-                            </MacWindow>
-                            <div className={`${styles.playButtonOverlay} ${styles.green}`}>
-                                <svg className={styles.playIcon} viewBox="0 0 24 24" fill="currentColor">
-                                    <path d="M8 5v14l11-7z" />
-                                </svg>
                             </div>
-                        </div>
+                        </MacWindow>
                     </Link>
                 </div>
             </section>
@@ -141,13 +133,27 @@ export default function PropFirmPage() {
                         </p>
                     </div>
 
-                    <div style={{ display: 'flex', justifyContent: 'center', marginTop: '3rem' }}>
+                    <div className={styles.mobileAppGrid}>
                         <Image
-                            src="/fxtrust_mobile.png"
-                            alt="FxTrusts Mobile App"
+                            src="/mob1.png"
+                            alt="FxTrusts Mobile App - Dashboard"
                             width={500}
                             height={1000}
-                            style={{ width: '100%', maxWidth: '250px', height: 'auto', display: 'block' }}
+                            className={styles.mobileAppImage}
+                        />
+                        <Image
+                            src="/mob2.jpg"
+                            alt="FxTrusts Mobile App - Trading"
+                            width={500}
+                            height={1000}
+                            className={styles.mobileAppImage}
+                        />
+                        <Image
+                            src="/mob3.jpg"
+                            alt="FxTrusts Mobile App - Analytics"
+                            width={500}
+                            height={1000}
+                            className={styles.mobileAppImage}
                         />
                     </div>
                 </div>

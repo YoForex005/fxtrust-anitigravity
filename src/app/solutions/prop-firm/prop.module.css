@@ -76,12 +76,21 @@
     margin: 0 auto 2.5rem;
 }
 
+.sectionSubHeadline {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #6b7280;
+    margin-top: -0.75rem;
+    margin-bottom: 1.25rem;
+}
+
 .sectionSubtext {
     font-size: 1.125rem;
     color: #6b7280;
     line-height: 1.6;
     max-width: 700px;
     margin: 0 auto 3rem;
+    padding: 0 1rem;
 }
 
 /* Buttons */
@@ -162,12 +171,17 @@
     padding: 2rem;
     background: #f8fafc;
     min-height: 400px;
-    filter: blur(2px) opacity(0.7);
-    transition: all 0.3s ease;
+    position: relative;
     pointer-events: none;
 }
 
-.demoMockupWrapper:hover .mockupContent {
+.mockupContent img {
+    filter: blur(2px) opacity(0.7);
+    transition: all 0.3s ease;
+}
+
+.demoMockupWrapper:hover .mockupContent img,
+a:hover .mockupContent img {
     filter: blur(1px) opacity(0.85);
 }
 
@@ -404,11 +418,27 @@
     }
 
     .sectionHeadline {
-        font-size: 1.75rem;
+        font-size: 1.5rem;
+        padding: 0 0.5rem;
+    }
+
+    .sectionSubHeadline {
+        font-size: 1rem;
+        font-weight: 600;
     }
 
     .finalCtaHeadline {
         font-size: 2rem;
+    }
+
+    .playButtonOverlay {
+        width: 56px;
+        height: 56px;
+    }
+
+    .playIcon {
+        width: 22px;
+        height: 22px;
     }
 
     .featureGrid {
@@ -601,4 +631,34 @@
     letter-spacing: 0.05em;
     font-weight: 600;
     margin-top: 0.5rem;
+}
+
+/* Mobile App Section */
+.mobileAppGrid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+    flex-wrap: wrap;
+}
+
+.mobileAppImage {
+    width: 100%;
+    max-width: 250px;
+    height: auto;
+    display: block;
+    border-radius: 1.5rem;
+    border: 2px solid #000;
+}
+
+@media (max-width: 768px) {
+    .mobileAppGrid {
+        gap: 0.75rem;
+        margin-top: 2rem;
+    }
+
+    .mobileAppImage {
+        max-width: 30%;
+        border-radius: 1rem;
+    }
 }
