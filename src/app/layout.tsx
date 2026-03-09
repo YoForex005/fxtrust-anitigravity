@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
+import { GoogleAnalytics } from '@next/third-parties/google';
 import "./globals.css";
 import DynamicBreadcrumbs from "../components/seo/DynamicBreadcrumbs";
 import OrganizationSchema from "../components/seo/OrganizationSchema";
@@ -92,18 +93,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         {/* Google Analytics */}
-        <Script
-          src="https://www.googletagmanager.com/gtag/js?id=G-JTKXHLHJY8"
-          strategy="lazyOnload"
-        />
-        <Script id="google-analytics" strategy="lazyOnload">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-JTKXHLHJY8');
-          `}
-        </Script>
+        <GoogleAnalytics gaId="G-JTKXHLHJY8" />
 
         {/* Meta Pixel Code */}
         <Script id="meta-pixel" strategy="lazyOnload">

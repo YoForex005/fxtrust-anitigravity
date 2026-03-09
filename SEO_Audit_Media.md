@@ -1,10 +1,15 @@
-# SEO Audit: Media
+# SEO Audit: Media & Links
 
 ## Legacy `<img>` Tags (ERROR)
-- **✅ FIXED** in src/app/api/send-email/route.ts:60 : `<img ...>` found.
 
-## `<Image />` Missing `alt` props
-- None found. Good job!
+- No legacy `<img>` tags found. Good job!
 
-## `<Link>` external/insecure tags
-- None found. Good job!
+## `<Image />` Missing `alt` Props
+
+- All `<Image />` tags have `alt` props.
+
+## `<Link>` pointing to external links (missing target="_blank") & 404 Routes
+
+- No insecure external links or dead routes identified.
+
+**Status:** ✅ All media constraints passed/FIXED.
