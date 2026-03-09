@@ -123,7 +123,12 @@ export default function LeaderboardsPage() {
                 contactEmail="support@domain.com"
             >
                 <div id="solution">
-                    <h1>Trader Leaderboards & Competitions Solution</h1>
+                    
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"Trader Leaderboards & Competitions | Forex Gamification Tools","description":"Boost trader engagement and retention with automated leaderboards and trading competitions. High-performance gamification tools for brokers and prop firms.","url":"https://fxtrusts.com/solutions/leaderboards"}) }}
+      />
+      <h1>Trader Leaderboards & Competitions Solution</h1>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                         <div className="p-4 bg-blue-50 rounded-lg">
                             <h3 className="font-semibold text-blue-900 mb-2">Dynamic Engagement</h3>

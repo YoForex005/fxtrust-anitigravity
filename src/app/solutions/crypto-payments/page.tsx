@@ -73,7 +73,12 @@ export default function CryptoPaymentsPage() {
 
     return (
         <>
-            <h1 className="sr-only">Crypto Payments Page</h1>
+            
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"Crypto Payment Gateway for Forex Brokers | Accept USDT Bitcoin | FXTrusts","description":"Accept USDT, Bitcoin, and Ethereum deposits. Auto-convert to fiat for MT5 balance. Zero chargebacks, instant settlements, cold storage security.","url":"https://fxtrusts.com/solutions/crypto-payments"}) }}
+      />
+      <h1 className="sr-only">Crypto Payments Page</h1>
             {/* Original Component */}
             
         <main>

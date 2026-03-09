@@ -135,7 +135,12 @@ export default function FiatPSPPage() {
                 contactEmail="support@domain.com"
             >
                 <div id="solution">
-                    <h1>Fiat PSP Integration Solution</h1>
+                    
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"Fiat PSP Integration | Visa, Mastercard & Wire Transfers","description":"Seamlessly integrate Fiat PSPs for Visa, Mastercard, and Bank Wires. Secure, high-converting payment processing for global brokerages and fintech platforms.","url":"https://fxtrusts.com/solutions/fiat-psp-integration-visa-mastercard-wire"}) }}
+      />
+      <h1>Fiat PSP Integration Solution</h1>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                         <div className="p-4 bg-blue-50 rounded-lg">
                             <h3 className="font-semibold text-blue-900 mb-2">Multi-Acquirer Routing</h3>

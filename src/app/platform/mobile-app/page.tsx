@@ -44,7 +44,12 @@ export const metadata: Metadata = {
 export default function MobileAppPage() {
     return (
         <>
-            <h1 className="sr-only">Mobile App Page</h1>
+            
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"White Label Forex Mobile App | iOS & Android Trading App | FXTrusts","description":"Custom-branded forex trading app for iOS & Android. Your logo, your colors, published under your name. Push notifications, biometric login, integrated deposits.","url":"https://fxtrusts.com/platform/mobile-app"}) }}
+      />
+      <h1 className="sr-only">Mobile App Page</h1>
             {/* Original Component */}
             
         <main>

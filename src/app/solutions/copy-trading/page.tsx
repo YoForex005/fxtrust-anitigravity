@@ -138,7 +138,12 @@ export default function CopyTradingPage() {
                 contactEmail="support@domain.com"
             >
                 <div id="solution">
-                    <h1>Copy Trading / Social Trading Platform Solution</h1>
+                    
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"Copy Trading & Social Trading Platform | White Label Solution","description":"Launch your own Social Trading network with our high-performance Copy Trading platform. Seamlessly link followers to master traders with instant execution.","url":"https://fxtrusts.com/solutions/copy-trading-social-trading-platform"}) }}
+      />
+      <h1>Copy Trading / Social Trading Platform Solution</h1>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                         <div className="p-4 bg-blue-50 rounded-lg">
                             <h3 className="font-semibold text-blue-900 mb-2">Social Ecosystem</h3>

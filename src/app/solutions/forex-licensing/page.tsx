@@ -137,7 +137,12 @@ export default function ForexLicensingPage() {
                 contactEmail="support@domain.com"
             >
                 <div id="solution">
-                    <h1>Forex/Prop Firm Licensing Solution</h1>
+                    
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"Forex & Prop Firm Licensing | FSA, ASIC, CySEC Consulting","description":"Navigate the complexities of global financial regulation. Get expert consulting for FSA, ASIC, and CySEC licensing for your Forex brokerage or Prop Firm.","url":"https://fxtrusts.com/solutions/forex-licensing"}) }}
+      />
+      <h1>Forex/Prop Firm Licensing Solution</h1>
                     <p>
                         Licensing is the ultimate differentiator in the retail trading industry. For fintech founders and established brokers, a license is more than just a regulatory requirement—it is a powerful marketing asset that inspires trader confidence and unlocks Tier-1 banking and liquidity relationships. Our licensing consulting service provides a high-touch, end-to-end management of the application process for jurisdictions including the Seychelles (FSA), Cyprus (CySEC), and Australia (ASIC).
                     </p>

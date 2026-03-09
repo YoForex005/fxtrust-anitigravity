@@ -61,7 +61,12 @@ export default function PrivacyPolicyPage() {
                 ctaButtonText="Contact Us"
                 ctaButtonHref="/company/contact"
             >
-                <h1>Privacy Policy</h1>
+                
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"Privacy Policy | Data Protection | FxTrusts","description":"FxTrusts privacy policy detailing how we collect, use, store, and protect your personal data in compliance with GDPR and global privacy regulations.","url":"https://fxtrusts.com/legal/privacy-policy"}) }}
+      />
+      <h1>Privacy Policy</h1>
                 <p>
                     FxTrusts ("we," "our," or "us") is committed to protecting the privacy and security of personal data. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our platform and services.
                 </p>

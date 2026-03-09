@@ -19,5 +19,10 @@ export const metadata: Metadata = {
 
 export default function DocsRedirect() {
     redirect('/resources/api-docs');
-    return <h1 className="sr-only">API Documentation Redirect</h1>;
+    return 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"API Documentation | FxTrusts","description":"Complete API documentation for FxTrusts CRM and MT5 integration. REST API, webhooks, and SDK reference.","url":"https://fxtrusts.com/docs"}) }}
+      />
+      <h1 className="sr-only">API Documentation Redirect</h1>;
 }

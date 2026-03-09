@@ -56,7 +56,12 @@ export const metadata: Metadata = {
 export default function YoPipsAdminPage() {
     return (
         <>
-            <h1 className="sr-only">Yo Pips Admin Page</h1>
+            
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"Prop Firm Admin Dashboard | Live Demo | FxTrusts","description":"Live interactive demo of FxTrusts modern Prop Firm Admin Dashboard. Experience the sleek interface, seamless account management, and real-time reporting tools.","url":"https://fxtrusts.com/prop-firm/live-demo/admin"}) }}
+      />
+      <h1 className="sr-only">Yo Pips Admin Page</h1>
             {/* Original Component */}
             
         <Suspense fallback={

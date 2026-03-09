@@ -123,7 +123,12 @@ export default function PropTraderDashboardPage() {
                 contactEmail="support@domain.com"
             >
                 <div id="solution">
-                    <h1>Prop Dashboard for Traders Solution</h1>
+                    
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"Prop Dashboard for Traders | Real-Time Progress & Analytics","description":"Empower your traders with a professional Prop Dashboard. Track evaluation progress, drawdown levels, and advanced trading analytics in real-time.","url":"https://fxtrusts.com/solutions/prop-trader-dashboard"}) }}
+      />
+      <h1>Prop Dashboard for Traders Solution</h1>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                         <div className="p-4 bg-blue-50 rounded-lg">
                             <h3 className="font-semibold text-blue-900 mb-2">Visual Progress</h3>

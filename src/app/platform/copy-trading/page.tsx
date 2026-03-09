@@ -45,7 +45,12 @@ export const metadata: Metadata = {
 export default function CopyTradingPage() {
     return (
         <>
-            <h1 className="sr-only">Copy Trading Page</h1>
+            
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"Copy Trading Platform for Brokers | Social Trading Software | FXTrusts","description":"White-label copy trading platform for forex brokers. Let followers copy master traders. Performance fees, high-water mark, and full risk management included.","url":"https://fxtrusts.com/platform/copy-trading"}) }}
+      />
+      <h1 className="sr-only">Copy Trading Page</h1>
             {/* Original Component */}
             
         <main>

@@ -19,5 +19,10 @@ export const metadata: Metadata = {
 
 export default function StatusRedirect() {
     redirect('/resources/status');
-    return <h1 className="sr-only">Status Redirect</h1>;
+    return 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"System Status | FxTrusts","description":"Real-time operational status of FxTrusts trading infrastructure, CRM, API, and payment systems.","url":"https://fxtrusts.com/status"}) }}
+      />
+      <h1 className="sr-only">Status Redirect</h1>;
 }

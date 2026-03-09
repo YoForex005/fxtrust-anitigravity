@@ -41,7 +41,12 @@ export default function PropFirmPage() {
             <section className={styles.heroSection}>
                 <div className={styles.container}>
                     <div className={styles.badge}>Institutional Infrastructure</div>
-                    <h1 className={styles.headline}>
+                    
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"Prop Firm Technology & Backend System | FXTrusts","description":"Launch or scale your proprietary trading firm with our complete backend system. Automated challenge management, real-time risk tracking, broker integration, and instant payouts.","url":"https://fxtrusts.com/solutions/prop-firm"}) }}
+      />
+      <h1 className={styles.headline}>
                         The Backbone of<br />Modern Prop Firms
                     </h1>
                     <p className={styles.subheadline}>

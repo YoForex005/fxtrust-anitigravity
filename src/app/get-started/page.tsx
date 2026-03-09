@@ -26,7 +26,12 @@ export const metadata: Metadata = {
 export default function GetStartedPage() {
     return (
         <>
-            <h1 className="sr-only">Get Started Page</h1>
+            
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"Get Started | Launch Your Brokerage | FxTrusts","description":"Start your forex brokerage journey with FxTrusts. Complete our onboarding wizard to get your MT5 white label, CRM, and liquidity setup.","url":"https://fxtrusts.com/get-started"}) }}
+      />
+      <h1 className="sr-only">Get Started Page</h1>
             {/* Original Component */}
             
         <main style={{

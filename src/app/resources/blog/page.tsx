@@ -56,7 +56,12 @@ export default async function BlogIndex(props: {
             {/* Hero Section */}
             <section className={styles.hero}>
                 <div className={styles.heroContent}>
-                    <h1 className={styles.heroTitle}>
+                    
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"Forex Broker Resources & Industry Insights | FxTrusts","description":"In-depth guides, technology reviews, and market analysis for Forex brokerage professionals. Expert resources on CRM systems, MT5 integration, and regulatory compliance.","url":"https://fxtrusts.com/resources/blog"}) }}
+      />
+      <h1 className={styles.heroTitle}>
                         Resources & Insights
                     </h1>
                     <p className={styles.heroSubtitle}>

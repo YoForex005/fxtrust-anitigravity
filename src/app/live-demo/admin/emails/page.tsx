@@ -23,7 +23,12 @@ export const metadata: Metadata = {
 export default function EmailsPage() {
     return (
         <>
-            <h1 className="sr-only">Emails Page</h1>
+            
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"Integrated Email System | CRM Communications | FxTrusts","description":"Manage all client communications directly from the CRM. Track email history, open rates, and automated responses.","url":"https://fxtrusts.com/live-demo/admin/emails"}) }}
+      />
+      <h1 className="sr-only">Emails Page</h1>
             <EmailsContent />
         </>
     );

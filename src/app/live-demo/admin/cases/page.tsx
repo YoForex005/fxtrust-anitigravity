@@ -23,7 +23,12 @@ export const metadata: Metadata = {
 export default function CasesPage() {
     return (
         <>
-            <h1 className="sr-only">Cases Page</h1>
+            
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"Support Case Management | Ticketing System | FxTrusts","description":"Track and resolve client issues efficiently with the integrated support ticketing system.","url":"https://fxtrusts.com/live-demo/admin/cases"}) }}
+      />
+      <h1 className="sr-only">Cases Page</h1>
             <CasesContent />
         </>
     );

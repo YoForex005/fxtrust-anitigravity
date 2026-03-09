@@ -28,7 +28,12 @@ export const metadata: Metadata = {
 export default function ContactPage() {
     return (
         <>
-            <h1 className="sr-only">Contact Page</h1>
+            
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"Contact Us | Sales & Support | FxTrusts","description":"Get in touch with FxTrusts for sales inquiries, technical support, or partnership opportunities. We actually reply - email, Telegram, or phone.","url":"https://fxtrusts.com/company/contact"}) }}
+      />
+      <h1 className="sr-only">Contact Page</h1>
             {/* Original Component */}
             
         <main>

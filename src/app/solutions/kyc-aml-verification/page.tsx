@@ -137,7 +137,12 @@ export default function KycAmlVerificationPage() {
                 contactEmail="support@domain.com"
             >
                 <div id="solution">
-                    <h1>Automated KYC/AML Verification Solution</h1>
+                    
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"Automated KYC/AML Verification | Sumsub & Onfido Integration","description":"Streamline trader onboarding with automated KYC/AML verification. Integrate Sumsub or Onfido for real-time ID checks, liveness detection, and AML screening.","url":"https://fxtrusts.com/solutions/kyc-aml-verification"}) }}
+      />
+      <h1>Automated KYC/AML Verification Solution</h1>
                     <p>
                         Automated KYC/AML Verification is the critical &quot;Gatekeeper&quot; of any modern brokerage or prop firm. In a world where traders expect instant access to markets, the traditional manual review of passports and utility bills is a major bottleneck that leads to high abandonment rates. Our solution bridges this gap by integrating Tier-1 identity verification providers—Sumsub and Onfido—directly into your Client Portal and CRM.
                     </p>

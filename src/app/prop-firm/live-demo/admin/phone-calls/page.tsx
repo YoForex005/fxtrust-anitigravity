@@ -23,7 +23,12 @@ export const metadata: Metadata = {
 export default function PhoneCallsPage() {
     return (
         <>
-            <h1 className="sr-only">Phone Calls Page</h1>
+            
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"Call Logs & Recording | VoIP Integration | FxTrusts","description":"Track all sales and support calls. Integrated with major VoIP providers for automatic logging and recording.","url":"https://fxtrusts.com/prop-firm/live-demo/admin/phone-calls"}) }}
+      />
+      <h1 className="sr-only">Phone Calls Page</h1>
             <PhoneCallsContent />
         </>
     );

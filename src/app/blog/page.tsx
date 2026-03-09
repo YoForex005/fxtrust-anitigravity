@@ -19,5 +19,10 @@ export const metadata: Metadata = {
 
 export default function BlogRedirect() {
     redirect('/resources/blog');
-    return <h1 className="sr-only">Blog Redirect</h1>;
+    return 
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"FxTrusts Blog | Forex Broker Insights","description":"Read the latest insights, guides, and news about forex brokerage technology, MT5 white labels, and liquidity.","url":"https://fxtrusts.com/blog"}) }}
+      />
+      <h1 className="sr-only">Blog Redirect</h1>;
 }

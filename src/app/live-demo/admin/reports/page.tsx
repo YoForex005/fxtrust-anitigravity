@@ -23,7 +23,12 @@ export const metadata: Metadata = {
 export default function ReportsPage() {
     return (
         <>
-            <h1 className="sr-only">Reports Page</h1>
+            
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"Advanced CRM Reports | Business Intelligence | FxTrusts","description":"Generate detailed business reports on deposits, withdrawals, trading volumes, and IB performance.","url":"https://fxtrusts.com/live-demo/admin/reports"}) }}
+      />
+      <h1 className="sr-only">Reports Page</h1>
             <ReportsContent />
         </>
     );

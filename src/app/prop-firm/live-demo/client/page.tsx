@@ -61,7 +61,12 @@ export const metadata: Metadata = {
 export default function ClientDashboardPage() {
   return (
         <>
-            <h1 className="sr-only">Client Dashboard Page</h1>
+            
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"Forex Client Portal Demo | Trader's Room Live Preview | FxTrusts","description":"Experience the FxTrusts Client Portal. Live demo of the trader's room, deposit/withdrawal interface, document upload, and trading accounts management.","url":"https://fxtrusts.com/prop-firm/live-demo/client"}) }}
+      />
+      <h1 className="sr-only">Client Dashboard Page</h1>
             {/* Original Component */}
             
     <Suspense fallback={

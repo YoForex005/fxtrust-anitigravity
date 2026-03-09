@@ -74,7 +74,12 @@ export default function RiskManagementPage() {
 
     return (
         <>
-            <h1 className="sr-only">Risk Management Page</h1>
+            
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"Forex Risk Management Tools | A-Book B-Book Hedging | FXTrusts","description":"Advanced risk management for forex brokers. Real-time exposure monitoring, automated hedging, toxic flow detection, and P&L alerts.","url":"https://fxtrusts.com/solutions/risk-management"}) }}
+      />
+      <h1 className="sr-only">Risk Management Page</h1>
             {/* Original Component */}
             
         <main>

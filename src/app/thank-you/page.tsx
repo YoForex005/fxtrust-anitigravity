@@ -23,7 +23,12 @@ export const metadata: Metadata = {
 export default function ThankYouPage() {
     return (
         <>
-            <h1 className="sr-only">Thank You Page</h1>
+            
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"Thank You | FxTrusts","description":"Your strategy session with FxTrusts has been scheduled.","url":"https://fxtrusts.com/thank-you"}) }}
+      />
+      <h1 className="sr-only">Thank You Page</h1>
             <ThankYouPageClient />
         </>
     );

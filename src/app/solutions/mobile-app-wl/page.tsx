@@ -138,7 +138,12 @@ export default function MobileAppWLPage() {
                 contactEmail="support@domain.com"
             >
                 <div id="solution">
-                    <h1>White Label Mobile App Solution</h1>
+                    
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"White Label Mobile App | Custom iOS & Android","description":"Launch your own branded mobile trading app for iOS and Android. High-performance White Label solution with real-time charts and full broker integration.","url":"https://fxtrusts.com/solutions/mobile-app-wl"}) }}
+      />
+      <h1>White Label Mobile App Solution</h1>
                     <p>
                         The White Label Mobile App is a sophisticated, turnkey trading solution designed for brokers, prop firms, and fintech startups who want to own the client relationship. In an era where over 70% of trades are initiated via mobile, having a generic platform is no longer enough. Our custom iOS and Android apps allow you to offer a unique, high-performance environment that carries your brand’s identity, increasing user loyalty and market authority.
                     </p>

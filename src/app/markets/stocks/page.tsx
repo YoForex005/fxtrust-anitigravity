@@ -61,7 +61,12 @@ export default function StocksPage() {
                 ctaButtonText="Get Started"
                 ctaButtonHref="/company/contact"
             >
-                <h1>Global Stock Trading Infrastructure</h1>
+                
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"Stock Trading | 3000+ Global Equities | FxTrusts","description":"Trade shares from NYSE, NASDAQ, LSE, and major global exchanges. Access Apple, Tesla, Amazon, and 3000+ stocks with competitive pricing.","url":"https://fxtrusts.com/markets/stocks"}) }}
+      />
+      <h1>Global Stock Trading Infrastructure</h1>
                 <p>
                     Equity markets represent trillions of dollars in value and attract millions of active traders globally. At FxTrusts, we enable brokerages to offer stock CFDs, providing clients with exposure to the world's most valuable companies without the complexity of direct share ownership, custody, or exchange memberships.
                 </p>

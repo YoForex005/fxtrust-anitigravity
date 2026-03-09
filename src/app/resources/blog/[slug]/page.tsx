@@ -65,7 +65,12 @@ export default async function BlogPost({ params }: Props) {
             <Header />
             <article className={articleStyles.article}>
                 <header className={articleStyles.articleHeader}>
-                    <h1 className={articleStyles.articleTitle}>{post.title}</h1>
+                    
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"Post Not Found","description":"","url":"https://fxtrusts.com"}) }}
+      />
+      <h1 className={articleStyles.articleTitle}>{post.title}</h1>
                     <div className={articleStyles.articleMeta}>
                         <span>By {post.author}</span>
                         <span> | </span>

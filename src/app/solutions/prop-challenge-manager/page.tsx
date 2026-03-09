@@ -123,7 +123,12 @@ export default function PropChallengeManagerPage() {
                 contactEmail="support@domain.com"
             >
                 <div id="solution">
-                    <h1>Prop Challenge Manager Solution</h1>
+                    
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"Prop Challenge Manager | Evaluation & Risk Management Software","description":"Launch and manage prop firm challenges with automated evaluation rules, profit targets, and drawdown monitoring. Turnkey software for prop trading firms.","url":"https://fxtrusts.com/solutions/prop-challenge-manager"}) }}
+      />
+      <h1>Prop Challenge Manager Solution</h1>
                     <p>
                         The Prop Challenge Manager is a specialized back-office ecosystem designed for the modern prop trading industry. It provides the technological framework required to create, market, and manage trading evaluations. Whether you are running a single-phase "instant funding" model or a traditional two-phase evaluation, this solution automates the monitoring of complex trading rules, allowing you to focus on marketing and community building.
                     </p>

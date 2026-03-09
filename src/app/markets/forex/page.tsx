@@ -61,7 +61,12 @@ export default function ForexPage() {
                 ctaButtonText="Get Started"
                 ctaButtonHref="/company/contact"
             >
-                <h1>Forex Trading Infrastructure</h1>
+                
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"Forex Trading | Trade 80+ Currency Pairs | FxTrusts","description":"Access the global forex market with institutional-grade spreads, deep liquidity, and ultra-low latency execution. Trade major, minor, and exotic currency pairs.","url":"https://fxtrusts.com/markets/forex"}) }}
+      />
+      <h1>Forex Trading Infrastructure</h1>
                 <p>
                     The foreign exchange market is the largest and most liquid financial market in the world, with over $7.5 trillion traded daily. At FxTrusts, we provide the technology infrastructure that enables brokerages to offer their clients seamless access to this massive market with institutional-grade execution and competitive pricing.
                 </p>

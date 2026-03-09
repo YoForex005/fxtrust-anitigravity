@@ -64,7 +64,12 @@ export default function HelpCenterPage() {
                 ctaButtonText="Contact Support"
                 ctaButtonHref="/company/contact"
             >
-                <h1>FxTrusts Help Center</h1>
+                
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"Help Center | Support Resources | FxTrusts","description":"Comprehensive support resources for FxTrusts platform. Getting started guides, troubleshooting, settings, and frequently asked questions.","url":"https://fxtrusts.com/resources/help-center"}) }}
+      />
+      <h1>FxTrusts Help Center</h1>
                 <p>
                     Welcome to the FxTrusts Help Center. This comprehensive resource library contains guides, tutorials, and troubleshooting information to help you make the most of our platform. Whether you're setting up your first brokerage or optimizing an existing operation, you'll find the answers you need here.
                 </p>

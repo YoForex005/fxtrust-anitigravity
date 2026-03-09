@@ -137,7 +137,12 @@ export default function TechnicalSupportPage() {
                 contactEmail="support@domain.com"
             >
                 <div id="solution">
-                    <h1>24/7 Technical Support Solution</h1>
+                    
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"24/7 Outsourced Technical Support | L1/L2 Broker Helpdesk","description":"Scale your brokerage with 24/7 outsourced technical support. Expert L1/L2 helpdesk services for MetaTrader, cTrader, and CRM issues. Secure, white-labeled support.","url":"https://fxtrusts.com/solutions/technical-support"}) }}
+      />
+      <h1>24/7 Technical Support Solution</h1>
                     <p>
                         The 24/7 Outsourced Technical Support solution is an essential operational layer for modern brokerages, prop firms, and fintech providers. In the high-stakes world of online trading, a technical glitch during a high-volatility news event can result in massive client dissatisfaction. Our L1/L2 helpdesk serves as your first line of defense, providing immediate, technically accurate answers to trader inquiries while escalating complex server or bridge issues to specialized engineers.
                     </p>

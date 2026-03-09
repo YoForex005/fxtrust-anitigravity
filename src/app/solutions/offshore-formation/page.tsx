@@ -137,7 +137,12 @@ export default function OffshoreFormationPage() {
                 contactEmail="support@domain.com"
             >
                 <div id="solution">
-                    <h1>Offshore Company Formation Solution</h1>
+                    
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"Offshore Company Formation | SVG, Mauritius, Labuan","description":"Start your brokerage with professional offshore company formation. Fast setup in SVG, Mauritius, and Labuan with full compliance and corporate support.","url":"https://fxtrusts.com/solutions/offshore-formation"}) }}
+      />
+      <h1>Offshore Company Formation Solution</h1>
                     <p>
                         Offshore Company Formation is the first and most critical step for fintech founders and forex brokers looking to operate on a global scale. Choosing the right jurisdiction determines your tax efficiency, operational flexibility, and the ease with which you can secure payment processing and banking relationships. Our specialized team handles the entire incorporation process, ensuring that your company is structured correctly from day one to support high-volume international trading.
                     </p>

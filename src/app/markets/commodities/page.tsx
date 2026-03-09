@@ -61,7 +61,12 @@ export default function CommoditiesPage() {
                 ctaButtonText="Get Started"
                 ctaButtonHref="/company/contact"
             >
-                <h1>Commodity Trading Infrastructure</h1>
+                
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"Commodities Trading | Gold, Oil & More | FxTrusts","description":"Trade precious metals, energy products, and agricultural commodities with institutional spreads. Gold, Silver, Crude Oil, Natural Gas, and more.","url":"https://fxtrusts.com/markets/commodities"}) }}
+      />
+      <h1>Commodity Trading Infrastructure</h1>
                 <p>
                     Commodities represent some of the oldest traded assets in human history, and they remain critical components of modern portfolios. At FxTrusts, we provide brokerages with access to precious metals, energy products, and agricultural commodities through CFDs, allowing clients to speculate on price movements without physical delivery concerns.
                 </p>

@@ -62,7 +62,12 @@ export default function TermsPage() {
                 ctaButtonText="Contact Us"
                 ctaButtonHref="/company/contact"
             >
-                <h1>Terms and Conditions</h1>
+                
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"Terms & Conditions | Service Agreement | FxTrusts","description":"Terms and conditions governing the use of FxTrusts platform and services. Legal agreement for all users and brokerage operators.","url":"https://fxtrusts.com/legal/terms-conditions"}) }}
+      />
+      <h1>Terms and Conditions</h1>
                 <p>
                     These Terms and Conditions ("Agreement") constitute a legally binding contract between you ("Client," "you," or "your") and FxTrusts Ltd ("FxTrusts," "we," "us," or "our") governing your access to and use of our platform, software, and related services.
                 </p>

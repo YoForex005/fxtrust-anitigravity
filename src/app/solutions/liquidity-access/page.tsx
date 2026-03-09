@@ -123,7 +123,12 @@ export default function LiquidityAccessPage() {
                 contactEmail="support@domain.com"
             >
                 <div id="solution">
-                    <h1>Tier-1 Liquidity Access Solution</h1>
+                    
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"Tier-1 Liquidity Access | Multi-Asset Institutional Liquidity","description":"Access deep Tier-1 liquidity for Forex, Metals, Indices, Oil, and Crypto CFDs. Ultra-low latency execution and tight spreads for brokers and institutional clients.","url":"https://fxtrusts.com/solutions/liquidity-access"}) }}
+      />
+      <h1>Tier-1 Liquidity Access Solution</h1>
                     <p>
                         Tier-1 Liquidity Access provides brokers, hedge funds, and fintech founders with a direct gateway to the world’s most significant financial markets. By aggregating price feeds from top-tier investment banks and prime-of-prime providers, we offer a robust environment for A-Book execution. This solution eliminates the limitations of a single-source feed, providing the redundancy and depth required to manage high-volume trading and professional clientele.
                     </p>

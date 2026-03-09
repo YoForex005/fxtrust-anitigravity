@@ -61,7 +61,12 @@ export default function CryptoPage() {
                 ctaButtonText="Get Started"
                 ctaButtonHref="/company/contact"
             >
-                <h1>Cryptocurrency Trading Infrastructure</h1>
+                
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"Crypto Trading | Digital Asset Infrastructure | FxTrusts","description":"Trade Bitcoin, Ethereum, and 50+ cryptocurrencies with institutional liquidity. 24/7 markets, deep order books, and enterprise-grade security.","url":"https://fxtrusts.com/markets/crypto"}) }}
+      />
+      <h1>Cryptocurrency Trading Infrastructure</h1>
                 <p>
                     The cryptocurrency market has evolved from a niche technology experiment into a multi-trillion dollar asset class. With FxTrusts, your brokerage can offer clients seamless access to this dynamic market, complete with institutional liquidity, enterprise security, and regulatory-compliant infrastructure.
                 </p>

@@ -93,7 +93,12 @@ export default function CRMPage() {
 
     return (
         <>
-            <h1 className="sr-only">C R M Page</h1>
+            
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"Forex CRM | Enterprise Back-Office & KYC Management","description":"Optimize your brokerage operations with a high-performance Forex CRM. Manage leads, automate KYC, and track deposits with an integrated back-office solution.","url":"https://fxtrusts.com/solutions/crm"}) }}
+      />
+      <h1 className="sr-only">C R M Page</h1>
             {/* Original Component */}
             
         <main>

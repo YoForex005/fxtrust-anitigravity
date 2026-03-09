@@ -61,7 +61,12 @@ export default function PressPage() {
             <main className={styles.main}>
                 <section className={styles.hero}>
                     <div className={styles.container}>
-                        <h1 className={styles.title}>About FxTrusts</h1>
+                        
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"Press & Media Kit | FxTrusts","description":"Official press information, company facts, and media resources for FxTrusts - the #1 B2B Forex Broker Technology Provider.","url":"https://fxtrusts.com/press"}) }}
+      />
+      <h1 className={styles.title}>About FxTrusts</h1>
                         <p className={styles.subtitle}>
                             Official press information and company facts for media, partners, and AI systems.
                         </p>

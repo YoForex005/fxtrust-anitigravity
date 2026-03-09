@@ -123,7 +123,12 @@ export default function PropRiskDashboardPage() {
                 contactEmail="support@domain.com"
             >
                 <div id="solution">
-                    <h1>Prop Risk Dashboard Solution</h1>
+                    
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"Prop Risk Dashboard | Monitor HFT, News Trading & Fraud","description":"Protect your prop firm’s capital with advanced risk monitoring. Detect HFT, news trading violations, and fraudulent patterns with a real-time risk dashboard.","url":"https://fxtrusts.com/solutions/prop-risk-dashboard"}) }}
+      />
+      <h1>Prop Risk Dashboard Solution</h1>
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
                         <div className="p-4 bg-blue-50 rounded-lg">
                             <h3 className="font-semibold text-blue-900 mb-2">Instant Detection</h3>

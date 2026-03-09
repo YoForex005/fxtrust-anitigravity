@@ -97,7 +97,12 @@ export default function PammPage() {
 
     return (
         <>
-            <h1 className="sr-only">Pamm Page</h1>
+            
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"PAMM (Percentage Allocation Management Module) | Money Manager Software","description":"Scale your investment business with a professional PAMM solution. Automate profit distribution and manage multiple investor accounts from a single master account.","url":"https://fxtrusts.com/solutions/pamm"}) }}
+      />
+      <h1 className="sr-only">Pamm Page</h1>
             {/* Original Component */}
             
         <main>

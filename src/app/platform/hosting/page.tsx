@@ -44,7 +44,12 @@ export const metadata: Metadata = {
 export default function HostingPage() {
     return (
         <>
-            <h1 className="sr-only">Hosting Page</h1>
+            
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"MT5 Server Hosting | Equinix LD4 & NY4 | Low Latency Forex | FXTrusts","description":"Dedicated MT5 server hosting in Equinix LD4 & NY4. Sub-millisecond latency to major LPs. Bare metal servers, DDoS protection, 24/7 monitoring.","url":"https://fxtrusts.com/platform/hosting"}) }}
+      />
+      <h1 className="sr-only">Hosting Page</h1>
             {/* Original Component */}
             
         <main>

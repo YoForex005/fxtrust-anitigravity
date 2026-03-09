@@ -139,7 +139,12 @@ export default function VPSHostingPage() {
                 contactEmail="support@domain.com"
             >
                 <div id="solution">
-                    <h1>Ultra-Low Latency VPS Hosting Solution</h1>
+                    
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"Ultra-Low Latency VPS Hosting | Optimized for Trading Bots","description":"Scale your automated trading with Ultra-Low Latency VPS hosting. Optimized for Expert Advisors (EAs) with direct cross-connects to major broker data centers.","url":"https://fxtrusts.com/solutions/vps-hosting"}) }}
+      />
+      <h1>Ultra-Low Latency VPS Hosting Solution</h1>
                     <p>
                         Ultra-Low Latency VPS Hosting is the definitive solution for algorithmic traders, prop firm participants, and fund managers who rely on Expert Advisors (EAs). In a market where price slippage can erase profit margins, our VPS (Virtual Private Server) environment is stripped of all non-essential background processes and optimized specifically for MetaTrader and other trading terminals. By placing your bot closer to the broker’s execution engine, you significantly reduce the "round-trip" time of your orders.
                     </p>

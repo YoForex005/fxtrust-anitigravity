@@ -138,7 +138,12 @@ export default function WalletSystemPage() {
                 contactEmail="support@domain.com"
             >
                 <div id="solution">
-                    <h1>Multi-Currency Wallet System Solution</h1>
+                    
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"Multi-Currency Wallet System | Secure Internal Storage & Transfers","description":"Streamline your brokerage with a professional Multi-Currency Wallet System. Securely manage client funds, internal transfers, and multi-asset storage in one hub.","url":"/solutions/wallet-system"}) }}
+      />
+      <h1>Multi-Currency Wallet System Solution</h1>
                     <p>
                         The Multi-Currency Wallet System is a comprehensive financial hub designed for modern brokerages, prop firms, and digital asset exchanges. In today’s fast-moving markets, traders need more than just a trading account; they need a secure "home base" where they can park capital, hedge against volatility, and distribute funds across various sub-platforms without exiting your ecosystem. This solution acts as the primary bridge between external payment gateways and the active trading environment.
                     </p>

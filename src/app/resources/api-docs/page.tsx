@@ -44,7 +44,12 @@ export const metadata: Metadata = {
 export default function APIDocsPage() {
     return (
         <>
-            <h1 className="sr-only">A P I Docs Page</h1>
+            
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"API Documentation | Developer Resources | REST API Guide | FXTrusts","description":"Complete REST API documentation for forex broker integration. OAuth 2.0 authentication, 100+ endpoints, webhooks, SDKs for Python, JavaScript, PHP.","url":"https://fxtrusts.com/resources/api-docs"}) }}
+      />
+      <h1 className="sr-only">A P I Docs Page</h1>
             {/* Original Component */}
             
         <main>

@@ -23,7 +23,12 @@ export const metadata: Metadata = {
 export default function TradingPage() {
     return (
         <>
-            <h1 className="sr-only">Trading Page</h1>
+            
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"Live Trading Monitor | Risk Management | FxTrusts","description":"Real-time monitoring of client trading activity. View open positions, equity, and margin levels instantly.","url":"https://fxtrusts.com/prop-firm/live-demo/admin/trading"}) }}
+      />
+      <h1 className="sr-only">Trading Page</h1>
             <TradingContent />
         </>
     );

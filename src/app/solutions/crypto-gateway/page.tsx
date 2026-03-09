@@ -135,7 +135,12 @@ export default function CryptoGatewayPage() {
                 contactEmail="support@domain.com"
             >
                 <div id="solution">
-                    <h1>Crypto Payment Gateway Solution</h1>
+                    
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"Crypto Payment Gateway | Instant BTC, USDT, ETH Deposits","description":"Scale your brokerage with an instant Crypto Payment Gateway. Securely process BTC, USDT, and ETH deposits and payouts with real-time conversion and low fees.","url":"https://fxtrusts.com/solutions/crypto-gateway"}) }}
+      />
+      <h1>Crypto Payment Gateway Solution</h1>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                         <div className="p-4 bg-blue-50 rounded-lg">
                             <h3 className="font-semibold text-blue-900 mb-2">Turnkey Automation</h3>

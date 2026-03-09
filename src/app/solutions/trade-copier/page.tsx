@@ -138,7 +138,12 @@ export default function TradeCopierPage() {
                 contactEmail="support@domain.com"
             >
                 <div id="solution">
-                    <h1>Trade Copier Services Solution</h1>
+                    
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"Trade Copier Services | Master-to-Sub Account Replication","description":"Scale your trading with high-speed Trade Copier services. Replicate trades from Master to multiple sub-accounts instantly with custom risk settings and zero lag.","url":"https://fxtrusts.com/solutions/trade-copier-services-master-sub-replication"}) }}
+      />
+      <h1>Trade Copier Services Solution</h1>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                         <div className="p-4 bg-blue-50 rounded-lg">
                             <h3 className="font-semibold text-blue-900 mb-2">Automated Replication</h3>

@@ -27,7 +27,12 @@ export const metadata: Metadata = {
 export default function ManifestoPage() {
     return (
         <>
-            <h1 className="sr-only">Manifesto Page</h1>
+            
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"Our Manifesto | Why We Built FxTrusts","description":"We were brokers. We hated our tech providers. So we built the tech provider we wished we had. The FxTrusts origin story and philosophy.","url":"https://fxtrusts.com/company/manifesto"}) }}
+      />
+      <h1 className="sr-only">Manifesto Page</h1>
             {/* Original Component */}
             
         <main>

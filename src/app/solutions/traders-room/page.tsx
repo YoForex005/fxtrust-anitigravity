@@ -135,7 +135,12 @@ export default function TradersRoomPage() {
                 contactEmail="support@domain.com"
             >
                 <div id="solution">
-                    <h1>Trader&apos;s Room / Client Portal Solution</h1>
+                    
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"Trader’s Room & Client Portal | Secure Broker User Dashboard","description":"Streamline deposits, withdrawals, and account management with a custom-branded Trader’s Room. A secure, high-conversion portal for modern forex brokers.","url":"https://fxtrusts.com/solutions/traders-room"}) }}
+      />
+      <h1>Trader&apos;s Room / Client Portal Solution</h1>
                     <p>
                         The Trader&apos;s Room (or Client Cabinet) is the central nervous system of your client&apos;s relationship with your brokerage. It is a secure, web-based portal where traders manage their financial operations, personal profiles, and trading accounts without requiring direct assistance from your support desk. Designed for fintech founders and brokers, this solution bridges the gap between your marketing website and the trading platform.
                     </p>

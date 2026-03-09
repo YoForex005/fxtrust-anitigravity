@@ -137,7 +137,12 @@ export default function MarketDataApiPage() {
                 contactEmail="support@domain.com"
             >
                 <div id="solution">
-                    <h1>Market Data APIs Solution</h1>
+                    
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"Market Data APIs | Real-Time REST & WebSocket Feeds","description":"Power your platform with institutional-grade Market Data APIs. Access ultra-low latency REST and WebSocket feeds for Forex, Crypto, Stocks, and Indices.","url":"https://fxtrusts.com/solutions/market-data-api"}) }}
+      />
+      <h1>Market Data APIs Solution</h1>
                     <p>
                         Market Data APIs are the lifeblood of modern fintech. Whether you are building a custom trading terminal, a mobile portfolio tracker, or a sophisticated algorithmic strategy, the quality of your execution is fundamentally limited by the quality of your data. Our API solution provides a seamless, high-performance gateway to global financial markets. We bypass the delays of retail-grade providers by delivering raw feeds directly from institutional liquidity hubs.
                     </p>

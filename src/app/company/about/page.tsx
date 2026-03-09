@@ -24,7 +24,12 @@ export const metadata: Metadata = {
 export default function AboutPage() {
     return (
         <>
-            <h1 className="sr-only">About Page</h1>
+            
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"About FxTrusts | Our Story & Mission","description":"FxTrusts is a team of fintech veterans, quantitative developers, and infrastructure engineers. We democratize access to institutional-grade trading infrastructure.","url":"https://fxtrusts.com/company/about"}) }}
+      />
+      <h1 className="sr-only">About Page</h1>
             {/* Original Component */}
             
         <main>

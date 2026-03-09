@@ -61,7 +61,12 @@ export default function RefundPolicyPage() {
                 ctaButtonText="Contact Billing"
                 ctaButtonHref="/company/contact"
             >
-                <h1>Refund Policy</h1>
+                
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"Refund Policy | Money Back Guarantee | FxTrusts","description":"FxTrusts refund policy detailing our 30-day money-back guarantee, refund eligibility, and cancellation procedures.","url":"https://fxtrusts.com/legal/refund-policy"}) }}
+      />
+      <h1>Refund Policy</h1>
                 <p>
                     At FxTrusts, we are confident in the quality of our platform and services. We offer a straightforward 30-day money-back guarantee to ensure you can evaluate our solution risk-free. This policy outlines the terms, eligibility requirements, and procedures for requesting refunds.
                 </p>

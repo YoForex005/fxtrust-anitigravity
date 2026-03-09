@@ -123,7 +123,12 @@ export default function EvaluationEnginePage() {
                 contactEmail="support@domain.com"
             >
                 <div id="solution">
-                    <h1>Automated Evaluation Engine Solution</h1>
+                    
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"Automated Evaluation Engine | Instant Prop Firm Transitions","description":"Scale your prop firm with an Automated Evaluation Engine. Auto-transition traders from demo to funded accounts based on real-time profit and risk rules.","url":"https://fxtrusts.com/solutions/evaluation-engine"}) }}
+      />
+      <h1>Automated Evaluation Engine Solution</h1>
                     <p>
                         The Automated Evaluation Engine is a high-performance backend module designed specifically for proprietary trading firms and investment incubators. It serves as the intelligent layer between your trading server and your client database. Its primary function is to track trader performance against specific KPIs—such as profit targets and drawdown limits—and execute account status changes instantly without human intervention.
                     </p>

@@ -139,7 +139,12 @@ export default function ReportServerPage() {
                 contactEmail="support@domain.com"
             >
                 <div id="solution">
-                    <h1>MT5 Report Server Solution</h1>
+                    
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"MT5 Report Server | Advanced Data Extraction & Analytics","description":"Unlock deep insights with an MT5 Report Server. Extract real-time trading data, automate complex reporting, and optimize brokerage performance with ease.","url":"https://fxtrusts.com/solutions/report-server"}) }}
+      />
+      <h1>MT5 Report Server Solution</h1>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                         <div className="p-4 bg-blue-50 rounded-lg">
                             <h3 className="font-semibold text-blue-900 mb-2">Dedicated Data Environment</h3>

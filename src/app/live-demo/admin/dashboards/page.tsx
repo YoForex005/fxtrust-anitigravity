@@ -23,7 +23,12 @@ export const metadata: Metadata = {
 export default function DashboardsPage() {
     return (
         <>
-            <h1 className="sr-only">Dashboards Page</h1>
+            
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"CRM Dashboards | Analytics & Reporting | FxTrusts","description":"Real-time Forex CRM dashboards. Visualize sales performance, lead conversion rates, and deposit trends.","url":"https://fxtrusts.com/live-demo/admin/dashboards"}) }}
+      />
+      <h1 className="sr-only">Dashboards Page</h1>
             <DashboardsContent />
         </>
     );

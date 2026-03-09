@@ -23,7 +23,12 @@ export const metadata: Metadata = {
 export default function DocumentsPage() {
     return (
         <>
-            <h1 className="sr-only">Documents Page</h1>
+            
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"KYC Document Management | Compliance Module | FxTrusts","description":"Manage client KYC documents securely. View, approve, or reject identity and residence proofs with ease.","url":"https://fxtrusts.com/prop-firm/live-demo/admin/documents"}) }}
+      />
+      <h1 className="sr-only">Documents Page</h1>
             <DocumentsContent />
         </>
     );

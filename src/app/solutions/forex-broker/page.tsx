@@ -78,7 +78,12 @@ export default function ForexBrokerPage() {
 
     return (
         <>
-            <h1 className="sr-only">Forex Broker Page</h1>
+            
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"Start a Forex Broker | How to Become a Forex Broker | FxTrusts","description":"How to start a forex brokerage firm. Complete turnkey solution with MT5 white label, CRM, liquidity, and 24/7 support. Launch your forex broker business in weeks.","url":"https://fxtrusts.com/solutions/forex-broker"}) }}
+      />
+      <h1 className="sr-only">Forex Broker Page</h1>
             {/* Original Component */}
             
         <main className={styles.main}>

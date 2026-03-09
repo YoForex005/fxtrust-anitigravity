@@ -157,7 +157,12 @@ export default function ResourcesPage() {
 
     return (
         <>
-            <h1 className="sr-only">Resources Page</h1>
+            
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"Resources | Documentation, Guides & Support | FxTrusts","description":"Comprehensive forex broker resources including API documentation, platform guides, industry comparisons, blog articles, and 24/7 support. Everything you need to succeed.","url":"https://fxtrusts.com/resources"}) }}
+      />
+      <h1 className="sr-only">Resources Page</h1>
             {/* Original Component */}
             
         <main>

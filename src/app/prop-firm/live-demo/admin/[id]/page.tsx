@@ -29,7 +29,12 @@ export default async function AccountDetailPage({ params }: PageProps) {
     const { id } = await params;
     return (
         <>
-            <h1 className="sr-only">Client Account Profile</h1>
+            
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"Client Account Profile | CRM Record View | FxTrusts","description":"Comprehensive view of client data, including personal info, financial history, and activity logs.","url":"https://fxtrusts.com"}) }}
+      />
+      <h1 className="sr-only">Client Account Profile</h1>
             <AccountDetailContent accountId={id} />
         </>
     );

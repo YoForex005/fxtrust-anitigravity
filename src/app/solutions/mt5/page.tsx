@@ -133,7 +133,12 @@ export default function MT5Page() {
                 contactEmail="support@domain.com"
             >
                 <div id="solution">
-                    <h1>MetaTrader 5 (MT5) White Label License Solution</h1>
+                    
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"MetaTrader 5 (MT5) White Label License | Branded Broker Platform","description":"Launch your own branded brokerage with a MetaTrader 5 (MT5) White Label. Fully customizable, secure hosting, and 24/7 expert support for brokers.","url":"https://fxtrusts.com/solutions/mt5"}) }}
+      />
+      <h1>MetaTrader 5 (MT5) White Label License Solution</h1>
                     <p>
                         The MetaTrader 5 (MT5) White Label solution is a comprehensive package designed for emerging brokers, fintech startups, and established financial institutions looking to offer a premium trading experience. By utilizing our infrastructure, you bypass the massive capital expenditure and technical complexity of purchasing a full MetaQuotes server license, while still providing your clients with the industry’s gold-standard platform.
                     </p>

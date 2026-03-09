@@ -44,7 +44,12 @@ export const metadata: Metadata = {
 export default function MT5Page() {
     return (
         <>
-            <h1 className="sr-only">M T5 Page</h1>
+            
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"MetaTrader 5 White Label Solution | MT5 Broker Platform | FXTrusts","description":"Launch your MetaTrader 5 brokerage in days, not months. Full Manager & Administrator access, branded mobile apps, 99.99% uptime SLA. No setup fees. No per-plugin charges.","url":"https://fxtrusts.com/platform/mt5"}) }}
+      />
+      <h1 className="sr-only">M T5 Page</h1>
             {/* Original Component */}
             
         <main>

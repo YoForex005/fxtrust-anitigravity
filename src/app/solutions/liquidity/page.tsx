@@ -123,7 +123,12 @@ export default function LiquidityPage() {
                 contactEmail="support@domain.com"
             >
                 <div id="solution">
-                    <h1>Liquidity Bridge & Aggregation Solution</h1>
+                    
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"Liquidity Bridge & Aggregation | Connect to Top-Tier LPs","description":"Optimize your A-Book execution with a high-speed Liquidity Bridge and Aggregator. Connect to Tier-1 LPs, reduce slippage, and manage risk with ease.","url":"https://fxtrusts.com/solutions/liquidity"}) }}
+      />
+      <h1>Liquidity Bridge & Aggregation Solution</h1>
                     <p>
                         The Liquidity Bridge & Aggregation engine is the technical heart of any A-Book or Hybrid brokerage. It acts as a high-speed gateway that routes client orders from your trading terminal (MT4/MT5) directly to external Liquidity Providers (LPs). This solution is designed for fintech founders and institutional brokers who require transparency, speed, and the ability to aggregate price feeds from various sources into a single, optimized stream.
                     </p>

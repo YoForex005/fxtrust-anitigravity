@@ -23,7 +23,12 @@ export const metadata: Metadata = {
 export default function TransactionsPage() {
     return (
         <>
-            <h1 className="sr-only">Transactions Page</h1>
+            
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"Transaction Management | Deposits & Withdrawals | FxTrusts","description":"Securely manage client financial transactions. Approve deposits, process withdrawals, and audit history.","url":"https://fxtrusts.com/live-demo/admin/transactions"}) }}
+      />
+      <h1 className="sr-only">Transactions Page</h1>
             <TransactionsContent />
         </>
     );

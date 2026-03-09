@@ -45,7 +45,12 @@ export const metadata: Metadata = {
 export default function WebTraderPage() {
     return (
         <>
-            <h1 className="sr-only">Web Trader Page</h1>
+            
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"MetaTrader 5 Web Trader | Browser-Based Trading Platform | FXTrusts","description":"Access MT5 trading from any browser. No download required. TradingView charts, one-click trading, Mac compatible. White-label web trading platform for forex brokers.","url":"https://fxtrusts.com/platform/web-trader"}) }}
+      />
+      <h1 className="sr-only">Web Trader Page</h1>
             {/* Original Component */}
             
         <main>

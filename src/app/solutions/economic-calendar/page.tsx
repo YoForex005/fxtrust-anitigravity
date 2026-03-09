@@ -138,7 +138,12 @@ export default function EconomicCalendarPage() {
                 contactEmail="support@domain.com"
             >
                 <div id="solution">
-                    <h1>Economic Calendar & Real-Time News Feeds Solution</h1>
+                    
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"Economic Calendar & Real-Time News Feeds | Broker Widgets","description":"Enhance your trading platform with a professional Economic Calendar and real-time News Feeds. Provide actionable market data to increase trader engagement.","url":"https://fxtrusts.com/solutions/economic-calendar"}) }}
+      />
+      <h1>Economic Calendar & Real-Time News Feeds Solution</h1>
                     <p>
                         In the world of high-velocity trading, information is the most valuable currency. Our Economic Calendar and Real-Time News Feed solution is designed to transform your brokerage into a comprehensive research hub. Instead of your clients visiting third-party news sites to check NFP data or central bank interest rate decisions, they can access premium, filtered, and actionable data directly within your branded ecosystem.
                     </p>

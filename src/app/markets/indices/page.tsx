@@ -61,7 +61,12 @@ export default function IndicesPage() {
                 ctaButtonText="Get Started"
                 ctaButtonHref="/company/contact"
             >
-                <h1>Global Indices Trading Infrastructure</h1>
+                
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"Indices Trading | Global Stock Indices | FxTrusts","description":"Trade major global indices including S&P 500, NASDAQ, FTSE 100, DAX 40, and Nikkei 225 with competitive spreads and leverage.","url":"https://fxtrusts.com/markets/indices"}) }}
+      />
+      <h1>Global Indices Trading Infrastructure</h1>
                 <p>
                     Stock market indices offer traders exposure to entire economies and sectors through a single instrument. At FxTrusts, we provide brokerages with the infrastructure to offer major global indices as CFDs, enabling clients to speculate on market movements without the complexity of individual stock ownership.
                 </p>

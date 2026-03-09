@@ -20,7 +20,12 @@ export const metadata: Metadata = {
 export default function PricingPage() {
     return (
         <>
-            <h1 className="sr-only">Pricing Page</h1>
+            
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"Forex Broker CRM Pricing | Transparent Costs | FxTrusts","description":"Transparent pricing for Forex Broker CRM and MT5 White Label. No hidden fees. Calculator included.","url":"https://fxtrusts.com/pricing"}) }}
+      />
+      <h1 className="sr-only">Pricing Page</h1>
             <PricingContent />
         </>
     );

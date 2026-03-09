@@ -20,7 +20,12 @@ export const metadata: Metadata = {
 export default function StatusPage() {
     return (
         <>
-            <h1 className="sr-only">Status Page</h1>
+            
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"System Status | FxTrusts","description":"Real-time operational status of FxTrusts trading infrastructure, CRM, API, and payment processing systems.","url":"https://fxtrusts.com/resources/status"}) }}
+      />
+      <h1 className="sr-only">Status Page</h1>
             <StatusContent />
         </>
     );

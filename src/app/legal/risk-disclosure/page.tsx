@@ -25,7 +25,12 @@ export const metadata: Metadata = {
 export default function RiskDisclosurePage() {
     return (
         <>
-            <h1 className="sr-only">Risk Disclosure Page</h1>
+            
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"Risk Disclosure | CFD Trading Risks | FxTrusts","description":"Important risk disclosure information for Forex and CFD trading. Understand leverage risks, market risks, and key considerations before trading.","url":"https://fxtrusts.com/legal/risk-disclosure"}) }}
+      />
+      <h1 className="sr-only">Risk Disclosure Page</h1>
             {/* Original Component */}
             
         <main>

@@ -45,7 +45,12 @@ export const metadata: Metadata = {
 export default function CRMPage() {
     return (
         <>
-            <h1 className="sr-only">C R M Page</h1>
+            
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"Forex CRM Software | Broker Back Office System | FXTrusts","description":"Purpose-built Forex CRM software for brokers. Automate IB commissions, KYC verification, deposits & withdrawals. Better than Leverate, UpTrader & B2Core.","url":"https://fxtrusts.com/platform/crm"}) }}
+      />
+      <h1 className="sr-only">C R M Page</h1>
             {/* Original Component */}
             
         <main>

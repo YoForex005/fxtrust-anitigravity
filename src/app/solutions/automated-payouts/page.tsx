@@ -136,7 +136,12 @@ export default function AutomatedPayoutsPage() {
                 contactEmail="support@domain.com"
             >
                 <div id="solution">
-                    <h1>Automated Payout Systems Solution</h1>
+                    
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"Automated Payout Systems | Mass Payouts for Prop Firms","description":"Streamline your prop firm operations with automated mass payout systems. Process thousands of trader withdrawals instantly via Crypto or Fiat.","url":"https://fxtrusts.com/solutions/automated-payout-systems-prop-firm-mass-payouts"}) }}
+      />
+      <h1>Automated Payout Systems Solution</h1>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                         <div className="p-4 bg-blue-50 rounded-lg">
                             <h3 className="font-semibold text-blue-900 mb-2">Mass Payout Capabilities</h3>

@@ -62,7 +62,12 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-            <h1 className="sr-only">Home</h1>
+            
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"B2B Broker Solutions | Liquidity, CRM & White Label | FxTrusts","description":"FxTrusts is the premier B2B Broker technology provider. The complete ecosystem: Liquidity, CRM, and MT5 White Label. Superior technology, better pricing.","url":"https://fxtrusts.com"}) }}
+      />
+      <h1 className="sr-only">Home</h1>
       <Header />
       <Hero />
       <MT5Badge />

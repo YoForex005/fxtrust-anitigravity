@@ -138,7 +138,12 @@ export default function MAMPage() {
                 contactEmail="support@domain.com"
             >
                 <div id="solution">
-                    <h1>MAM (Multi-Account Manager) Solution</h1>
+                    
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"MAM (Multi-Account Manager) | Professional Money Manager Tool","description":"Scale your investment business with a professional Multi-Account Manager (MAM). Execute bulk trades across unlimited investor accounts with custom lot allocation.","url":"https://fxtrusts.com/solutions/mam"}) }}
+      />
+      <h1>MAM (Multi-Account Manager) Solution</h1>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
                         <div className="p-4 bg-blue-50 rounded-lg">
                             <h3 className="font-semibold text-blue-900 mb-2">Granular Allocation</h3>

@@ -22,7 +22,12 @@ export const metadata: Metadata = {
 export default function NewAccountPage() {
     return (
         <>
-            <h1 className="sr-only">New Account Page</h1>
+            
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"New Client Registration | Account Creation | FxTrusts","description":"Manually register a new client account directly into the CRM system.","url":"https://fxtrusts.com"}) }}
+      />
+      <h1 className="sr-only">New Account Page</h1>
             <NewAccountContent />
         </>
     );
