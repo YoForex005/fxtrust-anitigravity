@@ -190,6 +190,9 @@ export default function Header() {
                             </Link>
                         </div>
                     </div>
+                    
+                    {/* Direct link between Platform and Solutions */}
+                    <Link href="/products" className={styles.navLink}>Our Products</Link>
 
                     {/* Solutions Dropdown */}
                     <div className={`${styles.navItem} ${styles.megaMenuParent}`}>
@@ -568,6 +571,11 @@ export default function Header() {
                             <Link href="/platform/hosting" className={styles.mobileSublink} onClick={() => setIsMenuOpen(false)}>Low-Latency Hosting</Link>
                         </div>
                     </div>
+
+                    {/* Direct link between Platform and Solutions */}
+                    <Link href="/products" className={styles.mobileDirectLink} onClick={() => setIsMenuOpen(false)}>
+                        <div className={styles.mobileMenuHeader} style={{ paddingBottom: '0' }}>Our Products</div>
+                    </Link>
 
                     {/* Solutions */}
                     <div className={styles.mobileMenuItem}>

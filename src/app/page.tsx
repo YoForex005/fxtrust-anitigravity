@@ -6,7 +6,8 @@ import Logos from '@/components/Logos';
 import Problem from '@/components/Problem';
 
 // Lazy load below-the-fold components
-const ROICalculator = dynamic(() => import('@/components/ROICalculator'), { ssr: true });
+const Products = dynamic(() => import('@/components/Products'), { ssr: true });
+
 const Features = dynamic(() => import('@/components/Features'), { ssr: true });
 const TrustBadges = dynamic(() => import('@/components/TrustBadges'), { ssr: true });
 const LiveStats = dynamic(() => import('@/components/LiveStats'), { ssr: true });
@@ -72,8 +73,9 @@ export default function Home() {
       <Hero />
       <MT5Badge />
       <Logos />
+      <Products />
       <Problem />
-      <ROICalculator />
+
       <Features />
       <TrustBadges />
       <LiveStats />

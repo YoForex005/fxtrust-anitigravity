@@ -6,9 +6,10 @@ export default function TrustBadges() {
     const badges = [
         {
             icon: (
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                    <path d="M9 12l2 2 4-4" />
+                // ISO 27001 - Shield with checkmark (white on dark)
+                <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24 4L8 11v13c0 10.5 7 20 16 23 9-3 16-12.5 16-23V11L24 4z" fill="rgba(255,255,255,0.15)" stroke="white" strokeWidth="2"/>
+                    <path d="M17 24l5 5 9-9" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
             ),
             title: 'ISO 27001',
@@ -16,10 +17,13 @@ export default function TrustBadges() {
         },
         {
             icon: (
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                    <rect x="3" y="11" width="18" height="10" rx="2" />
-                    <path d="M7 11V7a5 5 0 0 1 10 0v4" />
-                    <circle cx="12" cy="16" r="1" />
+                // PCI DSS - Credit card
+                <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="6" y="12" width="36" height="24" rx="4" stroke="white" strokeWidth="2" fill="rgba(255,255,255,0.1)"/>
+                    <rect x="6" y="18" width="36" height="6" fill="rgba(255,255,255,0.25)"/>
+                    <rect x="12" y="30" width="10" height="3" rx="1.5" fill="white" opacity="0.7"/>
+                    <circle cx="34" cy="31.5" r="3" stroke="white" strokeWidth="1.5"/>
+                    <path d="M32.5 31v-1.5a1.5 1.5 0 013 0V31" stroke="white" strokeWidth="1.2" strokeLinecap="round"/>
                 </svg>
             ),
             title: 'PCI DSS',
@@ -27,9 +31,11 @@ export default function TrustBadges() {
         },
         {
             icon: (
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                    <circle cx="12" cy="12" r="10" />
-                    <path d="M9 12l2 2 4-4" />
+                // SOC 2 - Double ring checkmark
+                <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="19" stroke="rgba(255,255,255,0.3)" strokeWidth="1.5"/>
+                    <circle cx="24" cy="24" r="13" stroke="white" strokeWidth="2"/>
+                    <path d="M17 24l5 5 9-9" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
             ),
             title: 'SOC 2',
@@ -37,9 +43,10 @@ export default function TrustBadges() {
         },
         {
             icon: (
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                    <path d="M12 8v4M12 16h.01" />
+                // GDPR - Shield with EU stars
+                <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M24 4L8 11v13c0 10.5 7 20 16 23 9-3 16-12.5 16-23V11L24 4z" fill="rgba(255,255,255,0.1)" stroke="white" strokeWidth="2"/>
+                    <text x="24" y="29" textAnchor="middle" fontSize="11" fontWeight="800" fontFamily="Arial" fill="white">EU</text>
                 </svg>
             ),
             title: 'GDPR',
@@ -47,9 +54,12 @@ export default function TrustBadges() {
         },
         {
             icon: (
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                    <rect x="3" y="11" width="18" height="10" rx="2" />
-                    <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+                // SSL - Padlock
+                <svg width="28" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="12" y="22" width="24" height="18" rx="4" stroke="white" strokeWidth="2" fill="rgba(255,255,255,0.1)"/>
+                    <path d="M17 22v-6a7 7 0 0114 0v6" stroke="white" strokeWidth="2.2" strokeLinecap="round"/>
+                    <circle cx="24" cy="31" r="3" fill="white"/>
+                    <line x1="24" y1="34" x2="24" y2="37" stroke="white" strokeWidth="2" strokeLinecap="round"/>
                 </svg>
             ),
             title: '256-bit SSL',
@@ -57,50 +67,39 @@ export default function TrustBadges() {
         },
         {
             icon: (
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                    <circle cx="12" cy="12" r="10" />
-                    <polyline points="12 6 12 12 16 14" />
+                // 99.99% Uptime - Clock
+                <svg width="30" height="30" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="24" cy="24" r="18" stroke="rgba(255,255,255,0.3)" strokeWidth="2"/>
+                    <circle cx="24" cy="24" r="13" stroke="white" strokeWidth="2"/>
+                    <path d="M24 14v10l6 4" stroke="white" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
                 </svg>
             ),
             title: '99.99%',
             subtitle: 'Uptime SLA'
         },
         {
-            icon: (
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z" />
-                    <polyline points="3.27 6.96 12 12.01 20.73 6.96" />
-                    <line x1="12" y1="22.08" x2="12" y2="12" />
-                </svg>
-            ),
+            icon: <img src="/logos/aws.svg" alt="AWS" style={{width:'40px', height:'auto', objectFit:'contain', filter:'brightness(0) invert(1)'}} />,
             title: 'AWS',
             subtitle: 'Infrastructure'
         },
         {
-            icon: (
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                    <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z" />
-                </svg>
-            ),
+            icon: <img src="/logos/azure.svg" alt="Azure" style={{width:'34px', height:'auto', objectFit:'contain', filter:'brightness(0) invert(1)'}} />,
             title: 'Azure',
             subtitle: 'Cloud Partner'
         },
         {
-            icon: (
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-                    <path d="M8 11h8M8 15h5" />
-                </svg>
-            ),
+            icon: <img src="/logos/cloudflare.svg" alt="Cloudflare" style={{width:'40px', height:'auto', objectFit:'contain', filter:'brightness(0) invert(1)'}} />,
             title: 'Cloudflare',
             subtitle: 'DDoS Protected'
         },
         {
             icon: (
-                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-                    <path d="M12 2L2 7l10 5 10-5-10-5z" />
-                    <path d="M2 17l10 5 10-5" />
-                    <path d="M2 12l10 5 10-5" />
+                // MetaQuotes - trading chart
+                <svg width="32" height="30" viewBox="0 0 48 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 32L14 14L24 26L34 10L44 32" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+                    <circle cx="24" cy="26" r="3" fill="white"/>
+                    <circle cx="14" cy="14" r="2" fill="rgba(255,255,255,0.6)"/>
+                    <circle cx="34" cy="10" r="2" fill="rgba(255,255,255,0.6)"/>
                 </svg>
             ),
             title: 'MetaQuotes',

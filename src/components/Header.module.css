@@ -4,13 +4,22 @@
     left: 0;
     right: 0;
     z-index: 1000;
-    /* Initial Transparent State */
+    /* Default Gradient matching the new blue/purple aesthetic */
+    background: linear-gradient(90deg, #F4F7FE 0%, #EDF1FC 50%, #E3E8FF 100%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(229, 231, 235, 0.3);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s ease;
+}
+
+/* Specific purely transparent state required by the index page hero */
+.header.transparentHome {
     background: transparent;
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
     border-bottom: 1px solid transparent;
     box-shadow: none;
-    transition: all 0.3s ease;
 }
 
 .scrolled {
