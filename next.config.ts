@@ -28,23 +28,7 @@ const nextConfig: NextConfig = {
       },
     ],
   },
-  async redirects() {
-    return [
-      // Non-www → www redirect (SEO canonical normalization)
-      {
-        source: '/:path*',
-        has: [{ type: 'host', value: 'fxtrusts.com' }],
-        destination: 'https://www.fxtrusts.com/:path*',
-        permanent: true,
-      },
-      // Remove trailing slashes
-      {
-        source: '/:path+/',
-        destination: '/:path+',
-        permanent: true,
-      },
-    ];
-  },
+
   async headers() {
     return [
       {
