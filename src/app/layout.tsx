@@ -91,7 +91,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <head>
+      <body className={`${inter.className} overflow-x-hidden`}>
         {/* Google Analytics */}
         <GoogleAnalytics gaId="G-JTKXHLHJY8" />
 
@@ -138,8 +138,6 @@ export default function RootLayout({
             })
           }}
         />
-      </head>
-      <body className={`${inter.className} overflow-x-hidden`}>
         <OrganizationSchema />
         <GoogleTranslate />
         {children}
