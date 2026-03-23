@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
+import Link from "next/link"
 import {
   BarChart3,
   MonitorSmartphone,
@@ -16,42 +17,48 @@ interface Card {
   contentType: 1 | 2 | 3 | 4 | 5 | 6
 }
 
-const cardData: Record<number, { title: string; description: string; icon: React.ReactNode; color: string }> = {
+const cardData: Record<number, { title: string; description: string; icon: React.ReactNode; color: string; url: string }> = {
   1: {
     title: "PropFirm Admin + Client",
     description: "Fully Whitelabeled Prop Trading Platform",
     icon: <BarChart3 size={48} />,
     color: "#2563eb",
+    url: "/solutions/prop-firm",
   },
   2: {
     title: "Orrnn RTX5 Trading Terminal",
     description: "Next-Gen Trading Terminal — Manager + Mobile + Web",
     icon: <MonitorSmartphone size={48} />,
     color: "#7c3aed",
+    url: "/solutions/rtx5-terminal",
   },
   3: {
     title: "Forex CRM",
     description: "Admin + Client + Mobile — Supports cTrader, MT5, MT4, RTX5",
     icon: <Users size={48} />,
     color: "#059669",
+    url: "/solutions/crm",
   },
   4: {
     title: "Trade Copier",
     description: "All Platforms — MT5, MT4, cTrader, Trade Locker, RTX5",
     icon: <Copy size={48} />,
     color: "#d97706",
+    url: "/solutions/trade-copier",
   },
   5: {
     title: "YoForex AI",
     description: "AI-Powered Trading — Mobile + Web App",
     icon: <Brain size={48} />,
     color: "#dc2626",
+    url: "/solutions/yoforex-ai",
   },
   6: {
     title: "Whitelabel & Custom Websites",
     description: "Forex-Focused Web Development & Branding",
     icon: <Globe size={48} />,
     color: "#0891b2",
+    url: "/solutions/white-label-custom-websites",
   },
 }
 
@@ -98,7 +105,7 @@ function CardContent({ contentType }: { contentType: number }) {
           <span className="truncate font-medium text-slate-900">{data.title}</span>
           <span className="text-sm text-slate-500">{data.description}</span>
         </div>
-        <button className="flex h-10 shrink-0 cursor-pointer select-none items-center gap-0.5 rounded-full bg-slate-900 pl-4 pr-3 text-sm font-medium text-white hover:bg-slate-800">
+        <Link href={data.url} className="flex h-10 shrink-0 cursor-pointer select-none items-center gap-0.5 rounded-full bg-white pl-4 pr-3 text-sm font-medium text-slate-900 hover:bg-slate-100">
           View
           <svg
             width="16"
@@ -111,7 +118,7 @@ function CardContent({ contentType }: { contentType: number }) {
           >
             <path d="M9.5 18L15.5 12L9.5 6" />
           </svg>
-        </button>
+        </Link>
       </div>
     </div>
   )
