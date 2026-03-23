@@ -7,7 +7,7 @@ export default function Hero() {
         <section className={styles.hero}>
             <Image
                 src="/hero.png"
-                alt="FxTrusts MetaTrader 5 white-label platform background"
+                alt="FxTrusts - Complete Forex Technology Portfolio"
                 fill
                 priority
                 sizes="100vw"
@@ -16,17 +16,17 @@ export default function Hero() {
             <div className={styles.content}>
                 <div className={styles.badge}>
                     <span className={styles.badgeIcon}>⚡</span>
-                    <span>Built with MetaTrader 5</span>
+                    <span>Please Remove MetaTrader</span>
                 </div>
                 <h1 className={styles.headline}>
-                    MetaTrader 5 White-Label Platform That Actually Works. (And Launches in Weeks, Not "Eventually")
+                    The Complete Forex Technology Portfolio. Whitelabel Solutions & Custom Websites Built for Your Brand.
                 </h1>
                 <p className={styles.subtext}>
-                    Built on MetaTrader 5 - the world's most trusted trading platform. Remember when your old provider said "it'll be ready next week" for 6 months straight? Yeah, we're not that. Launch a fully-compliant MT5 brokerage faster than your last provider answered a support ticket. $700/mo base + $60 per active user. No setup fees that require a second mortgage.
+                    FxTrusts delivers end-to-end forex technology — from PropFirm platforms and AI-powered trading to full CRM systems and cross-platform trade copiers. We build fully whitelabeled solutions and custom websites tailored to your brokerage. Everything you need under one roof, launched in weeks, not months.
                 </p>
                 <div className={styles.actions}>
                     <Link href="/get-started" className={styles.primaryBtn}>
-                        Show Me How This Works
+                        Explore Our Portfolio
                         <span>→</span>
                     </Link>
                 </div>

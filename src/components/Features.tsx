@@ -8,13 +8,13 @@ export default function Features() {
                 {/* Header */}
                 <div className={styles.header}>
                     <div className={styles.badge}>
-                        <span>MT5 ECOSYSTEM</span>
+                        <span>FXTRUSTS ENGINE</span>
                     </div>
                     <h2 className={styles.headline}>
-                        Full MetaTrader 5 Stack + Integrations That Actually Work.
+                        Multi-Platform Infrastructure + Integrations That Actually Work.
                     </h2>
                     <p className={styles.subheadline}>
-                        MetaTrader 5 infrastructure connected to everything you need. From deposits to trade execution, we automate the boring stuff so you can focus on the fun part (convincing people to trade with you).
+                        Our core engine connects to every major trading platform — cTrader, MT5, MT4, RTX5, Trade Locker, Match Trader and more. From deposits to trade execution, we automate the boring stuff so you can focus on growing your business.
                     </p>
                 </div>
 
@@ -28,7 +28,7 @@ export default function Features() {
                                     <path d="M20 13H4c-.55 0-1 .45-1 1v6c0 .55.45 1 1 1h16c.55 0 1-.45 1-1v-6c0-.55-.45-1-1-1zM7 19c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM20 3H4c-.55 0-1 .45-1 1v6c0 .55.45 1 1 1h16c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zM7 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z" />
                                 </svg>
                             </div>
-                            <span className={styles.inputLabel}>MT5 / MT4<br />Servers</span>
+                            <span className={styles.inputLabel}>Trading Platform<br />Servers</span>
                         </div>
 
                         <div className={styles.inputCard}>

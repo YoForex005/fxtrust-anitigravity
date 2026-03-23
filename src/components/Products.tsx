@@ -6,55 +6,81 @@ import styles from './Products.module.css';
 
 const productsData = [
   {
-    id: 'yoforexai',
-    name: 'YoForex AI',
-    tagline: 'AI Forex Signals Platform',
-    url: 'https://yoforexai.com/',
+    id: 'propfirm',
+    name: 'PropFirm Admin + Client',
+    tagline: 'Fully Whitelabeled Prop Trading Platform',
+    url: '/get-started',
     logoImage: '/images/yoforexai-logo.webp',
     features: [
-      'AI-powered forex signals with institutional precision',
-      'Multi-AI Consensus & Recovery Engine',
-      'Replicates Dynamic Hedger EA flow',
-      'AI Model Marketplace & Accuracy Library',
+      'Complete Admin & Client dashboards',
+      'Mobile App (iOS + Android) included',
+      'Built-in Risk Management Plugin',
+      'Full whitelabel — your brand, your platform',
+    ],
+  },
+  {
+    id: 'rtx5',
+    name: 'Orrnn RTX5 Trading Terminal',
+    tagline: 'Next-Gen Trading Terminal',
+    url: '/get-started',
+    logoImage: '/images/trade copier logo white bg1.jpg',
+    features: [
+      'Manager Terminal + Client Apps',
+      'Mobile App (iOS + APK) ready',
+      'Web Trading interface included',
+      'Lightning-fast execution engine',
+    ],
+  },
+  {
+    id: 'forexcrm',
+    name: 'Forex CRM',
+    tagline: 'Fully Whitelabeled Brokerage CRM',
+    url: '/get-started',
+    logoImage: '/images/Yopips1.logo.png',
+    features: [
+      'Admin + Client Portal + Mobile App',
+      'Supports cTrader, MT5, MT4, RTX5',
+      'Fully whitelabel — deploy under your brand',
+      'More platforms can be added upon request',
     ],
   },
   {
     id: 'tradecopier',
     name: 'Trade Copier',
-    tagline: 'Ultra-Low Latency Copy Trading',
-    url: 'https://tradecopier.org/',
+    tagline: 'Universal Cross-Platform Copy Trading',
+    url: '/get-started',
     logoImage: '/images/trade copier logo white bg1.jpg',
     features: [
-      'Instantly sync trades across MT4 & MT5',
-      'Master to unlimited slave accounts',
-      'God-like control over risk & execution',
-      'Platform agnostic & built for scale',
+      'MT5, MT4, cTrader, Trade Locker supported',
+      'Match Trader, RTX5 & more platforms',
+      'Master to unlimited Slave accounts',
+      'Any platform to any platform — seamless',
     ],
   },
   {
-    id: 'yopips',
-    name: 'Yo Pips',
-    tagline: 'Leading Prop Trading Firm',
-    url: 'https://www.yopips.com/',
-    logoImage: '/images/Yopips1.logo.png',
+    id: 'yoforexai',
+    name: 'YoForex AI',
+    tagline: 'AI-Powered Trading Intelligence',
+    url: '/get-started',
+    logoImage: '/images/yoforexai-logo.webp',
     features: [
-      'Manage up to $200k in funded capital',
-      'Keep up to 90% of your profits',
-      'Streamlined 2-step evaluation process',
-      'Direct MT5 platform support included',
+      'Mobile App + Web App included',
+      'AI takes trades with institutional precision',
+      'Multi-AI Consensus & Recovery Engine',
+      'Smart signals powered by machine learning',
     ],
   },
   {
-    id: 'flexymarkets',
-    name: 'Flexy Markets',
-    tagline: 'Regulated Online Trading Broker',
-    url: 'https://flexymarkets.com/',
+    id: 'whitelabel',
+    name: 'Whitelabel & Custom Websites',
+    tagline: 'Forex-Focused Web Development',
+    url: '/get-started',
     logoImage: '/images/flexyhd_logo.avif',
     features: [
-      'Trade CFDs on Forex, Crypto & Indices',
-      'Access over 1,400+ premium assets',
-      'Optimized for MQL5 & automated EAs',
-      'Superior execution in a regulated environment',
+      'Fully custom forex brokerage websites',
+      'Whitelabel any FxTrusts product',
+      'Responsive design — mobile-first approach',
+      'SEO-optimized & conversion-focused',
     ],
   },
 ];
@@ -80,12 +106,12 @@ export default function Products() {
 
       <div className={styles.container}>
         <div className={styles.header}>
-          <span className={styles.badge}>Our Ecosystem</span>
+          <span className={styles.badge}>FxTrusts Portfolio</span>
           <h2 className={styles.title}>
-            The Complete <span className={styles.titleHighlight}>Brokerage</span> Suite
+            Our Complete <span className={styles.titleHighlight}>Technology</span> Portfolio
           </h2>
           <p className={styles.subtitle}>
-            Explore our curated selection of industry-leading platforms built to empower every aspect of your trading and brokerage business.
+            Everything we build — whitelabeled and custom-tailored for your forex business. From prop firm platforms to AI trading, CRM systems to cross-platform trade copiers.
           </p>
         </div>
 
@@ -113,7 +139,7 @@ export default function Products() {
 
               <div className={styles.linkWrapper}>
                 <span className={styles.cardLink}>
-                  Visit Website <ArrowRightIcon />
+                  Learn More <ArrowRightIcon />
                 </span>
               </div>
             </Link>

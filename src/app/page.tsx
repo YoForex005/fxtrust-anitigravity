@@ -1,41 +1,33 @@
 import dynamic from 'next/dynamic';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
-import MT5Badge from '@/components/MT5Badge';
-import Logos from '@/components/Logos';
-import Problem from '@/components/Problem';
 
-// Lazy load below-the-fold components
-const Products = dynamic(() => import('@/components/Products'), { ssr: true });
-
-const Features = dynamic(() => import('@/components/Features'), { ssr: true });
-const TrustBadges = dynamic(() => import('@/components/TrustBadges'), { ssr: true });
-const LiveStats = dynamic(() => import('@/components/LiveStats'), { ssr: true });
-
-const Testimonials = dynamic(() => import('@/components/Testimonials'), { ssr: true });
-const Solutions = dynamic(() => import('@/components/Solutions'), { ssr: true });
-const TurnkeySolutions = dynamic(() => import('@/components/TurnkeySolutions'), { ssr: true });
-const Operations = dynamic(() => import('@/components/Operations'), { ssr: true });
-const LiveDemo = dynamic(() => import('@/components/LiveDemo'), { ssr: true });
-const Footer = dynamic(() => import('@/components/Footer'), { ssr: true });
+// Lazy load below-the-fold homepage sections
+const LogoCloudSection = dynamic(() => import('@/components/home/LogoCloudSection'), { ssr: true });
+const PortfolioShowcase = dynamic(() => import('@/components/home/PortfolioShowcase'), { ssr: true });
+const FeaturesGrid = dynamic(() => import('@/components/home/FeaturesGrid'), { ssr: true });
+const ProductTabs = dynamic(() => import('@/components/home/ProductTabs'), { ssr: true });
+const TestimonialsSection = dynamic(() => import('@/components/home/TestimonialsSection'), { ssr: true });
+const PricingSection = dynamic(() => import('@/components/home/PricingSection'), { ssr: true });
+const FxTrustsStickyFooter = dynamic(() => import('@/components/home/FxTrustsStickyFooter'), { ssr: true });
 
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "B2B Broker Solutions | Liquidity, CRM & White Label | FxTrusts",
-  description: "FxTrusts is the premier B2B Broker technology provider. The complete ecosystem: Liquidity, CRM, and MT5 White Label. Superior technology, better pricing.",
+  title: "FxTrusts | Complete Forex Technology Portfolio — Whitelabel & Custom Solutions",
+  description: "FxTrusts delivers end-to-end forex technology: PropFirm platforms, AI trading, CRM, Trade Copiers, RTX5 Terminal, and custom websites. All fully whitelabeled.",
   keywords: [
+    'forex technology provider',
+    'prop firm platform',
+    'forex CRM whitelabel',
+    'trade copier all platforms',
+    'RTX5 trading terminal',
+    'YoForex AI',
+    'forex whitelabel solutions',
+    'custom forex website',
     'B2B forex broker',
-    'forex broker technology',
-    'forex liquidity provider',
-    'MT5 white label',
-    'forex CRM',
-    'broker technology provider',
-    'white label forex',
     'forex brokerage solutions',
-    'institutional trading',
-    'forex broker startup',
-    'B2Broker alternative',
+    'prop trading technology',
   ],
   openGraph: {
     title: 'B2B Broker Solutions | Liquidity, CRM & White Label',
@@ -63,29 +55,23 @@ export const metadata: Metadata = {
 export default function Home() {
   return (
     <>
-            
+
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"B2B Broker Solutions | Liquidity, CRM & White Label | FxTrusts","description":"FxTrusts is the premier B2B Broker technology provider. The complete ecosystem: Liquidity, CRM, and MT5 White Label. Superior technology, better pricing.","url":"https://fxtrusts.com"}) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "WebPage", "name": "B2B Broker Solutions | Liquidity, CRM & White Label | FxTrusts", "description": "FxTrusts is the premier B2B Broker technology provider. The complete ecosystem: Liquidity, CRM, and MT5 White Label. Superior technology, better pricing.", "url": "https://fxtrusts.com" }) }}
       />
       <h1 className="sr-only">Home</h1>
       <Header />
       <Hero />
-      <MT5Badge />
-      <Logos />
-      <Products />
-      <Problem />
-
-      <Features />
-      <TrustBadges />
-      <LiveStats />
-
-      <Testimonials />
-      <Solutions />
-      <TurnkeySolutions />
-      <Operations />
-      <LiveDemo />
-      <Footer />
+      <div style={{ position: 'relative', zIndex: 1, background: '#fff' }}>
+        <LogoCloudSection />
+        <PortfolioShowcase />
+        <FeaturesGrid />
+        <ProductTabs />
+        <TestimonialsSection />
+        <PricingSection />
+        <FxTrustsStickyFooter />
+      </div>
     </>
   );
 }

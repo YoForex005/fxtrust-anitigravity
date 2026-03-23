@@ -13,8 +13,8 @@ export default function MT5Badge() {
                             </svg>
                         </div>
                         <div className={styles.headerText}>
-                            <h3>Built with MetaTrader 5</h3>
-                            <p>The platform 89% of forex traders already use</p>
+                            <h3>FxTrusts Technology Portfolio</h3>
+                            <p>Everything your forex business needs — fully whitelabeled</p>
                         </div>
                     </div>
 
@@ -22,29 +22,29 @@ export default function MT5Badge() {
                         <div className={styles.featureItem}>
                             <div className={styles.checkIcon}>✓</div>
                             <div className={styles.featureText}>
-                                <strong>Full MT5 Stack</strong>
-                                <span>Desktop, Web, Mobile apps included</span>
+                                <strong>Full Whitelabel Solutions</strong>
+                                <span>Your brand, our technology stack</span>
                             </div>
                         </div>
                         <div className={styles.featureItem}>
                             <div className={styles.checkIcon}>✓</div>
                             <div className={styles.featureText}>
-                                <strong>Zero Learning Curve</strong>
-                                <span>Traders already know MT5</span>
+                                <strong>Multi-Platform Support</strong>
+                                <span>cTrader, MT5, MT4, RTX5 & more</span>
                             </div>
                         </div>
                         <div className={styles.featureItem}>
                             <div className={styles.checkIcon}>✓</div>
                             <div className={styles.featureText}>
-                                <strong>Always Updated</strong>
-                                <span>Latest MT5 builds included</span>
+                                <strong>Mobile + Web + Desktop</strong>
+                                <span>iOS, Android & Web apps included</span>
                             </div>
                         </div>
                         <div className={styles.featureItem}>
                             <div className={styles.checkIcon}>✓</div>
                             <div className={styles.featureText}>
-                                <strong>Complete Ecosystem</strong>
-                                <span>Manager Terminal + Full API</span>
+                                <strong>Custom Website Development</strong>
+                                <span>Forex-focused websites built for you</span>
                             </div>
                         </div>
                     </div>
