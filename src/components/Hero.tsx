@@ -14,10 +14,10 @@ export default function Hero() {
                 className={styles.heroBg}
             />
             <div className={styles.content}>
-                <div className={styles.badge}>
+                {/* <div className={styles.badge}>
                     <span className={styles.badgeIcon}>⚡</span>
                     <span>Please Remove MetaTrader</span>
-                </div>
+                </div> */}
                 <h1 className={styles.headline}>
                     The Complete Forex Technology Portfolio. Whitelabel Solutions & Custom Websites Built for Your Brand.
                 </h1>

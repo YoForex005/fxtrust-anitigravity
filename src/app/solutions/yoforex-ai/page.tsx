@@ -1,6 +1,10 @@
 import styles from './yo-forex.module.css';
 import Link from 'next/link';
+import Image from 'next/image';
 import type { Metadata } from 'next';
+import FAQSchema from '@/components/seo/FAQSchema';
+import FAQAccordion from '@/components/FAQAccordion';
+import YoforexAiDemoAccessSection from './DemoAccessSection';
 
 export const metadata: Metadata = {
     title: 'YoForex AI - AI Forex Signals Platform | FXTrusts',
@@ -19,7 +23,7 @@ export const metadata: Metadata = {
         title: 'YoForex AI - AI Forex Signals Platform | FXTrusts',
         description: 'Trade smarter with AI-powered forex intelligence. Real-time signals, liquidity mapping, and institutional-grade analysis.',
         type: 'website',
-        url: 'https://fxtrusts.com/solutions/yo-forex',
+        url: 'https://fxtrusts.com/solutions/yoforex-ai',
     },
     twitter: {
         card: 'summary_large_image',
@@ -29,13 +33,41 @@ export const metadata: Metadata = {
         description: 'Trade smarter with AI-powered forex intelligence. Real-time signals, liquidity mapping, and institutional-grade analysis.',
     },
     alternates: {
-        canonical: 'https://fxtrusts.com/solutions/yo-forex',
+        canonical: 'https://fxtrusts.com/solutions/yoforex-ai',
     },
 };
 
 export default function YoForexPage() {
+    const faqs = [
+        {
+            question: 'How are YoForex AI signals delivered?',
+            answer: 'Signals are delivered instantly via your personal Dashboard, Telegram, and WhatsApp alerts. Each signal includes the pair, direction (Buy/Sell), entry price, Stop Loss, Take Profit, and full AI rationale.'
+        },
+        {
+            question: 'Which AI models power the signals?',
+            answer: 'YoForex AI uses a multi-model consensus engine that blends GPT, Claude, Gemini, Llama, Mistral, and Grok. Multiple models must agree before a signal is fired, dramatically reducing false entries.'
+        },
+        {
+            question: 'Do I need trading experience to use YoForex AI?',
+            answer: 'No. YoForex AI is designed for all skill levels. Beginners can simply follow the Buy/Sell signals with the provided SL/TP levels, while advanced traders can use the AI rationale and confidence scores to refine their own strategies.'
+        },
+        {
+            question: 'What is Recovery Mode?',
+            answer: 'Recovery Mode is an adaptive feature that automatically recalculates new SL/TP levels when price moves against your entry. Instead of a hard stop, the AI attempts to find a recovery zone to reduce losses or flip the trade back to profit.'
+        },
+        {
+            question: 'Is there a free trial available?',
+            answer: 'Yes. We offer a 24-hour risk-free trial with full access to all AI models and signal channels. No credit card is required to start.'
+        },
+        {
+            question: 'What markets does YoForex AI cover?',
+            answer: 'YoForex AI covers XAUUSD (Gold), major/minor/exotic forex pairs, and synthetic indices. Each market has dedicated AI modules optimized for its specific behavior patterns.'
+        },
+    ];
+
     return (
         <main className={styles.pageWrapper}>
+            <FAQSchema faqs={faqs} />
             {/* Hero Section */}
             <section className={styles.heroSection}>
                 <div className={styles.container}>
@@ -49,7 +81,7 @@ export default function YoForexPage() {
                                 "@type": "WebPage",
                                 "name": "YoForex AI - AI Forex Signals Platform | FXTrusts",
                                 "description": "High-converting, profit-focused AI forex signals. Access real-time AI-based forex intelligence, liquidity mapping, and precision-driven trading signals powered by 392+ AI models.",
-                                "url": "https://fxtrusts.com/solutions/yo-forex"
+                                "url": "https://fxtrusts.com/solutions/yoforex-ai"
                             })
                         }}
                     />
@@ -108,33 +140,39 @@ export default function YoForexPage() {
                     </div>
                     <div className={styles.aiModelsRow}>
                         <div className={styles.aiModelBadge}>
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" /></svg>
+                            {/* <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" /></svg> */}
+                            <Image src="/gpt-logo.png" alt="GPT Logo" width={24} height={24} className={styles.claudeIcon} />
                             GPT
                         </div>
                         <div className={styles.aiModelBadge}>
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" /></svg>
+
+                            <Image src="/claude-logo.png" alt="Claude Logo" width={20} height={20} className={styles.claudeIcon} />
                             Claude
                         </div>
                         <div className={styles.aiModelBadge}>
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" /></svg>
+                            {/* <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" /></svg> */}
+                            <Image src="/Google_Gemini_icon_2025.svg.webp" alt="Gemini Logo" width={20} height={20} className={styles.claudeIcon} />
                             Gemini
                         </div>
                         <div className={styles.aiModelBadge}>
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" /></svg>
+                            {/* <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" /></svg> */}
+                            <Image src="/llama-logo.jfif" alt="Llama Logo" width={20} height={20} className={styles.claudeIcon} />
                             Llama
                         </div>
                         <div className={styles.aiModelBadge}>
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" /></svg>
+                            {/* <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" /></svg> */}
+                            <Image src="/mistral-logo.png" alt="Mistral Logo" width={20} height={20} className={styles.claudeIcon} />
                             Mistral
                         </div>
                         <div className={styles.aiModelBadge}>
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" /></svg>
+                            {/* <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" /></svg> */}
+                            <Image src="/grok.png" alt="Grok Logo" width={20} height={20} className={styles.claudeIcon} />
                             Grok
                         </div>
                     </div>
                 </div>
             </section>
-
+                {/* <YoforexAiDemoAccessSection /> */}
             {/* Experience Layers Section */}
             <section className={`${styles.section} ${styles.altSection}`}>
                 <div className={styles.container}>
@@ -536,6 +574,21 @@ export default function YoForexPage() {
                                 AI-powered signals for synthetic indices and trend-based intraday and swing setups across multiple timeframes.
                             </p>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* FAQ Section */}
+            <section className={styles.section}>
+                <div className={styles.container}>
+                    <div className={styles.textCenter}>
+                        <h2 className={styles.sectionHeadline}>Frequently Asked Questions</h2>
+                        <p className={styles.sectionSubtext}>
+                            Everything you need to know about YoForex AI signals, pricing, and how to get started.
+                        </p>
+                    </div>
+                    <div style={{ maxWidth: '800px', margin: '0 auto' }}>
+                        <FAQAccordion faqs={faqs} />
                     </div>
                 </div>
             </section>

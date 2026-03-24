@@ -86,6 +86,7 @@ export default function Header() {
   const [labels, setLabels] = useState<ReturnType<typeof getRandomLabels> | null>(null);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [expandedMobileMenu, setExpandedMobileMenu] = useState<string | null>(null);
+  const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
 
   // Lock body scroll when mobile menu is open
@@ -101,6 +102,7 @@ export default function Header() {
   }, [isMenuOpen]);
 
   useEffect(() => {
+    setMounted(true);
     const handleScroll = () => {
       setScrolled(window.scrollY > 20);
     };
@@ -121,7 +123,8 @@ export default function Header() {
     company: 'Company',
   };
 
-  const isTransparentPage = (
+  // Defer transparent page check to client-side only to prevent hydration mismatch
+  const isTransparentPage = mounted && (
     pathname === '/' ||
     pathname === '/pricing'
   ) && !scrolled;

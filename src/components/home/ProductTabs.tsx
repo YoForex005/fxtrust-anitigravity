@@ -15,6 +15,7 @@ const tabs = [
     title: "PropFirm Admin + Client Platform",
     description: "Complete prop trading infrastructure with Admin and Client dashboards. Mobile apps for iOS & Android included. Built-in risk management plugin.",
     features: ["Admin & Client Dashboards", "iOS + Android Apps", "Risk Management Plugin", "Full Whitelabel"],
+    url:"solutions/prop-firm"  
   },
   {
     id: "rtx5",
@@ -26,6 +27,7 @@ const tabs = [
     title: "Orrnn RTX5 Trading Terminal",
     description: "Next-generation trading terminal with Manager Terminal, Mobile Apps (iOS + APK), and Web Trading interface. Lightning-fast execution.",
     features: ["Manager Terminal", "Mobile Apps (iOS + APK)", "Web Trading", "Ultra-Fast Execution"],
+    url:"solutions/rtx5"  
   },
   {
     id: "crm",
@@ -37,6 +39,7 @@ const tabs = [
     title: "Forex CRM — Admin + Client + Mobile",
     description: "Complete CRM supporting cTrader, MT5, MT4, RTX5 and more. Deploy fully whitelabeled under your brand.",
     features: ["Multi-Platform Support", "Admin + Client Portal", "Mobile App Included", "Whitelabel Ready"],
+    url:"solutions/crm"  
   },
   {
     id: "copier",
@@ -48,6 +51,7 @@ const tabs = [
     title: "Cross-Platform Trade Copier",
     description: "Copy trades across MT5, MT4, cTrader, Trade Locker, Match Trader, RTX5. Master to unlimited slave accounts.",
     features: ["All Platforms Supported", "Master → Unlimited Slaves", "Risk Controls", "Any-to-Any Copying"],
+    url:"solutions/trade-copier"  
   },
   {
     id: "ai",
@@ -59,6 +63,7 @@ const tabs = [
     title: "YoForex AI — Smart Trading",
     description: "AI-powered trading with Mobile and Web apps. Multi-AI Consensus Engine for institutional precision.",
     features: ["Mobile + Web App", "AI Consensus Engine", "ML-Powered Signals", "Institutional Precision"],
+    url:"solutions/yoforex-ai"  
   },
   {
     id: "websites",
@@ -139,7 +144,7 @@ export default function ProductTabs() {
               ))}
             </div>
             <Link
-              href="/get-started"
+             href={`/${tab.url}`}
               style={{
                 display: 'inline-flex',
                 alignItems: 'center',

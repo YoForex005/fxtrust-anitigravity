@@ -1,4 +1,5 @@
 import styles from './prop.module.css';
+import DemoAccessSection from './DemoAccessSection';
 import { MacWindow } from '@/components/DeviceFrames';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -41,19 +42,19 @@ export default function PropFirmPage() {
             <section className={styles.heroSection}>
                 <div className={styles.container}>
                     <div className={styles.badge}>Institutional Infrastructure</div>
-                    
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify({"@context":"https://schema.org","@type":"WebPage","name":"Prop Firm Technology & Backend System | FXTrusts","description":"Launch or scale your proprietary trading firm with our complete backend system. Automated challenge management, real-time risk tracking, broker integration, and instant payouts.","url":"https://fxtrusts.com/solutions/prop-firm"}) }}
-      />
-      <h1 className={styles.headline}>
+
+                    <script
+                        type="application/ld+json"
+                        dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "WebPage", "name": "Prop Firm Technology & Backend System | FXTrusts", "description": "Launch or scale your proprietary trading firm with our complete backend system. Automated challenge management, real-time risk tracking, broker integration, and instant payouts.", "url": "https://fxtrusts.com/solutions/prop-firm" }) }}
+                    />
+                    <h1 className={styles.headline}>
                         The Backbone of<br />Modern Prop Firms
                     </h1>
                     <p className={styles.subheadline}>
                         A complete proprietary trading backend system built to manage thousands of traders, automate compliance, and scale your firm with zero technical overhead.
                     </p>
                     <div className={styles.ctaGroup}>
-                        <Link href="/get-started" className={styles.primaryCta}>
+                        <Link href="https://user.yopips.com/login" className={styles.primaryCta}>
                             Launch Your Prop Firm
                         </Link>
                         <Link href="/company/contact" className={styles.secondaryCta}>
@@ -62,6 +63,8 @@ export default function PropFirmPage() {
                     </div>
                 </div>
             </section>
+
+            <DemoAccessSection />
 
             {/* Interactive Demo Section - Admin */}
             <section className={styles.section}>

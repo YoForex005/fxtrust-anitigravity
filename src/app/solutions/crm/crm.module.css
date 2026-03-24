@@ -1,0 +1,280 @@
+/* ========================================
+   CRM PAGE - CUSTOM ENHANCEMENTS
+   Layered on top of ContentPageLayout
+======================================== */
+
+/* ========= PAGE WRAPPER ========= */
+.crmPage {
+    position: relative;
+}
+
+/* Adds animated gradient accent to each section heading */
+.crmPage h2 {
+    position: relative;
+    display: inline-block;
+}
+
+.crmPage h2::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 48px;
+    height: 3px;
+    background: linear-gradient(90deg, #4353F2, #3b82f6);
+    border-radius: 4px;
+    transition: width 0.3s ease;
+}
+
+/* ========= STATS GRID ENHANCEMENT ========= */
+.crmPage :global(.statsGrid) {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.crmPage :global(.statBox) {
+    background: linear-gradient(135deg, #f8fafc 0%, #eff6ff 100%);
+    border: 1px solid rgba(67, 83, 242, 0.1);
+    border-radius: 16px;
+    padding: 1.75rem 1.25rem;
+    text-align: center;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.crmPage :global(.statBox)::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #4353F2, #818cf8);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.crmPage :global(.statBox):hover::before {
+    transform: scaleX(1);
+}
+
+.crmPage :global(.statBox):hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px -6px rgba(67, 83, 242, 0.15);
+    border-color: rgba(67, 83, 242, 0.2);
+}
+
+.crmPage :global(.statBox) strong {
+    display: block;
+    font-size: 2rem;
+    font-weight: 800;
+    background: linear-gradient(135deg, #4353F2 0%, #6366f1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+}
+
+.crmPage :global(.statBox) span {
+    font-size: 0.8rem;
+    color: #64748b;
+    line-height: 1.4;
+}
+
+/* ========= FEATURE CARD ENHANCEMENTS ========= */
+.crmPage :global(.featureGrid) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin: 1.75rem 0;
+}
+
+.crmPage :global(.featureCard) {
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 1.5rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Accent line on hover */
+.crmPage :global(.featureCard)::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #4353F2, #818cf8);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.crmPage :global(.featureCard):hover::after {
+    transform: scaleX(1);
+}
+
+.crmPage :global(.featureCard):hover {
+    border-color: rgba(67, 83, 242, 0.2);
+    box-shadow:
+        0 12px 28px -6px rgba(67, 83, 242, 0.1),
+        0 4px 10px -2px rgba(0, 0, 0, 0.04);
+    transform: translateY(-3px);
+}
+
+.crmPage :global(.featureCard) h4 {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 0.6rem;
+}
+
+.crmPage :global(.featureCard) h4 svg {
+    flex-shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.crmPage :global(.featureCard):hover h4 svg {
+    transform: scale(1.15);
+    color: #4353F2;
+}
+
+.crmPage :global(.featureCard) p {
+    font-size: 0.9rem;
+    color: #64748b;
+    margin: 0;
+    line-height: 1.55;
+}
+
+/* ========= INFO BOX UPGRADE ========= */
+.crmPage :global(.infoBox) {
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 60%, #eff6ff 100%);
+    border-left: 4px solid #4353F2;
+    border-radius: 0 14px 14px 0;
+    padding: 1.5rem 1.75rem;
+    margin: 2rem 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.crmPage :global(.infoBox)::before {
+    content: 'ℹ';
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    font-size: 4rem;
+    opacity: 0.06;
+    color: #4353F2;
+}
+
+.crmPage :global(.infoBox) p {
+    color: #1e40af;
+    margin: 0;
+    font-weight: 500;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* ========= FEATURE LIST UPGRADE ========= */
+.crmPage :global(.feature-list) {
+    list-style: none;
+    padding: 0;
+    margin: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+}
+
+.crmPage :global(.feature-list) li {
+    position: relative;
+    padding: 0.75rem 1rem 0.75rem 2.5rem;
+    color: #475569;
+    font-size: 0.95rem;
+    line-height: 1.55;
+    background: rgba(248, 250, 252, 0.8);
+    border: 1px solid transparent;
+    border-radius: 10px;
+    transition: all 0.2s ease;
+}
+
+.crmPage :global(.feature-list) li:hover {
+    background: #ffffff;
+    border-color: rgba(67, 83, 242, 0.12);
+    box-shadow: 0 2px 8px rgba(67, 83, 242, 0.06);
+}
+
+.crmPage :global(.feature-list) li::before {
+    content: "✦";
+    position: absolute;
+    left: 0.85rem;
+    color: #4353F2;
+    font-weight: 700;
+    font-size: 0.75rem;
+}
+
+/* ========= WARNING BOX ========= */
+.crmPage :global(.warningBox) {
+    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+    border-left: 4px solid #d97706;
+    border-radius: 0 14px 14px 0;
+    padding: 1.5rem 1.75rem;
+    margin: 2rem 0;
+}
+
+.crmPage :global(.warningBox) p {
+    color: #92400e;
+    margin: 0;
+    font-weight: 500;
+    font-size: 0.95rem;
+}
+
+/* ========= FAQ SECTION ========= */
+.crmPage :global(.faqItem) {
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    margin-bottom: 0.75rem;
+    transition: all 0.2s ease;
+}
+
+.crmPage :global(.faqItem):hover {
+    border-color: rgba(67, 83, 242, 0.2);
+    box-shadow: 0 4px 12px rgba(67, 83, 242, 0.06);
+}
+
+/* ========= RESPONSIVE ========= */
+@media (max-width: 768px) {
+    .crmPage :global(.statsGrid) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .crmPage :global(.statBox) strong {
+        font-size: 1.5rem;
+    }
+
+    .crmPage :global(.featureGrid) {
+        grid-template-columns: 1fr;
+    }
+
+    .crmPage :global(.featureCard) {
+        text-align: center;
+    }
+
+    .crmPage :global(.featureCard) h4 {
+        justify-content: center;
+    }
+
+    .crmPage h2::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

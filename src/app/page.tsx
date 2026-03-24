@@ -69,7 +69,7 @@ export default function Home() {
         <FeaturesGrid />
         <ProductTabs />
         <TestimonialsSection />
-        <PricingSection />
+        {/* <PricingSection /> */}
         <FxTrustsStickyFooter />
       </div>
     </>

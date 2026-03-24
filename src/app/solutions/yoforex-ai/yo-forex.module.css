@@ -1,5 +1,6 @@
 /* ========================================
-   YOFOREX AI PAGE - MODERN SAAS THEME
+   YOFOREX AI PAGE - PREMIUM SAAS THEME
+   Visual polish: gradients, depth, accents
 ======================================== */
 
 .pageWrapper {
@@ -16,7 +17,7 @@
 }
 
 .altSection {
-    background: #f9fafb;
+    background: linear-gradient(180deg, #f9fafb 0%, #f1f5f9 50%, #f9fafb 100%);
     border-bottom: 1px solid #e5e7eb;
 }
 
@@ -29,39 +30,48 @@
     text-align: center;
 }
 
-/* Typography */
+/* ========= BADGE ========= */
 .badge {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    background: #fef3c7;
+    padding: 0.5rem 1.25rem;
+    background: rgba(29, 78, 216, 0.08);
     color: #1d4ed8;
+    border: 1px solid rgba(29, 78, 216, 0.15);
     border-radius: 9999px;
-    font-size: 0.875rem;
+    font-size: 0.85rem;
     font-weight: 700;
     margin-bottom: 1.5rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 
 .badgePurple {
-    background: #f3e8ff;
+    background: rgba(124, 58, 237, 0.08);
     color: #7c3aed;
+    border-color: rgba(124, 58, 237, 0.15);
 }
 
 .badgeGreen {
-    background: #dcfce7;
+    background: rgba(22, 163, 74, 0.08);
     color: #16a34a;
+    border-color: rgba(22, 163, 74, 0.15);
 }
 
+/* ========= TYPOGRAPHY ========= */
 .headline {
-    font-size: 3.5rem;
+    font-size: 3.75rem;
     font-weight: 800;
-    line-height: 1.1;
-    color: #111827;
+    line-height: 1.08;
     margin-bottom: 1.5rem;
     letter-spacing: -0.03em;
+    background: linear-gradient(135deg, #111827 0%, #1d4ed8 50%, #111827 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .sectionHeadline {
@@ -74,23 +84,23 @@
 }
 
 .subheadline {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     color: #4b5563;
-    line-height: 1.6;
-    max-width: 800px;
+    line-height: 1.7;
+    max-width: 780px;
     margin: 0 auto 2.5rem;
 }
 
 .sectionSubtext {
     font-size: 1.125rem;
     color: #6b7280;
-    line-height: 1.6;
+    line-height: 1.7;
     max-width: 700px;
     margin: 0 auto 3rem;
     padding: 0 1rem;
 }
 
-/* Buttons */
+/* ========= CTA BUTTONS ========= */
 .ctaGroup {
     display: flex;
     align-items: center;
@@ -102,65 +112,108 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem 2rem;
-    background: #1d4ed8;
+    padding: 1rem 2.25rem;
+    background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%);
     color: #ffffff;
     font-weight: 600;
     font-size: 1.125rem;
-    border-radius: 8px;
+    border-radius: 12px;
     text-decoration: none;
-    transition: all 0.2s ease;
-    box-shadow: 0 4px 6px -1px rgba(217, 119, 6, 0.2), 0 2px 4px -1px rgba(217, 119, 6, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 14px -2px rgba(29, 78, 216, 0.35), 0 2px 6px -1px rgba(29, 78, 216, 0.15);
 }
 
 .primaryCta:hover {
-    background: #b45309;
+    background: linear-gradient(135deg, #1e40af 0%, #1d4ed8 100%);
     transform: translateY(-2px);
-    box-shadow: 0 10px 15px -3px rgba(217, 119, 6, 0.3), 0 4px 6px -2px rgba(217, 119, 6, 0.15);
+    box-shadow: 0 12px 24px -4px rgba(29, 78, 216, 0.4), 0 4px 8px -2px rgba(29, 78, 216, 0.2);
 }
 
 .secondaryCta {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem 2rem;
+    padding: 1rem 2.25rem;
     background: #ffffff;
     color: #374151;
     font-weight: 600;
     font-size: 1.125rem;
-    border-radius: 8px;
+    border-radius: 12px;
     text-decoration: none;
     border: 1px solid #d1d5db;
-    transition: all 0.2s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .secondaryCta:hover {
-    background: #f3f4f6;
-    color: #111827;
-    border-color: #9ca3af;
+    background: #f9fafb;
+    color: #1d4ed8;
+    border-color: #93c5fd;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(29, 78, 216, 0.08);
 }
 
-/* Hero Section */
+/* ========= HERO SECTION ========= */
 .heroSection {
-    padding: 8rem 1rem 6rem;
+    padding: 9rem 1rem 6rem;
     text-align: center;
-    background: linear-gradient(180deg, #fffbeb 0%, #ffffff 100%);
+    background:
+        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(29, 78, 216, 0.08) 0%, transparent 70%),
+        linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
     border-bottom: 1px solid #f3f4f6;
+    position: relative;
+    overflow: hidden;
 }
 
-/* Metrics Bar */
+/* subtle decorative glow */
+.heroSection::before {
+    content: '';
+    position: absolute;
+    top: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(29, 78, 216, 0.06) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+}
+
+.heroSection .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* ========= METRICS BAR ========= */
 .metricsBar {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
+    gap: 1.5rem;
     margin-top: 3rem;
     max-width: 900px;
     margin-left: auto;
     margin-right: auto;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 20px;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 4px 24px -4px rgba(0, 0, 0, 0.06);
 }
 
 .metricItem {
     text-align: center;
+    position: relative;
+}
+
+.metricItem:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 10%;
+    height: 80%;
+    width: 1px;
+    background: linear-gradient(180deg, transparent 0%, #e5e7eb 50%, transparent 100%);
 }
 
 .metricValue {
@@ -171,64 +224,109 @@
 }
 
 .metricLabel {
-    font-size: 0.875rem;
+    font-size: 0.85rem;
     color: #6b7280;
-    margin-top: 0.25rem;
+    margin-top: 0.35rem;
     font-weight: 500;
 }
 
-/* Delivery Badge */
+/* ========= DELIVERY BADGE ========= */
 .deliveryBadge {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.6rem;
     padding: 0.75rem 1.5rem;
-    background: #f3f4f6;
+    background: rgba(249, 250, 251, 0.8);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid #e5e7eb;
     border-radius: 9999px;
     font-size: 0.9rem;
     color: #4b5563;
     margin-top: 2rem;
     font-weight: 500;
+    transition: all 0.2s ease;
 }
 
-/* Grid Sections */
+.deliveryBadge:hover {
+    border-color: #93c5fd;
+    background: rgba(239, 246, 255, 0.6);
+}
+
+.deliveryBadge svg {
+    color: #1d4ed8;
+}
+
+/* ========= FEATURE GRID ========= */
 .featureGrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2rem;
-    margin-top: 4rem;
+    gap: 1.5rem;
+    margin-top: 3.5rem;
 }
 
 .featureCard {
     background: #ffffff;
-    padding: 2.5rem;
+    padding: 2.25rem;
     border-radius: 16px;
     border: 1px solid #e5e7eb;
-    transition: all 0.2s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     text-align: left;
+    position: relative;
+    overflow: hidden;
+}
+
+/* top accent line revealed on hover */
+.featureCard::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #1d4ed8, #3b82f6);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.featureCard:hover::before {
+    transform: scaleX(1);
 }
 
 .featureCard:hover {
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
-    border-color: #d1d5db;
-    transform: translateY(-2px);
+    box-shadow: 0 20px 40px -8px rgba(0, 0, 0, 0.08), 0 8px 16px -4px rgba(29, 78, 216, 0.06);
+    border-color: rgba(29, 78, 216, 0.2);
+    transform: translateY(-4px);
 }
 
 .featureIcon {
     width: 48px;
     height: 48px;
-    background: #fef3c7;
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
     color: #1d4ed8;
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
     margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.featureCard:hover .featureIcon {
+    background: linear-gradient(135deg, #1d4ed8, #3b82f6);
+    color: #ffffff;
+    transform: scale(1.05);
 }
 
 .featureIconPurple {
-    background: #f3e8ff;
+    background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
     color: #7c3aed;
+}
+
+.featureCard:hover .featureIconPurple {
+    background: linear-gradient(135deg, #7c3aed, #8b5cf6);
+    color: #ffffff;
 }
 
 .featureIcon svg {
@@ -238,36 +336,50 @@
 }
 
 .featureTitle {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     font-weight: 700;
     color: #111827;
-    margin-bottom: 1rem;
+    margin-bottom: 0.75rem;
 }
 
 .featureDesc {
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: #6b7280;
-    line-height: 1.6;
+    line-height: 1.65;
 }
 
-/* Steps / Workflow */
+/* ========= STEPS / WORKFLOW ========= */
 .stepsGrid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
-    margin-top: 4rem;
+    gap: 0;
+    margin-top: 3.5rem;
+    position: relative;
+}
+
+/* connecting line between steps */
+.stepsGrid::before {
+    content: '';
+    position: absolute;
+    top: 24px;
+    left: calc(12.5% + 24px);
+    right: calc(12.5% + 24px);
+    height: 2px;
+    background: linear-gradient(90deg, #dbeafe 0%, #1d4ed8 50%, #dbeafe 100%);
+    z-index: 0;
 }
 
 .stepCard {
     text-align: center;
-    padding: 2rem 1.5rem;
+    padding: 0 1.25rem 2rem;
     position: relative;
+    z-index: 1;
 }
 
 .stepNumber {
     width: 48px;
     height: 48px;
-    background: #1d4ed8;
+    background: linear-gradient(135deg, #1d4ed8 0%, #3b82f6 100%);
     color: white;
     border-radius: 50%;
     display: flex;
@@ -275,72 +387,84 @@
     justify-content: center;
     font-weight: 800;
     font-size: 1.25rem;
-    margin: 0 auto 1.5rem;
+    margin: 0 auto 1.25rem;
+    box-shadow: 0 4px 12px rgba(29, 78, 216, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.stepCard:hover .stepNumber {
+    transform: scale(1.1);
+    box-shadow: 0 6px 20px rgba(29, 78, 216, 0.4);
 }
 
 .stepTitle {
-    font-size: 1.125rem;
+    font-size: 1.1rem;
     font-weight: 700;
     color: #111827;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.6rem;
 }
 
 .stepDesc {
-    font-size: 0.95rem;
+    font-size: 0.9rem;
     color: #6b7280;
     line-height: 1.6;
 }
 
-/* Experience Layers (2-col grid) */
+/* ========= EXPERIENCE LAYERS ========= */
 .experienceGrid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-    margin-top: 4rem;
+    gap: 1.5rem;
+    margin-top: 3.5rem;
 }
 
 .experienceCard {
     background: #ffffff;
-    padding: 2.5rem;
+    padding: 2.25rem;
     border-radius: 16px;
     border: 1px solid #e5e7eb;
-    transition: all 0.2s ease;
+    border-left: 4px solid transparent;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
 }
 
 .experienceCard:hover {
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.01);
-    border-color: #d1d5db;
-    transform: translateY(-2px);
+    box-shadow: 0 16px 32px -6px rgba(0, 0, 0, 0.08), 0 4px 12px -2px rgba(29, 78, 216, 0.06);
+    border-color: #e5e7eb;
+    border-left-color: #1d4ed8;
+    transform: translateY(-3px);
 }
 
 .experienceNumber {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 32px;
-    height: 32px;
-    background: #fef3c7;
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
     color: #1d4ed8;
-    border-radius: 8px;
+    border-radius: 10px;
     font-weight: 800;
-    font-size: 0.875rem;
-    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    margin-bottom: 1.25rem;
 }
 
 .experienceTitle {
-    font-size: 1.25rem;
+    font-size: 1.2rem;
     font-weight: 700;
     color: #111827;
     margin-bottom: 0.75rem;
 }
 
 .experienceDesc {
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: #6b7280;
-    line-height: 1.6;
+    line-height: 1.65;
 }
 
-/* Split Section */
+/* ========= SPLIT SECTION ========= */
 .splitSection {
     display: flex;
     gap: 4rem;
@@ -355,28 +479,43 @@
     flex: 0 0 450px;
 }
 
-/* Bullet Items */
+/* ========= BULLET ITEMS ========= */
 .bulletList {
     display: flex;
     flex-direction: column;
-    gap: 1.5rem;
+    gap: 1.75rem;
 }
 
 .bulletItem {
     display: flex;
     gap: 1rem;
     align-items: flex-start;
+    padding: 1rem;
+    border-radius: 12px;
+    transition: background 0.2s ease;
+}
+
+.bulletItem:hover {
+    background: rgba(29, 78, 216, 0.03);
 }
 
 .bulletIcon {
     color: #1d4ed8;
     flex-shrink: 0;
-    margin-top: 0.25rem;
+    margin-top: 0.15rem;
+    width: 28px;
+    height: 28px;
+    background: rgba(29, 78, 216, 0.08);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
 }
 
 .bulletTextContainer h4 {
     margin: 0 0 0.35rem 0;
-    font-size: 1.125rem;
+    font-size: 1.1rem;
     font-weight: 700;
     color: #111827;
 }
@@ -384,16 +523,31 @@
 .bulletTextContainer p {
     margin: 0;
     color: #6b7280;
-    line-height: 1.6;
+    line-height: 1.65;
+    font-size: 0.95rem;
 }
 
-/* Stats Box */
+/* ========= STATS BOX ========= */
 .statsBox {
-    background: #111827;
-    border-radius: 16px;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    border-radius: 20px;
     padding: 3rem;
     color: white;
     box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+    position: relative;
+    overflow: hidden;
+}
+
+/* subtle glow inside stats box */
+.statsBox::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -30%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 60%);
+    pointer-events: none;
 }
 
 .statsHeadline {
@@ -401,16 +555,18 @@
     font-weight: 700;
     margin-bottom: 2rem;
     color: white;
+    position: relative;
 }
 
 .statsContainer {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    position: relative;
 }
 
 .statItem {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
     padding-bottom: 1.5rem;
 }
 
@@ -421,6 +577,7 @@
 .statValue {
     font-size: 2.5rem;
     font-weight: 800;
+    letter-spacing: -0.02em;
 }
 
 .amberStat {
@@ -428,7 +585,7 @@
 }
 
 .greenStat {
-    color: #10b981;
+    color: #34d399;
 }
 
 .purpleStat {
@@ -436,79 +593,106 @@
 }
 
 .statLabel {
-    color: #9ca3af;
-    font-size: 0.875rem;
+    color: #94a3b8;
+    font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
     font-weight: 600;
     margin-top: 0.5rem;
 }
 
-/* AI Models Row */
+/* ========= AI MODELS ROW ========= */
 .aiModelsRow {
     display: flex;
     justify-content: center;
-    gap: 1.5rem;
+    gap: 1rem;
     flex-wrap: wrap;
-    margin-top: 2rem;
+    margin-top: 2.5rem;
 }
 
 .aiModelBadge {
     display: inline-flex;
     align-items: center;
     gap: 0.5rem;
-    padding: 0.625rem 1.25rem;
+    padding: 0.7rem 1.35rem;
     background: #ffffff;
     border: 1px solid #e5e7eb;
-    border-radius: 9999px;
+    border-radius: 12px;
     font-size: 0.9rem;
     font-weight: 600;
     color: #374151;
-    transition: all 0.2s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    cursor: default;
+}
+
+.aiModelBadge svg {
+    color: #1d4ed8;
 }
 
 .aiModelBadge:hover {
-    border-color: #1d4ed8;
+    border-color: #93c5fd;
     color: #1d4ed8;
-    transform: translateY(-1px);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px -4px rgba(29, 78, 216, 0.12);
+    background: #f8faff;
 }
 
-/* Final CTA */
+/* ========= FINAL CTA ========= */
 .finalCtaSection {
-    background: #111827;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
     padding: 8rem 1rem;
     text-align: center;
     color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+/* radial glow background */
+.finalCtaSection::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.12) 0%, transparent 60%);
+    pointer-events: none;
 }
 
 .finalCtaHeadline {
     font-size: 3.5rem;
     font-weight: 800;
     color: white;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
     letter-spacing: -0.02em;
+    position: relative;
 }
 
 .finalCtaSection .primaryCta {
-    background: #1d4ed8;
+    background: linear-gradient(135deg, #1d4ed8 0%, #3b82f6 100%);
     color: white;
-    font-size: 1.25rem;
-    padding: 1.25rem 2.5rem;
+    font-size: 1.2rem;
+    padding: 1.25rem 2.75rem;
+    border-radius: 14px;
+    position: relative;
 }
 
 .finalCtaSection .primaryCta:hover {
-    background: #b45309;
+    background: linear-gradient(135deg, #1e40af 0%, #2563eb 100%);
+    box-shadow: 0 12px 32px rgba(59, 130, 246, 0.4);
 }
 
 .finalCtaSubtext {
-    font-size: 1.25rem;
-    color: #9ca3af;
+    font-size: 1.2rem;
+    color: #94a3b8;
     max-width: 600px;
     margin: 0 auto 3rem;
-    line-height: 1.6;
+    line-height: 1.7;
+    position: relative;
 }
 
-/* Responsive */
+/* ========= RESPONSIVE ========= */
 @media (max-width: 1024px) {
     .featureGrid {
         grid-template-columns: repeat(2, 1fr);
@@ -517,15 +701,23 @@
     .stepsGrid {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    .stepsGrid::before {
+        display: none;
+    }
 }
 
 @media (max-width: 768px) {
+    .heroSection {
+        padding: 7rem 1rem 4rem;
+    }
+
     .headline {
-        font-size: 2rem;
+        font-size: 2.25rem;
     }
 
     .sectionHeadline {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
         padding: 0 0.5rem;
     }
 
@@ -543,6 +735,11 @@
 
     .stepsGrid {
         grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .stepsGrid::before {
+        display: none;
     }
 
     .featureCard {
@@ -562,7 +759,7 @@
     .secondaryCta {
         width: fit-content;
         margin: 0 auto;
-        padding: 0.875rem 1.25rem;
+        padding: 0.875rem 1.5rem;
         font-size: 1rem;
     }
 
@@ -570,8 +767,8 @@
         display: flex;
         width: fit-content;
         margin: 0 auto;
-        padding: 1rem 1.5rem;
-        font-size: 1.125rem;
+        padding: 1rem 1.75rem;
+        font-size: 1.1rem;
     }
 
     .splitSection {
@@ -585,7 +782,8 @@
 
     .splitSection>div:last-child {
         flex: 1 1 auto;
-        width: fit-content;
+        width: 100%;
+        max-width: 500px;
         margin: 0 auto;
     }
 
@@ -603,6 +801,11 @@
     .metricsBar {
         grid-template-columns: repeat(2, 1fr);
         gap: 1.5rem;
+        padding: 1.5rem 1rem;
+    }
+
+    .metricItem:not(:last-child)::after {
+        display: none;
     }
 
     .metricValue {
@@ -617,10 +820,15 @@
         font-size: 2rem !important;
     }
 
+    /* Light-mode mobile overrides */
     .statsBox {
         background: #ffffff !important;
         box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08) !important;
         border: 1px solid #e5e7eb !important;
+    }
+
+    .statsBox::before {
+        display: none;
     }
 
     .statsHeadline {
@@ -653,19 +861,35 @@
         border-top: 1px solid #e5e7eb !important;
     }
 
+    .finalCtaSection::before {
+        display: none;
+    }
+
     .finalCtaHeadline {
         color: #111827 !important;
     }
 
     .finalCtaSection .primaryCta {
-        background: #1d4ed8 !important;
+        background: linear-gradient(135deg, #1d4ed8, #3b82f6) !important;
     }
 
     .finalCtaSection .primaryCta:hover {
-        background: #b45309 !important;
+        background: linear-gradient(135deg, #1e40af, #2563eb) !important;
     }
 
     .finalCtaSubtext {
         color: #4b5563 !important;
+    }
+
+    .experienceCard {
+        border-left: 1px solid #e5e7eb;
+    }
+
+    .experienceCard:hover {
+        border-left-color: #1d4ed8;
+    }
+
+    .section {
+        padding: 4rem 1rem;
     }
 }

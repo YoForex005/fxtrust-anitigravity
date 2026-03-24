@@ -1,6 +1,7 @@
 "use client"
 
 import { useState } from "react"
+import Image from "next/image"
 import { motion, AnimatePresence } from "framer-motion"
 import Link from "next/link"
 import {
@@ -17,13 +18,14 @@ interface Card {
   contentType: 1 | 2 | 3 | 4 | 5 | 6
 }
 
-const cardData: Record<number, { title: string; description: string; icon: React.ReactNode; color: string; url: string }> = {
+const cardData: Record<number, { title: string; description: string; icon: React.ReactNode; color: string; url: string; imageSrc: string }> = {
   1: {
     title: "PropFirm Admin + Client",
     description: "Fully Whitelabeled Prop Trading Platform",
     icon: <BarChart3 size={48} />,
     color: "#2563eb",
     url: "/solutions/prop-firm",
+    imageSrc: "/websitegraphics/yopips.jpg",
   },
   2: {
     title: "Orrnn RTX5 Trading Terminal",
@@ -31,6 +33,7 @@ const cardData: Record<number, { title: string; description: string; icon: React
     icon: <MonitorSmartphone size={48} />,
     color: "#7c3aed",
     url: "/solutions/rtx5-terminal",
+    imageSrc: "/websitegraphics/ornn.jpg",
   },
   3: {
     title: "Forex CRM",
@@ -38,6 +41,7 @@ const cardData: Record<number, { title: string; description: string; icon: React
     icon: <Users size={48} />,
     color: "#059669",
     url: "/solutions/crm",
+    imageSrc: "/websitegraphics/flexy crm.jpg",
   },
   4: {
     title: "Trade Copier",
@@ -45,6 +49,7 @@ const cardData: Record<number, { title: string; description: string; icon: React
     icon: <Copy size={48} />,
     color: "#d97706",
     url: "/solutions/trade-copier",
+    imageSrc: "/websitegraphics/TRADE COPIER.jpg",
   },
   5: {
     title: "YoForex AI",
@@ -52,6 +57,7 @@ const cardData: Record<number, { title: string; description: string; icon: React
     icon: <Brain size={48} />,
     color: "#dc2626",
     url: "/solutions/yoforex-ai",
+    imageSrc: "/websitegraphics/YOFOREX AI.jpg",
   },
   6: {
     title: "Whitelabel & Custom Websites",
@@ -59,6 +65,7 @@ const cardData: Record<number, { title: string; description: string; icon: React
     icon: <Globe size={48} />,
     color: "#0891b2",
     url: "/solutions/white-label-custom-websites",
+    imageSrc: "/websitegraphics/WHITE LABEL.jpg",
   },
 }
 
@@ -93,12 +100,16 @@ function CardContent({ contentType }: { contentType: number }) {
   return (
     <div className="flex h-full w-full flex-col gap-4">
       <div
-        className="flex h-[200px] w-full items-center justify-center overflow-hidden rounded-xl"
+        className="relative h-[200px] w-full overflow-hidden rounded-xl"
         style={{ background: `${data.color}08`, border: `1px solid ${data.color}20` }}
       >
-        <div style={{ color: data.color }}>
-          {data.icon}
-        </div>
+        <Image
+          src={data.imageSrc}
+          alt={data.title}
+          fill
+          className="object-cover"
+          sizes="(max-width: 640px) 324px, 512px"
+        />
       </div>
       <div className="flex w-full items-center justify-between gap-2 px-3 pb-6">
         <div className="flex min-w-0 flex-1 flex-col">

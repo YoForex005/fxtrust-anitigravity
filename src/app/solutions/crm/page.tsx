@@ -3,6 +3,7 @@ import InnerPageHeader from '@/components/InnerPageHeader';
 import ContentPageLayout from '@/components/ContentPageLayout';
 import FAQSchema from '@/components/seo/FAQSchema';
 import FAQAccordion from '@/components/FAQAccordion';
+import crmStyles from './crm.module.css';
 
 export const metadata: Metadata = {
     title: 'Forex CRM | Enterprise Back-Office & KYC Management',
@@ -101,13 +102,17 @@ export default function CRMPage() {
       <h1 className="sr-only">C R M Page</h1>
             {/* Original Component */}
             
-        <main>
+        <main className={crmStyles.crmPage}>
             <FAQSchema faqs={faqs} />
             <InnerPageHeader
                 badge="BROKER INFRASTRUCTURE"
                 badgeIcon={<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" /><circle cx="9" cy="7" r="4" /><path d="M23 21v-2a4 4 0 0 0-3-3.87" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /></svg>}
                 title="Forex CRM"
                 subtitle="Centralize your brokerage operations with an enterprise-grade CRM designed for high-volume data and rapid scaling. Convert more leads and automate compliance workflows from a single, secure interface."
+                primaryButtonText="Get Started"
+                primaryButtonHref="https://user.flexymarkets.com/accounts/signIns"
+                secondaryButtonText="Talk to Sales"
+                secondaryButtonHref="/company/contact"
                 benefits={[
                     {
                         icon: <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>,
@@ -129,6 +134,19 @@ export default function CRMPage() {
                 ctaTitle={ctaTitle}
                 ctaText={ctaText}
                 ctaButtonText={ctaButtonText}
+                ctaButtonHref="https://user.flexymarkets.com/accounts/signIns"
+                quickFacts={[
+                    { label: 'Setup Time', value: '7–10 Business Days' },
+                    { label: 'Uptime SLA', value: '99.9%' },
+                    { label: 'Integrations', value: '100+' },
+                    { label: 'Server Sync', value: 'Real-Time' },
+                ]}
+                relatedLinks={[
+                    { title: 'MetaTrader 5 White Label', href: '/solutions/mt5', readTime: '5 min' },
+                    { title: 'Trader\'s Room / Client Portal', href: '/solutions/traders-room', readTime: '4 min' },
+                    { title: 'Copy Trading Platform', href: '/solutions/copy-trading', readTime: '6 min' },
+                    { title: 'Crypto Payment Gateway', href: '/solutions/crypto-gateway', readTime: '3 min' },
+                ]}
                 features={featuresInclude}
                 contactTitle="Need help?"
                 contactText="Speak with a CRM specialist to tailor the platform to your workflow."
