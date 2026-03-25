@@ -387,7 +387,7 @@ export default function TradeCopierPage() {
                     </div>
                 </div>
             </section>
-
+                {/* <TradeCopierPricingSection />  */}
             {/* FAQ Section */}
             <section className={`${styles.section} ${styles.altSection}`}>
                 <div className={styles.container}>
@@ -405,8 +405,8 @@ export default function TradeCopierPage() {
 
           
 
-            {/* Pricing Section */}
-            {/* <TradeCopierPricingSection /> */}
+           
+          
 
             {/* Final CTA Section */}
             <section className={styles.finalCtaSection}>

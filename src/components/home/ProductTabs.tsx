@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { MonitorSmartphone, BarChart3, Copy, Brain, Globe, Users } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const tabs = [
   {
@@ -13,9 +14,10 @@ const tabs = [
     color: "#2563eb",
     badge: "Whitelabel Ready",
     title: "PropFirm Admin + Client Platform",
+    imageUrl: "/New Folder/YOPIPS.jpg",
     description: "Complete prop trading infrastructure with Admin and Client dashboards. Mobile apps for iOS & Android included. Built-in risk management plugin.",
     features: ["Admin & Client Dashboards", "iOS + Android Apps", "Risk Management Plugin", "Full Whitelabel"],
-    url:"solutions/prop-firm"  
+    url: "solutions/prop-firm",
   },
   {
     id: "rtx5",
@@ -25,9 +27,10 @@ const tabs = [
     color: "#7c3aed",
     badge: "Next Generation",
     title: "Orrnn RTX5 Trading Terminal",
+    imageUrl: "/New Folder/RTX.jpg",
     description: "Next-generation trading terminal with Manager Terminal, Mobile Apps (iOS + APK), and Web Trading interface. Lightning-fast execution.",
     features: ["Manager Terminal", "Mobile Apps (iOS + APK)", "Web Trading", "Ultra-Fast Execution"],
-    url:"solutions/rtx5"  
+    url: "solutions/rtx-terminal",
   },
   {
     id: "crm",
@@ -37,9 +40,10 @@ const tabs = [
     color: "#059669",
     badge: "Fully Whitelabel",
     title: "Forex CRM — Admin + Client + Mobile",
+    imageUrl: "/New Folder/CRM.jpg",
     description: "Complete CRM supporting cTrader, MT5, MT4, RTX5 and more. Deploy fully whitelabeled under your brand.",
     features: ["Multi-Platform Support", "Admin + Client Portal", "Mobile App Included", "Whitelabel Ready"],
-    url:"solutions/crm"  
+    url: "solutions/crm",
   },
   {
     id: "copier",
@@ -49,9 +53,10 @@ const tabs = [
     color: "#d97706",
     badge: "Universal",
     title: "Cross-Platform Trade Copier",
+    imageUrl: "/New Folder/TRADECOPIER.jpg",
     description: "Copy trades across MT5, MT4, cTrader, Trade Locker, Match Trader, RTX5. Master to unlimited slave accounts.",
     features: ["All Platforms Supported", "Master → Unlimited Slaves", "Risk Controls", "Any-to-Any Copying"],
-    url:"solutions/trade-copier"  
+    url: "solutions/trade-copier",
   },
   {
     id: "ai",
@@ -61,9 +66,10 @@ const tabs = [
     color: "#dc2626",
     badge: "AI Powered",
     title: "YoForex AI — Smart Trading",
+    imageUrl: "/New Folder/YOFOREX AI.jpg",
     description: "AI-powered trading with Mobile and Web apps. Multi-AI Consensus Engine for institutional precision.",
     features: ["Mobile + Web App", "AI Consensus Engine", "ML-Powered Signals", "Institutional Precision"],
-    url:"solutions/yoforex-ai"  
+    url: "solutions/yoforex-ai",
   },
   {
     id: "websites",
@@ -72,9 +78,11 @@ const tabs = [
     label: "Custom Websites",
     color: "#0891b2",
     badge: "Bespoke",
+    imageUrl: "",
     title: "Whitelabel & Custom Forex Websites",
     description: "Fully custom forex brokerage websites. Responsive, SEO-optimized, conversion-focused.",
     features: ["Custom Design", "Mobile-First", "SEO Optimized", "Conversion Focused"],
+    url: "solutions/custom-websites",
   },
 ];
 
@@ -162,14 +170,24 @@ export default function ProductTabs() {
               Get Started →
             </Link>
           </div>
-          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#fff', borderRadius: 12, border: '1px solid #e2e8f0', padding: '3rem', minHeight: 250 }}>
-            <div style={{ textAlign: 'center' }}>
-              <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '1.25rem', color: tab.color }}>
-                {tab.bigIcon}
+          <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#fff', borderRadius: 12, border: '1px solid #e2e8f0', padding: tab.imageUrl ? '0' : '3rem', minHeight: 250, overflow: 'hidden', position: 'relative' }}>
+            {tab.imageUrl ? (
+              <Image
+                src={tab.imageUrl}
+                alt={tab.label}
+                width={600}
+                height={400}
+                style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: 12 }}
+              />
+            ) : (
+              <div style={{ textAlign: 'center' }}>
+                <div style={{ display: 'flex', justifyContent: 'center', marginBottom: '1.25rem', color: tab.color }}>
+                  {tab.bigIcon}
+                </div>
+                <p style={{ fontSize: '1.25rem', fontWeight: 700, color: '#0f172a' }}>{tab.label}</p>
+                <p style={{ fontSize: '0.8rem', color: '#94a3b8', marginTop: '0.25rem' }}>FxTrusts Product</p>
               </div>
-              <p style={{ fontSize: '1.25rem', fontWeight: 700, color: '#0f172a' }}>{tab.label}</p>
-              <p style={{ fontSize: '0.8rem', color: '#94a3b8', marginTop: '0.25rem' }}>FxTrusts Product</p>
-            </div>
+            )}
           </div>
         </div>
       </div>

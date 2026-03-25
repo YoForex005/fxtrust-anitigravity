@@ -3,6 +3,27 @@
    Layered on top of ContentPageLayout
 ======================================== */
 
+/* ========= ANIMATIONS ========= */
+@keyframes crmFadeUp {
+    from { opacity: 0; transform: translateY(28px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes crmSlideIn {
+    from { opacity: 0; transform: translateX(-16px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes crmAccentGrow {
+    from { width: 0; }
+    to { width: 48px; }
+}
+
+@keyframes crmPulseGlow {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(67, 83, 242, 0); }
+    50% { box-shadow: 0 0 0 8px rgba(67, 83, 242, 0.06); }
+}
+
 /* ========= PAGE WRAPPER ========= */
 .crmPage {
     position: relative;
@@ -12,6 +33,7 @@
 .crmPage h2 {
     position: relative;
     display: inline-block;
+    animation: crmFadeUp 0.6s ease both;
 }
 
 .crmPage h2::after {
@@ -23,7 +45,22 @@
     height: 3px;
     background: linear-gradient(90deg, #4353F2, #3b82f6);
     border-radius: 4px;
+    animation: crmAccentGrow 0.5s ease 0.4s both;
     transition: width 0.3s ease;
+}
+
+.crmPage h2:hover::after {
+    width: 72px;
+}
+
+/* Subtle entrance for h3 headings */
+.crmPage h3 {
+    animation: crmSlideIn 0.5s ease both;
+}
+
+/* Paragraph fade-in */
+.crmPage p {
+    animation: crmFadeUp 0.5s ease 0.15s both;
 }
 
 /* ========= STATS GRID ENHANCEMENT ========= */
@@ -35,15 +72,23 @@
 }
 
 .crmPage :global(.statBox) {
-    background: linear-gradient(135deg, #f8fafc 0%, #eff6ff 100%);
+    background: linear-gradient(135deg, rgba(248, 250, 252, 0.9) 0%, rgba(239, 246, 255, 0.85) 100%);
     border: 1px solid rgba(67, 83, 242, 0.1);
-    border-radius: 16px;
+    border-radius: 18px;
     padding: 1.75rem 1.25rem;
     text-align: center;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    animation: crmFadeUp 0.6s ease both;
 }
+
+.crmPage :global(.statBox):nth-child(1) { animation-delay: 0ms; }
+.crmPage :global(.statBox):nth-child(2) { animation-delay: 100ms; }
+.crmPage :global(.statBox):nth-child(3) { animation-delay: 200ms; }
+.crmPage :global(.statBox):nth-child(4) { animation-delay: 300ms; }
 
 .crmPage :global(.statBox)::before {
     content: '';
@@ -54,7 +99,8 @@
     height: 3px;
     background: linear-gradient(90deg, #4353F2, #818cf8);
     transform: scaleX(0);
-    transition: transform 0.3s ease;
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .crmPage :global(.statBox):hover::before {
@@ -62,9 +108,11 @@
 }
 
 .crmPage :global(.statBox):hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 28px -6px rgba(67, 83, 242, 0.15);
-    border-color: rgba(67, 83, 242, 0.2);
+    transform: translateY(-6px);
+    box-shadow:
+        0 16px 36px -8px rgba(67, 83, 242, 0.18),
+        0 4px 12px -2px rgba(0, 0, 0, 0.04);
+    border-color: rgba(67, 83, 242, 0.22);
 }
 
 .crmPage :global(.statBox) strong {
@@ -77,6 +125,11 @@
     background-clip: text;
     margin-bottom: 0.5rem;
     letter-spacing: -0.02em;
+    transition: transform 0.3s ease;
+}
+
+.crmPage :global(.statBox):hover strong {
+    transform: scale(1.06);
 }
 
 .crmPage :global(.statBox) span {
@@ -96,12 +149,22 @@
 .crmPage :global(.featureCard) {
     background: #ffffff;
     border: 1px solid #e5e7eb;
-    border-radius: 14px;
+    border-radius: 16px;
     padding: 1.5rem;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
+    animation: crmFadeUp 0.5s ease both;
 }
+
+/* Staggered entrances for feature cards */
+.crmPage :global(.featureCard):nth-child(1) { animation-delay: 0ms; }
+.crmPage :global(.featureCard):nth-child(2) { animation-delay: 80ms; }
+.crmPage :global(.featureCard):nth-child(3) { animation-delay: 160ms; }
+.crmPage :global(.featureCard):nth-child(4) { animation-delay: 240ms; }
+.crmPage :global(.featureCard):nth-child(5) { animation-delay: 320ms; }
+.crmPage :global(.featureCard):nth-child(6) { animation-delay: 400ms; }
+.crmPage :global(.featureCard):nth-child(7) { animation-delay: 480ms; }
 
 /* Accent line on hover */
 .crmPage :global(.featureCard)::after {
@@ -114,7 +177,7 @@
     background: linear-gradient(90deg, #4353F2, #818cf8);
     transform: scaleX(0);
     transform-origin: center;
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .crmPage :global(.featureCard):hover::after {
@@ -122,11 +185,11 @@
 }
 
 .crmPage :global(.featureCard):hover {
-    border-color: rgba(67, 83, 242, 0.2);
+    border-color: rgba(67, 83, 242, 0.22);
     box-shadow:
-        0 12px 28px -6px rgba(67, 83, 242, 0.1),
-        0 4px 10px -2px rgba(0, 0, 0, 0.04);
-    transform: translateY(-3px);
+        0 16px 36px -8px rgba(67, 83, 242, 0.12),
+        0 6px 14px -3px rgba(0, 0, 0, 0.04);
+    transform: translateY(-4px);
 }
 
 .crmPage :global(.featureCard) h4 {
@@ -141,12 +204,13 @@
 
 .crmPage :global(.featureCard) h4 svg {
     flex-shrink: 0;
-    transition: transform 0.3s ease;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .crmPage :global(.featureCard):hover h4 svg {
-    transform: scale(1.15);
+    transform: scale(1.18) rotate(-8deg);
     color: #4353F2;
+    filter: drop-shadow(0 2px 6px rgba(67, 83, 242, 0.25));
 }
 
 .crmPage :global(.featureCard) p {
@@ -154,17 +218,29 @@
     color: #64748b;
     margin: 0;
     line-height: 1.55;
+    animation: none; /* override the global p animation */
+}
+
+.crmPage :global(.featureCard) ul {
+    animation: none; /* prevent double animation */
 }
 
 /* ========= INFO BOX UPGRADE ========= */
 .crmPage :global(.infoBox) {
     background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 60%, #eff6ff 100%);
     border-left: 4px solid #4353F2;
-    border-radius: 0 14px 14px 0;
+    border-radius: 0 16px 16px 0;
     padding: 1.5rem 1.75rem;
     margin: 2rem 0;
     position: relative;
     overflow: hidden;
+    animation: crmFadeUp 0.5s ease both;
+    transition: all 0.3s ease;
+}
+
+.crmPage :global(.infoBox):hover {
+    box-shadow: 0 8px 24px -4px rgba(67, 83, 242, 0.12);
+    transform: translateY(-2px);
 }
 
 .crmPage :global(.infoBox)::before {
@@ -175,6 +251,11 @@
     font-size: 4rem;
     opacity: 0.06;
     color: #4353F2;
+    transition: opacity 0.3s ease;
+}
+
+.crmPage :global(.infoBox):hover::before {
+    opacity: 0.1;
 }
 
 .crmPage :global(.infoBox) p {
@@ -183,6 +264,7 @@
     font-weight: 500;
     font-size: 0.95rem;
     line-height: 1.6;
+    animation: none;
 }
 
 /* ========= FEATURE LIST UPGRADE ========= */
@@ -203,14 +285,21 @@
     line-height: 1.55;
     background: rgba(248, 250, 252, 0.8);
     border: 1px solid transparent;
-    border-radius: 10px;
-    transition: all 0.2s ease;
+    border-radius: 12px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: crmSlideIn 0.4s ease both;
 }
+
+.crmPage :global(.feature-list) li:nth-child(1) { animation-delay: 0ms; }
+.crmPage :global(.feature-list) li:nth-child(2) { animation-delay: 80ms; }
+.crmPage :global(.feature-list) li:nth-child(3) { animation-delay: 160ms; }
+.crmPage :global(.feature-list) li:nth-child(4) { animation-delay: 240ms; }
 
 .crmPage :global(.feature-list) li:hover {
     background: #ffffff;
-    border-color: rgba(67, 83, 242, 0.12);
-    box-shadow: 0 2px 8px rgba(67, 83, 242, 0.06);
+    border-color: rgba(67, 83, 242, 0.14);
+    box-shadow: 0 4px 14px rgba(67, 83, 242, 0.08);
+    transform: translateX(4px);
 }
 
 .crmPage :global(.feature-list) li::before {
@@ -220,15 +309,27 @@
     color: #4353F2;
     font-weight: 700;
     font-size: 0.75rem;
+    transition: transform 0.3s ease;
+}
+
+.crmPage :global(.feature-list) li:hover::before {
+    transform: scale(1.3) rotate(15deg);
 }
 
 /* ========= WARNING BOX ========= */
 .crmPage :global(.warningBox) {
     background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
     border-left: 4px solid #d97706;
-    border-radius: 0 14px 14px 0;
+    border-radius: 0 16px 16px 0;
     padding: 1.5rem 1.75rem;
     margin: 2rem 0;
+    animation: crmFadeUp 0.5s ease both;
+    transition: all 0.3s ease;
+}
+
+.crmPage :global(.warningBox):hover {
+    box-shadow: 0 8px 24px -4px rgba(217, 119, 6, 0.15);
+    transform: translateY(-2px);
 }
 
 .crmPage :global(.warningBox) p {
@@ -236,19 +337,29 @@
     margin: 0;
     font-weight: 500;
     font-size: 0.95rem;
+    animation: none;
 }
 
 /* ========= FAQ SECTION ========= */
 .crmPage :global(.faqItem) {
     border: 1px solid #e5e7eb;
-    border-radius: 12px;
+    border-radius: 14px;
     margin-bottom: 0.75rem;
-    transition: all 0.2s ease;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: crmFadeUp 0.4s ease both;
 }
 
+.crmPage :global(.faqItem):nth-child(1) { animation-delay: 0ms; }
+.crmPage :global(.faqItem):nth-child(2) { animation-delay: 60ms; }
+.crmPage :global(.faqItem):nth-child(3) { animation-delay: 120ms; }
+.crmPage :global(.faqItem):nth-child(4) { animation-delay: 180ms; }
+.crmPage :global(.faqItem):nth-child(5) { animation-delay: 240ms; }
+.crmPage :global(.faqItem):nth-child(6) { animation-delay: 300ms; }
+
 .crmPage :global(.faqItem):hover {
-    border-color: rgba(67, 83, 242, 0.2);
-    box-shadow: 0 4px 12px rgba(67, 83, 242, 0.06);
+    border-color: rgba(67, 83, 242, 0.22);
+    box-shadow: 0 6px 18px rgba(67, 83, 242, 0.08);
+    transform: translateY(-2px);
 }
 
 /* ========= RESPONSIVE ========= */
@@ -276,5 +387,23 @@
     .crmPage h2::after {
         left: 50%;
         transform: translateX(-50%);
+    }
+
+    /* Reduce animation intensity on mobile */
+    .crmPage :global(.featureCard),
+    .crmPage :global(.statBox),
+    .crmPage :global(.faqItem),
+    .crmPage :global(.feature-list) li {
+        animation-duration: 0.35s;
+    }
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    .crmPage *,
+    .crmPage *::before,
+    .crmPage *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
     }
 }

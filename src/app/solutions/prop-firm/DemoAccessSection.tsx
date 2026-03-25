@@ -14,26 +14,29 @@ import {
     WalletCards,
     Activity,
     CandlestickChart,
+    Zap,
 } from 'lucide-react';
 import styles from './prop.module.css';
 
 const demoAccounts = [
     {
         id: 'admin',
-        title: 'Admin Demo',
+        title: 'Admin Login',
+        description: 'Full back-office & risk controls',
         username: 'admin@yoforex.com',
         password: 'Admin@123',
-        href: '/prop-firm/live-demo/admin',
+        href: 'https://user.yopips.com/',
         cardClassName: styles.demoLoginCardAdmin,
         statusClassName: styles.demoStatusBlue,
         Icon: BriefcaseBusiness,
     },
     {
         id: 'client',
-        title: 'Client Demo',
+        title: 'User Login',
+        description: 'Trader dashboard & payouts',
         username: 'client@yoforex.com',
         password: 'Client@123',
-        href: '/prop-firm/live-demo/client',
+        href: 'https://user.yopips.com/',
         cardClassName: styles.demoLoginCardClient,
         statusClassName: styles.demoStatusGreen,
         Icon: UserRound,
@@ -47,7 +50,6 @@ async function copyText(value: string) {
         await navigator.clipboard.writeText(value);
         return;
     }
-
     const textarea = document.createElement('textarea');
     textarea.value = value;
     textarea.setAttribute('readonly', '');
@@ -55,89 +57,91 @@ async function copyText(value: string) {
     textarea.style.opacity = '0';
     document.body.appendChild(textarea);
     textarea.select();
-
     const copied = document.execCommand('copy');
     document.body.removeChild(textarea);
-
-    if (!copied) {
-        throw new Error('Clipboard copy failed.');
-    }
+    if (!copied) throw new Error('Clipboard copy failed.');
 }
 
-function CredentialRow({
+function InlineCopyField({
     label,
     value,
-    Icon,
+    icon: FieldIcon,
+    copiedField,
+    onCopy,
 }: {
     label: string;
     value: string;
-    Icon: DemoAccount['Icon'];
+    icon: typeof UserRound;
+    copiedField: string | null;
+    onCopy: (field: string, value: string) => void;
 }) {
+    const isCopied = copiedField === `${label}-${value}`;
+
     return (
         <div className={styles.credentialRow}>
             <div className={styles.credentialIcon}>
-                <Icon aria-hidden="true" />
+                <FieldIcon aria-hidden="true" />
             </div>
             <div className={styles.credentialText}>
                 <span className={styles.credentialLabel}>{label}</span>
                 <span className={styles.credentialValue}>{value}</span>
             </div>
+            <button
+                type="button"
+                className={styles.inlineCopyBtn}
+                onClick={() => onCopy(`${label}-${value}`, value)}
+                aria-label={`Copy ${label}`}
+                title={isCopied ? 'Copied!' : `Copy ${label}`}
+            >
+                {isCopied ? <Check aria-hidden="true" /> : <Copy aria-hidden="true" />}
+                <span className={styles.inlineCopyLabel}>{isCopied ? 'Copied!' : 'Copy'}</span>
+            </button>
         </div>
     );
 }
 
 export default function DemoAccessSection() {
-    const [copiedId, setCopiedId] = useState<string | null>(null);
+    const [copiedField, setCopiedField] = useState<string | null>(null);
     const resetTimerRef = useRef<number | null>(null);
 
     useEffect(() => {
         return () => {
-            if (resetTimerRef.current !== null) {
-                window.clearTimeout(resetTimerRef.current);
-            }
+            if (resetTimerRef.current !== null) window.clearTimeout(resetTimerRef.current);
         };
     }, []);
 
-    async function handleCopy(account: DemoAccount) {
-        const payload = `Username: ${account.username}\nPassword: ${account.password}`;
-
-        try {
-            await copyText(payload);
-            setCopiedId(account.id);
-
-            if (resetTimerRef.current !== null) {
-                window.clearTimeout(resetTimerRef.current);
-            }
-
-            resetTimerRef.current = window.setTimeout(() => {
-                setCopiedId(null);
-            }, 1800);
-        } catch {
-            setCopiedId(null);
-        }
+    function handleFieldCopy(fieldKey: string, value: string) {
+        copyText(value)
+            .then(() => {
+                setCopiedField(fieldKey);
+                if (resetTimerRef.current !== null) window.clearTimeout(resetTimerRef.current);
+                resetTimerRef.current = window.setTimeout(() => setCopiedField(null), 1800);
+            })
+            .catch(() => setCopiedField(null));
     }
 
     return (
         <section className={`${styles.section} ${styles.demoAccessSection}`}>
-            <div className={`${styles.container} ${styles.demoAccessGrid}`}>
-                <div className={styles.demoAccessContent}>
-                    <div className={styles.demoAccessIntro}>
-                        <div className={styles.demoAccessBadge}>
-                            <ShieldCheck aria-hidden="true" />
-                            <span>Demo Access</span>
-                        </div>
-                        <h2 className={styles.demoAccessTitle}>Secure credentials for both sides of the platform.</h2>
-                    </div>
+            <div className={styles.container} style={{ display: 'flex', flexDirection: 'column', gap: '6rem' }}>
+                {demoAccounts.map((account, index) => (
+                    <div key={account.id} className={`${styles.demoAccessGrid} ${index === 1 ? styles.demoAccessGridReverse : ''}`}>
+                        <div className={styles.demoAccessContent}>
+                            {index === 0 && (
+                                <div className={styles.demoAccessIntro}>
+                                    <div className={styles.demoAccessBadge}>
+                                        <Zap aria-hidden="true" />
+                                        <span>Try Live</span>
+                                    </div>
+                                    <h2 className={styles.demoAccessTitle}>Secure credentials for both sides of the platform.</h2>
+                                    <p className={styles.demoAccessDesc}>
+                                        Explore the admin back-office and trader dashboard with live demo credentials. See challenge tracking, risk rules, and payout workflows in action.
+                                    </p>
+                                </div>
+                            )}
 
-                    <div className={styles.demoAccessCards}>
-                        {demoAccounts.map((account, index) => {
-                            const isCopied = copiedId === account.id;
-
-                            return (
+                            <div className={styles.demoAccessCards}>
                                 <article
-                                    key={account.id}
                                     className={`${styles.demoLoginCard} ${account.cardClassName}`}
-                                    style={{ animationDelay: `${index * 140}ms` }}
                                 >
                                     <div className={styles.demoLoginHeader}>
                                         <div className={styles.demoLoginIdentity}>
@@ -146,12 +150,12 @@ export default function DemoAccessSection() {
                                             </div>
                                             <div className={styles.demoLoginMeta}>
                                                 <h3>{account.title}</h3>
-                                                <p>Protected live sandbox</p>
+                                                <p>{account.description}</p>
                                             </div>
                                         </div>
                                         <span className={`${styles.demoLoginStatus} ${account.statusClassName}`}>
                                             <ShieldCheck aria-hidden="true" />
-                                            <span>Verified</span>
+                                            <span>Live</span>
                                         </span>
                                     </div>
 
@@ -159,109 +163,76 @@ export default function DemoAccessSection() {
                                         <div className={styles.demoLoginPanelHeader}>
                                             <span className={styles.demoLoginPanelTitle}>
                                                 <LockKeyhole aria-hidden="true" />
-                                                <span>Secure Login</span>
+                                                <span>Credentials</span>
                                             </span>
                                             <span className={styles.demoLoginDot} aria-hidden="true" />
                                         </div>
 
                                         <div className={styles.demoCredentialList}>
-                                            <CredentialRow label="Username" value={account.username} Icon={UserRound} />
-                                            <CredentialRow label="Password" value={account.password} Icon={LockKeyhole} />
+                                            <InlineCopyField
+                                                label="Email"
+                                                value={account.username}
+                                                icon={UserRound}
+                                                copiedField={copiedField}
+                                                onCopy={handleFieldCopy}
+                                            />
+                                            <InlineCopyField
+                                                label="Password"
+                                                value={account.password}
+                                                icon={LockKeyhole}
+                                                copiedField={copiedField}
+                                                onCopy={handleFieldCopy}
+                                            />
                                         </div>
                                     </div>
 
                                     <div className={styles.demoLoginActions}>
-                                        <button
-                                            type="button"
-                                            className={styles.copyButton}
-                                            onClick={() => handleCopy(account)}
-                                            aria-label={`Copy ${account.title} credentials`}
-                                        >
-                                            {isCopied ? <Check aria-hidden="true" /> : <Copy aria-hidden="true" />}
-                                            <span>{isCopied ? 'Copied' : 'Copy Access'}</span>
-                                        </button>
-
                                         <Link href={account.href} className={styles.demoLaunchButton}>
-                                            <span>Open Demo</span>
+                                            <span>Launch Demo</span>
                                             <ArrowUpRight aria-hidden="true" />
                                         </Link>
                                     </div>
                                 </article>
-                            );
-                        })}
-                    </div>
-                </div>
-
-                <div className={styles.demoVisualColumn}>
-                    <div className={styles.demoVisualHalo} aria-hidden="true" />
-
-                    <div className={styles.demoVisualPanel}>
-                        <div className={styles.demoVisualHeader}>
-                            <div className={styles.demoVisualHeaderBrand}>
-                                <span className={styles.demoVisualSignal} aria-hidden="true" />
-                                <span>FXTrusts Demo</span>
-                            </div>
-
-                            <div className={styles.demoVisualHeaderBadge}>
-                                <ShieldCheck aria-hidden="true" />
-                                <span>Trusted Session</span>
                             </div>
                         </div>
 
-                        <div className={styles.demoVisualFrame}>
-                            <div className={styles.demoVisualMainScreen}>
-                                <Image
-                                    src="/client2.png"
-                                    alt="Client trading dashboard preview"
-                                    fill
-                                    sizes="(max-width: 1024px) 100vw, 42vw"
-                                    className={styles.demoVisualImage}
-                                />
-                            </div>
+                        <div className={styles.demoVisualColumn}>
+                            <div className={styles.demoVisualPanel}>
+                                <div className={styles.demoVisualHeader}>
+                                    <span>{account.title} Interface</span>
+                                    <span className={styles.demoVisualLive}>
+                                        <Activity aria-hidden="true" /> Live
+                                    </span>
+                                </div>
 
-                            <div className={styles.demoVisualOverlayCard}>
-                                <div className={styles.demoVisualOverlayIcon}>
-                                    <Activity aria-hidden="true" />
-                                </div>
-                                <div>
-                                    <span className={styles.demoVisualOverlayLabel}>Live monitoring</span>
-                                    <strong className={styles.demoVisualOverlayValue}>Risk rules active</strong>
-                                </div>
-                            </div>
-
-                            <div className={styles.demoVisualInset}>
-                                <div className={styles.demoVisualInsetHeader}>
-                                    <span className={styles.demoVisualInsetTitle}>Admin View</span>
-                                    <span className={styles.demoVisualInsetPill}>Realtime</span>
-                                </div>
-                                <div className={styles.demoVisualInsetFrame}>
-                                    {/* <Image
-                                        src="/admin2.png"
-                                        alt="Admin dashboard preview"
+                                <div className={styles.demoVisualFrame}>
+                                    <Image
+                                        src={account.id === 'admin' ? '/admin2.png' : '/client2.png'}
+                                        alt={`${account.title} preview`}
                                         fill
-                                        sizes="(max-width: 1024px) 50vw, 20vw"
+                                        sizes="(max-width: 1024px) 100vw, 42vw"
                                         className={styles.demoVisualImage}
-                                    /> */}
+                                    />
+                                </div>
+
+                                <div className={styles.demoVisualInsights}>
+                                    <div className={styles.demoInsightCard}>
+                                        <CandlestickChart aria-hidden="true" />
+                                        <span>Trading analytics</span>
+                                    </div>
+                                    <div className={styles.demoInsightCard}>
+                                        <WalletCards aria-hidden="true" />
+                                        <span>Payout workflows</span>
+                                    </div>
+                                    <div className={styles.demoInsightCard}>
+                                        <LockKeyhole aria-hidden="true" />
+                                        <span>Secure access</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-
-                        <div className={styles.demoVisualInsights}>
-                            <div className={styles.demoInsightCard}>
-                                <CandlestickChart aria-hidden="true" />
-                                <span>Trading analytics</span>
-                            </div>
-                            <div className={styles.demoInsightCard}>
-                                <WalletCards aria-hidden="true" />
-                                <span>Payout workflows</span>
-                            </div>
-                            <div className={styles.demoInsightCard}>
-                                <LockKeyhole aria-hidden="true" />
-                                <span>Secure access</span>
-                            </div>
-                        </div>
                     </div>
-                </div>
+                ))}
             </div>
         </section>
     );

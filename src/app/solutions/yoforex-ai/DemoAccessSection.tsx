@@ -12,7 +12,6 @@ import {
     UserRound,
     Bot,
     Activity,
-    TrendingUp,
 } from 'lucide-react';
 import styles from './yo-forex.module.css';
 
@@ -61,7 +60,7 @@ function InlineCopyField({
     return (
         <div className={styles.credentialRow}>
             <div className={styles.credentialIcon}>
-                <FieldIcon />
+                <FieldIcon aria-hidden="true" />
             </div>
             <div className={styles.credentialText}>
                 <span className={styles.credentialLabel}>{label}</span>
@@ -71,9 +70,11 @@ function InlineCopyField({
                 type="button"
                 className={styles.inlineCopyBtn}
                 onClick={() => onCopy(`${label}-${value}`, value)}
+                aria-label={`Copy ${label}`}
+                title={isCopied ? 'Copied!' : `Copy ${label}`}
             >
-                {isCopied ? <Check /> : <Copy />}
-                <span>{isCopied ? 'Copied!' : 'Copy'}</span>
+                {isCopied ? <Check aria-hidden="true" /> : <Copy aria-hidden="true" />}
+                <span className={styles.inlineCopyLabel}>{isCopied ? 'Copied!' : 'Copy'}</span>
             </button>
         </div>
     );
@@ -107,29 +108,30 @@ export default function YoforexAiDemoAccessSection() {
 
     return (
         <section className={`${styles.section} ${styles.demoAccessSection}`}>
-            <div className={`${styles.container} ${styles.demoAccessGrid}`}>
-                {/* LEFT CONTENT */}
-                <div className={styles.demoAccessContent}>
-                    <div className={styles.demoAccessIntro}>
-                        <div className={styles.demoAccessBadge}>
-                            <Bot />
-                            <span>Live AI Demo</span>
-                        </div>
-                        <h2 className={styles.demoAccessTitle}>
-                            Test AI-powered trading before risking real capital.
-                        </h2>
-                        <p className={styles.demoAccessDesc}>
-                            Log in to the YoForex AI sandbox and explore real-time signals,
-                            AI reasoning, and smart trade insights exactly how live users experience it.
-                        </p>
+            <div className={styles.container}>
+                <div className={styles.demoAccessIntro}>
+                    <div className={styles.demoAccessBadge}>
+                        <Bot aria-hidden="true" />
+                        <span>Live AI Demo</span>
                     </div>
+                    <h2 className={styles.demoAccessTitle}>
+                        Test AI-powered trading before risking real capital.
+                    </h2>
+                    <p className={styles.demoAccessDesc}>
+                        Log in to the YoForex AI sandbox and explore real-time signals,
+                        AI reasoning, and smart trade insights exactly how live users experience it.
+                    </p>
+                </div>
+            </div>
 
+            <div className={`${styles.container} ${styles.demoAccessGrid}`}>
+                <div className={styles.demoAccessContent}>
                     <div className={styles.demoAccessCards}>
                         <article className={styles.demoLoginCard}>
                             <div className={styles.demoLoginHeader}>
                                 <div className={styles.demoLoginIdentity}>
                                     <div className={styles.demoLoginAvatar}>
-                                        <UserRound />
+                                        <UserRound aria-hidden="true" />
                                     </div>
                                     <div className={styles.demoLoginMeta}>
                                         <h3>{demoAccount.title}</h3>
@@ -138,7 +140,7 @@ export default function YoforexAiDemoAccessSection() {
                                 </div>
 
                                 <span className={styles.demoLoginStatus}>
-                                    <ShieldCheck />
+                                    <ShieldCheck aria-hidden="true" />
                                     <span>AI Active</span>
                                 </span>
                             </div>
@@ -146,10 +148,10 @@ export default function YoforexAiDemoAccessSection() {
                             <div className={styles.demoLoginPanel}>
                                 <div className={styles.demoLoginPanelHeader}>
                                     <span className={styles.demoLoginPanelTitle}>
-                                        <LockKeyhole />
+                                        <LockKeyhole aria-hidden="true" />
                                         <span>Secure Login</span>
                                     </span>
-                                    <span className={styles.demoLoginDot} />
+                                    <span className={styles.demoLoginDot} aria-hidden="true" />
                                 </div>
 
                                 <div className={styles.demoCredentialList}>
@@ -174,10 +176,11 @@ export default function YoforexAiDemoAccessSection() {
                                 <Link
                                     href={DEMO_LOGIN_URL}
                                     target="_blank"
+                                    rel="noopener noreferrer"
                                     className={styles.demoLaunchButton}
                                 >
                                     <span>Open AI Demo</span>
-                                    <ArrowUpRight />
+                                    <ArrowUpRight aria-hidden="true" />
                                 </Link>
                             </div>
                         </article>
@@ -190,32 +193,18 @@ export default function YoforexAiDemoAccessSection() {
                         <div className={styles.demoVisualHeader}>
                             <span>YoForex AI Interface</span>
                             <span className={styles.demoVisualLive}>
-                                <Activity /> Live
+                                <Activity aria-hidden="true" /> Live
                             </span>
                         </div>
 
                         <div className={styles.demoVisualFrame}>
                             <Image
-                                src="/ai-trading-preview.png"
-                                alt="AI Trading Dashboard"
-                                fill
+                                src="/Gemini_Generated_Image_ii8xmqii8xmqii8x.png"
+                                alt="YoForex AI Trading Dashboard"
+                                width={800}
+                                height={500}
                                 className={styles.demoVisualImage}
                             />
-                        </div>
-
-                        <div className={styles.demoVisualInsights}>
-                            <div className={styles.demoInsightCard}>
-                                <TrendingUp />
-                                <span>High-probability signals</span>
-                            </div>
-                            <div className={styles.demoInsightCard}>
-                                <Bot />
-                                <span>AI-powered reasoning</span>
-                            </div>
-                            <div className={styles.demoInsightCard}>
-                                <ShieldCheck />
-                                <span>Risk-managed entries</span>
-                            </div>
                         </div>
                     </div>
                 </div>

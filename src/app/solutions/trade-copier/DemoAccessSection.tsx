@@ -14,6 +14,7 @@ import {
     Zap,
     BarChart3,
     RefreshCcw,
+    Activity,
 } from 'lucide-react';
 import styles from './trade-copier.module.css';
 
@@ -119,19 +120,21 @@ export default function TradeCopierDemoAccessSection() {
 
     return (
         <section className={`${styles.section} ${styles.demoAccessSection}`}>
+            <div className={styles.container}>
+                <div className={styles.demoAccessIntro}>
+                    <div className={styles.demoAccessBadge}>
+                        <Zap aria-hidden="true" />
+                        <span>Try Live</span>
+                    </div>
+                    <h2 className={styles.demoAccessTitle}>Test drive the copier before you commit.</h2>
+                    <p className={styles.demoAccessDesc}>
+                        Explore the user dashboard with credentials. See real-time replication, symbol mapping, and risk controls in action.
+                    </p>
+                </div>
+            </div>
+
             <div className={`${styles.container} ${styles.demoAccessGrid}`}>
                 <div className={styles.demoAccessContent}>
-                    <div className={styles.demoAccessIntro}>
-                        <div className={styles.demoAccessBadge}>
-                            <Zap aria-hidden="true" />
-                            <span>Try Live</span>
-                        </div>
-                        <h2 className={styles.demoAccessTitle}>Test drive the copier before you commit.</h2>
-                        <p className={styles.demoAccessDesc}>
-                            Explore the  user dashboard with credentials. See real-time replication, symbol mapping, and risk controls in action.
-                        </p>
-                    </div>
-
                     <div className={styles.demoAccessCards}>
                         {demoAccounts.map((account, index) => (
                             <article
@@ -194,72 +197,25 @@ export default function TradeCopierDemoAccessSection() {
                 </div>
 
                 <div className={styles.demoVisualColumn}>
-                    <div className={styles.demoVisualHalo} aria-hidden="true" />
-
                     <div className={styles.demoVisualPanel}>
                         <div className={styles.demoVisualHeader}>
-                            <div className={styles.demoVisualHeaderBrand}>
-                                <span className={styles.demoVisualSignal} aria-hidden="true" />
-                                <span>Trade Copier</span>
-                            </div>
-                            {/* <div className={styles.demoVisualHeaderBadge}>
-                                <ShieldCheck aria-hidden="true" />
-                                <span>Sandbox Mode</span>
-                            </div> */}
+                            <span>Trade Copier Dashboard</span>
+                            <span className={styles.demoVisualLive}>
+                                <Activity aria-hidden="true" /> Live
+                            </span>
                         </div>
 
                         <div className={styles.demoVisualFrame}>
-                            <div className={styles.demoVisualMainScreen}>
-                                <Image
-                                    src="/client2.png"
-                                    alt="Trade Copier dashboard preview"
-                                    fill
-                                    sizes="(max-width: 1024px) 100vw, 42vw"
-                                    className={styles.demoVisualImage}
-                                />
-                            </div>
-
-                            <div className={styles.demoVisualOverlayCard}>
-                                <div className={styles.demoVisualOverlayIcon}>
-                                    <RefreshCcw aria-hidden="true" />
-                                </div>
-                                <div>
-                                    <span className={styles.demoVisualOverlayLabel}>Replication</span>
-                                    <strong className={styles.demoVisualOverlayValue}>Syncing 47 subs</strong>
-                                </div>
-                            </div>
-
-                            <div className={styles.demoVisualInset}>
-                                <div className={styles.demoVisualInsetHeader}>
-                                    <span className={styles.demoVisualInsetTitle}>Master Feed</span>
-                                    <span className={styles.demoVisualInsetPill}>Live</span>
-                                </div>
-                                <div className={styles.demoVisualInsetFrame}>
-                                    <Image
-                                        src="/admin2.png"
-                                        alt="Master account feed preview"
-                                        fill
-                                        sizes="(max-width: 1024px) 50vw, 20vw"
-                                        className={styles.demoVisualImage}
-                                    />
-                                </div>
-                            </div>
+                            <Image
+                                src="/trade-copier.jpg"
+                                alt="Trade Copier dashboard preview"
+                                fill
+                                sizes="(max-width: 1024px) 100vw, 42vw"
+                                className={styles.demoVisualImage}
+                            />
                         </div>
 
-                        <div className={styles.demoVisualInsights}>
-                            <div className={styles.demoInsightCard}>
-                                <BarChart3 aria-hidden="true" />
-                                <span>Slippage analytics</span>
-                            </div>
-                            <div className={styles.demoInsightCard}>
-                                <RefreshCcw aria-hidden="true" />
-                                <span>Copy engine</span>
-                            </div>
-                            <div className={styles.demoInsightCard}>
-                                <LockKeyhole aria-hidden="true" />
-                                <span>AES-256 encrypted</span>
-                            </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>

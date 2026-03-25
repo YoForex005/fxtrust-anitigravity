@@ -172,7 +172,7 @@ export default function YoForexPage() {
                     </div>
                 </div>
             </section>
-                {/* <YoforexAiDemoAccessSection /> */}
+                 <YoforexAiDemoAccessSection /> 
             {/* Experience Layers Section */}
             <section className={`${styles.section} ${styles.altSection}`}>
                 <div className={styles.container}>

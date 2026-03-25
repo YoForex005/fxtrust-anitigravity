@@ -352,3 +352,10 @@ iframe[id=":1.container"] {
   white-space: nowrap;
   border-width: 0;
 }
+
+@media (hover: hover) {
+  #products button:hover {
+    background: #f1f5f9 !important;
+    color: #0f172a !important;
+  }
+}

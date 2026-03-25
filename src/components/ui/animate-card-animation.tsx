@@ -25,15 +25,15 @@ const cardData: Record<number, { title: string; description: string; icon: React
     icon: <BarChart3 size={48} />,
     color: "#2563eb",
     url: "/solutions/prop-firm",
-    imageSrc: "/websitegraphics/yopips.jpg",
+    imageSrc: "/WEBSITE GRAPHICS 2/yopips.jpg",
   },
   2: {
     title: "Orrnn RTX5 Trading Terminal",
     description: "Next-Gen Trading Terminal — Manager + Mobile + Web",
     icon: <MonitorSmartphone size={48} />,
     color: "#7c3aed",
-    url: "/solutions/rtx5-terminal",
-    imageSrc: "/websitegraphics/ornn.jpg",
+    url: "/solutions/rtx-terminal",
+    imageSrc: "/WEBSITE GRAPHICS 2/ornn.jpg",
   },
   3: {
     title: "Forex CRM",
@@ -41,7 +41,7 @@ const cardData: Record<number, { title: string; description: string; icon: React
     icon: <Users size={48} />,
     color: "#059669",
     url: "/solutions/crm",
-    imageSrc: "/websitegraphics/flexy crm.jpg",
+    imageSrc: "/WEBSITE GRAPHICS 2/flexy crm.jpg",
   },
   4: {
     title: "Trade Copier",
@@ -49,7 +49,7 @@ const cardData: Record<number, { title: string; description: string; icon: React
     icon: <Copy size={48} />,
     color: "#d97706",
     url: "/solutions/trade-copier",
-    imageSrc: "/websitegraphics/TRADE COPIER.jpg",
+    imageSrc: "/WEBSITE GRAPHICS 2/TRADE COPIER.jpg",
   },
   5: {
     title: "YoForex AI",
@@ -57,7 +57,7 @@ const cardData: Record<number, { title: string; description: string; icon: React
     icon: <Brain size={48} />,
     color: "#dc2626",
     url: "/solutions/yoforex-ai",
-    imageSrc: "/websitegraphics/YOFOREX AI.jpg",
+    imageSrc: "/WEBSITE GRAPHICS 2/YOFOREX AI.jpg",
   },
   6: {
     title: "Whitelabel & Custom Websites",
@@ -65,7 +65,7 @@ const cardData: Record<number, { title: string; description: string; icon: React
     icon: <Globe size={48} />,
     color: "#0891b2",
     url: "/solutions/white-label-custom-websites",
-    imageSrc: "/websitegraphics/WHITE LABEL.jpg",
+    imageSrc: "/WEBSITE GRAPHICS 2/WHITE LABEL.jpg",
   },
 }
 
