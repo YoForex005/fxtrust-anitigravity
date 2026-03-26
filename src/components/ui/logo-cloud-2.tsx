@@ -1,5 +1,6 @@
 import { PlusIcon } from "lucide-react";
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 
 type Logo = {
   src: string;
@@ -122,13 +123,13 @@ function LogoCard({ logo, className, children, ...props }: LogoCardProps) {
       )}
       {...props}
     >
-      <img
+      <Image
         alt={logo.alt}
         className="pointer-events-none h-4 select-none md:h-5 dark:brightness-0 dark:invert"
         height={logo.height || "auto"}
         src={logo.src}
         width={logo.width || "auto"}
-      />
+      / />
       {children}
     </div>
   );

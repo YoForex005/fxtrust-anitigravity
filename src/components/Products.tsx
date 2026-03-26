@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import styles from './Products.module.css';
+import Image from "next/image";
 
 const productsData = [
   {
@@ -119,11 +120,11 @@ export default function Products() {
           {productsData.map((product) => (
             <Link href={product.url} key={product.id} className={styles.card} target="_blank" rel="noopener noreferrer">
               <div className={styles.cardLogoWrapper}>
-                <img 
+                <Image 
                   src={product.logoImage} 
                   alt={`${product.name} Logo`} 
                   className={styles.cardLogoImage}
-                />
+                width={500} height={500} style={{ width: '100%', height: 'auto' }} />
               </div>
               <h3 className={styles.cardTitle}>{product.name}</h3>
               <span className={styles.cardTagline}>{product.tagline}</span>

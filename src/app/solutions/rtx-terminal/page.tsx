@@ -5,6 +5,7 @@ import type { Metadata } from 'next';
 import FAQSchema from '@/components/seo/FAQSchema';
 import FAQAccordion from '@/components/FAQAccordion';
 import RtxTerminalDemoAccessSection from './DemoAccessSection';
+import DataExchangeApiSection from './DataExchangeApiSection';
 
 export const metadata: Metadata = {
     title: 'RTX5 Trading Terminal | The Industry Standard for Traders & Brokers',
@@ -152,7 +153,7 @@ export default function RtxTerminalPage() {
                     </div>
                 </div>
             </section>
-
+          <DataExchangeApiSection/>
             {/* ──── Why RTX5 — Key Advantages ──── */}
             <section className={`${styles.section} ${styles.altSection}`}>
                 <div className={styles.container}>

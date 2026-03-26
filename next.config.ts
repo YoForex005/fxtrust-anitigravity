@@ -26,6 +26,11 @@ const nextConfig: NextConfig = {
         hostname: 'pub-9fc60e9b8d334d298b6a4a22f06229c0.r2.dev',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+        pathname: '/**',
+      },
     ],
   },
 

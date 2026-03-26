@@ -1210,13 +1210,13 @@
 
 .demoVisualFrame {
     position: relative;
-    min-height: 300px;
+    height: auto;
     border-radius: 26px;
     overflow: hidden;
     border: 1px solid rgba(148, 163, 184, 0.18);
     box-shadow: 0 28px 60px rgba(2, 6, 23, 0.45);
     flex: 1;
-    background: #0f172a;
+    background: transparent;
 }
 
 .demoVisualImageDesktop {
@@ -1454,7 +1454,8 @@
     }
 
     .demoVisualFrame {
-        min-height: 390px;
+        height: auto;
+        min-height: auto;
     }
 
     .demoVisualImageDesktop {

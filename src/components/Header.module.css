@@ -23,13 +23,13 @@
 }
 
 .scrolled {
-    background: rgba(255, 255, 255, 0.85);
-    backdrop-filter: blur(24px) saturate(180%);
-    -webkit-backdrop-filter: blur(24px) saturate(180%);
+    background: rgba(255, 255, 255, 0.96);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
     box-shadow:
-        0 10px 40px rgba(0, 0, 0, 0.05),
-        inset 0 1px 0 0 rgba(255, 255, 255, 0.8);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        0 8px 30px rgba(0, 0, 0, 0.06),
+        inset 0 1px 0 0 rgba(255, 255, 255, 1);
+    border-bottom: 1px solid rgba(229, 231, 235, 0.9);
 }
 
 /* White text when transparent (not scrolled) AND on Home Page */
@@ -74,9 +74,9 @@
 .logo {
     display: flex;
     align-items: center;
-    gap: 0.75rem;
+    gap: 0.6rem;
     font-family: var(--font-inter);
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 800;
     color: #111827;
     text-decoration: none;
@@ -85,7 +85,7 @@
 }
 
 .logoIcon {
-    width: 130px;
+    width: 105px;
     height: auto;
     color: #4353F2;
     filter: drop-shadow(0 2px 4px rgba(67, 83, 242, 0.2));

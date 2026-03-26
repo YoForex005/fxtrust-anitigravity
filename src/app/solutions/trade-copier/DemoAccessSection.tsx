@@ -197,15 +197,15 @@ export default function TradeCopierDemoAccessSection() {
                 </div>
 
                 <div className={styles.demoVisualColumn}>
-                    <div className={styles.demoVisualFrame}>
-                        <Image
+                    
+                        <Image priority={true}
                             src="/trade-copier.jpg"
                             alt="Trade Copier dashboard preview"
                             width={1200}
                             height={750}
                             className={styles.demoVisualImage}
                         />
-                    </div>
+                    
                 </div>
             </div>
         </section>

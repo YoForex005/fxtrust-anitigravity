@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import { cn } from "@/lib/utils"
+import Image from "next/image";
 
 const testimonials = [
   {
@@ -97,7 +98,7 @@ export function Testimonials() {
                 )}
               >
                 <div className="relative flex-shrink-0">
-                  <img
+                  <Image
                     src={testimonial.avatar}
                     alt={testimonial.author}
                     className={cn(
@@ -106,7 +107,7 @@ export function Testimonials() {
                       isActive ? "ring-2 ring-background/30" : "ring-0",
                       !isActive && "hover:scale-105",
                     )}
-                  />
+                  width={500} height={500} style={{ width: '100%', height: 'auto' }} />
                 </div>
 
                 <div

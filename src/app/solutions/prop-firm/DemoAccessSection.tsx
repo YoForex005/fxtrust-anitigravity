@@ -25,7 +25,7 @@ const demoAccounts = [
         description: 'Full back-office & risk controls',
         username: 'admin@yoforex.com',
         password: 'Admin@123',
-        href: 'https://user.yopips.com/',
+        href: 'https://user.yopips.com/login',
         cardClassName: styles.demoLoginCardAdmin,
         statusClassName: styles.demoStatusBlue,
         Icon: BriefcaseBusiness,
@@ -36,7 +36,7 @@ const demoAccounts = [
         description: 'Trader dashboard & payouts',
         username: 'client@yoforex.com',
         password: 'Client@123',
-        href: 'https://user.yopips.com/',
+        href: 'https://user.yopips.com/login',
         cardClassName: styles.demoLoginCardClient,
         statusClassName: styles.demoStatusGreen,
         Icon: UserRound,
@@ -186,7 +186,7 @@ export default function DemoAccessSection() {
                                     </div>
 
                                     <div className={styles.demoLoginActions}>
-                                        <Link href={account.href} className={styles.demoLaunchButton}>
+                                        <Link href={account.href} className={styles.demoLaunchButton} target="_blank">
                                             <span>Launch Demo</span>
                                             <ArrowUpRight aria-hidden="true" />
                                         </Link>
@@ -196,25 +196,14 @@ export default function DemoAccessSection() {
                         </div>
 
                         <div className={styles.demoVisualColumn}>
-                            <div className={styles.demoVisualPanel}>
-                                <div className={styles.demoVisualHeader}>
-                                    <span>{account.title} Interface</span>
-                                    <span className={styles.demoVisualLive}>
-                                        <Activity aria-hidden="true" /> Live
-                                    </span>
-                                </div>
-
-                                <div className={styles.demoVisualFrame}>
-                                    <Image
-                                        src={account.id === 'admin' ? '/admin2.png' : '/client2.png'}
-                                        alt={`${account.title} preview`}
-                                        fill
-                                        sizes="(max-width: 1024px) 100vw, 42vw"
-                                        className={styles.demoVisualImage}
-                                    />
-                                </div>
-
-                            
+                            <div className={styles.demoVisualFrame}>
+                                <Image priority={true}
+                                    src={account.id === 'admin' ? '/admin2.png' : '/client2.png'}
+                                    alt={`${account.title} preview`}
+                                    width={1200}
+                                    height={750}
+                                    className={styles.demoVisualImage}
+                                />
                             </div>
                         </div>
                     </div>

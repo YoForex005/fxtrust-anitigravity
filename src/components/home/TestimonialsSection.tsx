@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from "react";
+import Image from "next/image";
 
 const testimonials = [
   {
@@ -70,7 +71,7 @@ export default function TestimonialsSection() {
                 transition: 'all 0.3s',
               }}
             >
-              <img
+              <Image
                 src={t.avatar}
                 alt={t.author}
                 style={{
@@ -80,7 +81,7 @@ export default function TestimonialsSection() {
                   objectFit: 'cover',
                   border: active === i ? '2px solid rgba(255,255,255,0.3)' : '2px solid transparent',
                 }}
-              />
+                width={500} height={500}  />
               {active === i && (
                 <span style={{ fontSize: '0.85rem', fontWeight: 500, color: '#fff', whiteSpace: 'nowrap' }}>
                   {t.author}

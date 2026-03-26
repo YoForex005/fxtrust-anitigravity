@@ -1,0 +1,308 @@
+.apiSection {
+    padding: 6rem 1rem;
+    background: #ffffff;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.card {
+    background: #ffffff;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: 24px;
+    padding: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 4rem;
+    align-items: center;
+    box-shadow: 
+        0 20px 40px -10px rgba(15, 23, 42, 0.05),
+        0 0 0 1px rgba(255, 255, 255, 0.5) inset;
+}
+
+/* Typography */
+.badge {
+    display: inline-flex;
+    padding: 0.45rem 1rem;
+    background: #f1f5f9;
+    border: 1px solid #e2e8f0;
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #475569;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 1.5rem;
+}
+
+.title {
+    font-size: clamp(2rem, 3vw, 2.5rem);
+    font-weight: 800;
+    color: #0f172a;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin-bottom: 1.25rem;
+}
+
+.description {
+    font-size: 1.05rem;
+    color: #64748b;
+    line-height: 1.7;
+}
+
+/* Diagram Container */
+.diagramArea {
+    position: relative;
+    width: 100%;
+}
+
+.diagramWrapper {
+    position: relative;
+    width: 100%;
+    padding-bottom: 75%; /* 4:3 aspect ratio maintains absolute coords */
+}
+
+/* SVG Line Connectors */
+.connectorPaths {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.pathBg {
+    fill: none;
+    stroke: rgba(148, 163, 184, 0.2);
+    stroke-width: 1.5px;
+}
+
+.pathFlow1, .pathFlow2, .pathFlow3, .pathFlow4 {
+    fill: none;
+    stroke: #3b82f6;
+    stroke-width: 2px;
+    stroke-dasharray: 600;
+    stroke-dashoffset: 600;
+    animation: dataFlow 4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+.pathFlow2 { animation-delay: 1s; }
+.pathFlow3 { animation-delay: 2s; stroke: #8b5cf6; } 
+.pathFlow4 { animation-delay: 3s; stroke: #10b981; }
+
+@keyframes dataFlow {
+    0% { stroke-dashoffset: 600; opacity: 1; }
+    40% { stroke-dashoffset: 0; opacity: 1; }
+    100% { stroke-dashoffset: 0; opacity: 0; }
+}
+
+/* Method Nodes (GET, POST, etc) */
+.methodNode {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    border: 1px solid rgba(148, 163, 184, 0.3);
+    padding: 0.5rem 1rem;
+    border-radius: 100px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #0f172a;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 12px rgba(15, 23, 42, 0.04);
+    z-index: 2;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.methodNode svg { 
+    width: 14px; 
+    height: 14px; 
+    color: #64748b; 
+}
+
+.methodNode:hover {
+    transform: translate(-50%, -60%);
+    border-color: #3b82f6;
+    box-shadow: 0 8px 24px rgba(59, 130, 246, 0.15);
+    color: #1d4ed8;
+}
+
+/* Central Node */
+.centerHub {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    border: 1px solid rgba(148, 163, 184, 0.3);
+    padding: 0.6rem 1.25rem;
+    border-radius: 100px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: #0f172a;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.08);
+    z-index: 5;
+    transition: transform 0.3s ease;
+}
+
+.centerHub:hover {
+    transform: translate(-50%, -55%);
+}
+
+.sparkle svg { 
+    width: 16px; 
+    height: 16px; 
+    color: #3b82f6; 
+    fill: currentColor; 
+}
+
+/* Base Radar Panel */
+.radarPanelContainer {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+    height: 48%; 
+    background: #f8fafc;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    overflow: hidden;
+    z-index: 0;
+}
+
+/* Radar Rings */
+.radarRing {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+    border-top: 1px solid rgba(148, 163, 184, 0.3);
+    border-left: 1px solid rgba(148, 163, 184, 0.1);
+    border-right: 1px solid rgba(148, 163, 184, 0.1);
+    transition: all 0.5s ease;
+}
+
+.radarRing:nth-child(2) {
+    animation: radarPulse 4s infinite cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.radarRing:nth-child(3) {
+    animation: radarPulse 4s infinite cubic-bezier(0.16, 1, 0.3, 1) 2s;
+}
+
+@keyframes radarPulse {
+    0% { border-color: rgba(59, 130, 246, 0.6); box-shadow: inset 0 2px 10px rgba(59, 130, 246, 0.1); }
+    50% { border-color: rgba(148, 163, 184, 0.3); box-shadow: none; }
+    100% { border-color: rgba(148, 163, 184, 0.3); box-shadow: none; }
+}
+
+/* Side Inner Nodes */
+.innerNodeLeft, .innerNodeRight {
+    position: absolute;
+    bottom: 25%;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.8rem;
+    background: #ffffff;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #475569;
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.05);
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.innerNodeLeft:hover, .innerNodeRight:hover {
+    transform: translateY(-4px);
+    border-color: #3b82f6;
+    color: #1d4ed8;
+}
+
+.innerNodeLeft { left: 8%; }
+.innerNodeRight { right: 8%; }
+
+.innerNodeLeft svg, .innerNodeRight svg { 
+    width: 14px; 
+    height: 14px; 
+    color: #64748b; 
+}
+
+/* API Base Node */
+.apiNode {
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #0f172a;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    font-weight: 800;
+    letter-spacing: 0.05em;
+    border: 5px solid #ffffff;
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.15);
+    z-index: 5;
+}
+
+/* Responsiveness */
+@media (max-width: 1024px) {
+    .card {
+        grid-template-columns: 1fr;
+        padding: 3rem;
+        gap: 3rem;
+    }
+    
+    .textContent {
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .card { 
+        padding: 2rem 1.5rem; 
+    }
+    
+    .methodNode { 
+        font-size: 0.7rem; 
+        padding: 0.4rem 0.6rem; 
+    }
+    
+    .methodNode svg { 
+        display: none; 
+    }
+    
+    .centerHub { 
+        font-size: 0.75rem; 
+        padding: 0.5rem 1rem; 
+        white-space: nowrap;
+    }
+    
+    .innerNodeLeft, .innerNodeRight { 
+        padding: 0.3rem 0.6rem; 
+        font-size: 0.7rem; 
+    }
+    
+    .innerNodeLeft svg, .innerNodeRight svg {
+        display: none;
+    }
+}

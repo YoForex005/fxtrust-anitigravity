@@ -1,4 +1,5 @@
 'use client';
+import Image from "next/image";
 
 export default function LogoCloudSection() {
   return (
@@ -8,11 +9,13 @@ export default function LogoCloudSection() {
       </p>
       <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '2.5rem', flexWrap: 'wrap', maxWidth: 800, margin: '0 auto' }}>
         {logos.map((logo) => (
-          <img
+          <Image
             key={logo.alt}
             src={logo.src}
             alt={logo.alt}
-            style={{ height: 36, objectFit: 'contain', opacity: 0.7, filter: 'grayscale(100%)', transition: 'all 0.3s' }}
+            width={150}
+            height={50}
+            style={{ height: 36, width: 'auto', objectFit: 'contain', opacity: 0.7, filter: 'grayscale(100%)', transition: 'all 0.3s' }}
             onMouseEnter={(e) => { e.currentTarget.style.opacity = '1'; e.currentTarget.style.filter = 'grayscale(0%)'; }}
             onMouseLeave={(e) => { e.currentTarget.style.opacity = '0.7'; e.currentTarget.style.filter = 'grayscale(100%)'; }}
           />

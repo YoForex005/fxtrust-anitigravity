@@ -190,7 +190,7 @@ export default function YoforexAiDemoAccessSection() {
                 {/* RIGHT VISUAL */}
                 <div className={styles.demoVisualColumn}>
                     <div className={styles.demoVisualFrame}>
-                        <Image
+                        <Image priority={true}
                             src="/Gemini_Generated_Image_ii8xmqii8xmqii8x.png"
                             alt="YoForex AI Trading Dashboard"
                             width={800}

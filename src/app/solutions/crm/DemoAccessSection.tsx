@@ -179,22 +179,22 @@ export default function CRMDemoAccessSection() {
                 </div>
 
                 <div className={styles.demoVisualColumn}>
-                    <div className={styles.demoVisualFrame}>
-                        <Image
-                            src="/desktop_flexy.jpg"
+                
+                        <Image priority={true}
+                            src="/New Folder/CRM.jpg"
                             alt="Flexy CRM dashboard preview - Desktop"
                             width={1200}
                             height={750}
                             className={`${styles.demoVisualImage} ${styles.demoVisualImageDesktop}`}
                         />
                         <Image
-                            src="/mobile_flexy.jpg"
+                            src="/New Folder/CRM.jpg"
                             alt="Flexy CRM dashboard preview - Mobile"
                             width={1200}
                             height={750}
                             className={`${styles.demoVisualImage} ${styles.demoVisualImageMobile}`}
                         />
-                    </div>
+                    
                 </div>
             </div>
         </section>

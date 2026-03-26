@@ -120,11 +120,11 @@ export default function DetailedProducts() {
                       style={{ background: `radial-gradient(circle, ${product.colorTheme}40 0%, transparent 70%)` }}
                     />
                     <div className={styles.imageWrapper}>
-                      <img
+                      <Image
                         src={product.logoImage}
                         alt={`${product.name} Platform`}
                         className={styles.productImage}
-                      />
+                      width={500} height={500} style={{ width: '100%', height: 'auto' }} />
                     </div>
                   </div>
                 </div>

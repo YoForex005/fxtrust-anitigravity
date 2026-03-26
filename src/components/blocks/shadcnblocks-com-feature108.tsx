@@ -3,6 +3,7 @@ import { Layout, Pointer, Zap } from "lucide-react";
 
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 interface TabContent {
   badge: string;
@@ -122,11 +123,11 @@ const Feature108 = ({
                     {tab.content.buttonText}
                   </Button>
                 </div>
-                <img
+                <Image
                   src={tab.content.imageSrc}
                   alt={tab.content.imageAlt}
                   className="rounded-xl"
-                />
+                width={500} height={500} style={{ width: '100%', height: 'auto' }} />
               </TabsContent>
             ))}
           </div>

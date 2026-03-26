@@ -5,6 +5,7 @@ import FAQSchema from '@/components/seo/FAQSchema';
 import FAQAccordion from '@/components/FAQAccordion';
 import TradeCopierPricingSection from './TradeCopierPricingSection';
 import TradeCopierDemoAccessSection from './DemoAccessSection';
+import SupportedPlatformsSection from './SupportedPlatformsSection';
 
 export const metadata: Metadata = {
     title: 'Trade Copier | Copy Trading Software for MT4, MT5 & cTrader',
@@ -81,7 +82,7 @@ export default function TradeCopierPage() {
                         Copy trades from Master to unlimited sub-accounts across MT4, MT5, and cTrader with sub-millisecond latency. Cloud-hosted — no VPS required.
                     </p>
                     <div className={styles.ctaGroup}>
-                        <Link href="/company/contact" className={styles.primaryCta}>
+                        <Link href="https://tradecopier.org/" className={styles.primaryCta}>
                             Get Started Free
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><line x1="5" y1="12" x2="19" y2="12" /><polyline points="12 5 19 12 12 19" /></svg>
                         </Link>
@@ -168,7 +169,7 @@ export default function TradeCopierPage() {
                     </div>
                 </div>
             </section>
-                    {/* Demo Access Section */}
+            {/* Demo Access Section */}
             <TradeCopierDemoAccessSection />
             {/* Built for Scale Section */}
             <section className={`${styles.section} ${styles.altSection}`}>
@@ -364,30 +365,10 @@ export default function TradeCopierPage() {
                         </div>
                     </div>
 
-                    <div className={`${styles.textCenter}`} style={{ marginTop: '3rem' }}>
-                        <h3 style={{ fontSize: '1.25rem', fontWeight: 700, color: '#111827', marginBottom: '1.5rem' }}>Supported Platforms</h3>
-                        <div className={styles.platformRow}>
-                            <div className={styles.platformBadge}>
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" /></svg>
-                                MetaTrader 4
-                            </div>
-                            <div className={styles.platformBadge}>
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" /></svg>
-                                MetaTrader 5
-                            </div>
-                            <div className={styles.platformBadge}>
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="12" cy="12" r="10" /><path d="M8 14s1.5 2 4 2 4-2 4-2" /><line x1="9" y1="9" x2="9.01" y2="9" /><line x1="15" y1="9" x2="15.01" y2="9" /></svg>
-                                cTrader
-                            </div>
-                            <div className={styles.platformBadge}>
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2" /><line x1="8" y1="21" x2="16" y2="21" /><line x1="12" y1="17" x2="12" y2="21" /></svg>
-                                FIX API
-                            </div>
-                        </div>
-                    </div>
+                    <SupportedPlatformsSection />
                 </div>
             </section>
-                {/* <TradeCopierPricingSection />  */}
+            {/* <TradeCopierPricingSection />  */}
             {/* FAQ Section */}
             <section className={`${styles.section} ${styles.altSection}`}>
                 <div className={styles.container}>
@@ -403,10 +384,10 @@ export default function TradeCopierPage() {
                 </div>
             </section>
 
-          
 
-           
-          
+
+
+
 
             {/* Final CTA Section */}
             <section className={styles.finalCtaSection}>

@@ -8,6 +8,7 @@ import OrganizationSchema from "../components/seo/OrganizationSchema";
 import Image from "next/image";
 
 import GoogleTranslate from "../components/GoogleTranslate";
+import Footer from "../components/Footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -141,6 +142,7 @@ export default function RootLayout({
         <OrganizationSchema />
         <GoogleTranslate />
         {children}
+        <Footer />
       </body>
     </html>
   );

@@ -19,13 +19,36 @@ export const metadata: Metadata = {
     'trading platforms',
     'brokerage suite'
   ],
+  openGraph: {
+    title: "Our Products | FxTrusts Ecosystem",
+    description: "Explore the complete FxTrusts ecosystem of curated trading and brokerage platforms including YoForex AI, Trade Copier, Yo Pips, and Flexy Markets.",
+    url: 'https://fxtrusts.com/products',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: "Our Products | FxTrusts Ecosystem",
+    description: "Explore the complete FxTrusts ecosystem of curated trading and brokerage platforms.",
+  }
 };
 
 export default function ProductsPage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Our Products | FxTrusts Ecosystem",
+    "description": "Explore the complete FxTrusts ecosystem of curated trading and brokerage platforms including YoForex AI, Trade Copier, Yo Pips, and Flexy Markets."
+  };
+
   return (
     <>
       <Header />
       <main className="pt-24 min-h-screen bg-slate-50">
+        <h1 className="sr-only">Our Products | FxTrusts Ecosystem</h1>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         <DetailedProducts />
       </main>
       <Footer />

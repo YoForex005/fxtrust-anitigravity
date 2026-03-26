@@ -1,6 +1,7 @@
 'use client';
 
 import styles from './TrustBadges.module.css';
+import Image from "next/image";
 
 export default function TrustBadges() {
     const badges = [
@@ -78,17 +79,17 @@ export default function TrustBadges() {
             subtitle: 'Uptime SLA'
         },
         {
-            icon: <img src="/logos/aws.svg" alt="AWS" style={{width:'40px', height:'auto', objectFit:'contain', filter:'brightness(0) invert(1)'}} />,
+            icon: <Image src="/logos/aws.svg" alt="AWS" style={{width:'40px', height:'auto', objectFit:'contain', filter:'brightness(0) invert(1)'}} width={500} height={500} style={{ width: '100%', height: 'auto' }} />,
             title: 'AWS',
             subtitle: 'Infrastructure'
         },
         {
-            icon: <img src="/logos/azure.svg" alt="Azure" style={{width:'34px', height:'auto', objectFit:'contain', filter:'brightness(0) invert(1)'}} />,
+            icon: <Image src="/logos/azure.svg" alt="Azure" style={{width:'34px', height:'auto', objectFit:'contain', filter:'brightness(0) invert(1)'}} width={500} height={500} style={{ width: '100%', height: 'auto' }} />,
             title: 'Azure',
             subtitle: 'Cloud Partner'
         },
         {
-            icon: <img src="/logos/cloudflare.svg" alt="Cloudflare" style={{width:'40px', height:'auto', objectFit:'contain', filter:'brightness(0) invert(1)'}} />,
+            icon: <Image src="/logos/cloudflare.svg" alt="Cloudflare" style={{width:'40px', height:'auto', objectFit:'contain', filter:'brightness(0) invert(1)'}} width={500} height={500} style={{ width: '100%', height: 'auto' }} />,
             title: 'Cloudflare',
             subtitle: 'DDoS Protected'
         },
