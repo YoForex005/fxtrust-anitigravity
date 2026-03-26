@@ -109,7 +109,7 @@ export default function Header() {
     window.addEventListener('scroll', handleScroll);
 
     // Set random labels on mount (client-side)
-    setLabels(getRandomLabels());
+    // setLabels(getRandomLabels());
 
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);

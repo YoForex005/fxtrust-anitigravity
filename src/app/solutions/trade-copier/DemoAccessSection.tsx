@@ -197,25 +197,14 @@ export default function TradeCopierDemoAccessSection() {
                 </div>
 
                 <div className={styles.demoVisualColumn}>
-                    <div className={styles.demoVisualPanel}>
-                        <div className={styles.demoVisualHeader}>
-                            <span>Trade Copier Dashboard</span>
-                            <span className={styles.demoVisualLive}>
-                                <Activity aria-hidden="true" /> Live
-                            </span>
-                        </div>
-
-                        <div className={styles.demoVisualFrame}>
-                            <Image
-                                src="/trade-copier.jpg"
-                                alt="Trade Copier dashboard preview"
-                                fill
-                                sizes="(max-width: 1024px) 100vw, 42vw"
-                                className={styles.demoVisualImage}
-                            />
-                        </div>
-
-                        
+                    <div className={styles.demoVisualFrame}>
+                        <Image
+                            src="/trade-copier.jpg"
+                            alt="Trade Copier dashboard preview"
+                            width={1200}
+                            height={750}
+                            className={styles.demoVisualImage}
+                        />
                     </div>
                 </div>
             </div>

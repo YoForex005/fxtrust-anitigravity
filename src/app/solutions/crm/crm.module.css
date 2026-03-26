@@ -1,96 +1,399 @@
 /* ========================================
-   CRM PAGE - CUSTOM ENHANCEMENTS
-   Layered on top of ContentPageLayout
+   CRM PAGE — PREMIUM STANDALONE THEME
+   Modeled after trade-copier architecture
 ======================================== */
 
 /* ========= ANIMATIONS ========= */
 @keyframes crmFadeUp {
-    from { opacity: 0; transform: translateY(28px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(28px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-@keyframes crmSlideIn {
-    from { opacity: 0; transform: translateX(-16px); }
-    to { opacity: 1; transform: translateX(0); }
+@keyframes crmFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
-@keyframes crmAccentGrow {
-    from { width: 0; }
-    to { width: 48px; }
+@keyframes crmSlideUp {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-@keyframes crmPulseGlow {
-    0%, 100% { box-shadow: 0 0 0 0 rgba(67, 83, 242, 0); }
-    50% { box-shadow: 0 0 0 8px rgba(67, 83, 242, 0.06); }
+@keyframes crmScaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.92);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes crmCountUp {
+    from {
+        opacity: 0;
+        transform: translateY(12px) scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+@keyframes crmPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.08);
+        opacity: 0.8;
+    }
+}
+
+@keyframes demoFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(24px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes demoPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.08);
+        opacity: 0.8;
+    }
 }
 
 /* ========= PAGE WRAPPER ========= */
-.crmPage {
-    position: relative;
+.pageWrapper {
+    background-color: #ffffff;
+    color: #111827;
+    font-family: var(--font-inter), sans-serif;
+    overflow-x: hidden;
 }
 
-/* Adds animated gradient accent to each section heading */
-.crmPage h2 {
+.section {
+    padding: 6rem 1rem;
     position: relative;
-    display: inline-block;
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.altSection {
+    background: linear-gradient(180deg, #f9fafb 0%, #f1f5f9 50%, #f9fafb 100%);
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.textCenter {
+    text-align: center;
+}
+
+/* ========= BADGE ========= */
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.25rem;
+    background: rgba(67, 83, 242, 0.08);
+    color: #4353F2;
+    border: 1px solid rgba(67, 83, 242, 0.15);
+    border-radius: 9999px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    animation: crmFadeUp 0.5s ease both;
+    transition: all 0.3s ease;
+}
+
+.badge:hover {
+    background: rgba(67, 83, 242, 0.12);
+    border-color: rgba(67, 83, 242, 0.25);
+    transform: translateY(-1px);
+}
+
+/* ========= TYPOGRAPHY ========= */
+.headline {
+    font-size: 3.75rem;
+    font-weight: 800;
+    line-height: 1.08;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.03em;
+    background: linear-gradient(135deg, #111827 0%, #4353F2 50%, #111827 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     animation: crmFadeUp 0.6s ease both;
 }
 
-.crmPage h2::after {
-    content: '';
-    position: absolute;
-    bottom: -6px;
-    left: 0;
-    width: 48px;
-    height: 3px;
-    background: linear-gradient(90deg, #4353F2, #3b82f6);
-    border-radius: 4px;
-    animation: crmAccentGrow 0.5s ease 0.4s both;
-    transition: width 0.3s ease;
+.sectionHeadline {
+    font-size: 2.5rem;
+    font-weight: 800;
+    line-height: 1.2;
+    color: #111827;
+    margin-bottom: 1rem;
+    letter-spacing: -0.02em;
+    animation: crmFadeUp 0.55s ease 0.1s both;
 }
 
-.crmPage h2:hover::after {
-    width: 72px;
+.subheadline {
+    font-size: 1.2rem;
+    color: #4b5563;
+    line-height: 1.7;
+    max-width: 780px;
+    margin: 0 auto 2.5rem;
+    animation: crmFadeUp 0.5s ease 0.2s both;
 }
 
-/* Subtle entrance for h3 headings */
-.crmPage h3 {
-    animation: crmSlideIn 0.5s ease both;
+.sectionSubtext {
+    font-size: 1.125rem;
+    color: #6b7280;
+    line-height: 1.7;
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    padding: 0 1rem;
 }
 
-/* Paragraph fade-in */
-.crmPage p {
-    animation: crmFadeUp 0.5s ease 0.15s both;
-}
-
-/* ========= STATS GRID ENHANCEMENT ========= */
-.crmPage :global(.statsGrid) {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
+/* ========= CTA BUTTONS ========= */
+.ctaGroup {
+    display: flex;
+    align-items: center;
     gap: 1rem;
-    margin: 2rem 0;
+    justify-content: center;
 }
 
-.crmPage :global(.statBox) {
-    background: linear-gradient(135deg, rgba(248, 250, 252, 0.9) 0%, rgba(239, 246, 255, 0.85) 100%);
-    border: 1px solid rgba(67, 83, 242, 0.1);
-    border-radius: 18px;
-    padding: 1.75rem 1.25rem;
+.primaryCta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem 2.25rem;
+    background: linear-gradient(135deg, #4353F2 0%, #3b82f6 100%);
+    color: #ffffff;
+    font-weight: 600;
+    font-size: 1.125rem;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 14px -2px rgba(67, 83, 242, 0.35);
+}
+
+.primaryCta:hover {
+    background: linear-gradient(135deg, #3b44d1 0%, #4353F2 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px -4px rgba(67, 83, 242, 0.4);
+}
+
+.secondaryCta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 1rem 2.25rem;
+    background: rgba(239, 246, 255, 0.72);
+    color: #4353F2;
+    font-weight: 600;
+    font-size: 1.125rem;
+    border-radius: 12px;
+    text-decoration: none;
+    border: 1px solid rgba(67, 83, 242, 0.18);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.secondaryCta:hover {
+    background: #eff6ff;
+    border-color: #818cf8;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 24px rgba(67, 83, 242, 0.12);
+}
+
+/* ========= HERO SECTION ========= */
+.heroSection {
+    padding: 9rem 1rem 6rem;
     text-align: center;
-    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    background:
+        radial-gradient(ellipse 80% 50% at 50% -20%, rgba(67, 83, 242, 0.08) 0%, transparent 70%),
+        linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+    border-bottom: 1px solid #f3f4f6;
     position: relative;
     overflow: hidden;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    animation: crmFadeUp 0.6s ease both;
 }
 
-.crmPage :global(.statBox):nth-child(1) { animation-delay: 0ms; }
-.crmPage :global(.statBox):nth-child(2) { animation-delay: 100ms; }
-.crmPage :global(.statBox):nth-child(3) { animation-delay: 200ms; }
-.crmPage :global(.statBox):nth-child(4) { animation-delay: 300ms; }
+.heroSection::before {
+    content: '';
+    position: absolute;
+    top: -200px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 800px;
+    height: 800px;
+    background: radial-gradient(circle, rgba(67, 83, 242, 0.06) 0%, transparent 60%);
+    pointer-events: none;
+    z-index: 0;
+}
 
-.crmPage :global(.statBox)::before {
+.heroSection .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* ========= METRICS BAR ========= */
+.metricsBar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: 3rem;
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    border-radius: 20px;
+    padding: 2rem 1.5rem;
+    box-shadow: 0 4px 24px -4px rgba(0, 0, 0, 0.06);
+}
+
+.metricItem {
+    text-align: center;
+    position: relative;
+    animation: crmCountUp 0.55s ease both;
+}
+
+.metricItem:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.metricItem:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.metricItem:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
+.metricItem:nth-child(4) {
+    animation-delay: 0.6s;
+}
+
+.metricItem:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    top: 10%;
+    height: 80%;
+    width: 1px;
+    background: linear-gradient(180deg, transparent 0%, #e5e7eb 50%, transparent 100%);
+}
+
+.metricValue {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #4353F2;
+    letter-spacing: -0.02em;
+}
+
+.metricLabel {
+    font-size: 0.85rem;
+    color: #6b7280;
+    margin-top: 0.35rem;
+    font-weight: 500;
+}
+
+/* ========= FEATURE GRID ========= */
+.featureGrid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    margin-top: 3.5rem;
+}
+
+.featureCard {
+    background: #ffffff;
+    padding: 2.25rem;
+    border-radius: 16px;
+    border: 1px solid #e5e7eb;
+    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    text-align: left;
+    position: relative;
+    overflow: hidden;
+    animation: crmFadeUp 0.5s ease both;
+}
+
+.featureCard:nth-child(1) {
+    animation-delay: 0ms;
+}
+
+.featureCard:nth-child(2) {
+    animation-delay: 80ms;
+}
+
+.featureCard:nth-child(3) {
+    animation-delay: 160ms;
+}
+
+.featureCard:nth-child(4) {
+    animation-delay: 240ms;
+}
+
+.featureCard:nth-child(5) {
+    animation-delay: 320ms;
+}
+
+.featureCard:nth-child(6) {
+    animation-delay: 400ms;
+}
+
+.featureCard:nth-child(7) {
+    animation-delay: 480ms;
+}
+
+.featureCard::before {
     content: '';
     position: absolute;
     top: 0;
@@ -100,133 +403,296 @@
     background: linear-gradient(90deg, #4353F2, #818cf8);
     transform: scaleX(0);
     transform-origin: left;
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.crmPage :global(.statBox):hover::before {
+.featureCard:hover::before {
     transform: scaleX(1);
 }
 
-.crmPage :global(.statBox):hover {
+.featureCard:hover {
+    box-shadow: 0 24px 48px -8px rgba(0, 0, 0, 0.1), 0 8px 20px -4px rgba(67, 83, 242, 0.1);
+    border-color: rgba(67, 83, 242, 0.25);
     transform: translateY(-6px);
-    box-shadow:
-        0 16px 36px -8px rgba(67, 83, 242, 0.18),
-        0 4px 12px -2px rgba(0, 0, 0, 0.04);
-    border-color: rgba(67, 83, 242, 0.22);
 }
 
-.crmPage :global(.statBox) strong {
-    display: block;
-    font-size: 2rem;
-    font-weight: 800;
-    background: linear-gradient(135deg, #4353F2 0%, #6366f1 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: 0.5rem;
-    letter-spacing: -0.02em;
-    transition: transform 0.3s ease;
+.featureIcon {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+    color: #4353F2;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
 }
 
-.crmPage :global(.statBox):hover strong {
-    transform: scale(1.06);
+.featureCard:hover .featureIcon {
+    background: linear-gradient(135deg, #4353F2, #818cf8);
+    color: #ffffff;
+    transform: scale(1.08) rotate(-5deg);
+    box-shadow: 0 8px 20px rgba(67, 83, 242, 0.3);
 }
 
-.crmPage :global(.statBox) span {
-    font-size: 0.8rem;
-    color: #64748b;
-    line-height: 1.4;
+.featureIcon svg {
+    width: 24px;
+    height: 24px;
+    stroke-width: 2;
 }
 
-/* ========= FEATURE CARD ENHANCEMENTS ========= */
-.crmPage :global(.featureGrid) {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+.featureTitle {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 0.75rem;
+}
+
+.featureDesc {
+    font-size: 0.95rem;
+    color: #6b7280;
+    line-height: 1.65;
+}
+
+/* ========= SPLIT SECTION ========= */
+.splitSection {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+}
+
+.splitContent {
+    flex: 1;
+}
+
+.splitVisual {
+    flex: 0 0 450px;
+}
+
+/* ========= BULLET ITEMS ========= */
+.bulletList {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.bulletItem {
+    display: flex;
     gap: 1rem;
-    margin: 1.75rem 0;
+    align-items: flex-start;
+    padding: 1rem;
+    border-radius: 12px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    animation: crmFadeUp 0.45s ease both;
 }
 
-.crmPage :global(.featureCard) {
-    background: #ffffff;
-    border: 1px solid #e5e7eb;
-    border-radius: 16px;
-    padding: 1.5rem;
-    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+.bulletItem:nth-child(1) {
+    animation-delay: 0ms;
+}
+
+.bulletItem:nth-child(2) {
+    animation-delay: 100ms;
+}
+
+.bulletItem:nth-child(3) {
+    animation-delay: 200ms;
+}
+
+.bulletItem:nth-child(4) {
+    animation-delay: 300ms;
+}
+
+.bulletItem:hover {
+    background: rgba(67, 83, 242, 0.04);
+    transform: translateX(6px);
+    box-shadow: 0 4px 12px rgba(67, 83, 242, 0.06);
+}
+
+.bulletIcon {
+    color: #4353F2;
+    flex-shrink: 0;
+    width: 28px;
+    height: 28px;
+    background: rgba(67, 83, 242, 0.08);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 4px;
+    margin-top: 2px;
+}
+
+.bulletTitle {
+    font-weight: 700;
+    color: #111827;
+    margin: 0 0 0.35rem;
+    font-size: 1.05rem;
+}
+
+.bulletDesc {
+    margin: 0;
+    color: #6b7280;
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* ========= STATS BOX ========= */
+.statsBox {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    border-radius: 20px;
+    padding: 3rem;
+    color: white;
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
     position: relative;
     overflow: hidden;
+}
+
+.statsBox::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -30%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(67, 83, 242, 0.15) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.statsHeadline {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: white;
+    position: relative;
+}
+
+.statsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    position: relative;
+}
+
+.statItem {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 1.5rem;
+}
+
+.statValue {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.blueStat {
+    color: #818cf8;
+}
+
+.greenStat {
+    color: #60a5fa;
+}
+
+.amberStat {
+    color: #93c5fd;
+}
+
+.statLabel {
+    color: #94a3b8;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
+/* ========= SETUP TIMELINE STEPS ========= */
+.stepsGrid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0;
+    margin-top: 3.5rem;
+    position: relative;
+}
+
+.stepsGrid::before {
+    content: '';
+    position: absolute;
+    top: 24px;
+    left: calc(10% + 24px);
+    right: calc(10% + 24px);
+    height: 2px;
+    background: linear-gradient(90deg, #dbeafe 0%, #4353F2 50%, #dbeafe 100%);
+    z-index: 0;
+}
+
+.stepCard {
+    text-align: center;
+    padding: 0 1rem 2rem;
+    position: relative;
+    z-index: 1;
     animation: crmFadeUp 0.5s ease both;
 }
 
-/* Staggered entrances for feature cards */
-.crmPage :global(.featureCard):nth-child(1) { animation-delay: 0ms; }
-.crmPage :global(.featureCard):nth-child(2) { animation-delay: 80ms; }
-.crmPage :global(.featureCard):nth-child(3) { animation-delay: 160ms; }
-.crmPage :global(.featureCard):nth-child(4) { animation-delay: 240ms; }
-.crmPage :global(.featureCard):nth-child(5) { animation-delay: 320ms; }
-.crmPage :global(.featureCard):nth-child(6) { animation-delay: 400ms; }
-.crmPage :global(.featureCard):nth-child(7) { animation-delay: 480ms; }
-
-/* Accent line on hover */
-.crmPage :global(.featureCard)::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, #4353F2, #818cf8);
-    transform: scaleX(0);
-    transform-origin: center;
-    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+.stepCard:nth-child(1) {
+    animation-delay: 0ms;
 }
 
-.crmPage :global(.featureCard):hover::after {
-    transform: scaleX(1);
+.stepCard:nth-child(2) {
+    animation-delay: 120ms;
 }
 
-.crmPage :global(.featureCard):hover {
-    border-color: rgba(67, 83, 242, 0.22);
-    box-shadow:
-        0 16px 36px -8px rgba(67, 83, 242, 0.12),
-        0 6px 14px -3px rgba(0, 0, 0, 0.04);
-    transform: translateY(-4px);
+.stepCard:nth-child(3) {
+    animation-delay: 240ms;
 }
 
-.crmPage :global(.featureCard) h4 {
+.stepCard:nth-child(4) {
+    animation-delay: 360ms;
+}
+
+.stepCard:nth-child(5) {
+    animation-delay: 480ms;
+}
+
+.stepNumber {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #4353F2 0%, #818cf8 100%);
+    color: white;
+    border-radius: 50%;
     display: flex;
     align-items: center;
-    gap: 0.6rem;
-    font-size: 1rem;
+    justify-content: center;
+    font-weight: 800;
+    font-size: 1.25rem;
+    margin: 0 auto 1.25rem;
+    box-shadow: 0 4px 12px rgba(67, 83, 242, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.stepCard:hover .stepNumber {
+    transform: scale(1.15) rotate(-5deg);
+    box-shadow: 0 8px 24px rgba(67, 83, 242, 0.45);
+}
+
+.stepTitle {
+    font-size: 1.05rem;
     font-weight: 700;
-    color: #0f172a;
-    margin: 0 0 0.6rem;
+    color: #111827;
+    margin-bottom: 0.5rem;
 }
 
-.crmPage :global(.featureCard) h4 svg {
-    flex-shrink: 0;
-    transition: all 0.35s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.crmPage :global(.featureCard):hover h4 svg {
-    transform: scale(1.18) rotate(-8deg);
-    color: #4353F2;
-    filter: drop-shadow(0 2px 6px rgba(67, 83, 242, 0.25));
-}
-
-.crmPage :global(.featureCard) p {
+.stepDesc {
     font-size: 0.9rem;
-    color: #64748b;
-    margin: 0;
-    line-height: 1.55;
-    animation: none; /* override the global p animation */
+    color: #6b7280;
+    line-height: 1.6;
 }
 
-.crmPage :global(.featureCard) ul {
-    animation: none; /* prevent double animation */
-}
-
-/* ========= INFO BOX UPGRADE ========= */
-.crmPage :global(.infoBox) {
+/* ========= INFO BOX ========= */
+.infoBox {
     background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 60%, #eff6ff 100%);
     border-left: 4px solid #4353F2;
     border-radius: 0 16px 16px 0;
@@ -238,37 +704,21 @@
     transition: all 0.3s ease;
 }
 
-.crmPage :global(.infoBox):hover {
+.infoBox:hover {
     box-shadow: 0 8px 24px -4px rgba(67, 83, 242, 0.12);
     transform: translateY(-2px);
 }
 
-.crmPage :global(.infoBox)::before {
-    content: 'ℹ';
-    position: absolute;
-    top: -8px;
-    right: 12px;
-    font-size: 4rem;
-    opacity: 0.06;
-    color: #4353F2;
-    transition: opacity 0.3s ease;
-}
-
-.crmPage :global(.infoBox):hover::before {
-    opacity: 0.1;
-}
-
-.crmPage :global(.infoBox) p {
+.infoBox p {
     color: #1e40af;
     margin: 0;
     font-weight: 500;
     font-size: 0.95rem;
     line-height: 1.6;
-    animation: none;
 }
 
-/* ========= FEATURE LIST UPGRADE ========= */
-.crmPage :global(.feature-list) {
+/* ========= FEATURE LIST ========= */
+.featureList {
     list-style: none;
     padding: 0;
     margin: 1.5rem 0;
@@ -277,7 +727,7 @@
     gap: 0.6rem;
 }
 
-.crmPage :global(.feature-list) li {
+.featureList li {
     position: relative;
     padding: 0.75rem 1rem 0.75rem 2.5rem;
     color: #475569;
@@ -287,22 +737,33 @@
     border: 1px solid transparent;
     border-radius: 12px;
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    animation: crmSlideIn 0.4s ease both;
+    animation: crmFadeUp 0.4s ease both;
 }
 
-.crmPage :global(.feature-list) li:nth-child(1) { animation-delay: 0ms; }
-.crmPage :global(.feature-list) li:nth-child(2) { animation-delay: 80ms; }
-.crmPage :global(.feature-list) li:nth-child(3) { animation-delay: 160ms; }
-.crmPage :global(.feature-list) li:nth-child(4) { animation-delay: 240ms; }
+.featureList li:nth-child(1) {
+    animation-delay: 0ms;
+}
 
-.crmPage :global(.feature-list) li:hover {
+.featureList li:nth-child(2) {
+    animation-delay: 80ms;
+}
+
+.featureList li:nth-child(3) {
+    animation-delay: 160ms;
+}
+
+.featureList li:nth-child(4) {
+    animation-delay: 240ms;
+}
+
+.featureList li:hover {
     background: #ffffff;
     border-color: rgba(67, 83, 242, 0.14);
     box-shadow: 0 4px 14px rgba(67, 83, 242, 0.08);
     transform: translateX(4px);
 }
 
-.crmPage :global(.feature-list) li::before {
+.featureList li::before {
     content: "✦";
     position: absolute;
     left: 0.85rem;
@@ -312,97 +773,757 @@
     transition: transform 0.3s ease;
 }
 
-.crmPage :global(.feature-list) li:hover::before {
+.featureList li:hover::before {
     transform: scale(1.3) rotate(15deg);
 }
 
-/* ========= WARNING BOX ========= */
-.crmPage :global(.warningBox) {
-    background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
-    border-left: 4px solid #d97706;
-    border-radius: 0 16px 16px 0;
-    padding: 1.5rem 1.75rem;
-    margin: 2rem 0;
-    animation: crmFadeUp 0.5s ease both;
-    transition: all 0.3s ease;
+/* ========= DEMO ACCESS SECTION ========= */
+.demoAccessSection {
+    background:
+        radial-gradient(circle at top right, rgba(67, 83, 242, 0.1) 0%, transparent 36%),
+        linear-gradient(180deg, #ffffff 0%, #f8fafc 100%);
 }
 
-.crmPage :global(.warningBox):hover {
-    box-shadow: 0 8px 24px -4px rgba(217, 119, 6, 0.15);
-    transform: translateY(-2px);
+.demoAccessGrid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr);
+    gap: 3.5rem;
+    align-items: stretch;
 }
 
-.crmPage :global(.warningBox) p {
-    color: #92400e;
+.demoAccessContent {
+    position: relative;
+    z-index: 1;
+}
+
+.demoAccessIntro {
+    max-width: 680px;
+    margin-bottom: 2rem;
+    animation: demoFadeUp 0.7s ease both;
+}
+
+.demoAccessBadge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.7rem 1rem;
+    margin-bottom: 1.1rem;
+    border-radius: 9999px;
+    border: 1px solid rgba(67, 83, 242, 0.14);
+    background: rgba(255, 255, 255, 0.82);
+    color: #0f172a;
+    font-size: 0.82rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    box-shadow: 0 12px 30px rgba(148, 163, 184, 0.14);
+    backdrop-filter: blur(18px);
+}
+
+.demoAccessBadge svg {
+    width: 18px;
+    height: 18px;
+    color: #4353F2;
+}
+
+.demoAccessTitle {
+    margin: 0 0 0.75rem;
+    font-size: clamp(2rem, 3.1vw, 3rem);
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+    color: #0f172a;
+    text-wrap: balance;
+}
+
+.demoAccessDesc {
     margin: 0;
+    font-size: 1.05rem;
+    color: #64748b;
+    line-height: 1.65;
+}
+
+.demoAccessCards {
+    display: grid;
+    gap: 1.25rem;
+}
+
+.demoLoginCard {
+    position: relative;
+    padding: 1.5rem;
+    border-radius: 24px;
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    box-shadow: 0 24px 45px rgba(15, 23, 42, 0.07);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    animation: demoFadeUp 0.7s ease both;
+}
+
+.demoLoginCard::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+}
+
+.demoLoginCard::after {
+    content: '';
+    position: absolute;
+    inset: 1px;
+    border-radius: 23px;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    pointer-events: none;
+}
+
+.demoLoginCard:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 30px 60px rgba(15, 23, 42, 0.12);
+}
+
+.demoLoginCardAdmin {
+    background: linear-gradient(160deg, rgba(239, 246, 255, 0.96) 0%, rgba(255, 255, 255, 0.98) 56%, rgba(248, 250, 252, 0.96) 100%);
+}
+
+.demoLoginCardAdmin::before {
+    background: radial-gradient(circle at top right, rgba(67, 83, 242, 0.16) 0%, transparent 42%);
+}
+
+.demoLoginHeader {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.4rem;
+}
+
+.demoLoginIdentity {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.demoLoginAvatar {
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    box-shadow: 0 16px 28px rgba(67, 83, 242, 0.18);
+    background: linear-gradient(135deg, #4353F2 0%, #60a5fa 100%);
+}
+
+.demoLoginAvatar svg {
+    width: 24px;
+    height: 24px;
+}
+
+.demoLoginMeta h3 {
+    margin: 0 0 0.3rem;
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.demoLoginMeta p {
+    margin: 0;
+    font-size: 0.92rem;
+    color: #64748b;
     font-weight: 500;
-    font-size: 0.95rem;
-    animation: none;
 }
 
-/* ========= FAQ SECTION ========= */
-.crmPage :global(.faqItem) {
-    border: 1px solid #e5e7eb;
+.demoLoginStatus {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.55rem 0.8rem;
+    border-radius: 9999px;
+    font-size: 0.74rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    backdrop-filter: blur(14px);
+}
+
+.demoLoginStatus svg {
+    width: 14px;
+    height: 14px;
+}
+
+.demoStatusBlue {
+    background: rgba(67, 83, 242, 0.1);
+    color: #4353F2;
+    border: 1px solid rgba(67, 83, 242, 0.12);
+}
+
+.demoLoginPanel {
+    position: relative;
+    z-index: 1;
+    padding: 1.1rem;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid rgba(226, 232, 240, 0.92);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(16px);
+}
+
+.demoLoginPanelHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.demoLoginPanelTitle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.65rem;
+    font-size: 0.98rem;
+    font-weight: 800;
+    color: #0f172a;
+}
+
+.demoLoginPanelTitle svg {
+    width: 18px;
+    height: 18px;
+    color: #4353F2;
+}
+
+.demoLoginDot {
+    width: 10px;
+    height: 10px;
+    border-radius: 9999px;
+    background: #60a5fa;
+    box-shadow: 0 0 0 6px rgba(96, 165, 250, 0.14);
+    animation: demoPulse 2.4s ease-in-out infinite;
+}
+
+.demoCredentialList {
+    display: grid;
+    gap: 0.85rem;
+}
+
+.credentialRow {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    padding: 0.95rem 1rem;
+    border-radius: 18px;
+    background: rgba(248, 250, 252, 0.92);
+    border: 1px solid rgba(226, 232, 240, 0.96);
+    transition: border-color 0.2s ease;
+}
+
+.credentialRow:hover {
+    border-color: rgba(67, 83, 242, 0.2);
+}
+
+.credentialIcon {
+    width: 42px;
+    height: 42px;
+    flex-shrink: 0;
     border-radius: 14px;
-    margin-bottom: 0.75rem;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    animation: crmFadeUp 0.4s ease both;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    color: #4353F2;
+    box-shadow: 0 10px 24px rgba(148, 163, 184, 0.16);
 }
 
-.crmPage :global(.faqItem):nth-child(1) { animation-delay: 0ms; }
-.crmPage :global(.faqItem):nth-child(2) { animation-delay: 60ms; }
-.crmPage :global(.faqItem):nth-child(3) { animation-delay: 120ms; }
-.crmPage :global(.faqItem):nth-child(4) { animation-delay: 180ms; }
-.crmPage :global(.faqItem):nth-child(5) { animation-delay: 240ms; }
-.crmPage :global(.faqItem):nth-child(6) { animation-delay: 300ms; }
+.credentialIcon svg {
+    width: 18px;
+    height: 18px;
+}
 
-.crmPage :global(.faqItem):hover {
-    border-color: rgba(67, 83, 242, 0.22);
-    box-shadow: 0 6px 18px rgba(67, 83, 242, 0.08);
+.credentialText {
+    min-width: 0;
+    flex: 1;
+    display: grid;
+    gap: 0.15rem;
+}
+
+.credentialLabel {
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #64748b;
+}
+
+.credentialValue {
+    font-size: 0.98rem;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.35;
+    word-break: break-all;
+    font-family: 'SF Mono', 'Fira Code', 'Cascadia Code', 'Consolas', monospace;
+}
+
+.inlineCopyBtn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    flex-shrink: 0;
+    padding: 0.5rem 0.75rem;
+    border-radius: 10px;
+    border: 1px solid rgba(148, 163, 184, 0.22);
+    background: rgba(255, 255, 255, 0.8);
+    color: #64748b;
+    font-size: 0.78rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(8px);
+}
+
+.inlineCopyBtn:hover {
+    border-color: rgba(67, 83, 242, 0.3);
+    color: #4353F2;
+    background: rgba(239, 246, 255, 0.8);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(67, 83, 242, 0.1);
+}
+
+.inlineCopyBtn svg {
+    width: 14px;
+    height: 14px;
+}
+
+.inlineCopyLabel {
+    white-space: nowrap;
+}
+
+.demoLoginActions {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+    margin-top: 1.25rem;
+}
+
+.demoLaunchButton {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.65rem;
+    width: 100%;
+    min-height: 50px;
+    padding: 0.9rem 1.15rem;
+    border-radius: 16px;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #ffffff;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    box-shadow: 0 18px 28px rgba(67, 83, 242, 0.22);
+    background: linear-gradient(135deg, #4353F2 0%, #60a5fa 100%);
+}
+
+.demoLaunchButton:hover {
     transform: translateY(-2px);
+    box-shadow: 0 24px 38px rgba(67, 83, 242, 0.26);
+}
+
+.demoLaunchButton svg {
+    width: 17px;
+    height: 17px;
+}
+
+/* Visual Column */
+.demoVisualColumn {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+
+.demoVisualPanel {
+    position: relative;
+    padding: 1.25rem;
+    border-radius: 32px;
+    overflow: hidden;
+    background: linear-gradient(160deg, rgba(15, 23, 42, 0.98) 0%, rgba(17, 24, 39, 0.9) 100%);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    box-shadow: 0 30px 70px rgba(15, 23, 42, 0.24);
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.demoVisualPanel::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: linear-gradient(rgba(148, 163, 184, 0.08) 1px, transparent 1px), linear-gradient(90deg, rgba(148, 163, 184, 0.08) 1px, transparent 1px);
+    background-size: 36px 36px;
+    mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.5), transparent 85%);
+    opacity: 0.4;
+    pointer-events: none;
+}
+
+.demoVisualPanel::after {
+    content: '';
+    position: absolute;
+    inset: 1px;
+    border-radius: 31px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    pointer-events: none;
+}
+
+.demoVisualHeader {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 1.25rem;
+    color: #e2e8f0;
+    font-size: 0.92rem;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.demoVisualLive {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.85rem;
+    border-radius: 9999px;
+    background: rgba(67, 83, 242, 0.16);
+    border: 1px solid rgba(129, 140, 248, 0.24);
+    color: #93c5fd;
+    font-size: 0.78rem;
+    font-weight: 700;
+}
+
+.demoVisualLive svg {
+    width: 14px;
+    height: 14px;
+}
+
+.demoVisualFrame {
+    position: relative;
+    min-height: 300px;
+    border-radius: 26px;
+    overflow: hidden;
+    border: 1px solid rgba(148, 163, 184, 0.18);
+    box-shadow: 0 28px 60px rgba(2, 6, 23, 0.45);
+    flex: 1;
+    background: #0f172a;
+}
+
+.demoVisualImageDesktop {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+}
+
+.demoVisualImageMobile {
+    display: none;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+}
+
+/* ========= FINAL CTA ========= */
+.finalCtaSection {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    padding: 8rem 1rem;
+    text-align: center;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.finalCtaSection::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(67, 83, 242, 0.12) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.finalCtaHeadline {
+    font-size: 3.5rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.02em;
+    position: relative;
+}
+
+.finalCtaSection .primaryCta {
+    position: relative;
+}
+
+.finalCtaSubtext {
+    font-size: 1.2rem;
+    color: #94a3b8;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    line-height: 1.7;
+    position: relative;
 }
 
 /* ========= RESPONSIVE ========= */
-@media (max-width: 768px) {
-    .crmPage :global(.statsGrid) {
+@media (max-width: 1024px) {
+    .featureGrid {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .crmPage :global(.statBox) strong {
-        font-size: 1.5rem;
+    .stepsGrid {
+        grid-template-columns: repeat(3, 1fr);
     }
 
-    .crmPage :global(.featureGrid) {
+    .stepsGrid::before {
+        display: none;
+    }
+
+    .splitSection {
+        gap: 2rem;
+    }
+
+    .demoAccessGrid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .splitSection {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .splitVisual {
+        flex: 1 1 auto;
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .demoAccessGrid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .demoVisualColumn {
+        min-height: auto;
+        max-width: 760px;
+        margin: 0 auto;
+    }
+
+    .heroSection {
+        padding: 7rem 1rem 4rem;
+    }
+
+    .headline {
+        font-size: 2.25rem;
+    }
+
+    .sectionHeadline {
+        font-size: 1.6rem;
+    }
+
+    .finalCtaHeadline {
+        font-size: 2rem;
+    }
+
+    .featureGrid {
         grid-template-columns: 1fr;
     }
 
-    .crmPage :global(.featureCard) {
+    .stepsGrid {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+    }
+
+    .featureCard {
         text-align: center;
     }
 
-    .crmPage :global(.featureCard) h4 {
-        justify-content: center;
+    .featureIcon {
+        margin: 0 auto 1.5rem auto;
     }
 
-    .crmPage h2::after {
-        left: 50%;
-        transform: translateX(-50%);
+    .ctaGroup {
+        flex-direction: column;
+        align-items: center;
     }
 
-    /* Reduce animation intensity on mobile */
-    .crmPage :global(.featureCard),
-    .crmPage :global(.statBox),
-    .crmPage :global(.faqItem),
-    .crmPage :global(.feature-list) li {
-        animation-duration: 0.35s;
+    .primaryCta,
+    .secondaryCta {
+        width: fit-content;
+        margin: 0 auto;
+        padding: 0.875rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .splitContent {
+        text-align: center;
+    }
+
+    .bulletItem {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .bulletIcon {
+        margin-top: 0;
+    }
+
+    .metricsBar {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+        padding: 1.5rem 1rem;
+    }
+
+    .metricItem:not(:last-child)::after {
+        display: none;
+    }
+
+    .metricValue {
+        font-size: 1.5rem;
+    }
+
+    .statsBox {
+        padding: 2rem !important;
+    }
+
+    .statValue {
+        font-size: 2rem !important;
+    }
+
+    .section {
+        padding: 4rem 1rem;
+    }
+
+    .demoAccessTitle {
+        font-size: 1.9rem;
+    }
+
+    .demoLoginCard {
+        padding: 1.25rem;
+        border-radius: 20px;
+    }
+
+    .demoLoginCard::after {
+        border-radius: 19px;
+    }
+
+    .demoLoginHeader {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .demoLoginActions {
+        flex-direction: column;
+    }
+
+    .demoLaunchButton {
+        width: 100%;
+    }
+
+    .demoVisualPanel {
+        padding: 1rem;
+        border-radius: 26px;
+    }
+
+    .demoVisualPanel::after {
+        border-radius: 25px;
+    }
+
+    .demoVisualHeader {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .demoVisualFrame {
+        min-height: 390px;
+    }
+
+    .demoVisualImageDesktop {
+        display: none;
+    }
+
+    .demoVisualImageMobile {
+        display: block;
+    }
+
+    .statsBox {
+        background: #ffffff !important;
+        box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08) !important;
+        border: 1px solid #e5e7eb !important;
+    }
+
+    .statsBox::before {
+        display: none;
+    }
+
+    .statsHeadline {
+        color: #111827 !important;
+    }
+
+    .statItem {
+        border-bottom-color: #e5e7eb !important;
+    }
+
+    .blueStat {
+        color: #4353F2 !important;
+    }
+
+    .greenStat {
+        color: #4353F2 !important;
+    }
+
+    .amberStat {
+        color: #6366f1 !important;
+    }
+
+    .statLabel {
+        color: #6b7280 !important;
+    }
+
+    .finalCtaSection {
+        background: #f8fafc !important;
+        color: #111827 !important;
+        border-top: 1px solid #e5e7eb !important;
+    }
+
+    .finalCtaSection::before {
+        display: none;
+    }
+
+    .finalCtaHeadline {
+        color: #111827 !important;
+    }
+
+    .finalCtaSubtext {
+        color: #4b5563 !important;
     }
 }
 
 /* Reduce motion for users who prefer it */
 @media (prefers-reduced-motion: reduce) {
-    .crmPage *,
-    .crmPage *::before,
-    .crmPage *::after {
+
+    .pageWrapper *,
+    .pageWrapper *::before,
+    .pageWrapper *::after {
         animation-duration: 0.01ms !important;
         transition-duration: 0.01ms !important;
     }

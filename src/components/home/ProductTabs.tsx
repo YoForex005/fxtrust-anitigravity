@@ -78,7 +78,7 @@ const tabs = [
     label: "Custom Websites",
     color: "#0891b2",
     badge: "Bespoke",
-    imageUrl: "",
+    imageUrl: "/white-label2.jpg",
     title: "Whitelabel & Custom Forex Websites",
     description: "Fully custom forex brokerage websites. Responsive, SEO-optimized, conversion-focused.",
     features: ["Custom Design", "Mobile-First", "SEO Optimized", "Conversion Focused"],

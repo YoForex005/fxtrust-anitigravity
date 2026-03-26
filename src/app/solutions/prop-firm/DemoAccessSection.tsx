@@ -122,24 +122,23 @@ export default function DemoAccessSection() {
 
     return (
         <section className={`${styles.section} ${styles.demoAccessSection}`}>
-            <div className={styles.container} style={{ display: 'flex', flexDirection: 'column', gap: '6rem' }}>
-                {demoAccounts.map((account, index) => (
-                    <div key={account.id} className={`${styles.demoAccessGrid} ${index === 1 ? styles.demoAccessGridReverse : ''}`}>
-                        <div className={styles.demoAccessContent}>
-                            {index === 0 && (
-                                <div className={styles.demoAccessIntro}>
-                                    <div className={styles.demoAccessBadge}>
-                                        <Zap aria-hidden="true" />
-                                        <span>Try Live</span>
-                                    </div>
-                                    <h2 className={styles.demoAccessTitle}>Secure credentials for both sides of the platform.</h2>
-                                    <p className={styles.demoAccessDesc}>
-                                        Explore the admin back-office and trader dashboard with live demo credentials. See challenge tracking, risk rules, and payout workflows in action.
-                                    </p>
-                                </div>
-                            )}
+            <div className={styles.container} style={{ display: 'flex', flexDirection: 'column', gap: '3.5rem' }}>
+                <div className={`${styles.demoAccessIntro} ${styles.textCenter}`} style={{ margin: '0 auto', maxWidth: '800px' }}>
+                    <div className={styles.demoAccessBadge}>
+                        <Zap aria-hidden="true" />
+                        <span>Try Live</span>
+                    </div>
+                    <h2 className={styles.demoAccessTitle}>Secure credentials for both sides of the platform.</h2>
+                    <p className={styles.demoAccessDesc} style={{ margin: '0 auto', maxWidth: '650px' }}>
+                        Explore the admin back-office and trader dashboard with live demo credentials. See challenge tracking, risk rules, and payout workflows in action.
+                    </p>
+                </div>
 
-                            <div className={styles.demoAccessCards}>
+                <div style={{ display: 'flex', flexDirection: 'column', gap: '5rem' }}>
+                    {demoAccounts.map((account, index) => (
+                        <div key={account.id} className={`${styles.demoAccessGrid} ${index === 1 ? styles.demoAccessGridReverse : ''}`}>
+                            <div className={styles.demoAccessContent}>
+                                <div className={styles.demoAccessCards}>
                                 <article
                                     className={`${styles.demoLoginCard} ${account.cardClassName}`}
                                 >
@@ -215,24 +214,12 @@ export default function DemoAccessSection() {
                                     />
                                 </div>
 
-                                <div className={styles.demoVisualInsights}>
-                                    <div className={styles.demoInsightCard}>
-                                        <CandlestickChart aria-hidden="true" />
-                                        <span>Trading analytics</span>
-                                    </div>
-                                    <div className={styles.demoInsightCard}>
-                                        <WalletCards aria-hidden="true" />
-                                        <span>Payout workflows</span>
-                                    </div>
-                                    <div className={styles.demoInsightCard}>
-                                        <LockKeyhole aria-hidden="true" />
-                                        <span>Secure access</span>
-                                    </div>
-                                </div>
+                            
                             </div>
                         </div>
                     </div>
                 ))}
+                </div>
             </div>
         </section>
     );

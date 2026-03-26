@@ -10,19 +10,23 @@ import {
     LockKeyhole,
     ShieldCheck,
     UserRound,
-    Bot,
+    Settings,
+    Zap,
     Activity,
 } from 'lucide-react';
-import styles from './yo-forex.module.css';
+import styles from './crm.module.css';
 
-const DEMO_LOGIN_URL = 'https://user.yoforexai.com/login';
+const DEMO_LOGIN_URL = 'https://user.flexymarkets.com/accounts/signIns';
 
 const demoAccount = {
-    id: 'user',
-    title: 'AI Trader Demo',
-    description: 'Experience real-time AI signals & insights',
-    username: 'demo@yoforexai.com',
-    password: 'Demo@123',
+    id: 'admin',
+    title: 'CRM Dashboard',
+    description: 'Manage leads, KYC & operations',
+    username: 'admin@fxtrust.com',
+    password: 'Admin@123',
+    cardClassName: styles.demoLoginCardAdmin,
+    statusClassName: styles.demoStatusBlue,
+    Icon: Settings,
 };
 
 async function copyText(value: string) {
@@ -80,46 +84,37 @@ function InlineCopyField({
     );
 }
 
-export default function YoforexAiDemoAccessSection() {
+export default function CRMDemoAccessSection() {
     const [copiedField, setCopiedField] = useState<string | null>(null);
     const resetTimerRef = useRef<number | null>(null);
 
     useEffect(() => {
         return () => {
-            if (resetTimerRef.current !== null) {
-                window.clearTimeout(resetTimerRef.current);
-            }
+            if (resetTimerRef.current !== null) window.clearTimeout(resetTimerRef.current);
         };
     }, []);
 
     function handleFieldCopy(fieldKey: string, value: string) {
-        copyText(value)
-            .then(() => {
-                setCopiedField(fieldKey);
-                if (resetTimerRef.current !== null) {
-                    window.clearTimeout(resetTimerRef.current);
-                }
-                resetTimerRef.current = window.setTimeout(() => {
-                    setCopiedField(null);
-                }, 1800);
-            })
-            .catch(() => setCopiedField(null));
+        copyText(value).then(() => {
+            setCopiedField(fieldKey);
+            if (resetTimerRef.current !== null) window.clearTimeout(resetTimerRef.current);
+            resetTimerRef.current = window.setTimeout(() => setCopiedField(null), 1800);
+        }).catch(() => setCopiedField(null));
     }
+
+    const account = demoAccount;
 
     return (
         <section className={`${styles.section} ${styles.demoAccessSection}`}>
             <div className={styles.container}>
                 <div className={styles.demoAccessIntro}>
                     <div className={styles.demoAccessBadge}>
-                        <Bot aria-hidden="true" />
-                        <span>Live AI Demo</span>
+                        <Zap aria-hidden="true" />
+                        <span>Try Live</span>
                     </div>
-                    <h2 className={styles.demoAccessTitle}>
-                        Test AI-powered trading before risking real capital.
-                    </h2>
+                    <h2 className={styles.demoAccessTitle}>Test drive the CRM before you commit.</h2>
                     <p className={styles.demoAccessDesc}>
-                        Log in to the YoForex AI sandbox and explore real-time signals,
-                        AI reasoning, and smart trade insights exactly how live users experience it.
+                        Explore the administrative dashboard with demo credentials. See client management, lead tracking, and compliance tools in action.
                     </p>
                 </div>
             </div>
@@ -127,21 +122,22 @@ export default function YoforexAiDemoAccessSection() {
             <div className={`${styles.container} ${styles.demoAccessGrid}`}>
                 <div className={styles.demoAccessContent}>
                     <div className={styles.demoAccessCards}>
-                        <article className={styles.demoLoginCard}>
+                        <article
+                            className={`${styles.demoLoginCard} ${account.cardClassName}`}
+                        >
                             <div className={styles.demoLoginHeader}>
                                 <div className={styles.demoLoginIdentity}>
                                     <div className={styles.demoLoginAvatar}>
-                                        <UserRound aria-hidden="true" />
+                                        <account.Icon aria-hidden="true" />
                                     </div>
                                     <div className={styles.demoLoginMeta}>
-                                        <h3>{demoAccount.title}</h3>
-                                        <p>{demoAccount.description}</p>
+                                        <h3>{account.title}</h3>
+                                        <p>{account.description}</p>
                                     </div>
                                 </div>
-
-                                <span className={styles.demoLoginStatus}>
+                                <span className={`${styles.demoLoginStatus} ${account.statusClassName}`}>
                                     <ShieldCheck aria-hidden="true" />
-                                    <span>AI Active</span>
+                                    <span>Live</span>
                                 </span>
                             </div>
 
@@ -149,22 +145,22 @@ export default function YoforexAiDemoAccessSection() {
                                 <div className={styles.demoLoginPanelHeader}>
                                     <span className={styles.demoLoginPanelTitle}>
                                         <LockKeyhole aria-hidden="true" />
-                                        <span>Secure Login</span>
+                                        <span>Credentials</span>
                                     </span>
                                     <span className={styles.demoLoginDot} aria-hidden="true" />
                                 </div>
 
                                 <div className={styles.demoCredentialList}>
                                     <InlineCopyField
-                                        label="Username"
-                                        value={demoAccount.username}
+                                        label="Email"
+                                        value={account.username}
                                         icon={UserRound}
                                         copiedField={copiedField}
                                         onCopy={handleFieldCopy}
                                     />
                                     <InlineCopyField
                                         label="Password"
-                                        value={demoAccount.password}
+                                        value={account.password}
                                         icon={LockKeyhole}
                                         copiedField={copiedField}
                                         onCopy={handleFieldCopy}
@@ -173,13 +169,8 @@ export default function YoforexAiDemoAccessSection() {
                             </div>
 
                             <div className={styles.demoLoginActions}>
-                                <Link
-                                    href={DEMO_LOGIN_URL}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className={styles.demoLaunchButton}
-                                >
-                                    <span>Open AI Demo</span>
+                                <Link href={DEMO_LOGIN_URL} className={styles.demoLaunchButton} target="_blank" rel="noopener noreferrer">
+                                    <span>Launch Demo</span>
                                     <ArrowUpRight aria-hidden="true" />
                                 </Link>
                             </div>
@@ -187,15 +178,21 @@ export default function YoforexAiDemoAccessSection() {
                     </div>
                 </div>
 
-                {/* RIGHT VISUAL */}
                 <div className={styles.demoVisualColumn}>
                     <div className={styles.demoVisualFrame}>
                         <Image
-                            src="/Gemini_Generated_Image_ii8xmqii8xmqii8x.png"
-                            alt="YoForex AI Trading Dashboard"
-                            width={800}
-                            height={500}
-                            className={styles.demoVisualImage}
+                            src="/desktop_flexy.jpg"
+                            alt="Flexy CRM dashboard preview - Desktop"
+                            width={1200}
+                            height={750}
+                            className={`${styles.demoVisualImage} ${styles.demoVisualImageDesktop}`}
+                        />
+                        <Image
+                            src="/mobile_flexy.jpg"
+                            alt="Flexy CRM dashboard preview - Mobile"
+                            width={1200}
+                            height={750}
+                            className={`${styles.demoVisualImage} ${styles.demoVisualImageMobile}`}
                         />
                     </div>
                 </div>

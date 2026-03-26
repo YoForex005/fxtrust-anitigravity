@@ -1,5 +1,6 @@
 import styles from './rtx-terminal.module.css';
 import Link from 'next/link';
+import Image from 'next/image';
 import type { Metadata } from 'next';
 import FAQSchema from '@/components/seo/FAQSchema';
 import FAQAccordion from '@/components/FAQAccordion';
@@ -99,18 +100,18 @@ export default function RtxTerminalPage() {
 
                     <div className={styles.ctaGroup}>
                         <Link
-                            href="https://rtx5.orrnn.com/download/windows"
+                            href="https://rtx5.orrnn.com/"
                             className={styles.primaryCta}
                         >
-                            Download for Windows
+                            Get Started
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                                 <line x1="5" y1="12" x2="19" y2="12" />
                                 <polyline points="12 5 19 12 12 19" />
                             </svg>
                         </Link>
 
-                        <Link href="/company/contact" className={styles.secondaryCta}>
-                            Request a Demo
+                        <Link href="https://rtx5.orrnn.com/download/windows" className={styles.secondaryCta}>
+                            Download for Windows
                         </Link>
                     </div>
 
@@ -130,6 +131,23 @@ export default function RtxTerminalPage() {
                         <div className={styles.metricItem}>
                             <div className={styles.metricValue}>3,200+</div>
                             <div className={styles.metricLabel}>Developers</div>
+                        </div>
+                    </div>
+
+                    <div className={styles.heroShowcase}>
+                        <div className={styles.showcaseFrame}>
+                            <div className={styles.showcaseGlow} aria-hidden="true" />
+                            <div className={styles.showcaseImage}>
+                                <Image 
+                                    src="/New folder/RTX.jpg"
+                                    alt="RTX5 Trading Terminal Interface"
+                                    width={2400}
+                                    height={1350}
+                                    sizes="(max-width: 1024px) 100vw, 1200px"
+                                    priority
+                                    quality={90}
+                                />
+                            </div>
                         </div>
                     </div>
                 </div>
