@@ -63,7 +63,7 @@ export default function ContactPage() {
                                 <div>
                                     <h3 className={styles.itemTitle}>Email Us</h3>
                                     <p className={styles.itemText}>For general inquiries and sales.</p>
-                                    <a href="mailto:business@fxtrusts.com" className={`${styles.itemLink} ${styles.emailLink}`}>business@fxtrusts.com</a>
+                                    <a  className={`${styles.itemLink} ${styles.emailLink}`}>business@fxtrusts.com</a>
                                 </div>
                             </div>
 
