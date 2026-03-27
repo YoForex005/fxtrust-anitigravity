@@ -200,7 +200,7 @@ export default function RtxTerminalDemoAccessSection() {
 
                         <div className={styles.demoVisualFrame}>
                             <Image
-                                src="/New Folder/RTX.jpg"
+                                src="/new-folder/rtx.jpg"
                                 alt="RTX5 Trading Terminal Dashboard"
                                 width={800}
                                 height={500}

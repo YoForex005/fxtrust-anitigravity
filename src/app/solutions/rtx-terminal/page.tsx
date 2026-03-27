@@ -140,7 +140,7 @@ export default function RtxTerminalPage() {
                             <div className={styles.showcaseGlow} aria-hidden="true" />
                             <div className={styles.showcaseImage}>
                                 <Image 
-                                    src="/New folder/RTX.jpg"
+                                    src="/new-folder/rtx.jpg"
                                     alt="RTX5 Trading Terminal Interface"
                                     width={2400}
                                     height={1350}

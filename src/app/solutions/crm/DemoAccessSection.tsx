@@ -181,14 +181,14 @@ export default function CRMDemoAccessSection() {
                 <div className={styles.demoVisualColumn}>
                 
                         <Image priority={true}
-                            src="/New Folder/CRM.jpg"
+                            src="/new-folder/crm.jpg"
                             alt="Flexy CRM dashboard preview - Desktop"
                             width={1200}
                             height={750}
                             className={`${styles.demoVisualImage} ${styles.demoVisualImageDesktop}`}
                         />
                         <Image
-                            src="/New Folder/CRM.jpg"
+                            src="/new-folder/crm.jpg"
                             alt="Flexy CRM dashboard preview - Mobile"
                             width={1200}
                             height={750}
