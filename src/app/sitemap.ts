@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '',
         '/get-started',
         '/pricing',
+        '/products',
         '/solutions/prop-firm',
         '/solutions/forex-broker',
         '/solutions/crm',
@@ -49,10 +50,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '/solutions/report-server',
         '/solutions/risk-management',
         '/solutions/technical-support',
+        '/solutions/rtx-terminal',
         '/solutions/trade-copier',
         '/solutions/traders-room',
         '/solutions/vps-hosting',
         '/solutions/wallet-system',
+        '/solutions/white-label-custom-websites',
+        '/solutions/yoforex-ai',
 
         // Markets
         '/markets/forex',
@@ -109,6 +113,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
         // Live Demo landing pages
         '/live-demo',
         '/prop-firm/live-demo',
+
+        // Other
+        '/status',
+        '/thank-you',
     ];
 
     const highPriorityEntries: MetadataRoute.Sitemap = highPriority.map((route) => ({

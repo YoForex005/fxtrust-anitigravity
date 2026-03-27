@@ -27,12 +27,12 @@ export function LogoCloud({ className, logos, ...props }: LogoCloudProps) {
           <Image
             alt={logo.alt}
             className="pointer-events-none h-4 select-none md:h-5 dark:brightness-0 dark:invert"
-            height={logo.height || "auto"}
+            height={logo.height || 50}
             key={`logo-${logo.alt}`}
             loading="lazy"
             src={logo.src}
-            width={logo.width || "auto"}
-          / />
+            width={logo.width || 200}
+          />
         ))}
       </InfiniteSlider>
     </div>

@@ -10,7 +10,8 @@ import {
     FaRedditAlien,
     FaMedium,
     FaPinterestP,
-    FaTumblr
+    FaTumblr,
+    FaFlickr
 } from 'react-icons/fa6';
 
 export default function Footer() {
@@ -34,6 +35,7 @@ export default function Footer() {
                             <a href="https://medium.com/@fxtrustspremium" target="_blank" rel="noopener noreferrer" aria-label="Medium"><FaMedium className={styles.socialIcon} /></a>
                             <a href="https://in.pinterest.com/fxtrusts/" target="_blank" rel="noopener noreferrer" aria-label="Pinterest"><FaPinterestP className={styles.socialIcon} /></a>
                             <a href="https://www.tumblr.com/blog/fxtrusts" target="_blank" rel="noopener noreferrer" aria-label="Tumblr"><FaTumblr className={styles.socialIcon} /></a>
+                            <a href="https://www.flickr.com/photos/fxtrustspremium/" target="_blank" rel="noopener noreferrer" aria-label="Flickr"><FaFlickr className={styles.socialIcon} /></a>
                         </div>
                         <div className={styles.newsletter}>
                             <h4>Join 2,847 Brokers Getting Our Brutally Honest Emails</h4>

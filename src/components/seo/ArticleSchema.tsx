@@ -33,9 +33,9 @@ export default function ArticleSchema({
         datePublished: datePublished,
         dateModified: dateModified || datePublished,
         author: {
-            '@type': 'Organization',
+            '@type': 'Person',
             name: authorName,
-            url: 'https://fxtrusts.com',
+            url: 'https://fxtrusts.com/company/about',
         },
         publisher: {
             '@type': 'Organization',

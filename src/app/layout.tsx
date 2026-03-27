@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
 import { GoogleAnalytics } from '@next/third-parties/google';
@@ -16,6 +16,12 @@ const inter = Inter({
   weight: ['300', '400', '500', '600', '700', '800'],
   display: 'swap',
 });
+
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 5,
+};
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://fxtrusts.com'),
@@ -97,7 +103,7 @@ export default function RootLayout({
         <GoogleAnalytics gaId="G-JTKXHLHJY8" />
 
         {/* Meta Pixel Code */}
-        <Script id="meta-pixel" strategy="lazyOnload">
+        <Script id="meta-pixel" strategy="afterInteractive">
           {`
             !function(f,b,e,v,n,t,s)
             {if(f.fbq)return;n=f.fbq=function(){n.callMethod?

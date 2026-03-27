@@ -79,17 +79,17 @@ export default function TrustBadges() {
             subtitle: 'Uptime SLA'
         },
         {
-            icon: <Image src="/logos/aws.svg" alt="AWS" style={{width:'40px', height:'auto', objectFit:'contain', filter:'brightness(0) invert(1)'}} width={500} height={500} style={{ width: '100%', height: 'auto' }} />,
+            icon: <Image src="/logos/aws.svg" alt="AWS" width={500} height={500} style={{width:'40px', height:'auto', objectFit:'contain', filter:'brightness(0) invert(1)'}} />,
             title: 'AWS',
             subtitle: 'Infrastructure'
         },
         {
-            icon: <Image src="/logos/azure.svg" alt="Azure" style={{width:'34px', height:'auto', objectFit:'contain', filter:'brightness(0) invert(1)'}} width={500} height={500} style={{ width: '100%', height: 'auto' }} />,
+            icon: <Image src="/logos/azure.svg" alt="Azure" width={500} height={500} style={{width:'34px', height:'auto', objectFit:'contain', filter:'brightness(0) invert(1)'}} />,
             title: 'Azure',
             subtitle: 'Cloud Partner'
         },
         {
-            icon: <Image src="/logos/cloudflare.svg" alt="Cloudflare" style={{width:'40px', height:'auto', objectFit:'contain', filter:'brightness(0) invert(1)'}} width={500} height={500} style={{ width: '100%', height: 'auto' }} />,
+            icon: <Image src="/logos/cloudflare.svg" alt="Cloudflare" width={500} height={500} style={{width:'40px', height:'auto', objectFit:'contain', filter:'brightness(0) invert(1)'}} />,
             title: 'Cloudflare',
             subtitle: 'DDoS Protected'
         },

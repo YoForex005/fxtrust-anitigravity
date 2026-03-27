@@ -1,3 +1,4 @@
+import React from "react";
 import { Book, Menu, Sunset, Trees, Zap } from "lucide-react";
 
 import {
@@ -15,9 +16,10 @@ import {
   NavigationMenuList,
   NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
-import {
+
 import Image from "next/image";
-  Sheet,
+import{ 
+Sheet,
   SheetContent,
   SheetHeader,
   SheetTitle,
@@ -28,7 +30,7 @@ interface MenuItem {
   title: string;
   url: string;
   description?: string;
-  icon?: JSX.Element;
+  icon?: React.ReactNode;
   items?: MenuItem[];
 }
 

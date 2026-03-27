@@ -106,10 +106,14 @@ export default function ProductTabs() {
         </div>
 
         {/* Tab buttons */}
-        <div style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '2rem' }}>
+        <div role="tablist" aria-label="Product suite offerings" style={{ display: 'flex', justifyContent: 'center', flexWrap: 'wrap', gap: '0.5rem', marginBottom: '2rem' }}>
           {tabs.map((t, i) => (
             <button
               key={t.id}
+              role="tab"
+              aria-selected={active === i}
+              aria-controls={`panel-${t.id}`}
+              id={`tab-${t.id}`}
               onClick={() => setActive(i)}
               style={{
                 display: 'flex',
@@ -132,7 +136,13 @@ export default function ProductTabs() {
         </div>
 
         {/* Content */}
-        <div style={{ background: '#f8fafc', borderRadius: 16, padding: 'clamp(1.5rem, 4vw, 3rem)', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', alignItems: 'center' }}>
+        <div 
+          role="tabpanel"
+          id={`panel-${tab.id}`}
+          aria-labelledby={`tab-${tab.id}`}
+          tabIndex={0}
+          style={{ background: '#f8fafc', borderRadius: 16, padding: 'clamp(1.5rem, 4vw, 3rem)', display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem', alignItems: 'center' }}
+        >
           <div>
             <span style={{ display: 'inline-block', fontSize: '0.7rem', fontWeight: 600, padding: '0.2rem 0.6rem', border: '1px solid #e2e8f0', borderRadius: 9999, color: '#64748b', marginBottom: '1rem', background: '#fff' }}>
               {tab.badge}

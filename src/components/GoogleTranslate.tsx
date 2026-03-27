@@ -64,59 +64,63 @@ export default function GoogleTranslate() {
 
         // If no cookie, detect location and set language
         if (!hasLanguageCookie) {
-            console.log('FxTrust: No language cookie found. Starting auto-translation check...');
+            // Delay the heavy location fetch to prevent blocking the initial page paint and Speed Index
+            const timer = setTimeout(() => {
+                console.log('FxTrust: No language cookie found. Starting deferred auto-translation check...');
 
-            fetch('https://ipapi.co/json/')
-                .then(res => res.json())
-                .then(data => {
-                    console.log('FxTrust: IP Data received:', data);
-                    const countryCode = data.country_code;
-                    let langCode = 'en';
+                fetch('https://ipapi.co/json/')
+                    .then(res => res.json())
+                    .then(data => {
+                        console.log('FxTrust: IP Data received:', data);
+                        const countryCode = data.country_code;
+                        let langCode = 'en';
 
-                    // Map country codes to language codes (simplified mapping)
-                    const countryToLang: { [key: string]: string } = {
-                        'ES': 'es', 'MX': 'es', 'AR': 'es', 'CO': 'es', // Spanish
-                        'FR': 'fr', // French
-                        'DE': 'de', // German
-                        'IT': 'it', // Italian
-                        'PT': 'pt', 'BR': 'pt', // Portuguese
-                        'RU': 'ru', // Russian
-                        'CN': 'zh-CN', // Chinese
-                        'JP': 'ja', // Japanese
-                        'KR': 'ko', // Korean
-                        'AE': 'ar', 'SA': 'ar', 'EG': 'ar', // Arabic
-                        'PK': 'ur', // Urdu
-                        // 'IN': 'en', // India defaults to English (explicitly or by omission)
-                        'TR': 'tr', // Turkish
-                        'VN': 'vi', // Vietnamese
-                        'TH': 'th', // Thai
-                        'ID': 'id', // Indonesian
-                        'MY': 'ms', // Malay
-                        'PL': 'pl', // Polish
-                        'NL': 'nl', // Dutch
-                        'SE': 'sv', // Swedish
-                        'BD': 'bn', // Bengali
-                    };
+                        // Map country codes to language codes (simplified mapping)
+                        const countryToLang: { [key: string]: string } = {
+                            'ES': 'es', 'MX': 'es', 'AR': 'es', 'CO': 'es', // Spanish
+                            'FR': 'fr', // French
+                            'DE': 'de', // German
+                            'IT': 'it', // Italian
+                            'PT': 'pt', 'BR': 'pt', // Portuguese
+                            'RU': 'ru', // Russian
+                            'CN': 'zh-CN', // Chinese
+                            'JP': 'ja', // Japanese
+                            'KR': 'ko', // Korean
+                            'AE': 'ar', 'SA': 'ar', 'EG': 'ar', // Arabic
+                            'PK': 'ur', // Urdu
+                            // 'IN': 'en', // India defaults to English (explicitly or by omission)
+                            'TR': 'tr', // Turkish
+                            'VN': 'vi', // Vietnamese
+                            'TH': 'th', // Thai
+                            'ID': 'id', // Indonesian
+                            'MY': 'ms', // Malay
+                            'PL': 'pl', // Polish
+                            'NL': 'nl', // Dutch
+                            'SE': 'sv', // Swedish
+                            'BD': 'bn', // Bengali
+                        };
 
-                    if (countryToLang[countryCode]) {
-                        langCode = countryToLang[countryCode];
-                    }
+                        if (countryToLang[countryCode]) {
+                            langCode = countryToLang[countryCode];
+                        }
 
-                    console.log(`FxTrust: Detected Country: ${countryCode}, Mapped Language: ${langCode}`);
+                        console.log(`FxTrust: Detected Country: ${countryCode}, Mapped Language: ${langCode}`);
 
-                    // Set cookie to prevent re-detection on next load (valid for session)
-                    document.cookie = `googtrans=/en/${langCode}; path=/; domain=${window.location.hostname}`;
-                    document.cookie = `googtrans=/en/${langCode}; path=/;`;
+                        // Set cookie to prevent re-detection on next load (valid for session)
+                        document.cookie = `googtrans=/en/${langCode}; path=/; domain=${window.location.hostname}`;
+                        document.cookie = `googtrans=/en/${langCode}; path=/;`;
 
-                    if (langCode !== 'en') {
-                        console.log(`FxTrust: Switching language to ${langCode}...`);
-                        // Reload to apply translation
-                        window.location.reload();
-                    } else {
-                        console.log('FxTrust: Language is English. Cookie set, no reload needed.');
-                    }
-                })
-                .catch(err => console.error('FxTrust: Error detecting location:', err));
+                        if (langCode !== 'en') {
+                            console.log(`FxTrust: Switching language to ${langCode}...`);
+                            window.location.reload();
+                        } else {
+                            console.log('FxTrust: Language is English. Cookie set, no reload needed.');
+                        }
+                    })
+                    .catch(err => console.error('FxTrust: Error detecting location:', err));
+            }, 3500); // 3.5 second delay
+
+            return () => clearTimeout(timer);
         } else {
             console.log('FxTrust: Language cookie exists. Skipping auto-translation.');
         }
