@@ -151,6 +151,7 @@ export function Connect() {
                       <Link
                         href="https://wa.me/your-number"
                         target="_blank"
+                        rel="noopener noreferrer"
                         className={cn(
                           buttonVariants({
                             variant: "outline",
