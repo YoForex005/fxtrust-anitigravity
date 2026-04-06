@@ -1,6 +1,7 @@
 import { MetadataRoute } from 'next';
+import { blogService } from '@/services/blogService';
 
-export default function sitemap(): MetadataRoute.Sitemap {
+export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     const baseUrl = 'https://fxtrusts.com';
 
     // High-priority pages (homepage + primary landing pages)
@@ -92,18 +93,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
         '/resources/comparisons/gold-i-alternative',
         '/resources/comparisons/onetrader-alternative',
 
-        // Blog posts
-        '/resources/blog/best-forex-crm-providers-2025',
-        '/resources/blog/mt4-vs-mt5-crm',
-        '/resources/blog/forex-broker-crm-pricing-exposed',
-        '/resources/blog/why-we-refuse-to-charge-setup-fees',
-        '/resources/blog/how-to-start-forex-brokerage-2025',
-        '/resources/blog/mt5-white-label-complete-guide',
-        '/resources/blog/forex-crm-pricing-decoded',
-        '/resources/blog/how-to-start-prop-firm-2025',
-        '/resources/blog/a-book-vs-b-book-explained',
-        '/resources/blog/forex-liquidity-providers-guide',
-
         // Legal
         '/legal/privacy-policy',
         '/legal/terms-conditions',
@@ -133,5 +122,19 @@ export default function sitemap(): MetadataRoute.Sitemap {
         priority: 0.8,
     }));
 
-    return [...highPriorityEntries, ...standardEntries];
+    // Fetch dynamic blog posts automatically from database
+    let blogEntries: MetadataRoute.Sitemap = [];
+    try {
+        const { posts } = await blogService.getPosts(1, 1000); // Fetch all published posts
+        blogEntries = posts.map((post) => ({
+            url: `${baseUrl}/resources/blog/${post.seoSlug || post.id}`,
+            lastModified: post.updatedAt || post.createdAt || new Date(),
+            changeFrequency: 'weekly' as const,
+            priority: 0.7,
+        }));
+    } catch (error) {
+        console.error('Failed to automatically fetch blog posts for sitemap:', error);
+    }
+
+    return [...highPriorityEntries, ...standardEntries, ...blogEntries];
 }

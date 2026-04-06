@@ -28,6 +28,14 @@ export const metadata: Metadata = {
     'B2B forex broker',
     'forex brokerage solutions',
     'prop trading technology',
+    'mt5 white label',
+    'turnkey brokerage solution',
+    'forex broker crm',
+    'prop firm crm',
+    'copy trading platform',
+    'forex payment gateway',
+    'kyc aml for forex brokers',
+    'forex liquidity provider'
   ],
   openGraph: {
     title: 'B2B Broker Solutions | Liquidity, CRM & White Label',
