@@ -115,7 +115,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
         url: `${baseUrl}${route}`,
         lastModified: new Date(),
         changeFrequency: 'daily' as const,
-        priority: route === '' ? 1 : 0.9,
+        priority: route === '' ? 0.1 : 0.9,
     }));
 
     const standardEntries: MetadataRoute.Sitemap = standardRoutes.map((route) => ({
