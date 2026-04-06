@@ -8,6 +8,9 @@ import Footer from '@/components/Footer';
 const DetailedProducts = dynamic(() => import('@/components/DetailedProducts'), { ssr: true });
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: '/products',
+  },
   title: "Our Products | FxTrusts Ecosystem",
   description: "Explore the complete FxTrusts ecosystem of curated trading and brokerage platforms including YoForex AI, Trade Copier, Yo Pips, and Flexy Markets.",
   keywords: [

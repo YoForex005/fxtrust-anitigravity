@@ -15,7 +15,7 @@ import { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: "FxTrusts | Complete Forex Technology Portfolio — Whitelabel & Custom Solutions",
-  description: "FxTrusts delivers end-to-end forex technology: PropFirm platforms, AI trading, CRM, Trade Copiers, RTX5 Terminal, and custom websites. All fully whitelabeled.",
+  description: "FxTrusts delivers end-to-end forex tech: PropFirm systems, AI trading, CRM, Trade Copiers, RTX5 Terminals, and custom whitelabel websites.",
   keywords: [
     'forex technology provider',
     'prop firm platform',
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     images: ['/og-image.png'],
   },
   alternates: {
-    canonical: 'https://fxtrusts.com',
+    canonical: '/',
   },
 };
 

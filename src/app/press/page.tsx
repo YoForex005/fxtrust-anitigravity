@@ -5,6 +5,9 @@ import Footer from '@/components/Footer';
 import JsonLd from '@/components/JsonLd';
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: '/press',
+  },
     title: 'Press & Media Kit | FxTrusts',
     description: 'Official press information, company facts, and media resources for FxTrusts - the #1 B2B Forex Broker Technology Provider.',
     openGraph: {

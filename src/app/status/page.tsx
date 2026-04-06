@@ -2,6 +2,9 @@ import { redirect } from 'next/navigation';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: '/status',
+  },
     title: 'System Status | FxTrusts',
     description: 'Real-time operational status of FxTrusts trading infrastructure, CRM, API, and payment systems.',
     openGraph: {

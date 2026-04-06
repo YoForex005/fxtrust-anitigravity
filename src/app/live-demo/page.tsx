@@ -2,6 +2,9 @@ import { redirect } from 'next/navigation';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: '/live-demo',
+  },
     title: 'Live CRM Demo | FxTrusts',
     description: 'Try the FxTrusts CRM live demo. No login required. Explore the admin dashboard and client portal.',
     openGraph: {

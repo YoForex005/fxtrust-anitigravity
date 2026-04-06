@@ -2,6 +2,9 @@ import { redirect } from 'next/navigation';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: '/prop-firm/live-demo',
+  },
     title: 'Prop Firm Live Demo | FxTrusts',
     description: 'Interactive demo of the FxTrusts Prop Firm platform.',
     openGraph: {

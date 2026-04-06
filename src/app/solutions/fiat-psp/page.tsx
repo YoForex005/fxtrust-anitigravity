@@ -6,6 +6,9 @@ import FAQSchema from '@/components/seo/FAQSchema';
 import FAQAccordion from '@/components/FAQAccordion';
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: '/solutions/fiat-psp',
+  },
     title: 'Fiat PSP Integration | Visa, Mastercard & Wire Transfers',
     description: 'Seamlessly integrate Fiat PSPs for Visa, Mastercard, and Bank Wires. Secure, high-converting payment processing for global brokerages and fintech platforms.',
     keywords: [

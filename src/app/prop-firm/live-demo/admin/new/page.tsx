@@ -2,6 +2,9 @@ import { Metadata } from 'next';
 import NewAccountContent from './NewAccountContent';
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: '/prop-firm/live-demo/admin/new',
+  },
     title: 'New Client Registration | Account Creation | FxTrusts',
     description: 'Manually register a new client account directly into the CRM system.',
     openGraph: {

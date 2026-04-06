@@ -6,6 +6,9 @@ import FAQSchema from '@/components/seo/FAQSchema';
 import FAQAccordion from '@/components/FAQAccordion';
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: '/solutions/crypto-gateway',
+  },
     title: 'Crypto Payment Gateway | Instant BTC, USDT, ETH Deposits',
     description: 'Scale your brokerage with an instant Crypto Payment Gateway. Securely process BTC, USDT, and ETH deposits and payouts with real-time conversion and low fees.',
     keywords: [

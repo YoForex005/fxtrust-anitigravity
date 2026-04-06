@@ -7,6 +7,9 @@ import FAQSchema from '@/components/seo/FAQSchema';
 import FAQAccordion from '@/components/FAQAccordion';
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: '/solutions/automated-payouts',
+  },
     title: 'Automated Payout Systems | Mass Payouts for Prop Firms',
     description: 'Streamline your prop firm operations with automated mass payout systems. Process thousands of trader withdrawals instantly via Crypto or Fiat.',
     keywords: [

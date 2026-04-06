@@ -26,7 +26,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL('https://fxtrusts.com'),
   title: {
-    default: "FxTrusts | B2B Forex Broker Technology",
+    default: "FxTrusts | Forex White Label & Custom Technology Solutions",
     template: "%s | FxTrusts",
   },
   description: "FxTrusts is the #1 B2B Broker Technology Provider. Complete forex brokerage ecosystem: MT5 White Label, CRM, Liquidity, and Crypto Payments.",

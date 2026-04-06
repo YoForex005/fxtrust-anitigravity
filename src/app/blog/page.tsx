@@ -2,6 +2,9 @@ import { redirect } from 'next/navigation';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: '/blog',
+  },
     title: 'FxTrusts Blog | Forex Broker Insights',
     description: 'Read the latest insights, guides, and news about forex brokerage technology, MT5 white labels, and liquidity.',
     openGraph: {

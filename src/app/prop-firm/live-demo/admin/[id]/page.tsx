@@ -2,6 +2,9 @@ import { Metadata } from 'next';
 import AccountDetailContent from './AccountDetailContent';
 
 export const metadata: Metadata = {
+  alternates: {
+    canonical: '/prop-firm/live-demo/admin/[id]',
+  },
     title: 'Client Account Profile | CRM Record View | FxTrusts',
     description: 'Comprehensive view of client data, including personal info, financial history, and activity logs.',
     openGraph: {
