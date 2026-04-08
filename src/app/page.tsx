@@ -14,7 +14,7 @@ const FxTrustsStickyFooter = dynamic(() => import('@/components/home/FxTrustsSti
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "FxTrusts | Complete Forex Technology Portfolio — Whitelabel & Custom Solutions",
+  title: "FxTrusts | Forex White Label & Custom Technology Solutions",
   description: "FxTrusts delivers end-to-end forex tech: PropFirm systems, AI trading, CRM, Trade Copiers, RTX5 Terminals, and custom whitelabel websites.",
   keywords: [
     'forex technology provider',
